@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* === Brand colour tokens (use exactly) === */
+:root {
+  --ivory: #f8f4f0; /* main page background */
+  --blush: #e8d3d0; /* alternate section background, cards */
+  --rose: #cfa7a3; /* key brand accent */
+  --taupe: #b8aaa5;
+  --burgundy: #5a1f2b; /* primary CTA only */
+  --charcoal: #292526;
+
+  --background: var(--ivory);
+  --foreground: var(--charcoal);
+  --key: var(--rose);
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-key: var(--key);
+  --color-taupe: var(--taupe);
+  --color-burgundy: var(--burgundy);
+  --color-charcoal: var(--charcoal);
+
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-montserrat);
+  --font-formal: var(--font-eb-garamond);
+
+  --font-sans: var(--font-montserrat);
+}
+
+/* === Type scale === */
+@utility text-display {
+  font-family: var(--font-cormorant), serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+@utility text-h1 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@utility text-h2 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@utility text-h3 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@utility text-h4 {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@utility text-body-lg {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+@utility text-body {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@utility text-small {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@utility text-overline {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+@media (max-width: 768px) {
+  .text-display {
+    font-size: 2.75rem;
+  }
+
+  .text-h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Subtle motion */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

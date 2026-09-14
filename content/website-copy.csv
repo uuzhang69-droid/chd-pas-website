@@ -1,0 +1,698 @@
+id,location,text
+meta.defaultdescription,Site-wide — default search-engine description (browser tab / search engines),"A refined London dance and performing arts school offering ballet, contemporary, jazz, drama, and more — for every age and stage."
+meta.shortname,Site-wide — short name (browser tab / search engines),CHD PAS
+meta.sitename,Site-wide — site name (browser tab / search engines),County Hall Dance & Performing Arts School
+global.utilitybar.email.label,Top bar — email label,hello@countyhalldance.co.uk
+global.utilitybar.findus.label,Top bar — Find us label,Find us
+global.utilitybar.phone.label,Top bar — phone label,+44 20 7946 0958
+global.utilitybar.social.facebook.label,Top bar — Facebook label,Follow us on Facebook
+global.utilitybar.social.instagram.label,Top bar — Instagram label,Follow us on Instagram
+global.utilitybar.social.youtube.label,Top bar — YouTube label,Watch us on YouTube
+global.logo.alt,Logo — image description (accessibility),County Hall Dance & Performing Arts School
+global.logo.nameline1,Logo — school name (line 1),County Hall
+global.logo.nameline2,Logo — school name (line 2),Dance & Performing Arts School
+global.navigation.booktrial.label,Header — Book a Trial button,Book a Trial
+global.navigation.items.about_us.children.about_us.label,Header menu — About Us → About Us,About Us
+global.navigation.items.about_us.children.contact.label,Header menu — About Us → Contact,Contact
+global.navigation.items.about_us.children.faqs.label,Header menu — About Us → FAQs,FAQs
+global.navigation.items.about_us.children.gift_cards.label,Header menu — About Us → Gift Cards,Gift Cards
+global.navigation.items.about_us.children.join_us.label,Header menu — About Us → Join Us,Join Us
+global.navigation.items.about_us.children.membership_terms.label,Header menu — About Us → Membership Terms,Membership Terms
+global.navigation.items.about_us.label,Header menu — About Us,About Us
+global.navigation.items.classes.children.booking.label,Header menu — Classes → Booking,Booking
+global.navigation.items.classes.children.class_descriptions.label,Header menu — Classes → Class Descriptions,Class Descriptions
+global.navigation.items.classes.children.instructors.label,Header menu — Classes → Instructors,Instructors
+global.navigation.items.classes.children.taster_classes.label,Header menu — Classes → Taster Classes,Taster Classes
+global.navigation.items.classes.children.timetable.label,Header menu — Classes → Timetable,Timetable
+global.navigation.items.classes.label,Header menu — Classes,Classes
+global.navigation.items.events.children.cross_arts_events.label,Header menu — Events → Cross-Arts Events,Cross-Arts Events
+global.navigation.items.events.children.masterclasses.label,Header menu — Events → Masterclasses,Masterclasses
+global.navigation.items.events.children.milonga.label,Header menu — Events → Milonga,Milonga
+global.navigation.items.events.children.performances.label,Header menu — Events → Performances,Performances
+global.navigation.items.events.children.social_dance_nights.label,Header menu — Events → Social Dance Nights,Social Dance Nights
+global.navigation.items.events.children.workshops.label,Header menu — Events → Workshops,Workshops
+global.navigation.items.events.label,Header menu — Events,Events
+global.navigation.items.membership.children.booking_access.label,Header menu — Membership → Booking Access,Booking Access
+global.navigation.items.membership.children.member_benefits.label,Header menu — Membership → Member Benefits,Member Benefits
+global.navigation.items.membership.children.monthly_passes.label,Header menu — Membership → Monthly Passes,Monthly Passes
+global.navigation.items.membership.label,Header menu — Membership,Membership
+global.navigation.items.private_lessons.children.corporate_events.label,Header menu — Private Lessons → Corporate Events,Corporate Events
+global.navigation.items.private_lessons.children.couples_dance.label,Header menu — Private Lessons → Couples' Dance,Couples' Dance
+global.navigation.items.private_lessons.children.first_wedding_dance.label,Header menu — Private Lessons → First Wedding Dance,First Wedding Dance
+global.navigation.items.private_lessons.children.group_experiences.label,Header menu — Private Lessons → Group Experiences,Group Experiences
+global.navigation.items.private_lessons.children.one_to_one_lessons.label,Header menu — Private Lessons → One-To-One Lessons,One-to-One Lessons
+global.navigation.items.private_lessons.children.school_organisation_workshops.label,Header menu — Private Lessons → School / Organisation Workshops,School / Organisation Workshops
+global.navigation.items.private_lessons.label,Header menu — Private Lessons,Private Lessons
+global.navigation.items.shop.children.accessories.label,Header menu — Shop → Accessories,Accessories
+global.navigation.items.shop.children.county_hall_merchandise.label,Header menu — Shop → County Hall Merchandise,County Hall Merchandise
+global.navigation.items.shop.children.dancewear.label,Header menu — Shop → Dancewear,Dancewear
+global.navigation.items.shop.children.t_shirts.label,Header menu — Shop → T-Shirts,T-Shirts
+global.navigation.items.shop.label,Header menu — Shop,Shop
+global.navigation.items.studio_hire.children.our_space.label,Header menu — Studio Hire → Our Space,Our Space
+global.navigation.items.studio_hire.children.space_booking.label,Header menu — Studio Hire → Space Booking,Space Booking
+global.navigation.items.studio_hire.label,Header menu — Studio Hire,Studio Hire
+global.navigation.search.label,Header — search label,Search
+global.navigation.search.placeholder,Header — search placeholder text,"Search classes, courses, events…"
+global.footer.columns.explore.links.classes.label,Footer — Explore column — Classes,Classes
+global.footer.columns.explore.links.courses.label,Footer — Explore column — Courses,Courses
+global.footer.columns.explore.links.events.label,Footer — Explore column — Events,Events
+global.footer.columns.explore.links.faq.label,Footer — Explore column — FAQ,FAQ
+global.footer.columns.explore.links.gift_cards.label,Footer — Explore column — Gift Cards,Gift Cards
+global.footer.columns.explore.title,Footer — Explore column heading,Explore
+global.footer.columns.school.links.about_us.label,Footer — School column — About Us,About Us
+global.footer.columns.school.links.careers.label,Footer — School column — Careers,Careers
+global.footer.columns.school.links.our_faculty.label,Footer — School column — Our Faculty,Our Faculty
+global.footer.columns.school.links.private_events.label,Footer — School column — Private Events,Private Events
+global.footer.columns.school.title,Footer — School column heading,The School
+global.footer.contact.address.0,Footer — contact address line 1,County Hall Dance Studio
+global.footer.contact.address.1,Footer — contact address line 2,Belvedere Road
+global.footer.contact.address.2,Footer — contact address line 3,London SE1 7GP
+global.footer.contact.email,Footer — contact email,hello@countyhalldance.co.uk
+global.footer.contact.phone,Footer — contact phone,+44 20 7946 0958
+global.footer.contact.title,Footer — contact heading,Visit Us
+global.footer.copyright,Footer — copyright line at the bottom,© {year} County Hall Dance & Performing Arts School. All rights reserved.
+global.footer.intro,Footer — intro paragraph under the logo,"County Hall Dance & Performing Arts School nurtures confidence, artistry, and joy through exceptional training in the heart of London."
+global.footer.legal.cookie_policy.label,Footer — legal links — Cookie Policy,Cookie Policy
+global.footer.legal.privacy_policy.label,Footer — legal links — Privacy Policy,Privacy Policy
+global.footer.legal.safeguarding.label,Footer — legal links — Safeguarding,Safeguarding
+global.footer.legal.terms_conditions.label,Footer — legal links — Terms & Conditions,Terms & Conditions
+global.footer.newsletter.description,Footer — newsletter description,"Occasional news on classes, masterclasses, and performances."
+global.footer.newsletter.placeholder,Footer — newsletter placeholder text,Your email address
+global.footer.newsletter.privacynote,Footer — newsletter privacy note under the form,We respect your privacy. Unsubscribe anytime.
+global.footer.newsletter.submitlabel,Footer — newsletter button label,Subscribe
+global.footer.newsletter.title,Footer — newsletter heading,Stay in touch
+home.hero.nextlabel,Homepage — hero carousel — Next button,Next
+home.hero.previouslabel,Homepage — hero carousel — Previous button,Previous
+home.hero.slides.hero_classes.blurb,Homepage — Classes slide — short description,"Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi."
+home.hero.slides.hero_classes.cta.label,Homepage — Classes slide — button,View Classes
+home.hero.slides.hero_classes.headline,Homepage — Classes slide — headline,Classes
+home.hero.slides.hero_classes.image.alt,Homepage — Classes slide — image description (accessibility),Adult dance class at County Hall Dance Centre
+home.hero.slides.hero_events.blurb,Homepage — Events slide — short description,"Milongas, themed social nights, masterclasses and cross-arts events."
+home.hero.slides.hero_events.cta.label,Homepage — Events slide — button,View Events
+home.hero.slides.hero_events.headline,Homepage — Events slide — headline,Events
+home.hero.slides.hero_events.image.alt,Homepage — Events slide — image description (accessibility),Social dance night at County Hall Dance Centre
+home.hero.slides.hero_intro.blurb,Homepage — Intro slide — short description,"Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience."
+home.hero.slides.hero_intro.cta.label,Homepage — Intro slide — button,Explore Classes
+home.hero.slides.hero_intro.headline,Homepage — Intro slide — headline,"Discover dance, movement and creative experiences at London's iconic County Hall."
+home.hero.slides.hero_intro.image.alt,Homepage — Intro slide — image description (accessibility),County Hall Dance Centre on the South Bank
+home.hero.slides.hero_membership.blurb,Homepage — Membership slide — short description,"A more flexible way to keep dancing, join events and belong to the community."
+home.hero.slides.hero_membership.cta.label,Homepage — Membership slide — button,Membership
+home.hero.slides.hero_membership.headline,Homepage — Membership slide — headline,Membership
+home.hero.slides.hero_membership.image.alt,Homepage — Membership slide — image description (accessibility),Members enjoying a class at County Hall Dance Centre
+home.hero.slides.hero_private_lessons.blurb,Homepage — Private Lessons slide — short description,"Tailored sessions for individuals, couples, wedding first dances and small groups."
+home.hero.slides.hero_private_lessons.cta.label,Homepage — Private Lessons slide — button,Enquire
+home.hero.slides.hero_private_lessons.headline,Homepage — Private Lessons slide — headline,Private Lessons & Experiences
+home.hero.slides.hero_private_lessons.image.alt,Homepage — Private Lessons slide — image description (accessibility),Private dance lesson at County Hall Dance Centre
+home.hero.slides.hero_studio_hire.blurb,Homepage — Studio Hire slide — short description,"A South Bank space for dance, theatre and film rehearsals, castings, workshops and events."
+home.hero.slides.hero_studio_hire.cta.label,Homepage — Studio Hire slide — button,Studio Hire
+home.hero.slides.hero_studio_hire.headline,Homepage — Studio Hire slide — headline,Studio Hire
+home.hero.slides.hero_studio_hire.image.alt,Homepage — Studio Hire slide — image description (accessibility),Studio space available for hire at County Hall
+home.quickactions.items.book_a_class.description,Homepage — Get started — Book A Class description,View the weekly timetable and reserve your place.
+home.quickactions.items.book_a_class.label,Homepage — Get started — Book A Class label,Book a Class
+home.quickactions.items.book_a_course.description,Homepage — Get started — Book A Course description,Term-length programmes with clear progression.
+home.quickactions.items.book_a_course.label,Homepage — Get started — Book A Course label,Book a Course
+home.quickactions.items.free_trial.description,Homepage — Get started — Free Trial description,Try a class with no obligation — we welcome newcomers.
+home.quickactions.items.free_trial.label,Homepage — Get started — Free Trial label,Free Trial
+home.quickactions.linksuffix,Homepage — Get started — link text on each card,Learn more →
+home.quickactions.overline,Homepage — Get started — small label above the heading,Get started
+home.events.items.contemporary_intensive_maya_chen.booknow.label,Homepage — Events — Contemporary Intensive with Maya Chen — button,Book Now
+home.events.items.contemporary_intensive_maya_chen.date,Homepage — Events — Contemporary Intensive with Maya Chen — date,Saturday 18 October 2026
+home.events.items.contemporary_intensive_maya_chen.image.alt,Homepage — Events — Contemporary Intensive with Maya Chen — image description (accessibility),Contemporary dance intensive workshop
+home.events.items.contemporary_intensive_maya_chen.location,Homepage — Events — Contemporary Intensive with Maya Chen — location,Studio A
+home.events.items.contemporary_intensive_maya_chen.title,Homepage — Events — Contemporary Intensive with Maya Chen — heading,Contemporary Intensive with Maya Chen
+home.events.items.junior_ballet_masterclass.booknow.label,Homepage — Events — Junior Ballet Masterclass — button,Book Now
+home.events.items.junior_ballet_masterclass.date,Homepage — Events — Junior Ballet Masterclass — date,Sunday 26 October 2026
+home.events.items.junior_ballet_masterclass.image.alt,Homepage — Events — Junior Ballet Masterclass — image description (accessibility),Junior ballet masterclass in progress
+home.events.items.junior_ballet_masterclass.location,Homepage — Events — Junior Ballet Masterclass — location,Studio B
+home.events.items.junior_ballet_masterclass.title,Homepage — Events — Junior Ballet Masterclass — heading,Junior Ballet Masterclass
+home.events.items.musical_theatre_workshop_day.booknow.label,Homepage — Events — Musical Theatre Workshop Day — button,Book Now
+home.events.items.musical_theatre_workshop_day.date,Homepage — Events — Musical Theatre Workshop Day — date,Saturday 8 November 2026
+home.events.items.musical_theatre_workshop_day.image.alt,Homepage — Events — Musical Theatre Workshop Day — image description (accessibility),Musical theatre workshop participants on stage
+home.events.items.musical_theatre_workshop_day.location,Homepage — Events — Musical Theatre Workshop Day — location,Main Hall
+home.events.items.musical_theatre_workshop_day.title,Homepage — Events — Musical Theatre Workshop Day — heading,Musical Theatre Workshop Day
+home.events.items.winter_showcase.booknow.label,Homepage — Events — Winter Showcase — button,Book Now
+home.events.items.winter_showcase.date,Homepage — Events — Winter Showcase — date,Friday 12 December 2026
+home.events.items.winter_showcase.image.alt,Homepage — Events — Winter Showcase — image description (accessibility),Winter showcase performance lighting
+home.events.items.winter_showcase.location,Homepage — Events — Winter Showcase — location,County Hall Theatre
+home.events.items.winter_showcase.title,Homepage — Events — Winter Showcase — heading,Winter Showcase — Tickets On Sale
+home.events.overline,Homepage — Events — small label above the heading,What's on
+home.events.title,Homepage — Events — heading,Upcoming masterclasses & events
+home.events.viewall.label,Homepage — Events — View all link,View all events →
+home.classstyles.items.chinese_dance.image.alt,Homepage — Class styles — Chinese Dance — image description (accessibility),Chinese dance class
+home.classstyles.items.chinese_dance.name,Homepage — Class styles — Chinese Dance — name,Chinese Dance
+home.classstyles.items.contemporary.image.alt,Homepage — Class styles — Contemporary — image description (accessibility),Contemporary dance class
+home.classstyles.items.contemporary.name,Homepage — Class styles — Contemporary — name,Contemporary
+home.classstyles.items.tai_chi.image.alt,Homepage — Class styles — Tai Chi — image description (accessibility),Tai Chi class
+home.classstyles.items.tai_chi.name,Homepage — Class styles — Tai Chi — name,Tai Chi
+home.classstyles.items.tango.image.alt,Homepage — Class styles — Tango — image description (accessibility),Tango class
+home.classstyles.items.tango.name,Homepage — Class styles — Tango — name,Tango
+home.classstyles.items.yoga.image.alt,Homepage — Class styles — Yoga — image description (accessibility),Yoga class
+home.classstyles.items.yoga.name,Homepage — Class styles — Yoga — name,Yoga
+home.classstyles.overline,Homepage — Class styles — small label above the heading,Our disciplines
+home.classstyles.subtitle,Homepage — Class styles — subtitle,"Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi — beginners welcome."
+home.classstyles.title,Homepage — Class styles — heading,Class styles
+home.aboutteaser.body.0,Homepage — About teaser — paragraph 1,"Founded at the historic County Hall, our school brings together rigorous technical training and a deeply supportive community."
+home.aboutteaser.body.1,Homepage — About teaser — paragraph 2,"Whether you are taking your first plié or preparing for vocational study, our faculty guides every student with patience and precision."
+home.aboutteaser.cta.label,Homepage — About teaser — label,About the school
+home.aboutteaser.image.alt,Homepage — About teaser — image description (accessibility),Students and teachers in the County Hall studio corridor
+home.aboutteaser.overline,Homepage — About teaser — small label above the heading,Our story
+home.aboutteaser.title,Homepage — About teaser — heading,"Rooted in London, reaching for excellence"
+home.privateevents.body,Homepage — Private events — body text,"Host an unforgettable birthday, hen party, or team celebration in our beautiful studios. Choose a theme, bring your guests, and leave the choreography to us."
+home.privateevents.cta.label,Homepage — Private events — label,Enquire
+home.privateevents.image.alt,Homepage — Private events — image description (accessibility),Private dance party celebration in studio
+home.privateevents.overline,Homepage — Private events — small label above the heading,Celebrate with us
+home.privateevents.title,Homepage — Private events — heading,Private events & parties
+home.newsletter.description,Homepage — Newsletter — description,"Follow our journey and receive curated updates on classes, performances, and exclusive offers."
+home.newsletter.overline,Homepage — Newsletter — small label above the heading,Join our circle
+home.newsletter.placeholder,Homepage — Newsletter — placeholder text,Email address
+home.newsletter.socialheading,Homepage — Newsletter — heading above social icons,Connect with us
+home.newsletter.submitlabel,Homepage — Newsletter — button label,Sign up
+home.newsletter.title,Homepage — Newsletter — heading,Newsletter & social
+pages.common.eventdetailslink,Shared labels — details link on each event card,Details →
+pages.common.viewcourselink,Shared labels — link on each course card,View course →
+pages.studiohire.overview.hero.overline,Studio Hire overview — hero small label above the heading,South Bank studios
+pages.studiohire.overview.hero.subtitle,Studio Hire overview — hero subtitle,"A multi-purpose space for classes, rehearsals, workshops, social dances, cultural events and private hire."
+pages.studiohire.overview.hero.title,Studio Hire overview — hero heading,Studio Hire
+pages.studiohire.overview.intro,Studio Hire overview — intro paragraph,"A flexible, multi-purpose dance and performing-arts space of around 300 m² (first phase), suitable for regular classes, rehearsals, workshops, social dances, cultural events and private hire."
+pages.studiohire.overview.meta.description,Studio Hire overview — search-engine description,Hire a flexible dance and performing-arts space at County Hall on the South Bank.
+pages.studiohire.overview.meta.title,Studio Hire overview — browser tab title,Studio Hire
+pages.studiohire.overview.sections.enquiries.title,Studio Hire overview — Enquiries section heading,Booking & enquiries
+pages.studiohire.overview.sections.pricing.title,Studio Hire overview — Pricing section heading,Pricing
+pages.studiohire.overview.sections.space.title,Studio Hire overview — Space section heading,Space & facilities
+pages.studiohire.subpages.our_space.hero.overline,Studio Hire — Our Space — hero small label above the heading,Studio Hire
+pages.studiohire.subpages.our_space.hero.subtitle,Studio Hire — Our Space — hero subtitle,"Main dance and events space with wood floor, dance vinyl, mirrors, barres and flexible seating."
+pages.studiohire.subpages.our_space.hero.title,Studio Hire — Our Space — hero heading,Our Space
+pages.studiohire.subpages.our_space.intro,Studio Hire — Our Space — intro paragraph,"Main dance and events space — around 300 m² in total, planned to include approx. 200 m² of wood floor and approx. 60 m² of professional dance vinyl, a mirrored wall, dance barres, a sound system, event lighting, a reception/lounge area and flexible seating."
+pages.studiohire.subpages.our_space.meta.description,Studio Hire — Our Space — search-engine description,Studio space and facilities at County Hall Dance Centre.
+pages.studiohire.subpages.our_space.meta.title,Studio Hire — Our Space — browser tab title,Our Space
+pages.studiohire.subpages.our_space.sections.capacity.title,Studio Hire — Our Space — Capacity section heading,Capacity
+pages.studiohire.subpages.our_space.sections.facilities.title,Studio Hire — Our Space — Facilities section heading,Facilities
+pages.studiohire.subpages.space_booking.hero.overline,Studio Hire — Space Booking — hero small label above the heading,Studio Hire
+pages.studiohire.subpages.space_booking.hero.subtitle,Studio Hire — Space Booking — hero subtitle,"Tell us your preferred date, activity and group size — we will respond with availability."
+pages.studiohire.subpages.space_booking.hero.title,Studio Hire — Space Booking — hero heading,Space Booking
+pages.studiohire.subpages.space_booking.intro,Studio Hire — Space Booking — intro paragraph,"Enquire via our Studio Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details."
+pages.studiohire.subpages.space_booking.meta.description,Studio Hire — Space Booking — search-engine description,Enquire about studio hire at County Hall Dance Centre.
+pages.studiohire.subpages.space_booking.meta.title,Studio Hire — Space Booking — browser tab title,Space Booking
+pages.studiohire.subpages.space_booking.sections.enquiry_form.title,Studio Hire — Space Booking — Enquiry Form section heading,Enquiry form
+pages.studiohire.subpages.space_booking.sections.how_to_book.title,Studio Hire — Space Booking — How To Book section heading,How to book
+pages.classes.cta.label,Classes — button / call to action — label,View timetable
+pages.classes.detaillabels.agegroups,Classes — sidebar heading,Age groups
+pages.classes.detaillabels.backlink,Classes — back link,← Classes
+pages.classes.hero.overline,Classes — hero small label above the heading,Find your style
+pages.classes.hero.subtitle,Classes — hero subtitle,Adult dance and movement classes for every background and level — beginners welcome.
+pages.classes.hero.title,Classes — hero heading,Classes
+pages.classes.intro,Classes — intro paragraph,"Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate."
+pages.classes.meta.description,Classes — description (browser tab / search engines),"Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre."
+pages.classes.meta.title,Classes — heading (browser tab / search engines),Classes
+pages.classes.styles.chinese_dance.agegroups.adults.description,Classes — Chinese Dance — age group description,Designed for adult learners at every stage.
+pages.classes.styles.chinese_dance.agegroups.adults.label,Classes — Chinese Dance — age group label,Adults
+pages.classes.styles.chinese_dance.cta.label,Classes — Chinese Dance — button,Book a class
+pages.classes.styles.chinese_dance.hero.image.alt,Classes — Chinese Dance — hero image description (accessibility),Chinese dance class
+pages.classes.styles.chinese_dance.hero.overline,Classes — Chinese Dance — hero small label above the heading,Grace & line
+pages.classes.styles.chinese_dance.hero.subtitle,Classes — Chinese Dance — hero subtitle,"Classical Chinese dance to build body control, flexibility and stage presence."
+pages.classes.styles.chinese_dance.hero.title,Classes — Chinese Dance — hero heading,Chinese Dance
+pages.classes.styles.chinese_dance.highlights.0.description,Classes — Chinese Dance — highlight 1 description,Discover the artistry of classical Chinese movement.
+pages.classes.styles.chinese_dance.highlights.0.title,Classes — Chinese Dance — highlight 1 heading,Cultural expression
+pages.classes.styles.chinese_dance.highlights.1.description,Classes — Chinese Dance — highlight 2 description,"Develop line, poise and body awareness."
+pages.classes.styles.chinese_dance.highlights.1.title,Classes — Chinese Dance — highlight 2 heading,Flexibility & control
+pages.classes.styles.chinese_dance.highlights.2.description,Classes — Chinese Dance — highlight 3 description,Beginners welcome — check the level on each class.
+pages.classes.styles.chinese_dance.highlights.2.title,Classes — Chinese Dance — highlight 3 heading,All levels
+pages.classes.styles.chinese_dance.intro.0,Classes — Chinese Dance — paragraph 1,"Blending the grace, line and cultural expression of classical Chinese dance to build body control, flexibility and stage presence."
+pages.classes.styles.chinese_dance.metadescription,Classes — Chinese Dance — search-engine description,"Chinese dance classes blending classical grace, line and cultural expression for adults."
+pages.classes.styles.chinese_dance.name,Classes — Chinese Dance — name,Chinese Dance
+pages.classes.styles.contemporary.agegroups.adults.description,Classes — Contemporary — age group description,Open to all backgrounds — no dance experience needed.
+pages.classes.styles.contemporary.agegroups.adults.label,Classes — Contemporary — age group label,Adults
+pages.classes.styles.contemporary.cta.label,Classes — Contemporary — button,Book a class
+pages.classes.styles.contemporary.hero.image.alt,Classes — Contemporary — hero image description (accessibility),Contemporary dance class
+pages.classes.styles.contemporary.hero.overline,Classes — Contemporary — hero small label above the heading,Modern dance
+pages.classes.styles.contemporary.hero.subtitle,Classes — Contemporary — hero subtitle,"Develop coordination, strength and creativity through flow, space and physical expression."
+pages.classes.styles.contemporary.hero.title,Classes — Contemporary — hero heading,Contemporary
+pages.classes.styles.contemporary.highlights.0.description,Classes — Contemporary — highlight 1 description,"Explore space, dynamics and personal expression."
+pages.classes.styles.contemporary.highlights.0.title,Classes — Contemporary — highlight 1 heading,Creative movement
+pages.classes.styles.contemporary.highlights.1.description,Classes — Contemporary — highlight 2 description,Build physical confidence through structured practice.
+pages.classes.styles.contemporary.highlights.1.title,Classes — Contemporary — highlight 2 heading,Strength & coordination
+pages.classes.styles.contemporary.highlights.2.description,Classes — Contemporary — highlight 3 description,"Classes labelled Beginner, Open Level or Intermediate."
+pages.classes.styles.contemporary.highlights.2.title,Classes — Contemporary — highlight 3 heading,All levels
+pages.classes.styles.contemporary.intro.0,Classes — Contemporary — paragraph 1,"Develop coordination, strength and creativity through flow, space and physical expression."
+pages.classes.styles.contemporary.intro.1,Classes — Contemporary — paragraph 2,Ideal for adults keen to explore the language of modern dance.
+pages.classes.styles.contemporary.metadescription,Classes — Contemporary — search-engine description,"Contemporary dance classes for adults at County Hall Dance Centre — flow, space and physical expression."
+pages.classes.styles.contemporary.name,Classes — Contemporary — name,Contemporary
+pages.classes.styles.tai_chi.agegroups.adults.description,Classes — Tai Chi — age group description,Suitable for every age and fitness level.
+pages.classes.styles.tai_chi.agegroups.adults.label,Classes — Tai Chi — age group label,Adults
+pages.classes.styles.tai_chi.cta.label,Classes — Tai Chi — button,Book a class
+pages.classes.styles.tai_chi.hero.image.alt,Classes — Tai Chi — hero image description (accessibility),Tai Chi class
+pages.classes.styles.tai_chi.hero.overline,Classes — Tai Chi — hero small label above the heading,Flow & balance
+pages.classes.styles.tai_chi.hero.subtitle,Classes — Tai Chi — hero subtitle,"Cultivate balance, relaxation and body awareness through slow, flowing movement."
+pages.classes.styles.tai_chi.hero.title,Classes — Tai Chi — hero heading,Tai Chi
+pages.classes.styles.tai_chi.highlights.0.description,Classes — Tai Chi — highlight 1 description,"Slow, intentional movement for calm and focus."
+pages.classes.styles.tai_chi.highlights.0.title,Classes — Tai Chi — highlight 1 heading,Mind-body practice
+pages.classes.styles.tai_chi.highlights.1.description,Classes — Tai Chi — highlight 2 description,Develop stability and gentle strength.
+pages.classes.styles.tai_chi.highlights.1.title,Classes — Tai Chi — highlight 2 heading,Balance & awareness
+pages.classes.styles.tai_chi.highlights.2.description,Classes — Tai Chi — highlight 3 description,Welcoming to complete beginners.
+pages.classes.styles.tai_chi.highlights.2.title,Classes — Tai Chi — highlight 3 heading,All levels
+pages.classes.styles.tai_chi.intro.0,Classes — Tai Chi — paragraph 1,"Cultivate balance, relaxation and body awareness through slow, flowing movement, breath and shifts of weight."
+pages.classes.styles.tai_chi.metadescription,Classes — Tai Chi — search-engine description,"Tai Chi classes for adults — balance, relaxation and body awareness."
+pages.classes.styles.tai_chi.name,Classes — Tai Chi — name,Tai Chi
+pages.classes.styles.tango.agegroups.adults.description,Classes — Tango — age group description,No partner or experience required to begin.
+pages.classes.styles.tango.agegroups.adults.label,Classes — Tango — age group label,Adults
+pages.classes.styles.tango.cta.label,Classes — Tango — button,Book a class
+pages.classes.styles.tango.hero.image.alt,Classes — Tango — hero image description (accessibility),Tango class
+pages.classes.styles.tango.hero.overline,Classes — Tango — hero small label above the heading,Connection & musicality
+pages.classes.styles.tango.hero.subtitle,Classes — Tango — hero subtitle,"Learn lead and follow, musicality and the etiquette of social dance."
+pages.classes.styles.tango.hero.title,Classes — Tango — hero heading,Tango
+pages.classes.styles.tango.highlights.0.description,Classes — Tango — highlight 1 description,"Lead, follow and floor etiquette from day one."
+pages.classes.styles.tango.highlights.0.title,Classes — Tango — highlight 1 heading,Social dance skills
+pages.classes.styles.tango.highlights.1.description,Classes — Tango — highlight 2 description,Move with confidence to live and recorded tango music.
+pages.classes.styles.tango.highlights.1.title,Classes — Tango — highlight 2 heading,Musicality
+pages.classes.styles.tango.highlights.2.description,Classes — Tango — highlight 3 description,Join our social dance nights and themed events.
+pages.classes.styles.tango.highlights.2.title,Classes — Tango — highlight 3 heading,Milongas & events
+pages.classes.styles.tango.intro.0,Classes — Tango — paragraph 1,"Learn connection, lead and follow, musicality and the etiquette of social dance, building confidence from the very first steps."
+pages.classes.styles.tango.metadescription,Classes — Tango — search-engine description,"Tango classes for adults — connection, musicality and social dance etiquette."
+pages.classes.styles.tango.name,Classes — Tango — name,Tango
+pages.classes.styles.yoga.agegroups.adults.description,Classes — Yoga — age group description,Open to beginners and returning practitioners.
+pages.classes.styles.yoga.agegroups.adults.label,Classes — Yoga — age group label,Adults
+pages.classes.styles.yoga.cta.label,Classes — Yoga — button,Book a class
+pages.classes.styles.yoga.hero.image.alt,Classes — Yoga — hero image description (accessibility),Yoga class
+pages.classes.styles.yoga.hero.overline,Classes — Yoga — hero small label above the heading,Breath & stretch
+pages.classes.styles.yoga.hero.subtitle,Classes — Yoga — hero subtitle,"Improve flexibility and overall wellbeing through breath, stretch and focused practice."
+pages.classes.styles.yoga.hero.title,Classes — Yoga — hero heading,Yoga
+pages.classes.styles.yoga.highlights.0.description,Classes — Yoga — highlight 1 description,"Stretch, breathe and restore balance."
+pages.classes.styles.yoga.highlights.0.title,Classes — Yoga — highlight 1 heading,Wellbeing focus
+pages.classes.styles.yoga.highlights.1.description,Classes — Yoga — highlight 2 description,"A calm, focused environment for every body."
+pages.classes.styles.yoga.highlights.1.title,Classes — Yoga — highlight 2 heading,Music-guided practice
+pages.classes.styles.yoga.highlights.2.description,Classes — Yoga — highlight 3 description,Check class information for level and format details.
+pages.classes.styles.yoga.highlights.2.title,Classes — Yoga — highlight 3 heading,All levels
+pages.classes.styles.yoga.intro.0,Classes — Yoga — paragraph 1,"Improve flexibility and overall wellbeing through breath, stretch and focused, music-guided practice."
+pages.classes.styles.yoga.metadescription,Classes — Yoga — search-engine description,"Yoga classes for adults — flexibility, breath and wellbeing at County Hall Dance Centre."
+pages.classes.styles.yoga.name,Classes — Yoga — name,Yoga
+pages.classesinfo.hero.overline,Class descriptions page — hero small label above the heading,Classes
+pages.classesinfo.hero.subtitle,Class descriptions page — hero subtitle,Explore our adult dance and movement programme and meet the teaching team.
+pages.classesinfo.hero.title,Class descriptions page — hero heading,Class Descriptions & Instructors
+pages.classesinfo.intro,Class descriptions page — intro paragraph,"Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome — no dance experience needed."
+pages.classesinfo.meta.description,Class descriptions page — description (browser tab / search engines),Class descriptions and instructor profiles for adult classes at County Hall Dance Centre.
+pages.classesinfo.meta.title,Class descriptions page — heading (browser tab / search engines),Class Descriptions & Instructors
+pages.classesinfo.sections.descriptions.title,Class descriptions page — Descriptions section heading,Class Descriptions
+pages.classesinfo.sections.instructors.title,Class descriptions page — Instructors section heading,Instructors
+pages.classbooking.hero.overline,Class booking page — hero small label above the heading,Classes
+pages.classbooking.hero.subtitle,Class booking page — hero subtitle,View live availability and reserve your place through our booking partner.
+pages.classbooking.hero.title,Class booking page — hero heading,Booking
+pages.classbooking.intro,Class booking page — intro paragraph,Choose a class from the timetable and follow the booking link. Advance booking is recommended.
+pages.classbooking.meta.description,Class booking page — description (browser tab / search engines),Book adult dance and movement classes at County Hall Dance Centre.
+pages.classbooking.meta.title,Class booking page — heading (browser tab / search engines),Class Booking
+pages.classbooking.sections.how_to_book.title,Class booking page — How To Book section heading,How to book
+pages.classbooking.sections.policies.title,Class booking page — Policies section heading,Booking policies
+pages.tasterclasses.hero.overline,Taster classes page — hero small label above the heading,Classes
+pages.tasterclasses.hero.subtitle,Taster classes page — hero subtitle,New to the Centre? Start with a taster and find the class that suits you.
+pages.tasterclasses.hero.title,Taster classes page — hero heading,Taster Classes
+pages.tasterclasses.intro,Taster classes page — intro paragraph,"Taster classes are a low-commitment way to experience our teaching, studio and community before enrolling."
+pages.tasterclasses.meta.description,Taster classes page — description (browser tab / search engines),Try a taster class at County Hall Dance Centre.
+pages.tasterclasses.meta.title,Taster classes page — heading (browser tab / search engines),Taster Classes
+pages.tasterclasses.sections.available_tasters.title,Taster classes page — Available Tasters section heading,Available taster classes
+pages.tasterclasses.sections.what_to_bring.title,Taster classes page — What To Bring section heading,What to bring
+pages.timetable.booking.description,Timetable page — description,"Use the booking widget below to view live availability and manage your account. For course enrolment, visit our courses page."
+pages.timetable.booking.placeholderhint,Timetable page — placeholder instructions,"Replace this container with your ClassForKids, bsport, or other embed code."
+pages.timetable.booking.placeholderlabel,Timetable page — placeholder heading,Booking widget placeholder
+pages.timetable.booking.providernote,Timetable page — note under the booking widget,Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.
+pages.timetable.booking.title,Timetable page — heading,Class timetable
+pages.timetable.helplinks.browse_courses.label,Timetable page — label,Browse courses
+pages.timetable.helplinks.contact_us.label,Timetable page — label,Contact us
+pages.timetable.helplinks.frequently_asked_questions.label,Timetable page — label,Frequently asked questions
+pages.timetable.hero.overline,Timetable page — hero small label above the heading,Plan your week
+pages.timetable.hero.subtitle,Timetable page — hero subtitle,"Browse classes by day and age group, then reserve through our secure booking partner."
+pages.timetable.hero.title,Timetable page — hero heading,Timetable & Booking
+pages.timetable.meta.description,Timetable page — description (browser tab / search engines),View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.
+pages.timetable.meta.title,Timetable page — heading (browser tab / search engines),Timetable & Booking
+pages.timetable.trial.body,Timetable page — body text,"Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival."
+pages.timetable.trial.cta.label,Timetable page — button / call to action — label,Jump to timetable
+pages.timetable.trial.overline,Timetable page — small label above the heading,New to CHD PAS?
+pages.timetable.trial.title,Timetable page — heading,Book a complimentary trial
+pages.courses.detaillabels.backlink,Courses — back link,← All courses
+pages.courses.detaillabels.duration,Courses — duration label / value,Duration
+pages.courses.detaillabels.includes,Courses — “what's included” heading,What's included
+pages.courses.detaillabels.price,Courses — price,Price
+pages.courses.detaillabels.schedule,Courses — schedule,Schedule
+pages.courses.hero.overline,Courses — hero small label above the heading,Structured progression
+pages.courses.hero.subtitle,Courses — hero subtitle,"Immersive term programmes designed to deepen technique, artistry, and performance readiness."
+pages.courses.hero.title,Courses — hero heading,Courses
+pages.courses.intro,Courses — intro paragraph,"Courses differ from drop-in classes — they follow a curated syllabus across a full term, culminating in an informal sharing or assessment where appropriate."
+pages.courses.items.adult_ballet_open.cta.label,Courses — Adult Ballet Open — button,Enrol via timetable
+pages.courses.items.adult_ballet_open.description.0,Courses — Adult Ballet Open — paragraph 1,"Rebuild strength and grace at the barre and in centre, with modifications offered throughout."
+pages.courses.items.adult_ballet_open.description.1,Courses — Adult Ballet Open — paragraph 2,Each block introduces new enchaînements while revisiting core principles.
+pages.courses.items.adult_ballet_open.duration,Courses — Adult Ballet Open — duration label / value,6-week blocks
+pages.courses.items.adult_ballet_open.excerpt,Courses — Adult Ballet Open — short summary,A welcoming ballet class for adults — beginners and returners alike.
+pages.courses.items.adult_ballet_open.image.alt,Courses — Adult Ballet Open — image description (accessibility),Adult ballet open course
+pages.courses.items.adult_ballet_open.includes.0,Courses — Adult Ballet Open — included item 1,Weekly 75-minute class
+pages.courses.items.adult_ballet_open.includes.1,Courses — Adult Ballet Open — included item 2,Technique notes via email
+pages.courses.items.adult_ballet_open.includes.2,Courses — Adult Ballet Open — included item 3,Optional end-of-block class video
+pages.courses.items.adult_ballet_open.level,Courses — Adult Ballet Open — level,All levels
+pages.courses.items.adult_ballet_open.metadescription,Courses — Adult Ballet Open — search-engine description,"Open-level adult ballet course at CHD PAS, London."
+pages.courses.items.adult_ballet_open.price,Courses — Adult Ballet Open — price,£96 per block
+pages.courses.items.adult_ballet_open.schedule,Courses — Adult Ballet Open — schedule,"Mondays, 19:00 – 20:15"
+pages.courses.items.adult_ballet_open.term,Courses — Adult Ballet Open — term,Rolling enrolment
+pages.courses.items.adult_ballet_open.title,Courses — Adult Ballet Open — heading,Adult Ballet Open
+pages.courses.items.junior_ballet_foundation.cta.label,Courses — Junior Ballet Foundation — button,Enrol via timetable
+pages.courses.items.junior_ballet_foundation.description.0,Courses — Junior Ballet Foundation — paragraph 1,"This course introduces young dancers to the fundamentals of ballet posture, port de bras, and basic allegro."
+pages.courses.items.junior_ballet_foundation.description.1,Courses — Junior Ballet Foundation — paragraph 2,Classes are taught in a nurturing environment with clear expectations and plenty of encouragement.
+pages.courses.items.junior_ballet_foundation.duration,Courses — Junior Ballet Foundation — duration label / value,12 weeks
+pages.courses.items.junior_ballet_foundation.excerpt,Courses — Junior Ballet Foundation — short summary,A twelve-week introduction to classical ballet for ages 6–9.
+pages.courses.items.junior_ballet_foundation.image.alt,Courses — Junior Ballet Foundation — image description (accessibility),Junior ballet foundation course
+pages.courses.items.junior_ballet_foundation.includes.0,Courses — Junior Ballet Foundation — included item 1,Weekly 60-minute class
+pages.courses.items.junior_ballet_foundation.includes.1,Courses — Junior Ballet Foundation — included item 2,Course handbook and practice notes
+pages.courses.items.junior_ballet_foundation.includes.2,Courses — Junior Ballet Foundation — included item 3,End-of-term studio sharing
+pages.courses.items.junior_ballet_foundation.level,Courses — Junior Ballet Foundation — level,Beginner – Elementary
+pages.courses.items.junior_ballet_foundation.metadescription,Courses — Junior Ballet Foundation — search-engine description,Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.
+pages.courses.items.junior_ballet_foundation.price,Courses — Junior Ballet Foundation — price,£168 per term
+pages.courses.items.junior_ballet_foundation.schedule,Courses — Junior Ballet Foundation — schedule,"Saturdays, 10:00 – 11:00"
+pages.courses.items.junior_ballet_foundation.term,Courses — Junior Ballet Foundation — term,Autumn Term 2026
+pages.courses.items.junior_ballet_foundation.title,Courses — Junior Ballet Foundation — heading,Junior Ballet Foundation
+pages.courses.items.musical_theatre_performance.cta.label,Courses — Musical Theatre Performance — button,Enrol via timetable
+pages.courses.items.musical_theatre_performance.description.0,Courses — Musical Theatre Performance — paragraph 1,"Sing, dance, and act your way through a selected musical number, rehearsed for a small invited audience."
+pages.courses.items.musical_theatre_performance.description.1,Courses — Musical Theatre Performance — paragraph 2,Vocal coaching and ensemble work are integrated throughout the term.
+pages.courses.items.musical_theatre_performance.duration,Courses — Musical Theatre Performance — duration label / value,14 weeks
+pages.courses.items.musical_theatre_performance.excerpt,Courses — Musical Theatre Performance — short summary,Triple-threat training culminating in a staged musical excerpt.
+pages.courses.items.musical_theatre_performance.image.alt,Courses — Musical Theatre Performance — image description (accessibility),Musical theatre performance course
+pages.courses.items.musical_theatre_performance.includes.0,Courses — Musical Theatre Performance — included item 1,Weekly 3-hour session
+pages.courses.items.musical_theatre_performance.includes.1,Courses — Musical Theatre Performance — included item 2,Vocal warm-up resources
+pages.courses.items.musical_theatre_performance.includes.2,Courses — Musical Theatre Performance — included item 3,Costume hire for final sharing
+pages.courses.items.musical_theatre_performance.level,Courses — Musical Theatre Performance — level,Intermediate – Advanced
+pages.courses.items.musical_theatre_performance.metadescription,Courses — Musical Theatre Performance — search-engine description,Musical theatre performance course for intermediate and advanced students.
+pages.courses.items.musical_theatre_performance.price,Courses — Musical Theatre Performance — price,£320 per term
+pages.courses.items.musical_theatre_performance.schedule,Courses — Musical Theatre Performance — schedule,"Saturdays, 13:00 – 16:00"
+pages.courses.items.musical_theatre_performance.term,Courses — Musical Theatre Performance — term,Spring Term 2027
+pages.courses.items.musical_theatre_performance.title,Courses — Musical Theatre Performance — heading,Musical Theatre Performance
+pages.courses.items.teen_contemporary_intensive.cta.label,Courses — Teen Contemporary Intensive — button,Enrol via timetable
+pages.courses.items.teen_contemporary_intensive.description.0,Courses — Teen Contemporary Intensive — paragraph 1,"Students explore release technique, contact principles, and choreographic tasks across a focused ten-week block."
+pages.courses.items.teen_contemporary_intensive.description.1,Courses — Teen Contemporary Intensive — paragraph 2,The course prepares dancers for school showcases and optional audition pieces.
+pages.courses.items.teen_contemporary_intensive.duration,Courses — Teen Contemporary Intensive — duration label / value,10 weeks
+pages.courses.items.teen_contemporary_intensive.excerpt,Courses — Teen Contemporary Intensive — short summary,"Develop contemporary technique, improvisation, and performance skills."
+pages.courses.items.teen_contemporary_intensive.image.alt,Courses — Teen Contemporary Intensive — image description (accessibility),Teen contemporary intensive course
+pages.courses.items.teen_contemporary_intensive.includes.0,Courses — Teen Contemporary Intensive — included item 1,Weekly 90-minute class
+pages.courses.items.teen_contemporary_intensive.includes.1,Courses — Teen Contemporary Intensive — included item 2,Guest artist Q&A session
+pages.courses.items.teen_contemporary_intensive.includes.2,Courses — Teen Contemporary Intensive — included item 3,Performance workshop
+pages.courses.items.teen_contemporary_intensive.level,Courses — Teen Contemporary Intensive — level,Intermediate
+pages.courses.items.teen_contemporary_intensive.metadescription,Courses — Teen Contemporary Intensive — search-engine description,Intermediate contemporary course for teens at County Hall Dance.
+pages.courses.items.teen_contemporary_intensive.price,Courses — Teen Contemporary Intensive — price,£195 per term
+pages.courses.items.teen_contemporary_intensive.schedule,Courses — Teen Contemporary Intensive — schedule,"Wednesdays, 17:30 – 19:00"
+pages.courses.items.teen_contemporary_intensive.term,Courses — Teen Contemporary Intensive — term,Autumn Term 2026
+pages.courses.items.teen_contemporary_intensive.title,Courses — Teen Contemporary Intensive — heading,Teen Contemporary Intensive
+pages.courses.meta.description,Courses — description (browser tab / search engines),Term-length dance and performing arts courses with structured progression at CHD PAS.
+pages.courses.meta.title,Courses — heading (browser tab / search engines),Courses
+pages.membership.subpages.booking_access.hero.overline,Membership — Booking Access — hero small label above the heading,Membership
+pages.membership.subpages.booking_access.hero.subtitle,Membership — Booking Access — hero subtitle,How members reserve classes and events through our booking system.
+pages.membership.subpages.booking_access.hero.title,Membership — Booking Access — hero heading,Booking Access
+pages.membership.subpages.booking_access.intro,Membership — Booking Access — intro paragraph,Members will receive booking access through our online timetable and companion app — details to follow via our app partner.
+pages.membership.subpages.booking_access.meta.description,Membership — Booking Access — search-engine description,Member booking access at County Hall Dance Centre.
+pages.membership.subpages.booking_access.meta.title,Membership — Booking Access — browser tab title,Booking Access
+pages.membership.subpages.booking_access.sections.member_booking.title,Membership — Booking Access — Member Booking section heading,Member booking
+pages.membership.subpages.booking_access.sections.support.title,Membership — Booking Access — Support section heading,Support
+pages.membership.subpages.member_benefits.hero.overline,Membership — Member Benefits — hero small label above the heading,Membership
+pages.membership.subpages.member_benefits.hero.subtitle,Membership — Member Benefits — hero subtitle,"A more flexible way to keep dancing, join events and belong to the community."
+pages.membership.subpages.member_benefits.hero.title,Membership — Member Benefits — hero heading,Member Benefits
+pages.membership.subpages.member_benefits.intro,Membership — Member Benefits — intro paragraph,"Membership offers ongoing access to classes, events and community benefits — details to be confirmed before launch."
+pages.membership.subpages.member_benefits.meta.description,Membership — Member Benefits — search-engine description,Benefits of membership at County Hall Dance Centre.
+pages.membership.subpages.member_benefits.meta.title,Membership — Member Benefits — browser tab title,Member Benefits
+pages.membership.subpages.member_benefits.sections.benefits.title,Membership — Member Benefits — Benefits section heading,What's included
+pages.membership.subpages.member_benefits.sections.how_to_join.title,Membership — Member Benefits — How To Join section heading,How to join
+pages.membership.subpages.monthly_passes.hero.overline,Membership — Monthly Passes — hero small label above the heading,Membership
+pages.membership.subpages.monthly_passes.hero.subtitle,Membership — Monthly Passes — hero subtitle,Flexible monthly options for regular class attendance.
+pages.membership.subpages.monthly_passes.hero.title,Membership — Monthly Passes — hero heading,Monthly Passes
+pages.membership.subpages.monthly_passes.intro,Membership — Monthly Passes — intro paragraph,"Monthly passes will be published with validity, cancellation policy and transferability before online booking opens."
+pages.membership.subpages.monthly_passes.meta.description,Membership — Monthly Passes — search-engine description,Monthly pass options at County Hall Dance Centre.
+pages.membership.subpages.monthly_passes.meta.title,Membership — Monthly Passes — browser tab title,Monthly Passes
+pages.membership.subpages.monthly_passes.sections.pass_options.title,Membership — Monthly Passes — Pass Options section heading,Pass options
+pages.membership.subpages.monthly_passes.sections.terms.title,Membership — Monthly Passes — Terms section heading,Terms
+pages.membershipterms.hero.overline,Membership terms page — hero small label above the heading,About Us
+pages.membershipterms.hero.subtitle,Membership terms page — hero subtitle,"Terms governing membership passes, booking access and cancellation."
+pages.membershipterms.hero.title,Membership terms page — hero heading,Membership Terms
+pages.membershipterms.intro,Membership terms page — intro paragraph,"Final membership terms, including validity, cancellation policy and transferability, will be published before online booking opens."
+pages.membershipterms.meta.description,Membership terms page — description (browser tab / search engines),Membership terms and conditions at County Hall Dance Centre.
+pages.membershipterms.meta.title,Membership terms page — heading (browser tab / search engines),Membership Terms
+pages.membershipterms.sections.cancellation.title,Membership terms page — Cancellation section heading,Cancellation policy
+pages.membershipterms.sections.general.title,Membership terms page — General section heading,General terms
+pages.privatelessons.hero.overline,Private lessons page — hero small label above the heading,Tailored for you
+pages.privatelessons.hero.subtitle,Private lessons page — hero subtitle,"One-to-one lessons, couples' dance, wedding first dances, group experiences, corporate events and school workshops."
+pages.privatelessons.hero.title,Private lessons page — hero heading,Private Lessons & Experiences
+pages.privatelessons.intro,Private lessons page — intro paragraph,"Services include private dance lessons; dance experiences for individuals, couples and groups; wedding first dances; corporate team experiences; school and organisation workshops; rehearsals, auditions, filming and private events; and Milonga and social dance events."
+pages.privatelessons.meta.description,Private lessons page — description (browser tab / search engines),Private dance lessons and bespoke experiences at County Hall Dance Centre.
+pages.privatelessons.meta.title,Private lessons page — heading (browser tab / search engines),Private Lessons & Experiences
+pages.privatelessons.sections.corporate.title,Private lessons page — Corporate section heading,Corporate Events
+pages.privatelessons.sections.couples.title,Private lessons page — Couples section heading,Couples' Dance
+pages.privatelessons.sections.groups.title,Private lessons page — Groups section heading,Group Experiences
+pages.privatelessons.sections.one_to_one.title,Private lessons page — One To One section heading,One-to-One Lessons
+pages.privatelessons.sections.schools.title,Private lessons page — Schools section heading,School / Organisation Workshops
+pages.privatelessons.sections.wedding.title,Private lessons page — Wedding section heading,First Wedding Dance
+pages.shop.hero.overline,Shop page — hero small label above the heading,Merchandise
+pages.shop.hero.subtitle,Shop page — hero subtitle,"Dancewear, T-shirts, accessories and County Hall merchandise."
+pages.shop.hero.title,Shop page — hero heading,Shop
+pages.shop.intro,Shop page — intro paragraph,"A Merchandise / Coming Soon page online, with sales also available at the front desk. Categories include dancewear, T-shirts, dance socks, tote and dance bags, water bottles, accessories and gift cards."
+pages.shop.meta.description,Shop page — description (browser tab / search engines),"Dancewear, merchandise and accessories at County Hall Dance Centre."
+pages.shop.meta.title,Shop page — heading (browser tab / search engines),Shop
+pages.shop.sections.accessories.title,Shop page — Accessories section heading,Accessories
+pages.shop.sections.dancewear.title,Shop page — Dancewear section heading,Dancewear
+pages.shop.sections.merchandise.title,Shop page — Merchandise section heading,County Hall Merchandise
+pages.shop.sections.t_shirts.title,Shop page — T Shirts section heading,T-Shirts
+pages.about.cta.body,About page — Visit us — body text,We would love to welcome you for a trial class or a tour of the studios.
+pages.about.cta.button.label,About page — Visit us — label,Get in touch
+pages.about.cta.title,About page — Visit us — heading,Visit us
+pages.about.faculty.intro,About page — intro paragraph,"Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care."
+pages.about.faculty.members.faculty_1.bio,About page — Faculty — Eleanor Whitfield — biography,Former soloist with a major UK company; RAD registered teacher with twenty years of studio leadership.
+pages.about.faculty.members.faculty_1.image.alt,About page — Faculty — Eleanor Whitfield — image description (accessibility),Eleanor Whitfield
+pages.about.faculty.members.faculty_1.name,About page — Faculty — Eleanor Whitfield — name,Eleanor Whitfield
+pages.about.faculty.members.faculty_1.role,About page — Faculty — Eleanor Whitfield — role,Principal & Ballet
+pages.about.faculty.members.faculty_2.bio,About page — Faculty — Marcus Okonkwo — biography,Independent choreographer whose work has toured nationally; passionate about nurturing young creatives.
+pages.about.faculty.members.faculty_2.image.alt,About page — Faculty — Marcus Okonkwo — image description (accessibility),Marcus Okonkwo
+pages.about.faculty.members.faculty_2.name,About page — Faculty — Marcus Okonkwo — name,Marcus Okonkwo
+pages.about.faculty.members.faculty_2.role,About page — Faculty — Marcus Okonkwo — role,Contemporary & Choreography
+pages.about.faculty.members.faculty_3.bio,About page — Faculty — Sophie Laurent — biography,"West End performer and vocal coach, specialising in triple-threat training for teens."
+pages.about.faculty.members.faculty_3.image.alt,About page — Faculty — Sophie Laurent — image description (accessibility),Sophie Laurent
+pages.about.faculty.members.faculty_3.name,About page — Faculty — Sophie Laurent — name,Sophie Laurent
+pages.about.faculty.members.faculty_3.role,About page — Faculty — Sophie Laurent — role,Musical Theatre
+pages.about.faculty.overline,About page — small label above the heading,Meet the team
+pages.about.faculty.title,About page — heading,Our faculty
+pages.about.hero.image.alt,About page — hero image description (accessibility),County Hall Dance studio
+pages.about.hero.overline,About page — hero small label above the heading,Our school
+pages.about.hero.subtitle,About page — hero subtitle,A London performing arts school where heritage meets forward-thinking training.
+pages.about.hero.title,About page — hero heading,About CHD PAS
+pages.about.meta.description,About page — description (browser tab / search engines),"Learn about County Hall Dance & Performing Arts School — our history, values, and faculty."
+pages.about.meta.title,About page — heading (browser tab / search engines),About Us
+pages.about.story.paragraphs.0,About page — Our story — paragraph 1,County Hall Dance & Performing Arts School was founded with a simple conviction: exceptional training and genuine care belong together.
+pages.about.story.paragraphs.1,About page — Our story — paragraph 2,"From our studios beside the Thames, we serve a diverse community of recreational dancers, ambitious teens, and adult learners rediscovering movement."
+pages.about.story.paragraphs.2,About page — Our story — paragraph 3,"Our faculty brings professional stage and studio experience, united by a shared commitment to safe, inspiring practice."
+pages.about.story.title,About page — Our story — heading,Our story
+pages.about.values.items.0.description,About page — Values — value 1 description,High standards delivered with patience and encouragement.
+pages.about.values.items.0.title,About page — Values — value 1 heading,Excellence with warmth
+pages.about.values.items.1.description,About page — Values — value 2 description,"Every body, background, and aspiration is welcome."
+pages.about.values.items.1.title,About page — Values — value 2 heading,Inclusive community
+pages.about.values.items.2.description,About page — Values — value 3 description,Training rooted in respected methods and creative exploration.
+pages.about.values.items.2.title,About page — Values — value 3 heading,Artistic integrity
+pages.about.values.items.3.description,About page — Values — value 4 description,Robust policies ensuring every student feels secure and supported.
+pages.about.values.items.3.title,About page — Values — value 4 heading,Safeguarding
+pages.about.values.overline,About page — small label above the heading,What guides us
+pages.about.values.title,About page — heading,Our values
+pages.joinus.hero.overline,Join Us page — hero small label above the heading,About Us
+pages.joinus.hero.subtitle,Join Us page — hero subtitle,"Teaching, creative and operational opportunities at County Hall Dance Centre."
+pages.joinus.hero.title,Join Us page — hero heading,Join Us
+pages.joinus.intro,Join Us page — intro paragraph,"We are building a welcoming creative community on the South Bank. Expressions of interest from teachers, artists and collaborators are welcome."
+pages.joinus.meta.description,Join Us page — description (browser tab / search engines),Join the team at County Hall Dance Centre.
+pages.joinus.meta.title,Join Us page — heading (browser tab / search engines),Join Us
+pages.joinus.sections.apply.title,Join Us page — Apply section heading,How to apply
+pages.joinus.sections.opportunities.title,Join Us page — Opportunities section heading,Opportunities
+pages.events.categories.cross_arts_events.hero.overline,Events — Cross-Arts Events — hero small label above the heading,Events
+pages.events.categories.cross_arts_events.hero.subtitle,Events — Cross-Arts Events — hero subtitle,"Where dance meets music, visual art and international cultural exchange."
+pages.events.categories.cross_arts_events.hero.title,Events — Cross-Arts Events — hero heading,Cross-Arts Events
+pages.events.categories.cross_arts_events.intro,Events — Cross-Arts Events — intro paragraph,"Our Dance Meets Arts programme brings together movement, live music, visual art and cultural celebration."
+pages.events.categories.cross_arts_events.meta.description,Events — Cross-Arts Events — search-engine description,Dance Meets Arts cross-disciplinary events at County Hall Dance Centre.
+pages.events.categories.cross_arts_events.meta.title,Events — Cross-Arts Events — browser tab title,Cross-Arts Events
+pages.events.categories.cross_arts_events.sections.programme.title,Events — Cross-Arts Events — Programme section heading,Programme
+pages.events.categories.cross_arts_events.sections.upcoming.title,Events — Cross-Arts Events — Upcoming section heading,Upcoming events
+pages.events.categories.masterclasses.hero.overline,Events — Masterclasses — hero small label above the heading,Events
+pages.events.categories.masterclasses.hero.subtitle,Events — Masterclasses — hero subtitle,Learn from visiting artists and specialists in intimate studio settings.
+pages.events.categories.masterclasses.hero.title,Events — Masterclasses — hero heading,Masterclasses
+pages.events.categories.masterclasses.intro,Events — Masterclasses — intro paragraph,Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.
+pages.events.categories.masterclasses.meta.description,Events — Masterclasses — search-engine description,Guest artist masterclasses at County Hall Dance Centre.
+pages.events.categories.masterclasses.meta.title,Events — Masterclasses — browser tab title,Masterclasses
+pages.events.categories.masterclasses.sections.levels.title,Events — Masterclasses — Levels section heading,Levels & requirements
+pages.events.categories.masterclasses.sections.upcoming.title,Events — Masterclasses — Upcoming section heading,Upcoming masterclasses
+pages.events.categories.milonga.hero.overline,Events — Milonga — hero small label above the heading,Events
+pages.events.categories.milonga.hero.subtitle,Events — Milonga — hero subtitle,Social tango evenings with live and recorded music in our South Bank studio.
+pages.events.categories.milonga.hero.title,Events — Milonga — hero heading,Milonga
+pages.events.categories.milonga.intro,Events — Milonga — intro paragraph,Join us for regular milongas — welcoming social dance nights for tango dancers of every level.
+pages.events.categories.milonga.meta.description,Events — Milonga — search-engine description,Tango milonga social dance events at County Hall Dance Centre.
+pages.events.categories.milonga.meta.title,Events — Milonga — browser tab title,Milonga
+pages.events.categories.milonga.sections.upcoming.title,Events — Milonga — Upcoming section heading,Upcoming milongas
+pages.events.categories.milonga.sections.what_to_expect.title,Events — Milonga — What To Expect section heading,What to expect
+pages.events.categories.performances.hero.overline,Events — Performances — hero small label above the heading,Events
+pages.events.categories.performances.hero.subtitle,Events — Performances — hero subtitle,"Ticketed showcases, sharings and performance events throughout the year."
+pages.events.categories.performances.hero.title,Events — Performances — hero heading,Performances
+pages.events.categories.performances.intro,Events — Performances — intro paragraph,Celebrate the work of our community in performances ranging from informal sharings to ticketed showcase evenings.
+pages.events.categories.performances.meta.description,Events — Performances — search-engine description,Performances and showcases at County Hall Dance Centre.
+pages.events.categories.performances.meta.title,Events — Performances — browser tab title,Performances
+pages.events.categories.performances.sections.tickets.title,Events — Performances — Tickets section heading,Tickets
+pages.events.categories.performances.sections.upcoming.title,Events — Performances — Upcoming section heading,Upcoming performances
+pages.events.categories.social_dance_nights.hero.overline,Events — Social Dance Nights — hero small label above the heading,Events
+pages.events.categories.social_dance_nights.hero.subtitle,Events — Social Dance Nights — hero subtitle,"Themed evenings celebrating dance styles, music and community."
+pages.events.categories.social_dance_nights.hero.title,Events — Social Dance Nights — hero heading,Social Dance Nights
+pages.events.categories.social_dance_nights.intro,Events — Social Dance Nights — intro paragraph,"From salsa socials to cross-style celebrations, our social nights are open to adults who love to move and connect."
+pages.events.categories.social_dance_nights.meta.description,Events — Social Dance Nights — search-engine description,Themed social dance evenings at County Hall Dance Centre.
+pages.events.categories.social_dance_nights.meta.title,Events — Social Dance Nights — browser tab title,Social Dance Nights
+pages.events.categories.social_dance_nights.sections.how_to_join.title,Events — Social Dance Nights — How To Join section heading,How to join
+pages.events.categories.social_dance_nights.sections.upcoming.title,Events — Social Dance Nights — Upcoming section heading,Upcoming social nights
+pages.events.categories.workshops.hero.overline,Events — Workshops — hero small label above the heading,Events
+pages.events.categories.workshops.hero.subtitle,Events — Workshops — hero subtitle,One-off intensives and taster sessions with guest artists and faculty.
+pages.events.categories.workshops.hero.title,Events — Workshops — hero heading,Workshops
+pages.events.categories.workshops.intro,Events — Workshops — intro paragraph,"Workshops offer a focused opportunity to explore a style, technique or theme in a single session or short series."
+pages.events.categories.workshops.meta.description,Events — Workshops — search-engine description,Dance and movement workshops at County Hall Dance Centre.
+pages.events.categories.workshops.meta.title,Events — Workshops — browser tab title,Workshops
+pages.events.categories.workshops.sections.booking.title,Events — Workshops — Booking section heading,Booking
+pages.events.categories.workshops.sections.upcoming.title,Events — Workshops — Upcoming section heading,Upcoming workshops
+pages.events.categorylabels.backlink,Events — back link,← All events
+pages.events.detaillabels.backlink,Events — back link,← All events
+pages.events.detaillabels.date,Events — date,Date
+pages.events.detaillabels.location,Events — location,Location
+pages.events.hero.overline,Events — hero small label above the heading,What's on
+pages.events.hero.subtitle,Events — hero subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
+pages.events.hero.title,Events — hero heading,Events & Masterclasses
+pages.events.intro,Events — intro paragraph,Book directly via the links below. Event payments are processed securely through Stripe — class bookings remain on our timetable system.
+pages.events.items.contemporary_intensive_maya_chen.booknow.label,Events — Contemporary Intensive with Maya Chen — button,Book Now
+pages.events.items.contemporary_intensive_maya_chen.date,Events — Contemporary Intensive with Maya Chen — date,Saturday 18 October 2026
+pages.events.items.contemporary_intensive_maya_chen.description.0,Events — Contemporary Intensive with Maya Chen — paragraph 1,Join internationally recognised choreographer Maya Chen for a day of contemporary training at intermediate level and above.
+pages.events.items.contemporary_intensive_maya_chen.description.1,Events — Contemporary Intensive with Maya Chen — paragraph 2,The morning focuses on floor work and release principles; the afternoon introduces excerpts from Maya's touring repertory.
+pages.events.items.contemporary_intensive_maya_chen.description.2,Events — Contemporary Intensive with Maya Chen — paragraph 3,Please bring knee pads and water. Places are limited to 24 participants.
+pages.events.items.contemporary_intensive_maya_chen.excerpt,Events — Contemporary Intensive with Maya Chen — short summary,A full-day intensive exploring release technique and repertory with guest artist Maya Chen.
+pages.events.items.contemporary_intensive_maya_chen.image.alt,Events — Contemporary Intensive with Maya Chen — image description (accessibility),Contemporary dance intensive workshop
+pages.events.items.contemporary_intensive_maya_chen.location,Events — Contemporary Intensive with Maya Chen — location,Studio A
+pages.events.items.contemporary_intensive_maya_chen.title,Events — Contemporary Intensive with Maya Chen — heading,Contemporary Intensive with Maya Chen
+pages.events.items.junior_ballet_masterclass.booknow.label,Events — Junior Ballet Masterclass — button,Book Now
+pages.events.items.junior_ballet_masterclass.date,Events — Junior Ballet Masterclass — date,Sunday 26 October 2026
+pages.events.items.junior_ballet_masterclass.description.0,Events — Junior Ballet Masterclass — paragraph 1,"Led by a guest RAD examiner, this masterclass refines alignment, épaulement, and petite allegro."
+pages.events.items.junior_ballet_masterclass.description.1,Events — Junior Ballet Masterclass — paragraph 2,Suitable for students currently studying Grade 2–4 or equivalent.
+pages.events.items.junior_ballet_masterclass.excerpt,Events — Junior Ballet Masterclass — short summary,A special masterclass for junior ballet students aged 8–12.
+pages.events.items.junior_ballet_masterclass.image.alt,Events — Junior Ballet Masterclass — image description (accessibility),Junior ballet masterclass in progress
+pages.events.items.junior_ballet_masterclass.location,Events — Junior Ballet Masterclass — location,Studio B
+pages.events.items.junior_ballet_masterclass.title,Events — Junior Ballet Masterclass — heading,Junior Ballet Masterclass
+pages.events.items.musical_theatre_workshop_day.booknow.label,Events — Musical Theatre Workshop Day — button,Book Now
+pages.events.items.musical_theatre_workshop_day.date,Events — Musical Theatre Workshop Day — date,Saturday 8 November 2026
+pages.events.items.musical_theatre_workshop_day.description.0,Events — Musical Theatre Workshop Day — paragraph 1,"A lively day of triple-threat training, ending with a short sharing for friends and family."
+pages.events.items.musical_theatre_workshop_day.description.1,Events — Musical Theatre Workshop Day — paragraph 2,Open to ages 10–16 with some prior dance or drama experience recommended.
+pages.events.items.musical_theatre_workshop_day.excerpt,Events — Musical Theatre Workshop Day — short summary,"Sing, dance, and act through a full musical theatre workshop day."
+pages.events.items.musical_theatre_workshop_day.image.alt,Events — Musical Theatre Workshop Day — image description (accessibility),Musical theatre workshop participants on stage
+pages.events.items.musical_theatre_workshop_day.location,Events — Musical Theatre Workshop Day — location,Main Hall
+pages.events.items.musical_theatre_workshop_day.title,Events — Musical Theatre Workshop Day — heading,Musical Theatre Workshop Day
+pages.events.items.winter_showcase.booknow.label,Events — Winter Showcase — button,Book Now
+pages.events.items.winter_showcase.date,Events — Winter Showcase — date,Friday 12 December 2026
+pages.events.items.winter_showcase.description.0,Events — Winter Showcase — paragraph 1,"Celebrate the talent of the CHD PAS community in an evening of ballet, contemporary, jazz, and musical theatre."
+pages.events.items.winter_showcase.description.1,Events — Winter Showcase — paragraph 2,Doors open at 18:30; performance begins at 19:00. Running time approximately 90 minutes including interval.
+pages.events.items.winter_showcase.excerpt,Events — Winter Showcase — short summary,Our annual winter showcase featuring students from every discipline.
+pages.events.items.winter_showcase.image.alt,Events — Winter Showcase — image description (accessibility),Winter showcase performance lighting
+pages.events.items.winter_showcase.location,Events — Winter Showcase — location,County Hall Theatre
+pages.events.items.winter_showcase.title,Events — Winter Showcase — heading,Winter Showcase — Tickets On Sale
+pages.events.meta.description,Events — description (browser tab / search engines),"Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School."
+pages.events.meta.title,Events — heading (browser tab / search engines),Events & Masterclasses
+pages.booking.form.description,Booking page — form — description,"Tell us what you are looking for — studio hire, class booking, membership or a general question."
+pages.booking.form.fields.email_address.label,Booking page — form — Email Address label,Email address
+pages.booking.form.fields.email_address.placeholder,Booking page — form — Email Address placeholder text,you@example.com
+pages.booking.form.fields.enquiry_about.label,Booking page — form — Enquiry About label,Enquiry about
+pages.booking.form.fields.enquiry_about.options.classes_booking.label,Booking page — form — Enquiry About — Classes Booking,Classes Booking
+pages.booking.form.fields.enquiry_about.options.general_enquire.label,Booking page — form — Enquiry About — General Enquire,General Enquire
+pages.booking.form.fields.enquiry_about.options.membership_booking.label,Booking page — form — Enquiry About — Membership Booking,Membership Booking
+pages.booking.form.fields.enquiry_about.options.studio_hire.label,Booking page — form — Enquiry About — Studio Hire,Studio Hire
+pages.booking.form.fields.full_name.label,Booking page — form — Full Name label,Full name
+pages.booking.form.fields.full_name.placeholder,Booking page — form — Full Name placeholder text,Your name
+pages.booking.form.fields.message.label,Booking page — form — Message label,Message
+pages.booking.form.fields.message.placeholder,Booking page — form — Message placeholder text,"Please include any relevant details — dates, class names, group size, etc."
+pages.booking.form.fields.phone_optional.label,Booking page — form — Phone (Optional) label,Phone (optional)
+pages.booking.form.fields.phone_optional.placeholder,Booking page — form — Phone (Optional) placeholder text,+44 …
+pages.booking.form.selectplaceholder,Booking page — form — dropdown placeholder,Select an option
+pages.booking.form.submitlabel,Booking page — form — button label,Send message
+pages.booking.form.successmessage,Booking page — form — success message after sending,Thank you — your enquiry has been received. We will be in touch shortly.
+pages.booking.form.title,Booking page — form — heading,Send an enquiry
+pages.booking.hero.overline,Booking & enquiries page — hero small label above the heading,We'd love to hear from you
+pages.booking.hero.subtitle,Booking & enquiries page — hero subtitle,Complete the form below and our team will respond by email within two working days.
+pages.booking.hero.title,Booking & enquiries page — hero heading,Booking & Enquiries
+pages.booking.meta.description,Booking & enquiries page — description (browser tab / search engines),"Send a booking or general enquiry to County Hall Dance Centre — studio hire, classes, membership and more."
+pages.booking.meta.title,Booking & enquiries page — heading (browser tab / search engines),Booking & Enquiries
+pages.contact.details.address.0,Contact page — studio details — address line 1,County Hall Dance Studio
+pages.contact.details.address.1,Contact page — studio details — address line 2,Belvedere Road
+pages.contact.details.address.2,Contact page — studio details — address line 3,London SE1 7GP
+pages.contact.details.email,Contact page — studio details — email,hello@countyhalldance.co.uk
+pages.contact.details.hours,Contact page — studio details — opening hours,"Office hours: Mon – Fri, 9:00 – 17:30"
+pages.contact.details.phone,Contact page — studio details — phone,+44 20 7946 0958
+pages.contact.details.title,Contact page — studio details — heading,Studio details
+pages.contact.form.description,Contact page — form — description,Complete the form below and we will respond within two working days.
+pages.contact.form.fields.email_address.label,Contact page — form — Email Address label,Email address
+pages.contact.form.fields.email_address.placeholder,Contact page — form — Email Address placeholder text,you@example.com
+pages.contact.form.fields.full_name.label,Contact page — form — Full Name label,Full name
+pages.contact.form.fields.full_name.placeholder,Contact page — form — Full Name placeholder text,Your name
+pages.contact.form.fields.message.label,Contact page — form — Message label,Message
+pages.contact.form.fields.message.placeholder,Contact page — form — Message placeholder text,How can we help?
+pages.contact.form.fields.phone_optional.label,Contact page — form — Phone (Optional) label,Phone (optional)
+pages.contact.form.fields.phone_optional.placeholder,Contact page — form — Phone (Optional) placeholder text,+44 …
+pages.contact.form.fields.subject.label,Contact page — form — Subject label,Subject
+pages.contact.form.fields.subject.options.classes_timetable.label,Contact page — form — Subject — Classes & Timetable,Classes & timetable
+pages.contact.form.fields.subject.options.courses.label,Contact page — form — Subject — Courses,Courses
+pages.contact.form.fields.subject.options.general_enquiry.label,Contact page — form — Subject — General Enquiry,General enquiry
+pages.contact.form.fields.subject.options.gift_cards.label,Contact page — form — Subject — Gift Cards,Gift cards
+pages.contact.form.fields.subject.options.private_events.label,Contact page — form — Subject — Private Events,Private events
+pages.contact.form.selectplaceholder,Contact page — form — dropdown placeholder,Select an option
+pages.contact.form.submitlabel,Contact page — form — button label,Send message
+pages.contact.form.successmessage,Contact page — form — success message after sending,Thank you — your message has been received. We will be in touch shortly.
+pages.contact.form.title,Contact page — form — heading,Send an enquiry
+pages.contact.hero.overline,Contact page — hero small label above the heading,We'd love to hear from you
+pages.contact.hero.subtitle,Contact page — hero subtitle,"Questions about classes, courses, private events, or anything else — send us a message."
+pages.contact.hero.title,Contact page — hero heading,Contact
+pages.contact.map.directionslabel,Contact page — map — directions link,Open in Google Maps →
+pages.contact.map.title,Contact page — map — heading,Find us
+pages.contact.meta.description,Contact page — description (browser tab / search engines),Get in touch with County Hall Dance & Performing Arts School.
+pages.contact.meta.title,Contact page — heading (browser tab / search engines),Contact
+pages.faq.cta.button.label,FAQ page — button / call to action — label,Contact us
+pages.faq.cta.text,FAQ page — button / call to action — text,Can't find what you need?
+pages.faq.hero.overline,FAQ page — hero small label above the heading,Help centre
+pages.faq.hero.subtitle,FAQ page — hero subtitle,Quick answers to common questions. Still unsure? Contact our friendly team.
+pages.faq.hero.title,FAQ page — hero heading,Frequently asked questions
+pages.faq.items.faq_1.answer,FAQ page — FAQ 1 — answer,Visit our Timetable & Booking page and use the booking widget to select a class. You will be directed to our external booking partner to complete registration and payment.
+pages.faq.items.faq_1.question,FAQ page — FAQ 1 — question,How do I book a class?
+pages.faq.items.faq_2.answer,FAQ page — FAQ 2 — answer,Yes. We offer a complimentary trial for new students on selected classes. Choose the trial option when booking through the timetable.
+pages.faq.items.faq_2.question,FAQ page — FAQ 2 — question,Can my child try a class before committing?
+pages.faq.items.faq_3.answer,FAQ page — FAQ 3 — answer,"Comfortable activewear is fine for a trial. If they continue, we will provide a uniform list — typically leotard, tights, ballet shoes, and hair in a neat bun."
+pages.faq.items.faq_3.question,FAQ page — FAQ 3 — question,What should my child wear to their first ballet class?
+pages.faq.items.faq_4.answer,FAQ page — FAQ 4 — answer,Courses run for a fixed term with a structured syllabus and limited places. Regular classes can often be booked on a rolling basis via the timetable.
+pages.faq.items.faq_4.question,FAQ page — FAQ 4 — question,How are courses different from regular classes?
+pages.faq.items.faq_5.answer,FAQ page — FAQ 5 — answer,"Optional examinations are available in ballet, tap, and drama through recognised awarding bodies. Your child's teacher will advise when they are ready."
+pages.faq.items.faq_5.question,FAQ page — FAQ 5 — question,Do you offer exams?
+pages.faq.items.faq_6.answer,FAQ page — FAQ 6 — answer,Events are booked directly via the Book Now button on each event page. Payments are processed securely through Stripe.
+pages.faq.items.faq_6.question,FAQ page — FAQ 6 — question,How do I book an event or masterclass?
+pages.faq.items.faq_7.answer,FAQ page — FAQ 7 — answer,There is limited on-site parking by arrangement. We recommend public transport — Waterloo station is a short walk from County Hall.
+pages.faq.items.faq_7.question,FAQ page — FAQ 7 — question,Is there parking nearby?
+pages.faq.meta.description,FAQ page — description (browser tab / search engines),"Frequently asked questions about classes, courses, and bookings at CHD PAS."
+pages.faq.meta.title,FAQ page — heading (browser tab / search engines),FAQ
+pages.giftcards.hero.overline,Gift cards page — hero small label above the heading,A thoughtful gift
+pages.giftcards.hero.subtitle,Gift cards page — hero subtitle,"Perfect for birthdays, holidays, or encouraging someone to take their first class."
+pages.giftcards.hero.title,Gift cards page — hero heading,Gift Cards
+pages.giftcards.intro,Gift cards page — intro paragraph,"Gift cards can be redeemed against classes, courses, workshops, and merchandise. They are delivered by email and valid for twelve months from purchase."
+pages.giftcards.meta.description,Gift cards page — description (browser tab / search engines),Give the gift of dance with a CHD PAS gift card.
+pages.giftcards.meta.title,Gift cards page — heading (browser tab / search engines),Gift Cards
+pages.giftcards.options.gift_100.amount,Gift cards — £100 gift card — amount,£100
+pages.giftcards.options.gift_100.cta.label,Gift cards — £100 gift card — button,Buy £100 card
+pages.giftcards.options.gift_100.description,Gift cards — £100 gift card — description,A generous gift towards a full course or multiple masterclasses.
+pages.giftcards.options.gift_100.title,Gift cards — £100 gift card — heading,£100 Gift Card
+pages.giftcards.options.gift_25.amount,Gift cards — £25 gift card — amount,£25
+pages.giftcards.options.gift_25.cta.label,Gift cards — £25 gift card — button,Buy £25 card
+pages.giftcards.options.gift_25.description,Gift cards — £25 gift card — description,Ideal for a single workshop or as a contribution towards term fees.
+pages.giftcards.options.gift_25.title,Gift cards — £25 gift card — heading,£25 Gift Card
+pages.giftcards.options.gift_50.amount,Gift cards — £50 gift card — amount,£50
+pages.giftcards.options.gift_50.cta.label,Gift cards — £50 gift card — button,Buy £50 card
+pages.giftcards.options.gift_50.description,Gift cards — £50 gift card — description,Covers several drop-in classes or part of a term enrolment.
+pages.giftcards.options.gift_50.title,Gift cards — £50 gift card — heading,£50 Gift Card
+pages.giftcards.terms,Gift cards page — terms note,Gift cards are non-refundable and cannot be exchanged for cash. Remaining balances stay on the card until used. Contact us for custom amounts.
+ui.booking.orcall,Booking / enquiry form — words between email and phone,or call
+ui.booking.preferdirectprefix,Booking / enquiry form — sentence before the email link,Prefer to reach us directly? Email
+ui.form.requiredmarker,Forms — marker shown next to required form fields, *
+ui.header.closemenu,Header — Close menu button (accessibility),Close menu
+ui.header.mainnavigation,Header — screen-reader label for the main menu,Main navigation
+ui.header.mobilenavigation,Header — screen-reader label for the mobile menu,Mobile navigation
+ui.header.openmenu,Header — Open menu button (accessibility),Open menu
+ui.header.submenusuffix,Header — suffix added to submenu labels (accessibility), submenu
+ui.hero.featuredhighlights,Homepage hero — screen-reader label for the hero banner,Featured highlights
+ui.hero.slidenavigation,Homepage hero — screen-reader label for slide dots,Slide navigation
+ui.hero.slideprefix,Homepage hero — screen-reader prefix before the slide number,Slide
+ui.sectionedpage.comingsoon,Placeholder pages — placeholder text for unfinished sections,Content for this section is coming soon.

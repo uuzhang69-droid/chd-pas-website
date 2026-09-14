@@ -1,0 +1,24 @@
+# 依赖
+/node_modules
+/.pnp
+
+# Next.js 构建产物
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# 环境变量(含密钥,绝不能上传)
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# 系统 / 编辑器杂项
+.DS_Store
+*.pem
+.turbo
+npm-debug.log*
+yarn-debug.log*
