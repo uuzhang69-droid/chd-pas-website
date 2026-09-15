@@ -455,36 +455,30 @@ pages.about.cta.body,About page — Visit us — body text,We would love to welc
 pages.about.cta.button.label,About page — Visit us — label,Get in touch
 pages.about.cta.title,About page — Visit us — heading,Visit us
 pages.about.faculty.intro,About page — intro paragraph,"Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care."
-pages.about.faculty.members.faculty_1.bio,About page — Faculty — Eleanor Whitfield — biography,Former soloist with a major UK company; RAD registered teacher with twenty years of studio leadership.
-pages.about.faculty.members.faculty_1.image.alt,About page — Faculty — Eleanor Whitfield — image description (accessibility),Eleanor Whitfield
-pages.about.faculty.members.faculty_1.name,About page — Faculty — Eleanor Whitfield — name,Eleanor Whitfield
-pages.about.faculty.members.faculty_1.role,About page — Faculty — Eleanor Whitfield — role,Principal & Ballet
-pages.about.faculty.members.faculty_2.bio,About page — Faculty — Marcus Okonkwo — biography,Independent choreographer whose work has toured nationally; passionate about nurturing young creatives.
-pages.about.faculty.members.faculty_2.image.alt,About page — Faculty — Marcus Okonkwo — image description (accessibility),Marcus Okonkwo
-pages.about.faculty.members.faculty_2.name,About page — Faculty — Marcus Okonkwo — name,Marcus Okonkwo
-pages.about.faculty.members.faculty_2.role,About page — Faculty — Marcus Okonkwo — role,Contemporary & Choreography
-pages.about.faculty.members.faculty_3.bio,About page — Faculty — Sophie Laurent — biography,"West End performer and vocal coach, specialising in triple-threat training for teens."
-pages.about.faculty.members.faculty_3.image.alt,About page — Faculty — Sophie Laurent — image description (accessibility),Sophie Laurent
-pages.about.faculty.members.faculty_3.name,About page — Faculty — Sophie Laurent — name,Sophie Laurent
-pages.about.faculty.members.faculty_3.role,About page — Faculty — Sophie Laurent — role,Musical Theatre
+pages.about.faculty.members.faculty_kiki.bio,About page — Faculty — Kiki — biography,"A highly experienced choreographer and large-scale performance director, Kiki shapes the Centre's artistic programme and its connection between dance, music, visual art and culture."
+pages.about.faculty.members.faculty_kiki.image.alt,About page — Faculty — Kiki — image description (accessibility),Kiki
+pages.about.faculty.members.faculty_kiki.name,About page — Faculty — Kiki — name,Kiki
+pages.about.faculty.members.faculty_kiki.role,About page — Faculty — Kiki — role,Company Director and Artistic Director
+pages.about.faculty.members.faculty_michael.bio,About page — Faculty — Michael — biography,"Michael brings extensive international film, television and production-management experience, leading operations, partnerships, communications and business development."
+pages.about.faculty.members.faculty_michael.image.alt,About page — Faculty — Michael — image description (accessibility),Michael
+pages.about.faculty.members.faculty_michael.name,About page — Faculty — Michael — name,Michael
+pages.about.faculty.members.faculty_michael.role,About page — Faculty — Michael — role,Company Director and Management and Marketing Lead
 pages.about.faculty.overline,About page — small label above the heading,Meet the team
 pages.about.faculty.title,About page — heading,Our faculty
 pages.about.hero.image.alt,About page — hero image description (accessibility),County Hall Dance studio
 pages.about.hero.overline,About page — hero small label above the heading,Our school
-pages.about.hero.subtitle,About page — hero subtitle,A London performing arts school where heritage meets forward-thinking training.
-pages.about.hero.title,About page — hero heading,About CHD PAS
+pages.about.hero.subtitle,About page — hero subtitle,Discover dance, movement and creative experiences at London's iconic County Hall
+pages.about.hero.title,About page — hero heading,About County Hall Dance & Performing Arts School
 pages.about.meta.description,About page — description (browser tab / search engines),"Learn about County Hall Dance & Performing Arts School — our history, values, and faculty."
 pages.about.meta.title,About page — heading (browser tab / search engines),About Us
-pages.about.story.paragraphs.0,About page — Our story — paragraph 1,County Hall Dance & Performing Arts School was founded with a simple conviction: exceptional training and genuine care belong together.
-pages.about.story.paragraphs.1,About page — Our story — paragraph 2,"From our studios beside the Thames, we serve a diverse community of recreational dancers, ambitious teens, and adult learners rediscovering movement."
-pages.about.story.paragraphs.2,About page — Our story — paragraph 3,"Our faculty brings professional stage and studio experience, united by a shared commitment to safe, inspiring practice."
+pages.about.story.paragraphs.0,About page — Our story — paragraph 1,"County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance studio, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together."
 pages.about.story.title,About page — Our story — heading,Our story
-pages.about.values.items.0.description,About page — Values — value 1 description,High standards delivered with patience and encouragement.
-pages.about.values.items.0.title,About page — Values — value 1 heading,Excellence with warmth
-pages.about.values.items.1.description,About page — Values — value 2 description,"Every body, background, and aspiration is welcome."
-pages.about.values.items.1.title,About page — Values — value 2 heading,Inclusive community
-pages.about.values.items.2.description,About page — Values — value 3 description,Training rooted in respected methods and creative exploration.
-pages.about.values.items.2.title,About page — Values — value 3 heading,Artistic integrity
+pages.about.values.items.0.description,About page — Values — value 1 description,"To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London."
+pages.about.values.items.0.title,About page — Values — value 1 heading,Mission
+pages.about.values.items.1.description,About page — Values — value 2 description,"To grow from a dedicated professional dance space into a creative destination that brings together dance, performing arts, music, visual arts, and international cultural exchange."
+pages.about.values.items.1.title,About page — Values — value 2 heading,Vision
+pages.about.values.items.2.description,About page — Values — value 3 description,"Move. Create. Connect. Belong. — helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts."
+pages.about.values.items.2.title,About page — Values — value 3 heading,Philosophy
 pages.about.values.items.3.description,About page — Values — value 4 description,Robust policies ensuring every student feels secure and supported.
 pages.about.values.items.3.title,About page — Values — value 4 heading,Safeguarding
 pages.about.values.overline,About page — small label above the heading,What guides us

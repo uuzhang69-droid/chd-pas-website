@@ -1638,9 +1638,7 @@ export const siteStructure = {
       "story": {
         "title": "@@COPY:pages.about.story.title",
         "paragraphs": [
-          "@@COPY:pages.about.story.paragraphs.0",
-          "@@COPY:pages.about.story.paragraphs.1",
-          "@@COPY:pages.about.story.paragraphs.2"
+          "@@COPY:pages.about.story.paragraphs.0"
         ]
       },
       "values": {
@@ -1672,33 +1670,23 @@ export const siteStructure = {
         "intro": "@@COPY:pages.about.faculty.intro",
         "members": [
           {
-            "id": "faculty-1",
-            "name": "@@COPY:pages.about.faculty.members.faculty_1.name",
-            "role": "@@COPY:pages.about.faculty.members.faculty_1.role",
-            "bio": "@@COPY:pages.about.faculty.members.faculty_1.bio",
+            "id": "faculty-kiki",
+            "name": "@@COPY:pages.about.faculty.members.faculty_kiki.name",
+            "role": "@@COPY:pages.about.faculty.members.faculty_kiki.role",
+            "bio": "@@COPY:pages.about.faculty.members.faculty_kiki.bio",
             "image": {
-              "src": "/images/faculty/eleanor.svg",
-              "alt": "@@COPY:pages.about.faculty.members.faculty_1.image.alt"
+              "src": "/images/faculty/kiki.svg",
+              "alt": "@@COPY:pages.about.faculty.members.faculty_kiki.image.alt"
             }
           },
           {
-            "id": "faculty-2",
-            "name": "@@COPY:pages.about.faculty.members.faculty_2.name",
-            "role": "@@COPY:pages.about.faculty.members.faculty_2.role",
-            "bio": "@@COPY:pages.about.faculty.members.faculty_2.bio",
+            "id": "faculty-michael",
+            "name": "@@COPY:pages.about.faculty.members.faculty_michael.name",
+            "role": "@@COPY:pages.about.faculty.members.faculty_michael.role",
+            "bio": "@@COPY:pages.about.faculty.members.faculty_michael.bio",
             "image": {
-              "src": "/images/faculty/marcus.svg",
-              "alt": "@@COPY:pages.about.faculty.members.faculty_2.image.alt"
-            }
-          },
-          {
-            "id": "faculty-3",
-            "name": "@@COPY:pages.about.faculty.members.faculty_3.name",
-            "role": "@@COPY:pages.about.faculty.members.faculty_3.role",
-            "bio": "@@COPY:pages.about.faculty.members.faculty_3.bio",
-            "image": {
-              "src": "/images/faculty/sophie.svg",
-              "alt": "@@COPY:pages.about.faculty.members.faculty_3.image.alt"
+              "src": "/images/faculty/michael.svg",
+              "alt": "@@COPY:pages.about.faculty.members.faculty_michael.image.alt"
             }
           }
         ]
