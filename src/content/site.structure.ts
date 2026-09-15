@@ -423,12 +423,13 @@ export const siteStructure = {
         },
         {
           "label": "@@COPY:home.quickactions.items.book_a_course.label",
-          "href": "/courses",
+          "href": "/events",
           "description": "@@COPY:home.quickactions.items.book_a_course.description"
         },
         {
           "label": "@@COPY:home.quickactions.items.free_trial.label",
-          "href": "/timetable#trial",
+          "href": "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
+          "external": true,
           "description": "@@COPY:home.quickactions.items.free_trial.description"
         }
       ]
@@ -634,8 +635,9 @@ export const siteStructure = {
         "body": "@@COPY:pages.timetable.trial.body",
         "cta": {
           "label": "@@COPY:pages.timetable.trial.cta.label",
-          "href": "#booking-widget",
-          "variant": "secondary"
+          "href": "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
+          "variant": "secondary",
+          "external": true
         }
       },
       "booking": {
@@ -643,7 +645,13 @@ export const siteStructure = {
         "description": "@@COPY:pages.timetable.booking.description",
         "placeholderLabel": "@@COPY:pages.timetable.booking.placeholderlabel",
         "placeholderHint": "@@COPY:pages.timetable.booking.placeholderhint",
-        "providerNote": "@@COPY:pages.timetable.booking.providernote"
+        "providerNote": "@@COPY:pages.timetable.booking.providernote",
+        "image": {
+          "src": "/images/timetable/class-schedule.jpg",
+          "alt": "@@COPY:pages.timetable.booking.image.alt",
+          "width": 853,
+          "height": 1024
+        }
       },
       "helpLinks": [
         {

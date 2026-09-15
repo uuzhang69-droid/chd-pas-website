@@ -160,4 +160,5 @@ export type BookingEmbed = {
   placeholderHint: string;
   providerNote: string;
   embedScriptUrl?: string;
+  image?: ImageAsset;
 };

@@ -294,16 +294,22 @@ export const siteSource = {
           description: "View the weekly timetable and reserve your place.",
         },
         {
-          label: "Book a Course",
-          href: "/courses",
+          label: "Book an Event",
+          href: "/events",
           description: "Term-length programmes with clear progression.",
         },
         {
           label: "Free Trial",
-          href: "/timetable#trial",
+          href: "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
+          external: true,
           description: "Try a class with no obligation — we welcome newcomers.",
         },
-      ] satisfies Array<{ label: string; href: string; description: string }>,
+      ] satisfies Array<{
+        label: string;
+        href: string;
+        description: string;
+        external?: boolean;
+      }>,
     },
 
     events: {
@@ -487,19 +493,30 @@ export const siteSource = {
       trial: {
         id: "trial",
         overline: "New to CHD PAS?",
-        title: "Book a complimentary trial",
+        title: "Book a taster trial",
         body: "Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival.",
-        cta: { label: "Jump to timetable", href: "#booking-widget", variant: "secondary" },
+        cta: {
+          label: "Book",
+          href: "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
+          variant: "secondary",
+          external: true,
+        },
       },
       booking: {
         title: "Class timetable",
         description:
-          "Use the booking widget below to view live availability and manage your account. For course enrolment, visit our courses page.",
+          "Browse this week's classes below. For course enrolment, visit our courses page.",
         placeholderLabel: "Booking widget placeholder",
         placeholderHint:
           "Replace this container with your ClassForKids, bsport, or other embed code.",
         providerNote:
           "Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.",
+        image: {
+          src: "/images/timetable/class-schedule.jpg",
+          alt: "Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School",
+          width: 853,
+          height: 1024,
+        },
       } satisfies BookingEmbed,
       helpLinks: [
         { label: "Browse courses", href: "/courses" },

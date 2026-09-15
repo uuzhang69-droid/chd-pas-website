@@ -110,7 +110,7 @@ home.hero.slides.hero_studio_hire.image.alt,Homepage — Studio Hire slide — i
 home.quickactions.items.book_a_class.description,Homepage — Get started — Book A Class description,View the weekly timetable and reserve your place.
 home.quickactions.items.book_a_class.label,Homepage — Get started — Book A Class label,Book a Class
 home.quickactions.items.book_a_course.description,Homepage — Get started — Book A Course description,Term-length programmes with clear progression.
-home.quickactions.items.book_a_course.label,Homepage — Get started — Book A Course label,Book a Course
+home.quickactions.items.book_a_course.label,Homepage — Get started — Book A Course label,Book an Event
 home.quickactions.items.free_trial.description,Homepage — Get started — Free Trial description,Try a class with no obligation — we welcome newcomers.
 home.quickactions.items.free_trial.label,Homepage — Get started — Free Trial label,Free Trial
 home.quickactions.linksuffix,Homepage — Get started — link text on each card,Learn more →
@@ -309,7 +309,8 @@ pages.tasterclasses.meta.description,Taster classes page — description (browse
 pages.tasterclasses.meta.title,Taster classes page — heading (browser tab / search engines),Taster Classes
 pages.tasterclasses.sections.available_tasters.title,Taster classes page — Available Tasters section heading,Available taster classes
 pages.tasterclasses.sections.what_to_bring.title,Taster classes page — What To Bring section heading,What to bring
-pages.timetable.booking.description,Timetable page — description,"Use the booking widget below to view live availability and manage your account. For course enrolment, visit our courses page."
+pages.timetable.booking.description,Timetable page — description,"Browse this week's classes below. For course enrolment, visit our courses page."
+pages.timetable.booking.image.alt,Timetable page — class schedule image alt,Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School
 pages.timetable.booking.placeholderhint,Timetable page — placeholder instructions,"Replace this container with your ClassForKids, bsport, or other embed code."
 pages.timetable.booking.placeholderlabel,Timetable page — placeholder heading,Booking widget placeholder
 pages.timetable.booking.providernote,Timetable page — note under the booking widget,Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.
@@ -323,9 +324,9 @@ pages.timetable.hero.title,Timetable page — hero heading,Timetable & Booking
 pages.timetable.meta.description,Timetable page — description (browser tab / search engines),View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.
 pages.timetable.meta.title,Timetable page — heading (browser tab / search engines),Timetable & Booking
 pages.timetable.trial.body,Timetable page — body text,"Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival."
-pages.timetable.trial.cta.label,Timetable page — button / call to action — label,Jump to timetable
+pages.timetable.trial.cta.label,Timetable page — button / call to action — label,Book
 pages.timetable.trial.overline,Timetable page — small label above the heading,New to CHD PAS?
-pages.timetable.trial.title,Timetable page — heading,Book a complimentary trial
+pages.timetable.trial.title,Timetable page — heading,Book a taster trial
 pages.courses.detaillabels.backlink,Courses — back link,← All courses
 pages.courses.detaillabels.duration,Courses — duration label / value,Duration
 pages.courses.detaillabels.includes,Courses — “what's included” heading,What's included
