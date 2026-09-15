@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { siteContent } from "@/content/site";
 import { BrandMark } from "@/components/layout/BrandMark";
 import type { NavItem } from "@/content/types";
@@ -88,23 +88,25 @@ function MobileNavAccordion({
     <div className="border-b border-taupe/20 last:border-b-0">
       <button
         type="button"
-        className="flex w-full items-center justify-between px-3 py-3 text-left text-body font-medium text-charcoal"
+        className="flex w-full items-center py-1.5 text-left text-body font-medium leading-none text-charcoal"
         aria-expanded={expanded}
         aria-controls={panelId}
         onClick={onToggle}
       >
-        {item.label}
-        <ChevronDownIcon
-          className={`shrink-0 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
-        />
+        <span className="inline-flex items-center gap-1 whitespace-nowrap">
+          {item.label}
+          <ChevronDownIcon
+            className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
+          />
+        </span>
       </button>
       {expanded && (
-        <ul id={panelId} className="pb-2">
+        <ul id={panelId} className="mb-1 ml-3 space-y-0.5 border-l border-taupe/30 pl-3">
           {item.children.map((child) => (
             <li key={child.label}>
               <Link
                 href={child.href}
-                className="block rounded-sm py-2 pl-6 pr-3 text-body text-charcoal/85 hover:bg-rose/10 hover:text-rose"
+                className="block rounded-sm py-1.5 text-small leading-snug text-charcoal/85 hover:text-rose"
                 onClick={onNavigate}
                 {...(child.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
@@ -131,7 +133,22 @@ export function Header() {
     (item): item is NavItemWithChildren => Boolean(item.children?.length),
   );
 
+  function closeMobileMenu() {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
+
   return (
+    <>
     <header className="sticky top-0 z-50 border-b border-taupe/30 bg-ivory/95 backdrop-blur-md">
       <div className="flex w-full items-center py-2.5 lg:py-3">
         <div className="shrink-0 pl-5 sm:pl-6 lg:pl-8 xl:pl-10">
@@ -167,8 +184,8 @@ export function Header() {
             aria-label={mobileOpen ? headerUi.closeMenu : headerUi.openMenu}
             aria-expanded={mobileOpen}
             onClick={() => {
-              setMobileOpen((open) => !open);
-              if (mobileOpen) setMobileExpanded(null);
+              if (mobileOpen) closeMobileMenu();
+              else setMobileOpen(true);
             }}
           >
             <span className={`block h-0.5 w-6 bg-charcoal transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
@@ -207,34 +224,41 @@ export function Header() {
         </Container>
       )}
 
-      {mobileOpen && (
-        <nav
-          className="border-t border-taupe/30 bg-ivory lg:hidden"
-          aria-label={headerUi.mobileNavigation}
-        >
-          <Container className="py-4">
-            {navItems.map((item) => (
-              <MobileNavAccordion
-                key={item.label}
-                item={item}
-                expanded={mobileExpanded === item.label}
-                onToggle={() =>
-                  setMobileExpanded((current) =>
-                    current === item.label ? null : item.label,
-                  )
-                }
-                onNavigate={() => {
-                  setMobileOpen(false);
-                  setMobileExpanded(null);
-                }}
-              />
-            ))}
-            <div className="mt-4 border-t border-taupe/30 px-3 pt-4">
-              <Button {...navigation.bookTrial} className="w-full" />
-            </div>
-          </Container>
-        </nav>
-      )}
     </header>
+
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[60] lg:hidden">
+          <button
+            type="button"
+            className="absolute inset-0 bg-charcoal/50"
+            aria-label={headerUi.closeMenu}
+            onClick={closeMobileMenu}
+          />
+          <nav
+            className="animate-slide-in-right absolute right-0 top-0 flex h-full w-[80%] max-w-[320px] flex-col overflow-y-auto border-l border-taupe/30 bg-ivory shadow-xl"
+            aria-label={headerUi.mobileNavigation}
+          >
+            <div className="px-4 py-3">
+              {navItems.map((item) => (
+                <MobileNavAccordion
+                  key={item.label}
+                  item={item}
+                  expanded={mobileExpanded === item.label}
+                  onToggle={() =>
+                    setMobileExpanded((current) =>
+                      current === item.label ? null : item.label,
+                    )
+                  }
+                  onNavigate={closeMobileMenu}
+                />
+              ))}
+              <div className="mt-3 border-t border-taupe/30 pt-3">
+                <Button {...navigation.bookTrial} className="w-full" />
+              </div>
+            </div>
+          </nav>
+        </div>
+      )}
+    </>
   );
 }
