@@ -1,5 +1,7 @@
 # Editing website content
 
+This README was updated on 15 September 2026.
+
 All user-facing text, button labels, links, and image paths live in one file:
 
 **`src/content/site.ts`**
