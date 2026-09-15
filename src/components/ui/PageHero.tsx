@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 
 type PageHeroProps = PageHeroContent & {
   compact?: boolean;
+  imageClassName?: string;
 };
 
 export function PageHero({
@@ -12,6 +13,7 @@ export function PageHero({
   subtitle,
   image,
   compact = false,
+  imageClassName = "",
 }: PageHeroProps) {
   if (image) {
     return (
@@ -21,7 +23,7 @@ export function PageHero({
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover opacity-40"
+            className={`object-cover opacity-40 ${imageClassName}`.trim()}
             sizes="100vw"
             priority
           />

@@ -8,6 +8,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const { about } = siteContent.pages;
+const { aboutTeaser } = siteContent.home;
 
 export const metadata: Metadata = {
   title: about.meta.title,
@@ -17,7 +18,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <PageShell>
-      <PageHero {...about.hero} />
+      <PageHero
+        {...about.hero}
+        image={aboutTeaser.image}
+        imageClassName="object-[center_20%]"
+      />
 
       <section className="py-16 md:py-24">
         <Container>
