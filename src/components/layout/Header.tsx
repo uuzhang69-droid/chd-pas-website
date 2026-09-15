@@ -88,7 +88,7 @@ function MobileNavAccordion({
     <div className="border-b border-taupe/20 last:border-b-0">
       <button
         type="button"
-        className="flex w-full items-center justify-between px-3 py-3 text-left text-body font-medium text-charcoal"
+        className="flex w-full items-center justify-between px-4 py-3 text-left text-body font-medium text-charcoal"
         aria-expanded={expanded}
         aria-controls={panelId}
         onClick={onToggle}
@@ -99,12 +99,12 @@ function MobileNavAccordion({
         />
       </button>
       {expanded && (
-        <ul id={panelId} className="pb-2">
+        <ul id={panelId} className="mb-2 ml-5 space-y-0.5 border-l border-taupe/25 pb-1 pl-3">
           {item.children.map((child) => (
             <li key={child.label}>
               <Link
                 href={child.href}
-                className="block rounded-sm py-2 pl-6 pr-3 text-body text-charcoal/85 hover:bg-rose/10 hover:text-rose"
+                className="block rounded-sm py-1.5 pr-2 text-small text-charcoal/85 hover:bg-rose/10 hover:text-rose"
                 onClick={onNavigate}
                 {...(child.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
@@ -130,6 +130,11 @@ export function Header() {
   const navItems = navigation.items.filter(
     (item): item is NavItemWithChildren => Boolean(item.children?.length),
   );
+
+  function closeMobileMenu() {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-taupe/30 bg-ivory/95 backdrop-blur-md">
@@ -167,8 +172,11 @@ export function Header() {
             aria-label={mobileOpen ? headerUi.closeMenu : headerUi.openMenu}
             aria-expanded={mobileOpen}
             onClick={() => {
-              setMobileOpen((open) => !open);
-              if (mobileOpen) setMobileExpanded(null);
+              if (mobileOpen) {
+                closeMobileMenu();
+              } else {
+                setMobileOpen(true);
+              }
             }}
           >
             <span className={`block h-0.5 w-6 bg-charcoal transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
@@ -208,32 +216,37 @@ export function Header() {
       )}
 
       {mobileOpen && (
-        <nav
-          className="border-t border-taupe/30 bg-ivory lg:hidden"
-          aria-label={headerUi.mobileNavigation}
-        >
-          <Container className="py-4">
-            {navItems.map((item) => (
-              <MobileNavAccordion
-                key={item.label}
-                item={item}
-                expanded={mobileExpanded === item.label}
-                onToggle={() =>
-                  setMobileExpanded((current) =>
-                    current === item.label ? null : item.label,
-                  )
-                }
-                onNavigate={() => {
-                  setMobileOpen(false);
-                  setMobileExpanded(null);
-                }}
-              />
-            ))}
-            <div className="mt-4 border-t border-taupe/30 px-3 pt-4">
-              <Button {...navigation.bookTrial} className="w-full" />
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          <button
+            type="button"
+            className="absolute inset-0 bg-charcoal/50"
+            aria-label={headerUi.closeMenu}
+            onClick={closeMobileMenu}
+          />
+          <nav
+            className="animate-slide-in-right absolute right-0 top-0 flex h-full w-[min(80vw,320px)] max-w-[320px] flex-col overflow-y-auto border-l border-taupe/30 bg-ivory shadow-2xl"
+            aria-label={headerUi.mobileNavigation}
+          >
+            <div className="py-4">
+              {navItems.map((item) => (
+                <MobileNavAccordion
+                  key={item.label}
+                  item={item}
+                  expanded={mobileExpanded === item.label}
+                  onToggle={() =>
+                    setMobileExpanded((current) =>
+                      current === item.label ? null : item.label,
+                    )
+                  }
+                  onNavigate={closeMobileMenu}
+                />
+              ))}
+              <div className="mt-4 border-t border-taupe/30 px-4 pt-4">
+                <Button {...navigation.bookTrial} className="w-full" />
+              </div>
             </div>
-          </Container>
-        </nav>
+          </nav>
+        </div>
       )}
     </header>
   );
