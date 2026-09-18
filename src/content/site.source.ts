@@ -1093,12 +1093,120 @@ export const siteSource = {
       intro:
         "Services include private dance lessons; dance experiences for individuals, couples and groups; wedding first dances; corporate team experiences; school and organisation workshops; rehearsals, auditions, filming and private events; and Milonga and social dance events.",
       sections: [
-        { id: "one-to-one", title: "One-to-One Lessons" },
-        { id: "couples", title: "Couples' Dance" },
-        { id: "wedding", title: "First Wedding Dance" },
-        { id: "groups", title: "Group Experiences" },
-        { id: "corporate", title: "Corporate Events" },
-        { id: "schools", title: "School / Organisation Workshops" },
+        {
+          id: "one-to-one",
+          title: "One-to-One Lessons",
+          body: "Personalised coaching tailored to your goals, level and schedule — from absolute beginners building confidence to experienced dancers refining technique.",
+          gallery: [
+            {
+              src: "/images/hero/slide-4.png",
+              alt: "One-to-one private dance lesson",
+            },
+            {
+              src: "/images/hero/slide-1.jpg",
+              alt: "Dancer in a private contemporary session",
+            },
+            {
+              src: "/images/hero/slide-6.jpg",
+              alt: "Instructor working with an individual student",
+            },
+          ],
+        },
+        {
+          id: "couples",
+          title: "Couples' Dance",
+          body: "Learn together in a relaxed, supportive setting — whether you are preparing for a special occasion or simply want a shared creative experience.",
+          gallery: [
+            {
+              src: "/images/hero/slide-2.jpg",
+              alt: "Couple learning partner dance",
+            },
+            {
+              src: "/images/private-events/promo.svg",
+              alt: "Couples dance experience at County Hall",
+            },
+            {
+              src: "/images/hero/slide-5.jpg",
+              alt: "Pair practising movement in the studio",
+            },
+          ],
+        },
+        {
+          id: "wedding",
+          title: "First Wedding Dance",
+          body: "Choreography and coaching for your first dance — from a simple, elegant sway to a fully staged performance, paced to suit your timeline and comfort.",
+          gallery: [
+            {
+              src: "/images/hero/slide-2.jpg",
+              alt: "Couple practising a wedding dance",
+            },
+            {
+              src: "/images/events/winter-showcase.svg",
+              alt: "Performance lighting in the studio",
+            },
+            {
+              src: "/images/hero/slide-4.png",
+              alt: "Private lesson for wedding preparation",
+            },
+          ],
+        },
+        {
+          id: "groups",
+          title: "Group Experiences",
+          body: "Celebrate with friends — hen parties, birthdays and social groups welcome themed sessions, from tango tasters to musical theatre and creative movement.",
+          gallery: [
+            {
+              src: "/images/private-events/promo.svg",
+              alt: "Group dance experience",
+            },
+            {
+              src: "/images/events/musical-theatre.svg",
+              alt: "Musical theatre themed workshop",
+            },
+            {
+              src: "/images/hero/slide-3.jpg",
+              alt: "Group class in the studio",
+            },
+          ],
+        },
+        {
+          id: "corporate",
+          title: "Corporate Events",
+          body: "Team-building through movement — energising, inclusive sessions designed for workplaces, away days and client hospitality at County Hall.",
+          gallery: [
+            {
+              src: "/images/hero/slide-3.jpg",
+              alt: "Corporate group movement session",
+            },
+            {
+              src: "/images/hero/slide-1.jpg",
+              alt: "Team workshop in the dance studio",
+            },
+            {
+              src: "/images/events/contemporary-intensive.svg",
+              alt: "Professional studio environment",
+            },
+          ],
+        },
+        {
+          id: "schools",
+          title: "School / Organisation Workshops",
+          body: "School visits, youth groups and community organisations — curriculum-linked or enrichment workshops led by experienced educators and artists.",
+          gallery: [
+            {
+              src: "/images/events/ballet-masterclass.svg",
+              alt: "Young dancers in a workshop",
+            },
+            {
+              src: "/images/hero/slide-6.jpg",
+              alt: "Workshop session with students",
+            },
+            {
+              src: "/images/courses/junior-ballet.svg",
+              alt: "Ballet foundation class",
+            },
+          ],
+        },
       ],
     } satisfies SectionedPageContent,
 

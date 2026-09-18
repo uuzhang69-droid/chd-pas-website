@@ -1392,27 +1392,117 @@ export const siteStructure = {
       "sections": [
         {
           "id": "one-to-one",
-          "title": "@@COPY:pages.privatelessons.sections.one_to_one.title"
+          "title": "@@COPY:pages.privatelessons.sections.one_to_one.title",
+          "body": "@@COPY:pages.privatelessons.sections.one_to_one.body",
+          "gallery": [
+            {
+              "src": "/images/hero/slide-4.png",
+              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.0.alt"
+            },
+            {
+              "src": "/images/hero/slide-1.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.1.alt"
+            },
+            {
+              "src": "/images/hero/slide-6.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.2.alt"
+            }
+          ]
         },
         {
           "id": "couples",
-          "title": "@@COPY:pages.privatelessons.sections.couples.title"
+          "title": "@@COPY:pages.privatelessons.sections.couples.title",
+          "body": "@@COPY:pages.privatelessons.sections.couples.body",
+          "gallery": [
+            {
+              "src": "/images/hero/slide-2.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.0.alt"
+            },
+            {
+              "src": "/images/private-events/promo.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.1.alt"
+            },
+            {
+              "src": "/images/hero/slide-5.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.2.alt"
+            }
+          ]
         },
         {
           "id": "wedding",
-          "title": "@@COPY:pages.privatelessons.sections.wedding.title"
+          "title": "@@COPY:pages.privatelessons.sections.wedding.title",
+          "body": "@@COPY:pages.privatelessons.sections.wedding.body",
+          "gallery": [
+            {
+              "src": "/images/hero/slide-2.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.0.alt"
+            },
+            {
+              "src": "/images/events/winter-showcase.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.1.alt"
+            },
+            {
+              "src": "/images/hero/slide-4.png",
+              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.2.alt"
+            }
+          ]
         },
         {
           "id": "groups",
-          "title": "@@COPY:pages.privatelessons.sections.groups.title"
+          "title": "@@COPY:pages.privatelessons.sections.groups.title",
+          "body": "@@COPY:pages.privatelessons.sections.groups.body",
+          "gallery": [
+            {
+              "src": "/images/private-events/promo.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.0.alt"
+            },
+            {
+              "src": "/images/events/musical-theatre.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.1.alt"
+            },
+            {
+              "src": "/images/hero/slide-3.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.2.alt"
+            }
+          ]
         },
         {
           "id": "corporate",
-          "title": "@@COPY:pages.privatelessons.sections.corporate.title"
+          "title": "@@COPY:pages.privatelessons.sections.corporate.title",
+          "body": "@@COPY:pages.privatelessons.sections.corporate.body",
+          "gallery": [
+            {
+              "src": "/images/hero/slide-3.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.0.alt"
+            },
+            {
+              "src": "/images/hero/slide-1.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.1.alt"
+            },
+            {
+              "src": "/images/events/contemporary-intensive.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.2.alt"
+            }
+          ]
         },
         {
           "id": "schools",
-          "title": "@@COPY:pages.privatelessons.sections.schools.title"
+          "title": "@@COPY:pages.privatelessons.sections.schools.title",
+          "body": "@@COPY:pages.privatelessons.sections.schools.body",
+          "gallery": [
+            {
+              "src": "/images/events/ballet-masterclass.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.0.alt"
+            },
+            {
+              "src": "/images/hero/slide-6.jpg",
+              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.1.alt"
+            },
+            {
+              "src": "/images/courses/junior-ballet.svg",
+              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.2.alt"
+            }
+          ]
         }
       ]
     },

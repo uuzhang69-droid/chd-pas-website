@@ -128,6 +128,10 @@ export type PageHeroContent = {
 export type SectionedPageSection = {
   id: string;
   title: string;
+  body?: string;
+  gallery?: ImageAsset[];
+  /** When set, overrides default alternating layout (even = text left, odd = gallery left). */
+  galleryPosition?: "left" | "right";
 };
 
 export type SectionedPageContent = {
