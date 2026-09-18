@@ -39,16 +39,16 @@ export const siteSource = {
     },
     utilityBar: {
       phone: {
-        label: "+44 20 7946 0958",
-        href: "tel:+442079460958",
+        label: "+44 7728 617531",
+        href: "tel:+447728617531",
       },
       email: {
-        label: "hello@countyhalldance.co.uk",
-        href: "mailto:hello@countyhalldance.co.uk",
+        label: "info@countyhalldancecentre.com",
+        href: "mailto:info@countyhalldancecentre.com",
       },
       findUs: {
         label: "Find us",
-        href: "https://maps.google.com/?q=County+Hall+London",
+        href: "https://share.google/7weL1s5w3ItPjJyAZ",
         external: true,
       },
       social: [
@@ -184,12 +184,12 @@ export const siteSource = {
       contact: {
         title: "Visit Us",
         address: [
-          "County Hall Dance Studio",
+          "2nd Floor, County Hall Main Entrance",
           "Belvedere Road",
-          "London SE1 7GP",
+          "London SE1 7PB",
         ],
-        phone: "+44 20 7946 0958",
-        email: "hello@countyhalldance.co.uk",
+        phone: "+44 7728 617531",
+        email: "info@countyhalldancecentre.com",
       },
       newsletter: {
         title: "Stay in touch",
@@ -1516,19 +1516,19 @@ export const siteSource = {
       details: {
         title: "Studio details",
         address: [
-          "County Hall Dance Studio",
+          "2nd Floor, County Hall Main Entrance",
           "Belvedere Road",
-          "London SE1 7GP",
+          "London SE1 7PB",
         ],
-        phone: "+44 20 7946 0958",
-        email: "hello@countyhalldance.co.uk",
+        phone: "+44 7728 617531",
+        email: "info@countyhalldancecentre.com",
         hours: "Office hours: Mon – Fri, 9:00 – 17:30",
       },
       map: {
         title: "Find us",
-        embedUrl: "https://maps.google.com/maps?q=County+Hall+London&output=embed",
+        embedUrl: "https://maps.google.com/maps?q=County+Hall+Main+Entrance,+Belvedere+Road,+London+SE1+7PB&output=embed",
         directionsLabel: "Open in Google Maps →",
-        directionsHref: "https://maps.google.com/?q=County+Hall+London",
+        directionsHref: "https://share.google/7weL1s5w3ItPjJyAZ",
       },
       form: {
         title: "Send an enquiry",

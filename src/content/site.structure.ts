@@ -19,15 +19,15 @@ export const siteStructure = {
     "utilityBar": {
       "phone": {
         "label": "@@COPY:global.utilitybar.phone.label",
-        "href": "tel:+442079460958"
+        "href": "tel:+447728617531"
       },
       "email": {
         "label": "@@COPY:global.utilitybar.email.label",
-        "href": "mailto:hello@countyhalldance.co.uk"
+        "href": "mailto:info@countyhalldancecentre.com"
       },
       "findUs": {
         "label": "@@COPY:global.utilitybar.findus.label",
-        "href": "https://maps.google.com/?q=County+Hall+London",
+        "href": "https://share.google/7weL1s5w3ItPjJyAZ",
         "external": true
       },
       "social": [
@@ -1894,9 +1894,9 @@ export const siteStructure = {
       },
       "map": {
         "title": "@@COPY:pages.contact.map.title",
-        "embedUrl": "https://maps.google.com/maps?q=County+Hall+London&output=embed",
+        "embedUrl": "https://maps.google.com/maps?q=County+Hall+Main+Entrance,+Belvedere+Road,+London+SE1+7PB&output=embed",
         "directionsLabel": "@@COPY:pages.contact.map.directionslabel",
-        "directionsHref": "https://maps.google.com/?q=County+Hall+London"
+        "directionsHref": "https://share.google/7weL1s5w3ItPjJyAZ"
       },
       "form": {
         "title": "@@COPY:pages.contact.form.title",

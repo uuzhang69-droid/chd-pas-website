@@ -2,9 +2,9 @@ id,location,text
 meta.defaultdescription,Site-wide — default search-engine description (browser tab / search engines),"A refined London dance and performing arts school offering ballet, contemporary, jazz, drama, and more — for every age and stage."
 meta.shortname,Site-wide — short name (browser tab / search engines),CHD PAS
 meta.sitename,Site-wide — site name (browser tab / search engines),County Hall Dance & Performing Arts School
-global.utilitybar.email.label,Top bar — email label,hello@countyhalldance.co.uk
+global.utilitybar.email.label,Top bar — email label,info@countyhalldancecentre.com
 global.utilitybar.findus.label,Top bar — Find us label,Find us
-global.utilitybar.phone.label,Top bar — phone label,+44 20 7946 0958
+global.utilitybar.phone.label,Top bar — phone label,+44 7728 617531
 global.utilitybar.social.facebook.label,Top bar — Facebook label,Follow us on Facebook
 global.utilitybar.social.instagram.label,Top bar — Instagram label,Follow us on Instagram
 global.utilitybar.social.youtube.label,Top bar — YouTube label,Watch us on YouTube
@@ -64,11 +64,11 @@ global.footer.columns.school.links.careers.label,Footer — School column — Ca
 global.footer.columns.school.links.our_faculty.label,Footer — School column — Our Faculty,Our Faculty
 global.footer.columns.school.links.private_events.label,Footer — School column — Private Events,Private Events
 global.footer.columns.school.title,Footer — School column heading,The School
-global.footer.contact.address.0,Footer — contact address line 1,County Hall Dance Studio
+global.footer.contact.address.0,Footer — contact address line 1,"2nd Floor, County Hall Main Entrance"
 global.footer.contact.address.1,Footer — contact address line 2,Belvedere Road
-global.footer.contact.address.2,Footer — contact address line 3,London SE1 7GP
-global.footer.contact.email,Footer — contact email,hello@countyhalldance.co.uk
-global.footer.contact.phone,Footer — contact phone,+44 20 7946 0958
+global.footer.contact.address.2,Footer — contact address line 3,London SE1 7PB
+global.footer.contact.email,Footer — contact email,info@countyhalldancecentre.com
+global.footer.contact.phone,Footer — contact phone,+44 7728 617531
 global.footer.contact.title,Footer — contact heading,Visit Us
 global.footer.copyright,Footer — copyright line at the bottom,© {year} County Hall Dance & Performing Arts School. All rights reserved.
 global.footer.intro,Footer — intro paragraph under the logo,"County Hall Dance & Performing Arts School nurtures confidence, artistry, and joy through exceptional training in the heart of London."
@@ -606,12 +606,12 @@ pages.booking.hero.subtitle,Booking & enquiries page — hero subtitle,Complete 
 pages.booking.hero.title,Booking & enquiries page — hero heading,Booking & Enquiries
 pages.booking.meta.description,Booking & enquiries page — description (browser tab / search engines),"Send a booking or general enquiry to County Hall Dance Centre — studio hire, classes, membership and more."
 pages.booking.meta.title,Booking & enquiries page — heading (browser tab / search engines),Booking & Enquiries
-pages.contact.details.address.0,Contact page — studio details — address line 1,County Hall Dance Studio
+pages.contact.details.address.0,Contact page — studio details — address line 1,"2nd Floor, County Hall Main Entrance"
 pages.contact.details.address.1,Contact page — studio details — address line 2,Belvedere Road
-pages.contact.details.address.2,Contact page — studio details — address line 3,London SE1 7GP
-pages.contact.details.email,Contact page — studio details — email,hello@countyhalldance.co.uk
+pages.contact.details.address.2,Contact page — studio details — address line 3,London SE1 7PB
+pages.contact.details.email,Contact page — studio details — email,info@countyhalldancecentre.com
 pages.contact.details.hours,Contact page — studio details — opening hours,"Office hours: Mon – Fri, 9:00 – 17:30"
-pages.contact.details.phone,Contact page — studio details — phone,+44 20 7946 0958
+pages.contact.details.phone,Contact page — studio details — phone,+44 7728 617531
 pages.contact.details.title,Contact page — studio details — heading,Studio details
 pages.contact.form.description,Contact page — form — description,Complete the form below and we will respond within two working days.
 pages.contact.form.fields.email_address.label,Contact page — form — Email Address label,Email address
