@@ -12,7 +12,13 @@ export const metadata: Metadata = {
   description: contact.meta.description,
 };
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{ subject?: string }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const { subject } = await searchParams;
+
   return (
     <PageShell>
       <PageHero {...contact.hero} compact />
@@ -30,6 +36,7 @@ export default function ContactPage() {
                   successMessage={contact.form.successMessage}
                   selectPlaceholder={contact.form.selectPlaceholder}
                   action={contact.form.action}
+                  defaultSubject={subject}
                 />
               </div>
             </div>
@@ -48,11 +55,28 @@ export default function ContactPage() {
                   {contact.details.phone}
                 </a>
               </p>
+              <p className="text-body">{contact.details.wechat}</p>
               <p className="text-body">
                 <a href={`mailto:${contact.details.email}`} className="text-rose hover:text-rose/80">
                   {contact.details.email}
                 </a>
               </p>
+              <p className="text-body">
+                <a
+                  href={contact.details.instagramHref}
+                  className="text-rose hover:text-rose/80"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {contact.details.instagramLabel}
+                </a>
+              </p>
+              <p className="text-body">
+                <a href={contact.details.membershipHref} className="text-rose hover:text-rose/80">
+                  {contact.details.membershipLabel}
+                </a>
+              </p>
+              <p className="text-body mt-4 text-charcoal/80">{contact.details.gettingHere}</p>
               <p className="text-small mt-4 text-charcoal/60">{contact.details.hours}</p>
 
               <div className="mt-10">

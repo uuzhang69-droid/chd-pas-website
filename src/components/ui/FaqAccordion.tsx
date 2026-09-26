@@ -5,7 +5,7 @@ import type { FaqItem } from "@/content/types";
 import { ChevronDownIcon } from "@/components/icons/SocialIcons";
 
 type FaqAccordionProps = {
-  items: FaqItem[];
+  items: readonly FaqItem[];
 };
 
 export function FaqAccordion({ items }: FaqAccordionProps) {

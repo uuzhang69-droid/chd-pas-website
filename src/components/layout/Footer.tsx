@@ -80,6 +80,7 @@ export function Footer() {
               >
                 {footer.contact.phone}
               </a>
+              <span className="block">{footer.contact.wechat}</span>
               <a
                 href={`mailto:${footer.contact.email}`}
                 className="block transition-colors hover:text-rose"

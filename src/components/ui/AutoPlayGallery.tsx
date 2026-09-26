@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import type { ImageAsset } from "@/content/types";
 
 type AutoPlayGalleryProps = {
-  images: ImageAsset[];
+  images: readonly ImageAsset[];
   intervalMs?: number;
   className?: string;
   label: string;

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 
 export function ClassStyleGrid({ items }: { items: ClassStyleTile[] }) {
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5 md:gap-4">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 md:gap-4">
       {items.map((style) => (
         <Link
           key={style.id}

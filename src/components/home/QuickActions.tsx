@@ -25,7 +25,7 @@ export function QuickActions() {
               </>
             );
 
-            if (item.external) {
+            if ("external" in item && item.external) {
               return (
                 <a
                   key={item.href}

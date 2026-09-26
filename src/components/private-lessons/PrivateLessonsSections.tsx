@@ -1,9 +1,10 @@
 import type { SectionedPageSection } from "@/content/types";
 import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 type PrivateLessonsSectionsProps = {
-  sections: SectionedPageSection[];
+  sections: readonly SectionedPageSection[];
 };
 
 function SectionBlock({
@@ -22,6 +23,11 @@ function SectionBlock({
       <h2 className="text-h2 text-charcoal">{section.title}</h2>
       {section.body && (
         <p className="text-body-lg mt-5 text-charcoal/80">{section.body}</p>
+      )}
+      {section.cta && (
+        <div className="mt-6">
+          <Button {...section.cta} />
+        </div>
       )}
     </div>
   );

@@ -129,9 +129,22 @@ export type SectionedPageSection = {
   id: string;
   title: string;
   body?: string;
-  gallery?: ImageAsset[];
+  gallery?: readonly ImageAsset[];
+  cta?: CtaButton;
   /** When set, overrides default alternating layout (even = text left, odd = gallery left). */
   galleryPosition?: "left" | "right";
+};
+
+export type NumberedStep = {
+  title: string;
+  body: string;
+};
+
+export type PageCtaBlock = {
+  title: string;
+  body: string;
+  button: CtaButton;
+  secondary?: string;
 };
 
 export type SectionedPageContent = {
@@ -142,6 +155,9 @@ export type SectionedPageContent = {
   };
   hero: PageHeroContent;
   intro?: string;
+  /** Optional autoplay image gallery shown below the intro. */
+  gallery?: readonly ImageAsset[];
+  galleryLabel?: string;
   sections: SectionedPageSection[];
 };
 

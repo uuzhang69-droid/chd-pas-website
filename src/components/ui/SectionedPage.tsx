@@ -1,11 +1,18 @@
 import type { SectionedPageContent } from "@/content/types";
 import { siteContent } from "@/content/site";
+import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 
 type SectionedPageProps = SectionedPageContent;
 
-export function SectionedPage({ hero, intro, sections }: SectionedPageProps) {
+export function SectionedPage({
+  hero,
+  intro,
+  gallery,
+  galleryLabel,
+  sections,
+}: SectionedPageProps) {
   const { comingSoon } = siteContent.ui.sectionedPage;
 
   return (
@@ -15,6 +22,20 @@ export function SectionedPage({ hero, intro, sections }: SectionedPageProps) {
         <section className="py-12 md:py-16">
           <Container>
             <p className="text-body-lg max-w-3xl text-charcoal/80">{intro}</p>
+          </Container>
+        </section>
+      )}
+      {gallery && gallery.length > 0 && (
+        <section className="border-y border-taupe/20 bg-blush/25 py-12 md:py-16">
+          <Container>
+            {galleryLabel && (
+              <h2 className="text-h2 mb-8 text-center text-charcoal">{galleryLabel}</h2>
+            )}
+            <AutoPlayGallery
+              images={gallery}
+              label={galleryLabel ?? "Studio gallery"}
+              className="mx-auto max-w-4xl shadow-md"
+            />
           </Container>
         </section>
       )}

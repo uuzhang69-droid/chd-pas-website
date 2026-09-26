@@ -31,6 +31,11 @@ export default function TimetablePage() {
         </Container>
       </section>
       <BookingEmbedPlaceholder {...timetable.booking} />
+      <section className="py-8">
+        <Container>
+          <p className="text-body text-charcoal/75">{timetable.newcomerNote}</p>
+        </Container>
+      </section>
       <section className="border-t border-taupe/30 py-10">
         <Container>
           <ul className="flex flex-wrap gap-x-8 gap-y-3">

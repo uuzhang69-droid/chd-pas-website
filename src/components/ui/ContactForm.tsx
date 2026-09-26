@@ -10,6 +10,7 @@ type ContactFormProps = {
   successMessage: string;
   selectPlaceholder: string;
   action: string;
+  defaultSubject?: string;
 };
 
 export function ContactForm({
@@ -18,6 +19,7 @@ export function ContactForm({
   successMessage,
   selectPlaceholder,
   action,
+  defaultSubject = "",
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const requiredMarker = siteContent.ui.form.requiredMarker;
@@ -58,7 +60,12 @@ export function ContactForm({
               name={field.name}
               required={field.required}
               className="mt-2 w-full rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
-              defaultValue=""
+              defaultValue={
+                field.name === "subject" &&
+                field.options?.some((option) => option.value === defaultSubject)
+                  ? defaultSubject
+                  : ""
+              }
             >
               <option value="" disabled>
                 {field.placeholder ?? selectPlaceholder}

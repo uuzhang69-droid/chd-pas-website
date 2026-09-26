@@ -24,7 +24,7 @@ export const siteSource = {
     siteName: "County Hall Dance & Performing Arts School",
     shortName: "CHD PAS",
     defaultDescription:
-      "A refined London dance and performing arts school offering ballet, contemporary, jazz, drama, and more — for every age and stage.",
+      "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and studio hire.",
   },
 
   global: {
@@ -54,8 +54,8 @@ export const siteSource = {
       social: [
         {
           platform: "instagram",
-          href: "https://instagram.com/countryhalldance",
-          label: "Follow us on Instagram",
+          href: "https://www.instagram.com/countyhalldancecentre",
+          label: "@countyhalldancecentre",
         },
         {
           platform: "facebook",
@@ -92,7 +92,7 @@ export const siteSource = {
         },
         {
           label: "Membership",
-          href: "/membership/member-benefits",
+          href: "/membership",
           children: [
             { label: "Member Benefits", href: "/membership/member-benefits" },
             { label: "Monthly Passes", href: "/membership/monthly-passes" },
@@ -159,7 +159,7 @@ export const siteSource = {
     },
     footer: {
       intro:
-        "County Hall Dance & Performing Arts School nurtures confidence, artistry, and joy through exceptional training in the heart of London.",
+        "A home for dance, movement and creativity at County Hall on the South Bank. Move. Create. Connect. Belong.",
       columns: {
         explore: {
           title: "Explore",
@@ -189,6 +189,7 @@ export const siteSource = {
           "London SE1 7PB",
         ],
         phone: "+44 7728 617531",
+        wechat: "WeChat: 18518614868",
         email: "info@countyhalldancecentre.com",
       },
       newsletter: {
@@ -291,18 +292,18 @@ export const siteSource = {
         {
           label: "Book a Class",
           href: "/timetable",
-          description: "View the weekly timetable and reserve your place.",
+          description: "See the weekly timetable and reserve your place.",
         },
         {
-          label: "Book an Event",
-          href: "/events",
-          description: "Term-length programmes with clear progression.",
+          label: "Hire the Studio",
+          href: "/studio-hire",
+          description: "Two flexible spaces at County Hall, from £200 per hour.",
         },
         {
-          label: "Free Trial",
-          href: "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
-          external: true,
-          description: "Try a class with no obligation — we welcome newcomers.",
+          label: "Join Now",
+          href: "/membership",
+          description:
+            "Become a member and enjoy monthly, quarterly or annual plans with exclusive benefits.",
         },
       ] satisfies Array<{
         label: string;
@@ -396,7 +397,7 @@ export const siteSource = {
       overline: "Our disciplines",
       title: "Class styles",
       subtitle:
-        "Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi — beginners welcome.",
+        "Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — beginners welcome.",
       items: [
         {
           id: "style-contemporary",
@@ -432,6 +433,13 @@ export const siteSource = {
           slug: "tai-chi",
           href: "/classes/tai-chi",
           image: { src: "/images/styles/tai-chi.jpg", alt: "Tai Chi class" },
+        },
+        {
+          id: "style-k-pop",
+          name: "K-Pop",
+          slug: "k-pop",
+          href: "/classes/k-pop",
+          image: { src: "/images/hero/slide-3.jpg", alt: "K-Pop dance class" },
         },
       ] satisfies ClassStyleTile[],
     },
@@ -488,7 +496,7 @@ export const siteSource = {
         overline: "Plan your week",
         title: "Timetable & Booking",
         subtitle:
-          "Browse classes by day and age group, then reserve through our secure booking partner.",
+          "Browse this week's classes by day and style, then reserve your place through our secure booking system.",
       } satisfies PageHeroContent,
       trial: {
         id: "trial",
@@ -518,6 +526,8 @@ export const siteSource = {
           height: 1024,
         },
       } satisfies BookingEmbed,
+      newcomerNote:
+        "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
       helpLinks: [
         { label: "Browse courses", href: "/courses" },
         { label: "Frequently asked questions", href: "/faq" },
@@ -529,7 +539,7 @@ export const siteSource = {
       meta: {
         title: "Classes",
         description:
-          "Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre.",
+          "Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop at County Hall Dance Centre.",
       },
       hero: {
         overline: "Find your style",
@@ -538,10 +548,10 @@ export const siteSource = {
           "Adult dance and movement classes for every background and level — beginners welcome.",
       } satisfies PageHeroContent,
       intro:
-        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate.",
+        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop. Every class is clearly labelled Beginner, Open Level or Intermediate.",
       cta: { label: "View timetable", href: "/timetable", variant: "primary" },
       detailLabels: {
-        ageGroups: "Age groups",
+        ageGroups: "Who it's for",
         backLink: "Classes",
       },
       styles: [
@@ -660,6 +670,30 @@ export const siteSource = {
           ],
           ageGroups: [
             { label: "Adults", description: "Suitable for every age and fitness level." },
+          ],
+          cta: { label: "Book a class", href: "/timetable", variant: "primary" },
+        },
+        {
+          slug: "k-pop",
+          name: "K-Pop",
+          metaDescription:
+            "K-Pop dance classes for adults at County Hall Dance Centre — learn high-energy routines inspired by today's biggest K-Pop hits.",
+          hero: {
+            overline: "Energy & style",
+            title: "K-Pop",
+            subtitle: "High-energy choreography inspired by the world of K-Pop.",
+            image: { src: "/images/hero/slide-3.jpg", alt: "K-Pop dance class" },
+          },
+          intro: [
+            "Learn sharp, stylish routines inspired by the choreography of popular K-Pop songs. Classes break each routine into clear steps, building your coordination, stamina and performance confidence while you have a great time with a friendly group.",
+          ],
+          highlights: [
+            { title: "Full routines", description: "Learn choreography step by step." },
+            { title: "Performance skills", description: "Work on style, precision and expression." },
+            { title: "Fitness & fun", description: "A full-body workout that doesn't feel like one." },
+          ],
+          ageGroups: [
+            { label: "Adults of all levels", description: "No previous dance experience needed." },
           ],
           cta: { label: "Book a class", href: "/timetable", variant: "primary" },
         },
@@ -1021,22 +1055,184 @@ export const siteSource = {
         meta: {
           title: "Studio Hire",
           description:
-            "Hire a flexible dance and performing-arts space at County Hall on the South Bank.",
+            "Hire a 70 m² vinyl-floor studio or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available.",
         },
         hero: {
           overline: "South Bank studios",
           title: "Studio Hire",
           subtitle:
-            "A multi-purpose space for classes, rehearsals, workshops, social dances, cultural events and private hire.",
+            "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
+          image: {
+            src: "/images/hero/slide-5.jpg",
+            alt: "Studio space available for hire at County Hall",
+          },
         },
         intro:
-          "A flexible, multi-purpose dance and performing-arts space of around 300 m² (first phase), suitable for regular classes, rehearsals, workshops, social dances, cultural events and private hire.",
-        sections: [
-          { id: "space", title: "Space & facilities" },
-          { id: "pricing", title: "Pricing" },
-          { id: "enquiries", title: "Booking & enquiries" },
+          "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor studio for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
+        galleryLabel: "Inside our South Bank studio",
+        gallery: [
+          {
+            src: "/images/hero/slide-5.jpg",
+            alt: "Main studio floor with natural light",
+          },
+          {
+            src: "/images/hero/slide-4.png",
+            alt: "Spacious dance studio at County Hall",
+          },
+          {
+            src: "/images/hero/slide-3.jpg",
+            alt: "Studio set up for classes and workshops",
+          },
+          {
+            src: "/images/hero/slide-1.jpg",
+            alt: "Professional dance space on the South Bank",
+          },
         ],
-      } satisfies SectionedPageContent,
+        spaces: {
+          title: "Our spaces",
+          items: [
+            {
+              id: "vinyl-studio",
+              title: "Vinyl-Floor Studio",
+              size: "70 m²",
+              floor: "Dance vinyl",
+              idealFor:
+                "Classes, rehearsals, auditions, small workshops and one-to-one sessions",
+              body: "A focused, practical studio with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
+            },
+            {
+              id: "wooden-hall",
+              title: "Wooden-Floor Hall",
+              size: "200 m²",
+              floor: "Wooden floor",
+              idealFor:
+                "Workshops, social dances, performances, parties, exhibitions and corporate events",
+              body: "Our largest space, with a wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
+            },
+          ],
+          wholeVenue:
+            "Book both spaces together for approx. 300 m² and up to 120 guests.",
+        },
+        facts: {
+          title: "Key facts",
+          items: [
+            "Approx. 300 m² in total",
+            "4.5 m ceiling height",
+            "Up to 120 guests",
+            "5 minutes' walk from Waterloo and Westminster",
+          ],
+        },
+        facilities: {
+          title: "Facilities & equipment",
+          includedNote: "Included in every booking at no extra charge:",
+          items: [
+            "Tables and chairs",
+            "Wi-Fi",
+            "Power sockets",
+            "Lighting",
+            "Sound system",
+            "4 microphones",
+            "Kitchen",
+            "Tea and refreshment facilities",
+            "Toilets",
+            "Changing rooms",
+          ],
+          extraNote:
+            "You are welcome to bring your own equipment, set up and decorate the space, and bring your own catering and drinks.",
+        },
+        suitableFor: {
+          title: "Suitable for",
+          items: [
+            "Meetings",
+            "Training sessions",
+            "Rehearsals",
+            "Classes & workshops",
+            "Photo & film shoots",
+            "Live streams",
+            "Parties & celebrations",
+            "Exhibitions",
+            "Cultural events",
+          ],
+        },
+        pricing: {
+          title: "Pricing",
+          columns: ["", "Standard rate", "Member rate"],
+          rows: [
+            { label: "Weekday, per hour", standard: "£200", member: "£100" },
+            { label: "Weekend daytime, per hour", standard: "£200", member: "£150" },
+            { label: "Half day", standard: "£1,000", member: "£500" },
+          ],
+          notes: [
+            "Minimum booking: 1 hour.",
+            "Bookings are available until 18:00; evening bookings after 18:00 are not available.",
+            "Refundable security deposit: £100.",
+            "Prices are final — no additional taxes or fees. All equipment is included.",
+            "Members of County Hall Dance Centre receive reduced hire rates.",
+          ],
+          membershipLink: {
+            label: "Learn about membership",
+            href: "/membership",
+            variant: "text",
+          },
+        },
+        howToBook: {
+          title: "How to book",
+          steps: [
+            {
+              title: "Enquire",
+              body: "Contact us through this website, our official WeChat (18518614868) or Instagram (@countyhalldancecentre). Please book at least one week in advance.",
+            },
+            {
+              title: "Confirm",
+              body: "We'll check availability and confirm your date, space and hours.",
+            },
+            {
+              title: "Pay",
+              body: "Full payment is due no later than three days before your booking, by bank transfer to our company account.",
+            },
+            {
+              title: "Arrive",
+              body: "Our on-site manager will welcome you and be available throughout your hire.",
+            },
+          ],
+        },
+        terms: {
+          title: "Booking terms",
+          items: [
+            {
+              title: "Cancellations and date changes",
+              body: "must be made at least three days before your booking. Cancellations made with less notice are non-refundable.",
+            },
+            {
+              title: "Extra time or changes to guest numbers",
+              body: "must be confirmed at least one day in advance.",
+            },
+            {
+              title: "Deposit:",
+              body: "your £100 deposit is refunded in full after your hire provided there is no damage. Any damage to the venue, furniture or equipment will be charged at cost.",
+            },
+            {
+              title: "House rules:",
+              body: "no pets, no smoking, no open flames and no illegal activity. Under-18s are not permitted. Maximum capacity is 120 people.",
+            },
+            {
+              title: "On-site support:",
+              body: "a venue manager is present during every booking.",
+            },
+          ],
+        },
+        cta: {
+          title: "Plan your booking",
+          body: "Tell us your preferred date, times, space and group size and we'll come back to you with availability.",
+          button: {
+            label: "Enquire about hire",
+            href: "/contact?subject=studio-hire",
+            variant: "primary",
+          },
+          secondary:
+            "Or message us on WeChat: 18518614868 · Instagram: @countyhalldancecentre",
+        },
+      },
       subpages: [
         {
           slug: "our-space",
@@ -1082,21 +1278,22 @@ export const siteSource = {
       meta: {
         title: "Private Lessons & Experiences",
         description:
-          "Private dance lessons and bespoke experiences at County Hall Dance Centre.",
+          "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops.",
       },
       hero: {
         overline: "Tailored for you",
         title: "Private Lessons & Experiences",
         subtitle:
-          "One-to-one lessons, couples' dance, wedding first dances, group experiences, corporate events and school workshops.",
+          "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful studio at County Hall.",
       },
       intro:
-        "Services include private dance lessons; dance experiences for individuals, couples and groups; wedding first dances; corporate team experiences; school and organisation workshops; rehearsals, auditions, filming and private events; and Milonga and social dance events.",
+        "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our studios on the South Bank.",
       sections: [
         {
           id: "one-to-one",
           title: "One-to-One Lessons",
-          body: "Personalised coaching tailored to your goals, level and schedule — from absolute beginners building confidence to experienced dancers refining technique.",
+          body: "Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique — strength, flexibility, control and precision — or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/hero/slide-4.png",
@@ -1115,7 +1312,8 @@ export const siteSource = {
         {
           id: "couples",
           title: "Couples' Dance",
-          body: "Learn together in a relaxed, supportive setting — whether you are preparing for a special occasion or simply want a shared creative experience.",
+          body: "Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side — no experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/hero/slide-2.jpg",
@@ -1134,7 +1332,8 @@ export const siteSource = {
         {
           id: "wedding",
           title: "First Wedding Dance",
-          body: "Choreography and coaching for your first dance — from a simple, elegant sway to a fully staged performance, paced to suit your timeline and comfort.",
+          body: "Your first dance should feel like you — and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/hero/slide-2.jpg",
@@ -1153,7 +1352,8 @@ export const siteSource = {
         {
           id: "groups",
           title: "Group Experiences",
-          body: "Celebrate with friends — hen parties, birthdays and social groups welcome themed sessions, from tango tasters to musical theatre and creative movement.",
+          body: "Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles — a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop — and our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/private-events/promo.svg",
@@ -1172,7 +1372,8 @@ export const siteSource = {
         {
           id: "corporate",
           title: "Corporate Events",
-          body: "Team-building through movement — energising, inclusive sessions designed for workplaces, away days and client hospitality at County Hall.",
+          body: "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/hero/slide-3.jpg",
@@ -1190,8 +1391,9 @@ export const siteSource = {
         },
         {
           id: "schools",
-          title: "School / Organisation Workshops",
-          body: "School visits, youth groups and community organisations — curriculum-linked or enrichment workshops led by experienced educators and artists.",
+          title: "Workshops for Organisations",
+          body: "We offer tailored dance and movement workshops for universities, colleges, community groups and cultural organisations. Led by experienced teachers and artists, workshops can introduce a new style, explore the cultural roots of forms such as classical Chinese dance and Tai Chi, or support creative, wellbeing and performance programmes. Every session is planned around your group's size, level and learning goals, and can be delivered as a one-off experience or a series. Tell us about your group and what you hope to achieve, and we'll put together a programme and quote that fits.",
+          cta: { label: "Enquire", href: "/contact?subject=private-lessons", variant: "secondary" },
           gallery: [
             {
               src: "/images/events/ballet-masterclass.svg",
@@ -1208,7 +1410,34 @@ export const siteSource = {
           ],
         },
       ],
-    } satisfies SectionedPageContent,
+      howItWorks: {
+        title: "How it works",
+        steps: [
+          {
+            title: "Tell us your plans",
+            body: "the occasion, group size and preferred dates.",
+          },
+          {
+            title: "We design your session",
+            body: "style, teacher, length and a clear quote.",
+          },
+          {
+            title: "Enjoy the experience",
+            body: "arrive, relax and dance.",
+          },
+        ],
+      },
+      cta: {
+        title: "Plan your experience",
+        body: "Send us a few details and our team will be in touch.",
+        button: {
+          label: "Enquire now",
+          href: "/contact?subject=private-lessons",
+          variant: "primary",
+        },
+        secondary: "WeChat: 18518614868 · Instagram: @countyhalldancecentre",
+      },
+    },
 
     classesInfo: {
       meta: {
@@ -1266,6 +1495,148 @@ export const siteSource = {
     } satisfies SectionedPageContent,
 
     membership: {
+      overview: {
+        meta: {
+          title: "Membership",
+          description:
+            "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced studio hire rates.",
+        },
+        hero: {
+          overline: "Dance more, belong more",
+          title: "Membership",
+          subtitle:
+            "Make dance part of your week — and become part of a creative community at London's iconic County Hall.",
+        },
+        intro:
+          "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
+        plans: {
+          title: "Plans",
+          items: [
+            {
+              id: "monthly",
+              title: "Monthly Membership",
+              price: "£[TBC] / month",
+              body: "Flexible and easy to start. Ideal if you want to build a regular practice without a long commitment.",
+            },
+            {
+              id: "quarterly",
+              title: "Quarterly Membership",
+              price: "£[TBC] / quarter",
+              body: "Three months of classes and member benefits — a great way to see real progress.",
+            },
+            {
+              id: "annual",
+              title: "Annual Membership",
+              price: "£[TBC] / year",
+              body: "Our best value. A full year of dance, community and member-only perks.",
+            },
+          ],
+          cta: {
+            label: "Join now",
+            href: "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+            variant: "primary",
+            external: true,
+          },
+        },
+        styles: {
+          title: "Class styles included",
+          items: [
+            "Contemporary",
+            "Chinese Dance",
+            "Tango",
+            "Yoga",
+            "Tai Chi",
+            "K-Pop",
+          ],
+        },
+        benefits: {
+          title: "Member benefits",
+          items: [
+            {
+              title: "Workshop & masterclass discounts",
+              body: "Save on workshops, masterclasses and intensive courses.",
+            },
+            {
+              title: "Priority registration",
+              body: "Be first to sign up for performances, showcases and special events.",
+            },
+            {
+              title: "Event ticket discounts",
+              body: "Reduced prices on performance and event tickets.",
+            },
+            {
+              title: "Merchandise discounts",
+              body: "Savings on County Hall merchandise, dancewear and dance shoes.",
+            },
+            {
+              title: "Reduced studio hire",
+              body: "Member rates on studio and practice-space hire (from £100 per hour on weekdays).",
+            },
+            {
+              title: "Partner offers",
+              body: "Exclusive discounts with our partner businesses.",
+            },
+            {
+              title: "Members-only events",
+              body: "Community classes, parties, theatre trips and social gatherings.",
+            },
+            {
+              title: "Member community",
+              body: "Join our private members' group to stay connected.",
+            },
+            {
+              title: "Refer a friend",
+              body: "Earn rewards when a friend joins.",
+            },
+            {
+              title: "Points & rewards",
+              body: "Collect points for attendance and redeem them for rewards.",
+            },
+          ],
+        },
+        howToJoin: {
+          title: "How to join",
+          steps: [
+            "Choose your plan.",
+            "Email us at membership@countyhalldancecentre.com with the plan you'd like.",
+            "Complete your registration and payment.",
+            "Start booking classes and enjoying your member benefits.",
+          ],
+        },
+        faq: {
+          title: "Membership FAQ",
+          items: [
+            {
+              id: "membership-faq-trial",
+              question: "Do you offer free trial classes?",
+              answer:
+                "We don't offer free trial classes, but you're welcome to book a trial class before you join. Email membership@countyhalldancecentre.com and we'll gladly help you choose the class and plan that's right for you.",
+            },
+            {
+              id: "membership-faq-styles",
+              question: "Which classes are included?",
+              answer:
+                "Membership covers our class styles: Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop.",
+            },
+            {
+              id: "membership-faq-hire",
+              question: "How do I get member rates for studio hire?",
+              answer: "Simply mention your membership when you enquire.",
+            },
+          ],
+        },
+        cta: {
+          title: "Ready to join?",
+          body: "Email our membership team and we'll help you find the plan that suits you best.",
+          button: {
+            label: "Join now",
+            href: "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+            variant: "primary",
+            external: true,
+          },
+          secondary: "membership@countyhalldancecentre.com",
+        },
+      },
       subpages: [
         {
           slug: "member-benefits",
@@ -1523,6 +1894,13 @@ export const siteSource = {
         phone: "+44 7728 617531",
         email: "info@countyhalldancecentre.com",
         hours: "Office hours: Mon – Fri, 9:00 – 17:30",
+        wechat: "WeChat: 18518614868",
+        instagramLabel: "Instagram: @countyhalldancecentre",
+        instagramHref: "https://www.instagram.com/countyhalldancecentre",
+        membershipLabel: "Membership enquiries: membership@countyhalldancecentre.com",
+        membershipHref: "mailto:membership@countyhalldancecentre.com",
+        gettingHere:
+          "Getting here: a five-minute walk from Waterloo and Westminster stations.",
       },
       map: {
         title: "Find us",
@@ -1549,8 +1927,10 @@ export const siteSource = {
             options: [
               { label: "General enquiry", value: "general" },
               { label: "Classes & timetable", value: "classes" },
-              { label: "Courses", value: "courses" },
-              { label: "Private events", value: "private-events" },
+              { label: "Membership", value: "membership" },
+              { label: "Private lessons & experiences", value: "private-lessons" },
+              { label: "Studio hire", value: "studio-hire" },
+              { label: "Events", value: "events" },
               { label: "Gift cards", value: "gift-cards" },
             ],
           },
@@ -1578,15 +1958,9 @@ export const siteSource = {
         },
         {
           id: "faq-2",
-          question: "Can my child try a class before committing?",
+          question: "Can I try a class before committing?",
           answer:
-            "Yes. We offer a complimentary trial for new students on selected classes. Choose the trial option when booking through the timetable.",
-        },
-        {
-          id: "faq-3",
-          question: "What should my child wear to their first ballet class?",
-          answer:
-            "Comfortable activewear is fine for a trial. If they continue, we will provide a uniform list — typically leotard, tights, ballet shoes, and hair in a neat bun.",
+            "Yes — you can book a trial class from our Timetable page. Please note that trial classes are not free. If you're unsure which class suits you, contact us and we'll help you choose.",
         },
         {
           id: "faq-4",
@@ -1595,22 +1969,22 @@ export const siteSource = {
             "Courses run for a fixed term with a structured syllabus and limited places. Regular classes can often be booked on a rolling basis via the timetable.",
         },
         {
-          id: "faq-5",
-          question: "Do you offer exams?",
-          answer:
-            "Optional examinations are available in ballet, tap, and drama through recognised awarding bodies. Your child's teacher will advise when they are ready.",
-        },
-        {
           id: "faq-6",
           question: "How do I book an event or masterclass?",
           answer:
             "Events are booked directly via the Book Now button on each event page. Payments are processed securely through Stripe.",
         },
         {
-          id: "faq-7",
-          question: "Is there parking nearby?",
+          id: "faq-hire",
+          question: "Can I hire the studio?",
           answer:
-            "There is limited on-site parking by arrangement. We recommend public transport — Waterloo station is a short walk from County Hall.",
+            "Yes — our 70 m² vinyl-floor studio and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Studio Hire for details.",
+        },
+        {
+          id: "faq-7",
+          question: "How do I get there?",
+          answer:
+            "We're a five-minute walk from both Waterloo and Westminster stations.",
         },
       ] satisfies FaqItem[],
       cta: {

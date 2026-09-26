@@ -33,7 +33,7 @@ export const siteStructure = {
       "social": [
         {
           "platform": "instagram",
-          "href": "https://instagram.com/countryhalldance",
+          "href": "https://www.instagram.com/countyhalldancecentre",
           "label": "@@COPY:global.utilitybar.social.instagram.label"
         },
         {
@@ -92,7 +92,7 @@ export const siteStructure = {
         },
         {
           "label": "@@COPY:global.navigation.items.membership.label",
-          "href": "/membership/member-benefits",
+          "href": "/membership",
           "children": [
             {
               "label": "@@COPY:global.navigation.items.membership.children.member_benefits.label",
@@ -290,6 +290,7 @@ export const siteStructure = {
           "@@COPY:global.footer.contact.address.2"
         ],
         "phone": "@@COPY:global.footer.contact.phone",
+        "wechat": "@@COPY:global.footer.contact.wechat",
         "email": "@@COPY:global.footer.contact.email"
       },
       "newsletter": {
@@ -297,7 +298,7 @@ export const siteStructure = {
         "description": "@@COPY:global.footer.newsletter.description",
         "placeholder": "@@COPY:global.footer.newsletter.placeholder",
         "submitLabel": "@@COPY:global.footer.newsletter.submitlabel",
-        "privacyNote": "@@COPY:global.footer.newsletter.privacynote"
+        "privacyNote": "We respect your privacy. Unsubscribe anytime."
       },
       "legal": [
         {
@@ -422,15 +423,14 @@ export const siteStructure = {
           "description": "@@COPY:home.quickactions.items.book_a_class.description"
         },
         {
-          "label": "@@COPY:home.quickactions.items.book_a_course.label",
-          "href": "/events",
-          "description": "@@COPY:home.quickactions.items.book_a_course.description"
+          "label": "@@COPY:home.quickactions.items.hire_the_studio.label",
+          "href": "/studio-hire",
+          "description": "@@COPY:home.quickactions.items.hire_the_studio.description"
         },
         {
-          "label": "@@COPY:home.quickactions.items.free_trial.label",
-          "href": "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
-          "external": true,
-          "description": "@@COPY:home.quickactions.items.free_trial.description"
+          "label": "@@COPY:home.quickactions.items.join_now.label",
+          "href": "/membership",
+          "description": "@@COPY:home.quickactions.items.join_now.description"
         }
       ]
     },
@@ -570,6 +570,16 @@ export const siteStructure = {
             "src": "/images/styles/tai-chi.jpg",
             "alt": "@@COPY:home.classstyles.items.tai_chi.image.alt"
           }
+        },
+        {
+          "id": "style-k-pop",
+          "name": "@@COPY:home.classstyles.items.k_pop.name",
+          "slug": "k-pop",
+          "href": "/classes/k-pop",
+          "image": {
+            "src": "/images/hero/slide-3.jpg",
+            "alt": "@@COPY:home.classstyles.items.k_pop.image.alt"
+          }
         }
       ]
     },
@@ -653,6 +663,7 @@ export const siteStructure = {
           "height": 1024
         }
       },
+      "newcomerNote": "@@COPY:pages.timetable.newcomernote",
       "helpLinks": [
         {
           "label": "@@COPY:pages.timetable.helplinks.browse_courses.label",
@@ -685,7 +696,7 @@ export const siteStructure = {
         "variant": "primary"
       },
       "detailLabels": {
-        "ageGroups": "@@COPY:pages.classes.detaillabels.agegroups",
+        "ageGroups": "Who it's for",
         "backLink": "@@COPY:pages.classes.detaillabels.backlink"
       },
       "styles": [
@@ -899,6 +910,48 @@ export const siteStructure = {
             "href": "/timetable",
             "variant": "primary"
           }
+        },
+        {
+          "slug": "k-pop",
+          "name": "@@COPY:pages.classes.styles.k_pop.name",
+          "metaDescription": "@@COPY:pages.classes.styles.k_pop.metadescription",
+          "hero": {
+            "overline": "@@COPY:pages.classes.styles.k_pop.hero.overline",
+            "title": "@@COPY:pages.classes.styles.k_pop.hero.title",
+            "subtitle": "@@COPY:pages.classes.styles.k_pop.hero.subtitle",
+            "image": {
+              "src": "/images/hero/slide-3.jpg",
+              "alt": "@@COPY:pages.classes.styles.k_pop.hero.image.alt"
+            }
+          },
+          "intro": [
+            "@@COPY:pages.classes.styles.k_pop.intro.0"
+          ],
+          "highlights": [
+            {
+              "title": "@@COPY:pages.classes.styles.k_pop.highlights.0.title",
+              "description": "@@COPY:pages.classes.styles.k_pop.highlights.0.description"
+            },
+            {
+              "title": "@@COPY:pages.classes.styles.k_pop.highlights.1.title",
+              "description": "@@COPY:pages.classes.styles.k_pop.highlights.1.description"
+            },
+            {
+              "title": "@@COPY:pages.classes.styles.k_pop.highlights.2.title",
+              "description": "@@COPY:pages.classes.styles.k_pop.highlights.2.description"
+            }
+          ],
+          "ageGroups": [
+            {
+              "label": "@@COPY:pages.classes.styles.k_pop.agegroups.adults_of_all_levels.label",
+              "description": "@@COPY:pages.classes.styles.k_pop.agegroups.adults_of_all_levels.description"
+            }
+          ],
+          "cta": {
+            "label": "@@COPY:pages.classes.styles.k_pop.cta.label",
+            "href": "/timetable",
+            "variant": "primary"
+          }
         }
       ]
     },
@@ -917,7 +970,7 @@ export const siteStructure = {
         "duration": "@@COPY:pages.courses.detaillabels.duration",
         "schedule": "@@COPY:pages.courses.detaillabels.schedule",
         "price": "@@COPY:pages.courses.detaillabels.price",
-        "includes": "@@COPY:pages.courses.detaillabels.includes",
+        "includes": "What's included",
         "backLink": "@@COPY:pages.courses.detaillabels.backlink"
       },
       "items": [
@@ -1311,23 +1364,187 @@ export const siteStructure = {
         "hero": {
           "overline": "@@COPY:pages.studiohire.overview.hero.overline",
           "title": "@@COPY:pages.studiohire.overview.hero.title",
-          "subtitle": "@@COPY:pages.studiohire.overview.hero.subtitle"
+          "subtitle": "@@COPY:pages.studiohire.overview.hero.subtitle",
+          "image": {
+            "src": "/images/hero/slide-5.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.hero.image.alt"
+          }
         },
         "intro": "@@COPY:pages.studiohire.overview.intro",
-        "sections": [
+        "galleryLabel": "Inside our South Bank studio",
+        "gallery": [
           {
-            "id": "space",
-            "title": "@@COPY:pages.studiohire.overview.sections.space.title"
+            "src": "/images/hero/slide-5.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.0.alt"
           },
           {
-            "id": "pricing",
-            "title": "@@COPY:pages.studiohire.overview.sections.pricing.title"
+            "src": "/images/hero/slide-4.png",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt"
           },
           {
-            "id": "enquiries",
-            "title": "@@COPY:pages.studiohire.overview.sections.enquiries.title"
+            "src": "/images/hero/slide-3.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt"
+          },
+          {
+            "src": "/images/hero/slide-1.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.3.alt"
           }
-        ]
+        ],
+        "spaces": {
+          "title": "@@COPY:pages.studiohire.overview.spaces.title",
+          "items": [
+            {
+              "id": "vinyl-studio",
+              "title": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.title",
+              "size": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.size",
+              "floor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.floor",
+              "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.idealfor",
+              "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body"
+            },
+            {
+              "id": "wooden-hall",
+              "title": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.title",
+              "size": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.size",
+              "floor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.floor",
+              "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.idealfor",
+              "body": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.body"
+            }
+          ],
+          "wholeVenue": "Book both spaces together for approx. 300 m² and up to 120 guests."
+        },
+        "facts": {
+          "title": "@@COPY:pages.studiohire.overview.facts.title",
+          "items": [
+            "@@COPY:pages.studiohire.overview.facts.items.0",
+            "@@COPY:pages.studiohire.overview.facts.items.1",
+            "@@COPY:pages.studiohire.overview.facts.items.2",
+            "@@COPY:pages.studiohire.overview.facts.items.3"
+          ]
+        },
+        "facilities": {
+          "title": "@@COPY:pages.studiohire.overview.facilities.title",
+          "includedNote": "@@COPY:pages.studiohire.overview.facilities.includednote",
+          "items": [
+            "@@COPY:pages.studiohire.overview.facilities.items.0",
+            "@@COPY:pages.studiohire.overview.facilities.items.1",
+            "@@COPY:pages.studiohire.overview.facilities.items.2",
+            "@@COPY:pages.studiohire.overview.facilities.items.3",
+            "@@COPY:pages.studiohire.overview.facilities.items.4",
+            "@@COPY:pages.studiohire.overview.facilities.items.5",
+            "@@COPY:pages.studiohire.overview.facilities.items.6",
+            "@@COPY:pages.studiohire.overview.facilities.items.7",
+            "@@COPY:pages.studiohire.overview.facilities.items.8",
+            "@@COPY:pages.studiohire.overview.facilities.items.9"
+          ],
+          "extraNote": "@@COPY:pages.studiohire.overview.facilities.extranote"
+        },
+        "suitableFor": {
+          "title": "@@COPY:pages.studiohire.overview.suitablefor.title",
+          "items": [
+            "@@COPY:pages.studiohire.overview.suitablefor.items.0",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.1",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.2",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.3",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.4",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.5",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.6",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.7",
+            "@@COPY:pages.studiohire.overview.suitablefor.items.8"
+          ]
+        },
+        "pricing": {
+          "title": "@@COPY:pages.studiohire.overview.pricing.title",
+          "columns": [
+            "@@COPY:pages.studiohire.overview.pricing.columns.0",
+            "@@COPY:pages.studiohire.overview.pricing.columns.1",
+            "@@COPY:pages.studiohire.overview.pricing.columns.2"
+          ],
+          "rows": [
+            {
+              "label": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.label",
+              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.standard",
+              "member": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.member"
+            },
+            {
+              "label": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.label",
+              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.standard",
+              "member": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.member"
+            },
+            {
+              "label": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.label",
+              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.standard",
+              "member": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.member"
+            }
+          ],
+          "notes": [
+            "@@COPY:pages.studiohire.overview.pricing.notes.0",
+            "@@COPY:pages.studiohire.overview.pricing.notes.1",
+            "@@COPY:pages.studiohire.overview.pricing.notes.2",
+            "@@COPY:pages.studiohire.overview.pricing.notes.3",
+            "@@COPY:pages.studiohire.overview.pricing.notes.4"
+          ],
+          "membershipLink": {
+            "label": "@@COPY:pages.studiohire.overview.pricing.membershiplink.label",
+            "href": "/membership",
+            "variant": "text"
+          }
+        },
+        "howToBook": {
+          "title": "@@COPY:pages.studiohire.overview.howtobook.title",
+          "steps": [
+            {
+              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.0.title",
+              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.0.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.1.title",
+              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.1.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.2.title",
+              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.2.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.3.title",
+              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.3.body"
+            }
+          ]
+        },
+        "terms": {
+          "title": "@@COPY:pages.studiohire.overview.terms.title",
+          "items": [
+            {
+              "title": "@@COPY:pages.studiohire.overview.terms.items.0.title",
+              "body": "@@COPY:pages.studiohire.overview.terms.items.0.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.terms.items.1.title",
+              "body": "@@COPY:pages.studiohire.overview.terms.items.1.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.terms.items.2.title",
+              "body": "@@COPY:pages.studiohire.overview.terms.items.2.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.terms.items.3.title",
+              "body": "@@COPY:pages.studiohire.overview.terms.items.3.body"
+            },
+            {
+              "title": "@@COPY:pages.studiohire.overview.terms.items.4.title",
+              "body": "@@COPY:pages.studiohire.overview.terms.items.4.body"
+            }
+          ]
+        },
+        "cta": {
+          "title": "@@COPY:pages.studiohire.overview.cta.title",
+          "body": "@@COPY:pages.studiohire.overview.cta.body",
+          "button": {
+            "label": "@@COPY:pages.studiohire.overview.cta.button.label",
+            "href": "/contact?subject=studio-hire",
+            "variant": "primary"
+          },
+          "secondary": "@@COPY:pages.studiohire.overview.cta.secondary"
+        }
       },
       "subpages": [
         {
@@ -1394,6 +1611,11 @@ export const siteStructure = {
           "id": "one-to-one",
           "title": "@@COPY:pages.privatelessons.sections.one_to_one.title",
           "body": "@@COPY:pages.privatelessons.sections.one_to_one.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.one_to_one.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/hero/slide-4.png",
@@ -1413,6 +1635,11 @@ export const siteStructure = {
           "id": "couples",
           "title": "@@COPY:pages.privatelessons.sections.couples.title",
           "body": "@@COPY:pages.privatelessons.sections.couples.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.couples.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/hero/slide-2.jpg",
@@ -1432,6 +1659,11 @@ export const siteStructure = {
           "id": "wedding",
           "title": "@@COPY:pages.privatelessons.sections.wedding.title",
           "body": "@@COPY:pages.privatelessons.sections.wedding.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.wedding.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/hero/slide-2.jpg",
@@ -1451,6 +1683,11 @@ export const siteStructure = {
           "id": "groups",
           "title": "@@COPY:pages.privatelessons.sections.groups.title",
           "body": "@@COPY:pages.privatelessons.sections.groups.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.groups.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/private-events/promo.svg",
@@ -1470,6 +1707,11 @@ export const siteStructure = {
           "id": "corporate",
           "title": "@@COPY:pages.privatelessons.sections.corporate.title",
           "body": "@@COPY:pages.privatelessons.sections.corporate.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.corporate.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/hero/slide-3.jpg",
@@ -1489,6 +1731,11 @@ export const siteStructure = {
           "id": "schools",
           "title": "@@COPY:pages.privatelessons.sections.schools.title",
           "body": "@@COPY:pages.privatelessons.sections.schools.body",
+          "cta": {
+            "label": "@@COPY:pages.privatelessons.sections.schools.cta.label",
+            "href": "/contact?subject=private-lessons",
+            "variant": "secondary"
+          },
           "gallery": [
             {
               "src": "/images/events/ballet-masterclass.svg",
@@ -1504,7 +1751,34 @@ export const siteStructure = {
             }
           ]
         }
-      ]
+      ],
+      "howItWorks": {
+        "title": "@@COPY:pages.privatelessons.howitworks.title",
+        "steps": [
+          {
+            "title": "@@COPY:pages.privatelessons.howitworks.steps.0.title",
+            "body": "@@COPY:pages.privatelessons.howitworks.steps.0.body"
+          },
+          {
+            "title": "@@COPY:pages.privatelessons.howitworks.steps.1.title",
+            "body": "@@COPY:pages.privatelessons.howitworks.steps.1.body"
+          },
+          {
+            "title": "@@COPY:pages.privatelessons.howitworks.steps.2.title",
+            "body": "@@COPY:pages.privatelessons.howitworks.steps.2.body"
+          }
+        ]
+      },
+      "cta": {
+        "title": "@@COPY:pages.privatelessons.cta.title",
+        "body": "@@COPY:pages.privatelessons.cta.body",
+        "button": {
+          "label": "@@COPY:pages.privatelessons.cta.button.label",
+          "href": "/contact?subject=private-lessons",
+          "variant": "primary"
+        },
+        "secondary": "@@COPY:pages.privatelessons.cta.secondary"
+      }
     },
     "classesInfo": {
       "meta": {
@@ -1573,6 +1847,143 @@ export const siteStructure = {
       ]
     },
     "membership": {
+      "overview": {
+        "meta": {
+          "title": "@@COPY:pages.membership.overview.meta.title",
+          "description": "@@COPY:pages.membership.overview.meta.description"
+        },
+        "hero": {
+          "overline": "@@COPY:pages.membership.overview.hero.overline",
+          "title": "@@COPY:pages.membership.overview.hero.title",
+          "subtitle": "@@COPY:pages.membership.overview.hero.subtitle"
+        },
+        "intro": "@@COPY:pages.membership.overview.intro",
+        "plans": {
+          "title": "@@COPY:pages.membership.overview.plans.title",
+          "items": [
+            {
+              "id": "monthly",
+              "title": "@@COPY:pages.membership.overview.plans.items.monthly.title",
+              "price": "@@COPY:pages.membership.overview.plans.items.monthly.price",
+              "body": "@@COPY:pages.membership.overview.plans.items.monthly.body"
+            },
+            {
+              "id": "quarterly",
+              "title": "@@COPY:pages.membership.overview.plans.items.quarterly.title",
+              "price": "@@COPY:pages.membership.overview.plans.items.quarterly.price",
+              "body": "@@COPY:pages.membership.overview.plans.items.quarterly.body"
+            },
+            {
+              "id": "annual",
+              "title": "@@COPY:pages.membership.overview.plans.items.annual.title",
+              "price": "@@COPY:pages.membership.overview.plans.items.annual.price",
+              "body": "@@COPY:pages.membership.overview.plans.items.annual.body"
+            }
+          ],
+          "cta": {
+            "label": "@@COPY:pages.membership.overview.plans.cta.label",
+            "href": "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+            "variant": "primary",
+            "external": true
+          }
+        },
+        "styles": {
+          "title": "@@COPY:pages.membership.overview.styles.title",
+          "items": [
+            "@@COPY:pages.membership.overview.styles.items.0",
+            "@@COPY:pages.membership.overview.styles.items.1",
+            "@@COPY:pages.membership.overview.styles.items.2",
+            "@@COPY:pages.membership.overview.styles.items.3",
+            "@@COPY:pages.membership.overview.styles.items.4",
+            "@@COPY:pages.membership.overview.styles.items.5"
+          ]
+        },
+        "benefits": {
+          "title": "@@COPY:pages.membership.overview.benefits.title",
+          "items": [
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.0.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.0.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.1.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.1.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.2.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.2.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.3.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.3.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.4.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.4.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.5.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.5.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.6.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.6.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.7.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.7.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.8.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.8.body"
+            },
+            {
+              "title": "@@COPY:pages.membership.overview.benefits.items.9.title",
+              "body": "@@COPY:pages.membership.overview.benefits.items.9.body"
+            }
+          ]
+        },
+        "howToJoin": {
+          "title": "@@COPY:pages.membership.overview.howtojoin.title",
+          "steps": [
+            "@@COPY:pages.membership.overview.howtojoin.steps.0",
+            "@@COPY:pages.membership.overview.howtojoin.steps.1",
+            "@@COPY:pages.membership.overview.howtojoin.steps.2",
+            "@@COPY:pages.membership.overview.howtojoin.steps.3"
+          ]
+        },
+        "faq": {
+          "title": "@@COPY:pages.membership.overview.faq.title",
+          "items": [
+            {
+              "id": "membership-faq-trial",
+              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.question",
+              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.answer"
+            },
+            {
+              "id": "membership-faq-styles",
+              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.question",
+              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.answer"
+            },
+            {
+              "id": "membership-faq-hire",
+              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.question",
+              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.answer"
+            }
+          ]
+        },
+        "cta": {
+          "title": "@@COPY:pages.membership.overview.cta.title",
+          "body": "@@COPY:pages.membership.overview.cta.body",
+          "button": {
+            "label": "@@COPY:pages.membership.overview.cta.button.label",
+            "href": "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+            "variant": "primary",
+            "external": true
+          },
+          "secondary": "@@COPY:pages.membership.overview.cta.secondary"
+        }
+      },
       "subpages": [
         {
           "slug": "member-benefits",
@@ -1890,7 +2301,13 @@ export const siteStructure = {
         ],
         "phone": "@@COPY:pages.contact.details.phone",
         "email": "@@COPY:pages.contact.details.email",
-        "hours": "@@COPY:pages.contact.details.hours"
+        "hours": "@@COPY:pages.contact.details.hours",
+        "wechat": "@@COPY:pages.contact.details.wechat",
+        "instagramLabel": "@@COPY:pages.contact.details.instagramlabel",
+        "instagramHref": "https://www.instagram.com/countyhalldancecentre",
+        "membershipLabel": "@@COPY:pages.contact.details.membershiplabel",
+        "membershipHref": "mailto:membership@countyhalldancecentre.com",
+        "gettingHere": "@@COPY:pages.contact.details.gettinghere"
       },
       "map": {
         "title": "@@COPY:pages.contact.map.title",
@@ -1941,12 +2358,20 @@ export const siteStructure = {
                 "value": "classes"
               },
               {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.courses.label",
-                "value": "courses"
+                "label": "@@COPY:pages.contact.form.fields.subject.options.membership.label",
+                "value": "membership"
               },
               {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.private_events.label",
-                "value": "private-events"
+                "label": "@@COPY:pages.contact.form.fields.subject.options.private_lessons_experiences.label",
+                "value": "private-lessons"
+              },
+              {
+                "label": "@@COPY:pages.contact.form.fields.subject.options.studio_hire.label",
+                "value": "studio-hire"
+              },
+              {
+                "label": "@@COPY:pages.contact.form.fields.subject.options.events.label",
+                "value": "events"
               },
               {
                 "label": "@@COPY:pages.contact.form.fields.subject.options.gift_cards.label",
@@ -1986,24 +2411,19 @@ export const siteStructure = {
           "answer": "@@COPY:pages.faq.items.faq_2.answer"
         },
         {
-          "id": "faq-3",
-          "question": "@@COPY:pages.faq.items.faq_3.question",
-          "answer": "@@COPY:pages.faq.items.faq_3.answer"
-        },
-        {
           "id": "faq-4",
           "question": "@@COPY:pages.faq.items.faq_4.question",
           "answer": "@@COPY:pages.faq.items.faq_4.answer"
         },
         {
-          "id": "faq-5",
-          "question": "@@COPY:pages.faq.items.faq_5.question",
-          "answer": "@@COPY:pages.faq.items.faq_5.answer"
-        },
-        {
           "id": "faq-6",
           "question": "@@COPY:pages.faq.items.faq_6.question",
           "answer": "@@COPY:pages.faq.items.faq_6.answer"
+        },
+        {
+          "id": "faq-hire",
+          "question": "@@COPY:pages.faq.items.faq_hire.question",
+          "answer": "@@COPY:pages.faq.items.faq_hire.answer"
         },
         {
           "id": "faq-7",
@@ -2074,26 +2494,26 @@ export const siteStructure = {
   },
   "ui": {
     "sectionedPage": {
-      "comingSoon": "@@COPY:ui.sectionedpage.comingsoon"
+      "comingSoon": "Content for this section is coming soon."
     },
     "header": {
-      "mainNavigation": "@@COPY:ui.header.mainnavigation",
-      "mobileNavigation": "@@COPY:ui.header.mobilenavigation",
-      "openMenu": "@@COPY:ui.header.openmenu",
-      "closeMenu": "@@COPY:ui.header.closemenu",
-      "submenuSuffix": "@@COPY:ui.header.submenusuffix"
+      "mainNavigation": "Main navigation",
+      "mobileNavigation": "Mobile navigation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "submenuSuffix": " submenu"
     },
     "hero": {
-      "featuredHighlights": "@@COPY:ui.hero.featuredhighlights",
-      "slideNavigation": "@@COPY:ui.hero.slidenavigation",
-      "slidePrefix": "@@COPY:ui.hero.slideprefix"
+      "featuredHighlights": "Featured highlights",
+      "slideNavigation": "Slide navigation",
+      "slidePrefix": "Slide"
     },
     "booking": {
-      "preferDirectPrefix": "@@COPY:ui.booking.preferdirectprefix",
-      "orCall": "@@COPY:ui.booking.orcall"
+      "preferDirectPrefix": "Prefer to reach us directly? Email",
+      "orCall": "or call"
     },
     "form": {
-      "requiredMarker": "@@COPY:ui.form.requiredmarker"
+      "requiredMarker": " *"
     }
   }
 } as const;
