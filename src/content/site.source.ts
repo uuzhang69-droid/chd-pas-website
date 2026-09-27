@@ -204,8 +204,8 @@ export const siteSource = {
             "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
           cta: { label: "Explore Classes", href: "/classes", variant: "primary" },
           image: {
-            src: "/images/hero/slide-1.jpg",
-            alt: "Dancers taking a bow after an outdoor performance on the South Bank",
+            src: "/images/hero/slide-1-performance.jpg",
+            alt: "Outdoor performance on the South Bank with County Hall and Big Ben beyond the Thames",
           },
         },
         {

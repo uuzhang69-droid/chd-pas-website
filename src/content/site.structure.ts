@@ -285,7 +285,7 @@ export const siteStructure = {
             "variant": "primary"
           },
           "image": {
-            "src": "/images/hero/slide-1.jpg",
+            "src": "/images/hero/slide-1-performance.jpg",
             "alt": "@@COPY:home.hero.slides.hero_intro.image.alt"
           }
         },

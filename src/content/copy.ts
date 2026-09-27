@@ -137,7 +137,7 @@ export const copy = {
   "home.hero.slides.hero_intro.blurb": "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
   "home.hero.slides.hero_intro.cta.label": "Explore Classes",
   "home.hero.slides.hero_intro.headline": "Discover dance, movement and creative experiences at London's iconic County Hall.",
-  "home.hero.slides.hero_intro.image.alt": "Dancers taking a bow after an outdoor performance on the South Bank",
+  "home.hero.slides.hero_intro.image.alt": "Outdoor performance on the South Bank with County Hall and Big Ben beyond the Thames",
   "home.hero.slides.hero_membership.blurb": "A more flexible way to keep dancing, join events and belong to the community.",
   "home.hero.slides.hero_membership.cta.label": "Membership",
   "home.hero.slides.hero_membership.headline": "Membership",
