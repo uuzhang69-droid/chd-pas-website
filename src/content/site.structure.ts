@@ -52,12 +52,8 @@ export const siteStructure = {
       "items": [
         {
           "label": "@@COPY:global.navigation.items.studio_hire.label",
-          "href": "/studio-hire",
+          "href": "/venue-hire",
           "children": [
-            {
-              "label": "@@COPY:global.navigation.items.studio_hire.children.our_space.label",
-              "href": "/studio-hire/our-space"
-            },
             {
               "label": "@@COPY:global.navigation.items.studio_hire.children.space_booking.label",
               "href": "/booking"
@@ -139,28 +135,6 @@ export const siteStructure = {
           ]
         },
         {
-          "label": "@@COPY:global.navigation.items.shop.label",
-          "href": "/shop",
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.shop.children.dancewear.label",
-              "href": "/shop"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.shop.children.t_shirts.label",
-              "href": "/shop"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.shop.children.accessories.label",
-              "href": "/shop"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.shop.children.county_hall_merchandise.label",
-              "href": "/shop"
-            }
-          ]
-        },
-        {
           "label": "@@COPY:global.navigation.items.about_us.label",
           "href": "/about",
           "children": [
@@ -192,33 +166,7 @@ export const siteStructure = {
         },
         {
           "label": "@@COPY:global.navigation.items.events.label",
-          "href": "/events",
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.events.children.milonga.label",
-              "href": "/events/milonga"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.events.children.social_dance_nights.label",
-              "href": "/events/social-dance-nights"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.events.children.workshops.label",
-              "href": "/events/workshops"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.events.children.masterclasses.label",
-              "href": "/events/masterclasses"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.events.children.performances.label",
-              "href": "/events/performances"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.events.children.cross_arts_events.label",
-              "href": "/events/cross-arts-events"
-            }
-          ]
+          "href": "/events"
         }
       ],
       "bookTrial": {
@@ -384,12 +332,12 @@ export const siteStructure = {
           }
         },
         {
-          "id": "hero-studio-hire",
+          "id": "hero-venue-hire",
           "headline": "@@COPY:home.hero.slides.hero_studio_hire.headline",
           "blurb": "@@COPY:home.hero.slides.hero_studio_hire.blurb",
           "cta": {
             "label": "@@COPY:home.hero.slides.hero_studio_hire.cta.label",
-            "href": "/contact?subject=studio-hire",
+            "href": "/venue-hire",
             "variant": "primary"
           },
           "image": {
@@ -423,9 +371,9 @@ export const siteStructure = {
           "description": "@@COPY:home.quickactions.items.book_a_class.description"
         },
         {
-          "label": "@@COPY:home.quickactions.items.hire_the_studio.label",
-          "href": "/studio-hire",
-          "description": "@@COPY:home.quickactions.items.hire_the_studio.description"
+          "label": "@@COPY:home.quickactions.items.book_an_event.label",
+          "href": "/events",
+          "description": "@@COPY:home.quickactions.items.book_an_event.description"
         },
         {
           "label": "@@COPY:home.quickactions.items.join_now.label",
@@ -662,6 +610,14 @@ export const siteStructure = {
           "width": 853,
           "height": 1024
         }
+      },
+      "grid": {
+        "prevWeek": "@@COPY:pages.timetable.grid.prevWeek",
+        "thisWeek": "@@COPY:pages.timetable.grid.thisWeek",
+        "nextWeek": "@@COPY:pages.timetable.grid.nextWeek",
+        "goToDate": "@@COPY:pages.timetable.grid.goToDate",
+        "legend": "@@COPY:pages.timetable.grid.legend",
+        "venueNote": "@@COPY:pages.timetable.grid.venueNote"
       },
       "newcomerNote": "@@COPY:pages.timetable.newcomernote",
       "helpLinks": [
@@ -1355,7 +1311,7 @@ export const siteStructure = {
         "backLink": "@@COPY:pages.events.categorylabels.backlink"
       }
     },
-    "studioHire": {
+    "venueHire": {
       "overview": {
         "meta": {
           "title": "@@COPY:pages.studiohire.overview.meta.title",
@@ -1371,35 +1327,20 @@ export const siteStructure = {
           }
         },
         "intro": "@@COPY:pages.studiohire.overview.intro",
-        "galleryLabel": "Inside our South Bank studio",
-        "gallery": [
-          {
-            "src": "/images/hero/slide-5.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.0.alt"
-          },
-          {
-            "src": "/images/hero/slide-4.png",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt"
-          },
-          {
-            "src": "/images/hero/slide-3.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt"
-          },
-          {
-            "src": "/images/hero/slide-1.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.3.alt"
-          }
-        ],
         "spaces": {
           "title": "@@COPY:pages.studiohire.overview.spaces.title",
           "items": [
             {
-              "id": "vinyl-studio",
+              "id": "vinyl-venue",
               "title": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.title",
               "size": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.size",
               "floor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.floor",
               "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.idealfor",
-              "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body"
+              "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body",
+              "image": {
+                "src": "/images/hero/slide-3.jpg",
+                "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt"
+              }
             },
             {
               "id": "wooden-hall",
@@ -1407,7 +1348,11 @@ export const siteStructure = {
               "size": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.size",
               "floor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.floor",
               "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.idealfor",
-              "body": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.body"
+              "body": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.body",
+              "image": {
+                "src": "/images/hero/slide-4.png",
+                "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt"
+              }
             }
           ],
           "wholeVenue": "Book both spaces together for approx. 300 m² and up to 120 guests."
@@ -1540,36 +1485,18 @@ export const siteStructure = {
           "body": "@@COPY:pages.studiohire.overview.cta.body",
           "button": {
             "label": "@@COPY:pages.studiohire.overview.cta.button.label",
-            "href": "/contact?subject=studio-hire",
+            "href": "/contact?subject=venue-hire",
             "variant": "primary"
+          },
+          "secondaryButton": {
+            "label": "@@COPY:pages.studiohire.overview.cta.secondaryButton.label",
+            "href": "/timetable",
+            "variant": "secondary"
           },
           "secondary": "@@COPY:pages.studiohire.overview.cta.secondary"
         }
       },
       "subpages": [
-        {
-          "slug": "our-space",
-          "meta": {
-            "title": "@@COPY:pages.studiohire.subpages.our_space.meta.title",
-            "description": "@@COPY:pages.studiohire.subpages.our_space.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.studiohire.subpages.our_space.hero.overline",
-            "title": "@@COPY:pages.studiohire.subpages.our_space.hero.title",
-            "subtitle": "@@COPY:pages.studiohire.subpages.our_space.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.studiohire.subpages.our_space.intro",
-          "sections": [
-            {
-              "id": "facilities",
-              "title": "@@COPY:pages.studiohire.subpages.our_space.sections.facilities.title"
-            },
-            {
-              "id": "capacity",
-              "title": "@@COPY:pages.studiohire.subpages.our_space.sections.capacity.title"
-            }
-          ]
-        },
         {
           "slug": "space-booking",
           "meta": {
@@ -2056,36 +1983,6 @@ export const siteStructure = {
         }
       ]
     },
-    "shop": {
-      "meta": {
-        "title": "@@COPY:pages.shop.meta.title",
-        "description": "@@COPY:pages.shop.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.shop.hero.overline",
-        "title": "@@COPY:pages.shop.hero.title",
-        "subtitle": "@@COPY:pages.shop.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.shop.intro",
-      "sections": [
-        {
-          "id": "dancewear",
-          "title": "@@COPY:pages.shop.sections.dancewear.title"
-        },
-        {
-          "id": "t-shirts",
-          "title": "@@COPY:pages.shop.sections.t_shirts.title"
-        },
-        {
-          "id": "accessories",
-          "title": "@@COPY:pages.shop.sections.accessories.title"
-        },
-        {
-          "id": "merchandise",
-          "title": "@@COPY:pages.shop.sections.merchandise.title"
-        }
-      ]
-    },
     "joinUs": {
       "meta": {
         "title": "@@COPY:pages.joinus.meta.title",
@@ -2256,7 +2153,7 @@ export const siteStructure = {
             "options": [
               {
                 "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.studio_hire.label",
-                "value": "studio-hire"
+                "value": "venue-hire"
               },
               {
                 "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.classes_booking.label",
@@ -2367,7 +2264,7 @@ export const siteStructure = {
               },
               {
                 "label": "@@COPY:pages.contact.form.fields.subject.options.studio_hire.label",
-                "value": "studio-hire"
+                "value": "venue-hire"
               },
               {
                 "label": "@@COPY:pages.contact.form.fields.subject.options.events.label",

@@ -1,35 +1,18 @@
 import { siteSource } from "@/content/site.source";
+import { VenueSpacesSection } from "@/components/venue-hire/VenueSpacesSection";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
-export function StudioHireContent() {
-  const page = siteSource.pages.studioHire.overview;
+export function VenueHireContent() {
+  const page = siteSource.pages.venueHire.overview;
 
   return (
     <>
-      <section className="py-16 md:py-24">
-        <Container>
-          <h2 className="text-h2 text-charcoal">{page.spaces.title}</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {page.spaces.items.map((space) => (
-              <article
-                key={space.id}
-                className="rounded-sm border border-rose/25 bg-ivory p-8"
-              >
-                <h3 className="text-h3 text-charcoal">{space.title}</h3>
-                <p className="text-small mt-3 font-semibold text-rose">
-                  {space.size} · {space.floor}
-                </p>
-                <p className="text-small mt-2 text-charcoal/65">
-                  Ideal for: {space.idealFor}
-                </p>
-                <p className="text-body mt-4 text-charcoal/80">{space.body}</p>
-              </article>
-            ))}
-          </div>
-          <p className="text-body-lg mt-8 text-charcoal/80">{page.spaces.wholeVenue}</p>
-        </Container>
-      </section>
+      <VenueSpacesSection
+        title={page.spaces.title}
+        items={page.spaces.items}
+        wholeVenue={page.spaces.wholeVenue}
+      />
 
       <section className="bg-ivory py-16 md:py-24">
         <Container>
@@ -147,8 +130,9 @@ export function StudioHireContent() {
         <Container className="max-w-3xl text-center">
           <h2 className="text-h2 text-charcoal">{page.cta.title}</h2>
           <p className="text-body-lg mt-4 text-charcoal/80">{page.cta.body}</p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button {...page.cta.button} />
+            <Button {...page.cta.secondaryButton} />
           </div>
           {page.cta.secondary && (
             <p className="text-body mt-4 text-charcoal/65">{page.cta.secondary}</p>

@@ -153,6 +153,107 @@ body {
   animation: slide-in-right 0.25s ease-out forwards;
 }
 
+/* Timetable grid — equal row heights, content contained in cells */
+.timetable-grid tbody tr {
+  height: 1px;
+}
+
+.timetable-grid tbody td,
+.timetable-grid tbody th[scope="row"] {
+  height: 100%;
+  vertical-align: stretch;
+}
+
+/* Timetable class cells — distinct fills (brand + clear hue separation) */
+.timetable-cell {
+  color: var(--charcoal);
+  box-shadow: inset 4px 0 0 var(--tt-accent, var(--rose));
+}
+
+.timetable-cell.is-hovered {
+  filter: saturate(1.08);
+  box-shadow:
+    inset 4px 0 0 var(--tt-accent, var(--rose)),
+    inset 0 0 0 1px color-mix(in srgb, var(--charcoal) 12%, transparent);
+}
+
+.timetable-cell[data-style="contemporary"] {
+  --tt-accent: #b07068;
+  background: #e8d3d0;
+}
+.timetable-cell[data-style="contemporary"].is-hovered {
+  background: #cfa7a3;
+}
+
+.timetable-cell[data-style="chinese-dance"] {
+  --tt-accent: #c96a4a;
+  background: #f5d5c8;
+}
+.timetable-cell[data-style="chinese-dance"].is-hovered {
+  background: #e8a088;
+}
+
+.timetable-cell[data-style="tango"] {
+  --tt-accent: #9e5a54;
+  background: #e0b5af;
+}
+.timetable-cell[data-style="tango"].is-hovered {
+  background: #cfa7a3;
+}
+
+.timetable-cell[data-style="yoga"] {
+  --tt-accent: #5f7a58;
+  background: #d4e0cc;
+}
+.timetable-cell[data-style="yoga"].is-hovered {
+  background: #a8c49e;
+}
+
+.timetable-cell[data-style="tai-chi"] {
+  --tt-accent: #6a5a8a;
+  background: #d8cce8;
+}
+.timetable-cell[data-style="tai-chi"].is-hovered {
+  background: #b09fd0;
+}
+
+.timetable-cell[data-style="k-pop"] {
+  --tt-accent: #cfa7a3;
+  background: #5a1f2b;
+  color: var(--ivory);
+}
+.timetable-cell[data-style="k-pop"] .timetable-cell-meta {
+  color: color-mix(in srgb, var(--ivory) 88%, transparent);
+}
+.timetable-cell[data-style="k-pop"].is-hovered {
+  background: #3f1520;
+}
+
+.timetable-swatch[data-style="contemporary"] {
+  background: #e8d3d0;
+  box-shadow: inset 0 0 0 1px #b07068;
+}
+.timetable-swatch[data-style="chinese-dance"] {
+  background: #f5d5c8;
+  box-shadow: inset 0 0 0 1px #c96a4a;
+}
+.timetable-swatch[data-style="tango"] {
+  background: #e0b5af;
+  box-shadow: inset 0 0 0 1px #9e5a54;
+}
+.timetable-swatch[data-style="yoga"] {
+  background: #d4e0cc;
+  box-shadow: inset 0 0 0 1px #5f7a58;
+}
+.timetable-swatch[data-style="tai-chi"] {
+  background: #d8cce8;
+  box-shadow: inset 0 0 0 1px #6a5a8a;
+}
+.timetable-swatch[data-style="k-pop"] {
+  background: #5a1f2b;
+  box-shadow: inset 0 0 0 1px #cfa7a3;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

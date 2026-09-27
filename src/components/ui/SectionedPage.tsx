@@ -33,7 +33,7 @@ export function SectionedPage({
             )}
             <AutoPlayGallery
               images={gallery}
-              label={galleryLabel ?? "Studio gallery"}
+              label={galleryLabel ?? "Venue gallery"}
               className="mx-auto max-w-4xl shadow-md"
             />
           </Container>

@@ -24,7 +24,7 @@ export const siteSource = {
     siteName: "County Hall Dance & Performing Arts School",
     shortName: "CHD PAS",
     defaultDescription:
-      "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and studio hire.",
+      "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
   },
 
   global: {
@@ -72,10 +72,9 @@ export const siteSource = {
     navigation: {
       items: [
         {
-          label: "Studio Hire",
-          href: "/studio-hire",
+          label: "Venue Hire",
+          href: "/venue-hire",
           children: [
-            { label: "Our Space", href: "/studio-hire/our-space" },
             { label: "Space Booking", href: "/booking" },
           ] satisfies Link[],
         },
@@ -112,16 +111,6 @@ export const siteSource = {
           ] satisfies Link[],
         },
         {
-          label: "Shop",
-          href: "/shop",
-          children: [
-            { label: "Dancewear", href: "/shop" },
-            { label: "T-Shirts", href: "/shop" },
-            { label: "Accessories", href: "/shop" },
-            { label: "County Hall Merchandise", href: "/shop" },
-          ] satisfies Link[],
-        },
-        {
           label: "About Us",
           href: "/about",
           children: [
@@ -136,14 +125,6 @@ export const siteSource = {
         {
           label: "Events",
           href: "/events",
-          children: [
-            { label: "Milonga", href: "/events/milonga" },
-            { label: "Social Dance Nights", href: "/events/social-dance-nights" },
-            { label: "Workshops", href: "/events/workshops" },
-            { label: "Masterclasses", href: "/events/masterclasses" },
-            { label: "Performances", href: "/events/performances" },
-            { label: "Cross-Arts Events", href: "/events/cross-arts-events" },
-          ] satisfies Link[],
         },
       ] satisfies NavItem[],
       bookTrial: {
@@ -246,7 +227,7 @@ export const siteSource = {
           cta: { label: "View Events", href: "/events", variant: "primary" },
           image: {
             src: "/images/hero/slide-3.jpg",
-            alt: "Contemporary dancers in a bright studio with ballet barres",
+            alt: "Contemporary dancers in a bright venue with ballet barres",
           },
         },
         {
@@ -261,11 +242,11 @@ export const siteSource = {
           },
         },
         {
-          id: "hero-studio-hire",
-          headline: "Studio Hire",
+          id: "hero-venue-hire",
+          headline: "Venue Hire",
           blurb:
             "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
-          cta: { label: "Studio Hire", href: "/contact?subject=studio-hire", variant: "primary" },
+          cta: { label: "Venue Hire", href: "/venue-hire", variant: "primary" },
           image: {
             src: "/images/hero/slide-5.jpg",
             alt: "Outdoor community dance performance with audience on the South Bank",
@@ -279,7 +260,7 @@ export const siteSource = {
           cta: { label: "Membership", href: "/contact?subject=membership", variant: "primary" },
           image: {
             src: "/images/hero/slide-6.jpg",
-            alt: "Group dance class in a sunlit studio",
+            alt: "Group dance class in a sunlit venue",
           },
         },
       ] satisfies HeroSlide[],
@@ -295,9 +276,10 @@ export const siteSource = {
           description: "See the weekly timetable and reserve your place.",
         },
         {
-          label: "Hire the Studio",
-          href: "/studio-hire",
-          description: "Two flexible spaces at County Hall, from £200 per hour.",
+          label: "Book an Event",
+          href: "/events",
+          description:
+            "Workshops, masterclasses, social nights and performances — see what's on and book your place.",
         },
         {
           label: "Join Now",
@@ -324,7 +306,7 @@ export const siteSource = {
           title: "Contemporary Intensive with Maya Chen",
           date: "Saturday 18 October 2026",
           dateIso: "2026-10-18",
-          location: "Studio A",
+          location: "Venue A",
           image: {
             src: "/images/events/contemporary-intensive.svg",
             alt: "Contemporary dance intensive workshop",
@@ -342,7 +324,7 @@ export const siteSource = {
           title: "Junior Ballet Masterclass",
           date: "Sunday 26 October 2026",
           dateIso: "2026-10-26",
-          location: "Studio B",
+          location: "Venue B",
           image: {
             src: "/images/events/ballet-masterclass.svg",
             alt: "Junior ballet masterclass in progress",
@@ -454,18 +436,18 @@ export const siteSource = {
       cta: { label: "About the school", href: "/about", variant: "secondary" },
       image: {
         src: "/images/about/teaser.svg",
-        alt: "Students and teachers in the County Hall studio corridor",
+        alt: "Students and teachers in the County Hall venue corridor",
       },
     },
 
     privateEvents: {
       overline: "Celebrate with us",
       title: "Private events & parties",
-      body: "Host an unforgettable birthday, hen party, or team celebration in our beautiful studios. Choose a theme, bring your guests, and leave the choreography to us.",
+      body: "Host an unforgettable birthday, hen party, or team celebration in our beautiful venues. Choose a theme, bring your guests, and leave the choreography to us.",
       cta: { label: "Enquire", href: "/contact?subject=private-events", variant: "primary" },
       image: {
         src: "/images/private-events/promo.svg",
-        alt: "Private dance party celebration in studio",
+        alt: "Private dance party celebration in venue",
       },
     },
 
@@ -526,6 +508,15 @@ export const siteSource = {
           height: 1024,
         },
       } satisfies BookingEmbed,
+      grid: {
+        prevWeek: "Previous week",
+        thisWeek: "This week",
+        nextWeek: "Next week",
+        goToDate: "Go to date",
+        legend: "Class styles",
+        venueNote:
+          "The venue can be used privately when there are no classes. Reservations are possible.",
+      },
       newcomerNote:
         "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
       helpLinks: [
@@ -742,7 +733,7 @@ export const siteSource = {
           includes: [
             "Weekly 60-minute class",
             "Course handbook and practice notes",
-            "End-of-term studio sharing",
+            "End-of-term venue sharing",
           ],
           cta: { label: "Enrol via timetable", href: "/timetable", variant: "primary" },
         },
@@ -842,7 +833,7 @@ export const siteSource = {
           title: "Contemporary Intensive with Maya Chen",
           date: "Saturday 18 October 2026",
           dateIso: "2026-10-18",
-          location: "Studio A",
+          location: "Venue A",
           excerpt: "A full-day intensive exploring release technique and repertory with guest artist Maya Chen.",
           description: [
             "Join internationally recognised choreographer Maya Chen for a day of contemporary training at intermediate level and above.",
@@ -866,7 +857,7 @@ export const siteSource = {
           title: "Junior Ballet Masterclass",
           date: "Sunday 26 October 2026",
           dateIso: "2026-10-26",
-          location: "Studio B",
+          location: "Venue B",
           excerpt: "A special masterclass for junior ballet students aged 8–12.",
           description: [
             "Led by a guest RAD examiner, this masterclass refines alignment, épaulement, and petite allegro.",
@@ -940,7 +931,7 @@ export const siteSource = {
           hero: {
             overline: "Events",
             title: "Milonga",
-            subtitle: "Social tango evenings with live and recorded music in our South Bank studio.",
+            subtitle: "Social tango evenings with live and recorded music in our South Bank venue.",
           },
           intro:
             "Join us for regular milongas — welcoming social dance nights for tango dancers of every level.",
@@ -994,7 +985,7 @@ export const siteSource = {
           hero: {
             overline: "Events",
             title: "Masterclasses",
-            subtitle: "Learn from visiting artists and specialists in intimate studio settings.",
+            subtitle: "Learn from visiting artists and specialists in intimate venue settings.",
           },
           intro:
             "Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.",
@@ -1050,55 +1041,40 @@ export const siteSource = {
       },
     },
 
-    studioHire: {
+    venueHire: {
       overview: {
         meta: {
-          title: "Studio Hire",
+          title: "Venue Hire",
           description:
-            "Hire a 70 m² vinyl-floor studio or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available.",
+            "Hire a 70 m² vinyl-floor venue or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available.",
         },
         hero: {
-          overline: "South Bank studios",
-          title: "Studio Hire",
+          overline: "County Hall arts space",
+          title: "Venue Hire",
           subtitle:
             "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
           image: {
             src: "/images/hero/slide-5.jpg",
-            alt: "Studio space available for hire at County Hall",
+            alt: "Venue space available for hire at County Hall",
           },
         },
         intro:
-          "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor studio for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
-        galleryLabel: "Inside our South Bank studio",
-        gallery: [
-          {
-            src: "/images/hero/slide-5.jpg",
-            alt: "Main studio floor with natural light",
-          },
-          {
-            src: "/images/hero/slide-4.png",
-            alt: "Spacious dance studio at County Hall",
-          },
-          {
-            src: "/images/hero/slide-3.jpg",
-            alt: "Studio set up for classes and workshops",
-          },
-          {
-            src: "/images/hero/slide-1.jpg",
-            alt: "Professional dance space on the South Bank",
-          },
-        ],
+          "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
         spaces: {
           title: "Our spaces",
           items: [
             {
-              id: "vinyl-studio",
-              title: "Vinyl-Floor Studio",
+              id: "vinyl-venue",
+              title: "Vinyl-Floor Venue",
               size: "70 m²",
               floor: "Dance vinyl",
               idealFor:
                 "Classes, rehearsals, auditions, small workshops and one-to-one sessions",
-              body: "A focused, practical studio with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
+              body: "A focused, practical venue with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
+              image: {
+                src: "/images/hero/slide-3.jpg",
+                alt: "Venue set up for classes and workshops",
+              },
             },
             {
               id: "wooden-hall",
@@ -1108,6 +1084,10 @@ export const siteSource = {
               idealFor:
                 "Workshops, social dances, performances, parties, exhibitions and corporate events",
               body: "Our largest space, with a wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
+              image: {
+                src: "/images/hero/slide-4.png",
+                alt: "Spacious dance venue at County Hall",
+              },
             },
           ],
           wholeVenue:
@@ -1226,8 +1206,13 @@ export const siteSource = {
           body: "Tell us your preferred date, times, space and group size and we'll come back to you with availability.",
           button: {
             label: "Enquire about hire",
-            href: "/contact?subject=studio-hire",
+            href: "/contact?subject=venue-hire",
             variant: "primary",
+          },
+          secondaryButton: {
+            label: "Check availability",
+            href: "/timetable",
+            variant: "secondary",
           },
           secondary:
             "Or message us on WeChat: 18518614868 · Instagram: @countyhalldancecentre",
@@ -1235,37 +1220,18 @@ export const siteSource = {
       },
       subpages: [
         {
-          slug: "our-space",
-          meta: {
-            title: "Our Space",
-            description: "Studio space and facilities at County Hall Dance Centre.",
-          },
-          hero: {
-            overline: "Studio Hire",
-            title: "Our Space",
-            subtitle:
-              "Main dance and events space with wood floor, dance vinyl, mirrors, barres and flexible seating.",
-          },
-          intro:
-            "Main dance and events space — around 300 m² in total, planned to include approx. 200 m² of wood floor and approx. 60 m² of professional dance vinyl, a mirrored wall, dance barres, a sound system, event lighting, a reception/lounge area and flexible seating.",
-          sections: [
-            { id: "facilities", title: "Facilities" },
-            { id: "capacity", title: "Capacity" },
-          ],
-        },
-        {
           slug: "space-booking",
           meta: {
             title: "Space Booking",
-            description: "Enquire about studio hire at County Hall Dance Centre.",
+            description: "Enquire about venue hire at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Studio Hire",
+            overline: "Venue Hire",
             title: "Space Booking",
             subtitle: "Tell us your preferred date, activity and group size — we will respond with availability.",
           },
           intro:
-            "Enquire via our Studio Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details.",
+            "Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details.",
           sections: [
             { id: "how-to-book", title: "How to book" },
             { id: "enquiry-form", title: "Enquiry form" },
@@ -1284,10 +1250,10 @@ export const siteSource = {
         overline: "Tailored for you",
         title: "Private Lessons & Experiences",
         subtitle:
-          "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful studio at County Hall.",
+          "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful venue at County Hall.",
       },
       intro:
-        "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our studios on the South Bank.",
+        "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank.",
       sections: [
         {
           id: "one-to-one",
@@ -1325,7 +1291,7 @@ export const siteSource = {
             },
             {
               src: "/images/hero/slide-5.jpg",
-              alt: "Pair practising movement in the studio",
+              alt: "Pair practising movement in the venue",
             },
           ],
         },
@@ -1341,7 +1307,7 @@ export const siteSource = {
             },
             {
               src: "/images/events/winter-showcase.svg",
-              alt: "Performance lighting in the studio",
+              alt: "Performance lighting in the venue",
             },
             {
               src: "/images/hero/slide-4.png",
@@ -1365,7 +1331,7 @@ export const siteSource = {
             },
             {
               src: "/images/hero/slide-3.jpg",
-              alt: "Group class in the studio",
+              alt: "Group class in the venue",
             },
           ],
         },
@@ -1381,11 +1347,11 @@ export const siteSource = {
             },
             {
               src: "/images/hero/slide-1.jpg",
-              alt: "Team workshop in the dance studio",
+              alt: "Team workshop in the dance venue",
             },
             {
               src: "/images/events/contemporary-intensive.svg",
-              alt: "Professional studio environment",
+              alt: "Professional venue environment",
             },
           ],
         },
@@ -1487,7 +1453,7 @@ export const siteSource = {
         subtitle: "New to the Centre? Start with a taster and find the class that suits you.",
       },
       intro:
-        "Taster classes are a low-commitment way to experience our teaching, studio and community before enrolling.",
+        "Taster classes are a low-commitment way to experience our teaching, venue and community before enrolling.",
       sections: [
         { id: "available-tasters", title: "Available taster classes" },
         { id: "what-to-bring", title: "What to bring" },
@@ -1499,7 +1465,7 @@ export const siteSource = {
         meta: {
           title: "Membership",
           description:
-            "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced studio hire rates.",
+            "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates.",
         },
         hero: {
           overline: "Dance more, belong more",
@@ -1569,8 +1535,8 @@ export const siteSource = {
               body: "Savings on County Hall merchandise, dancewear and dance shoes.",
             },
             {
-              title: "Reduced studio hire",
-              body: "Member rates on studio and practice-space hire (from £100 per hour on weekdays).",
+              title: "Reduced venue hire",
+              body: "Member rates on venue and practice-space hire (from £100 per hour on weekdays).",
             },
             {
               title: "Partner offers",
@@ -1620,7 +1586,7 @@ export const siteSource = {
             },
             {
               id: "membership-faq-hire",
-              question: "How do I get member rates for studio hire?",
+              question: "How do I get member rates for venue hire?",
               answer: "Simply mention your membership when you enquire.",
             },
           ],
@@ -1695,26 +1661,6 @@ export const siteSource = {
       ] satisfies (SectionedPageContent & { slug: string })[],
     },
 
-    shop: {
-      meta: {
-        title: "Shop",
-        description: "Dancewear, merchandise and accessories at County Hall Dance Centre.",
-      },
-      hero: {
-        overline: "Merchandise",
-        title: "Shop",
-        subtitle: "Dancewear, T-shirts, accessories and County Hall merchandise.",
-      },
-      intro:
-        "A Merchandise / Coming Soon page online, with sales also available at the front desk. Categories include dancewear, T-shirts, dance socks, tote and dance bags, water bottles, accessories and gift cards.",
-      sections: [
-        { id: "dancewear", title: "Dancewear" },
-        { id: "t-shirts", title: "T-Shirts" },
-        { id: "accessories", title: "Accessories" },
-        { id: "merchandise", title: "County Hall Merchandise" },
-      ],
-    } satisfies SectionedPageContent,
-
     joinUs: {
       meta: {
         title: "Join Us",
@@ -1762,12 +1708,12 @@ export const siteSource = {
         title: "About County Hall Dance & Performing Arts School",
         subtitle:
           "Discover dance, movement and creative experiences at London's iconic County Hall",
-        image: { src: "/images/about/teaser.svg", alt: "County Hall Dance studio" },
+        image: { src: "/images/about/teaser.svg", alt: "County Hall Dance venue" },
       } satisfies PageHeroContent,
       story: {
         title: "Our story",
         paragraphs: [
-          "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance studio, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
+          "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
         ],
       },
       values: {
@@ -1804,7 +1750,7 @@ export const siteSource = {
       },
       cta: {
         title: "Visit us",
-        body: "We would love to welcome you for a trial class or a tour of the studios.",
+        body: "We would love to welcome you for a trial class or a tour of the venues.",
         button: { label: "Get in touch", href: "/contact", variant: "primary" },
       },
     },
@@ -1813,7 +1759,7 @@ export const siteSource = {
       meta: {
         title: "Booking & Enquiries",
         description:
-          "Send a booking or general enquiry to County Hall Dance Centre — studio hire, classes, membership and more.",
+          "Send a booking or general enquiry to County Hall Dance Centre — venue hire, classes, membership and more.",
       },
       hero: {
         overline: "We'd love to hear from you",
@@ -1824,7 +1770,7 @@ export const siteSource = {
       form: {
         title: "Send an enquiry",
         description:
-          "Tell us what you are looking for — studio hire, class booking, membership or a general question.",
+          "Tell us what you are looking for — venue hire, class booking, membership or a general question.",
         submitLabel: "Send message",
         successMessage:
           "Thank you — your enquiry has been received. We will be in touch shortly.",
@@ -1857,7 +1803,7 @@ export const siteSource = {
             type: "select",
             required: true,
             options: [
-              { label: "Studio Hire", value: "studio-hire" },
+              { label: "Venue Hire", value: "venue-hire" },
               { label: "Classes Booking", value: "classes-booking" },
               { label: "Membership Booking", value: "membership-booking" },
               { label: "General Enquire", value: "general-enquire" },
@@ -1885,7 +1831,7 @@ export const siteSource = {
         subtitle: "Questions about classes, courses, private events, or anything else — send us a message.",
       } satisfies PageHeroContent,
       details: {
-        title: "Studio details",
+        title: "Venue details",
         address: [
           "2nd Floor, County Hall Main Entrance",
           "Belvedere Road",
@@ -1929,7 +1875,7 @@ export const siteSource = {
               { label: "Classes & timetable", value: "classes" },
               { label: "Membership", value: "membership" },
               { label: "Private lessons & experiences", value: "private-lessons" },
-              { label: "Studio hire", value: "studio-hire" },
+              { label: "Venue hire", value: "venue-hire" },
               { label: "Events", value: "events" },
               { label: "Gift cards", value: "gift-cards" },
             ],
@@ -1976,9 +1922,9 @@ export const siteSource = {
         },
         {
           id: "faq-hire",
-          question: "Can I hire the studio?",
+          question: "Can I hire the venue?",
           answer:
-            "Yes — our 70 m² vinyl-floor studio and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Studio Hire for details.",
+            "Yes — our 70 m² vinyl-floor venue and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Venue Hire for details.",
         },
         {
           id: "faq-7",

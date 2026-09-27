@@ -51,7 +51,7 @@ function sectionTitleForId(id: string): string {
   if (id.startsWith("home.privateevents.")) return "HOMEPAGE — PRIVATE EVENTS";
   if (id.startsWith("home.newsletter.")) return "HOMEPAGE — NEWSLETTER";
   if (id.startsWith("pages.common.")) return "SHARED PAGE LABELS";
-  if (id.startsWith("pages.studiohire.")) return "STUDIO HIRE";
+  if (id.startsWith("pages.studiohire.")) return "VENUE HIRE";
   if (id.startsWith("pages.classesinfo.")) return "CLASS DESCRIPTIONS & INSTRUCTORS";
   if (id.startsWith("pages.classbooking.")) return "CLASS BOOKING";
   if (id.startsWith("pages.classes.")) return "CLASSES";

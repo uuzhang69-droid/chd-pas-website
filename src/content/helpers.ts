@@ -43,12 +43,12 @@ export function getAllEventRouteSlugs(): string[] {
   return [...getAllEventSlugs(), ...getAllEventCategorySlugs()];
 }
 
-export function getStudioHireSubpageBySlug(slug: string): SluggedSectionedPage | undefined {
-  return findBySlug(siteContent.pages.studioHire.subpages, slug);
+export function getVenueHireSubpageBySlug(slug: string): SluggedSectionedPage | undefined {
+  return findBySlug(siteContent.pages.venueHire.subpages, slug);
 }
 
-export function getAllStudioHireSubpageSlugs(): string[] {
-  return siteContent.pages.studioHire.subpages.map((page) => page.slug);
+export function getAllVenueHireSubpageSlugs(): string[] {
+  return siteContent.pages.venueHire.subpages.map((page) => page.slug);
 }
 
 export function getMembershipSubpageBySlug(slug: string): SluggedSectionedPage | undefined {

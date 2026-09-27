@@ -18,14 +18,14 @@ Rules:
 - Phone: +44 7728 617531
 - Email: info@countyhalldancecentre.com
 - Address: 2nd Floor, County Hall Main Entrance, Belvedere Road, London SE1 7PB
-- Opening hours: Class and event times follow our online timetable. Studio hire and private lessons are available by advance booking. General opening hours to be confirmed.
+- Opening hours: Class and event times follow our online timetable. Venue hire and private lessons are available by advance booking. General opening hours to be confirmed.
 - Instagram: instagram.com/countyhalldancecentre
 - Facebook: facebook.com/countyhalldancecentre
 - RED (Xiaohongshu): https://xhslink.cn/o/7kN8ZaCuyxH
 - Map: https://share.google/7weL1s5w3ItPjJyAZ
 
 ## Navigation
-- Studio Hire — Our space & availability booking
+- Venue Hire — Our space & availability booking
 - Classes — Timetable, class descriptions, instructors, booking, taster classes and class packages
 - Membership — Member benefits, class cards, monthly passes and booking access
 - Private Lessons & Experiences — One-to-one lessons, couples' dance, first wedding dance, group experiences, corporate events and school/organisation workshops
@@ -34,7 +34,7 @@ Rules:
 - Events — Milonga, social dance nights, workshops, masterclasses, performances and cross-arts events
 
 About Us (short intro for nav/footer):
-County Hall Dance Centre is a vibrant new home for dance, movement and creativity in the heart of London. Set within the iconic County Hall on the South Bank, we offer adult dance and movement classes, workshops, social dances, private experiences and special events. Our programme brings together different dance styles, cultures and creative disciplines. More than a dance studio, we are building a welcoming community where people can move, learn, create, connect and belong.
+County Hall Dance Centre is a vibrant new home for dance, movement and creativity in the heart of London. Set within the iconic County Hall on the South Bank, we offer adult dance and movement classes, workshops, social dances, private experiences and special events. Our programme brings together different dance styles, cultures and creative disciplines. More than a dance venue, we are building a welcoming community where people can move, learn, create, connect and belong.
 
 ## Home
 - Hero headline: Discover dance, movement and creative experiences at London's iconic County Hall.
@@ -43,14 +43,14 @@ County Hall Dance Centre is a vibrant new home for dance, movement and creativit
   1. Classes — Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. → /classes
   2. Events — Milongas, themed social nights, masterclasses and cross-arts events. → /events
   3. Private Lessons & Experiences — Tailored sessions for individuals, couples, wedding first dances and small groups. → /private-lessons
-  4. Studio Hire — A South Bank space for dance, theatre and film rehearsals, castings, workshops and events. → /studio-hire
+  4. Venue Hire — A South Bank space for dance, theatre and film rehearsals, castings, workshops and events. → /venue-hire
   5. Membership — A more flexible way to keep dancing, join events and belong to the community. → /membership
 - Upcoming events preview: Milongas, dance taster classes, guest-instructor workshops and our Dance Meets Arts cross-arts events.
 - Testimonials: [TBC — add after opening, with authorised reviews.]
 
 ## About Us
 Intro:
-County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Set within the iconic County Hall on the South Bank, the Centre brings together dance classes, workshops, social dances, private experiences and special events. More than a dance studio, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.
+County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Set within the iconic County Hall on the South Bank, the Centre brings together dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.
 
 Founders & core team:
 - Kiki — Company Director & Artistic Director. A highly experienced choreographer and large-scale performance director, Kiki shapes the Centre's artistic programme and its connections between dance, music, visual art and culture.
@@ -82,7 +82,7 @@ Fees & packages: [TBC — taster, drop-in, 6-class pass, 10-class pass, monthly 
 
 Levels & children: Beginners welcome — no dance experience needed. Every class is clearly labelled Beginner, Open Level or Intermediate. Children's classes are not offered in our first phase; no under-16 entry on the site.
 
-## Studio Hire
+## Venue Hire
 Overview: A flexible, multi-purpose dance and performing-arts space of around 300 m² (first phase), suitable for regular classes, rehearsals, workshops, social dances, cultural events and private hire.
 
 Space & facilities: Main dance and events space — around 300 m² in total, planned to include approx. 200 m² of wood floor and approx. 60 m² of professional dance vinyl, a mirrored wall, dance barres, a sound system, event lighting, a reception/lounge area and flexible seating.
@@ -90,7 +90,7 @@ Space & facilities: Main dance and events space — around 300 m² in total, pla
 
 Pricing: [TBC — hourly, half-day, evening and full-event rates; custom quotes by time, group size, purpose, equipment, cleaning and security.]
 
-Booking & enquiries: Enquire via our Studio Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details. (Online booking and a companion app to follow via our app partner.)
+Booking & enquiries: Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details. (Online booking and a companion app to follow via our app partner.)
 
 ## Private Lessons & Experiences
 Services: Private dance lessons; dance experiences for individuals, couples and groups; wedding first dances; corporate team experiences; school and organisation workshops; rehearsals, auditions, filming and private events; and Milonga and social dance events.
@@ -107,13 +107,13 @@ First products: KIKI-series dance socks and T-shirts; County Hall Dance Centre T
 ## Contact
 Address, phone, email, hours: as in Basic info.
 
-Contact form fields: Name; Email; Phone (optional); Enquiry type; Class or activity of interest; Preferred date and time; Number of people; Experience level; Message; Agreement to the privacy policy. (Studio hire enquiries also collect activity type, expected numbers and equipment needs.)
+Contact form fields: Name; Email; Phone (optional); Enquiry type; Class or activity of interest; Preferred date and time; Number of people; Experience level; Message; Agreement to the privacy policy. (Venue hire enquiries also collect activity type, expected numbers and equipment needs.)
 
 FAQs:
 - Q: Do I need dance experience? A: No. We offer beginner and mixed-level adult classes — just check the level shown on each class page.
 - Q: How do I book a class? A: Choose a class from the timetable and follow the booking link, or reach us by WhatsApp or email. Advance booking is recommended.
 - Q: Where are you located? A: On the second floor of County Hall, entering via the County Hall Main Entrance (opposite Starbucks) on Belvedere Road, London SE1 7PB.
 - Q: What should I wear? A: Comfortable clothing you can move in. Footwear requirements vary by class and are shown in the class information.
-- Q: Can I hire the studio? A: Yes. Use the Studio Hire enquiry form and tell us your preferred date, time, activity, group size and equipment needs.
+- Q: Can I hire the venue? A: Yes. Use the Venue Hire enquiry form and tell us your preferred date, time, activity, group size and equipment needs.
 - Q: Do you offer children's classes? A: Not during our first phase — our current programme is designed for adults.
 - Q: What is the cancellation policy? A: The final booking and cancellation policy will be published before online booking opens.

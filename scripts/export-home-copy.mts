@@ -94,19 +94,19 @@ const HOME_ROWS: Array<{ section: string; rows: RowDef[] }> = [
       },
       {
         id: "home.hero.slides.hero_studio_hire.headline",
-        location: "Slide 5 (Studio Hire) — big title",
+        location: "Slide 5 (Venue Hire) — big title",
       },
       {
         id: "home.hero.slides.hero_studio_hire.blurb",
-        location: "Slide 5 (Studio Hire) — description under the title",
+        location: "Slide 5 (Venue Hire) — description under the title",
       },
       {
         id: "home.hero.slides.hero_studio_hire.cta.label",
-        location: "Slide 5 (Studio Hire) — button label",
+        location: "Slide 5 (Venue Hire) — button label",
       },
       {
         id: "home.hero.slides.hero_studio_hire.image.alt",
-        location: "Slide 5 (Studio Hire) — image description (accessibility)",
+        location: "Slide 5 (Venue Hire) — image description (accessibility)",
       },
       {
         id: "home.hero.slides.hero_membership.headline",

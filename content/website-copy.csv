@@ -67,9 +67,9 @@ global.navigation.items.shop.children.county_hall_merchandise.label,Global — n
 global.navigation.items.shop.children.dancewear.label,Global — navigation › items › shop › children › dancewear › label,Dancewear
 global.navigation.items.shop.children.t_shirts.label,Global — navigation › items › shop › children › t shirts › label,T-Shirts
 global.navigation.items.shop.label,Global — navigation › items › shop › label,Shop
-global.navigation.items.studio_hire.children.our_space.label,Global — navigation › items › studio hire › children › our space › label,Our Space
-global.navigation.items.studio_hire.children.space_booking.label,Global — navigation › items › studio hire › children › space booking › label,Space Booking
-global.navigation.items.studio_hire.label,Global — navigation › items › studio hire › label,Studio Hire
+global.navigation.items.studio_hire.children.our_space.label,Global — navigation › items › venue hire › children › our space › label,Our Space
+global.navigation.items.studio_hire.children.space_booking.label,Global — navigation › items › venue hire › children › space booking › label,Space Booking
+global.navigation.items.studio_hire.label,Global — navigation › items › venue hire › label,Venue Hire
 global.navigation.search.label,Global — navigation › search › label,Search
 global.navigation.search.placeholder,Global — navigation › search › placeholder,"Search classes, courses, events…"
 global.utilitybar.email.label,Global — utilitybar › email › label,info@countyhalldancecentre.com
@@ -81,7 +81,7 @@ global.utilitybar.social.youtube.label,Global — utilitybar › social › yout
 home.aboutteaser.body.0,Homepage — aboutteaser › body › 0,"Founded at the historic County Hall, our school brings together rigorous technical training and a deeply supportive community."
 home.aboutteaser.body.1,Homepage — aboutteaser › body › 1,"Whether you are taking your first plié or preparing for vocational study, our faculty guides every student with patience and precision."
 home.aboutteaser.cta.label,Homepage — aboutteaser › cta › label,About the school
-home.aboutteaser.image.alt,Homepage — aboutteaser › image › alt,Students and teachers in the County Hall studio corridor
+home.aboutteaser.image.alt,Homepage — aboutteaser › image › alt,Students and teachers in the County Hall venue corridor
 home.aboutteaser.overline,Homepage — aboutteaser › overline,Our story
 home.aboutteaser.title,Homepage — aboutteaser › title,"Rooted in London, reaching for excellence"
 home.classstyles.items.chinese_dance.image.alt,Homepage — classstyles › items › chinese dance › image › alt,Chinese dance class
@@ -102,12 +102,12 @@ home.classstyles.title,Homepage — classstyles › title,Class styles
 home.events.items.contemporary_intensive_maya_chen.booknow.label,Homepage — events › items › contemporary intensive maya chen › booknow › label,Book Now
 home.events.items.contemporary_intensive_maya_chen.date,Homepage — events › items › contemporary intensive maya chen › date,Saturday 18 October 2026
 home.events.items.contemporary_intensive_maya_chen.image.alt,Homepage — events › items › contemporary intensive maya chen › image › alt,Contemporary dance intensive workshop
-home.events.items.contemporary_intensive_maya_chen.location,Homepage — events › items › contemporary intensive maya chen › location,Studio A
+home.events.items.contemporary_intensive_maya_chen.location,Homepage — events › items › contemporary intensive maya chen › location,Venue A
 home.events.items.contemporary_intensive_maya_chen.title,Homepage — events › items › contemporary intensive maya chen › title,Contemporary Intensive with Maya Chen
 home.events.items.junior_ballet_masterclass.booknow.label,Homepage — events › items › junior ballet masterclass › booknow › label,Book Now
 home.events.items.junior_ballet_masterclass.date,Homepage — events › items › junior ballet masterclass › date,Sunday 26 October 2026
 home.events.items.junior_ballet_masterclass.image.alt,Homepage — events › items › junior ballet masterclass › image › alt,Junior ballet masterclass in progress
-home.events.items.junior_ballet_masterclass.location,Homepage — events › items › junior ballet masterclass › location,Studio B
+home.events.items.junior_ballet_masterclass.location,Homepage — events › items › junior ballet masterclass › location,Venue B
 home.events.items.junior_ballet_masterclass.title,Homepage — events › items › junior ballet masterclass › title,Junior Ballet Masterclass
 home.events.items.musical_theatre_workshop_day.booknow.label,Homepage — events › items › musical theatre workshop day › booknow › label,Book Now
 home.events.items.musical_theatre_workshop_day.date,Homepage — events › items › musical theatre workshop day › date,Saturday 8 November 2026
@@ -131,7 +131,7 @@ home.hero.slides.hero_classes.image.alt,Homepage — hero › slides › hero cl
 home.hero.slides.hero_events.blurb,Homepage — hero › slides › hero events › blurb,"Milongas, themed social nights, masterclasses and cross-arts events."
 home.hero.slides.hero_events.cta.label,Homepage — hero › slides › hero events › cta › label,View Events
 home.hero.slides.hero_events.headline,Homepage — hero › slides › hero events › headline,Events
-home.hero.slides.hero_events.image.alt,Homepage — hero › slides › hero events › image › alt,Contemporary dancers in a bright studio with ballet barres
+home.hero.slides.hero_events.image.alt,Homepage — hero › slides › hero events › image › alt,Contemporary dancers in a bright venue with ballet barres
 home.hero.slides.hero_intro.blurb,Homepage — hero › slides › hero intro › blurb,"Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience."
 home.hero.slides.hero_intro.cta.label,Homepage — hero › slides › hero intro › cta › label,Explore Classes
 home.hero.slides.hero_intro.headline,Homepage — hero › slides › hero intro › headline,"Discover dance, movement and creative experiences at London's iconic County Hall."
@@ -139,38 +139,38 @@ home.hero.slides.hero_intro.image.alt,Homepage — hero › slides › hero intr
 home.hero.slides.hero_membership.blurb,Homepage — hero › slides › hero membership › blurb,"A more flexible way to keep dancing, join events and belong to the community."
 home.hero.slides.hero_membership.cta.label,Homepage — hero › slides › hero membership › cta › label,Membership
 home.hero.slides.hero_membership.headline,Homepage — hero › slides › hero membership › headline,Membership
-home.hero.slides.hero_membership.image.alt,Homepage — hero › slides › hero membership › image › alt,Group dance class in a sunlit studio
+home.hero.slides.hero_membership.image.alt,Homepage — hero › slides › hero membership › image › alt,Group dance class in a sunlit venue
 home.hero.slides.hero_private_lessons.blurb,Homepage — hero › slides › hero private lessons › blurb,"Tailored sessions for individuals, couples, wedding first dances and small groups."
 home.hero.slides.hero_private_lessons.cta.label,Homepage — hero › slides › hero private lessons › cta › label,Enquire
 home.hero.slides.hero_private_lessons.headline,Homepage — hero › slides › hero private lessons › headline,Private Lessons & Experiences
 home.hero.slides.hero_private_lessons.image.alt,Homepage — hero › slides › hero private lessons › image › alt,Instructor guiding a student in a one-to-one dance session
-home.hero.slides.hero_studio_hire.blurb,Homepage — hero › slides › hero studio hire › blurb,"A South Bank space for dance, theatre and film rehearsals, castings, workshops and events."
-home.hero.slides.hero_studio_hire.cta.label,Homepage — hero › slides › hero studio hire › cta › label,Studio Hire
-home.hero.slides.hero_studio_hire.headline,Homepage — hero › slides › hero studio hire › headline,Studio Hire
-home.hero.slides.hero_studio_hire.image.alt,Homepage — hero › slides › hero studio hire › image › alt,Outdoor community dance performance with audience on the South Bank
+home.hero.slides.hero_studio_hire.blurb,Homepage — hero › slides › hero venue hire › blurb,"A South Bank space for dance, theatre and film rehearsals, castings, workshops and events."
+home.hero.slides.hero_studio_hire.cta.label,Homepage — hero › slides › hero venue hire › cta › label,Venue Hire
+home.hero.slides.hero_studio_hire.headline,Homepage — hero › slides › hero venue hire › headline,Venue Hire
+home.hero.slides.hero_studio_hire.image.alt,Homepage — hero › slides › hero venue hire › image › alt,Outdoor community dance performance with audience on the South Bank
 home.newsletter.description,Homepage — newsletter › description,"Follow our journey and receive curated updates on classes, performances, and exclusive offers."
 home.newsletter.overline,Homepage — newsletter › overline,Join our circle
 home.newsletter.placeholder,Homepage — newsletter › placeholder,Email address
 home.newsletter.socialheading,Homepage — newsletter › socialheading,Connect with us
 home.newsletter.submitlabel,Homepage — newsletter › submitlabel,Sign up
 home.newsletter.title,Homepage — newsletter › title,Newsletter & social
-home.privateevents.body,Homepage — privateevents › body,"Host an unforgettable birthday, hen party, or team celebration in our beautiful studios. Choose a theme, bring your guests, and leave the choreography to us."
+home.privateevents.body,Homepage — privateevents › body,"Host an unforgettable birthday, hen party, or team celebration in our beautiful venues. Choose a theme, bring your guests, and leave the choreography to us."
 home.privateevents.cta.label,Homepage — privateevents › cta › label,Enquire
-home.privateevents.image.alt,Homepage — privateevents › image › alt,Private dance party celebration in studio
+home.privateevents.image.alt,Homepage — privateevents › image › alt,Private dance party celebration in venue
 home.privateevents.overline,Homepage — privateevents › overline,Celebrate with us
 home.privateevents.title,Homepage — privateevents › title,Private events & parties
 home.quickactions.items.book_a_class.description,Homepage — quickactions › items › book a class › description,See the weekly timetable and reserve your place.
 home.quickactions.items.book_a_class.label,Homepage — quickactions › items › book a class › label,Book a Class
-home.quickactions.items.hire_the_studio.description,Homepage — quickactions › items › hire the studio › description,"Two flexible spaces at County Hall, from £200 per hour."
-home.quickactions.items.hire_the_studio.label,Homepage — quickactions › items › hire the studio › label,Hire the Studio
+home.quickactions.items.book_an_event.description,Homepage — quickactions › items › book an event › description,"Workshops, masterclasses, social nights and performances — see what's on and book your place."
+home.quickactions.items.book_an_event.label,Homepage — quickactions › items › book an event › label,Book an Event
 home.quickactions.items.join_now.description,Homepage — quickactions › items › join now › description,"Become a member and enjoy monthly, quarterly or annual plans with exclusive benefits."
 home.quickactions.items.join_now.label,Homepage — quickactions › items › join now › label,Join Now
 home.quickactions.linksuffix,Homepage — quickactions › linksuffix,Learn more →
 home.quickactions.overline,Homepage — quickactions › overline,Get started
-meta.defaultdescription,Site metadata — defaultdescription,"Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and studio hire."
+meta.defaultdescription,Site metadata — defaultdescription,"Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire."
 meta.shortname,Site metadata — shortname,CHD PAS
 meta.sitename,Site metadata — sitename,County Hall Dance & Performing Arts School
-pages.about.cta.body,About page › cta › body,We would love to welcome you for a trial class or a tour of the studios.
+pages.about.cta.body,About page › cta › body,We would love to welcome you for a trial class or a tour of the venues.
 pages.about.cta.button.label,About page › cta › button › label,Get in touch
 pages.about.cta.title,About page › cta › title,Visit us
 pages.about.faculty.intro,About page › faculty › intro,"Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care."
@@ -184,13 +184,13 @@ pages.about.faculty.members.faculty_michael.name,About page › faculty › memb
 pages.about.faculty.members.faculty_michael.role,About page › faculty › members › faculty michael › role,Company Director and Management and Marketing Lead
 pages.about.faculty.overline,About page › faculty › overline,Meet the team
 pages.about.faculty.title,About page › faculty › title,Our faculty
-pages.about.hero.image.alt,About page › hero › image › alt,County Hall Dance studio
+pages.about.hero.image.alt,About page › hero › image › alt,County Hall Dance venue
 pages.about.hero.overline,About page › hero › overline,Our school
 pages.about.hero.subtitle,About page › hero › subtitle,"Discover dance, movement and creative experiences at London's iconic County Hall"
 pages.about.hero.title,About page › hero › title,About County Hall Dance & Performing Arts School
 pages.about.meta.description,About page › meta › description,"Learn about County Hall Dance & Performing Arts School — our history, values, and faculty."
 pages.about.meta.title,About page › meta › title,About Us
-pages.about.story.paragraphs.0,About page › story › paragraphs › 0,"County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance studio, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together."
+pages.about.story.paragraphs.0,About page › story › paragraphs › 0,"County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together."
 pages.about.story.title,About page › story › title,Our story
 pages.about.values.items.0.description,About page › values › items › 0 › description,"To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London."
 pages.about.values.items.0.title,About page › values › items › 0 › title,Mission
@@ -202,14 +202,14 @@ pages.about.values.items.3.description,About page › values › items › 3 ›
 pages.about.values.items.3.title,About page › values › items › 3 › title,Safeguarding
 pages.about.values.overline,About page › values › overline,What guides us
 pages.about.values.title,About page › values › title,Our values
-pages.booking.form.description,Booking page › form › description,"Tell us what you are looking for — studio hire, class booking, membership or a general question."
+pages.booking.form.description,Booking page › form › description,"Tell us what you are looking for — venue hire, class booking, membership or a general question."
 pages.booking.form.fields.email_address.label,Booking page › form › fields › email address › label,Email address
 pages.booking.form.fields.email_address.placeholder,Booking page › form › fields › email address › placeholder,you@example.com
 pages.booking.form.fields.enquiry_about.label,Booking page › form › fields › enquiry about › label,Enquiry about
 pages.booking.form.fields.enquiry_about.options.classes_booking.label,Booking page › form › fields › enquiry about › options › classes booking › label,Classes Booking
 pages.booking.form.fields.enquiry_about.options.general_enquire.label,Booking page › form › fields › enquiry about › options › general enquire › label,General Enquire
 pages.booking.form.fields.enquiry_about.options.membership_booking.label,Booking page › form › fields › enquiry about › options › membership booking › label,Membership Booking
-pages.booking.form.fields.enquiry_about.options.studio_hire.label,Booking page › form › fields › enquiry about › options › studio hire › label,Studio Hire
+pages.booking.form.fields.enquiry_about.options.studio_hire.label,Booking page › form › fields › enquiry about › options › venue hire › label,Venue Hire
 pages.booking.form.fields.full_name.label,Booking page › form › fields › full name › label,Full name
 pages.booking.form.fields.full_name.placeholder,Booking page › form › fields › full name › placeholder,Your name
 pages.booking.form.fields.message.label,Booking page › form › fields › message › label,Message
@@ -223,7 +223,7 @@ pages.booking.form.title,Booking page › form › title,Send an enquiry
 pages.booking.hero.overline,Booking page › hero › overline,We'd love to hear from you
 pages.booking.hero.subtitle,Booking page › hero › subtitle,Complete the form below and our team will respond by email within two working days.
 pages.booking.hero.title,Booking page › hero › title,Booking & Enquiries
-pages.booking.meta.description,Booking page › meta › description,"Send a booking or general enquiry to County Hall Dance Centre — studio hire, classes, membership and more."
+pages.booking.meta.description,Booking page › meta › description,"Send a booking or general enquiry to County Hall Dance Centre — venue hire, classes, membership and more."
 pages.booking.meta.title,Booking page › meta › title,Booking & Enquiries
 pages.classbooking.hero.overline,Classbooking page › hero › overline,Classes
 pages.classbooking.hero.subtitle,Classbooking page › hero › subtitle,View live availability and reserve your place through our booking partner.
@@ -357,7 +357,7 @@ pages.contact.details.hours,Contact page › details › hours,"Office hours: Mo
 pages.contact.details.instagramlabel,Contact page › details › instagramlabel,Instagram: @countyhalldancecentre
 pages.contact.details.membershiplabel,Contact page › details › membershiplabel,Membership enquiries: membership@countyhalldancecentre.com
 pages.contact.details.phone,Contact page › details › phone,+44 7728 617531
-pages.contact.details.title,Contact page › details › title,Studio details
+pages.contact.details.title,Contact page › details › title,Venue details
 pages.contact.details.wechat,Contact page › details › wechat,WeChat: 18518614868
 pages.contact.form.description,Contact page › form › description,Complete the form below and we will respond within two working days.
 pages.contact.form.fields.email_address.label,Contact page › form › fields › email address › label,Email address
@@ -375,7 +375,7 @@ pages.contact.form.fields.subject.options.general_enquiry.label,Contact page ›
 pages.contact.form.fields.subject.options.gift_cards.label,Contact page › form › fields › subject › options › gift cards › label,Gift cards
 pages.contact.form.fields.subject.options.membership.label,Contact page › form › fields › subject › options › membership › label,Membership
 pages.contact.form.fields.subject.options.private_lessons_experiences.label,Contact page › form › fields › subject › options › private lessons experiences › label,Private lessons & experiences
-pages.contact.form.fields.subject.options.studio_hire.label,Contact page › form › fields › subject › options › studio hire › label,Studio hire
+pages.contact.form.fields.subject.options.studio_hire.label,Contact page › form › fields › subject › options › venue hire › label,Venue hire
 pages.contact.form.selectplaceholder,Contact page › form › selectplaceholder,Select an option
 pages.contact.form.submitlabel,Contact page › form › submitlabel,Send message
 pages.contact.form.successmessage,Contact page › form › successmessage,Thank you — your message has been received. We will be in touch shortly.
@@ -418,7 +418,7 @@ pages.courses.items.junior_ballet_foundation.excerpt,Courses page › items › 
 pages.courses.items.junior_ballet_foundation.image.alt,Courses page › items › junior ballet foundation › image › alt,Junior ballet foundation course
 pages.courses.items.junior_ballet_foundation.includes.0,Courses page › items › junior ballet foundation › includes › 0,Weekly 60-minute class
 pages.courses.items.junior_ballet_foundation.includes.1,Courses page › items › junior ballet foundation › includes › 1,Course handbook and practice notes
-pages.courses.items.junior_ballet_foundation.includes.2,Courses page › items › junior ballet foundation › includes › 2,End-of-term studio sharing
+pages.courses.items.junior_ballet_foundation.includes.2,Courses page › items › junior ballet foundation › includes › 2,End-of-term venue sharing
 pages.courses.items.junior_ballet_foundation.level,Courses page › items › junior ballet foundation › level,Beginner – Elementary
 pages.courses.items.junior_ballet_foundation.metadescription,Courses page › items › junior ballet foundation › metadescription,Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.
 pages.courses.items.junior_ballet_foundation.price,Courses page › items › junior ballet foundation › price,£168 per term
@@ -466,7 +466,7 @@ pages.events.categories.cross_arts_events.meta.title,Events page › categories 
 pages.events.categories.cross_arts_events.sections.programme.title,Events page › categories › cross arts events › sections › programme › title,Programme
 pages.events.categories.cross_arts_events.sections.upcoming.title,Events page › categories › cross arts events › sections › upcoming › title,Upcoming events
 pages.events.categories.masterclasses.hero.overline,Events page › categories › masterclasses › hero › overline,Events
-pages.events.categories.masterclasses.hero.subtitle,Events page › categories › masterclasses › hero › subtitle,Learn from visiting artists and specialists in intimate studio settings.
+pages.events.categories.masterclasses.hero.subtitle,Events page › categories › masterclasses › hero › subtitle,Learn from visiting artists and specialists in intimate venue settings.
 pages.events.categories.masterclasses.hero.title,Events page › categories › masterclasses › hero › title,Masterclasses
 pages.events.categories.masterclasses.intro,Events page › categories › masterclasses › intro,Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.
 pages.events.categories.masterclasses.meta.description,Events page › categories › masterclasses › meta › description,Guest artist masterclasses at County Hall Dance Centre.
@@ -474,7 +474,7 @@ pages.events.categories.masterclasses.meta.title,Events page › categories › 
 pages.events.categories.masterclasses.sections.levels.title,Events page › categories › masterclasses › sections › levels › title,Levels & requirements
 pages.events.categories.masterclasses.sections.upcoming.title,Events page › categories › masterclasses › sections › upcoming › title,Upcoming masterclasses
 pages.events.categories.milonga.hero.overline,Events page › categories › milonga › hero › overline,Events
-pages.events.categories.milonga.hero.subtitle,Events page › categories › milonga › hero › subtitle,Social tango evenings with live and recorded music in our South Bank studio.
+pages.events.categories.milonga.hero.subtitle,Events page › categories › milonga › hero › subtitle,Social tango evenings with live and recorded music in our South Bank venue.
 pages.events.categories.milonga.hero.title,Events page › categories › milonga › hero › title,Milonga
 pages.events.categories.milonga.intro,Events page › categories › milonga › intro,Join us for regular milongas — welcoming social dance nights for tango dancers of every level.
 pages.events.categories.milonga.meta.description,Events page › categories › milonga › meta › description,Tango milonga social dance events at County Hall Dance Centre.
@@ -520,7 +520,7 @@ pages.events.items.contemporary_intensive_maya_chen.description.1,Events page �
 pages.events.items.contemporary_intensive_maya_chen.description.2,Events page › items › contemporary intensive maya chen › description › 2,Please bring knee pads and water. Places are limited to 24 participants.
 pages.events.items.contemporary_intensive_maya_chen.excerpt,Events page › items › contemporary intensive maya chen › excerpt,A full-day intensive exploring release technique and repertory with guest artist Maya Chen.
 pages.events.items.contemporary_intensive_maya_chen.image.alt,Events page › items › contemporary intensive maya chen › image › alt,Contemporary dance intensive workshop
-pages.events.items.contemporary_intensive_maya_chen.location,Events page › items › contemporary intensive maya chen › location,Studio A
+pages.events.items.contemporary_intensive_maya_chen.location,Events page › items › contemporary intensive maya chen › location,Venue A
 pages.events.items.contemporary_intensive_maya_chen.title,Events page › items › contemporary intensive maya chen › title,Contemporary Intensive with Maya Chen
 pages.events.items.junior_ballet_masterclass.booknow.label,Events page › items › junior ballet masterclass › booknow › label,Book Now
 pages.events.items.junior_ballet_masterclass.date,Events page › items › junior ballet masterclass › date,Sunday 26 October 2026
@@ -528,7 +528,7 @@ pages.events.items.junior_ballet_masterclass.description.0,Events page › items
 pages.events.items.junior_ballet_masterclass.description.1,Events page › items › junior ballet masterclass › description › 1,Suitable for students currently studying Grade 2–4 or equivalent.
 pages.events.items.junior_ballet_masterclass.excerpt,Events page › items › junior ballet masterclass › excerpt,A special masterclass for junior ballet students aged 8–12.
 pages.events.items.junior_ballet_masterclass.image.alt,Events page › items › junior ballet masterclass › image › alt,Junior ballet masterclass in progress
-pages.events.items.junior_ballet_masterclass.location,Events page › items › junior ballet masterclass › location,Studio B
+pages.events.items.junior_ballet_masterclass.location,Events page › items › junior ballet masterclass › location,Venue B
 pages.events.items.junior_ballet_masterclass.title,Events page › items › junior ballet masterclass › title,Junior Ballet Masterclass
 pages.events.items.musical_theatre_workshop_day.booknow.label,Events page › items › musical theatre workshop day › booknow › label,Book Now
 pages.events.items.musical_theatre_workshop_day.date,Events page › items › musical theatre workshop day › date,Saturday 8 November 2026
@@ -563,8 +563,8 @@ pages.faq.items.faq_6.answer,Faq page › items › faq 6 › answer,Events are 
 pages.faq.items.faq_6.question,Faq page › items › faq 6 › question,How do I book an event or masterclass?
 pages.faq.items.faq_7.answer,Faq page › items › faq 7 › answer,We're a five-minute walk from both Waterloo and Westminster stations.
 pages.faq.items.faq_7.question,Faq page › items › faq 7 › question,How do I get there?
-pages.faq.items.faq_hire.answer,Faq page › items › faq hire › answer,"Yes — our 70 m² vinyl-floor studio and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Studio Hire for details."
-pages.faq.items.faq_hire.question,Faq page › items › faq hire › question,Can I hire the studio?
+pages.faq.items.faq_hire.answer,Faq page › items › faq hire › answer,"Yes — our 70 m² vinyl-floor venue and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Venue Hire for details."
+pages.faq.items.faq_hire.question,Faq page › items › faq hire › question,Can I hire the venue?
 pages.faq.meta.description,Faq page › meta › description,"Frequently asked questions about classes, courses, and bookings at CHD PAS."
 pages.faq.meta.title,Faq page › meta › title,FAQ
 pages.giftcards.hero.overline,Giftcards page › hero › overline,A thoughtful gift
@@ -602,8 +602,8 @@ pages.membership.overview.benefits.items.2.body,Membership page › overview ›
 pages.membership.overview.benefits.items.2.title,Membership page › overview › benefits › items › 2 › title,Event ticket discounts
 pages.membership.overview.benefits.items.3.body,Membership page › overview › benefits › items › 3 › body,"Savings on County Hall merchandise, dancewear and dance shoes."
 pages.membership.overview.benefits.items.3.title,Membership page › overview › benefits › items › 3 › title,Merchandise discounts
-pages.membership.overview.benefits.items.4.body,Membership page › overview › benefits › items › 4 › body,Member rates on studio and practice-space hire (from £100 per hour on weekdays).
-pages.membership.overview.benefits.items.4.title,Membership page › overview › benefits › items › 4 › title,Reduced studio hire
+pages.membership.overview.benefits.items.4.body,Membership page › overview › benefits › items › 4 › body,Member rates on venue and practice-space hire (from £100 per hour on weekdays).
+pages.membership.overview.benefits.items.4.title,Membership page › overview › benefits › items › 4 › title,Reduced venue hire
 pages.membership.overview.benefits.items.5.body,Membership page › overview › benefits › items › 5 › body,Exclusive discounts with our partner businesses.
 pages.membership.overview.benefits.items.5.title,Membership page › overview › benefits › items › 5 › title,Partner offers
 pages.membership.overview.benefits.items.6.body,Membership page › overview › benefits › items › 6 › body,"Community classes, parties, theatre trips and social gatherings."
@@ -620,7 +620,7 @@ pages.membership.overview.cta.button.label,Membership page › overview › cta 
 pages.membership.overview.cta.secondary,Membership page › overview › cta › secondary,membership@countyhalldancecentre.com
 pages.membership.overview.cta.title,Membership page › overview › cta › title,Ready to join?
 pages.membership.overview.faq.items.membership_faq_hire.answer,Membership page › overview › faq › items › membership faq hire › answer,Simply mention your membership when you enquire.
-pages.membership.overview.faq.items.membership_faq_hire.question,Membership page › overview › faq › items › membership faq hire › question,How do I get member rates for studio hire?
+pages.membership.overview.faq.items.membership_faq_hire.question,Membership page › overview › faq › items › membership faq hire › question,How do I get member rates for venue hire?
 pages.membership.overview.faq.items.membership_faq_styles.answer,Membership page › overview › faq › items › membership faq styles › answer,"Membership covers our class styles: Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop."
 pages.membership.overview.faq.items.membership_faq_styles.question,Membership page › overview › faq › items › membership faq styles › question,Which classes are included?
 pages.membership.overview.faq.items.membership_faq_trial.answer,Membership page › overview › faq › items › membership faq trial › answer,"We don't offer free trial classes, but you're welcome to book a trial class before you join. Email membership@countyhalldancecentre.com and we'll gladly help you choose the class and plan that's right for you."
@@ -635,7 +635,7 @@ pages.membership.overview.howtojoin.steps.2,Membership page › overview › how
 pages.membership.overview.howtojoin.steps.3,Membership page › overview › howtojoin › steps › 3,Start booking classes and enjoying your member benefits.
 pages.membership.overview.howtojoin.title,Membership page › overview › howtojoin › title,How to join
 pages.membership.overview.intro,Membership page › overview › intro,"Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit."
-pages.membership.overview.meta.description,Membership page › overview › meta › description,"County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced studio hire rates."
+pages.membership.overview.meta.description,Membership page › overview › meta › description,"County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates."
 pages.membership.overview.meta.title,Membership page › overview › meta › title,Membership
 pages.membership.overview.plans.cta.label,Membership page › overview › plans › cta › label,Join now
 pages.membership.overview.plans.items.annual.body,Membership page › overview › plans › items › annual › body,"Our best value. A full year of dance, community and member-only perks."
@@ -692,7 +692,7 @@ pages.privatelessons.cta.button.label,Privatelessons page › cta › button ›
 pages.privatelessons.cta.secondary,Privatelessons page › cta › secondary,WeChat: 18518614868 · Instagram: @countyhalldancecentre
 pages.privatelessons.cta.title,Privatelessons page › cta › title,Plan your experience
 pages.privatelessons.hero.overline,Privatelessons page › hero › overline,Tailored for you
-pages.privatelessons.hero.subtitle,Privatelessons page › hero › subtitle,"Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful studio at County Hall."
+pages.privatelessons.hero.subtitle,Privatelessons page › hero › subtitle,"Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful venue at County Hall."
 pages.privatelessons.hero.title,Privatelessons page › hero › title,Private Lessons & Experiences
 pages.privatelessons.howitworks.steps.0.body,Privatelessons page › howitworks › steps › 0 › body,"the occasion, group size and preferred dates."
 pages.privatelessons.howitworks.steps.0.title,Privatelessons page › howitworks › steps › 0 › title,Tell us your plans
@@ -701,26 +701,26 @@ pages.privatelessons.howitworks.steps.1.title,Privatelessons page › howitworks
 pages.privatelessons.howitworks.steps.2.body,Privatelessons page › howitworks › steps › 2 › body,"arrive, relax and dance."
 pages.privatelessons.howitworks.steps.2.title,Privatelessons page › howitworks › steps › 2 › title,Enjoy the experience
 pages.privatelessons.howitworks.title,Privatelessons page › howitworks › title,How it works
-pages.privatelessons.intro,Privatelessons page › intro,"Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our studios on the South Bank."
+pages.privatelessons.intro,Privatelessons page › intro,"Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank."
 pages.privatelessons.meta.description,Privatelessons page › meta › description,"Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops."
 pages.privatelessons.meta.title,Privatelessons page › meta › title,Private Lessons & Experiences
 pages.privatelessons.sections.corporate.body,Privatelessons page › sections › corporate › body,"Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people."
 pages.privatelessons.sections.corporate.cta.label,Privatelessons page › sections › corporate › cta › label,Enquire
 pages.privatelessons.sections.corporate.gallery.0.alt,Privatelessons page › sections › corporate › gallery › 0 › alt,Corporate group movement session
-pages.privatelessons.sections.corporate.gallery.1.alt,Privatelessons page › sections › corporate › gallery › 1 › alt,Team workshop in the dance studio
-pages.privatelessons.sections.corporate.gallery.2.alt,Privatelessons page › sections › corporate › gallery › 2 › alt,Professional studio environment
+pages.privatelessons.sections.corporate.gallery.1.alt,Privatelessons page › sections › corporate › gallery › 1 › alt,Team workshop in the dance venue
+pages.privatelessons.sections.corporate.gallery.2.alt,Privatelessons page › sections › corporate › gallery › 2 › alt,Professional venue environment
 pages.privatelessons.sections.corporate.title,Privatelessons page › sections › corporate › title,Corporate Events
 pages.privatelessons.sections.couples.body,Privatelessons page › sections › couples › body,"Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side — no experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week."
 pages.privatelessons.sections.couples.cta.label,Privatelessons page › sections › couples › cta › label,Enquire
 pages.privatelessons.sections.couples.gallery.0.alt,Privatelessons page › sections › couples › gallery › 0 › alt,Couple learning partner dance
 pages.privatelessons.sections.couples.gallery.1.alt,Privatelessons page › sections › couples › gallery › 1 › alt,Couples dance experience at County Hall
-pages.privatelessons.sections.couples.gallery.2.alt,Privatelessons page › sections › couples › gallery › 2 › alt,Pair practising movement in the studio
+pages.privatelessons.sections.couples.gallery.2.alt,Privatelessons page › sections › couples › gallery › 2 › alt,Pair practising movement in the venue
 pages.privatelessons.sections.couples.title,Privatelessons page › sections › couples › title,Couples' Dance
 pages.privatelessons.sections.groups.body,Privatelessons page › sections › groups › body,"Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles — a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop — and our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests."
 pages.privatelessons.sections.groups.cta.label,Privatelessons page › sections › groups › cta › label,Enquire
 pages.privatelessons.sections.groups.gallery.0.alt,Privatelessons page › sections › groups › gallery › 0 › alt,Group dance experience
 pages.privatelessons.sections.groups.gallery.1.alt,Privatelessons page › sections › groups › gallery › 1 › alt,Musical theatre themed workshop
-pages.privatelessons.sections.groups.gallery.2.alt,Privatelessons page › sections › groups › gallery › 2 › alt,Group class in the studio
+pages.privatelessons.sections.groups.gallery.2.alt,Privatelessons page › sections › groups › gallery › 2 › alt,Group class in the venue
 pages.privatelessons.sections.groups.title,Privatelessons page › sections › groups › title,Group Experiences
 pages.privatelessons.sections.one_to_one.body,Privatelessons page › sections › one to one › body,"Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique — strength, flexibility, control and precision — or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback."
 pages.privatelessons.sections.one_to_one.cta.label,Privatelessons page › sections › one to one › cta › label,Enquire
@@ -737,7 +737,7 @@ pages.privatelessons.sections.schools.title,Privatelessons page › sections ›
 pages.privatelessons.sections.wedding.body,Privatelessons page › sections › wedding › body,"Your first dance should feel like you — and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment."
 pages.privatelessons.sections.wedding.cta.label,Privatelessons page › sections › wedding › cta › label,Enquire
 pages.privatelessons.sections.wedding.gallery.0.alt,Privatelessons page › sections › wedding › gallery › 0 › alt,Couple practising a wedding dance
-pages.privatelessons.sections.wedding.gallery.1.alt,Privatelessons page › sections › wedding › gallery › 1 › alt,Performance lighting in the studio
+pages.privatelessons.sections.wedding.gallery.1.alt,Privatelessons page › sections › wedding › gallery › 1 › alt,Performance lighting in the venue
 pages.privatelessons.sections.wedding.gallery.2.alt,Privatelessons page › sections › wedding › gallery › 2 › alt,Private lesson for wedding preparation
 pages.privatelessons.sections.wedding.title,Privatelessons page › sections › wedding › title,First Wedding Dance
 pages.shop.hero.overline,Shop page › hero › overline,Merchandise
@@ -752,6 +752,7 @@ pages.shop.sections.merchandise.title,Shop page › sections › merchandise ›
 pages.shop.sections.t_shirts.title,Shop page › sections › t shirts › title,T-Shirts
 pages.studiohire.overview.cta.body,Studiohire page › overview › cta › body,"Tell us your preferred date, times, space and group size and we'll come back to you with availability."
 pages.studiohire.overview.cta.button.label,Studiohire page › overview › cta › button › label,Enquire about hire
+pages.studiohire.overview.cta.secondaryButton.label,Studiohire page › overview › cta › secondary button › label,Check availability
 pages.studiohire.overview.cta.secondary,Studiohire page › overview › cta › secondary,Or message us on WeChat: 18518614868 · Instagram: @countyhalldancecentre
 pages.studiohire.overview.cta.title,Studiohire page › overview › cta › title,Plan your booking
 pages.studiohire.overview.facilities.extranote,Studiohire page › overview › facilities › extranote,"You are welcome to bring your own equipment, set up and decorate the space, and bring your own catering and drinks."
@@ -772,14 +773,14 @@ pages.studiohire.overview.facts.items.1,Studiohire page › overview › facts �
 pages.studiohire.overview.facts.items.2,Studiohire page › overview › facts › items › 2,Up to 120 guests
 pages.studiohire.overview.facts.items.3,Studiohire page › overview › facts › items › 3,5 minutes' walk from Waterloo and Westminster
 pages.studiohire.overview.facts.title,Studiohire page › overview › facts › title,Key facts
-pages.studiohire.overview.gallery.0.alt,Studiohire page › overview › gallery › 0 › alt,Main studio floor with natural light
-pages.studiohire.overview.gallery.1.alt,Studiohire page › overview › gallery › 1 › alt,Spacious dance studio at County Hall
-pages.studiohire.overview.gallery.2.alt,Studiohire page › overview › gallery › 2 › alt,Studio set up for classes and workshops
+pages.studiohire.overview.gallery.0.alt,Studiohire page › overview › gallery › 0 › alt,Main venue floor with natural light
+pages.studiohire.overview.gallery.1.alt,Studiohire page › overview › gallery › 1 › alt,Spacious dance venue at County Hall
+pages.studiohire.overview.gallery.2.alt,Studiohire page › overview › gallery › 2 › alt,Venue set up for classes and workshops
 pages.studiohire.overview.gallery.3.alt,Studiohire page › overview › gallery › 3 › alt,Professional dance space on the South Bank
-pages.studiohire.overview.hero.image.alt,Studiohire page › overview › hero › image › alt,Studio space available for hire at County Hall
-pages.studiohire.overview.hero.overline,Studiohire page › overview › hero › overline,South Bank studios
+pages.studiohire.overview.hero.image.alt,Studiohire page › overview › hero › image › alt,Venue space available for hire at County Hall
+pages.studiohire.overview.hero.overline,Studiohire page › overview › hero › overline,County Hall arts space
 pages.studiohire.overview.hero.subtitle,Studiohire page › overview › hero › subtitle,"Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events."
-pages.studiohire.overview.hero.title,Studiohire page › overview › hero › title,Studio Hire
+pages.studiohire.overview.hero.title,Studiohire page › overview › hero › title,Venue Hire
 pages.studiohire.overview.howtobook.steps.0.body,Studiohire page › overview › howtobook › steps › 0 › body,"Contact us through this website, our official WeChat (18518614868) or Instagram (@countyhalldancecentre). Please book at least one week in advance."
 pages.studiohire.overview.howtobook.steps.0.title,Studiohire page › overview › howtobook › steps › 0 › title,Enquire
 pages.studiohire.overview.howtobook.steps.1.body,Studiohire page › overview › howtobook › steps › 1 › body,"We'll check availability and confirm your date, space and hours."
@@ -789,9 +790,9 @@ pages.studiohire.overview.howtobook.steps.2.title,Studiohire page › overview �
 pages.studiohire.overview.howtobook.steps.3.body,Studiohire page › overview › howtobook › steps › 3 › body,Our on-site manager will welcome you and be available throughout your hire.
 pages.studiohire.overview.howtobook.steps.3.title,Studiohire page › overview › howtobook › steps › 3 › title,Arrive
 pages.studiohire.overview.howtobook.title,Studiohire page › overview › howtobook › title,How to book
-pages.studiohire.overview.intro,Studiohire page › overview › intro,"Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor studio for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach."
-pages.studiohire.overview.meta.description,Studiohire page › overview › meta › description,"Hire a 70 m² vinyl-floor studio or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available."
-pages.studiohire.overview.meta.title,Studiohire page › overview › meta › title,Studio Hire
+pages.studiohire.overview.intro,Studiohire page › overview › intro,"Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach."
+pages.studiohire.overview.meta.description,Studiohire page › overview › meta › description,"Hire a 70 m² vinyl-floor venue or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available."
+pages.studiohire.overview.meta.title,Studiohire page › overview › meta › title,Venue Hire
 pages.studiohire.overview.pricing.columns.0,Studiohire page › overview › pricing › columns › 0,
 pages.studiohire.overview.pricing.columns.1,Studiohire page › overview › pricing › columns › 1,Standard rate
 pages.studiohire.overview.pricing.columns.2,Studiohire page › overview › pricing › columns › 2,Member rate
@@ -815,7 +816,7 @@ pages.studiohire.overview.spaces.items.vinyl_studio.body,Studiohire page › ove
 pages.studiohire.overview.spaces.items.vinyl_studio.floor,Studiohire page › overview › spaces › items › vinyl studio › floor,Dance vinyl
 pages.studiohire.overview.spaces.items.vinyl_studio.idealfor,Studiohire page › overview › spaces › items › vinyl studio › idealfor,"Classes, rehearsals, auditions, small workshops and one-to-one sessions"
 pages.studiohire.overview.spaces.items.vinyl_studio.size,Studiohire page › overview › spaces › items › vinyl studio › size,70 m²
-pages.studiohire.overview.spaces.items.vinyl_studio.title,Studiohire page › overview › spaces › items › vinyl studio › title,Vinyl-Floor Studio
+pages.studiohire.overview.spaces.items.vinyl_studio.title,Studiohire page › overview › spaces › items › vinyl studio › title,Vinyl-Floor Venue
 pages.studiohire.overview.spaces.items.wooden_hall.body,Studiohire page › overview › spaces › items › wooden hall › body,"Our largest space, with a wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups."
 pages.studiohire.overview.spaces.items.wooden_hall.floor,Studiohire page › overview › spaces › items › wooden hall › floor,Wooden floor
 pages.studiohire.overview.spaces.items.wooden_hall.idealfor,Studiohire page › overview › spaces › items › wooden hall › idealfor,"Workshops, social dances, performances, parties, exhibitions and corporate events"
@@ -843,26 +844,26 @@ pages.studiohire.overview.terms.items.3.title,Studiohire page › overview › t
 pages.studiohire.overview.terms.items.4.body,Studiohire page › overview › terms › items › 4 › body,a venue manager is present during every booking.
 pages.studiohire.overview.terms.items.4.title,Studiohire page › overview › terms › items › 4 › title,On-site support:
 pages.studiohire.overview.terms.title,Studiohire page › overview › terms › title,Booking terms
-pages.studiohire.subpages.our_space.hero.overline,Studiohire page › subpages › our space › hero › overline,Studio Hire
+pages.studiohire.subpages.our_space.hero.overline,Studiohire page › subpages › our space › hero › overline,Venue Hire
 pages.studiohire.subpages.our_space.hero.subtitle,Studiohire page › subpages › our space › hero › subtitle,"Main dance and events space with wood floor, dance vinyl, mirrors, barres and flexible seating."
 pages.studiohire.subpages.our_space.hero.title,Studiohire page › subpages › our space › hero › title,Our Space
 pages.studiohire.subpages.our_space.intro,Studiohire page › subpages › our space › intro,"Main dance and events space — around 300 m² in total, planned to include approx. 200 m² of wood floor and approx. 60 m² of professional dance vinyl, a mirrored wall, dance barres, a sound system, event lighting, a reception/lounge area and flexible seating."
-pages.studiohire.subpages.our_space.meta.description,Studiohire page › subpages › our space › meta › description,Studio space and facilities at County Hall Dance Centre.
+pages.studiohire.subpages.our_space.meta.description,Studiohire page › subpages › our space › meta › description,Venue space and facilities at County Hall Dance Centre.
 pages.studiohire.subpages.our_space.meta.title,Studiohire page › subpages › our space › meta › title,Our Space
 pages.studiohire.subpages.our_space.sections.capacity.title,Studiohire page › subpages › our space › sections › capacity › title,Capacity
 pages.studiohire.subpages.our_space.sections.facilities.title,Studiohire page › subpages › our space › sections › facilities › title,Facilities
-pages.studiohire.subpages.space_booking.hero.overline,Studiohire page › subpages › space booking › hero › overline,Studio Hire
+pages.studiohire.subpages.space_booking.hero.overline,Studiohire page › subpages › space booking › hero › overline,Venue Hire
 pages.studiohire.subpages.space_booking.hero.subtitle,Studiohire page › subpages › space booking › hero › subtitle,"Tell us your preferred date, activity and group size — we will respond with availability."
 pages.studiohire.subpages.space_booking.hero.title,Studiohire page › subpages › space booking › hero › title,Space Booking
-pages.studiohire.subpages.space_booking.intro,Studiohire page › subpages › space booking › intro,"Enquire via our Studio Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details."
-pages.studiohire.subpages.space_booking.meta.description,Studiohire page › subpages › space booking › meta › description,Enquire about studio hire at County Hall Dance Centre.
+pages.studiohire.subpages.space_booking.intro,Studiohire page › subpages › space booking › intro,"Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details."
+pages.studiohire.subpages.space_booking.meta.description,Studiohire page › subpages › space booking › meta › description,Enquire about venue hire at County Hall Dance Centre.
 pages.studiohire.subpages.space_booking.meta.title,Studiohire page › subpages › space booking › meta › title,Space Booking
 pages.studiohire.subpages.space_booking.sections.enquiry_form.title,Studiohire page › subpages › space booking › sections › enquiry form › title,Enquiry form
 pages.studiohire.subpages.space_booking.sections.how_to_book.title,Studiohire page › subpages › space booking › sections › how to book › title,How to book
 pages.tasterclasses.hero.overline,Tasterclasses page › hero › overline,Classes
 pages.tasterclasses.hero.subtitle,Tasterclasses page › hero › subtitle,New to the Centre? Start with a taster and find the class that suits you.
 pages.tasterclasses.hero.title,Tasterclasses page › hero › title,Taster Classes
-pages.tasterclasses.intro,Tasterclasses page › intro,"Taster classes are a low-commitment way to experience our teaching, studio and community before enrolling."
+pages.tasterclasses.intro,Tasterclasses page › intro,"Taster classes are a low-commitment way to experience our teaching, venue and community before enrolling."
 pages.tasterclasses.meta.description,Tasterclasses page › meta › description,Try a taster class at County Hall Dance Centre.
 pages.tasterclasses.meta.title,Tasterclasses page › meta › title,Taster Classes
 pages.tasterclasses.sections.available_tasters.title,Tasterclasses page › sections › available tasters › title,Available taster classes
@@ -882,7 +883,9 @@ pages.timetable.hero.title,Timetable page › hero › title,Timetable & Booking
 pages.timetable.meta.description,Timetable page › meta › description,View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.
 pages.timetable.meta.title,Timetable page › meta › title,Timetable & Booking
 pages.timetable.newcomernote,Timetable page › newcomernote,New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.
+pages.timetable.grid.venueNote,Timetable page › grid › venue note,"The venue can be used privately when there are no classes. Reservations are possible."
 pages.timetable.trial.body,Timetable page › trial › body,"Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival."
 pages.timetable.trial.cta.label,Timetable page › trial › cta › label,Book
 pages.timetable.trial.overline,Timetable page › trial › overline,New to CHD PAS?
 pages.timetable.trial.title,Timetable page › trial › title,Book a taster trial
+
