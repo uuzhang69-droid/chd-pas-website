@@ -3,6 +3,7 @@ import { siteContent } from "@/content/site";
 import { BrandMark } from "@/components/layout/BrandMark";
 import { SocialIcon } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
+import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
 
 export function Footer() {
   const { footer, utilityBar } = siteContent.global;
@@ -92,24 +93,13 @@ export function Footer() {
             <div className="mt-8">
               <h4 className="text-overline text-rose mb-3">{footer.newsletter.title}</h4>
               <p className="text-small text-ivory/75 mb-4">{footer.newsletter.description}</p>
-              <form className="flex flex-col gap-2 sm:flex-row" action="#" method="post">
-                <label htmlFor="footer-email" className="sr-only">
-                  {footer.newsletter.placeholder}
-                </label>
-                <input
-                  id="footer-email"
-                  type="email"
-                  name="email"
-                  placeholder={footer.newsletter.placeholder}
-                  className="flex-1 rounded-sm border border-ivory/20 bg-ivory/10 px-4 py-2.5 text-body text-ivory placeholder:text-ivory/50 outline-none focus:border-rose"
-                />
-                <button
-                  type="submit"
-                  className="rounded-sm bg-rose px-5 py-2.5 text-small font-semibold text-charcoal transition-colors hover:bg-rose/90"
-                >
-                  {footer.newsletter.submitLabel}
-                </button>
-              </form>
+              <NewsletterSignupForm
+                inputId="footer-email"
+                placeholder={footer.newsletter.placeholder}
+                submitLabel={footer.newsletter.submitLabel}
+                inputClassName="flex-1 rounded-sm border border-ivory/20 bg-ivory/10 px-4 py-2.5 text-body text-ivory placeholder:text-ivory/50 outline-none focus:border-rose"
+                buttonClassName="rounded-sm bg-rose px-5 py-2.5 text-small font-semibold text-charcoal transition-colors hover:bg-rose/90"
+              />
               <p className="text-small text-ivory/60 mt-2">{footer.newsletter.privacyNote}</p>
             </div>
           </div>

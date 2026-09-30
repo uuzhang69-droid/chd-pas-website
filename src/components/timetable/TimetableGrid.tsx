@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { buildTimetableBookingHref } from "@/lib/timetable/booking-link";
 import { buildTimetableColumns, overlappingSlotIds } from "@/lib/timetable/build-grid";
 import {
   TIMETABLE_SLOTS,
@@ -17,6 +19,7 @@ import {
   isSameWeek,
   parseWeekParam,
   startOfWeekMonday,
+  WEEKDAY_FULL,
 } from "@/lib/timetable/week";
 
 export type TimetableGridUi = {
@@ -44,21 +47,23 @@ type HoverTarget = {
 
 function ClassBlock({
   placed,
+  bookingHref,
   isHovered,
   onHover,
   onLeave,
 }: {
   placed: TimetablePlacedClass;
+  bookingHref: string;
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
 }) {
   return (
-    <div
-      role="article"
-      aria-label={`${placed.title}, ${placed.timeLabel}`}
+    <Link
+      href={bookingHref}
+      aria-label={`Book ${placed.title}, ${placed.timeLabel}`}
       data-style={placed.style}
-      className={`timetable-cell pointer-events-auto absolute inset-x-1 z-0 overflow-hidden rounded-sm border border-taupe/20 px-1.5 py-1 text-left transition-colors duration-150 sm:px-2 ${
+      className={`timetable-cell pointer-events-auto absolute inset-x-1 z-0 overflow-hidden rounded-sm border border-taupe/20 px-1.5 py-1 text-left transition-colors duration-150 hover:ring-2 hover:ring-rose/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-rose sm:px-2 ${
         isHovered ? "is-hovered z-10" : ""
       }`}
       style={{
@@ -75,7 +80,7 @@ function ClassBlock({
         {placed.timeLabel}
         {placed.instructor ? ` · ${placed.instructor}` : ""}
       </p>
-    </div>
+    </Link>
   );
 }
 
@@ -130,21 +135,30 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
           );
         })}
         <div className="pointer-events-none absolute inset-0 z-[1]">
-          {columns[dayIndex].map((placed) => (
-            <ClassBlock
-              key={placed.id}
-              placed={placed}
-              isHovered={hover?.classId === placed.id}
-              onHover={() =>
-                setHover({
-                  dayIndex,
-                  classId: placed.id,
-                  slotIds: overlappingSlotIds(placed.startMinutes, placed.endMinutes),
-                })
-              }
-              onLeave={() => setHover(null)}
-            />
-          ))}
+          {columns[dayIndex].map((placed) => {
+            const day = weekDays[dayIndex];
+            const bookingHref = buildTimetableBookingHref(
+              placed,
+              WEEKDAY_FULL[dayIndex],
+              day.label,
+            );
+            return (
+              <ClassBlock
+                key={placed.id}
+                placed={placed}
+                bookingHref={bookingHref}
+                isHovered={hover?.classId === placed.id}
+                onHover={() =>
+                  setHover({
+                    dayIndex,
+                    classId: placed.id,
+                    slotIds: overlappingSlotIds(placed.startMinutes, placed.endMinutes),
+                  })
+                }
+                onLeave={() => setHover(null)}
+              />
+            );
+          })}
         </div>
       </div>
     );

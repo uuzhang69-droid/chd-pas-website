@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { siteContent } from "@/content/site";
 import type { FormField } from "@/content/types";
+import { buildEnquiryMailtoUrl, getEnquiryRecipientEmail } from "@/lib/enquiry-email";
 
 type ContactFormProps = {
   fields: FormField[];
@@ -11,6 +12,9 @@ type ContactFormProps = {
   selectPlaceholder: string;
   action: string;
   defaultSubject?: string;
+  defaultAbout?: string;
+  defaultMessage?: string;
+  recipientEmail?: string;
 };
 
 export function ContactForm({
@@ -20,12 +24,19 @@ export function ContactForm({
   selectPlaceholder,
   action,
   defaultSubject = "",
+  defaultAbout = "",
+  defaultMessage = "",
+  recipientEmail = getEnquiryRecipientEmail(),
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const requiredMarker = siteContent.ui.form.requiredMarker;
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const mailtoUrl = buildEnquiryMailtoUrl(recipientEmail, fields, formData);
+    window.location.href = mailtoUrl;
     setSubmitted(true);
   }
 
@@ -52,6 +63,7 @@ export function ContactForm({
               rows={5}
               required={field.required}
               placeholder={field.placeholder}
+              defaultValue={field.name === "message" ? defaultMessage : undefined}
               className="mt-2 w-full rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
             />
           ) : field.type === "select" ? (
@@ -64,7 +76,10 @@ export function ContactForm({
                 field.name === "subject" &&
                 field.options?.some((option) => option.value === defaultSubject)
                   ? defaultSubject
-                  : ""
+                  : field.name === "about" &&
+                      field.options?.some((option) => option.value === defaultAbout)
+                    ? defaultAbout
+                    : ""
               }
             >
               <option value="" disabled>

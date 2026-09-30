@@ -4,6 +4,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
+import { buildBookingPrefillFromSearchParams } from "@/lib/timetable/booking-link";
 
 const { booking, contact } = siteContent.pages;
 const { booking: bookingUi } = siteContent.ui;
@@ -13,7 +14,22 @@ export const metadata: Metadata = {
   description: booking.meta.description,
 };
 
-export default function BookingPage() {
+type BookingPageProps = {
+  searchParams: Promise<{
+    about?: string;
+    course?: string;
+    slot?: string;
+    date?: string;
+    weekday?: string;
+    day?: string;
+    message?: string;
+  }>;
+};
+
+export default async function BookingPage({ searchParams }: BookingPageProps) {
+  const query = await searchParams;
+  const { defaultAbout, defaultMessage } = buildBookingPrefillFromSearchParams(query);
+
   return (
     <PageShell>
       <PageHero {...booking.hero} compact />
@@ -30,6 +46,8 @@ export default function BookingPage() {
                 successMessage={booking.form.successMessage}
                 selectPlaceholder={booking.form.selectPlaceholder}
                 action={booking.form.action}
+                defaultAbout={defaultAbout}
+                defaultMessage={defaultMessage}
               />
             </div>
 

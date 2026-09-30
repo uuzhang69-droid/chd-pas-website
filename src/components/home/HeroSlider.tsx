@@ -85,7 +85,9 @@ export function HeroSlider() {
 
           <div className="relative z-10 flex min-h-[72vh] items-center px-5 py-20 sm:px-8 md:min-h-[85vh]">
             <div key={slide.id} className="max-w-2xl animate-fade-up text-ivory">
-              <h1 className="text-display font-normal text-ivory">{slide.headline}</h1>
+              <h1 className="font-[family-name:var(--font-cormorant)] text-[calc(2.5rem*2/3)] leading-[1.05] tracking-[0.02em] font-normal text-ivory md:text-[calc(3.5rem*2/3)]">
+                {slide.headline}
+              </h1>
               <p className="text-body-lg mt-6 max-w-xl text-ivory/90">{slide.blurb}</p>
               <div className="mt-10">
                 <Button {...slide.cta} />

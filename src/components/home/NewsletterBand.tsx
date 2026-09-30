@@ -1,6 +1,7 @@
 import { siteContent } from "@/content/site";
 import { SocialIcon } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
+import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
 
 export function NewsletterBand() {
   const { newsletter } = siteContent.home;
@@ -16,24 +17,16 @@ export function NewsletterBand() {
           </h2>
           <p className="text-body-lg mt-4 text-charcoal/75">{newsletter.description}</p>
 
-          <form className="mt-8 flex flex-col gap-3 sm:flex-row" action="#" method="post">
-            <label htmlFor="home-newsletter-email" className="sr-only">
-              {newsletter.placeholder}
-            </label>
-            <input
-              id="home-newsletter-email"
-              type="email"
-              name="email"
+          <div className="mt-8">
+            <NewsletterSignupForm
+              inputId="home-newsletter-email"
               placeholder={newsletter.placeholder}
-              className="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
+              submitLabel={newsletter.submitLabel}
+              formClassName="flex flex-col gap-3 sm:flex-row"
+              inputClassName="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
+              buttonClassName="rounded-sm bg-burgundy px-6 py-3 text-small font-semibold text-ivory transition-colors hover:bg-burgundy/90"
             />
-            <button
-              type="submit"
-              className="rounded-sm bg-burgundy px-6 py-3 text-small font-semibold text-ivory transition-colors hover:bg-burgundy/90"
-            >
-              {newsletter.submitLabel}
-            </button>
-          </form>
+          </div>
 
           <div className="mt-10">
             <p className="text-overline text-charcoal/60 mb-4">{newsletter.socialHeading}</p>

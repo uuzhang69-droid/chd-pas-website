@@ -1742,7 +1742,7 @@ export const siteSource = {
         successMessage:
           "Thank you — your enquiry has been received. We will be in touch shortly.",
         selectPlaceholder: "Select an option",
-        action: "#",
+        action: "mailto:info@countyhalldancecentre.com",
         fields: [
           {
             name: "name",
@@ -1827,7 +1827,7 @@ export const siteSource = {
         submitLabel: "Send message",
         successMessage: "Thank you — your message has been received. We will be in touch shortly.",
         selectPlaceholder: "Select an option",
-        action: "#",
+        action: "mailto:info@countyhalldancecentre.com",
         fields: [
           { name: "name", label: "Full name", type: "text", placeholder: "Your name", required: true },
           { name: "email", label: "Email address", type: "email", placeholder: "you@example.com", required: true },

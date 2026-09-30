@@ -2070,7 +2070,7 @@ export const siteStructure = {
         "submitLabel": "@@COPY:pages.booking.form.submitlabel",
         "successMessage": "@@COPY:pages.booking.form.successmessage",
         "selectPlaceholder": "@@COPY:pages.booking.form.selectplaceholder",
-        "action": "#",
+        "action": "mailto:info@countyhalldancecentre.com",
         "fields": [
           {
             "name": "name",
@@ -2165,7 +2165,7 @@ export const siteStructure = {
         "submitLabel": "@@COPY:pages.contact.form.submitlabel",
         "successMessage": "@@COPY:pages.contact.form.successmessage",
         "selectPlaceholder": "@@COPY:pages.contact.form.selectplaceholder",
-        "action": "#",
+        "action": "mailto:info@countyhalldancecentre.com",
         "fields": [
           {
             "name": "name",
