@@ -9,12 +9,17 @@ const STYLE_OPTIONS = [
 ];
 
 const SLOT_OPTIONS = [
-  { title: "10:00 – 11:00", value: "slot-1" },
-  { title: "11:15 – 12:15", value: "slot-2" },
-  { title: "12:30 – 13:30", value: "slot-3" },
-  { title: "17:00 – 18:00", value: "slot-4" },
-  { title: "18:15 – 19:15", value: "slot-5" },
-  { title: "19:30 – 20:30", value: "slot-6" },
+  { title: "10:30 am – 12:00 pm", value: "slot-1030-1200" },
+  { title: "12:30 – 1:20 pm", value: "slot-1230-1320" },
+  { title: "6:30 – 7:20 pm", value: "slot-1830-1920" },
+  { title: "6:30 – 7:30 pm", value: "slot-1830-1930" },
+  { title: "6:30 – 8:00 pm", value: "slot-1830-2000" },
+  { title: "7:00 – 8:00 pm", value: "slot-1900-2000" },
+  { title: "7:30 – 8:30 pm", value: "slot-1930-2030" },
+  { title: "7:30 – 8:40 pm", value: "slot-1930-2040" },
+  { title: "8:00 – 9:30 pm", value: "slot-2000-2130" },
+  { title: "8:00 – 11:00 pm", value: "slot-2000-2300" },
+  { title: "8:30 – 9:30 pm", value: "slot-2030-2130" },
 ];
 
 const DAY_OPTIONS = [

@@ -1,12 +1,17 @@
 import type { TimetableSlot, TimetableStyleId } from "./types";
 
 export const TIMETABLE_SLOTS: TimetableSlot[] = [
-  { id: "slot-1", label: "10:00 – 11:00" },
-  { id: "slot-2", label: "11:15 – 12:15" },
-  { id: "slot-3", label: "12:30 – 13:30" },
-  { id: "slot-4", label: "17:00 – 18:00" },
-  { id: "slot-5", label: "18:15 – 19:15" },
-  { id: "slot-6", label: "19:30 – 20:30" },
+  { id: "slot-1030-1200", label: "10:30 am – 12:00 pm" },
+  { id: "slot-1230-1320", label: "12:30 – 1:20 pm" },
+  { id: "slot-1830-1920", label: "6:30 – 7:20 pm" },
+  { id: "slot-1830-1930", label: "6:30 – 7:30 pm" },
+  { id: "slot-1830-2000", label: "6:30 – 8:00 pm" },
+  { id: "slot-1900-2000", label: "7:00 – 8:00 pm" },
+  { id: "slot-1930-2030", label: "7:30 – 8:30 pm" },
+  { id: "slot-1930-2040", label: "7:30 – 8:40 pm" },
+  { id: "slot-2000-2130", label: "8:00 – 9:30 pm" },
+  { id: "slot-2000-2300", label: "8:00 – 11:00 pm" },
+  { id: "slot-2030-2130", label: "8:30 – 9:30 pm" },
 ];
 
 export const TIMETABLE_STYLE_ORDER: TimetableStyleId[] = [
