@@ -217,18 +217,6 @@ body {
   background: #b09fd0;
 }
 
-.timetable-cell[data-style="k-pop"] {
-  --tt-accent: #cfa7a3;
-  background: #5a1f2b;
-  color: var(--ivory);
-}
-.timetable-cell[data-style="k-pop"] .timetable-cell-meta {
-  color: color-mix(in srgb, var(--ivory) 88%, transparent);
-}
-.timetable-cell[data-style="k-pop"].is-hovered {
-  background: #3f1520;
-}
-
 .timetable-swatch[data-style="contemporary"] {
   background: #e8d3d0;
   box-shadow: inset 0 0 0 1px #b07068;
@@ -248,10 +236,6 @@ body {
 .timetable-swatch[data-style="tai-chi"] {
   background: #d8cce8;
   box-shadow: inset 0 0 0 1px #6a5a8a;
-}
-.timetable-swatch[data-style="k-pop"] {
-  background: #5a1f2b;
-  box-shadow: inset 0 0 0 1px #cfa7a3;
 }
 
 @media (prefers-reduced-motion: reduce) {

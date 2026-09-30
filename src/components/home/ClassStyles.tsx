@@ -13,12 +13,11 @@ export function ClassStyles() {
         <SectionHeading
           overline={classStyles.overline}
           title={classStyles.title}
-          subtitle={classStyles.subtitle}
           align="center"
           className="mx-auto mb-10 text-center md:mb-12"
         />
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6 md:gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 md:gap-4">
           {classStyles.items.map((style) => (
             <Link
               key={style.id}

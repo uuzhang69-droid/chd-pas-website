@@ -12,7 +12,6 @@ const STYLE_IDS: TimetableStyleId[] = [
   "tango",
   "yoga",
   "tai-chi",
-  "k-pop",
 ];
 
 function isStyleId(value: string): value is TimetableStyleId {

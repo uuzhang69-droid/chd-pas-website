@@ -15,7 +15,6 @@ export const TIMETABLE_STYLE_ORDER: TimetableStyleId[] = [
   "tango",
   "yoga",
   "tai-chi",
-  "k-pop",
 ];
 
 export const TIMETABLE_STYLES: Record<TimetableStyleId, { label: string }> = {
@@ -24,5 +23,4 @@ export const TIMETABLE_STYLES: Record<TimetableStyleId, { label: string }> = {
   tango: { label: "Tango" },
   yoga: { label: "Yoga" },
   "tai-chi": { label: "Tai Chi" },
-  "k-pop": { label: "K-Pop" },
 };

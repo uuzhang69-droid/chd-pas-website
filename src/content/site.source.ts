@@ -378,8 +378,6 @@ export const siteSource = {
     classStyles: {
       overline: "Our disciplines",
       title: "Class styles",
-      subtitle:
-        "Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — beginners welcome.",
       items: [
         {
           id: "style-contemporary",
@@ -415,13 +413,6 @@ export const siteSource = {
           slug: "tai-chi",
           href: "/classes/tai-chi",
           image: { src: "/images/styles/tai-chi.jpg", alt: "Tai Chi class" },
-        },
-        {
-          id: "style-k-pop",
-          name: "K-Pop",
-          slug: "k-pop",
-          href: "/classes/k-pop",
-          image: { src: "/images/hero/slide-3.jpg", alt: "K-Pop dance class" },
         },
       ] satisfies ClassStyleTile[],
     },
@@ -530,7 +521,7 @@ export const siteSource = {
       meta: {
         title: "Classes",
         description:
-          "Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop at County Hall Dance Centre.",
+          "Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre.",
       },
       hero: {
         overline: "Find your style",
@@ -539,7 +530,7 @@ export const siteSource = {
           "Adult dance and movement classes for every background and level — beginners welcome.",
       } satisfies PageHeroContent,
       intro:
-        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop. Every class is clearly labelled Beginner, Open Level or Intermediate.",
+        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate.",
       cta: { label: "View timetable", href: "/timetable", variant: "primary" },
       detailLabels: {
         ageGroups: "Who it's for",
@@ -661,30 +652,6 @@ export const siteSource = {
           ],
           ageGroups: [
             { label: "Adults", description: "Suitable for every age and fitness level." },
-          ],
-          cta: { label: "Book a class", href: "/timetable", variant: "primary" },
-        },
-        {
-          slug: "k-pop",
-          name: "K-Pop",
-          metaDescription:
-            "K-Pop dance classes for adults at County Hall Dance Centre — learn high-energy routines inspired by today's biggest K-Pop hits.",
-          hero: {
-            overline: "Energy & style",
-            title: "K-Pop",
-            subtitle: "High-energy choreography inspired by the world of K-Pop.",
-            image: { src: "/images/hero/slide-3.jpg", alt: "K-Pop dance class" },
-          },
-          intro: [
-            "Learn sharp, stylish routines inspired by the choreography of popular K-Pop songs. Classes break each routine into clear steps, building your coordination, stamina and performance confidence while you have a great time with a friendly group.",
-          ],
-          highlights: [
-            { title: "Full routines", description: "Learn choreography step by step." },
-            { title: "Performance skills", description: "Work on style, precision and expression." },
-            { title: "Fitness & fun", description: "A full-body workout that doesn't feel like one." },
-          ],
-          ageGroups: [
-            { label: "Adults of all levels", description: "No previous dance experience needed." },
           ],
           cta: { label: "Book a class", href: "/timetable", variant: "primary" },
         },

@@ -6,7 +6,6 @@ const STYLE_OPTIONS = [
   { title: "Tango", value: "tango" },
   { title: "Yoga", value: "yoga" },
   { title: "Tai Chi", value: "tai-chi" },
-  { title: "K-Pop", value: "k-pop" },
 ];
 
 const SLOT_OPTIONS = [

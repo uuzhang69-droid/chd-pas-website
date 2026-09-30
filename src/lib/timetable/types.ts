@@ -3,8 +3,7 @@ export type TimetableStyleId =
   | "chinese-dance"
   | "tango"
   | "yoga"
-  | "tai-chi"
-  | "k-pop";
+  | "tai-chi";
 
 export type TimetableSlot = {
   id: string;

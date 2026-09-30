@@ -52,16 +52,6 @@ export const TIMETABLE_SEED_SESSIONS: TimetableSession[] = [
     cancelledDates: [],
   },
   {
-    id: "seed-kpop-sat",
-    title: "K-Pop — Open Level",
-    style: "k-pop",
-    dayOfWeek: 5,
-    slotId: "slot-5",
-    instructor: "Guest faculty",
-    level: "Open",
-    cancelledDates: [],
-  },
-  {
     id: "seed-contemporary-sat",
     title: "Contemporary — Beginners",
     style: "contemporary",

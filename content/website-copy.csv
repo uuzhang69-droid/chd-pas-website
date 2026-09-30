@@ -88,8 +88,6 @@ home.classstyles.items.chinese_dance.image.alt,Homepage — classstyles › item
 home.classstyles.items.chinese_dance.name,Homepage — classstyles › items › chinese dance › name,Chinese Dance
 home.classstyles.items.contemporary.image.alt,Homepage — classstyles › items › contemporary › image › alt,Contemporary dance class
 home.classstyles.items.contemporary.name,Homepage — classstyles › items › contemporary › name,Contemporary
-home.classstyles.items.k_pop.image.alt,Homepage — classstyles › items › k pop › image › alt,K-Pop dance class
-home.classstyles.items.k_pop.name,Homepage — classstyles › items › k pop › name,K-Pop
 home.classstyles.items.tai_chi.image.alt,Homepage — classstyles › items › tai chi › image › alt,Tai Chi class
 home.classstyles.items.tai_chi.name,Homepage — classstyles › items › tai chi › name,Tai Chi
 home.classstyles.items.tango.image.alt,Homepage — classstyles › items › tango › image › alt,Tango class
@@ -97,7 +95,6 @@ home.classstyles.items.tango.name,Homepage — classstyles › items › tango �
 home.classstyles.items.yoga.image.alt,Homepage — classstyles › items › yoga › image › alt,Yoga class
 home.classstyles.items.yoga.name,Homepage — classstyles › items › yoga › name,Yoga
 home.classstyles.overline,Homepage — classstyles › overline,Our disciplines
-home.classstyles.subtitle,Homepage — classstyles › subtitle,"Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — beginners welcome."
 home.classstyles.title,Homepage — classstyles › title,Class styles
 home.events.items.contemporary_intensive_maya_chen.booknow.label,Homepage — events › items › contemporary intensive maya chen › booknow › label,Book Now
 home.events.items.contemporary_intensive_maya_chen.date,Homepage — events › items › contemporary intensive maya chen › date,Saturday 18 October 2026
@@ -238,8 +235,8 @@ pages.classes.detaillabels.backlink,Classes page › detaillabels › backlink,C
 pages.classes.hero.overline,Classes page › hero › overline,Find your style
 pages.classes.hero.subtitle,Classes page › hero › subtitle,Adult dance and movement classes for every background and level — beginners welcome.
 pages.classes.hero.title,Classes page › hero › title,Classes
-pages.classes.intro,Classes page › intro,"Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop. Every class is clearly labelled Beginner, Open Level or Intermediate."
-pages.classes.meta.description,Classes page › meta › description,"Adult classes in Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop at County Hall Dance Centre."
+pages.classes.intro,Classes page › intro,"Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate."
+pages.classes.meta.description,Classes page › meta › description,"Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre."
 pages.classes.meta.title,Classes page › meta › title,Classes
 pages.classes.styles.chinese_dance.agegroups.adults.description,Classes page › styles › chinese dance › agegroups › adults › description,Designed for adult learners at every stage.
 pages.classes.styles.chinese_dance.agegroups.adults.label,Classes page › styles › chinese dance › agegroups › adults › label,Adults

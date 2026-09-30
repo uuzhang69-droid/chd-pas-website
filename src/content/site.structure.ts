@@ -467,7 +467,6 @@ export const siteStructure = {
     "classStyles": {
       "overline": "@@COPY:home.classstyles.overline",
       "title": "@@COPY:home.classstyles.title",
-      "subtitle": "@@COPY:home.classstyles.subtitle",
       "items": [
         {
           "id": "style-contemporary",
@@ -517,16 +516,6 @@ export const siteStructure = {
           "image": {
             "src": "/images/styles/tai-chi.jpg",
             "alt": "@@COPY:home.classstyles.items.tai_chi.image.alt"
-          }
-        },
-        {
-          "id": "style-k-pop",
-          "name": "@@COPY:home.classstyles.items.k_pop.name",
-          "slug": "k-pop",
-          "href": "/classes/k-pop",
-          "image": {
-            "src": "/images/hero/slide-3.jpg",
-            "alt": "@@COPY:home.classstyles.items.k_pop.image.alt"
           }
         }
       ]
@@ -863,48 +852,6 @@ export const siteStructure = {
           ],
           "cta": {
             "label": "@@COPY:pages.classes.styles.tai_chi.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "slug": "k-pop",
-          "name": "@@COPY:pages.classes.styles.k_pop.name",
-          "metaDescription": "@@COPY:pages.classes.styles.k_pop.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.k_pop.hero.overline",
-            "title": "@@COPY:pages.classes.styles.k_pop.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.k_pop.hero.subtitle",
-            "image": {
-              "src": "/images/hero/slide-3.jpg",
-              "alt": "@@COPY:pages.classes.styles.k_pop.hero.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.k_pop.intro.0"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.k_pop.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.k_pop.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.k_pop.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.k_pop.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.k_pop.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.k_pop.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.k_pop.agegroups.adults_of_all_levels.label",
-              "description": "@@COPY:pages.classes.styles.k_pop.agegroups.adults_of_all_levels.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.k_pop.cta.label",
             "href": "/timetable",
             "variant": "primary"
           }
