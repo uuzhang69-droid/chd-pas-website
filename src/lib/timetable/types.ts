@@ -8,6 +8,8 @@ export type TimetableStyleId =
 export type TimetableSlot = {
   id: string;
   label: string;
+  startMinutes: number;
+  endMinutes: number;
 };
 
 export type TimetableSession = {
@@ -22,6 +24,11 @@ export type TimetableSession = {
   cancelledDates: string[];
 };
 
-export type TimetableCell = TimetableSession & {
+export type TimetablePlacedClass = TimetableSession & {
   date: string;
+  timeLabel: string;
+  startMinutes: number;
+  endMinutes: number;
+  topPercent: number;
+  heightPercent: number;
 };

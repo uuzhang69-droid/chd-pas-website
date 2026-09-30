@@ -2,13 +2,13 @@
 
 import { useMemo, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { buildTimetableGrid } from "@/lib/timetable/build-grid";
+import { buildTimetableColumns, overlappingSlotIds } from "@/lib/timetable/build-grid";
 import {
   TIMETABLE_SLOTS,
   TIMETABLE_STYLE_ORDER,
   TIMETABLE_STYLES,
 } from "@/lib/timetable/constants";
-import type { TimetableCell, TimetableSession } from "@/lib/timetable/types";
+import type { TimetablePlacedClass, TimetableSession } from "@/lib/timetable/types";
 import {
   addDays,
   formatIsoDate,
@@ -38,48 +38,43 @@ type TimetableGridProps = {
 
 type HoverTarget = {
   dayIndex: number;
-  slotId: string;
+  slotIds: string[];
+  classId: string;
 };
 
-function ClassCell({
-  cell,
+function ClassBlock({
+  placed,
   isHovered,
   onHover,
   onLeave,
 }: {
-  cell: TimetableCell | null;
+  placed: TimetablePlacedClass;
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
 }) {
-  const cellShellClass =
-    "box-border flex h-full min-h-[5.5rem] w-full flex-col justify-center overflow-hidden border border-taupe/20 px-2 py-2 sm:min-h-[5.5rem] sm:px-3 sm:py-3";
-
-  if (!cell) {
-    return (
-      <div
-        className={`${cellShellClass} bg-ivory/50 border-taupe/15`}
-        onMouseEnter={onLeave}
-      />
-    );
-  }
-
   return (
     <div
-      role="presentation"
-      data-style={cell.style}
-      className={`timetable-cell ${cellShellClass} text-left transition-colors duration-150 ${
-        isHovered ? "is-hovered" : ""
+      role="article"
+      aria-label={`${placed.title}, ${placed.timeLabel}`}
+      data-style={placed.style}
+      className={`timetable-cell pointer-events-auto absolute inset-x-1 z-0 overflow-hidden rounded-sm border border-taupe/20 px-1.5 py-1 text-left transition-colors duration-150 sm:px-2 ${
+        isHovered ? "is-hovered z-10" : ""
       }`}
+      style={{
+        top: `${placed.topPercent}%`,
+        height: `calc(${placed.heightPercent}% - 2px)`,
+      }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
-      <p className="text-small font-semibold leading-snug break-words text-inherit">{cell.title}</p>
-      {(cell.level || cell.instructor) && (
-        <p className="timetable-cell-meta mt-1 text-[11px] leading-snug text-charcoal/75 sm:text-xs">
-          {[cell.level, cell.instructor].filter(Boolean).join(" · ")}
-        </p>
-      )}
+      <p className="text-small font-semibold leading-snug break-words text-inherit">
+        {placed.title}
+      </p>
+      <p className="timetable-cell-meta mt-0.5 text-[11px] leading-snug text-charcoal/75 sm:text-xs">
+        {placed.timeLabel}
+        {placed.instructor ? ` · ${placed.instructor}` : ""}
+      </p>
     </div>
   );
 }
@@ -91,11 +86,19 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
     parseWeekParam(weekStartIso) ?? startOfWeekMonday(new Date()),
   );
   const [hover, setHover] = useState<HoverTarget | null>(null);
-  const [mobileDayIndex, setMobileDayIndex] = useState(0);
+  const [mobileDayIndex, setMobileDayIndex] = useState(() => {
+    const start = parseWeekParam(weekStartIso) ?? startOfWeekMonday(new Date());
+    const today = new Date();
+    if (isSameWeek(start, today)) {
+      const jsDay = today.getDay();
+      return jsDay === 0 ? 6 : jsDay - 1;
+    }
+    return 1;
+  });
   const [pickerValue, setPickerValue] = useState(formatIsoDate(weekStart));
 
   const weekDays = useMemo(() => getWeekDays(weekStart), [weekStart]);
-  const grid = useMemo(() => buildTimetableGrid(sessions, weekStart), [sessions, weekStart]);
+  const columns = useMemo(() => buildTimetableColumns(sessions, weekStart), [sessions, weekStart]);
 
   function navigateToWeek(date: Date) {
     const monday = startOfWeekMonday(date);
@@ -111,6 +114,41 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
   }
 
   const isCurrentWeek = isSameWeek(weekStart, new Date());
+
+  function renderDayColumn(dayIndex: number, key: string) {
+    return (
+      <div key={key} className="timetable-day-column relative overflow-hidden border-l border-taupe/20">
+        {TIMETABLE_SLOTS.map((slot) => {
+          const highlighted = hover?.slotIds.includes(slot.id) ?? false;
+          return (
+            <div
+              key={slot.id}
+              className={`timetable-day-row border-b border-taupe/20 ${
+                highlighted ? "bg-rose/10" : ""
+              }`}
+            />
+          );
+        })}
+        <div className="pointer-events-none absolute inset-0 z-[1]">
+          {columns[dayIndex].map((placed) => (
+            <ClassBlock
+              key={placed.id}
+              placed={placed}
+              isHovered={hover?.classId === placed.id}
+              onHover={() =>
+                setHover({
+                  dayIndex,
+                  classId: placed.id,
+                  slotIds: overlappingSlotIds(placed.startMinutes, placed.endMinutes),
+                })
+              }
+              onLeave={() => setHover(null)}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <section className="border-b border-taupe/30 py-12 md:py-16" aria-labelledby="timetable-grid-heading">
@@ -189,68 +227,43 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
         </ul>
 
         {/* Desktop grid */}
-        <div className="mt-8 hidden overflow-hidden rounded-sm border border-taupe/30 bg-ivory shadow-sm lg:block">
+        <div className="mt-8 hidden rounded-sm border border-taupe/30 bg-ivory shadow-sm lg:block">
           <div className="overflow-x-auto">
-          <table className="timetable-grid w-full min-w-[880px] table-fixed border-collapse">
-            <colgroup>
-              <col className="w-28" />
-              {weekDays.map((day) => (
-                <col key={day.iso} />
-              ))}
-            </colgroup>
-            <thead>
-              <tr>
-                <th className="border border-taupe/25 bg-blush/30 p-2" scope="col" />
-                {weekDays.map((day, dayIndex) => {
-                  const dayHighlighted = hover?.dayIndex === dayIndex;
-                  return (
-                    <th
-                      key={day.iso}
-                      scope="col"
-                      className={`border border-taupe/25 p-2 text-center transition-colors ${
-                        dayHighlighted ? "bg-rose/25 text-charcoal" : "bg-blush/30 text-charcoal"
-                      }`}
-                    >
-                      <span className="block text-small font-semibold">{day.weekday}</span>
-                      <span className="block text-xs text-charcoal/70">{day.label}</span>
-                    </th>
-                  );
-                })}
-              </tr>
-            </thead>
-            <tbody>
-              {TIMETABLE_SLOTS.map((slot) => {
-                const slotHighlighted = hover?.slotId === slot.id;
+            <div className="timetable-board min-w-[960px]">
+              <div className="timetable-corner border-b border-r border-taupe/25 bg-blush/30" />
+              {weekDays.map((day, dayIndex) => {
+                const dayHighlighted = hover?.dayIndex === dayIndex;
                 return (
-                  <tr key={slot.id}>
-                    <th
-                      scope="row"
-                      className={`h-full border border-taupe/25 px-2 py-3 text-left text-small font-medium transition-colors ${
-                        slotHighlighted ? "bg-rose/25 text-charcoal" : "bg-blush/20 text-charcoal/80"
+                  <div
+                    key={day.iso}
+                    className={`border-b border-taupe/25 p-2 text-center ${
+                      dayHighlighted ? "bg-rose/25 text-charcoal" : "bg-blush/30 text-charcoal"
+                    }`}
+                  >
+                    <span className="block text-small font-semibold">{day.weekday}</span>
+                    <span className="block text-xs text-charcoal/70">{day.label}</span>
+                  </div>
+                );
+              })}
+
+              <div className="timetable-time-axis">
+                {TIMETABLE_SLOTS.map((slot) => {
+                  const highlighted = hover?.slotIds.includes(slot.id) ?? false;
+                  return (
+                    <div
+                      key={slot.id}
+                      className={`flex items-center border-b border-r border-taupe/25 px-2 text-left text-small font-medium whitespace-nowrap last:border-b-0 ${
+                        highlighted ? "bg-rose/25 text-charcoal" : "bg-blush/20 text-charcoal/80"
                       }`}
                     >
                       {slot.label}
-                    </th>
-                    {weekDays.map((day, dayIndex) => {
-                      const cell = grid[slot.id]?.[dayIndex] ?? null;
-                      const isHovered =
-                        hover?.dayIndex === dayIndex && hover?.slotId === slot.id;
-                      return (
-                        <td key={`${slot.id}-${day.iso}`} className="h-full p-0 align-stretch">
-                          <ClassCell
-                            cell={cell}
-                            isHovered={isHovered}
-                            onHover={() => setHover({ dayIndex, slotId: slot.id })}
-                            onLeave={() => setHover(null)}
-                          />
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {weekDays.map((day, dayIndex) => renderDayColumn(dayIndex, `${day.iso}-column`))}
+            </div>
           </div>
         </div>
 
@@ -281,31 +294,24 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
           </div>
 
           <div className="mt-4 overflow-hidden rounded-sm border border-taupe/30 bg-ivory">
-            {TIMETABLE_SLOTS.map((slot) => {
-              const cell = grid[slot.id]?.[mobileDayIndex] ?? null;
-              const isHovered =
-                hover?.dayIndex === mobileDayIndex && hover?.slotId === slot.id;
-              return (
-                <div
-                  key={slot.id}
-                  className="grid min-h-[5.5rem] grid-cols-[7.5rem_1fr] border-b border-taupe/20 last:border-b-0"
-                >
-                  <div
-                    className={`flex h-full min-h-[5.5rem] items-center border-r border-taupe/25 px-2 py-2 text-small font-medium ${
-                      hover?.slotId === slot.id ? "bg-rose/25" : "bg-blush/20"
-                    }`}
-                  >
-                    {slot.label}
-                  </div>
-                  <ClassCell
-                    cell={cell}
-                    isHovered={isHovered}
-                    onHover={() => setHover({ dayIndex: mobileDayIndex, slotId: slot.id })}
-                    onLeave={() => setHover(null)}
-                  />
-                </div>
-              );
-            })}
+            <div className="timetable-board timetable-board-mobile">
+              <div className="timetable-time-axis">
+                {TIMETABLE_SLOTS.map((slot) => {
+                  const highlighted = hover?.slotIds.includes(slot.id) ?? false;
+                  return (
+                    <div
+                      key={slot.id}
+                      className={`flex items-center border-b border-r border-taupe/25 px-2 text-small font-medium last:border-b-0 ${
+                        highlighted ? "bg-rose/25" : "bg-blush/20"
+                      }`}
+                    >
+                      {slot.label}
+                    </div>
+                  );
+                })}
+              </div>
+              {renderDayColumn(mobileDayIndex, "mobile-day")}
+            </div>
           </div>
         </div>
 

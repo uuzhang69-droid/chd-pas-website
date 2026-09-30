@@ -153,15 +153,37 @@ body {
   animation: slide-in-right 0.25s ease-out forwards;
 }
 
-/* Timetable grid — equal row heights, content contained in cells */
-.timetable-grid tbody tr {
-  height: 1px;
+/* Timetable grid — two-hour rows from 10:30 to 20:30, then 20:30 to 21:30 */
+.timetable-board {
+  --tt-row-height: 10rem;
+  --tt-last-row-height: 5rem;
+  display: grid;
+  grid-template-columns: 7.5rem repeat(7, minmax(0, 1fr));
+  grid-template-rows: auto auto;
 }
 
-.timetable-grid tbody td,
-.timetable-grid tbody th[scope="row"] {
-  height: 100%;
-  vertical-align: stretch;
+.timetable-board-mobile {
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  grid-template-rows: auto;
+}
+
+.timetable-corner {
+  min-height: 3.25rem;
+}
+
+.timetable-time-axis,
+.timetable-day-column {
+  display: grid;
+  grid-template-rows: repeat(5, var(--tt-row-height)) var(--tt-last-row-height);
+}
+
+.timetable-day-row {
+  min-height: 0;
+}
+
+.timetable-day-column .timetable-day-row:last-of-type,
+.timetable-time-axis > :last-child {
+  border-bottom-width: 0;
 }
 
 /* Timetable class cells — distinct fills (brand + clear hue separation) */
