@@ -1,10 +1,10 @@
-import { siteSource } from "@/content/site.source";
+import { siteContent } from "@/content/site";
 import { VenueSpacesSection } from "@/components/venue-hire/VenueSpacesSection";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 export function VenueHireContent() {
-  const page = siteSource.pages.venueHire.overview;
+  const page = siteContent.pages.venueHire.overview;
 
   return (
     <>

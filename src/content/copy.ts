@@ -902,7 +902,8 @@ export const copy = {
   "pages.studiohire.overview.facts.items.3": "5 minutes' walk from Waterloo and Westminster",
   "pages.studiohire.overview.facts.title": "Key facts",
   "pages.studiohire.overview.gallery.0.alt": "Main venue floor with natural light",
-  "pages.studiohire.overview.gallery.1.alt": "Spacious dance venue at County Hall",
+  "pages.studiohire.overview.gallery.1.alt":
+    "Sunlit wooden-floor hall with tall windows at County Hall",
   "pages.studiohire.overview.gallery.2.alt": "Venue set up for classes and workshops",
   "pages.studiohire.overview.gallery.3.alt": "Professional dance space on the South Bank",
   "pages.studiohire.overview.hero.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",

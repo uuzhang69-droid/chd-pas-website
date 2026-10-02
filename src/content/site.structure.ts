@@ -1402,7 +1402,9 @@ export const siteStructure = {
               "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body",
               "image": {
                 "src": "/images/venue/vinyl-floor.jpg",
-                "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt"
+                "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt",
+                "width": 1024,
+                "height": 768
               }
             },
             {
@@ -1413,8 +1415,10 @@ export const siteStructure = {
               "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.idealfor",
               "body": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.body",
               "image": {
-                "src": "/images/hero/slide-4.png",
-                "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt"
+                "src": "/images/venue/wooden-floor-hall.jpg",
+                "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt",
+                "width": 1024,
+                "height": 768
               }
             }
           ],

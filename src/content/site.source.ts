@@ -1172,6 +1172,8 @@ export const siteSource = {
               image: {
                 src: "/images/venue/vinyl-floor.jpg",
                 alt: "Vinyl-floor dance venue with ballet barres and tall windows at County Hall",
+                width: 1024,
+                height: 768,
               },
             },
             {
@@ -1183,8 +1185,10 @@ export const siteSource = {
                 "Workshops, social dances, performances, parties, exhibitions and corporate events",
               body: "Our largest space, with a wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
               image: {
-                src: "/images/hero/slide-4.png",
-                alt: "Spacious dance venue at County Hall",
+                src: "/images/venue/wooden-floor-hall.jpg",
+                alt: "Sunlit wooden-floor hall with tall windows at County Hall",
+                width: 1024,
+                height: 768,
               },
             },
           ],

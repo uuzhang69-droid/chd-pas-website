@@ -31,8 +31,8 @@ export function VenueSpacesSection({ title, items, wholeVenue }: VenueSpacesSect
     <section className="py-16 md:py-24">
       <Container>
         <h2 className="text-h2 text-charcoal">{title}</h2>
-        <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-stretch">
-          <div className="flex flex-col gap-6 rounded-sm border border-rose/25 bg-ivory p-6 md:p-8">
+        <div className="mt-8 grid gap-8 md:grid-cols-2 md:items-stretch">
+          <div className="flex h-full flex-col gap-6 rounded-sm border border-rose/25 bg-ivory p-6 md:p-8">
             {items.map((space) => {
               const isActive = space.id === activeId;
               return (
@@ -66,24 +66,27 @@ export function VenueSpacesSection({ title, items, wholeVenue }: VenueSpacesSect
                 </article>
               );
             })}
-            <p className="text-body-lg text-charcoal/80">{wholeVenue}</p>
           </div>
 
-          <div className="relative min-h-[280px] overflow-hidden rounded-sm border border-taupe/30 bg-blush/20 shadow-sm sm:min-h-[320px] lg:min-h-full lg:h-full">
-            <Image
-              key={activeSpace.id}
-              src={activeSpace.image.src}
-              alt={activeSpace.image.alt}
-              fill
-              className="object-cover transition-opacity duration-300"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-            <p className="absolute bottom-0 left-0 right-0 bg-charcoal/55 px-4 py-2 text-small text-ivory">
-              {activeSpace.title}
-            </p>
+          <div className="flex h-full flex-col rounded-sm border border-rose/25 bg-ivory p-6 md:p-8">
+            <div className="relative w-full overflow-hidden rounded-sm border border-taupe/30 bg-blush/20 shadow-sm">
+              <Image
+                key={activeSpace.id}
+                src={activeSpace.image.src}
+                alt={activeSpace.image.alt}
+                width={activeSpace.image.width ?? 1024}
+                height={activeSpace.image.height ?? 768}
+                className="h-auto w-full transition-opacity duration-300"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              <p className="absolute bottom-0 left-0 right-0 bg-charcoal/55 px-4 py-2 text-small text-ivory">
+                {activeSpace.title}
+              </p>
+            </div>
           </div>
         </div>
+        <p className="text-body-lg mt-8 text-charcoal/80">{wholeVenue}</p>
       </Container>
     </section>
   );
