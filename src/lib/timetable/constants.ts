@@ -31,6 +31,11 @@ export const CLASS_SLOT_TIMES: Record<
     endMinutes: minutes(13, 20),
     timeLabel: "12:30 – 1:20 pm",
   },
+  "slot-1530-1700": {
+    startMinutes: minutes(15, 30),
+    endMinutes: minutes(17, 0),
+    timeLabel: "3:30 – 5:00 pm",
+  },
   "slot-1530-1730": {
     startMinutes: minutes(15, 30),
     endMinutes: minutes(17, 30),

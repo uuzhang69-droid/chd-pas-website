@@ -11,6 +11,7 @@ const STYLE_OPTIONS = [
 const SLOT_OPTIONS = [
   { title: "10:30 am – 12:00 pm", value: "slot-1030-1200" },
   { title: "12:30 – 1:20 pm", value: "slot-1230-1320" },
+  { title: "3:30 – 5:00 pm", value: "slot-1530-1700" },
   { title: "3:30 – 5:30 pm", value: "slot-1530-1730" },
   { title: "6:30 – 7:20 pm", value: "slot-1830-1920" },
   { title: "6:30 – 7:30 pm", value: "slot-1830-1930" },
