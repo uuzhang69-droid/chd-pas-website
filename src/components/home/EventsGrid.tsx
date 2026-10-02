@@ -4,6 +4,7 @@ import { siteContent } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getEventCardCta } from "@/lib/events/event-cta";
 
 export function EventsGrid() {
   const { events } = siteContent.home;
@@ -55,7 +56,7 @@ export function EventsGrid() {
                   <p className="text-small mt-2 text-charcoal/60">{event.location}</p>
                 )}
                 <div className="mt-auto pt-5">
-                  <Button {...event.bookNow} className="w-full !py-2.5" />
+                  <Button {...getEventCardCta(event)} className="w-full !py-2.5" />
                 </div>
               </div>
             </article>

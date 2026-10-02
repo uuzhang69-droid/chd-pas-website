@@ -24,8 +24,8 @@ export default async function Home({ searchParams }: HomePageProps) {
     <PageShell>
       <HeroSlider />
       <QuickActions />
-      <EventsGrid />
       <HomeTimetable weekStartIso={weekStartIso} />
+      <EventsGrid />
       <ClassStyles />
       <AboutTeaser />
       <PrivateEventsPromo />

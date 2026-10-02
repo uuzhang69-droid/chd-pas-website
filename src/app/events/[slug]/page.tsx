@@ -12,6 +12,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionedPage } from "@/components/ui/SectionedPage";
+import { isEventBeforeToday } from "@/lib/events/event-cta";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -111,9 +112,11 @@ export default async function EventDetailPage({ params }: PageProps) {
                   </div>
                 )}
               </dl>
-              <div className="mt-8">
-                <Button {...event.bookNow} />
-              </div>
+              {!isEventBeforeToday(event.dateIso) && (
+                <div className="mt-8">
+                  <Button {...event.bookNow} />
+                </div>
+              )}
             </div>
           </div>
         </Container>

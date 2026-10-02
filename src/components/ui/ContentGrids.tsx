@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ClassStyleTile, CourseSummary, EventCard } from "@/content/types";
+import { getEventCardCta, isEventBeforeToday } from "@/lib/events/event-cta";
 import { siteContent } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 
@@ -103,13 +104,15 @@ export function EventListingGrid({ items }: { items: EventCard[] }) {
               <p className="text-body mt-3 flex-1 text-charcoal/75">{event.excerpt}</p>
             )}
             <div className="mt-5 flex flex-wrap gap-3">
-              <Button {...event.bookNow} className="!py-2.5" />
-              <Link
-                href={`/events/${event.slug}`}
-                className="inline-flex items-center text-small font-semibold text-rose hover:text-rose/80"
-              >
-                {eventDetailsLink}
-              </Link>
+              <Button {...getEventCardCta(event)} className="!py-2.5" />
+              {!isEventBeforeToday(event.dateIso) && (
+                <Link
+                  href={`/events/${event.slug}`}
+                  className="inline-flex items-center text-small font-semibold text-rose hover:text-rose/80"
+                >
+                  {eventDetailsLink}
+                </Link>
+              )}
             </div>
           </div>
         </article>

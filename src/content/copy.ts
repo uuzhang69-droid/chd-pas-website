@@ -119,7 +119,7 @@ export const copy = {
   "home.events.items.winter_showcase.location": "County Hall Theatre",
   "home.events.items.winter_showcase.title": "Winter Showcase — Tickets On Sale",
   "home.events.overline": "What's on",
-  "home.events.title": "Upcoming masterclasses & events",
+  "home.events.title": "Masterclasses & Events",
   "home.events.viewall.label": "View all events",
   "home.hero.nextlabel": "Next",
   "home.hero.previouslabel": "Previous",

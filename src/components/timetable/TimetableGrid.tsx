@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { buildTimetableBookingHref } from "@/lib/timetable/booking-link";
 import { buildTimetableColumns, overlappingSlotIds } from "@/lib/timetable/build-grid";
@@ -91,16 +91,15 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
     parseWeekParam(weekStartIso) ?? startOfWeekMonday(new Date()),
   );
   const [hover, setHover] = useState<HoverTarget | null>(null);
-  const [mobileDayIndex, setMobileDayIndex] = useState(() => {
-    const start = parseWeekParam(weekStartIso) ?? startOfWeekMonday(new Date());
-    const today = new Date();
-    if (isSameWeek(start, today)) {
-      const jsDay = today.getDay();
-      return jsDay === 0 ? 6 : jsDay - 1;
-    }
-    return 1;
-  });
+  const [mobileDayIndex, setMobileDayIndex] = useState(0);
   const [pickerValue, setPickerValue] = useState(formatIsoDate(weekStart));
+
+  useEffect(() => {
+    const today = new Date();
+    if (!isSameWeek(weekStart, today)) return;
+    const jsDay = today.getDay();
+    setMobileDayIndex(jsDay === 0 ? 6 : jsDay - 1);
+  }, [weekStart]);
 
   const weekDays = useMemo(() => getWeekDays(weekStart), [weekStart]);
   const columns = useMemo(() => buildTimetableColumns(sessions, weekStart), [sessions, weekStart]);

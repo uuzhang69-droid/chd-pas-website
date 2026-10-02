@@ -297,7 +297,7 @@ export const siteSource = {
 
     events: {
       overline: "What's on",
-      title: "Upcoming masterclasses & events",
+      title: "Masterclasses & Events",
       viewAll: { label: "View all events", href: "/events" },
       items: [
         {
