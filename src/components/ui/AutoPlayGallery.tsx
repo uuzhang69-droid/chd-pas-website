@@ -12,6 +12,8 @@ type AutoPlayGalleryProps = {
   frameClassName?: string;
   sizes?: string;
   label: string;
+  /** Size the frame to each image’s aspect ratio (width 100%, natural height). */
+  naturalSize?: boolean;
 };
 
 export function AutoPlayGallery({
@@ -21,6 +23,7 @@ export function AutoPlayGallery({
   frameClassName = "aspect-[4/3]",
   sizes = "(max-width: 768px) 100vw, 50vw",
   label,
+  naturalSize = false,
 }: AutoPlayGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -34,6 +37,54 @@ export function AutoPlayGallery({
   }, [images.length, intervalMs, isPaused]);
 
   if (images.length === 0) return null;
+
+  if (naturalSize) {
+    const activeImage = images[activeIndex];
+    return (
+      <div
+        className={`relative w-full ${className}`}
+        aria-roledescription="carousel"
+        aria-label={label}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onFocusCapture={() => setIsPaused(true)}
+        onBlurCapture={() => setIsPaused(false)}
+      >
+        {images.map((image, index) => (
+          <div
+            key={`${image.src}-${index}`}
+            className={index === activeIndex ? "block" : "hidden"}
+            aria-hidden={index !== activeIndex}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width ?? 1024}
+              height={image.height ?? 682}
+              className="h-auto w-full rounded-sm border border-taupe/20 bg-blush/20 shadow-sm"
+              sizes={sizes}
+              priority={index === 0}
+            />
+          </div>
+        ))}
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
+            {images.map((image, index) => (
+              <button
+                key={`dot-${image.src}-${index}`}
+                type="button"
+                className={`h-2 w-2 rounded-full shadow-sm transition-colors ${
+                  index === activeIndex ? "bg-burgundy" : "bg-charcoal/40"
+                }`}
+                aria-label={`Show image ${index + 1} of ${images.length}`}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div

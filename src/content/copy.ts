@@ -650,6 +650,8 @@ export const copy = {
     "An inspiring programme featuring Contemporary Dance & Painting, Classical Ballet, Calligraphy & Dance, Live Piano & Violin, Tea Culture Performance, Tai Chi, Argentine Tango and an Interactive Dance Experience.",
   "pages.events.items.dance_meets_arts.description.9":
     "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
+  "pages.events.items.dance_meets_arts.gallery.alt":
+    "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
   "pages.events.items.dance_meets_arts.excerpt":
     "Dance Meets Arts at County Hall celebrates dance, music and visual arts on London's South Bank with free live performances.",
   "pages.events.items.dance_meets_arts.image.alt":

@@ -45,6 +45,7 @@ export type EventCard = {
   inlineGalleries?: {
     beforeHeading: string;
     images: ImageAsset[];
+    variant?: "grid" | "autoplay";
   }[];
 };
 

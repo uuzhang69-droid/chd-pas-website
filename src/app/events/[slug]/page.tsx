@@ -114,10 +114,19 @@ export default async function EventDetailPage({ params }: PageProps) {
                   return (
                     <Fragment key={`block-${index}`}>
                       {inlineGallery && inlineGallery.images.length > 0 && (
-                        <EventInlineGallery
-                          images={inlineGallery.images}
-                          label={`${heading} schedule`}
-                        />
+                        inlineGallery.variant === "autoplay" ? (
+                          <AutoPlayGallery
+                            images={inlineGallery.images}
+                            label={`${heading} photos`}
+                            naturalSize
+                            sizes="(max-width: 1280px) 100vw, 768px"
+                          />
+                        ) : (
+                          <EventInlineGallery
+                            images={inlineGallery.images}
+                            label={`${heading} schedule`}
+                          />
+                        )
                       )}
                       {heading ? (
                         <h2 className="text-h3 pt-4 text-charcoal first:pt-0">{heading}</h2>

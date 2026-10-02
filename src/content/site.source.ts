@@ -956,6 +956,18 @@ export const siteSource = {
             src: "/images/events/dance-meets-arts.jpg",
             alt: "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
           },
+          inlineGalleries: [
+            {
+              beforeHeading: "Programme",
+              variant: "autoplay",
+              images: Array.from({ length: 16 }, (_, index) => ({
+                src: `/images/events/dance-meets-arts/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
+                alt: "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+                width: 1024,
+                height: 682,
+              })),
+            },
+          ],
           bookNow: {
             label: "Details",
             href: "/events/dance-meets-arts",
