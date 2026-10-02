@@ -24,8 +24,23 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/shop",
-        destination: "/",
+        source: "/events/contemporary-intensive-maya-chen",
+        destination: "/events/memory-of-china",
+        permanent: true,
+      },
+      {
+        source: "/events/junior-ballet-masterclass",
+        destination: "/events/autumn-concert-at-county-hall",
+        permanent: true,
+      },
+      {
+        source: "/events/musical-theatre-workshop-day",
+        destination: "/events/lunchtime-concert-series",
+        permanent: true,
+      },
+      {
+        source: "/events/winter-showcase",
+        destination: "/events/dance-meets-arts",
         permanent: true,
       },
     ];

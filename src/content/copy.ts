@@ -98,26 +98,30 @@ export const copy = {
   "home.classstyles.items.yoga.name": "Yoga",
   "home.classstyles.overline": "Our disciplines",
   "home.classstyles.title": "Class styles",
-  "home.events.items.contemporary_intensive_maya_chen.booknow.label": "Book Now",
-  "home.events.items.contemporary_intensive_maya_chen.date": "Saturday 18 October 2026",
-  "home.events.items.contemporary_intensive_maya_chen.image.alt": "Contemporary dance intensive workshop",
-  "home.events.items.contemporary_intensive_maya_chen.location": "Venue A",
-  "home.events.items.contemporary_intensive_maya_chen.title": "Contemporary Intensive with Maya Chen",
-  "home.events.items.junior_ballet_masterclass.booknow.label": "Book Now",
-  "home.events.items.junior_ballet_masterclass.date": "Sunday 26 October 2026",
-  "home.events.items.junior_ballet_masterclass.image.alt": "Junior ballet masterclass in progress",
-  "home.events.items.junior_ballet_masterclass.location": "Venue B",
-  "home.events.items.junior_ballet_masterclass.title": "Junior Ballet Masterclass",
-  "home.events.items.musical_theatre_workshop_day.booknow.label": "Book Now",
-  "home.events.items.musical_theatre_workshop_day.date": "Saturday 8 November 2026",
-  "home.events.items.musical_theatre_workshop_day.image.alt": "Musical theatre workshop participants on stage",
-  "home.events.items.musical_theatre_workshop_day.location": "Main Hall",
-  "home.events.items.musical_theatre_workshop_day.title": "Musical Theatre Workshop Day",
-  "home.events.items.winter_showcase.booknow.label": "Book Now",
-  "home.events.items.winter_showcase.date": "Friday 12 December 2026",
-  "home.events.items.winter_showcase.image.alt": "Winter showcase performance lighting",
-  "home.events.items.winter_showcase.location": "County Hall Theatre",
-  "home.events.items.winter_showcase.title": "Winter Showcase — Tickets On Sale",
+  "home.events.items.memory_of_china.booknow.label": "Book Now",
+  "home.events.items.memory_of_china.date": "Saturday 3 – Sunday 4 October 2026",
+  "home.events.items.memory_of_china.image.alt":
+    "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+  "home.events.items.memory_of_china.location": "Members' Terrace, County Hall",
+  "home.events.items.memory_of_china.title": "Memory of China",
+  "home.events.items.autumn_concert.booknow.label": "Book Now",
+  "home.events.items.autumn_concert.date": "Monday 19 October 2026, 7:30pm",
+  "home.events.items.autumn_concert.image.alt":
+    "Mika Enjo and Santy Masciarò in concert at County Hall",
+  "home.events.items.autumn_concert.location": "Council Chamber, County Hall",
+  "home.events.items.autumn_concert.title": "Autumn Concert at County Hall",
+  "home.events.items.lunchtime_concert_series.booknow.label": "Details",
+  "home.events.items.lunchtime_concert_series.date": "Friday 25 September 2026, 1pm",
+  "home.events.items.lunchtime_concert_series.image.alt":
+    "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
+  "home.events.items.lunchtime_concert_series.location": "Atrium, County Hall",
+  "home.events.items.lunchtime_concert_series.title": "Lunchtime Concert Series",
+  "home.events.items.dance_meets_arts.booknow.label": "Details",
+  "home.events.items.dance_meets_arts.date": "Saturday 8 August 2026, 7:00pm – 8:30pm",
+  "home.events.items.dance_meets_arts.image.alt":
+    "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
+  "home.events.items.dance_meets_arts.location": "Members' Terrace, County Hall",
+  "home.events.items.dance_meets_arts.title": "Dance Meets Arts",
   "home.events.overline": "What's on",
   "home.events.title": "Masterclasses & Events",
   "home.events.viewall.label": "View all events",
@@ -146,7 +150,7 @@ export const copy = {
   "home.hero.slides.hero_studio_hire.blurb": "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
   "home.hero.slides.hero_studio_hire.cta.label": "Venue Hire",
   "home.hero.slides.hero_studio_hire.headline": "Venue Hire",
-  "home.hero.slides.hero_studio_hire.image.alt": "Outdoor community dance performance with audience on the South Bank",
+  "home.hero.slides.hero_studio_hire.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",
   "home.newsletter.description": "Follow our journey and receive curated updates on classes, performances, and exclusive offers.",
   "home.newsletter.overline": "Join our circle",
   "home.newsletter.placeholder": "Email address",
@@ -513,39 +517,161 @@ export const copy = {
   "pages.events.hero.subtitle": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
   "pages.events.hero.title": "Events & Masterclasses",
   "pages.events.intro": "Book directly via the links below. Event payments are processed securely through Stripe — class bookings remain on our timetable system.",
-  "pages.events.items.contemporary_intensive_maya_chen.booknow.label": "Book Now",
-  "pages.events.items.contemporary_intensive_maya_chen.date": "Saturday 18 October 2026",
-  "pages.events.items.contemporary_intensive_maya_chen.description.0": "Join internationally recognised choreographer Maya Chen for a day of contemporary training at intermediate level and above.",
-  "pages.events.items.contemporary_intensive_maya_chen.description.1": "The morning focuses on floor work and release principles; the afternoon introduces excerpts from Maya's touring repertory.",
-  "pages.events.items.contemporary_intensive_maya_chen.description.2": "Please bring knee pads and water. Places are limited to 24 participants.",
-  "pages.events.items.contemporary_intensive_maya_chen.excerpt": "A full-day intensive exploring release technique and repertory with guest artist Maya Chen.",
-  "pages.events.items.contemporary_intensive_maya_chen.image.alt": "Contemporary dance intensive workshop",
-  "pages.events.items.contemporary_intensive_maya_chen.location": "Venue A",
-  "pages.events.items.contemporary_intensive_maya_chen.title": "Contemporary Intensive with Maya Chen",
-  "pages.events.items.junior_ballet_masterclass.booknow.label": "Book Now",
-  "pages.events.items.junior_ballet_masterclass.date": "Sunday 26 October 2026",
-  "pages.events.items.junior_ballet_masterclass.description.0": "Led by a guest RAD examiner, this masterclass refines alignment, épaulement, and petite allegro.",
-  "pages.events.items.junior_ballet_masterclass.description.1": "Suitable for students currently studying Grade 2–4 or equivalent.",
-  "pages.events.items.junior_ballet_masterclass.excerpt": "A special masterclass for junior ballet students aged 8–12.",
-  "pages.events.items.junior_ballet_masterclass.image.alt": "Junior ballet masterclass in progress",
-  "pages.events.items.junior_ballet_masterclass.location": "Venue B",
-  "pages.events.items.junior_ballet_masterclass.title": "Junior Ballet Masterclass",
-  "pages.events.items.musical_theatre_workshop_day.booknow.label": "Book Now",
-  "pages.events.items.musical_theatre_workshop_day.date": "Saturday 8 November 2026",
-  "pages.events.items.musical_theatre_workshop_day.description.0": "A lively day of triple-threat training, ending with a short sharing for friends and family.",
-  "pages.events.items.musical_theatre_workshop_day.description.1": "Open to ages 10–16 with some prior dance or drama experience recommended.",
-  "pages.events.items.musical_theatre_workshop_day.excerpt": "Sing, dance, and act through a full musical theatre workshop day.",
-  "pages.events.items.musical_theatre_workshop_day.image.alt": "Musical theatre workshop participants on stage",
-  "pages.events.items.musical_theatre_workshop_day.location": "Main Hall",
-  "pages.events.items.musical_theatre_workshop_day.title": "Musical Theatre Workshop Day",
-  "pages.events.items.winter_showcase.booknow.label": "Book Now",
-  "pages.events.items.winter_showcase.date": "Friday 12 December 2026",
-  "pages.events.items.winter_showcase.description.0": "Celebrate the talent of the CHD PAS community in an evening of ballet, contemporary, jazz, and musical theatre.",
-  "pages.events.items.winter_showcase.description.1": "Doors open at 18:30; performance begins at 19:00. Running time approximately 90 minutes including interval.",
-  "pages.events.items.winter_showcase.excerpt": "Our annual winter showcase featuring students from every discipline.",
-  "pages.events.items.winter_showcase.image.alt": "Winter showcase performance lighting",
-  "pages.events.items.winter_showcase.location": "County Hall Theatre",
-  "pages.events.items.winter_showcase.title": "Winter Showcase — Tickets On Sale",
+  "pages.events.items.memory_of_china.booknow.label": "Book Now",
+  "pages.events.items.memory_of_china.date": "Saturday 3 – Sunday 4 October 2026",
+  "pages.events.items.memory_of_china.description.0":
+    "The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank.",
+  "pages.events.items.memory_of_china.description.1":
+    "Across Saturday 3 and Sunday 4 October, County Hall Dance Centre will host a varied programme of performances, workshops and hands-on experiences. From the 2nd UK Chinese Yoga Festival, Chinese classical and ethnic dance to calligraphy, acupressure and Yunnan cultural showcases, the weekend offers different ways to discover and experience Chinese culture. Cultural exhibitions, traditional crafts, hands-on activities, a makers' market and tea culture will also feature throughout the festival.",
+  "pages.events.items.memory_of_china.description.2":
+    "Saturday's programme has been created especially with the Chinese community in mind and will be presented in Chinese and English, while Sunday's programme will be led primarily in English for international and local audiences. Everyone is welcome to join, and no previous experience is required.",
+  "pages.events.items.memory_of_china.description.3":
+    "The festival is presented by County Hall Dance Centre in collaboration with County Hall Arts, as part of a growing programme celebrating dance, culture and artistic collaboration at County Hall.",
+  "pages.events.items.memory_of_china.description.4": "# Saturday, 3 October 2026",
+  "pages.events.items.memory_of_china.description.5": "12:00 — Market Area Opens. Makers' market open.",
+  "pages.events.items.memory_of_china.description.6":
+    "13:00–15:00 — 2nd UK Chinese Yoga Festival. An afternoon dedicated to yoga, movement and wellbeing, featuring MYRing Yoga, Yin-Yang Balance, an interactive session and prize draw. £36 per person, payable on the day at the venue. Check-in from 12:30.",
+  "pages.events.items.memory_of_china.description.7":
+    "15:00–15:20 — Yunnan Cultural Showcase. Discover the diverse cultural traditions of Yunnan through an introduction to the region and its heritage.",
+  "pages.events.items.memory_of_china.description.8":
+    "15:20–15:25 — Dai Ethnic Dance Performance: Wan Tao. A performance showcasing the movement and traditions of Dai ethnic dance.",
+  "pages.events.items.memory_of_china.description.9":
+    "15:25–15:40 — Miao Ethnic Dance Performance: Cai Tang & Cultural Showcase. A Miao dance performance accompanied by an introduction to Miao culture and traditions.",
+  "pages.events.items.memory_of_china.description.10":
+    "15:45–17:00 — Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.",
+  "pages.events.items.memory_of_china.description.11":
+    "17:00–17:30 — Chinese Classical Dance Performance & Experience Class. An evening performance followed by an opportunity to experience Chinese classical dance. £10 per person, payable on the day at the venue.",
+  "pages.events.items.memory_of_china.description.12": "# Sunday, 4 October 2026",
+  "pages.events.items.memory_of_china.description.13": "12:00 — Market Area Opens. Makers' market open.",
+  "pages.events.items.memory_of_china.description.14":
+    "13:00–14:30 — Yoga Experience. An accessible introduction to yoga and movement, open to participants of all experience levels. £10 per person, payable on the day at the venue.",
+  "pages.events.items.memory_of_china.description.15":
+    "14:35–14:40 — Chinese Fusion Fan Veil Belly Dance. A short performance combining fan choreography with belly dance.",
+  "pages.events.items.memory_of_china.description.16":
+    "14:50–15:20 — Classical Dance Performance: The Old Story & Experience Class. A Chinese classical dance performance followed by an experience class inviting participants to explore the movement for themselves. £10 per person, payable on the day at the venue.",
+  "pages.events.items.memory_of_china.description.17":
+    "15:20–15:35 — East-West Cultural Harmony Music Society. Enjoy a live performance featuring music from Game of Thrones, Jasmine Flower and I Love You.",
+  "pages.events.items.memory_of_china.description.18":
+    "15:35–17:30 — Chinese Calligraphy Paper Scroll Workshop. Discover Chinese calligraphy and create your own paper scroll in a guided hands-on workshop. £12 per person / £20 for two people, payable on the day at the venue.",
+  "pages.events.items.memory_of_china.description.19":
+    "16:00–16:20 — Yunnan Cultural Showcase. An introduction to the diverse cultural traditions and heritage of Yunnan.",
+  "pages.events.items.memory_of_china.description.20":
+    "16:25–16:30 — Chinese Classical Dance Performance: Bu Gua. A performance showcasing the movement and traditions of Chinese dance.",
+  "pages.events.items.memory_of_china.description.21":
+    "16:30–16:35 — Dai Ethnic Dance Performance: Wan Tao & Cultural Showcase. The festival concludes with Dai dance and an introduction to Dai culture and traditions.",
+  "pages.events.items.memory_of_china.description.22": "# Entry & Booking",
+  "pages.events.items.memory_of_china.description.23":
+    "The festival is primarily a walk-in event, and visitors are welcome to drop in throughout the weekend.",
+  "pages.events.items.memory_of_china.description.24":
+    "Selected workshops and experience sessions require a participation fee, payable on the day at the venue. Visitors wishing to take part in these activities, prize draws and other festival activities are encouraged to register in advance via Eventbrite. Places are limited and subject to availability.",
+  "pages.events.items.memory_of_china.description.25": "# Organisers",
+  "pages.events.items.memory_of_china.description.26":
+    "Organised by County Hall Dance & Performing Arts School. Co-organised by Sen Yoga, RCDance, Yi Crafts, Lotus Realm and Inkjoygraphy.",
+  "pages.events.items.memory_of_china.description.27": "# Finding Us",
+  "pages.events.items.memory_of_china.description.28":
+    "Members' Terrace, The Queen's Walk, County Hall, Riverside Building, London SE1 7PB.",
+  "pages.events.items.memory_of_china.description.29":
+    "You should reach the County Hall Members' Terrace via the Queen's Walk on the riverside of the building. Look out for the gate leading to a staircase upwards, signposted for the Peacock Restaurant. This entrance is found between the London Dungeon and Shrek's Adventure on the Queen's Walk.",
+  "pages.events.items.memory_of_china.description.30":
+    "Should you have any questions regarding this festival, please contact us at info@countyhalldancecentre.com.",
+  "pages.events.items.memory_of_china.excerpt":
+    "A two-day celebration of traditional Chinese arts and culture at County Hall, with dance, yoga, calligraphy, crafts and hands-on experiences.",
+  "pages.events.items.memory_of_china.inline_galleries.saturday_schedule.alt":
+    "Memory of China festival schedule for Saturday 3 October 2026",
+  "pages.events.items.memory_of_china.inline_galleries.sunday_schedule.alt":
+    "Memory of China festival schedule for Sunday 4 October 2026",
+  "pages.events.items.memory_of_china.image.alt":
+    "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+  "pages.events.items.memory_of_china.location": "Members' Terrace, County Hall",
+  "pages.events.items.memory_of_china.tickets.saturday_tickets.label": "Saturday tickets",
+  "pages.events.items.memory_of_china.tickets.sunday_tickets.label": "Sunday tickets",
+  "pages.events.items.memory_of_china.title": "Memory of China: Chinese Traditional Arts and Culture Festival",
+  "pages.events.items.autumn_concert.booknow.label": "Book Now",
+  "pages.events.items.autumn_concert.date": "Monday 19 October 2026, 7:30pm",
+  "pages.events.items.autumn_concert.description.0":
+    "County Hall Arts is delighted to present an Autumn Concert in County Hall's historic Council Chamber - on the evening of Monday 19th October 2026.",
+  "pages.events.items.autumn_concert.description.1":
+    "Eminent Japanese flautist Mika Enjo and celebrated classical guitarist Santy Masciarò will bring together music from a range of periods and styles - including Bach's Sonata in C Major, Piazzolla's Histoire du Tango and an arrangement of the timeless Greensleeves.",
+  "pages.events.items.autumn_concert.description.2":
+    "Please join this unique duo for a special Autumn evening of music - expressed through the rich and distinctive qualities of flute and guitar. The concert begins at 7:30pm. Complimentary tickets are available via Eventbrite.",
+  "pages.events.items.autumn_concert.description.3":
+    "Hailing from Kyoto, Mika studied under renowned German flautist Paul Meisen and has played across Europe and Japan - including as founding member of the Kyoto Quartet (who memorably performed in the Council Chamber last year). Santy, meanwhile, is originally from Italy where he studied classical guitar at the Conservatorium of Pescara. Now based in London, he has travelled throughout Europe to perform and teach masterclasses.",
+  "pages.events.items.autumn_concert.description.4":
+    "Mika was last at County Hall in June when she participated in the spellbinding Love & Peace concert. She is also active as a composer under the name Mika T and her piece Sonata of Souls features in the programme on 19th October.",
+  "pages.events.items.autumn_concert.description.5":
+    "Once again, the magnificent Council Chamber provides a setting where cultures meet through music: a flute from the East and a guitar from the West, bringing together the elegance of the Baroque, the expressive character of the classical tradition and the vibrant rhythms of Latin America.",
+  "pages.events.items.autumn_concert.description.6":
+    "Join us at County Hall on the South Bank for this enchanting concert celebrating the versatility and beauty of these two instruments - delicate, lyrical and full of colour.",
+  "pages.events.items.autumn_concert.excerpt":
+    "Mika Enjo and Santy Masciarò perform Bach, Piazzolla and more in an intimate Autumn Concert at County Hall's historic Council Chamber.",
+  "pages.events.items.autumn_concert.image.alt":
+    "Mika Enjo and Santy Masciarò in concert at County Hall",
+  "pages.events.items.autumn_concert.location": "Council Chamber, County Hall",
+  "pages.events.items.autumn_concert.title": "Autumn Concert at County Hall",
+  "pages.events.items.lunchtime_concert_series.booknow.label": "Details",
+  "pages.events.items.lunchtime_concert_series.date": "Friday 25 September 2026, 1pm",
+  "pages.events.items.lunchtime_concert_series.description.0":
+    "The County Hall Quartet return for another laid back, informal afternoon concert of classical music at County Hall.",
+  "pages.events.items.lunchtime_concert_series.description.1":
+    "Every month, the quartet perform a new programme of music, this next event is themed 'Encounters'.",
+  "pages.events.items.lunchtime_concert_series.description.2":
+    "On this occasion, we are delighted to welcome our new cellist, Meera Priyanka Raja, who will open the concert with a special solo performance.",
+  "pages.events.items.lunchtime_concert_series.description.3":
+    "So come along to discover the latest programme and enjoy a peaceful afternoon of chamber music - where no words are necessary as music becomes our common language.",
+  "pages.events.items.lunchtime_concert_series.description.4": "# The County Hall Quartet",
+  "pages.events.items.lunchtime_concert_series.description.5":
+    "The County Hall Quartet comprises four acclaimed and award-winning musicians: Stefano Marzanni (Piano), Emma Arizza (Violin), Natalia Solis Paredes (Viola) and Meera Priyanka Raja (Cello).",
+  "pages.events.items.lunchtime_concert_series.description.6": "# Finding Us",
+  "pages.events.items.lunchtime_concert_series.description.7":
+    "Attendees should enter County Hall via the main entrance on Belvedere Road and follow directions for the concert in the Atrium.",
+  "pages.events.items.lunchtime_concert_series.excerpt":
+    "Enjoy a relaxed lunchtime concert with the County Hall Quartet.",
+  "pages.events.items.lunchtime_concert_series.image.alt":
+    "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
+  "pages.events.items.lunchtime_concert_series.location": "Atrium, County Hall",
+  "pages.events.items.lunchtime_concert_series.title": "Lunchtime Concert Series",
+  "pages.events.items.dance_meets_arts.booknow.label": "Details",
+  "pages.events.items.dance_meets_arts.date": "Saturday 8 August 2026, 7:00pm – 8:30pm",
+  "pages.events.items.dance_meets_arts.description.0":
+    "Join us for an inspiring summer evening celebrating the dialogue between dance and the arts in one of London's most iconic cultural settings.",
+  "pages.events.items.dance_meets_arts.description.1":
+    "Dance Meets Arts is the inaugural event presented by County Hall Dance Centre in collaboration with County Hall Arts, exploring how movement can be inspired by painting, sculpture, music and architecture. Set against the spectacular backdrop of the River Thames and the London skyline, the evening invites audiences to experience dance not simply as performance, but as a living artistic conversation.",
+  "pages.events.items.dance_meets_arts.description.2":
+    "Throughout the evening, professional artists will present a series of performances inspired by works of visual art and music, demonstrating how different creative disciplines can influence and enrich one another. The event reflects County Hall Arts' vision of bringing together artists, audiences and ideas through meaningful cultural experiences.",
+  "pages.events.items.dance_meets_arts.description.3":
+    "Whether you are a dance enthusiast, an art lover, or simply looking for a unique summer evening on London's South Bank, Dance Meets Arts offers a warm welcome to everyone.",
+  "pages.events.items.dance_meets_arts.description.4":
+    "The evening also marks the introduction of the County Hall Dance Centre, a new artistic community dedicated to dance, creativity and cultural exchange. Guests will have the opportunity to meet the team, receive a free dance class, discover future classes and events, and learn more about becoming part of this exciting new initiative.",
+  "pages.events.items.dance_meets_arts.description.5": "Admission is free.",
+  "pages.events.items.dance_meets_arts.description.6": "# Programme",
+  "pages.events.items.dance_meets_arts.description.7":
+    "An Artistic Journey Through Movement. Dance performance inspired by the arts.",
+  "pages.events.items.dance_meets_arts.description.8":
+    "An inspiring programme featuring Contemporary Dance & Painting, Classical Ballet, Calligraphy & Dance, Live Piano & Violin, Tea Culture Performance, Tai Chi, Argentine Tango and an Interactive Dance Experience.",
+  "pages.events.items.dance_meets_arts.description.9":
+    "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
+  "pages.events.items.dance_meets_arts.excerpt":
+    "Dance Meets Arts at County Hall celebrates dance, music and visual arts on London's South Bank with free live performances.",
+  "pages.events.items.dance_meets_arts.image.alt":
+    "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
+  "pages.events.items.dance_meets_arts.location": "Members' Terrace, County Hall",
+  "pages.events.items.dance_meets_arts.title": "Dance Meets Arts",
+  "pages.events.items.opening_day.booknow.label": "Details",
+  "pages.events.items.opening_day.date": "Thursday 10 September 2026",
+  "pages.events.items.opening_day.description.0":
+    "County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.",
+  "pages.events.items.opening_day.description.1":
+    "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
+  "pages.events.items.opening_day.excerpt":
+    "County Hall Dance Centre opened its doors at County Hall on 10 September 2026.",
+  "pages.events.items.opening_day.image.alt": "County Hall Dance Centre Opening Day",
+  "pages.events.items.opening_day.gallery.0.alt": "Ribbon-cutting at County Hall Dance Centre Opening Day",
+  "pages.events.items.opening_day.gallery.1.alt": "Celebration table at the Opening Day",
+  "pages.events.items.opening_day.gallery.2.alt": "Dressing area and costume rails at Opening Day",
+  "pages.events.items.opening_day.gallery.3.alt": "Flowers marking County Hall Dance Centre Opening Day",
+  "pages.events.items.opening_day.gallery.4.alt": "County Hall Dance Centre crest on Opening Day",
+  "pages.events.items.opening_day.location": "County Hall",
+  "pages.events.items.opening_day.title": "County Hall Dance Centre – Opening Day",
   "pages.events.meta.description": "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
   "pages.events.meta.title": "Events & Masterclasses",
   "pages.faq.cta.button.label": "Contact us",
@@ -777,7 +903,7 @@ export const copy = {
   "pages.studiohire.overview.gallery.1.alt": "Spacious dance venue at County Hall",
   "pages.studiohire.overview.gallery.2.alt": "Venue set up for classes and workshops",
   "pages.studiohire.overview.gallery.3.alt": "Professional dance space on the South Bank",
-  "pages.studiohire.overview.hero.image.alt": "Venue space available for hire at County Hall",
+  "pages.studiohire.overview.hero.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",
   "pages.studiohire.overview.hero.overline": "County Hall arts space",
   "pages.studiohire.overview.hero.subtitle": "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
   "pages.studiohire.overview.hero.title": "Venue Hire",

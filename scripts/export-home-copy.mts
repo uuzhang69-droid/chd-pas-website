@@ -175,83 +175,83 @@ const HOME_ROWS: Array<{ section: string; rows: RowDef[] }> = [
       { id: "home.events.title", location: "Section heading" },
       { id: "home.events.viewall.label", location: "View all events — link at the end of the row" },
       {
-        id: "home.events.items.contemporary_intensive_maya_chen.title",
+        id: "home.events.items.memory_of_china.title",
         location: "Event card 1 — event name",
       },
       {
-        id: "home.events.items.contemporary_intensive_maya_chen.date",
+        id: "home.events.items.memory_of_china.date",
         location: "Event card 1 — date",
       },
       {
-        id: "home.events.items.contemporary_intensive_maya_chen.location",
+        id: "home.events.items.memory_of_china.location",
         location: "Event card 1 — location",
       },
       {
-        id: "home.events.items.contemporary_intensive_maya_chen.booknow.label",
+        id: "home.events.items.memory_of_china.booknow.label",
         location: "Event card 1 — Book Now button",
       },
       {
-        id: "home.events.items.contemporary_intensive_maya_chen.image.alt",
+        id: "home.events.items.memory_of_china.image.alt",
         location: "Event card 1 — image description (accessibility)",
       },
       {
-        id: "home.events.items.junior_ballet_masterclass.title",
+        id: "home.events.items.autumn_concert.title",
         location: "Event card 2 — event name",
       },
       {
-        id: "home.events.items.junior_ballet_masterclass.date",
+        id: "home.events.items.autumn_concert.date",
         location: "Event card 2 — date",
       },
       {
-        id: "home.events.items.junior_ballet_masterclass.location",
+        id: "home.events.items.autumn_concert.location",
         location: "Event card 2 — location",
       },
       {
-        id: "home.events.items.junior_ballet_masterclass.booknow.label",
+        id: "home.events.items.autumn_concert.booknow.label",
         location: "Event card 2 — Book Now button",
       },
       {
-        id: "home.events.items.junior_ballet_masterclass.image.alt",
+        id: "home.events.items.autumn_concert.image.alt",
         location: "Event card 2 — image description (accessibility)",
       },
       {
-        id: "home.events.items.musical_theatre_workshop_day.title",
+        id: "home.events.items.lunchtime_concert_series.title",
         location: "Event card 3 — event name",
       },
       {
-        id: "home.events.items.musical_theatre_workshop_day.date",
+        id: "home.events.items.lunchtime_concert_series.date",
         location: "Event card 3 — date",
       },
       {
-        id: "home.events.items.musical_theatre_workshop_day.location",
+        id: "home.events.items.lunchtime_concert_series.location",
         location: "Event card 3 — location",
       },
       {
-        id: "home.events.items.musical_theatre_workshop_day.booknow.label",
-        location: "Event card 3 — Book Now button",
+        id: "home.events.items.lunchtime_concert_series.booknow.label",
+        location: "Event card 3 — Details button",
       },
       {
-        id: "home.events.items.musical_theatre_workshop_day.image.alt",
+        id: "home.events.items.lunchtime_concert_series.image.alt",
         location: "Event card 3 — image description (accessibility)",
       },
       {
-        id: "home.events.items.winter_showcase.title",
+        id: "home.events.items.dance_meets_arts.title",
         location: "Event card 4 — event name",
       },
       {
-        id: "home.events.items.winter_showcase.date",
+        id: "home.events.items.dance_meets_arts.date",
         location: "Event card 4 — date",
       },
       {
-        id: "home.events.items.winter_showcase.location",
+        id: "home.events.items.dance_meets_arts.location",
         location: "Event card 4 — location",
       },
       {
-        id: "home.events.items.winter_showcase.booknow.label",
-        location: "Event card 4 — Book Now button",
+        id: "home.events.items.dance_meets_arts.booknow.label",
+        location: "Event card 4 — Details button",
       },
       {
-        id: "home.events.items.winter_showcase.image.alt",
+        id: "home.events.items.dance_meets_arts.image.alt",
         location: "Event card 4 — image description (accessibility)",
       },
     ],

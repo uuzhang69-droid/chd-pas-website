@@ -8,6 +8,9 @@ type AutoPlayGalleryProps = {
   images: readonly ImageAsset[];
   intervalMs?: number;
   className?: string;
+  /** Replaces the default `aspect-[4/3]` frame, e.g. hero `aspect-[16/9] md:aspect-[21/9]`. */
+  frameClassName?: string;
+  sizes?: string;
   label: string;
 };
 
@@ -15,6 +18,8 @@ export function AutoPlayGallery({
   images,
   intervalMs = 5000,
   className = "",
+  frameClassName = "aspect-[4/3]",
+  sizes = "(max-width: 768px) 100vw, 50vw",
   label,
 }: AutoPlayGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,7 +37,7 @@ export function AutoPlayGallery({
 
   return (
     <div
-      className={`relative aspect-[4/3] overflow-hidden rounded-sm bg-blush/30 shadow-sm ${className}`}
+      className={`relative overflow-hidden rounded-sm bg-blush/30 shadow-sm ${frameClassName} ${className}`}
       aria-roledescription="carousel"
       aria-label={label}
       onMouseEnter={() => setIsPaused(true)}
@@ -53,7 +58,7 @@ export function AutoPlayGallery({
             alt={image.alt}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes={sizes}
             priority={index === 0}
           />
         </div>

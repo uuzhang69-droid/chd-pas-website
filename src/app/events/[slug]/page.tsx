@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import {
   getAllEventRouteSlugs,
@@ -11,6 +12,8 @@ import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { EventInlineGallery } from "@/components/events/EventInlineGallery";
+import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { SectionedPage } from "@/components/ui/SectionedPage";
 import { isEventBeforeToday } from "@/lib/events/event-cta";
 
@@ -71,54 +74,83 @@ export default async function EventDetailPage({ params }: PageProps) {
               {detailLabels.location}: {event.location}
             </p>
           )}
-        </Container>
-      </section>
 
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          {event.gallery && event.gallery.length > 0 ? (
+            <AutoPlayGallery
+              images={event.gallery}
+              label={`${event.title} photos`}
+              className="mt-8 md:mt-10"
+              frameClassName="aspect-[16/9] w-full"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
+          ) : (
+            <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-sm bg-blush/30 md:mt-10 md:aspect-[21/9]">
               <Image
                 src={event.image.src}
                 alt={event.image.alt}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1280px) 100vw, 1280px"
                 priority
               />
             </div>
-            <div>
-              {event.excerpt && (
-                <p className="text-body-lg text-charcoal/80">{event.excerpt}</p>
-              )}
-              {event.description && (
-                <div className="mt-6 space-y-4">
-                  {event.description.map((paragraph) => (
-                    <p key={paragraph.slice(0, 32)} className="text-body text-charcoal/75">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              )}
-              <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
+          )}
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <Container>
+            {event.excerpt && (
+              <p className="text-body-lg text-charcoal/80">{event.excerpt}</p>
+            )}
+            {event.description && (
+              <div className="mt-6 space-y-4">
+                {event.description.map((paragraph, index) => {
+                  const heading = paragraph.startsWith("# ") ? paragraph.slice(2) : null;
+                  const inlineGallery = heading
+                    ? event.inlineGalleries?.find((entry) => entry.beforeHeading === heading)
+                    : undefined;
+
+                  return (
+                    <Fragment key={`block-${index}`}>
+                      {inlineGallery && inlineGallery.images.length > 0 && (
+                        <EventInlineGallery
+                          images={inlineGallery.images}
+                          label={`${heading} schedule`}
+                        />
+                      )}
+                      {heading ? (
+                        <h2 className="text-h3 pt-4 text-charcoal first:pt-0">{heading}</h2>
+                      ) : (
+                        <p className="text-body text-charcoal/75">{paragraph}</p>
+                      )}
+                    </Fragment>
+                  );
+                })}
+              </div>
+            )}
+            <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
+              <div>
+                <dt className="text-overline text-rose">{detailLabels.date}</dt>
+                <dd className="text-body mt-1 text-charcoal">{event.date}</dd>
+              </div>
+              {event.location && (
                 <div>
-                  <dt className="text-overline text-rose">{detailLabels.date}</dt>
-                  <dd className="text-body mt-1 text-charcoal">{event.date}</dd>
-                </div>
-                {event.location && (
-                  <div>
-                    <dt className="text-overline text-rose">{detailLabels.location}</dt>
-                    <dd className="text-body mt-1 text-charcoal">{event.location}</dd>
-                  </div>
-                )}
-              </dl>
-              {!isEventBeforeToday(event.dateIso) && (
-                <div className="mt-8">
-                  <Button {...event.bookNow} />
+                  <dt className="text-overline text-rose">{detailLabels.location}</dt>
+                  <dd className="text-body mt-1 text-charcoal">{event.location}</dd>
                 </div>
               )}
-            </div>
-          </div>
+            </dl>
+            {!isEventBeforeToday(event.dateIso) && (
+              <div className="mt-8 flex flex-wrap gap-3">
+                {(event.tickets && event.tickets.length > 0
+                  ? event.tickets
+                  : [event.bookNow]
+                ).map((cta) => (
+                  <Button key={`${cta.label}-${cta.href}`} {...cta} />
+                ))}
+              </div>
+            )}
         </Container>
       </section>
     </PageShell>

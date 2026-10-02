@@ -341,7 +341,7 @@ export const siteStructure = {
             "variant": "primary"
           },
           "image": {
-            "src": "/images/hero/slide-5.jpg",
+            "src": "/images/hero/slide-5-venue.jpg",
             "alt": "@@COPY:home.hero.slides.hero_studio_hire.image.alt"
           }
         },
@@ -392,73 +392,71 @@ export const siteStructure = {
       "items": [
         {
           "id": "event-1",
-          "slug": "contemporary-intensive-maya-chen",
-          "title": "@@COPY:home.events.items.contemporary_intensive_maya_chen.title",
-          "date": "@@COPY:home.events.items.contemporary_intensive_maya_chen.date",
-          "dateIso": "2026-10-18",
-          "location": "@@COPY:home.events.items.contemporary_intensive_maya_chen.location",
+          "slug": "memory-of-china",
+          "title": "@@COPY:home.events.items.memory_of_china.title",
+          "date": "@@COPY:home.events.items.memory_of_china.date",
+          "dateIso": "2026-10-04",
+          "location": "@@COPY:home.events.items.memory_of_china.location",
           "image": {
-            "src": "/images/events/contemporary-intensive.svg",
-            "alt": "@@COPY:home.events.items.contemporary_intensive_maya_chen.image.alt"
+            "src": "/images/events/memory-of-china.jpg",
+            "alt": "@@COPY:home.events.items.memory_of_china.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.contemporary_intensive_maya_chen.booknow.label",
-            "href": "https://buy.stripe.com/example-contemporary-intensive",
+            "label": "@@COPY:home.events.items.memory_of_china.booknow.label",
+            "href": "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
             "external": true,
             "variant": "primary"
           }
         },
         {
           "id": "event-2",
-          "slug": "junior-ballet-masterclass",
-          "title": "@@COPY:home.events.items.junior_ballet_masterclass.title",
-          "date": "@@COPY:home.events.items.junior_ballet_masterclass.date",
-          "dateIso": "2026-10-26",
-          "location": "@@COPY:home.events.items.junior_ballet_masterclass.location",
+          "slug": "autumn-concert-at-county-hall",
+          "title": "@@COPY:home.events.items.autumn_concert.title",
+          "date": "@@COPY:home.events.items.autumn_concert.date",
+          "dateIso": "2026-10-19",
+          "location": "@@COPY:home.events.items.autumn_concert.location",
           "image": {
-            "src": "/images/events/ballet-masterclass.svg",
-            "alt": "@@COPY:home.events.items.junior_ballet_masterclass.image.alt"
+            "src": "/images/events/autumn-concert.jpg",
+            "alt": "@@COPY:home.events.items.autumn_concert.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.junior_ballet_masterclass.booknow.label",
-            "href": "https://buy.stripe.com/example-ballet-masterclass",
+            "label": "@@COPY:home.events.items.autumn_concert.booknow.label",
+            "href": "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
             "external": true,
             "variant": "primary"
           }
         },
         {
           "id": "event-3",
-          "slug": "musical-theatre-workshop-day",
-          "title": "@@COPY:home.events.items.musical_theatre_workshop_day.title",
-          "date": "@@COPY:home.events.items.musical_theatre_workshop_day.date",
-          "dateIso": "2026-11-08",
-          "location": "@@COPY:home.events.items.musical_theatre_workshop_day.location",
+          "slug": "lunchtime-concert-series",
+          "title": "@@COPY:home.events.items.lunchtime_concert_series.title",
+          "date": "@@COPY:home.events.items.lunchtime_concert_series.date",
+          "dateIso": "2026-09-25",
+          "location": "@@COPY:home.events.items.lunchtime_concert_series.location",
           "image": {
-            "src": "/images/events/musical-theatre.svg",
-            "alt": "@@COPY:home.events.items.musical_theatre_workshop_day.image.alt"
+            "src": "/images/events/lunchtime-concert-series.jpg",
+            "alt": "@@COPY:home.events.items.lunchtime_concert_series.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.musical_theatre_workshop_day.booknow.label",
-            "href": "https://buy.stripe.com/example-musical-theatre",
-            "external": true,
+            "label": "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
+            "href": "/events/lunchtime-concert-series",
             "variant": "primary"
           }
         },
         {
           "id": "event-4",
-          "slug": "winter-showcase",
-          "title": "@@COPY:home.events.items.winter_showcase.title",
-          "date": "@@COPY:home.events.items.winter_showcase.date",
-          "dateIso": "2026-12-12",
-          "location": "@@COPY:home.events.items.winter_showcase.location",
+          "slug": "dance-meets-arts",
+          "title": "@@COPY:home.events.items.dance_meets_arts.title",
+          "date": "@@COPY:home.events.items.dance_meets_arts.date",
+          "dateIso": "2026-08-08",
+          "location": "@@COPY:home.events.items.dance_meets_arts.location",
           "image": {
-            "src": "/images/events/winter-showcase.svg",
-            "alt": "@@COPY:home.events.items.winter_showcase.image.alt"
+            "src": "/images/events/dance-meets-arts.jpg",
+            "alt": "@@COPY:home.events.items.dance_meets_arts.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.winter_showcase.booknow.label",
-            "href": "https://buy.stripe.com/example-winter-showcase",
-            "external": true,
+            "label": "@@COPY:home.events.items.dance_meets_arts.booknow.label",
+            "href": "/events/dance-meets-arts",
             "variant": "primary"
           }
         }
@@ -1017,94 +1015,212 @@ export const siteStructure = {
       "items": [
         {
           "id": "event-1",
-          "slug": "contemporary-intensive-maya-chen",
-          "title": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.title",
-          "date": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.date",
-          "dateIso": "2026-10-18",
-          "location": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.location",
-          "excerpt": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.excerpt",
+          "slug": "memory-of-china",
+          "title": "@@COPY:pages.events.items.memory_of_china.title",
+          "date": "@@COPY:pages.events.items.memory_of_china.date",
+          "dateIso": "2026-10-04",
+          "location": "@@COPY:pages.events.items.memory_of_china.location",
+          "excerpt": "@@COPY:pages.events.items.memory_of_china.excerpt",
           "description": [
-            "@@COPY:pages.events.items.contemporary_intensive_maya_chen.description.0",
-            "@@COPY:pages.events.items.contemporary_intensive_maya_chen.description.1",
-            "@@COPY:pages.events.items.contemporary_intensive_maya_chen.description.2"
+            "@@COPY:pages.events.items.memory_of_china.description.0",
+            "@@COPY:pages.events.items.memory_of_china.description.1",
+            "@@COPY:pages.events.items.memory_of_china.description.2",
+            "@@COPY:pages.events.items.memory_of_china.description.3",
+            "@@COPY:pages.events.items.memory_of_china.description.4",
+            "@@COPY:pages.events.items.memory_of_china.description.5",
+            "@@COPY:pages.events.items.memory_of_china.description.6",
+            "@@COPY:pages.events.items.memory_of_china.description.7",
+            "@@COPY:pages.events.items.memory_of_china.description.8",
+            "@@COPY:pages.events.items.memory_of_china.description.9",
+            "@@COPY:pages.events.items.memory_of_china.description.10",
+            "@@COPY:pages.events.items.memory_of_china.description.11",
+            "@@COPY:pages.events.items.memory_of_china.description.12",
+            "@@COPY:pages.events.items.memory_of_china.description.13",
+            "@@COPY:pages.events.items.memory_of_china.description.14",
+            "@@COPY:pages.events.items.memory_of_china.description.15",
+            "@@COPY:pages.events.items.memory_of_china.description.16",
+            "@@COPY:pages.events.items.memory_of_china.description.17",
+            "@@COPY:pages.events.items.memory_of_china.description.18",
+            "@@COPY:pages.events.items.memory_of_china.description.19",
+            "@@COPY:pages.events.items.memory_of_china.description.20",
+            "@@COPY:pages.events.items.memory_of_china.description.21",
+            "@@COPY:pages.events.items.memory_of_china.description.22",
+            "@@COPY:pages.events.items.memory_of_china.description.23",
+            "@@COPY:pages.events.items.memory_of_china.description.24",
+            "@@COPY:pages.events.items.memory_of_china.description.25",
+            "@@COPY:pages.events.items.memory_of_china.description.26",
+            "@@COPY:pages.events.items.memory_of_china.description.27",
+            "@@COPY:pages.events.items.memory_of_china.description.28",
+            "@@COPY:pages.events.items.memory_of_china.description.29",
+            "@@COPY:pages.events.items.memory_of_china.description.30"
+          ],
+          "inlineGalleries": [
+            {
+              "beforeHeading": "Saturday, 3 October 2026",
+              "images": [
+                {
+                  "src": "/images/events/memory-of-china-schedule-saturday.png",
+                  "alt": "@@COPY:pages.events.items.memory_of_china.inline_galleries.saturday_schedule.alt"
+                },
+                {
+                  "src": "/images/events/memory-of-china-schedule-sunday.png",
+                  "alt": "@@COPY:pages.events.items.memory_of_china.inline_galleries.sunday_schedule.alt"
+                }
+              ]
+            }
           ],
           "image": {
-            "src": "/images/events/contemporary-intensive.svg",
-            "alt": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.image.alt"
+            "src": "/images/events/memory-of-china.jpg",
+            "alt": "@@COPY:pages.events.items.memory_of_china.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:pages.events.items.contemporary_intensive_maya_chen.booknow.label",
-            "href": "https://buy.stripe.com/example-contemporary-intensive",
+            "label": "@@COPY:pages.events.items.memory_of_china.booknow.label",
+            "href": "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
             "external": true,
             "variant": "primary"
-          }
+          },
+          "tickets": [
+            {
+              "label": "@@COPY:pages.events.items.memory_of_china.tickets.saturday_tickets.label",
+              "href": "https://www.eventbrite.co.uk/e/2002061300243",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "label": "@@COPY:pages.events.items.memory_of_china.tickets.sunday_tickets.label",
+              "href": "https://www.eventbrite.co.uk/e/2002061318297",
+              "external": true,
+              "variant": "secondary"
+            }
+          ]
         },
         {
           "id": "event-2",
-          "slug": "junior-ballet-masterclass",
-          "title": "@@COPY:pages.events.items.junior_ballet_masterclass.title",
-          "date": "@@COPY:pages.events.items.junior_ballet_masterclass.date",
-          "dateIso": "2026-10-26",
-          "location": "@@COPY:pages.events.items.junior_ballet_masterclass.location",
-          "excerpt": "@@COPY:pages.events.items.junior_ballet_masterclass.excerpt",
+          "slug": "autumn-concert-at-county-hall",
+          "title": "@@COPY:pages.events.items.autumn_concert.title",
+          "date": "@@COPY:pages.events.items.autumn_concert.date",
+          "dateIso": "2026-10-19",
+          "location": "@@COPY:pages.events.items.autumn_concert.location",
+          "excerpt": "@@COPY:pages.events.items.autumn_concert.excerpt",
           "description": [
-            "@@COPY:pages.events.items.junior_ballet_masterclass.description.0",
-            "@@COPY:pages.events.items.junior_ballet_masterclass.description.1"
+            "@@COPY:pages.events.items.autumn_concert.description.0",
+            "@@COPY:pages.events.items.autumn_concert.description.1",
+            "@@COPY:pages.events.items.autumn_concert.description.2",
+            "@@COPY:pages.events.items.autumn_concert.description.3",
+            "@@COPY:pages.events.items.autumn_concert.description.4",
+            "@@COPY:pages.events.items.autumn_concert.description.5",
+            "@@COPY:pages.events.items.autumn_concert.description.6"
           ],
           "image": {
-            "src": "/images/events/ballet-masterclass.svg",
-            "alt": "@@COPY:pages.events.items.junior_ballet_masterclass.image.alt"
+            "src": "/images/events/autumn-concert.jpg",
+            "alt": "@@COPY:pages.events.items.autumn_concert.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:pages.events.items.junior_ballet_masterclass.booknow.label",
-            "href": "https://buy.stripe.com/example-ballet-masterclass",
+            "label": "@@COPY:pages.events.items.autumn_concert.booknow.label",
+            "href": "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
             "external": true,
             "variant": "primary"
           }
         },
         {
           "id": "event-3",
-          "slug": "musical-theatre-workshop-day",
-          "title": "@@COPY:pages.events.items.musical_theatre_workshop_day.title",
-          "date": "@@COPY:pages.events.items.musical_theatre_workshop_day.date",
-          "dateIso": "2026-11-08",
-          "location": "@@COPY:pages.events.items.musical_theatre_workshop_day.location",
-          "excerpt": "@@COPY:pages.events.items.musical_theatre_workshop_day.excerpt",
+          "slug": "lunchtime-concert-series",
+          "title": "@@COPY:pages.events.items.lunchtime_concert_series.title",
+          "date": "@@COPY:pages.events.items.lunchtime_concert_series.date",
+          "dateIso": "2026-09-25",
+          "location": "@@COPY:pages.events.items.lunchtime_concert_series.location",
+          "excerpt": "@@COPY:pages.events.items.lunchtime_concert_series.excerpt",
           "description": [
-            "@@COPY:pages.events.items.musical_theatre_workshop_day.description.0",
-            "@@COPY:pages.events.items.musical_theatre_workshop_day.description.1"
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.0",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.1",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.2",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.3",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.4",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.6",
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.7"
           ],
           "image": {
-            "src": "/images/events/musical-theatre.svg",
-            "alt": "@@COPY:pages.events.items.musical_theatre_workshop_day.image.alt"
+            "src": "/images/events/lunchtime-concert-series.jpg",
+            "alt": "@@COPY:pages.events.items.lunchtime_concert_series.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:pages.events.items.musical_theatre_workshop_day.booknow.label",
-            "href": "https://buy.stripe.com/example-musical-theatre",
-            "external": true,
+            "label": "@@COPY:pages.events.items.lunchtime_concert_series.booknow.label",
+            "href": "/events/lunchtime-concert-series",
             "variant": "primary"
           }
         },
         {
           "id": "event-4",
-          "slug": "winter-showcase",
-          "title": "@@COPY:pages.events.items.winter_showcase.title",
-          "date": "@@COPY:pages.events.items.winter_showcase.date",
-          "dateIso": "2026-12-12",
-          "location": "@@COPY:pages.events.items.winter_showcase.location",
-          "excerpt": "@@COPY:pages.events.items.winter_showcase.excerpt",
+          "slug": "dance-meets-arts",
+          "title": "@@COPY:pages.events.items.dance_meets_arts.title",
+          "date": "@@COPY:pages.events.items.dance_meets_arts.date",
+          "dateIso": "2026-08-08",
+          "location": "@@COPY:pages.events.items.dance_meets_arts.location",
+          "excerpt": "@@COPY:pages.events.items.dance_meets_arts.excerpt",
           "description": [
-            "@@COPY:pages.events.items.winter_showcase.description.0",
-            "@@COPY:pages.events.items.winter_showcase.description.1"
+            "@@COPY:pages.events.items.dance_meets_arts.description.0",
+            "@@COPY:pages.events.items.dance_meets_arts.description.1",
+            "@@COPY:pages.events.items.dance_meets_arts.description.2",
+            "@@COPY:pages.events.items.dance_meets_arts.description.3",
+            "@@COPY:pages.events.items.dance_meets_arts.description.4",
+            "@@COPY:pages.events.items.dance_meets_arts.description.5",
+            "@@COPY:pages.events.items.dance_meets_arts.description.6",
+            "@@COPY:pages.events.items.dance_meets_arts.description.7",
+            "@@COPY:pages.events.items.dance_meets_arts.description.8",
+            "@@COPY:pages.events.items.dance_meets_arts.description.9"
           ],
           "image": {
-            "src": "/images/events/winter-showcase.svg",
-            "alt": "@@COPY:pages.events.items.winter_showcase.image.alt"
+            "src": "/images/events/dance-meets-arts.jpg",
+            "alt": "@@COPY:pages.events.items.dance_meets_arts.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:pages.events.items.winter_showcase.booknow.label",
-            "href": "https://buy.stripe.com/example-winter-showcase",
-            "external": true,
+            "label": "@@COPY:pages.events.items.dance_meets_arts.booknow.label",
+            "href": "/events/dance-meets-arts",
+            "variant": "primary"
+          }
+        },
+        {
+          "id": "event-5",
+          "slug": "county-hall-dance-centre-opening-day",
+          "title": "@@COPY:pages.events.items.opening_day.title",
+          "date": "@@COPY:pages.events.items.opening_day.date",
+          "dateIso": "2026-09-10",
+          "location": "@@COPY:pages.events.items.opening_day.location",
+          "excerpt": "@@COPY:pages.events.items.opening_day.excerpt",
+          "description": [
+            "@@COPY:pages.events.items.opening_day.description.0",
+            "@@COPY:pages.events.items.opening_day.description.1"
+          ],
+          "image": {
+            "src": "/images/events/opening-day.jpg",
+            "alt": "@@COPY:pages.events.items.opening_day.image.alt"
+          },
+          "gallery": [
+            {
+              "src": "/images/events/opening-day/ribbon-cutting.jpg",
+              "alt": "@@COPY:pages.events.items.opening_day.gallery.0.alt"
+            },
+            {
+              "src": "/images/events/opening-day/celebration-table.jpg",
+              "alt": "@@COPY:pages.events.items.opening_day.gallery.1.alt"
+            },
+            {
+              "src": "/images/events/opening-day/dressing-room.jpg",
+              "alt": "@@COPY:pages.events.items.opening_day.gallery.2.alt"
+            },
+            {
+              "src": "/images/events/opening-day/bouquet.jpg",
+              "alt": "@@COPY:pages.events.items.opening_day.gallery.3.alt"
+            },
+            {
+              "src": "/images/events/opening-day/crest.jpg",
+              "alt": "@@COPY:pages.events.items.opening_day.gallery.4.alt"
+            }
+          ],
+          "bookNow": {
+            "label": "@@COPY:pages.events.items.opening_day.booknow.label",
+            "href": "/events/county-hall-dance-centre-opening-day",
             "variant": "primary"
           }
         }
@@ -1269,7 +1385,7 @@ export const siteStructure = {
           "title": "@@COPY:pages.studiohire.overview.hero.title",
           "subtitle": "@@COPY:pages.studiohire.overview.hero.subtitle",
           "image": {
-            "src": "/images/hero/slide-5.jpg",
+            "src": "/images/hero/slide-5-venue.jpg",
             "alt": "@@COPY:pages.studiohire.overview.hero.image.alt"
           }
         },
@@ -1285,7 +1401,7 @@ export const siteStructure = {
               "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.idealfor",
               "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body",
               "image": {
-                "src": "/images/hero/slide-3.jpg",
+                "src": "/images/venue/vinyl-floor.jpg",
                 "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt"
               }
             },

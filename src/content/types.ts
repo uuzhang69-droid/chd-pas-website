@@ -38,8 +38,14 @@ export type EventCard = {
   location?: string;
   image: ImageAsset;
   bookNow: CtaButton;
+  tickets?: CtaButton[];
   excerpt?: string;
   description?: string[];
+  gallery?: ImageAsset[];
+  inlineGalleries?: {
+    beforeHeading: string;
+    images: ImageAsset[];
+  }[];
 };
 
 export type ClassStyleTile = {

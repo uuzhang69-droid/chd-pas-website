@@ -20,3 +20,21 @@ export function getEventCardCta(event: EventCard): CtaButton {
     external: false,
   };
 }
+
+/** Upcoming events soonest first, then past events most recent first. */
+export function sortEventsByDate(events: readonly EventCard[]): EventCard[] {
+  const upcoming: EventCard[] = [];
+  const past: EventCard[] = [];
+
+  for (const event of events) {
+    if (isEventBeforeToday(event.dateIso)) {
+      past.push(event);
+    } else {
+      upcoming.push(event);
+    }
+  }
+
+  upcoming.sort((a, b) => (a.dateIso ?? "").localeCompare(b.dateIso ?? ""));
+  past.sort((a, b) => (b.dateIso ?? "").localeCompare(a.dateIso ?? ""));
+  return [...upcoming, ...past];
+}
