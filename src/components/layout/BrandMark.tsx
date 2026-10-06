@@ -23,7 +23,7 @@ export function BrandMark({ variant = "header", priority = false }: BrandMarkPro
     >
       {isFooter ? (
         <span
-          className="inline-block shrink-0 bg-charcoal"
+          className="inline-block shrink-0 bg-ivory"
           style={{
             width: logoSize,
             height: logoSize,

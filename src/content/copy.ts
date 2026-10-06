@@ -32,7 +32,7 @@ export const copy = {
   "global.logo.alt": "County Hall Dance & Performing Arts School",
   "global.logo.nameline1": "County Hall",
   "global.logo.nameline2": "Dance & Performing Arts School",
-  "global.navigation.booktrial.label": "Book a Trial",
+  "global.navigation.booktrial.label": "Book your class",
   "global.navigation.items.about_us.children.about_us.label": "About Us",
   "global.navigation.items.about_us.children.contact.label": "Contact",
   "global.navigation.items.about_us.children.faqs.label": "FAQs",

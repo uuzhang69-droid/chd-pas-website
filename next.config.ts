@@ -43,6 +43,26 @@ const nextConfig: NextConfig = {
         destination: "/events/dance-meets-arts",
         permanent: true,
       },
+      {
+        source: "/booking",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/membership/member-benefits",
+        destination: "/membership",
+        permanent: true,
+      },
+      {
+        source: "/membership/monthly-passes",
+        destination: "/membership",
+        permanent: true,
+      },
+      {
+        source: "/membership/booking-access",
+        destination: "/membership",
+        permanent: true,
+      },
     ];
   },
   images: {

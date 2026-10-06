@@ -4,6 +4,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
+import { contactPrefillFromSearchParams } from "@/lib/contact/prefill-from-search-params";
 
 const { contact } = siteContent.pages;
 
@@ -13,11 +14,21 @@ export const metadata: Metadata = {
 };
 
 type ContactPageProps = {
-  searchParams: Promise<{ subject?: string }>;
+  searchParams: Promise<{
+    subject?: string;
+    message?: string;
+    about?: string;
+    course?: string;
+    slot?: string;
+    date?: string;
+    weekday?: string;
+    day?: string;
+  }>;
 };
 
 export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const { subject } = await searchParams;
+  const params = await searchParams;
+  const { defaultSubject, defaultMessage } = contactPrefillFromSearchParams(params);
 
   return (
     <PageShell>
@@ -36,7 +47,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   successMessage={contact.form.successMessage}
                   selectPlaceholder={contact.form.selectPlaceholder}
                   action={contact.form.action}
-                  defaultSubject={subject}
+                  defaultSubject={defaultSubject}
+                  defaultMessage={defaultMessage}
                 />
               </div>
             </div>

@@ -88,21 +88,7 @@ export const siteStructure = {
         },
         {
           "label": "@@COPY:global.navigation.items.membership.label",
-          "href": "/membership",
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.membership.children.member_benefits.label",
-              "href": "/membership/member-benefits"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.membership.children.monthly_passes.label",
-              "href": "/membership/monthly-passes"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.membership.children.booking_access.label",
-              "href": "/booking"
-            }
-          ]
+          "href": "/membership"
         },
         {
           "label": "@@COPY:global.navigation.items.private_lessons.label",

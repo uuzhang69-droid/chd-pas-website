@@ -1,0 +1,473 @@
+.membership-page {
+  --wine: #5a1f2b;
+  --ink: #292526;
+  --paper: #f8f4f0;
+  --line: #ded2ce;
+  --muted: #675c5b;
+  --blush: #e8d3d0;
+  --try-deep: #5f7a55;
+  --try-tint: #f3f7f1;
+  --try-soft: #e2ecdd;
+  --move-deep: #9c4a5e;
+  --move-tint: #fbf2f4;
+  --move-soft: #f3dde3;
+  --connect-deep: #6b4a78;
+  --connect-tint: #f7f2f9;
+  --connect-soft: #e9ddef;
+
+  padding: 65px 5%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-montserrat), Montserrat, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.membership-page h2,
+.membership-page h3,
+.membership-page p {
+  margin-top: 0;
+}
+
+.membership-page button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.membership-page .membership-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+.membership-page .membership-head h2 {
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.08;
+  margin: 0;
+}
+.membership-page .membership-head h2 em {
+  color: var(--wine);
+  font-style: normal;
+}
+.membership-page .membership-head > p {
+  max-width: 380px;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.membership-page .eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--wine);
+  margin: 0 0 15px;
+}
+
+.membership-page .tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.membership-page .tier {
+  --deep: var(--try-deep);
+  --tint: var(--try-tint);
+  --soft: var(--try-soft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 6px 25px rgba(90, 31, 43, 0.03);
+  overflow: visible;
+}
+.membership-page .tier--move {
+  --deep: var(--move-deep);
+  --tint: var(--move-tint);
+  --soft: var(--move-soft);
+  border: 1.5px solid var(--move-deep);
+  box-shadow: 0 14px 40px rgba(90, 31, 43, 0.12);
+  transform: translateY(-12px);
+}
+.membership-page .tier--connect {
+  --deep: var(--connect-deep);
+  --tint: var(--connect-tint);
+  --soft: var(--connect-soft);
+}
+
+.membership-page .tier-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--wine);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  z-index: 1;
+}
+.membership-page .tier-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+.membership-page .tier-head {
+  background: var(--deep);
+  color: #fff;
+  text-align: center;
+  padding: 28px 24px 24px;
+  border-radius: 5px 5px 0 0;
+}
+.membership-page .tier-name {
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+.membership-page .tier-sub {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.92;
+}
+
+.membership-page .tier-price {
+  text-align: center;
+  padding: 26px 24px 18px;
+  border-bottom: 1px solid var(--line);
+  margin: 0 24px;
+}
+.membership-page .tier-price strong {
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--deep);
+}
+.membership-page .tier-price span {
+  font-size: 15px;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.membership-page .tier-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 8px 24px 0;
+  flex: 1;
+}
+.membership-page .tier-benefits li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.membership-page .tier-benefits li:last-child {
+  border-bottom: 0;
+}
+.membership-page .benefit-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--deep);
+  display: grid;
+  place-items: center;
+}
+.membership-page .benefit-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+.membership-page .tier-benefits small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.membership-page .tier-foot {
+  padding: 18px 24px 26px;
+  text-align: center;
+}
+.membership-page .tier-tagline {
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--deep);
+  margin: 0 0 18px;
+}
+.membership-page .tier-foot .button {
+  width: 100%;
+}
+
+.membership-page .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: var(--wine);
+  color: #fff;
+  border: 1px solid var(--wine);
+  padding: 17px 24px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font: 500 14px var(--font-montserrat), Montserrat, Arial, sans-serif;
+  text-decoration: none;
+}
+.membership-page .button:hover {
+  background: #571729;
+}
+.membership-page .button--outline {
+  background: transparent;
+  color: var(--deep);
+  border-color: var(--deep);
+}
+.membership-page .button--outline:hover {
+  background: var(--deep);
+  color: #fff;
+  text-decoration: none;
+}
+
+.membership-page .button:focus-visible,
+.membership-page button:focus-visible,
+.membership-page select:focus-visible,
+.membership-page a.text-link:focus-visible {
+  outline: 3px solid var(--wine);
+  outline-offset: 4px;
+}
+
+.membership-page .promo-row {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 22px;
+  margin-top: 40px;
+}
+.membership-page .promo-row--single {
+  grid-template-columns: 1fr;
+}
+.membership-page .promo {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 30px 32px;
+}
+.membership-page .promo--gift {
+  background: var(--blush);
+  border-color: #d9bfbb;
+}
+.membership-page .promo-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.membership-page .promo-top .benefit-icon {
+  background: var(--move-soft);
+  color: var(--wine);
+  width: 48px;
+  height: 48px;
+}
+.membership-page .promo .eyebrow {
+  margin: 0 0 4px;
+}
+.membership-page .promo h3 {
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 0;
+}
+.membership-page .promo p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.membership-page .reward-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.membership-page .reward {
+  background: var(--move-tint);
+  border: 1px solid var(--move-soft);
+  border-radius: 5px;
+  padding: 18px 20px;
+}
+.membership-page .reward strong {
+  display: block;
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--wine);
+}
+.membership-page .reward b {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 6px 0 4px;
+  color: var(--ink);
+}
+.membership-page .reward span {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  display: block;
+}
+
+.membership-page .fine-print {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 18px 0 0;
+}
+.membership-page .fine-print svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--wine);
+}
+
+.membership-page .promo--gift .offer-end {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--wine);
+  margin: 0;
+}
+
+.membership-page .styles-strip {
+  margin-top: 40px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.membership-page .styles-strip > p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin: 0;
+}
+.membership-page .styles-strip ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  flex: 1;
+}
+.membership-page .styles-strip li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 22px;
+  border-right: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink);
+}
+.membership-page .styles-strip li:last-child {
+  border-right: 0;
+  font-family: var(--font-cormorant), Cormorant, Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--wine);
+  justify-content: center;
+}
+.membership-page .styles-strip svg {
+  width: 24px;
+  height: 24px;
+  color: var(--wine);
+  stroke-width: 1.4;
+}
+
+.membership-page .membership-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 20px 0 0;
+}
+
+.membership-page .membership-refer-link {
+  text-align: center;
+  margin-top: 22px;
+}
+.membership-page .text-link {
+  color: var(--wine);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1050px) {
+  .membership-page .tier-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  .membership-page .tier--move {
+    transform: none;
+  }
+  .membership-page .promo-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .membership-page {
+    padding: 50px 5%;
+  }
+  .membership-page .membership-head {
+    display: block;
+    margin-bottom: 45px;
+  }
+  .membership-page .membership-head > p {
+    margin-top: 14px;
+  }
+  .membership-page .tier-name {
+    font-size: 34px;
+  }
+  .membership-page .tier-price strong {
+    font-size: 46px;
+  }
+  .membership-page .promo {
+    padding: 24px 20px;
+  }
+  .membership-page .reward-grid {
+    grid-template-columns: 1fr;
+  }
+  .membership-page .styles-strip li {
+    padding: 8px 14px;
+    border-right: 0;
+    width: 33.33%;
+  }
+}

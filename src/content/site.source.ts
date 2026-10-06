@@ -92,11 +92,6 @@ export const siteSource = {
         {
           label: "Membership",
           href: "/membership",
-          children: [
-            { label: "Member Benefits", href: "/membership/member-benefits" },
-            { label: "Monthly Passes", href: "/membership/monthly-passes" },
-            { label: "Booking Access", href: "/booking" },
-          ] satisfies Link[],
         },
         {
           label: "Private Lessons",
@@ -128,7 +123,7 @@ export const siteSource = {
         },
       ] satisfies NavItem[],
       bookTrial: {
-        label: "Book a Trial",
+        label: "Book your class",
         href: "/timetable#trial",
         variant: "primary",
       } satisfies CtaButton,

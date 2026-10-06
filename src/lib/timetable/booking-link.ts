@@ -27,7 +27,7 @@ export function buildTimetableBookingHref(
     weekday,
     day: dayLabel,
   });
-  return `/booking?${params.toString()}`;
+  return `/contact?${params.toString()}`;
 }
 
 export function buildBookingPrefillFromSearchParams(params: TimetableBookingSearchParams): {
