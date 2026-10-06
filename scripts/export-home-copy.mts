@@ -195,23 +195,23 @@ const HOME_ROWS: Array<{ section: string; rows: RowDef[] }> = [
         location: "Event card 1 — image description (accessibility)",
       },
       {
-        id: "home.events.items.autumn_concert.title",
+        id: "home.events.items.four_seasons_festival.title",
         location: "Event card 2 — event name",
       },
       {
-        id: "home.events.items.autumn_concert.date",
+        id: "home.events.items.four_seasons_festival.date",
         location: "Event card 2 — date",
       },
       {
-        id: "home.events.items.autumn_concert.location",
+        id: "home.events.items.four_seasons_festival.location",
         location: "Event card 2 — location",
       },
       {
-        id: "home.events.items.autumn_concert.booknow.label",
-        location: "Event card 2 — Book Now button",
+        id: "home.events.items.four_seasons_festival.booknow.label",
+        location: "Event card 2 — Details button",
       },
       {
-        id: "home.events.items.autumn_concert.image.alt",
+        id: "home.events.items.four_seasons_festival.image.alt",
         location: "Event card 2 — image description (accessibility)",
       },
       {
@@ -290,19 +290,6 @@ const HOME_ROWS: Array<{ section: string; rows: RowDef[] }> = [
       { id: "home.aboutteaser.cta.label", location: "Button label (About the school)" },
       {
         id: "home.aboutteaser.image.alt",
-        location: "Photo description (accessibility)",
-      },
-    ],
-  },
-  {
-    section: "PRIVATE EVENTS (Celebrate with us promo block)",
-    rows: [
-      { id: "home.privateevents.overline", location: "Small label above the section title" },
-      { id: "home.privateevents.title", location: "Section heading" },
-      { id: "home.privateevents.body", location: "Description paragraph" },
-      { id: "home.privateevents.cta.label", location: "Button label (Enquire)" },
-      {
-        id: "home.privateevents.image.alt",
         location: "Photo description (accessibility)",
       },
     ],

@@ -73,16 +73,8 @@ export const siteStructure = {
               "href": "/classes-info"
             },
             {
-              "label": "@@COPY:global.navigation.items.classes.children.instructors.label",
-              "href": "/classes-info"
-            },
-            {
               "label": "@@COPY:global.navigation.items.classes.children.booking.label",
               "href": "/booking"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.classes.children.taster_classes.label",
-              "href": "/taster-classes"
             }
           ]
         },
@@ -92,33 +84,7 @@ export const siteStructure = {
         },
         {
           "label": "@@COPY:global.navigation.items.private_lessons.label",
-          "href": "/private-lessons",
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.one_to_one_lessons.label",
-              "href": "/private-lessons"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.couples_dance.label",
-              "href": "/private-lessons"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.first_wedding_dance.label",
-              "href": "/private-lessons"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.group_experiences.label",
-              "href": "/private-lessons"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.corporate_events.label",
-              "href": "/private-lessons"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.private_lessons.children.school_organisation_workshops.label",
-              "href": "/private-lessons"
-            }
-          ]
+          "href": "/private-lessons"
         },
         {
           "label": "@@COPY:global.navigation.items.about_us.label",
@@ -131,22 +97,6 @@ export const siteStructure = {
             {
               "label": "@@COPY:global.navigation.items.about_us.children.contact.label",
               "href": "/booking"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.about_us.children.join_us.label",
-              "href": "/join-us"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.about_us.children.faqs.label",
-              "href": "/faq"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.about_us.children.gift_cards.label",
-              "href": "/gift-cards"
-            },
-            {
-              "label": "@@COPY:global.navigation.items.about_us.children.membership_terms.label",
-              "href": "/membership-terms"
             }
           ]
         },
@@ -183,14 +133,6 @@ export const siteStructure = {
             {
               "label": "@@COPY:global.footer.columns.explore.links.events.label",
               "href": "/events"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.explore.links.gift_cards.label",
-              "href": "/gift-cards"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.explore.links.faq.label",
-              "href": "/faq"
             }
           ]
         },
@@ -200,10 +142,6 @@ export const siteStructure = {
             {
               "label": "@@COPY:global.footer.columns.school.links.about_us.label",
               "href": "/about"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.school.links.our_faculty.label",
-              "href": "/about#faculty"
             },
             {
               "label": "@@COPY:global.footer.columns.school.links.private_events.label",
@@ -396,19 +334,18 @@ export const siteStructure = {
         },
         {
           "id": "event-2",
-          "slug": "autumn-concert-at-county-hall",
-          "title": "@@COPY:home.events.items.autumn_concert.title",
-          "date": "@@COPY:home.events.items.autumn_concert.date",
-          "dateIso": "2026-10-19",
-          "location": "@@COPY:home.events.items.autumn_concert.location",
+          "slug": "four-seasons-festival",
+          "title": "@@COPY:home.events.items.four_seasons_festival.title",
+          "date": "@@COPY:home.events.items.four_seasons_festival.date",
+          "dateIso": "2026-09-01",
+          "location": "@@COPY:home.events.items.four_seasons_festival.location",
           "image": {
-            "src": "/images/events/autumn-concert.jpg",
-            "alt": "@@COPY:home.events.items.autumn_concert.image.alt"
+            "src": "/images/events/four-seasons-festival/gallery-01.webp",
+            "alt": "@@COPY:home.events.items.four_seasons_festival.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.autumn_concert.booknow.label",
-            "href": "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
-            "external": true,
+            "label": "@@COPY:home.events.items.four_seasons_festival.booknow.label",
+            "href": "/events/four-seasons-festival",
             "variant": "primary"
           }
         },
@@ -521,20 +458,6 @@ export const siteStructure = {
         "alt": "@@COPY:home.aboutteaser.image.alt"
       }
     },
-    "privateEvents": {
-      "overline": "@@COPY:home.privateevents.overline",
-      "title": "@@COPY:home.privateevents.title",
-      "body": "@@COPY:home.privateevents.body",
-      "cta": {
-        "label": "@@COPY:home.privateevents.cta.label",
-        "href": "/contact?subject=private-events",
-        "variant": "primary"
-      },
-      "image": {
-        "src": "/images/private-events/promo.svg",
-        "alt": "@@COPY:home.privateevents.image.alt"
-      }
-    },
     "newsletter": {
       "overline": "@@COPY:home.newsletter.overline",
       "title": "@@COPY:home.newsletter.title",
@@ -597,10 +520,6 @@ export const siteStructure = {
         {
           "label": "@@COPY:pages.timetable.helplinks.browse_courses.label",
           "href": "/courses"
-        },
-        {
-          "label": "@@COPY:pages.timetable.helplinks.frequently_asked_questions.label",
-          "href": "/faq"
         },
         {
           "label": "@@COPY:pages.timetable.helplinks.contact_us.label",
@@ -1082,29 +1001,31 @@ export const siteStructure = {
         },
         {
           "id": "event-2",
-          "slug": "autumn-concert-at-county-hall",
-          "title": "@@COPY:pages.events.items.autumn_concert.title",
-          "date": "@@COPY:pages.events.items.autumn_concert.date",
-          "dateIso": "2026-10-19",
-          "location": "@@COPY:pages.events.items.autumn_concert.location",
-          "excerpt": "@@COPY:pages.events.items.autumn_concert.excerpt",
+          "slug": "four-seasons-festival",
+          "title": "@@COPY:pages.events.items.four_seasons_festival.title",
+          "date": "@@COPY:pages.events.items.four_seasons_festival.date",
+          "dateIso": "2026-09-01",
+          "location": "@@COPY:pages.events.items.four_seasons_festival.location",
+          "excerpt": "@@COPY:pages.events.items.four_seasons_festival.excerpt",
           "description": [
-            "@@COPY:pages.events.items.autumn_concert.description.0",
-            "@@COPY:pages.events.items.autumn_concert.description.1",
-            "@@COPY:pages.events.items.autumn_concert.description.2",
-            "@@COPY:pages.events.items.autumn_concert.description.3",
-            "@@COPY:pages.events.items.autumn_concert.description.4",
-            "@@COPY:pages.events.items.autumn_concert.description.5",
-            "@@COPY:pages.events.items.autumn_concert.description.6"
+            "@@COPY:pages.events.items.four_seasons_festival.description.0",
+            "@@COPY:pages.events.items.four_seasons_festival.description.1",
+            "@@COPY:pages.events.items.four_seasons_festival.description.2",
+            "@@COPY:pages.events.items.four_seasons_festival.description.3",
+            "@@COPY:pages.events.items.four_seasons_festival.description.4",
+            "@@COPY:pages.events.items.four_seasons_festival.description.5",
+            "@@COPY:pages.events.items.four_seasons_festival.description.6",
+            "@@COPY:pages.events.items.four_seasons_festival.description.7",
+            "@@COPY:pages.events.items.four_seasons_festival.description.8",
+            "@@COPY:pages.events.items.four_seasons_festival.description.9"
           ],
           "image": {
-            "src": "/images/events/autumn-concert.jpg",
-            "alt": "@@COPY:pages.events.items.autumn_concert.image.alt"
+            "src": "/images/events/four-seasons-festival/gallery-01.webp",
+            "alt": "@@COPY:pages.events.items.four_seasons_festival.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:pages.events.items.autumn_concert.booknow.label",
-            "href": "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
-            "external": true,
+            "label": "@@COPY:pages.events.items.four_seasons_festival.booknow.label",
+            "href": "/events/four-seasons-festival",
             "variant": "primary"
           }
         },
@@ -1804,28 +1725,6 @@ export const siteStructure = {
         }
       ]
     },
-    "tasterClasses": {
-      "meta": {
-        "title": "@@COPY:pages.tasterclasses.meta.title",
-        "description": "@@COPY:pages.tasterclasses.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.tasterclasses.hero.overline",
-        "title": "@@COPY:pages.tasterclasses.hero.title",
-        "subtitle": "@@COPY:pages.tasterclasses.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.tasterclasses.intro",
-      "sections": [
-        {
-          "id": "available-tasters",
-          "title": "@@COPY:pages.tasterclasses.sections.available_tasters.title"
-        },
-        {
-          "id": "what-to-bring",
-          "title": "@@COPY:pages.tasterclasses.sections.what_to_bring.title"
-        }
-      ]
-    },
     "membership": {
       "overview": {
         "meta": {
@@ -2036,50 +1935,6 @@ export const siteStructure = {
         }
       ]
     },
-    "joinUs": {
-      "meta": {
-        "title": "@@COPY:pages.joinus.meta.title",
-        "description": "@@COPY:pages.joinus.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.joinus.hero.overline",
-        "title": "@@COPY:pages.joinus.hero.title",
-        "subtitle": "@@COPY:pages.joinus.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.joinus.intro",
-      "sections": [
-        {
-          "id": "opportunities",
-          "title": "@@COPY:pages.joinus.sections.opportunities.title"
-        },
-        {
-          "id": "apply",
-          "title": "@@COPY:pages.joinus.sections.apply.title"
-        }
-      ]
-    },
-    "membershipTerms": {
-      "meta": {
-        "title": "@@COPY:pages.membershipterms.meta.title",
-        "description": "@@COPY:pages.membershipterms.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.membershipterms.hero.overline",
-        "title": "@@COPY:pages.membershipterms.hero.title",
-        "subtitle": "@@COPY:pages.membershipterms.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.membershipterms.intro",
-      "sections": [
-        {
-          "id": "general",
-          "title": "@@COPY:pages.membershipterms.sections.general.title"
-        },
-        {
-          "id": "cancellation",
-          "title": "@@COPY:pages.membershipterms.sections.cancellation.title"
-        }
-      ]
-    },
     "about": {
       "meta": {
         "title": "@@COPY:pages.about.meta.title",
@@ -2119,34 +1974,6 @@ export const siteStructure = {
           {
             "title": "@@COPY:pages.about.values.items.3.title",
             "description": "@@COPY:pages.about.values.items.3.description"
-          }
-        ]
-      },
-      "faculty": {
-        "id": "faculty",
-        "overline": "@@COPY:pages.about.faculty.overline",
-        "title": "@@COPY:pages.about.faculty.title",
-        "intro": "@@COPY:pages.about.faculty.intro",
-        "members": [
-          {
-            "id": "faculty-kiki",
-            "name": "@@COPY:pages.about.faculty.members.faculty_kiki.name",
-            "role": "@@COPY:pages.about.faculty.members.faculty_kiki.role",
-            "bio": "@@COPY:pages.about.faculty.members.faculty_kiki.bio",
-            "image": {
-              "src": "/images/faculty/kiki.svg",
-              "alt": "@@COPY:pages.about.faculty.members.faculty_kiki.image.alt"
-            }
-          },
-          {
-            "id": "faculty-michael",
-            "name": "@@COPY:pages.about.faculty.members.faculty_michael.name",
-            "role": "@@COPY:pages.about.faculty.members.faculty_michael.role",
-            "bio": "@@COPY:pages.about.faculty.members.faculty_michael.bio",
-            "image": {
-              "src": "/images/faculty/michael.svg",
-              "alt": "@@COPY:pages.about.faculty.members.faculty_michael.image.alt"
-            }
           }
         ]
       },
@@ -2322,10 +2149,6 @@ export const siteStructure = {
               {
                 "label": "@@COPY:pages.contact.form.fields.subject.options.events.label",
                 "value": "events"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.gift_cards.label",
-                "value": "gift-cards"
               }
             ]
           },
@@ -2338,108 +2161,6 @@ export const siteStructure = {
           }
         ]
       }
-    },
-    "faq": {
-      "meta": {
-        "title": "@@COPY:pages.faq.meta.title",
-        "description": "@@COPY:pages.faq.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.faq.hero.overline",
-        "title": "@@COPY:pages.faq.hero.title",
-        "subtitle": "@@COPY:pages.faq.hero.subtitle"
-      },
-      "items": [
-        {
-          "id": "faq-1",
-          "question": "@@COPY:pages.faq.items.faq_1.question",
-          "answer": "@@COPY:pages.faq.items.faq_1.answer"
-        },
-        {
-          "id": "faq-2",
-          "question": "@@COPY:pages.faq.items.faq_2.question",
-          "answer": "@@COPY:pages.faq.items.faq_2.answer"
-        },
-        {
-          "id": "faq-4",
-          "question": "@@COPY:pages.faq.items.faq_4.question",
-          "answer": "@@COPY:pages.faq.items.faq_4.answer"
-        },
-        {
-          "id": "faq-6",
-          "question": "@@COPY:pages.faq.items.faq_6.question",
-          "answer": "@@COPY:pages.faq.items.faq_6.answer"
-        },
-        {
-          "id": "faq-hire",
-          "question": "@@COPY:pages.faq.items.faq_hire.question",
-          "answer": "@@COPY:pages.faq.items.faq_hire.answer"
-        },
-        {
-          "id": "faq-7",
-          "question": "@@COPY:pages.faq.items.faq_7.question",
-          "answer": "@@COPY:pages.faq.items.faq_7.answer"
-        }
-      ],
-      "cta": {
-        "text": "@@COPY:pages.faq.cta.text",
-        "button": {
-          "label": "@@COPY:pages.faq.cta.button.label",
-          "href": "/contact",
-          "variant": "primary"
-        }
-      }
-    },
-    "giftCards": {
-      "meta": {
-        "title": "@@COPY:pages.giftcards.meta.title",
-        "description": "@@COPY:pages.giftcards.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.giftcards.hero.overline",
-        "title": "@@COPY:pages.giftcards.hero.title",
-        "subtitle": "@@COPY:pages.giftcards.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.giftcards.intro",
-      "options": [
-        {
-          "id": "gift-25",
-          "title": "@@COPY:pages.giftcards.options.gift_25.title",
-          "amount": "@@COPY:pages.giftcards.options.gift_25.amount",
-          "description": "@@COPY:pages.giftcards.options.gift_25.description",
-          "cta": {
-            "label": "@@COPY:pages.giftcards.options.gift_25.cta.label",
-            "href": "https://buy.stripe.com/example-gift-25",
-            "external": true,
-            "variant": "secondary"
-          }
-        },
-        {
-          "id": "gift-50",
-          "title": "@@COPY:pages.giftcards.options.gift_50.title",
-          "amount": "@@COPY:pages.giftcards.options.gift_50.amount",
-          "description": "@@COPY:pages.giftcards.options.gift_50.description",
-          "cta": {
-            "label": "@@COPY:pages.giftcards.options.gift_50.cta.label",
-            "href": "https://buy.stripe.com/example-gift-50",
-            "external": true,
-            "variant": "secondary"
-          }
-        },
-        {
-          "id": "gift-100",
-          "title": "@@COPY:pages.giftcards.options.gift_100.title",
-          "amount": "@@COPY:pages.giftcards.options.gift_100.amount",
-          "description": "@@COPY:pages.giftcards.options.gift_100.description",
-          "cta": {
-            "label": "@@COPY:pages.giftcards.options.gift_100.cta.label",
-            "href": "https://buy.stripe.com/example-gift-100",
-            "external": true,
-            "variant": "primary"
-          }
-        }
-      ],
-      "terms": "@@COPY:pages.giftcards.terms"
     }
   },
   "ui": {

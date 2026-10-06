@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
@@ -52,34 +51,6 @@ export default function AboutPage() {
               <article key={value.title} className="rounded-sm bg-ivory p-6 shadow-sm">
                 <h3 className="text-h3 text-rose">{value.title}</h3>
                 <p className="text-body mt-3 text-charcoal/75">{value.description}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section id={about.faculty.id} className="py-16 md:py-24 scroll-mt-28">
-        <Container>
-          <SectionHeading
-            overline={about.faculty.overline}
-            title={about.faculty.title}
-            subtitle={about.faculty.intro}
-          />
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {about.faculty.members.map((member) => (
-              <article key={member.id} className="text-center">
-                <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-full">
-                  <Image
-                    src={member.image.src}
-                    alt={member.image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="192px"
-                  />
-                </div>
-                <h3 className="text-h3 mt-6 text-charcoal">{member.name}</h3>
-                <p className="text-overline mt-1 text-rose">{member.role}</p>
-                <p className="text-body mt-4 text-charcoal/75">{member.bio}</p>
               </article>
             ))}
           </div>

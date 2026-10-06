@@ -5,10 +5,7 @@ import type {
   CourseDetail,
   CtaButton,
   EventCard,
-  FaqItem,
-  FacultyMember,
   FormField,
-  GiftCardOption,
   HeroSlide,
   Link,
   NavItem,
@@ -83,10 +80,8 @@ export const siteSource = {
           href: "/classes",
           children: [
             { label: "Timetable", href: "/timetable" },
-            { label: "Class Descriptions", href: "/classes-info" },
-            { label: "Instructors", href: "/classes-info" },
+            { label: "Class Descriptions & Instructors", href: "/classes-info" },
             { label: "Booking", href: "/booking" },
-            { label: "Taster Classes", href: "/taster-classes" },
           ] satisfies Link[],
         },
         {
@@ -96,14 +91,6 @@ export const siteSource = {
         {
           label: "Private Lessons",
           href: "/private-lessons",
-          children: [
-            { label: "One-to-One Lessons", href: "/private-lessons" },
-            { label: "Couples' Dance", href: "/private-lessons" },
-            { label: "First Wedding Dance", href: "/private-lessons" },
-            { label: "Group Experiences", href: "/private-lessons" },
-            { label: "Corporate Events", href: "/private-lessons" },
-            { label: "School / Organisation Workshops", href: "/private-lessons" },
-          ] satisfies Link[],
         },
         {
           label: "About Us",
@@ -111,10 +98,6 @@ export const siteSource = {
           children: [
             { label: "About Us", href: "/about" },
             { label: "Contact", href: "/booking" },
-            { label: "Join Us", href: "/join-us" },
-            { label: "FAQs", href: "/faq" },
-            { label: "Gift Cards", href: "/gift-cards" },
-            { label: "Membership Terms", href: "/membership-terms" },
           ] satisfies Link[],
         },
         {
@@ -143,15 +126,12 @@ export const siteSource = {
             { label: "Classes", href: "/classes" },
             { label: "Courses", href: "/courses" },
             { label: "Events", href: "/events" },
-            { label: "Gift Cards", href: "/gift-cards" },
-            { label: "FAQ", href: "/faq" },
           ] satisfies Link[],
         },
         school: {
           title: "The School",
           links: [
             { label: "About Us", href: "/about" },
-            { label: "Our Faculty", href: "/about#faculty" },
             { label: "Private Events", href: "/private-events" },
             { label: "Careers", href: "/careers" },
           ] satisfies Link[],
@@ -315,19 +295,18 @@ export const siteSource = {
         },
         {
           id: "event-2",
-          slug: "autumn-concert-at-county-hall",
-          title: "Autumn Concert at County Hall",
-          date: "Monday 19 October 2026, 7:30pm",
-          dateIso: "2026-10-19",
-          location: "Council Chamber, County Hall",
+          slug: "four-seasons-festival",
+          title: "Four Seasons Festival",
+          date: "Autumn 2026",
+          dateIso: "2026-09-01",
+          location: "Riverside Building, County Hall",
           image: {
-            src: "/images/events/autumn-concert.jpg",
-            alt: "Mika Enjo and Santy Masciarò in concert at County Hall",
+            src: "/images/events/four-seasons-festival/gallery-01.webp",
+            alt: "Four Seasons Festival at County Hall",
           },
           bookNow: {
-            label: "Book Now",
-            href: "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
-            external: true,
+            label: "Details",
+            href: "/events/four-seasons-festival",
             variant: "primary",
           },
         },
@@ -424,17 +403,6 @@ export const siteSource = {
       },
     },
 
-    privateEvents: {
-      overline: "Celebrate with us",
-      title: "Private events & parties",
-      body: "Host an unforgettable birthday, hen party, or team celebration in our beautiful venues. Choose a theme, bring your guests, and leave the choreography to us.",
-      cta: { label: "Enquire", href: "/contact?subject=private-events", variant: "primary" },
-      image: {
-        src: "/images/private-events/promo.svg",
-        alt: "Private dance party celebration in venue",
-      },
-    },
-
     newsletter: {
       overline: "Join our circle",
       title: "Newsletter & social",
@@ -505,7 +473,6 @@ export const siteSource = {
         "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
       helpLinks: [
         { label: "Browse courses", href: "/courses" },
-        { label: "Frequently asked questions", href: "/faq" },
         { label: "Contact us", href: "/contact" },
       ] satisfies Link[],
     },
@@ -871,30 +838,100 @@ export const siteSource = {
         },
         {
           id: "event-2",
-          slug: "autumn-concert-at-county-hall",
-          title: "Autumn Concert at County Hall",
-          date: "Monday 19 October 2026, 7:30pm",
-          dateIso: "2026-10-19",
-          location: "Council Chamber, County Hall",
+          slug: "four-seasons-festival",
+          title: "Four Seasons Festival",
+          date: "Autumn 2026",
+          dateIso: "2026-09-01",
+          location: "Riverside Building, County Hall",
           excerpt:
-            "Mika Enjo and Santy Masciarò perform Bach, Piazzolla and more in an intimate Autumn Concert at County Hall's historic Council Chamber.",
+            "A seasonal multidisciplinary programme at County Hall — music, visual art, film, dance, workshops and participatory experiences across spring, summer and autumn.",
           description: [
-            "County Hall Arts is delighted to present an Autumn Concert in County Hall's historic Council Chamber - on the evening of Monday 19th October 2026.",
-            "Eminent Japanese flautist Mika Enjo and celebrated classical guitarist Santy Masciarò will bring together music from a range of periods and styles - including Bach's Sonata in C Major, Piazzolla's Histoire du Tango and an arrangement of the timeless Greensleeves.",
-            "Please join this unique duo for a special Autumn evening of music - expressed through the rich and distinctive qualities of flute and guitar. The concert begins at 7:30pm. Complimentary tickets are available via Eventbrite.",
-            "Hailing from Kyoto, Mika studied under renowned German flautist Paul Meisen and has played across Europe and Japan - including as founding member of the Kyoto Quartet (who memorably performed in the Council Chamber last year). Santy, meanwhile, is originally from Italy where he studied classical guitar at the Conservatorium of Pescara. Now based in London, he has travelled throughout Europe to perform and teach masterclasses.",
-            "Mika was last at County Hall in June when she participated in the spellbinding Love & Peace concert. She is also active as a composer under the name Mika T and her piece Sonata of Souls features in the programme on 19th October.",
-            "Once again, the magnificent Council Chamber provides a setting where cultures meet through music: a flute from the East and a guitar from the West, bringing together the elegance of the Baroque, the expressive character of the classical tradition and the vibrant rhythms of Latin America.",
-            "Join us at County Hall on the South Bank for this enchanting concert celebrating the versatility and beauty of these two instruments - delicate, lyrical and full of colour.",
+            "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
+            "More than a programme of individual events, each edition is developed around a central theme or idea — creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
+            "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
+            "# As the Leaves Turn, Autumn 2026",
+            "The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation. Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning.",
+            "Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go.",
+            "# Seeds of Change, Spring 2026",
+            "The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility. The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening. At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.",
+            "# Under the Same Sun, Summer 2026",
+            "The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration. Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together. The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava. For festival enquiries, contact info@countyhallarts.com.",
           ],
           image: {
-            src: "/images/events/autumn-concert.jpg",
-            alt: "Mika Enjo and Santy Masciarò in concert at County Hall",
+            src: "/images/events/four-seasons-festival/gallery-01.webp",
+            alt: "Four Seasons Festival at County Hall",
           },
+          gallery: [
+            {
+              src: "/images/events/four-seasons-festival/gallery-01.webp",
+              alt: "Four Seasons Festival concert in the County Hall courtyard with audience seated in orange chairs",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-02.webp",
+              alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-03.webp",
+              alt: "Clay workshop during the Four Seasons Festival at County Hall",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-04.webp",
+              alt: "Guided tour near the South Bank Lion with Big Ben in the background",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-05.webp",
+              alt: "Children's creative workshop at the Four Seasons Festival",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-06.webp",
+              alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-07.webp",
+              alt: "Storytelling and craft workshop with author Vivian French at the festival",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-08.webp",
+              alt: "Flute and harp performance in the County Hall atrium",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-09.webp",
+              alt: "Sitar performance during Afternoon Chai at the Four Seasons Festival",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-10.webp",
+              alt: "Short film screening as part of Seeds of Change at County Hall",
+              width: 1920,
+              height: 1080,
+            },
+            {
+              src: "/images/events/four-seasons-festival/gallery-11.webp",
+              alt: "Young musician performing violin at the Four Seasons Festival",
+              width: 1920,
+              height: 1080,
+            },
+          ],
           bookNow: {
-            label: "Book Now",
-            href: "https://www.eventbrite.co.uk/e/autumn-concert-at-county-hall-tickets-2001225638757",
-            external: true,
+            label: "Details",
+            href: "/events/four-seasons-festival",
             variant: "primary",
           },
         },
@@ -1539,24 +1576,6 @@ export const siteSource = {
       ],
     } satisfies SectionedPageContent,
 
-    tasterClasses: {
-      meta: {
-        title: "Taster Classes",
-        description: "Try a taster class at County Hall Dance Centre.",
-      },
-      hero: {
-        overline: "Classes",
-        title: "Taster Classes",
-        subtitle: "New to the Centre? Start with a taster and find the class that suits you.",
-      },
-      intro:
-        "Taster classes are a low-commitment way to experience our teaching, venue and community before enrolling.",
-      sections: [
-        { id: "available-tasters", title: "Available taster classes" },
-        { id: "what-to-bring", title: "What to bring" },
-      ],
-    } satisfies SectionedPageContent,
-
     membership: {
       overview: {
         meta: {
@@ -1758,42 +1777,6 @@ export const siteSource = {
       ] satisfies (SectionedPageContent & { slug: string })[],
     },
 
-    joinUs: {
-      meta: {
-        title: "Join Us",
-        description: "Join the team at County Hall Dance Centre.",
-      },
-      hero: {
-        overline: "About Us",
-        title: "Join Us",
-        subtitle: "Teaching, creative and operational opportunities at County Hall Dance Centre.",
-      },
-      intro:
-        "We are building a welcoming creative community on the South Bank. Expressions of interest from teachers, artists and collaborators are welcome.",
-      sections: [
-        { id: "opportunities", title: "Opportunities" },
-        { id: "apply", title: "How to apply" },
-      ],
-    } satisfies SectionedPageContent,
-
-    membershipTerms: {
-      meta: {
-        title: "Membership Terms",
-        description: "Membership terms and conditions at County Hall Dance Centre.",
-      },
-      hero: {
-        overline: "About Us",
-        title: "Membership Terms",
-        subtitle: "Terms governing membership passes, booking access and cancellation.",
-      },
-      intro:
-        "Final membership terms, including validity, cancellation policy and transferability, will be published before online booking opens.",
-      sections: [
-        { id: "general", title: "General terms" },
-        { id: "cancellation", title: "Cancellation policy" },
-      ],
-    } satisfies SectionedPageContent,
-
     about: {
       meta: {
         title: "About Us",
@@ -1822,28 +1805,6 @@ export const siteSource = {
           { title: "Philosophy", description: "Move. Create. Connect. Belong. — helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts." },
           { title: "Safeguarding", description: "Robust policies ensuring every student feels secure and supported." },
         ],
-      },
-      faculty: {
-        id: "faculty",
-        overline: "Meet the team",
-        title: "Our faculty",
-        intro: "Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care.",
-        members: [
-          {
-            id: "faculty-kiki",
-            name: "Kiki",
-            role: "Company Director and Artistic Director",
-            bio: "A highly experienced choreographer and large-scale performance director, Kiki shapes the Centre's artistic programme and its connection between dance, music, visual art and culture.",
-            image: { src: "/images/faculty/kiki.svg", alt: "Kiki" },
-          },
-          {
-            id: "faculty-michael",
-            name: "Michael",
-            role: "Company Director and Management and Marketing Lead",
-            bio: "Michael brings extensive international film, television and production-management experience, leading operations, partnerships, communications and business development.",
-            image: { src: "/images/faculty/michael.svg", alt: "Michael" },
-          },
-        ] satisfies FacultyMember[],
       },
       cta: {
         title: "Visit us",
@@ -1974,120 +1935,11 @@ export const siteSource = {
               { label: "Private lessons & experiences", value: "private-lessons" },
               { label: "Venue hire", value: "venue-hire" },
               { label: "Events", value: "events" },
-              { label: "Gift cards", value: "gift-cards" },
             ],
           },
           { name: "message", label: "Message", type: "textarea", placeholder: "How can we help?", required: true },
         ] satisfies FormField[],
       },
-    },
-
-    faq: {
-      meta: {
-        title: "FAQ",
-        description: "Frequently asked questions about classes, courses, and bookings at CHD PAS.",
-      },
-      hero: {
-        overline: "Help centre",
-        title: "Frequently asked questions",
-        subtitle: "Quick answers to common questions. Still unsure? Contact our friendly team.",
-      } satisfies PageHeroContent,
-      items: [
-        {
-          id: "faq-1",
-          question: "How do I book a class?",
-          answer:
-            "Visit our Timetable & Booking page and use the booking widget to select a class. You will be directed to our external booking partner to complete registration and payment.",
-        },
-        {
-          id: "faq-2",
-          question: "Can I try a class before committing?",
-          answer:
-            "Yes — you can book a trial class from our Timetable page. Please note that trial classes are not free. If you're unsure which class suits you, contact us and we'll help you choose.",
-        },
-        {
-          id: "faq-4",
-          question: "How are courses different from regular classes?",
-          answer:
-            "Courses run for a fixed term with a structured syllabus and limited places. Regular classes can often be booked on a rolling basis via the timetable.",
-        },
-        {
-          id: "faq-6",
-          question: "How do I book an event or masterclass?",
-          answer:
-            "Events are booked directly via the Book Now button on each event page. Payments are processed securely through Stripe.",
-        },
-        {
-          id: "faq-hire",
-          question: "Can I hire the venue?",
-          answer:
-            "Yes — our 70 m² vinyl-floor venue and 200 m² wooden-floor hall can be hired separately or together, from £200 per hour (member rates available). See Venue Hire for details.",
-        },
-        {
-          id: "faq-7",
-          question: "How do I get there?",
-          answer:
-            "We're a five-minute walk from both Waterloo and Westminster stations.",
-        },
-      ] satisfies FaqItem[],
-      cta: {
-        text: "Can't find what you need?",
-        button: { label: "Contact us", href: "/contact", variant: "primary" },
-      },
-    },
-
-    giftCards: {
-      meta: {
-        title: "Gift Cards",
-        description: "Give the gift of dance with a CHD PAS gift card.",
-      },
-      hero: {
-        overline: "A thoughtful gift",
-        title: "Gift Cards",
-        subtitle: "Perfect for birthdays, holidays, or encouraging someone to take their first class.",
-      } satisfies PageHeroContent,
-      intro:
-        "Gift cards can be redeemed against classes, courses, workshops, and merchandise. They are delivered by email and valid for twelve months from purchase.",
-      options: [
-        {
-          id: "gift-25",
-          title: "£25 Gift Card",
-          amount: "£25",
-          description: "Ideal for a single workshop or as a contribution towards term fees.",
-          cta: {
-            label: "Buy £25 card",
-            href: "https://buy.stripe.com/example-gift-25",
-            external: true,
-            variant: "secondary",
-          },
-        },
-        {
-          id: "gift-50",
-          title: "£50 Gift Card",
-          amount: "£50",
-          description: "Covers several drop-in classes or part of a term enrolment.",
-          cta: {
-            label: "Buy £50 card",
-            href: "https://buy.stripe.com/example-gift-50",
-            external: true,
-            variant: "secondary",
-          },
-        },
-        {
-          id: "gift-100",
-          title: "£100 Gift Card",
-          amount: "£100",
-          description: "A generous gift towards a full course or multiple masterclasses.",
-          cta: {
-            label: "Buy £100 card",
-            href: "https://buy.stripe.com/example-gift-100",
-            external: true,
-            variant: "primary",
-          },
-        },
-      ] satisfies GiftCardOption[],
-      terms:
-        "Gift cards are non-refundable and cannot be exchanged for cash. Remaining balances stay on the card until used. Contact us for custom amounts.",
     },
   },
 

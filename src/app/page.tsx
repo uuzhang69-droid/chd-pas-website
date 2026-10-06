@@ -5,7 +5,6 @@ import { EventsGrid } from "@/components/home/EventsGrid";
 import { HeroSlider } from "@/components/home/HeroSlider";
 import { HomeTimetable } from "@/components/home/HomeTimetable";
 import { NewsletterBand } from "@/components/home/NewsletterBand";
-import { PrivateEventsPromo } from "@/components/home/PrivateEventsPromo";
 import { QuickActions } from "@/components/home/QuickActions";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
       <EventsGrid />
       <ClassStyles />
       <AboutTeaser />
-      <PrivateEventsPromo />
       <NewsletterBand />
     </PageShell>
   );

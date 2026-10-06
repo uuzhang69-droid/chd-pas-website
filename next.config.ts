@@ -30,7 +30,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/events/junior-ballet-masterclass",
-        destination: "/events/autumn-concert-at-county-hall",
+        destination: "/events/four-seasons-festival",
+        permanent: true,
+      },
+      {
+        source: "/events/autumn-concert-at-county-hall",
+        destination: "/events/four-seasons-festival",
         permanent: true,
       },
       {
@@ -61,6 +66,31 @@ const nextConfig: NextConfig = {
       {
         source: "/membership/booking-access",
         destination: "/membership",
+        permanent: true,
+      },
+      {
+        source: "/join-us",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/faq",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/gift-cards",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/membership-terms",
+        destination: "/membership",
+        permanent: true,
+      },
+      {
+        source: "/taster-classes",
+        destination: "/timetable",
         permanent: true,
       },
     ];

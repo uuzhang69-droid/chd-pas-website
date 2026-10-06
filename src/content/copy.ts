@@ -41,7 +41,8 @@ export const copy = {
   "global.navigation.items.about_us.children.membership_terms.label": "Membership Terms",
   "global.navigation.items.about_us.label": "About Us",
   "global.navigation.items.classes.children.booking.label": "Booking",
-  "global.navigation.items.classes.children.class_descriptions.label": "Class Descriptions",
+  "global.navigation.items.classes.children.class_descriptions.label":
+    "Class Descriptions & Instructors",
   "global.navigation.items.classes.children.instructors.label": "Instructors",
   "global.navigation.items.classes.children.taster_classes.label": "Taster Classes",
   "global.navigation.items.classes.children.timetable.label": "Timetable",
@@ -104,12 +105,12 @@ export const copy = {
     "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
   "home.events.items.memory_of_china.location": "Members' Terrace, County Hall",
   "home.events.items.memory_of_china.title": "Memory of China",
-  "home.events.items.autumn_concert.booknow.label": "Book Now",
-  "home.events.items.autumn_concert.date": "Monday 19 October 2026, 7:30pm",
-  "home.events.items.autumn_concert.image.alt":
-    "Mika Enjo and Santy Masciarò in concert at County Hall",
-  "home.events.items.autumn_concert.location": "Council Chamber, County Hall",
-  "home.events.items.autumn_concert.title": "Autumn Concert at County Hall",
+  "home.events.items.four_seasons_festival.booknow.label": "Details",
+  "home.events.items.four_seasons_festival.date": "Autumn 2026",
+  "home.events.items.four_seasons_festival.image.alt":
+    "Four Seasons Festival at County Hall",
+  "home.events.items.four_seasons_festival.location": "Riverside Building, County Hall",
+  "home.events.items.four_seasons_festival.title": "Four Seasons Festival",
   "home.events.items.lunchtime_concert_series.booknow.label": "Details",
   "home.events.items.lunchtime_concert_series.date": "Friday 25 September 2026, 1pm",
   "home.events.items.lunchtime_concert_series.image.alt":
@@ -586,28 +587,34 @@ export const copy = {
   "pages.events.items.memory_of_china.tickets.saturday_tickets.label": "Saturday tickets",
   "pages.events.items.memory_of_china.tickets.sunday_tickets.label": "Sunday tickets",
   "pages.events.items.memory_of_china.title": "Memory of China: Chinese Traditional Arts and Culture Festival",
-  "pages.events.items.autumn_concert.booknow.label": "Book Now",
-  "pages.events.items.autumn_concert.date": "Monday 19 October 2026, 7:30pm",
-  "pages.events.items.autumn_concert.description.0":
-    "County Hall Arts is delighted to present an Autumn Concert in County Hall's historic Council Chamber - on the evening of Monday 19th October 2026.",
-  "pages.events.items.autumn_concert.description.1":
-    "Eminent Japanese flautist Mika Enjo and celebrated classical guitarist Santy Masciarò will bring together music from a range of periods and styles - including Bach's Sonata in C Major, Piazzolla's Histoire du Tango and an arrangement of the timeless Greensleeves.",
-  "pages.events.items.autumn_concert.description.2":
-    "Please join this unique duo for a special Autumn evening of music - expressed through the rich and distinctive qualities of flute and guitar. The concert begins at 7:30pm. Complimentary tickets are available via Eventbrite.",
-  "pages.events.items.autumn_concert.description.3":
-    "Hailing from Kyoto, Mika studied under renowned German flautist Paul Meisen and has played across Europe and Japan - including as founding member of the Kyoto Quartet (who memorably performed in the Council Chamber last year). Santy, meanwhile, is originally from Italy where he studied classical guitar at the Conservatorium of Pescara. Now based in London, he has travelled throughout Europe to perform and teach masterclasses.",
-  "pages.events.items.autumn_concert.description.4":
-    "Mika was last at County Hall in June when she participated in the spellbinding Love & Peace concert. She is also active as a composer under the name Mika T and her piece Sonata of Souls features in the programme on 19th October.",
-  "pages.events.items.autumn_concert.description.5":
-    "Once again, the magnificent Council Chamber provides a setting where cultures meet through music: a flute from the East and a guitar from the West, bringing together the elegance of the Baroque, the expressive character of the classical tradition and the vibrant rhythms of Latin America.",
-  "pages.events.items.autumn_concert.description.6":
-    "Join us at County Hall on the South Bank for this enchanting concert celebrating the versatility and beauty of these two instruments - delicate, lyrical and full of colour.",
-  "pages.events.items.autumn_concert.excerpt":
-    "Mika Enjo and Santy Masciarò perform Bach, Piazzolla and more in an intimate Autumn Concert at County Hall's historic Council Chamber.",
-  "pages.events.items.autumn_concert.image.alt":
-    "Mika Enjo and Santy Masciarò in concert at County Hall",
-  "pages.events.items.autumn_concert.location": "Council Chamber, County Hall",
-  "pages.events.items.autumn_concert.title": "Autumn Concert at County Hall",
+  "pages.events.items.four_seasons_festival.booknow.label": "Details",
+  "pages.events.items.four_seasons_festival.date": "Autumn 2026",
+  "pages.events.items.four_seasons_festival.description.0":
+    "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
+  "pages.events.items.four_seasons_festival.description.1":
+    "More than a programme of individual events, each edition is developed around a central theme or idea — creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
+  "pages.events.items.four_seasons_festival.description.2":
+    "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
+  "pages.events.items.four_seasons_festival.description.3":
+    "# As the Leaves Turn, Autumn 2026",
+  "pages.events.items.four_seasons_festival.description.4":
+    "The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation. Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning.",
+  "pages.events.items.four_seasons_festival.description.5":
+    "Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go.",
+  "pages.events.items.four_seasons_festival.description.6":
+    "# Seeds of Change, Spring 2026",
+  "pages.events.items.four_seasons_festival.description.7":
+    "The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility. The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening. At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.",
+  "pages.events.items.four_seasons_festival.description.8":
+    "# Under the Same Sun, Summer 2026",
+  "pages.events.items.four_seasons_festival.description.9":
+    "The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration. Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together. The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava. For festival enquiries, contact info@countyhallarts.com.",
+  "pages.events.items.four_seasons_festival.excerpt":
+    "A seasonal multidisciplinary programme at County Hall — music, visual art, film, dance, workshops and participatory experiences across spring, summer and autumn.",
+  "pages.events.items.four_seasons_festival.image.alt":
+    "Four Seasons Festival at County Hall",
+  "pages.events.items.four_seasons_festival.location": "Riverside Building, County Hall",
+  "pages.events.items.four_seasons_festival.title": "Four Seasons Festival",
   "pages.events.items.lunchtime_concert_series.booknow.label": "Details",
   "pages.events.items.lunchtime_concert_series.date": "Friday 25 September 2026, 1pm",
   "pages.events.items.lunchtime_concert_series.description.0":
