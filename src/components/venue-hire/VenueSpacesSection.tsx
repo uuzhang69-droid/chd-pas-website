@@ -28,10 +28,10 @@ export function VenueSpacesSection({ title, items, wholeVenue }: VenueSpacesSect
   if (!activeSpace) return null;
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-8 md:py-12">
       <Container>
         <h2 className="text-h2 text-charcoal">{title}</h2>
-        <div className="mt-8 grid gap-8 md:grid-cols-2 md:items-stretch">
+        <div className="mt-4 grid gap-8 md:grid-cols-2 md:items-stretch">
           <div className="flex h-full flex-col gap-6 rounded-sm border border-rose/25 bg-ivory p-6 md:p-8">
             {items.map((space) => {
               const isActive = space.id === activeId;
@@ -86,7 +86,7 @@ export function VenueSpacesSection({ title, items, wholeVenue }: VenueSpacesSect
             </div>
           </div>
         </div>
-        <p className="text-body-lg mt-8 text-charcoal/80">{wholeVenue}</p>
+        <p className="text-body mt-4 text-charcoal/80">{wholeVenue}</p>
       </Container>
     </section>
   );

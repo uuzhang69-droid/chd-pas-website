@@ -5,7 +5,7 @@ import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
 
 export function NewsletterBand() {
   const { newsletter } = siteContent.home;
-  const { utilityBar } = siteContent.global;
+  const { footer } = siteContent.global;
 
   return (
     <section className="bg-rose/15 py-16 md:py-20" aria-labelledby="newsletter-heading">
@@ -31,7 +31,7 @@ export function NewsletterBand() {
           <div className="mt-10">
             <p className="text-overline text-charcoal/60 mb-4">{newsletter.socialHeading}</p>
             <div className="flex justify-center gap-4">
-              {utilityBar.social.map((item) => (
+              {footer.social.map((item) => (
                 <a
                   key={item.platform}
                   href={item.href}

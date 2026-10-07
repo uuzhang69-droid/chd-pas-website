@@ -179,7 +179,7 @@ export type SectionedPageContent = {
 export type NavItem = {
   label: string;
   href: string;
-  /** When false, the parent label opens the submenu only (no navigation). */
+  /** When true, the parent label is a link as well as opening the submenu. Default: not clickable. */
   parentLink?: boolean;
   children?: Link[];
 };

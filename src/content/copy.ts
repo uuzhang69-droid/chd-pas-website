@@ -41,7 +41,7 @@ export const copy = {
   "global.navigation.items.about_us.children.gift_cards.label": "Gift Cards",
   "global.navigation.items.about_us.children.join_us.label": "Join Us",
   "global.navigation.items.about_us.children.membership_terms.label": "Membership Terms",
-  "global.navigation.items.about_us.label": "About Us",
+  "global.navigation.items.about_us.label": "About",
   "global.navigation.items.classes.children.booking.label": "Booking",
   "global.navigation.items.classes.children.class_descriptions.label":
     "Class Descriptions & Instructors",
@@ -179,7 +179,8 @@ export const copy = {
   "meta.defaultdescription": "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
   "meta.shortname": "CHD PAS",
   "meta.sitename": "County Hall Dance & Performing Arts School",
-  "pages.about.cta.body": "We would love to welcome you for a trial class or a tour of the venues.",
+  "pages.about.cta.body":
+    "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
   "pages.about.cta.button.label": "Get in touch",
   "pages.about.cta.title": "Visit us",
   "pages.about.faculty.intro": "Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care.",
@@ -199,6 +200,8 @@ export const copy = {
   "pages.about.hero.title": "About County Hall Dance & Performing Arts School",
   "pages.about.meta.description": "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
   "pages.about.meta.title": "About Us",
+  "pages.about.story.gallery.0.alt":
+    "Performers in traditional dress with Big Ben and the Houses of Parliament in the background",
   "pages.about.story.paragraphs.0": "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
   "pages.about.story.title": "Our story",
   "pages.about.values.items.0.description": "To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London.",
@@ -932,11 +935,16 @@ export const copy = {
   "pages.studiohire.overview.facts.items.2": "Up to 120 guests",
   "pages.studiohire.overview.facts.items.3": "5 minutes' walk from Waterloo and Westminster",
   "pages.studiohire.overview.facts.title": "Key facts",
-  "pages.studiohire.overview.gallery.0.alt": "Main venue floor with natural light",
+  "pages.studiohire.overview.gallery.0.alt":
+    "County Hall on the South Bank with the London Eye nearby",
   "pages.studiohire.overview.gallery.1.alt":
-    "Sunlit wooden-floor hall with tall windows at County Hall",
-  "pages.studiohire.overview.gallery.2.alt": "Venue set up for classes and workshops",
-  "pages.studiohire.overview.gallery.3.alt": "Professional dance space on the South Bank",
+    "Sunset view of Westminster and the Thames from the South Bank",
+  "pages.studiohire.overview.gallery.2.alt":
+    "Classical stone facade of County Hall with columns and signage",
+  "pages.studiohire.overview.gallery.3.alt":
+    "County Hall and the London Eye seen from the River Thames",
+  "pages.studiohire.overview.gallery.4.alt":
+    "Historical photograph of County Hall beside the Thames",
   "pages.studiohire.overview.hero.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",
   "pages.studiohire.overview.hero.overline": "County Hall arts space",
   "pages.studiohire.overview.hero.subtitle": "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",

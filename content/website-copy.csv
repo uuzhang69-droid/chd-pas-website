@@ -39,7 +39,7 @@ global.navigation.items.about_us.children.faqs.label,Global — navigation › i
 global.navigation.items.about_us.children.gift_cards.label,Global — navigation › items › about us › children › gift cards › label,Gift Cards
 global.navigation.items.about_us.children.join_us.label,Global — navigation › items › about us › children › join us › label,Join Us
 global.navigation.items.about_us.children.membership_terms.label,Global — navigation › items › about us › children › membership terms › label,Membership Terms
-global.navigation.items.about_us.label,Global — navigation › items › about us › label,About Us
+global.navigation.items.about_us.label,Global — navigation › items › about us › label,About
 global.navigation.items.classes.children.booking.label,Global — navigation › items › classes › children › booking › label,Booking
 global.navigation.items.classes.children.class_descriptions.label,Global — navigation › items › classes › children › class descriptions › label,Class Descriptions & Instructors
 global.navigation.items.classes.children.instructors.label,Global — navigation › items › classes › children › instructors › label,Instructors
@@ -171,7 +171,8 @@ home.quickactions.overline,Homepage — quickactions › overline,Get started
 meta.defaultdescription,Site metadata — defaultdescription,"Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire."
 meta.shortname,Site metadata — shortname,CHD PAS
 meta.sitename,Site metadata — sitename,County Hall Dance & Performing Arts School
-pages.about.cta.body,About page › cta › body,We would love to welcome you for a trial class or a tour of the venues.
+pages.about.cta.body,About page › cta › body,"We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person."
+pages.about.story.gallery.0.alt,About page › story › gallery › 0 › alt,Performers in traditional dress with Big Ben and the Houses of Parliament in the background
 pages.about.cta.button.label,About page › cta › button › label,Get in touch
 pages.about.cta.title,About page › cta › title,Visit us
 pages.about.faculty.intro,About page › faculty › intro,"Our teachers are working artists and experienced educators, selected for both technical expertise and pastoral care."
@@ -849,10 +850,11 @@ pages.studiohire.overview.facts.items.1,Studiohire page › overview › facts �
 pages.studiohire.overview.facts.items.2,Studiohire page › overview › facts › items › 2,Up to 120 guests
 pages.studiohire.overview.facts.items.3,Studiohire page › overview › facts › items › 3,5 minutes' walk from Waterloo and Westminster
 pages.studiohire.overview.facts.title,Studiohire page › overview › facts › title,Key facts
-pages.studiohire.overview.gallery.0.alt,Studiohire page › overview › gallery › 0 › alt,Main venue floor with natural light
-pages.studiohire.overview.gallery.1.alt,Studiohire page › overview › gallery › 1 › alt,Sunlit wooden-floor hall with tall windows at County Hall
-pages.studiohire.overview.gallery.2.alt,Studiohire page › overview › gallery › 2 › alt,Venue set up for classes and workshops
-pages.studiohire.overview.gallery.3.alt,Studiohire page › overview › gallery › 3 › alt,Professional dance space on the South Bank
+pages.studiohire.overview.gallery.0.alt,Studiohire page › overview › gallery › 0 › alt,County Hall on the South Bank with the London Eye nearby
+pages.studiohire.overview.gallery.1.alt,Studiohire page › overview › gallery › 1 › alt,Sunset view of Westminster and the Thames from the South Bank
+pages.studiohire.overview.gallery.2.alt,Studiohire page › overview › gallery › 2 › alt,Classical stone facade of County Hall with columns and signage
+pages.studiohire.overview.gallery.3.alt,Studiohire page › overview › gallery › 3 › alt,County Hall and the London Eye seen from the River Thames
+pages.studiohire.overview.gallery.4.alt,Studiohire page › overview › gallery › 4 › alt,Historical photograph of County Hall beside the Thames
 pages.studiohire.overview.hero.image.alt,Studiohire page › overview › hero › image › alt,Venue space available for hire at County Hall
 pages.studiohire.overview.hero.overline,Studiohire page › overview › hero › overline,County Hall arts space
 pages.studiohire.overview.hero.subtitle,Studiohire page › overview › hero › subtitle,"Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events."

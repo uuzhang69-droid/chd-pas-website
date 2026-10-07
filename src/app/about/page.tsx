@@ -3,6 +3,7 @@ import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -25,15 +26,26 @@ export default function AboutPage() {
 
       <section className="py-16 md:py-24">
         <Container>
-          <div className="max-w-3xl">
-            <h2 className="text-h2 text-charcoal">{about.story.title}</h2>
-            <div className="mt-6 space-y-4">
-              {about.story.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/80">
-                  {paragraph}
-                </p>
-              ))}
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 xl:gap-16">
+            <div className="lg:flex lg:flex-col lg:justify-center">
+              <h2 className="text-h2 text-charcoal">{about.story.title}</h2>
+              <div className="mt-6 space-y-4">
+                {about.story.paragraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/80">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
+            {about.story.gallery && about.story.gallery.length > 0 && (
+              <AutoPlayGallery
+                images={about.story.gallery}
+                label="About County Hall Dance Centre photos"
+                className="aspect-[4/3] w-full lg:aspect-auto lg:h-full lg:min-h-0"
+                frameClassName="h-full w-full"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            )}
           </div>
         </Container>
       </section>

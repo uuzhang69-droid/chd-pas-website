@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteContent } from "@/content/site";
 import { BrandMark } from "@/components/layout/BrandMark";
 import { SocialIcon } from "@/components/icons/SocialIcons";
@@ -14,7 +13,7 @@ export function Footer() {
     <footer className="bg-burgundy text-ivory">
       <Container className="py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <div className="mb-6">
               <BrandMark variant="footer" />
             </div>
@@ -35,39 +34,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-2">
-            <h3 className="text-h4 text-ivory mb-4">{footer.columns.explore.title}</h3>
-            <ul className="space-y-2">
-              {footer.columns.explore.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-body text-ivory/80 transition-colors hover:text-rose"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h3 className="text-h4 text-ivory mb-4">{footer.columns.school.title}</h3>
-            <ul className="space-y-2">
-              {footer.columns.school.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-body text-ivory/80 transition-colors hover:text-rose"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-7">
             <h3 className="text-h4 text-ivory mb-4">{footer.contact.title}</h3>
             <address className="not-italic text-body text-ivory/85 space-y-1">
               {footer.contact.address.map((line) => (
@@ -106,15 +73,10 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-ivory/15 pt-8 md:flex-row md:items-center md:justify-between">
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
-            {footer.legal.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-small text-ivory/70 transition-colors hover:text-rose"
-                >
-                  {link.label}
-                </Link>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal notices">
+            {footer.legal.map((item) => (
+              <li key={item.label}>
+                <span className="text-small text-ivory/70">{item.label}</span>
               </li>
             ))}
           </ul>

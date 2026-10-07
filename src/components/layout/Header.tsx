@@ -28,7 +28,7 @@ function NavLink({ item }: { item: NavItem }) {
 function NavDropdown({ item }: { item: NavItemWithChildren }) {
   const { submenuSuffix } = siteContent.ui.header;
   const [open, setOpen] = useState(false);
-  const parentIsLink = item.parentLink !== false;
+  const parentIsLink = item.parentLink === true;
 
   function closeIfFocusLeft(container: HTMLElement, relatedTarget: EventTarget | null) {
     if (relatedTarget instanceof Node && container.contains(relatedTarget)) return;
@@ -104,7 +104,7 @@ function MobileNavAccordion({
   onNavigate: () => void;
 }) {
   const panelId = `mobile-nav-${item.label.replace(/\s+/g, "-").toLowerCase()}`;
-  const parentIsLink = item.parentLink !== false;
+  const parentIsLink = item.parentLink === true;
 
   const { submenuSuffix } = siteContent.ui.header;
 

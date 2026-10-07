@@ -55,10 +55,6 @@ export const siteStructure = {
           "href": "/timetable"
         },
         {
-          "label": "@@COPY:global.navigation.items.membership.label",
-          "href": "/membership"
-        },
-        {
           "label": "@@COPY:global.navigation.items.classes.label",
           "href": "/classes",
           "parentLink": false,
@@ -68,22 +64,23 @@ export const siteStructure = {
               "href": "/classes-info"
             },
             {
-              "label": "@@COPY:global.navigation.items.classes.children.booking.label",
-              "href": "/booking"
+              "label": "@@COPY:global.navigation.items.private_lessons.label",
+              "href": "/private-lessons"
             }
           ]
+        },
+        {
+          "label": "@@COPY:global.navigation.items.membership.label",
+          "href": "/membership"
         },
         {
           "label": "@@COPY:global.navigation.items.events.label",
           "href": "/events"
         },
         {
-          "label": "@@COPY:global.navigation.items.private_lessons.label",
-          "href": "/private-lessons"
-        },
-        {
           "label": "@@COPY:global.navigation.items.studio_hire.label",
           "href": "/venue-hire",
+          "parentLink": false,
           "children": [
             {
               "label": "@@COPY:global.navigation.items.studio_hire.children.venue_hire.label",
@@ -98,6 +95,7 @@ export const siteStructure = {
         {
           "label": "@@COPY:global.navigation.items.about_us.label",
           "href": "/about",
+          "parentLink": false,
           "children": [
             {
               "label": "@@COPY:global.navigation.items.about_us.children.about_us.label",
@@ -1390,6 +1388,38 @@ export const siteStructure = {
           }
         },
         "intro": "@@COPY:pages.studiohire.overview.intro",
+        "gallery": [
+          {
+            "src": "/images/venue/gallery-01.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.0.alt",
+            "width": 1024,
+            "height": 447
+          },
+          {
+            "src": "/images/venue/gallery-02.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt",
+            "width": 1024,
+            "height": 519
+          },
+          {
+            "src": "/images/venue/gallery-03.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt",
+            "width": 1024,
+            "height": 472
+          },
+          {
+            "src": "/images/venue/gallery-04.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.3.alt",
+            "width": 1024,
+            "height": 576
+          },
+          {
+            "src": "/images/venue/gallery-05.jpg",
+            "alt": "@@COPY:pages.studiohire.overview.gallery.4.alt",
+            "width": 1024,
+            "height": 486
+          }
+        ],
         "spaces": {
           "title": "@@COPY:pages.studiohire.overview.spaces.title",
           "items": [
@@ -2046,6 +2076,14 @@ export const siteStructure = {
         "title": "@@COPY:pages.about.story.title",
         "paragraphs": [
           "@@COPY:pages.about.story.paragraphs.0"
+        ],
+        "gallery": [
+          {
+            "src": "/images/about/gallery-01.jpg",
+            "alt": "@@COPY:pages.about.story.gallery.0.alt",
+            "width": 1024,
+            "height": 699
+          }
         ]
       },
       "values": {

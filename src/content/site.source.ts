@@ -69,29 +69,30 @@ export const siteSource = {
     navigation: {
       items: [
         { label: "Timetable", href: "/timetable" },
-        { label: "Membership", href: "/membership" },
         {
           label: "Classes",
           href: "/classes",
           parentLink: false,
           children: [
             { label: "Class Descriptions & Instructors", href: "/classes-info" },
-            { label: "Booking", href: "/booking" },
+            { label: "Private Lessons", href: "/private-lessons" },
           ] satisfies Link[],
         },
+        { label: "Membership", href: "/membership" },
         { label: "Events", href: "/events" },
-        { label: "Private Lessons", href: "/private-lessons" },
         {
           label: "Venue Hire",
           href: "/venue-hire",
+          parentLink: false,
           children: [
             { label: "Venue Hire", href: "/venue-hire" },
             { label: "Space Booking", href: "/booking" },
           ] satisfies Link[],
         },
         {
-          label: "About Us",
+          label: "About",
           href: "/about",
+          parentLink: false,
           children: [
             { label: "About Us", href: "/about" },
             { label: "Contact", href: "/contact" },
@@ -1271,6 +1272,38 @@ export const siteSource = {
         },
         intro:
           "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
+        gallery: [
+          {
+            src: "/images/venue/gallery-01.jpg",
+            alt: "County Hall on the South Bank with the London Eye nearby",
+            width: 1024,
+            height: 447,
+          },
+          {
+            src: "/images/venue/gallery-02.jpg",
+            alt: "Sunset view of Westminster and the Thames from the South Bank",
+            width: 1024,
+            height: 519,
+          },
+          {
+            src: "/images/venue/gallery-03.jpg",
+            alt: "Classical stone facade of County Hall with columns and signage",
+            width: 1024,
+            height: 472,
+          },
+          {
+            src: "/images/venue/gallery-04.jpg",
+            alt: "County Hall and the London Eye seen from the River Thames",
+            width: 1024,
+            height: 576,
+          },
+          {
+            src: "/images/venue/gallery-05.jpg",
+            alt: "Historical photograph of County Hall beside the Thames",
+            width: 1024,
+            height: 486,
+          },
+        ],
         spaces: {
           title: "Our spaces",
           items: [
@@ -1876,6 +1909,14 @@ export const siteSource = {
         paragraphs: [
           "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
         ],
+        gallery: [
+          {
+            src: "/images/about/gallery-01.jpg",
+            alt: "Performers in traditional dress with Big Ben and the Houses of Parliament in the background",
+            width: 1024,
+            height: 699,
+          },
+        ],
       },
       values: {
         overline: "What guides us",
@@ -1889,7 +1930,7 @@ export const siteSource = {
       },
       cta: {
         title: "Visit us",
-        body: "We would love to welcome you for a trial class or a tour of the venues.",
+        body: "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
         button: { label: "Get in touch", href: "/contact", variant: "primary" },
       },
     },
