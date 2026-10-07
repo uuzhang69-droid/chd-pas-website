@@ -9,7 +9,7 @@ import {
 import { Container } from "@/components/ui/Container";
 
 export function UtilityBar() {
-  const { utilityBar } = siteContent.global;
+  const { utilityBar, footer } = siteContent.global;
 
   return (
     <div className="hidden border-b border-taupe/30 bg-charcoal text-ivory md:block">
@@ -40,7 +40,7 @@ export function UtilityBar() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          {utilityBar.social.map((item) => (
+          {footer.social.map((item) => (
             <a
               key={item.platform}
               href={item.href}

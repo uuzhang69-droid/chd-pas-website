@@ -106,7 +106,7 @@ export const copy = {
   "home.events.items.memory_of_china.booknow.label": "Book Now",
   "home.events.items.memory_of_china.date": "Saturday 3 – Sunday 4 October 2026",
   "home.events.items.memory_of_china.image.alt":
-    "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+    "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
   "home.events.items.memory_of_china.location": "Members' Terrace, County Hall",
   "home.events.items.memory_of_china.title": "Memory of China",
   "home.events.items.four_seasons_festival.booknow.label": "Book Now",
@@ -201,7 +201,7 @@ export const copy = {
   "pages.about.meta.description": "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
   "pages.about.meta.title": "About Us",
   "pages.about.story.gallery.0.alt":
-    "Performers in traditional dress with Big Ben and the Houses of Parliament in the background",
+    "County Hall on the South Bank viewed from the River Thames, with the London Eye beside it",
   "pages.about.story.paragraphs.0": "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
   "pages.about.story.title": "Our story",
   "pages.about.values.items.0.description": "To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London.",
@@ -616,7 +616,7 @@ export const copy = {
   "pages.events.items.memory_of_china.inline_galleries.sunday_schedule.alt":
     "Memory of China festival schedule for Sunday 4 October 2026",
   "pages.events.items.memory_of_china.image.alt":
-    "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+    "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
   "pages.events.items.memory_of_china.location": "Members' Terrace, County Hall",
   "pages.events.items.memory_of_china.tickets.saturday_tickets.label": "Saturday tickets",
   "pages.events.items.memory_of_china.tickets.sunday_tickets.label": "Sunday tickets",

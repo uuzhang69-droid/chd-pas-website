@@ -30,6 +30,26 @@ const FOUR_SEASONS_GALLERY: ImageAsset[] = FOUR_SEASONS_GALLERY_ALTS.map((alt, i
   height: index === 0 ? 682 : 1080,
 }));
 
+const MEMORY_OF_CHINA_GALLERY_ALTS = [
+  "Chinese classical dancer on Members' Terrace with Big Ben in the background",
+  "Woodblock printing workshop with red paper prints at Memory of China",
+  "Mahjong on the Members' Terrace with the Houses of Parliament behind",
+  "Handmade jewelry at the Memory of China makers' market",
+  "Chinese fan veil dance performance on the terrace",
+  "Traditional crafts and jewelry at the festival market stalls",
+  "Miao ethnic dance performance in silver ceremonial dress with Big Ben behind",
+  "Yunnan cultural showcase with indigo batik textiles beside the Thames",
+  "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
+  "Outdoor yoga session on the lawn at County Hall during the Chinese Yoga Festival",
+] as const;
+
+const MEMORY_OF_CHINA_GALLERY: ImageAsset[] = MEMORY_OF_CHINA_GALLERY_ALTS.map((alt, index) => ({
+  src: `/images/events/memory-of-china/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
+  alt,
+  width: 1920,
+  height: 1080,
+}));
+
 export function enrichEventsContent(source: SiteSource): SiteSource {
   return {
     ...source,
@@ -54,6 +74,12 @@ export function enrichEventsContent(source: SiteSource): SiteSource {
             return {
               ...event,
               gallery: FOUR_SEASONS_GALLERY,
+            };
+          }
+          if (event.slug === "memory-of-china") {
+            return {
+              ...event,
+              gallery: MEMORY_OF_CHINA_GALLERY,
             };
           }
           return event;

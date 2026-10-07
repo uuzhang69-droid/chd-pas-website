@@ -33,18 +33,13 @@ export const siteStructure = {
       "social": [
         {
           "platform": "instagram",
-          "href": "https://www.instagram.com/countyhalldancecentre",
-          "label": "@@COPY:global.utilitybar.social.instagram.label"
+          "href": "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          "label": "@@COPY:global.footer.social.instagram.label"
         },
         {
-          "platform": "facebook",
-          "href": "https://facebook.com/countryhalldance",
-          "label": "@@COPY:global.utilitybar.social.facebook.label"
-        },
-        {
-          "platform": "youtube",
-          "href": "https://youtube.com/@countyhalldance",
-          "label": "@@COPY:global.utilitybar.social.youtube.label"
+          "platform": "xiaohongshu",
+          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          "label": "@@COPY:global.footer.social.rednote.label"
         }
       ]
     },
@@ -337,7 +332,7 @@ export const siteStructure = {
           "dateIso": "2026-10-04",
           "location": "@@COPY:home.events.items.memory_of_china.location",
           "image": {
-            "src": "/images/events/memory-of-china.jpg",
+            "src": "/images/events/memory-of-china/gallery-09.jpg",
             "alt": "@@COPY:home.events.items.memory_of_china.image.alt"
           },
           "bookNow": {
@@ -1036,7 +1031,7 @@ export const siteStructure = {
             }
           ],
           "image": {
-            "src": "/images/events/memory-of-china.jpg",
+            "src": "/images/events/memory-of-china/gallery-09.jpg",
             "alt": "@@COPY:pages.events.items.memory_of_china.image.alt"
           },
           "bookNow": {
@@ -2126,10 +2121,10 @@ export const siteStructure = {
         ],
         "gallery": [
           {
-            "src": "/images/about/gallery-01.jpg",
+            "src": "/images/about/story-gallery-01.jpg",
             "alt": "@@COPY:pages.about.story.gallery.0.alt",
             "width": 1024,
-            "height": 699
+            "height": 576
           }
         ]
       },

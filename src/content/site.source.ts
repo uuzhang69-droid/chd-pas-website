@@ -51,18 +51,13 @@ export const siteSource = {
       social: [
         {
           platform: "instagram",
-          href: "https://www.instagram.com/countyhalldancecentre",
-          label: "@countyhalldancecentre",
+          href: "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          label: "Instagram: @countyhalldancecentre",
         },
         {
-          platform: "facebook",
-          href: "https://facebook.com/countryhalldance",
-          label: "Follow us on Facebook",
-        },
-        {
-          platform: "youtube",
-          href: "https://youtube.com/@countyhalldance",
-          label: "Watch us on YouTube",
+          platform: "xiaohongshu",
+          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          label: "Red Note (小红书)",
         },
       ] satisfies SocialLink[],
     },
@@ -289,8 +284,8 @@ export const siteSource = {
           dateIso: "2026-10-04",
           location: "Members' Terrace, County Hall",
           image: {
-            src: "/images/events/memory-of-china.jpg",
-            alt: "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+            src: "/images/events/memory-of-china/gallery-09.jpg",
+            alt: "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
           },
           bookNow: {
             label: "Book Now",
@@ -849,8 +844,8 @@ export const siteSource = {
             },
           ],
           image: {
-            src: "/images/events/memory-of-china.jpg",
-            alt: "Memory of China: Chinese Traditional Arts and Culture Festival at County Hall",
+            src: "/images/events/memory-of-china/gallery-09.jpg",
+            alt: "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
           },
           bookNow: {
             label: "Book Now",
@@ -1943,10 +1938,10 @@ export const siteSource = {
         ],
         gallery: [
           {
-            src: "/images/about/gallery-01.jpg",
-            alt: "Performers in traditional dress with Big Ben and the Houses of Parliament in the background",
+            src: "/images/about/story-gallery-01.jpg",
+            alt: "County Hall on the South Bank viewed from the River Thames, with the London Eye beside it",
             width: 1024,
-            height: 699,
+            height: 576,
           },
         ],
       },

@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12 xl:gap-16">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-16">
             <div className="lg:flex lg:flex-col lg:justify-center">
               <h2 className="text-h2 text-charcoal">{about.story.title}</h2>
               <div className="mt-6 space-y-4">
@@ -41,8 +41,7 @@ export default function AboutPage() {
               <AutoPlayGallery
                 images={about.story.gallery}
                 label="About County Hall Dance Centre photos"
-                className="aspect-[4/3] w-full lg:aspect-auto lg:h-full lg:min-h-0"
-                frameClassName="h-full w-full"
+                className="aspect-[4/3] w-full"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             )}
