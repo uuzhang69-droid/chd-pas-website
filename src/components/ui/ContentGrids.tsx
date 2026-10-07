@@ -19,12 +19,12 @@ export function ClassStyleCardGrid({
           key={style.id}
           className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow hover:shadow-lg"
         >
-          <div className="relative aspect-[16/10] overflow-hidden">
+          <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-blush/25">
             <Image
               src={style.image.src}
               alt={style.image.alt}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-contain object-center"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
