@@ -85,7 +85,7 @@ export const siteSource = {
           href: "/venue-hire",
           parentLink: false,
           children: [
-            { label: "Venue Hire", href: "/venue-hire" },
+            { label: "Space Hire", href: "/venue-hire" },
             { label: "Space Booking", href: "/booking" },
           ] satisfies Link[],
         },
@@ -101,7 +101,7 @@ export const siteSource = {
       ] satisfies NavItem[],
       bookTrial: {
         label: "Book your class",
-        href: "/timetable#trial",
+        href: "/timetable",
         variant: "primary",
       } satisfies CtaButton,
       search: {
@@ -1287,13 +1287,13 @@ export const siteSource = {
     venueHire: {
       overview: {
         meta: {
-          title: "Venue Hire",
+          title: "Space Hire",
           description:
             "Hire a 70 m² vinyl-floor venue or a 200 m² Sprung Wooden Floor Hall at County Hall on the South Bank. From £200 per hour, member rates available.",
         },
         hero: {
           overline: "County Hall arts space",
-          title: "Venue Hire",
+          title: "Space Hire",
           subtitle:
             "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
           image: {

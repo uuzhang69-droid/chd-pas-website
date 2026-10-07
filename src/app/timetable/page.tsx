@@ -3,7 +3,6 @@ import Link from "next/link";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { ClassCalendar } from "@/components/timetable/ClassCalendar";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 
@@ -19,18 +18,6 @@ export default function TimetablePage() {
     <PageShell>
       <PageHero {...timetable.hero} />
       <ClassCalendar />
-      <section id={timetable.trial.id} className="scroll-mt-24 py-12 md:py-16">
-        <Container>
-          <div className="max-w-3xl rounded-sm border border-rose/25 bg-ivory p-8 md:p-10">
-            <p className="text-overline text-rose">{timetable.trial.overline}</p>
-            <h2 className="text-h2 mt-2 text-charcoal">{timetable.trial.title}</h2>
-            <p className="text-body-lg mt-4 text-charcoal/75">{timetable.trial.body}</p>
-            <div className="mt-6">
-              <Button {...timetable.trial.cta} />
-            </div>
-          </div>
-        </Container>
-      </section>
       <section className="py-8">
         <Container>
           <p className="text-body text-charcoal/75">{timetable.newcomerNote}</p>

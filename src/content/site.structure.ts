@@ -110,7 +110,7 @@ export const siteStructure = {
       ],
       "bookTrial": {
         "label": "@@COPY:global.navigation.booktrial.label",
-        "href": "/timetable#trial",
+        "href": "/timetable",
         "variant": "primary"
       },
       "search": {

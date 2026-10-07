@@ -71,7 +71,7 @@ global.navigation.items.shop.children.t_shirts.label,Global — navigation › i
 global.navigation.items.shop.label,Global — navigation › items › shop › label,Shop
 global.navigation.items.studio_hire.children.our_space.label,Global — navigation › items › venue hire › children › our space › label,Our Space
 global.navigation.items.studio_hire.children.space_booking.label,Global — navigation › items › venue hire › children › space booking › label,Space Booking
-global.navigation.items.studio_hire.children.venue_hire.label,Global — navigation › items › venue hire › children › venue hire › label,Venue Hire
+global.navigation.items.studio_hire.children.venue_hire.label,Global — navigation › items › venue hire › children › venue hire › label,Space Hire
 global.navigation.items.studio_hire.label,Global — navigation › items › venue hire › label,Venue Hire
 global.navigation.items.timetable.label,Global — navigation › items › timetable › label,Timetable
 global.navigation.search.label,Global — navigation › search › label,Search
@@ -858,7 +858,7 @@ pages.studiohire.overview.gallery.4.alt,Studiohire page › overview › gallery
 pages.studiohire.overview.hero.image.alt,Studiohire page › overview › hero › image › alt,Venue space available for hire at County Hall
 pages.studiohire.overview.hero.overline,Studiohire page › overview › hero › overline,County Hall arts space
 pages.studiohire.overview.hero.subtitle,Studiohire page › overview › hero › subtitle,"Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events."
-pages.studiohire.overview.hero.title,Studiohire page › overview › hero › title,Venue Hire
+pages.studiohire.overview.hero.title,Studiohire page › overview › hero › title,Space Hire
 pages.studiohire.overview.howtobook.steps.0.body,Studiohire page › overview › howtobook › steps › 0 › body,"Contact us through this website, our official WeChat (18518614868) or Instagram (@countyhalldancecentre). Please book at least one week in advance."
 pages.studiohire.overview.howtobook.steps.0.title,Studiohire page › overview › howtobook › steps › 0 › title,Enquire
 pages.studiohire.overview.howtobook.steps.1.body,Studiohire page › overview › howtobook › steps › 1 › body,"We'll check availability and confirm your date, space and hours."
@@ -870,7 +870,7 @@ pages.studiohire.overview.howtobook.steps.3.title,Studiohire page › overview �
 pages.studiohire.overview.howtobook.title,Studiohire page › overview › howtobook › title,How to book
 pages.studiohire.overview.intro,Studiohire page › overview › intro,"Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach."
 pages.studiohire.overview.meta.description,Studiohire page › overview › meta › description,"Hire a 70 m² vinyl-floor venue or a 200 m² Sprung Wooden Floor Hall at County Hall on the South Bank. From £200 per hour, member rates available."
-pages.studiohire.overview.meta.title,Studiohire page › overview › meta › title,Venue Hire
+pages.studiohire.overview.meta.title,Studiohire page › overview › meta › title,Space Hire
 pages.studiohire.overview.pricing.columns.0,Studiohire page › overview › pricing › columns › 0,
 pages.studiohire.overview.pricing.columns.1,Studiohire page › overview › pricing › columns › 1,Standard rate
 pages.studiohire.overview.pricing.columns.2,Studiohire page › overview › pricing › columns › 2,Member rate
