@@ -560,7 +560,8 @@ export const siteStructure = {
       },
       "detailLabels": {
         "ageGroups": "Who it's for",
-        "backLink": "@@COPY:pages.classes.detaillabels.backlink"
+        "backLink": "@@COPY:pages.classes.detaillabels.backlink",
+        "instructor": "@@COPY:pages.classes.detaillabels.instructor"
       },
       "styles": [
         {
@@ -574,6 +575,15 @@ export const siteStructure = {
             "image": {
               "src": "/images/styles/contemporary.jpg",
               "alt": "@@COPY:pages.classes.styles.contemporary.hero.image.alt"
+            }
+          },
+          "instructor": {
+            "name": "@@COPY:pages.classes.styles.contemporary.instructor.name",
+            "role": "@@COPY:pages.classes.styles.contemporary.instructor.role",
+            "bio": "@@COPY:pages.classes.styles.contemporary.instructor.bio",
+            "image": {
+              "src": "/images/faculty/sophie.svg",
+              "alt": "@@COPY:pages.classes.styles.contemporary.instructor.image.alt"
             }
           },
           "intro": [
@@ -619,6 +629,15 @@ export const siteStructure = {
               "alt": "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt"
             }
           },
+          "instructor": {
+            "name": "@@COPY:pages.classes.styles.chinese_dance.instructor.name",
+            "role": "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
+            "bio": "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
+            "image": {
+              "src": "/images/faculty/kiki.svg",
+              "alt": "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt"
+            }
+          },
           "intro": [
             "@@COPY:pages.classes.styles.chinese_dance.intro.0"
           ],
@@ -659,6 +678,15 @@ export const siteStructure = {
             "image": {
               "src": "/images/styles/tango.jpg",
               "alt": "@@COPY:pages.classes.styles.tango.hero.image.alt"
+            }
+          },
+          "instructor": {
+            "name": "@@COPY:pages.classes.styles.tango.instructor.name",
+            "role": "@@COPY:pages.classes.styles.tango.instructor.role",
+            "bio": "@@COPY:pages.classes.styles.tango.instructor.bio",
+            "image": {
+              "src": "/images/faculty/marcus.svg",
+              "alt": "@@COPY:pages.classes.styles.tango.instructor.image.alt"
             }
           },
           "intro": [
@@ -703,6 +731,15 @@ export const siteStructure = {
               "alt": "@@COPY:pages.classes.styles.yoga.hero.image.alt"
             }
           },
+          "instructor": {
+            "name": "@@COPY:pages.classes.styles.yoga.instructor.name",
+            "role": "@@COPY:pages.classes.styles.yoga.instructor.role",
+            "bio": "@@COPY:pages.classes.styles.yoga.instructor.bio",
+            "image": {
+              "src": "/images/faculty/eleanor.svg",
+              "alt": "@@COPY:pages.classes.styles.yoga.instructor.image.alt"
+            }
+          },
           "intro": [
             "@@COPY:pages.classes.styles.yoga.intro.0"
           ],
@@ -743,6 +780,15 @@ export const siteStructure = {
             "image": {
               "src": "/images/styles/tai-chi.jpg",
               "alt": "@@COPY:pages.classes.styles.tai_chi.hero.image.alt"
+            }
+          },
+          "instructor": {
+            "name": "@@COPY:pages.classes.styles.tai_chi.instructor.name",
+            "role": "@@COPY:pages.classes.styles.tai_chi.instructor.role",
+            "bio": "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
+            "image": {
+              "src": "/images/faculty/michael.svg",
+              "alt": "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt"
             }
           },
           "intro": [
@@ -1815,6 +1861,7 @@ export const siteStructure = {
         "subtitle": "@@COPY:pages.classesinfo.hero.subtitle"
       },
       "intro": "@@COPY:pages.classesinfo.intro",
+      "cardLink": "@@COPY:pages.classesinfo.cardlink",
       "sections": [
         {
           "id": "descriptions",

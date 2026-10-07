@@ -62,15 +62,46 @@ export default async function ClassStylePage({ params }: PageProps) {
 
       <section className="py-16 md:py-24">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2 space-y-5">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,16rem)_1fr] lg:items-start lg:gap-12">
+            <div className="flex flex-col items-center text-center lg:sticky lg:top-28 lg:items-start lg:text-left">
+              <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border-4 border-rose/25 bg-blush/30 shadow-sm md:h-40 md:w-40">
+                <Image
+                  src={style.instructor.image.src}
+                  alt={style.instructor.image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="160px"
+                />
+              </div>
+              <p className="text-overline text-rose mt-5">{detailLabels.instructor}</p>
+              <h2 className="text-h3 mt-1 text-charcoal">{style.instructor.name}</h2>
+              {style.instructor.role && (
+                <p className="text-small mt-2 text-charcoal/65">{style.instructor.role}</p>
+              )}
+            </div>
+            <div className="space-y-4">
+              <p className="text-body text-charcoal/80">{style.instructor.bio}</p>
               {style.intro.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/80">
+                <p key={paragraph.slice(0, 32)} className="text-body text-charcoal/80">
                   {paragraph}
                 </p>
               ))}
             </div>
-            <aside className="rounded-sm border border-rose/25 bg-ivory p-6 h-fit">
+          </div>
+
+          <div className="mt-16 grid gap-12 lg:grid-cols-3 lg:items-start">
+            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+              {style.highlights.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-sm border border-taupe/30 p-6 transition-shadow hover:shadow-md"
+                >
+                  <h3 className="text-h3 text-charcoal">{item.title}</h3>
+                  <p className="text-body mt-3 text-charcoal/75">{item.description}</p>
+                </article>
+              ))}
+            </div>
+            <aside className="h-fit rounded-sm border border-rose/25 bg-ivory p-6">
               <h2 className="text-h4 text-rose">{detailLabels.ageGroups}</h2>
               <ul className="mt-4 space-y-4">
                 {style.ageGroups.map((group) => (
@@ -84,18 +115,6 @@ export default async function ClassStylePage({ params }: PageProps) {
                 <Button {...style.cta} className="w-full" />
               </div>
             </aside>
-          </div>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {style.highlights.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-sm border border-taupe/30 p-6 transition-shadow hover:shadow-md"
-              >
-                <h3 className="text-h3 text-charcoal">{item.title}</h3>
-                <p className="text-body mt-3 text-charcoal/75">{item.description}</p>
-              </article>
-            ))}
           </div>
         </Container>
       </section>

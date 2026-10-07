@@ -65,6 +65,13 @@ export type ClassStyleTile = {
   href: string;
 };
 
+export type ClassInstructor = {
+  name: string;
+  role?: string;
+  bio: string;
+  image: ImageAsset;
+};
+
 export type ClassStylePage = {
   slug: string;
   name: string;
@@ -75,10 +82,20 @@ export type ClassStylePage = {
     subtitle: string;
     image: ImageAsset;
   };
+  instructor: ClassInstructor;
   intro: string[];
   highlights: Array<{ title: string; description: string }>;
   ageGroups: Array<{ label: string; description: string }>;
   cta: CtaButton;
+};
+
+export type ClassStyleCard = {
+  id: string;
+  name: string;
+  slug: string;
+  href: string;
+  image: ImageAsset;
+  excerpt: string;
 };
 
 export type CourseSummary = {

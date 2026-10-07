@@ -1,9 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ClassStyleTile, CourseSummary, EventCard } from "@/content/types";
+import type { ClassStyleCard, ClassStyleTile, CourseSummary, EventCard } from "@/content/types";
 import { getEventCardCta, isEventBeforeToday, sortEventsByDate } from "@/lib/events/event-cta";
 import { siteContent } from "@/content/site";
 import { Button } from "@/components/ui/Button";
+
+export function ClassStyleCardGrid({
+  items,
+  linkLabel = "View class →",
+}: {
+  items: ClassStyleCard[];
+  linkLabel?: string;
+}) {
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((style) => (
+        <article
+          key={style.id}
+          className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow hover:shadow-lg"
+        >
+          <div className="relative aspect-[16/10] overflow-hidden">
+            <Image
+              src={style.image.src}
+              alt={style.image.alt}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
+          <div className="flex flex-1 flex-col p-6">
+            <h2 className="text-h3 text-charcoal">
+              <Link href={style.href} className="hover:text-rose">
+                {style.name}
+              </Link>
+            </h2>
+            <p className="text-body mt-3 flex-1 text-charcoal/75">{style.excerpt}</p>
+            <Link
+              href={style.href}
+              className="mt-5 text-small font-semibold uppercase tracking-wider text-rose hover:text-rose/80"
+            >
+              {linkLabel}
+            </Link>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
 
 export function ClassStyleGrid({ items }: { items: ClassStyleTile[] }) {
   return (

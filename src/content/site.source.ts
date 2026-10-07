@@ -500,7 +500,8 @@ export const siteSource = {
       cta: { label: "View timetable", href: "/timetable", variant: "primary" },
       detailLabels: {
         ageGroups: "Who it's for",
-        backLink: "Classes",
+        backLink: "Class Descriptions & Instructors",
+        instructor: "Instructor",
       },
       styles: [
         {
@@ -513,6 +514,12 @@ export const siteSource = {
             title: "Contemporary",
             subtitle: "Develop coordination, strength and creativity through flow, space and physical expression.",
             image: { src: "/images/styles/contemporary.jpg", alt: "Contemporary dance class" },
+          },
+          instructor: {
+            name: "Sophie Reed",
+            role: "Contemporary dance teacher",
+            bio: "Sophie brings over a decade of experience in contemporary and release-based technique. Her classes focus on grounded movement, improvisation and building confidence in a supportive studio environment.",
+            image: { src: "/images/faculty/sophie.svg", alt: "Sophie Reed" },
           },
           intro: [
             "Develop coordination, strength and creativity through flow, space and physical expression.",
@@ -539,6 +546,12 @@ export const siteSource = {
             subtitle: "Classical Chinese dance to build body control, flexibility and stage presence.",
             image: { src: "/images/styles/chinese-dance.jpg", alt: "Chinese dance class" },
           },
+          instructor: {
+            name: "Wei Lin",
+            role: "Chinese dance teacher",
+            bio: "Wei trained in classical Chinese dance and folk repertoire. She guides students through posture, line and expressive gesture, making traditional forms accessible to adult learners at every level.",
+            image: { src: "/images/faculty/kiki.svg", alt: "Wei Lin" },
+          },
           intro: [
             "Blending the grace, line and cultural expression of classical Chinese dance to build body control, flexibility and stage presence.",
           ],
@@ -561,6 +574,12 @@ export const siteSource = {
             title: "Tango",
             subtitle: "Learn lead and follow, musicality and the etiquette of social dance.",
             image: { src: "/images/styles/tango.jpg", alt: "Tango class" },
+          },
+          instructor: {
+            name: "Marcus Vega",
+            role: "Tango teacher",
+            bio: "Marcus teaches social tango with an emphasis on connection, musicality and floorcraft. Whether you come alone or with a partner, his classes help you feel at ease on the dance floor from your very first visit.",
+            image: { src: "/images/faculty/marcus.svg", alt: "Marcus Vega" },
           },
           intro: [
             "Learn connection, lead and follow, musicality and the etiquette of social dance, building confidence from the very first steps.",
@@ -585,6 +604,12 @@ export const siteSource = {
             subtitle: "Improve flexibility and overall wellbeing through breath, stretch and focused practice.",
             image: { src: "/images/styles/yoga.jpg", alt: "Yoga class" },
           },
+          instructor: {
+            name: "Eleanor Shaw",
+            role: "Yoga teacher",
+            bio: "Eleanor leads mindful, music-guided yoga sessions that balance stretch, strength and breath. Her teaching welcomes beginners and returning practitioners alike.",
+            image: { src: "/images/faculty/eleanor.svg", alt: "Eleanor Shaw" },
+          },
           intro: [
             "Improve flexibility and overall wellbeing through breath, stretch and focused, music-guided practice.",
           ],
@@ -607,6 +632,12 @@ export const siteSource = {
             title: "Tai Chi",
             subtitle: "Cultivate balance, relaxation and body awareness through slow, flowing movement.",
             image: { src: "/images/styles/tai-chi.jpg", alt: "Tai Chi class" },
+          },
+          instructor: {
+            name: "James Chen",
+            role: "Tai Chi teacher",
+            bio: "James shares slow, flowing Tai Chi forms that develop balance, calm and body awareness. His patient, clear instruction suits complete beginners as well as those deepening an existing practice.",
+            image: { src: "/images/faculty/michael.svg", alt: "James Chen" },
           },
           intro: [
             "Cultivate balance, relaxation and body awareness through slow, flowing movement, breath and shifts of weight.",
@@ -1666,11 +1697,12 @@ export const siteSource = {
       },
       intro:
         "Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome — no dance experience needed.",
+      cardLink: "View class →",
       sections: [
         { id: "descriptions", title: "Class Descriptions" },
         { id: "instructors", title: "Instructors" },
       ],
-    } satisfies SectionedPageContent,
+    } satisfies SectionedPageContent & { cardLink: string },
 
     classBooking: {
       meta: {
