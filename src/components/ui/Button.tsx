@@ -14,6 +14,7 @@ const variants = {
 
 type ButtonProps = CtaButton & {
   className?: string;
+  inactive?: boolean;
 };
 
 export function Button({
@@ -22,8 +23,20 @@ export function Button({
   variant = "primary",
   external,
   className = "",
+  inactive = false,
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${className}`;
+
+  if (inactive) {
+    return (
+      <span
+        className={`${classes} cursor-default opacity-65`}
+        aria-disabled="true"
+      >
+        {label}
+      </span>
+    );
+  }
 
   if (external) {
     return (

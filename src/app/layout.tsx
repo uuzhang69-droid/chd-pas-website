@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat, EB_Garamond } from "next/font/google";
+import { WhatsAppSupportWidget } from "@/components/support/WhatsAppSupportWidget";
 import { siteContent } from "@/content/site";
 import "./globals.css";
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-ivory text-charcoal">
         {children}
+        <WhatsAppSupportWidget />
       </body>
     </html>
   );

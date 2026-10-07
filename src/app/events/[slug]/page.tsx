@@ -58,6 +58,18 @@ export default async function EventDetailPage({ params }: PageProps) {
 
   const { detailLabels } = siteContent.pages.events;
 
+  const descriptionCtasByIndex = new Map<number, NonNullable<typeof event.descriptionCtas>>();
+  for (const cta of event.descriptionCtas ?? []) {
+    const existing = descriptionCtasByIndex.get(cta.paragraphIndex) ?? [];
+    existing.push(cta);
+    descriptionCtasByIndex.set(cta.paragraphIndex, existing);
+  }
+
+  const showFooterCtas =
+    !isEventBeforeToday(event.dateIso) &&
+    !event.descriptionCtas?.length &&
+    Boolean((event.tickets?.length ?? 0) > 0 || event.bookNow);
+
   return (
     <PageShell>
       <section className="border-b border-taupe/30 bg-ivory">
@@ -133,6 +145,19 @@ export default async function EventDetailPage({ params }: PageProps) {
                       ) : (
                         <p className="text-body text-charcoal/75">{paragraph}</p>
                       )}
+                      {!heading &&
+                        !isEventBeforeToday(event.dateIso) &&
+                        descriptionCtasByIndex.get(index)?.map((cta) => {
+                          const { paragraphIndex: _i, inactive, ...buttonProps } = cta;
+                          return (
+                            <Button
+                              key={`${index}-${cta.label}-${cta.href ?? "inactive"}`}
+                              {...buttonProps}
+                              inactive={inactive}
+                              className="mt-3 !py-2.5"
+                            />
+                          );
+                        })}
                     </Fragment>
                   );
                 })}
@@ -150,7 +175,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </div>
               )}
             </dl>
-            {!isEventBeforeToday(event.dateIso) && (
+            {showFooterCtas && (
               <div className="mt-8 flex flex-wrap gap-3">
                 {(event.tickets && event.tickets.length > 0
                   ? event.tickets

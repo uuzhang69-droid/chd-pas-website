@@ -28,6 +28,7 @@ function NavLink({ item }: { item: NavItem }) {
 function NavDropdown({ item }: { item: NavItemWithChildren }) {
   const { submenuSuffix } = siteContent.ui.header;
   const [open, setOpen] = useState(false);
+  const parentIsLink = item.parentLink !== false;
 
   function closeIfFocusLeft(container: HTMLElement, relatedTarget: EventTarget | null) {
     if (relatedTarget instanceof Node && container.contains(relatedTarget)) return;
@@ -43,9 +44,13 @@ function NavDropdown({ item }: { item: NavItemWithChildren }) {
       onBlur={(event) => closeIfFocusLeft(event.currentTarget, event.relatedTarget)}
     >
       <div className="flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5">
-        <Link href={item.href} className={navLinkClassName}>
-          {item.label}
-        </Link>
+        {parentIsLink ? (
+          <Link href={item.href} className={navLinkClassName}>
+            {item.label}
+          </Link>
+        ) : (
+          <span className={navLinkClassName}>{item.label}</span>
+        )}
         <button
           type="button"
           className="rounded-sm p-0.5 text-charcoal transition-colors hover:text-rose focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy"
@@ -99,19 +104,26 @@ function MobileNavAccordion({
   onNavigate: () => void;
 }) {
   const panelId = `mobile-nav-${item.label.replace(/\s+/g, "-").toLowerCase()}`;
+  const parentIsLink = item.parentLink !== false;
 
   const { submenuSuffix } = siteContent.ui.header;
 
   return (
     <div className="border-b border-taupe/20 last:border-b-0">
       <div className="flex items-center gap-1 py-1.5">
-        <Link
-          href={item.href}
-          className="min-w-0 flex-1 text-body font-medium leading-none text-charcoal hover:text-rose"
-          onClick={onNavigate}
-        >
-          {item.label}
-        </Link>
+        {parentIsLink ? (
+          <Link
+            href={item.href}
+            className="min-w-0 flex-1 text-body font-medium leading-none text-charcoal hover:text-rose"
+            onClick={onNavigate}
+          >
+            {item.label}
+          </Link>
+        ) : (
+          <span className="min-w-0 flex-1 text-body font-medium leading-none text-charcoal">
+            {item.label}
+          </span>
+        )}
         <button
           type="button"
           className="shrink-0 rounded-sm p-1 text-charcoal hover:text-rose"

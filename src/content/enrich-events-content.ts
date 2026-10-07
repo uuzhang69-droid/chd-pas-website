@@ -10,7 +10,7 @@ const DANCE_MEETS_ARTS_GALLERY_IMAGES: ImageAsset[] = Array.from({ length: 16 },
 }));
 
 const FOUR_SEASONS_GALLERY_ALTS = [
-  "Four Seasons Festival concert in the County Hall courtyard with audience seated in orange chairs",
+  "County Hall and the London Eye beside the River Thames, framed by green leaves",
   "Saxophone and accordion performance beside colourful sculptures at County Hall",
   "Clay workshop during the Four Seasons Festival at County Hall",
   "Guided tour near the South Bank Lion with Big Ben in the background",
@@ -26,8 +26,8 @@ const FOUR_SEASONS_GALLERY_ALTS = [
 const FOUR_SEASONS_GALLERY: ImageAsset[] = FOUR_SEASONS_GALLERY_ALTS.map((alt, index) => ({
   src: `/images/events/four-seasons-festival/gallery-${String(index + 1).padStart(2, "0")}.webp`,
   alt,
-  width: 1920,
-  height: 1080,
+  width: index === 0 ? 1024 : 1920,
+  height: index === 0 ? 682 : 1080,
 }));
 
 export function enrichEventsContent(source: SiteSource): SiteSource {

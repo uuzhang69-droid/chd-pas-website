@@ -49,7 +49,7 @@ export default async function ClassStylePage({ params }: PageProps) {
         </div>
         <Container className="relative py-20 md:py-28">
           <Link
-            href="/classes"
+            href="/classes-info"
             className="text-small font-semibold text-rose hover:text-ivory"
           >
             ← {detailLabels.backLink}

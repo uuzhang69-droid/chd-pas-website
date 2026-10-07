@@ -29,6 +29,13 @@ export type HeroSlide = {
   videoSrc?: string;
 };
 
+export type EventDescriptionCta = CtaButton & {
+  /** Index in `description` — CTA is shown directly after that paragraph. */
+  paragraphIndex: number;
+  /** Non-link state (e.g. Coming soon). */
+  inactive?: boolean;
+};
+
 export type EventCard = {
   id: string;
   slug: string;
@@ -39,6 +46,7 @@ export type EventCard = {
   image: ImageAsset;
   bookNow: CtaButton;
   tickets?: CtaButton[];
+  descriptionCtas?: EventDescriptionCta[];
   excerpt?: string;
   description?: string[];
   gallery?: ImageAsset[];
@@ -171,6 +179,8 @@ export type SectionedPageContent = {
 export type NavItem = {
   label: string;
   href: string;
+  /** When false, the parent label opens the submenu only (no navigation). */
+  parentLink?: boolean;
   children?: Link[];
 };
 

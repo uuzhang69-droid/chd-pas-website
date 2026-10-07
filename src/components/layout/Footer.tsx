@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
 
 export function Footer() {
-  const { footer, utilityBar } = siteContent.global;
+  const { footer } = siteContent.global;
   const year = new Date().getFullYear();
   const copyright = footer.copyright.replace("{year}", String(year));
 
@@ -20,7 +20,7 @@ export function Footer() {
             </div>
             <p className="text-body text-ivory/85 max-w-sm">{footer.intro}</p>
             <div className="mt-6 flex gap-4">
-              {utilityBar.social.map((item) => (
+              {footer.social.map((item) => (
                 <a
                   key={item.platform}
                   href={item.href}

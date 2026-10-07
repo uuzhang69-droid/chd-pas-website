@@ -51,23 +51,18 @@ export const siteStructure = {
     "navigation": {
       "items": [
         {
-          "label": "@@COPY:global.navigation.items.studio_hire.label",
-          "href": "/venue-hire",
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.studio_hire.children.space_booking.label",
-              "href": "/booking"
-            }
-          ]
+          "label": "@@COPY:global.navigation.items.timetable.label",
+          "href": "/timetable"
+        },
+        {
+          "label": "@@COPY:global.navigation.items.membership.label",
+          "href": "/membership"
         },
         {
           "label": "@@COPY:global.navigation.items.classes.label",
           "href": "/classes",
+          "parentLink": false,
           "children": [
-            {
-              "label": "@@COPY:global.navigation.items.classes.children.timetable.label",
-              "href": "/timetable"
-            },
             {
               "label": "@@COPY:global.navigation.items.classes.children.class_descriptions.label",
               "href": "/classes-info"
@@ -79,12 +74,26 @@ export const siteStructure = {
           ]
         },
         {
-          "label": "@@COPY:global.navigation.items.membership.label",
-          "href": "/membership"
+          "label": "@@COPY:global.navigation.items.events.label",
+          "href": "/events"
         },
         {
           "label": "@@COPY:global.navigation.items.private_lessons.label",
           "href": "/private-lessons"
+        },
+        {
+          "label": "@@COPY:global.navigation.items.studio_hire.label",
+          "href": "/venue-hire",
+          "children": [
+            {
+              "label": "@@COPY:global.navigation.items.studio_hire.children.venue_hire.label",
+              "href": "/venue-hire"
+            },
+            {
+              "label": "@@COPY:global.navigation.items.studio_hire.children.space_booking.label",
+              "href": "/booking"
+            }
+          ]
         },
         {
           "label": "@@COPY:global.navigation.items.about_us.label",
@@ -96,13 +105,9 @@ export const siteStructure = {
             },
             {
               "label": "@@COPY:global.navigation.items.about_us.children.contact.label",
-              "href": "/booking"
+              "href": "/contact"
             }
           ]
-        },
-        {
-          "label": "@@COPY:global.navigation.items.events.label",
-          "href": "/events"
         }
       ],
       "bookTrial": {
@@ -118,13 +123,25 @@ export const siteStructure = {
     },
     "footer": {
       "intro": "@@COPY:global.footer.intro",
+      "social": [
+        {
+          "platform": "instagram",
+          "href": "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          "label": "@@COPY:global.footer.social.instagram.label"
+        },
+        {
+          "platform": "xiaohongshu",
+          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          "label": "@@COPY:global.footer.social.rednote.label"
+        }
+      ],
       "columns": {
         "explore": {
           "title": "@@COPY:global.footer.columns.explore.title",
           "links": [
             {
               "label": "@@COPY:global.footer.columns.explore.links.classes.label",
-              "href": "/classes"
+              "href": "/timetable"
             },
             {
               "label": "@@COPY:global.footer.columns.explore.links.courses.label",
@@ -205,7 +222,7 @@ export const siteStructure = {
           "blurb": "@@COPY:home.hero.slides.hero_intro.blurb",
           "cta": {
             "label": "@@COPY:home.hero.slides.hero_intro.cta.label",
-            "href": "/classes",
+            "href": "/timetable",
             "variant": "primary"
           },
           "image": {
@@ -219,7 +236,7 @@ export const siteStructure = {
           "blurb": "@@COPY:home.hero.slides.hero_classes.blurb",
           "cta": {
             "label": "@@COPY:home.hero.slides.hero_classes.cta.label",
-            "href": "/classes",
+            "href": "/timetable",
             "variant": "primary"
           },
           "image": {
@@ -337,7 +354,7 @@ export const siteStructure = {
           "slug": "four-seasons-festival",
           "title": "@@COPY:home.events.items.four_seasons_festival.title",
           "date": "@@COPY:home.events.items.four_seasons_festival.date",
-          "dateIso": "2026-09-01",
+          "dateIso": "2026-10-24",
           "location": "@@COPY:home.events.items.four_seasons_festival.location",
           "image": {
             "src": "/images/events/four-seasons-festival/gallery-01.webp",
@@ -1004,7 +1021,7 @@ export const siteStructure = {
           "slug": "four-seasons-festival",
           "title": "@@COPY:pages.events.items.four_seasons_festival.title",
           "date": "@@COPY:pages.events.items.four_seasons_festival.date",
-          "dateIso": "2026-09-01",
+          "dateIso": "2026-10-24",
           "location": "@@COPY:pages.events.items.four_seasons_festival.location",
           "excerpt": "@@COPY:pages.events.items.four_seasons_festival.excerpt",
           "description": [
@@ -1017,7 +1034,18 @@ export const siteStructure = {
             "@@COPY:pages.events.items.four_seasons_festival.description.6",
             "@@COPY:pages.events.items.four_seasons_festival.description.7",
             "@@COPY:pages.events.items.four_seasons_festival.description.8",
-            "@@COPY:pages.events.items.four_seasons_festival.description.9"
+            "@@COPY:pages.events.items.four_seasons_festival.description.9",
+            "@@COPY:pages.events.items.four_seasons_festival.description.10",
+            "@@COPY:pages.events.items.four_seasons_festival.description.11",
+            "@@COPY:pages.events.items.four_seasons_festival.description.12",
+            "@@COPY:pages.events.items.four_seasons_festival.description.13",
+            "@@COPY:pages.events.items.four_seasons_festival.description.14",
+            "@@COPY:pages.events.items.four_seasons_festival.description.15",
+            "@@COPY:pages.events.items.four_seasons_festival.description.16",
+            "@@COPY:pages.events.items.four_seasons_festival.description.17",
+            "@@COPY:pages.events.items.four_seasons_festival.description.18",
+            "@@COPY:pages.events.items.four_seasons_festival.description.19",
+            "@@COPY:pages.events.items.four_seasons_festival.description.20"
           ],
           "image": {
             "src": "/images/events/four-seasons-festival/gallery-01.webp",
@@ -1027,7 +1055,72 @@ export const siteStructure = {
             "label": "@@COPY:pages.events.items.four_seasons_festival.booknow.label",
             "href": "/events/four-seasons-festival",
             "variant": "primary"
-          }
+          },
+          "descriptionCtas": [
+            {
+              "paragraphIndex": 5,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
+              "href": "https://www.eventbrite.co.uk/e/folk-music-irish-dance-opening-celebration-as-the-leaves-turn-tickets-2001253258368",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "paragraphIndex": 6,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
+              "href": "https://www.eventbrite.co.uk/e/2002798792101",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "paragraphIndex": 7,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
+              "href": "#",
+              "inactive": true,
+              "variant": "secondary"
+            },
+            {
+              "paragraphIndex": 8,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
+              "href": "#",
+              "inactive": true,
+              "variant": "secondary"
+            },
+            {
+              "paragraphIndex": 10,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
+              "href": "https://www.eventbrite.co.uk/e/2002800613549",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "paragraphIndex": 11,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
+              "href": "https://www.eventbrite.co.uk/e/young-leaves-classical-concert-as-the-leaves-turn-tickets-2002382589227",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "paragraphIndex": 12,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.book_tickets",
+              "href": "https://countyhallpottery.com/product/clay-flowers-workshop-with-county-hall-arts-resident-artist-yasemin-gava/",
+              "external": true,
+              "variant": "primary"
+            },
+            {
+              "paragraphIndex": 13,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
+              "href": "#",
+              "inactive": true,
+              "variant": "secondary"
+            },
+            {
+              "paragraphIndex": 14,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
+              "href": "https://www.eventbrite.co.uk/e/short-film-screening-as-the-leaves-turn-tickets-2002426861647",
+              "external": true,
+              "variant": "primary"
+            }
+          ]
         },
         {
           "id": "event-3",

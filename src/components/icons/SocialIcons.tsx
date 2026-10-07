@@ -16,6 +16,15 @@ export function FacebookIcon({ className = "h-4 w-4" }: IconProps) {
   );
 }
 
+/** Xiaohongshu / Red Note */
+export function XiaohongshuIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M7 3h10a2 2 0 0 1 2 2v16l-3.5-1.75L12 21l-3.5-1.75L5 21V5a2 2 0 0 1 2-2zm2 6h6v1.5H9V9zm0 3.5h6V14H9v-1.5z" />
+    </svg>
+  );
+}
+
 export function YouTubeIcon({ className = "h-4 w-4" }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -73,6 +82,9 @@ export function SocialIcon({ platform, className }: { platform: string; classNam
       return <FacebookIcon className={className} />;
     case "youtube":
       return <YouTubeIcon className={className} />;
+    case "xiaohongshu":
+    case "rednote":
+      return <XiaohongshuIcon className={className} />;
     default:
       return null;
   }

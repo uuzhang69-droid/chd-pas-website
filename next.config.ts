@@ -93,6 +93,11 @@ const nextConfig: NextConfig = {
         destination: "/timetable",
         permanent: true,
       },
+      {
+        source: "/classes",
+        destination: "/timetable",
+        permanent: true,
+      },
     ];
   },
   images: {

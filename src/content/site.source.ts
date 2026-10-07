@@ -68,41 +68,34 @@ export const siteSource = {
     },
     navigation: {
       items: [
-        {
-          label: "Venue Hire",
-          href: "/venue-hire",
-          children: [
-            { label: "Space Booking", href: "/booking" },
-          ] satisfies Link[],
-        },
+        { label: "Timetable", href: "/timetable" },
+        { label: "Membership", href: "/membership" },
         {
           label: "Classes",
           href: "/classes",
+          parentLink: false,
           children: [
-            { label: "Timetable", href: "/timetable" },
             { label: "Class Descriptions & Instructors", href: "/classes-info" },
             { label: "Booking", href: "/booking" },
           ] satisfies Link[],
         },
+        { label: "Events", href: "/events" },
+        { label: "Private Lessons", href: "/private-lessons" },
         {
-          label: "Membership",
-          href: "/membership",
-        },
-        {
-          label: "Private Lessons",
-          href: "/private-lessons",
+          label: "Venue Hire",
+          href: "/venue-hire",
+          children: [
+            { label: "Venue Hire", href: "/venue-hire" },
+            { label: "Space Booking", href: "/booking" },
+          ] satisfies Link[],
         },
         {
           label: "About Us",
           href: "/about",
           children: [
             { label: "About Us", href: "/about" },
-            { label: "Contact", href: "/booking" },
+            { label: "Contact", href: "/contact" },
           ] satisfies Link[],
-        },
-        {
-          label: "Events",
-          href: "/events",
         },
       ] satisfies NavItem[],
       bookTrial: {
@@ -119,11 +112,23 @@ export const siteSource = {
     footer: {
       intro:
         "A home for dance, movement and creativity at County Hall on the South Bank. Move. Create. Connect. Belong.",
+      social: [
+        {
+          platform: "instagram",
+          href: "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          label: "Instagram: @countyhalldancecentre",
+        },
+        {
+          platform: "xiaohongshu",
+          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          label: "Red Note (小红书)",
+        },
+      ] satisfies SocialLink[],
       columns: {
         explore: {
           title: "Explore",
           links: [
-            { label: "Classes", href: "/classes" },
+            { label: "Classes", href: "/timetable" },
             { label: "Courses", href: "/courses" },
             { label: "Events", href: "/events" },
           ] satisfies Link[],
@@ -177,7 +182,7 @@ export const siteSource = {
             "Discover dance, movement and creative experiences at London's iconic County Hall.",
           blurb:
             "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
-          cta: { label: "Explore Classes", href: "/classes", variant: "primary" },
+          cta: { label: "Explore Classes", href: "/timetable", variant: "primary" },
           image: {
             src: "/images/hero/slide-1-performance.jpg",
             alt: "Outdoor performance on the South Bank with County Hall and Big Ben beyond the Thames",
@@ -188,7 +193,7 @@ export const siteSource = {
           headline: "Classes",
           blurb:
             "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi.",
-          cta: { label: "View Classes", href: "/classes", variant: "primary" },
+          cta: { label: "View Classes", href: "/timetable", variant: "primary" },
           image: {
             src: "/images/hero/slide-2.jpg",
             alt: "Couple performing Argentine tango on an outdoor dance floor",
@@ -297,15 +302,15 @@ export const siteSource = {
           id: "event-2",
           slug: "four-seasons-festival",
           title: "Four Seasons Festival",
-          date: "Autumn 2026",
-          dateIso: "2026-09-01",
+          date: "Saturday 24 – Sunday 25 October 2026",
+          dateIso: "2026-10-24",
           location: "Riverside Building, County Hall",
           image: {
             src: "/images/events/four-seasons-festival/gallery-01.webp",
-            alt: "Four Seasons Festival at County Hall",
+            alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
           },
           bookNow: {
-            label: "Details",
+            label: "Book Now",
             href: "/events/four-seasons-festival",
             variant: "primary",
           },
@@ -840,33 +845,44 @@ export const siteSource = {
           id: "event-2",
           slug: "four-seasons-festival",
           title: "Four Seasons Festival",
-          date: "Autumn 2026",
-          dateIso: "2026-09-01",
+          date: "Saturday 24 – Sunday 25 October 2026",
+          dateIso: "2026-10-24",
           location: "Riverside Building, County Hall",
           excerpt:
-            "A seasonal multidisciplinary programme at County Hall — music, visual art, film, dance, workshops and participatory experiences across spring, summer and autumn.",
+            "As The Leaves Turn — a Four Seasons Festival weekend at County Hall, 24–25 October 2026, with folk music, dance, workshops, concerts and film.",
           description: [
-            "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
-            "More than a programme of individual events, each edition is developed around a central theme or idea — creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
-            "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
-            "# As the Leaves Turn, Autumn 2026",
-            "The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation. Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning.",
-            "Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go.",
-            "# Seeds of Change, Spring 2026",
-            "The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility. The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening. At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.",
-            "# Under the Same Sun, Summer 2026",
-            "The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration. Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together. The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava. For festival enquiries, contact info@countyhallarts.com.",
+            "# A Four Seasons Festival",
+            "As The Leaves Turn is the latest edition of the Four Seasons Festival. Over the weekend of Saturday 24th and Sunday 25th October, the festival will celebrate autumn as a season of change and transformation.",
+            "Following the energy and optimism of Under the Same Sun, this next stage of the journey recognises what has flourished, celebrates what has been achieved, and embraces the changes that prepare us for a new beginning.",
+            "Highlights across the weekend include a lively opening celebration of folk music and Irish dance at the County Hall Dance Centre, the Young Leaves concert showcasing a new generation of musicians, and evening performances selected through the festival's Open Call, bringing fresh interpretations of folk, tradition and transformation to the Atrium.",
+            "# Saturday, 24th October 2026",
+            "11:00–12:00 — Folk Performance and Opening Celebration. A storytelling folk music show by Tog Faire, featuring Gaelic, English and Scottish traditions, with Irish dancers from Jig and a Swig. Welcome breakfast with tea and coffee in the County Hall Dance Centre.",
+            "14:00–15:30 — Art and Craft and Movement Workshop for Children. Make paper autumn leaves in a one-hour craft workshop, followed by 30 minutes of movement and drama.",
+            "16:00–17:30 — Dance Open Class. Tai Chi, Contemporary dance and Chinese dance taster classes with County Hall Dance Centre.",
+            "18:00–19:00 — Evening Concert. A live music performance to round off the day in County Hall's Atrium.",
+            "# Sunday, 25th October 2026",
+            "11:00–12:00 — Folk Music Performance. A lively concert in the Atrium by Loom duo, drawing on folk and early music traditions.",
+            "13:00–14:00 — Young Leaves Concert. A classical music showcase featuring young musicians in solo performances.",
+            "15:00–17:00 — Autumn Leaf Pressing Clay Workshop. Press real autumn leaves and botanical materials into clay to create unique patterns, textures and forms in this beginner-friendly handbuilding workshop.",
+            "18:00–19:00 — Evening Concert. A live performance in the Atrium to round off the day.",
+            "19:30–20:30 — Short Film Screening. A curated screening of short films exploring autumn as a season of memory and transformation, followed by a Q&A.",
+            "# Booking information",
+            "Most festival events are free but require advance booking via Eventbrite due to limited capacity. The Dance Open Class and Autumn Leaf Pressing Clay Workshop are paid events.",
+            "# Finding us",
+            "Attendees should enter County Hall via the main entrance on Belvedere Road. For full information on how to get here, see our contact page to plan your visit.",
+            "Events take place in the County Hall Dance Centre, Atrium, Cinema Room and Glaze Room in the Kiln Courtyard, as indicated in the programme. For each event, follow the directions shared in your booking confirmation and signs at County Hall on the day.",
+            "The workshops are open to all ages. Children under 16 must be accompanied by a parent or guardian. If you have any questions, please contact us at festival@countyhallarts.com.",
           ],
           image: {
             src: "/images/events/four-seasons-festival/gallery-01.webp",
-            alt: "Four Seasons Festival at County Hall",
+            alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
           },
           gallery: [
             {
               src: "/images/events/four-seasons-festival/gallery-01.webp",
-              alt: "Four Seasons Festival concert in the County Hall courtyard with audience seated in orange chairs",
-              width: 1920,
-              height: 1080,
+              alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
+              width: 1024,
+              height: 682,
             },
             {
               src: "/images/events/four-seasons-festival/gallery-02.webp",
@@ -930,10 +946,75 @@ export const siteSource = {
             },
           ],
           bookNow: {
-            label: "Details",
+            label: "Book Now",
             href: "/events/four-seasons-festival",
             variant: "primary",
           },
+          descriptionCtas: [
+            {
+              paragraphIndex: 5,
+              label: "Free tickets",
+              href: "https://www.eventbrite.co.uk/e/folk-music-irish-dance-opening-celebration-as-the-leaves-turn-tickets-2001253258368",
+              external: true,
+              variant: "primary",
+            },
+            {
+              paragraphIndex: 6,
+              label: "Free tickets",
+              href: "https://www.eventbrite.co.uk/e/2002798792101",
+              external: true,
+              variant: "primary",
+            },
+            {
+              paragraphIndex: 7,
+              label: "Coming soon",
+              href: "#",
+              inactive: true,
+              variant: "secondary",
+            },
+            {
+              paragraphIndex: 8,
+              label: "Coming soon",
+              href: "#",
+              inactive: true,
+              variant: "secondary",
+            },
+            {
+              paragraphIndex: 10,
+              label: "Free tickets",
+              href: "https://www.eventbrite.co.uk/e/2002800613549",
+              external: true,
+              variant: "primary",
+            },
+            {
+              paragraphIndex: 11,
+              label: "Free tickets",
+              href: "https://www.eventbrite.co.uk/e/young-leaves-classical-concert-as-the-leaves-turn-tickets-2002382589227",
+              external: true,
+              variant: "primary",
+            },
+            {
+              paragraphIndex: 12,
+              label: "Book tickets",
+              href: "https://countyhallpottery.com/product/clay-flowers-workshop-with-county-hall-arts-resident-artist-yasemin-gava/",
+              external: true,
+              variant: "primary",
+            },
+            {
+              paragraphIndex: 13,
+              label: "Coming soon",
+              href: "#",
+              inactive: true,
+              variant: "secondary",
+            },
+            {
+              paragraphIndex: 14,
+              label: "Free tickets",
+              href: "https://www.eventbrite.co.uk/e/short-film-screening-as-the-leaves-turn-tickets-2002426861647",
+              external: true,
+              variant: "primary",
+            },
+          ],
         },
         {
           id: "event-3",
@@ -1176,7 +1257,7 @@ export const siteSource = {
         meta: {
           title: "Venue Hire",
           description:
-            "Hire a 70 m² vinyl-floor venue or a 200 m² wooden-floor hall at County Hall on the South Bank. From £200 per hour, member rates available.",
+            "Hire a 70 m² vinyl-floor venue or a 200 m² Sprung Wooden Floor Hall at County Hall on the South Bank. From £200 per hour, member rates available.",
         },
         hero: {
           overline: "County Hall arts space",
@@ -1189,7 +1270,7 @@ export const siteSource = {
           },
         },
         intro:
-          "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² wooden-floor hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
+          "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
         spaces: {
           title: "Our spaces",
           items: [
@@ -1210,12 +1291,12 @@ export const siteSource = {
             },
             {
               id: "wooden-hall",
-              title: "Wooden-Floor Hall",
+              title: "Sprung Wooden Floor Hall",
               size: "200 m²",
-              floor: "Wooden floor",
+              floor: "Sprung wooden floor",
               idealFor:
                 "Workshops, social dances, performances, parties, exhibitions and corporate events",
-              body: "Our largest space, with a wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
+              body: "Our largest space, with a sprung wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
               image: {
                 src: "/images/venue/wooden-floor-hall.jpg",
                 alt: "Sunlit wooden-floor hall with tall windows at County Hall",

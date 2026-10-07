@@ -14,7 +14,7 @@ const MEMBERSHIP_OPTIONS: { value: MembershipChoice; title: string; detail: stri
   {
     value: "new",
     title: "I’d like a membership card",
-    detail: "Ask about cards, prices and how to purchase first.",
+    detail: "View membership plans and how to join.",
   },
   {
     value: "single",
@@ -63,14 +63,12 @@ export function BookingOptionsDialog({ sectionRef }: BookingOptionsDialogProps) 
     }
 
     if (choice === "new") {
-      setContinueText("Ask about membership cards ↗");
-      setContinueHref(
-        `mailto:info@countyhalldancecentre.com?subject=${encodeURIComponent("Membership card enquiry")}&body=${encodeURIComponent(`I am interested in ${selectedRef.current}. Please send membership card prices, validity, eligible classes and a purchase link.`)}`,
-      );
+      setContinueText("Go to membership page");
+      setContinueHref("/membership");
       setContinueTarget(undefined);
       setContinueRel(undefined);
       setChoiceDescription(
-        "Card purchases are not connected here yet. Contact the school for current card options before booking.",
+        "See current membership tiers, benefits and how to sign up — then return to book your class when you are ready.",
       );
     } else {
       setContinueText("Continue to ClassManager ↗");
