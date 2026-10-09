@@ -41,9 +41,9 @@ export type EventListingCategory = "event" | "workshop" | "masterclass";
 export type EventCard = {
   id: string;
   slug: string;
-  title: string;
-  /** What's On listing filter; defaults to event when omitted. */
+  /** Listing filter on /events — defaults to event when omitted. */
   listingCategory?: EventListingCategory;
+  title: string;
   date: string;
   dateIso?: string;
   location?: string;

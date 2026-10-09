@@ -121,6 +121,7 @@ home.events.items.dance_meets_arts.image.alt,Homepage — events › items › d
 home.events.items.dance_meets_arts.location,Homepage — events › items › dance meets arts › location,"Members' Terrace, County Hall"
 home.events.items.dance_meets_arts.title,Homepage — events › items › dance meets arts › title,Dance Meets Arts
 home.events.overline,Homepage — events › overline,What's on
+home.events.subtitle,Homepage — events › subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 home.events.title,Homepage — events › title,What's On
 home.events.viewall.label,Homepage — events › viewall › label,View all
 home.hero.nextlabel,Homepage — hero › nextlabel,Next
@@ -129,7 +130,7 @@ home.hero.slides.hero_classes.blurb,Homepage — hero › slides › hero classe
 home.hero.slides.hero_classes.cta.label,Homepage — hero › slides › hero classes › cta › label,View Classes
 home.hero.slides.hero_classes.headline,Homepage — hero › slides › hero classes › headline,Classes
 home.hero.slides.hero_classes.image.alt,Homepage — hero › slides › hero classes › image › alt,Couple performing Argentine tango on an outdoor dance floor
-home.hero.slides.hero_events.blurb,Homepage — hero › slides › hero events › blurb,"Milongas, themed social nights, masterclasses and cross-arts events."
+home.hero.slides.hero_events.blurb,Homepage — hero › slides › hero events › blurb,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 home.hero.slides.hero_events.cta.label,Homepage — hero › slides › hero events › cta › label,View what's on
 home.hero.slides.hero_events.headline,Homepage — hero › slides › hero events › headline,What's On
 home.hero.slides.hero_events.image.alt,Homepage — hero › slides › hero events › image › alt,Contemporary dancers in a bright venue with ballet barres
@@ -512,14 +513,14 @@ pages.events.detaillabels.backlink,Events page › detaillabels › backlink,←
 pages.events.detaillabels.date,Events page › detaillabels › date,Date
 pages.events.detaillabels.location,Events page › detaillabels › location,Location
 pages.events.hero.overline,Events page › hero › overline,What's on
-pages.events.hero.subtitle,Events page › hero › subtitle,
+pages.events.hero.subtitle,Events page › hero › subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
+pages.events.hero.title,Events page › hero › title,What's On
+pages.events.intro,Events page › intro,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 pages.events.filters.all,Events page › filters › all,All
-pages.events.filters.empty,Events page › filters › empty,Nothing in this category yet — check back soon or browse All.
+pages.events.filters.empty,Events page › filters › empty,Nothing in this category yet — check back soon.
 pages.events.filters.events,Events page › filters › events,Events
 pages.events.filters.masterclass,Events page › filters › masterclass,Masterclass
 pages.events.filters.workshops,Events page › filters › workshops,Workshops
-pages.events.hero.title,Events page › hero › title,What's On
-pages.events.intro,Events page › intro,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 pages.events.items.memory_of_china.booknow.label,Events page › items › memory of china › booknow › label,Book Now
 pages.events.items.memory_of_china.date,Events page › items › memory of china › date,Saturday 3 – Sunday 4 October 2026
 pages.events.items.memory_of_china.description.0,Events page › items › memory of china › description › 0,"The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank."

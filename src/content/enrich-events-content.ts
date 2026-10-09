@@ -1,6 +1,6 @@
 import { copy } from "./copy";
 import type { SiteSource } from "./site.source";
-import type { EventCard, ImageAsset } from "./types";
+import type { ImageAsset } from "./types";
 
 const DANCE_MEETS_ARTS_GALLERY_IMAGES: ImageAsset[] = Array.from({ length: 16 }, (_, index) => ({
   src: `/images/events/dance-meets-arts/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
@@ -58,14 +58,9 @@ export function enrichEventsContent(source: SiteSource): SiteSource {
       events: {
         ...source.pages.events,
         items: source.pages.events.items.map((event) => {
-          const card = event as EventCard;
-          const withCategory: EventCard = {
-            ...card,
-            listingCategory: card.listingCategory ?? "event",
-          };
           if (event.slug === "dance-meets-arts") {
             return {
-              ...withCategory,
+              ...event,
               inlineGalleries: [
                 {
                   beforeHeading: "Programme",
@@ -77,17 +72,17 @@ export function enrichEventsContent(source: SiteSource): SiteSource {
           }
           if (event.slug === "four-seasons-festival") {
             return {
-              ...withCategory,
+              ...event,
               gallery: FOUR_SEASONS_GALLERY,
             };
           }
           if (event.slug === "memory-of-china") {
             return {
-              ...withCategory,
+              ...event,
               gallery: MEMORY_OF_CHINA_GALLERY,
             };
           }
-          return withCategory;
+          return event;
         }) as typeof source.pages.events.items,
       },
     },

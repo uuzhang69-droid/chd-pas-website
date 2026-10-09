@@ -17,6 +17,8 @@ export function EventsGrid() {
             <SectionHeading
               overline={events.overline}
               title={events.title}
+              subtitle={events.subtitle}
+              className="!mb-0 max-w-3xl"
             />
           </div>
           <Link

@@ -319,6 +319,7 @@ export const siteStructure = {
     "events": {
       "overline": "@@COPY:home.events.overline",
       "title": "@@COPY:home.events.title",
+      "subtitle": "@@COPY:home.events.subtitle",
       "viewAll": {
         "label": "@@COPY:home.events.viewall.label",
         "href": "/events"
@@ -984,6 +985,7 @@ export const siteStructure = {
         {
           "id": "event-1",
           "slug": "memory-of-china",
+          "listingCategory": "event",
           "title": "@@COPY:pages.events.items.memory_of_china.title",
           "date": "@@COPY:pages.events.items.memory_of_china.date",
           "dateIso": "2026-10-04",
@@ -1065,6 +1067,7 @@ export const siteStructure = {
         {
           "id": "event-2",
           "slug": "four-seasons-festival",
+          "listingCategory": "event",
           "title": "@@COPY:pages.events.items.four_seasons_festival.title",
           "date": "@@COPY:pages.events.items.four_seasons_festival.date",
           "dateIso": "2026-10-24",
@@ -1171,6 +1174,7 @@ export const siteStructure = {
         {
           "id": "event-3",
           "slug": "lunchtime-concert-series",
+          "listingCategory": "event",
           "title": "@@COPY:pages.events.items.lunchtime_concert_series.title",
           "date": "@@COPY:pages.events.items.lunchtime_concert_series.date",
           "dateIso": "2026-09-25",
@@ -1199,6 +1203,7 @@ export const siteStructure = {
         {
           "id": "event-4",
           "slug": "dance-meets-arts",
+          "listingCategory": "event",
           "title": "@@COPY:pages.events.items.dance_meets_arts.title",
           "date": "@@COPY:pages.events.items.dance_meets_arts.date",
           "dateIso": "2026-08-08",
@@ -1229,6 +1234,7 @@ export const siteStructure = {
         {
           "id": "event-5",
           "slug": "county-hall-dance-centre-opening-day",
+          "listingCategory": "event",
           "title": "@@COPY:pages.events.items.opening_day.title",
           "date": "@@COPY:pages.events.items.opening_day.date",
           "dateIso": "2026-09-10",

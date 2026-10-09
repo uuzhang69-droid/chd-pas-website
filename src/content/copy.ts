@@ -128,6 +128,8 @@ export const copy = {
   "home.events.items.dance_meets_arts.location": "Members' Terrace, County Hall",
   "home.events.items.dance_meets_arts.title": "Dance Meets Arts",
   "home.events.overline": "What's on",
+  "home.events.subtitle":
+    "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
   "home.events.title": "What's On",
   "home.events.viewall.label": "View all",
   "home.hero.nextlabel": "Next",
@@ -136,7 +138,8 @@ export const copy = {
   "home.hero.slides.hero_classes.cta.label": "View Classes",
   "home.hero.slides.hero_classes.headline": "Classes",
   "home.hero.slides.hero_classes.image.alt": "Couple performing Argentine tango on an outdoor dance floor",
-  "home.hero.slides.hero_events.blurb": "Milongas, themed social nights, masterclasses and cross-arts events.",
+  "home.hero.slides.hero_events.blurb":
+    "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
   "home.hero.slides.hero_events.cta.label": "View what's on",
   "home.hero.slides.hero_events.headline": "What's On",
   "home.hero.slides.hero_events.image.alt": "Contemporary dancers in a bright venue with ballet barres",
@@ -549,12 +552,12 @@ export const copy = {
   "pages.events.detaillabels.date": "Date",
   "pages.events.detaillabels.location": "Location",
   "pages.events.hero.overline": "What's on",
-  "pages.events.hero.subtitle": "",
+  "pages.events.hero.subtitle": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
   "pages.events.hero.title": "What's On",
   "pages.events.intro":
     "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
   "pages.events.filters.all": "All",
-  "pages.events.filters.empty": "Nothing in this category yet — check back soon or browse All.",
+  "pages.events.filters.empty": "Nothing in this category yet — check back soon.",
   "pages.events.filters.events": "Events",
   "pages.events.filters.masterclass": "Masterclass",
   "pages.events.filters.workshops": "Workshops",

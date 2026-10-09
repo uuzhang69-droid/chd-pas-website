@@ -199,7 +199,7 @@ export const siteSource = {
           id: "hero-events",
           headline: "What's On",
           blurb:
-            "Milongas, themed social nights, masterclasses and cross-arts events.",
+            "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
           cta: { label: "View what's on", href: "/events", variant: "primary" },
           image: {
             src: "/images/hero/slide-3.jpg",
@@ -274,6 +274,8 @@ export const siteSource = {
     events: {
       overline: "What's on",
       title: "What's On",
+      subtitle:
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
       viewAll: { label: "View all", href: "/events" },
       items: [
         {
@@ -297,6 +299,7 @@ export const siteSource = {
         {
           id: "event-2",
           slug: "four-seasons-festival",
+          listingCategory: "event",
           title: "Four Seasons Festival",
           date: "Saturday 24 – Sunday 25 October 2026",
           dateIso: "2026-10-24",
@@ -314,6 +317,7 @@ export const siteSource = {
         {
           id: "event-3",
           slug: "lunchtime-concert-series",
+          listingCategory: "event",
           title: "Lunchtime Concert Series",
           date: "Friday 25 September 2026, 1pm",
           dateIso: "2026-09-25",
@@ -331,6 +335,7 @@ export const siteSource = {
         {
           id: "event-4",
           slug: "dance-meets-arts",
+          listingCategory: "event",
           title: "Dance Meets Arts",
           date: "Saturday 8 August 2026, 7:00pm – 8:30pm",
           dateIso: "2026-08-08",
@@ -780,7 +785,8 @@ export const siteSource = {
       hero: {
         overline: "What's on",
         title: "What's On",
-        subtitle: "",
+        subtitle:
+          "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
       } satisfies PageHeroContent,
       intro:
         "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
@@ -789,12 +795,13 @@ export const siteSource = {
         events: "Events",
         workshops: "Workshops",
         masterclass: "Masterclass",
-        empty: "Nothing in this category yet — check back soon or browse All.",
+        empty: "Nothing in this category yet — check back soon.",
       },
       items: [
         {
           id: "event-1",
           slug: "memory-of-china",
+          listingCategory: "event",
           title: "Memory of China: Chinese Traditional Arts and Culture Festival",
           date: "Saturday 3 – Sunday 4 October 2026",
           dateIso: "2026-10-04",
@@ -877,6 +884,7 @@ export const siteSource = {
         {
           id: "event-2",
           slug: "four-seasons-festival",
+          listingCategory: "event",
           title: "Four Seasons Festival",
           date: "Saturday 24 – Sunday 25 October 2026",
           dateIso: "2026-10-24",
@@ -1052,6 +1060,7 @@ export const siteSource = {
         {
           id: "event-3",
           slug: "lunchtime-concert-series",
+          listingCategory: "event",
           title: "Lunchtime Concert Series",
           date: "Friday 25 September 2026, 1pm",
           dateIso: "2026-09-25",
@@ -1080,6 +1089,7 @@ export const siteSource = {
         {
           id: "event-4",
           slug: "dance-meets-arts",
+          listingCategory: "event",
           title: "Dance Meets Arts",
           date: "Saturday 8 August 2026, 7:00pm – 8:30pm",
           dateIso: "2026-08-08",
@@ -1123,6 +1133,7 @@ export const siteSource = {
         {
           id: "event-5",
           slug: "county-hall-dance-centre-opening-day",
+          listingCategory: "event",
           title: "County Hall Dance Centre – Opening Day",
           date: "Thursday 10 September 2026",
           dateIso: "2026-09-10",

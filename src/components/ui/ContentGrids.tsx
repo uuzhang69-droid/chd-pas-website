@@ -116,7 +116,7 @@ export function CourseCardGrid({ items }: { items: CourseSummary[] }) {
   );
 }
 
-export function EventListingGrid({ items }: { items: readonly EventCard[] }) {
+export function EventListingGrid({ items }: { items: EventCard[] }) {
   const { eventDetailsLink } = siteContent.pages.common;
   return (
     <div className="grid gap-6 sm:grid-cols-2">
