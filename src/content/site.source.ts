@@ -74,7 +74,7 @@ export const siteSource = {
           ] satisfies Link[],
         },
         { label: "Membership", href: "/membership" },
-        { label: "Events", href: "/events" },
+        { label: "What's On", href: "/events" },
         {
           label: "Venue Hire",
           href: "/venue-hire",
@@ -126,7 +126,7 @@ export const siteSource = {
           links: [
             { label: "Classes", href: "/timetable" },
             { label: "Courses", href: "/courses" },
-            { label: "Events", href: "/events" },
+            { label: "What's On", href: "/events" },
           ] satisfies Link[],
         },
         school: {
@@ -197,10 +197,10 @@ export const siteSource = {
         },
         {
           id: "hero-events",
-          headline: "Events",
+          headline: "What's On",
           blurb:
             "Milongas, themed social nights, masterclasses and cross-arts events.",
-          cta: { label: "View Events", href: "/events", variant: "primary" },
+          cta: { label: "View what's on", href: "/events", variant: "primary" },
           image: {
             src: "/images/hero/slide-3.jpg",
             alt: "Contemporary dancers in a bright venue with ballet barres",
@@ -273,8 +273,8 @@ export const siteSource = {
 
     events: {
       overline: "What's on",
-      title: "Masterclasses & Events",
-      viewAll: { label: "View all events", href: "/events" },
+      title: "What's On",
+      viewAll: { label: "View all", href: "/events" },
       items: [
         {
           id: "event-1",
@@ -773,18 +773,24 @@ export const siteSource = {
 
     events: {
       meta: {
-        title: "Events & Masterclasses",
+        title: "What's On",
         description:
           "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
       },
       hero: {
         overline: "What's on",
-        title: "Events & Masterclasses",
-        subtitle:
-          "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+        title: "What's On",
+        subtitle: "",
       } satisfies PageHeroContent,
       intro:
-        "Book directly via the links below. Event payments are processed securely through Stripe — class bookings remain on our timetable system.",
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+      filters: {
+        all: "All",
+        events: "Events",
+        workshops: "Workshops",
+        masterclass: "Masterclass",
+        empty: "Nothing in this category yet — check back soon or browse All.",
+      },
       items: [
         {
           id: "event-1",
@@ -1167,7 +1173,7 @@ export const siteSource = {
             description: "Tango milonga social dance events at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Milonga",
             subtitle: "Social tango evenings with live and recorded music in our South Bank venue.",
           },
@@ -1185,7 +1191,7 @@ export const siteSource = {
             description: "Themed social dance evenings at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Social Dance Nights",
             subtitle: "Themed evenings celebrating dance styles, music and community.",
           },
@@ -1203,7 +1209,7 @@ export const siteSource = {
             description: "Dance and movement workshops at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Workshops",
             subtitle: "One-off intensives and taster sessions with guest artists and faculty.",
           },
@@ -1221,7 +1227,7 @@ export const siteSource = {
             description: "Guest artist masterclasses at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Masterclasses",
             subtitle: "Learn from visiting artists and specialists in intimate venue settings.",
           },
@@ -1239,7 +1245,7 @@ export const siteSource = {
             description: "Performances and showcases at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Performances",
             subtitle: "Ticketed showcases, sharings and performance events throughout the year.",
           },
@@ -1257,7 +1263,7 @@ export const siteSource = {
             description: "Dance Meets Arts cross-disciplinary events at County Hall Dance Centre.",
           },
           hero: {
-            overline: "Events",
+            overline: "What's On",
             title: "Cross-Arts Events",
             subtitle: "Where dance meets music, visual art and international cultural exchange.",
           },
@@ -1272,10 +1278,10 @@ export const siteSource = {
       detailLabels: {
         date: "Date",
         location: "Location",
-        backLink: "← All events",
+        backLink: "← What's on",
       },
       categoryLabels: {
-        backLink: "← All events",
+        backLink: "← What's on",
       },
     },
 

@@ -52,7 +52,7 @@ global.navigation.items.events.children.milonga.label,Global — navigation › 
 global.navigation.items.events.children.performances.label,Global — navigation › items › events › children › performances › label,Performances
 global.navigation.items.events.children.social_dance_nights.label,Global — navigation › items › events › children › social dance nights › label,Social Dance Nights
 global.navigation.items.events.children.workshops.label,Global — navigation › items › events › children › workshops › label,Workshops
-global.navigation.items.events.label,Global — navigation › items › events › label,Events
+global.navigation.items.events.label,Global — navigation › items › events › label,What's On
 global.navigation.items.membership.children.booking_access.label,Global — navigation › items › membership › children › booking access › label,Booking Access
 global.navigation.items.membership.children.member_benefits.label,Global — navigation › items › membership › children › member benefits › label,Member Benefits
 global.navigation.items.membership.children.monthly_passes.label,Global — navigation › items › membership › children › monthly passes › label,Monthly Passes
@@ -121,8 +121,8 @@ home.events.items.dance_meets_arts.image.alt,Homepage — events › items › d
 home.events.items.dance_meets_arts.location,Homepage — events › items › dance meets arts › location,"Members' Terrace, County Hall"
 home.events.items.dance_meets_arts.title,Homepage — events › items › dance meets arts › title,Dance Meets Arts
 home.events.overline,Homepage — events › overline,What's on
-home.events.title,Homepage — events › title,Masterclasses & Events
-home.events.viewall.label,Homepage — events › viewall › label,View all events
+home.events.title,Homepage — events › title,What's On
+home.events.viewall.label,Homepage — events › viewall › label,View all
 home.hero.nextlabel,Homepage — hero › nextlabel,Next
 home.hero.previouslabel,Homepage — hero › previouslabel,Previous
 home.hero.slides.hero_classes.blurb,Homepage — hero › slides › hero classes › blurb,"Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi."
@@ -130,8 +130,8 @@ home.hero.slides.hero_classes.cta.label,Homepage — hero › slides › hero cl
 home.hero.slides.hero_classes.headline,Homepage — hero › slides › hero classes › headline,Classes
 home.hero.slides.hero_classes.image.alt,Homepage — hero › slides › hero classes › image › alt,Couple performing Argentine tango on an outdoor dance floor
 home.hero.slides.hero_events.blurb,Homepage — hero › slides › hero events › blurb,"Milongas, themed social nights, masterclasses and cross-arts events."
-home.hero.slides.hero_events.cta.label,Homepage — hero › slides › hero events › cta › label,View Events
-home.hero.slides.hero_events.headline,Homepage — hero › slides › hero events › headline,Events
+home.hero.slides.hero_events.cta.label,Homepage — hero › slides › hero events › cta › label,View what's on
+home.hero.slides.hero_events.headline,Homepage — hero › slides › hero events › headline,What's On
 home.hero.slides.hero_events.image.alt,Homepage — hero › slides › hero events › image › alt,Contemporary dancers in a bright venue with ballet barres
 home.hero.slides.hero_intro.blurb,Homepage — hero › slides › hero intro › blurb,"Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience."
 home.hero.slides.hero_intro.cta.label,Homepage — hero › slides › hero intro › cta › label,Explore Classes
@@ -459,7 +459,7 @@ pages.courses.items.teen_contemporary_intensive.term,Courses page › items › 
 pages.courses.items.teen_contemporary_intensive.title,Courses page › items › teen contemporary intensive › title,Teen Contemporary Intensive
 pages.courses.meta.description,Courses page › meta › description,Term-length dance and performing arts courses with structured progression at CHD PAS.
 pages.courses.meta.title,Courses page › meta › title,Courses
-pages.events.categories.cross_arts_events.hero.overline,Events page › categories › cross arts events › hero › overline,Events
+pages.events.categories.cross_arts_events.hero.overline,Events page › categories › cross arts events › hero › overline,What's On
 pages.events.categories.cross_arts_events.hero.subtitle,Events page › categories › cross arts events › hero › subtitle,"Where dance meets music, visual art and international cultural exchange."
 pages.events.categories.cross_arts_events.hero.title,Events page › categories › cross arts events › hero › title,Cross-Arts Events
 pages.events.categories.cross_arts_events.intro,Events page › categories › cross arts events › intro,"Our Dance Meets Arts programme brings together movement, live music, visual art and cultural celebration."
@@ -467,7 +467,7 @@ pages.events.categories.cross_arts_events.meta.description,Events page › categ
 pages.events.categories.cross_arts_events.meta.title,Events page › categories › cross arts events › meta › title,Cross-Arts Events
 pages.events.categories.cross_arts_events.sections.programme.title,Events page › categories › cross arts events › sections › programme › title,Programme
 pages.events.categories.cross_arts_events.sections.upcoming.title,Events page › categories › cross arts events › sections › upcoming › title,Upcoming events
-pages.events.categories.masterclasses.hero.overline,Events page › categories › masterclasses › hero › overline,Events
+pages.events.categories.masterclasses.hero.overline,Events page › categories › masterclasses › hero › overline,What's On
 pages.events.categories.masterclasses.hero.subtitle,Events page › categories › masterclasses › hero › subtitle,Learn from visiting artists and specialists in intimate venue settings.
 pages.events.categories.masterclasses.hero.title,Events page › categories › masterclasses › hero › title,Masterclasses
 pages.events.categories.masterclasses.intro,Events page › categories › masterclasses › intro,Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.
@@ -475,7 +475,7 @@ pages.events.categories.masterclasses.meta.description,Events page › categorie
 pages.events.categories.masterclasses.meta.title,Events page › categories › masterclasses › meta › title,Masterclasses
 pages.events.categories.masterclasses.sections.levels.title,Events page › categories › masterclasses › sections › levels › title,Levels & requirements
 pages.events.categories.masterclasses.sections.upcoming.title,Events page › categories › masterclasses › sections › upcoming › title,Upcoming masterclasses
-pages.events.categories.milonga.hero.overline,Events page › categories › milonga › hero › overline,Events
+pages.events.categories.milonga.hero.overline,Events page › categories › milonga › hero › overline,What's On
 pages.events.categories.milonga.hero.subtitle,Events page › categories › milonga › hero › subtitle,Social tango evenings with live and recorded music in our South Bank venue.
 pages.events.categories.milonga.hero.title,Events page › categories › milonga › hero › title,Milonga
 pages.events.categories.milonga.intro,Events page › categories › milonga › intro,Join us for regular milongas — welcoming social dance nights for tango dancers of every level.
@@ -483,7 +483,7 @@ pages.events.categories.milonga.meta.description,Events page › categories › 
 pages.events.categories.milonga.meta.title,Events page › categories › milonga › meta › title,Milonga
 pages.events.categories.milonga.sections.upcoming.title,Events page › categories › milonga › sections › upcoming › title,Upcoming milongas
 pages.events.categories.milonga.sections.what_to_expect.title,Events page › categories › milonga › sections › what to expect › title,What to expect
-pages.events.categories.performances.hero.overline,Events page › categories › performances › hero › overline,Events
+pages.events.categories.performances.hero.overline,Events page › categories › performances › hero › overline,What's On
 pages.events.categories.performances.hero.subtitle,Events page › categories › performances › hero › subtitle,"Ticketed showcases, sharings and performance events throughout the year."
 pages.events.categories.performances.hero.title,Events page › categories › performances › hero › title,Performances
 pages.events.categories.performances.intro,Events page › categories › performances › intro,Celebrate the work of our community in performances ranging from informal sharings to ticketed showcase evenings.
@@ -491,7 +491,7 @@ pages.events.categories.performances.meta.description,Events page › categories
 pages.events.categories.performances.meta.title,Events page › categories › performances › meta › title,Performances
 pages.events.categories.performances.sections.tickets.title,Events page › categories › performances › sections › tickets › title,Tickets
 pages.events.categories.performances.sections.upcoming.title,Events page › categories › performances › sections › upcoming › title,Upcoming performances
-pages.events.categories.social_dance_nights.hero.overline,Events page › categories › social dance nights › hero › overline,Events
+pages.events.categories.social_dance_nights.hero.overline,Events page › categories › social dance nights › hero › overline,What's On
 pages.events.categories.social_dance_nights.hero.subtitle,Events page › categories › social dance nights › hero › subtitle,"Themed evenings celebrating dance styles, music and community."
 pages.events.categories.social_dance_nights.hero.title,Events page › categories › social dance nights › hero › title,Social Dance Nights
 pages.events.categories.social_dance_nights.intro,Events page › categories › social dance nights › intro,"From salsa socials to cross-style celebrations, our social nights are open to adults who love to move and connect."
@@ -499,7 +499,7 @@ pages.events.categories.social_dance_nights.meta.description,Events page › cat
 pages.events.categories.social_dance_nights.meta.title,Events page › categories › social dance nights › meta › title,Social Dance Nights
 pages.events.categories.social_dance_nights.sections.how_to_join.title,Events page › categories › social dance nights › sections › how to join › title,How to join
 pages.events.categories.social_dance_nights.sections.upcoming.title,Events page › categories › social dance nights › sections › upcoming › title,Upcoming social nights
-pages.events.categories.workshops.hero.overline,Events page › categories › workshops › hero › overline,Events
+pages.events.categories.workshops.hero.overline,Events page › categories › workshops › hero › overline,What's On
 pages.events.categories.workshops.hero.subtitle,Events page › categories › workshops › hero › subtitle,One-off intensives and taster sessions with guest artists and faculty.
 pages.events.categories.workshops.hero.title,Events page › categories › workshops › hero › title,Workshops
 pages.events.categories.workshops.intro,Events page › categories › workshops › intro,"Workshops offer a focused opportunity to explore a style, technique or theme in a single session or short series."
@@ -507,14 +507,19 @@ pages.events.categories.workshops.meta.description,Events page › categories �
 pages.events.categories.workshops.meta.title,Events page › categories › workshops › meta › title,Workshops
 pages.events.categories.workshops.sections.booking.title,Events page › categories › workshops › sections › booking › title,Booking
 pages.events.categories.workshops.sections.upcoming.title,Events page › categories › workshops › sections › upcoming › title,Upcoming workshops
-pages.events.categorylabels.backlink,Events page › categorylabels › backlink,← All events
-pages.events.detaillabels.backlink,Events page › detaillabels › backlink,← All events
+pages.events.categorylabels.backlink,Events page › categorylabels › backlink,← What's on
+pages.events.detaillabels.backlink,Events page › detaillabels › backlink,← What's on
 pages.events.detaillabels.date,Events page › detaillabels › date,Date
 pages.events.detaillabels.location,Events page › detaillabels › location,Location
 pages.events.hero.overline,Events page › hero › overline,What's on
-pages.events.hero.subtitle,Events page › hero › subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
-pages.events.hero.title,Events page › hero › title,Events & Masterclasses
-pages.events.intro,Events page › intro,Book directly via the links below. Event payments are processed securely through Stripe — class bookings remain on our timetable system.
+pages.events.hero.subtitle,Events page › hero › subtitle,
+pages.events.filters.all,Events page › filters › all,All
+pages.events.filters.empty,Events page › filters › empty,Nothing in this category yet — check back soon or browse All.
+pages.events.filters.events,Events page › filters › events,Events
+pages.events.filters.masterclass,Events page › filters › masterclass,Masterclass
+pages.events.filters.workshops,Events page › filters › workshops,Workshops
+pages.events.hero.title,Events page › hero › title,What's On
+pages.events.intro,Events page › intro,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 pages.events.items.memory_of_china.booknow.label,Events page › items › memory of china › booknow › label,Book Now
 pages.events.items.memory_of_china.date,Events page › items › memory of china › date,Saturday 3 – Sunday 4 October 2026
 pages.events.items.memory_of_china.description.0,Events page › items › memory of china › description › 0,"The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank."
@@ -624,7 +629,7 @@ pages.events.items.opening_day.image.alt,Events page › items › opening day �
 pages.events.items.opening_day.location,Events page › items › opening day › location,County Hall
 pages.events.items.opening_day.title,Events page › items › opening day › title,County Hall Dance Centre – Opening Day
 pages.events.meta.description,Events page › meta › description,"Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School."
-pages.events.meta.title,Events page › meta › title,Events & Masterclasses
+pages.events.meta.title,Events page › meta › title,What's On
 pages.faq.cta.button.label,Faq page › cta › button › label,Contact us
 pages.faq.cta.text,Faq page › cta › text,Can't find what you need?
 pages.faq.hero.overline,Faq page › hero › overline,Help centre

@@ -973,6 +973,13 @@ export const siteStructure = {
         "subtitle": "@@COPY:pages.events.hero.subtitle"
       },
       "intro": "@@COPY:pages.events.intro",
+      "filters": {
+        "all": "@@COPY:pages.events.filters.all",
+        "events": "@@COPY:pages.events.filters.events",
+        "workshops": "@@COPY:pages.events.filters.workshops",
+        "masterclass": "@@COPY:pages.events.filters.masterclass",
+        "empty": "@@COPY:pages.events.filters.empty"
+      },
       "items": [
         {
           "id": "event-1",
