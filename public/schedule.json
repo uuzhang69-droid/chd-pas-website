@@ -1,17 +1,15 @@
 {
   "classes": [
-    [1, "12:30", "13:15", "Sound Healing with Yoga", "Yoga"],
     [1, "18:30", "19:30", "Tai Chi", "Tai Chi"],
-    [1, "19:30", "20:30", "Contemporary Dance", "Contemporary"],
-    [2, "18:30", "19:20", "Yoga · Basic Flow", "Yoga"],
-    [2, "19:30", "20:30", "Tango · Beginner", "Tango"],
-    [2, "20:30", "21:30", "Tango · Advanced", "Tango"],
-    [3, "18:30", "20:00", "Chinese Dance · Classical Performance", "Chinese Dance"],
-    [3, "20:00", "21:30", "Chinese Dance · Soft Training", "Chinese Dance"],
-    [4, "18:30", "19:20", "Yoga · Flow Yoga", "Yoga"],
-    [4, "19:30", "20:30", "Broadway Jazz", "Broadway Jazz"],
-    [6, "10:30", "12:00", "Yoga · Ground Exploration", "Yoga"],
-    [6, "15:00", "16:00", "Tango · Advanced", "Tango"],
-    [6, "16:00", "19:00", "Tango Milonga", "Tango"]
+    [1, "19:40", "20:40", "Contemporary Dance", "Contemporary"],
+    [2, "18:30", "19:20", "Yoga (Gentle Flow)", "Yoga"],
+    [2, "19:30", "20:30", "Tango (Beginner)", "Tango"],
+    [2, "20:30", "21:30", "Tango (Intermediate)", "Tango"],
+    [3, "18:30", "20:00", "Chinese Dance Class 1 (Classical Dance Performance)", "Chinese Dance"],
+    [3, "20:00", "21:30", "Chinese Dance Class 2 (Soft Training)", "Chinese Dance"],
+    [4, "18:30", "19:20", "Yoga (Vinyasa Flow)", "Yoga"],
+    [5, "15:30", "17:00", "Yoga (Inside Flow)", "Yoga"],
+    [5, "19:00", "20:00", "Tango (Advanced)", "Tango"],
+    [5, "20:00", "21:30", "Tango (Practice)", "Tango"]
   ]
 }

@@ -14,7 +14,7 @@ export const TIMETABLE_SEED_SESSIONS: TimetableSession[] = [
     title: "Contemporary Dance",
     style: "contemporary",
     dayOfWeek: 1,
-    slotId: "slot-1930-2040",
+    slotId: "slot-1940-2040",
     cancelledDates: [],
   },
   {

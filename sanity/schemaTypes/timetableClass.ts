@@ -19,6 +19,7 @@ const SLOT_OPTIONS = [
   { title: "7:00 – 8:00 pm", value: "slot-1900-2000" },
   { title: "7:30 – 8:30 pm", value: "slot-1930-2030" },
   { title: "7:30 – 8:40 pm", value: "slot-1930-2040" },
+  { title: "7:40 – 8:40 pm", value: "slot-1940-2040" },
   { title: "8:00 – 9:30 pm", value: "slot-2000-2130" },
   { title: "8:00 – 11:00 pm", value: "slot-2000-2300" },
   { title: "8:30 – 9:30 pm", value: "slot-2030-2130" },
