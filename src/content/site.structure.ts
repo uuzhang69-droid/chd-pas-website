@@ -406,7 +406,7 @@ export const siteStructure = {
           "slug": "contemporary",
           "href": "/classes/contemporary",
           "image": {
-            "src": "/images/styles/contemporary.jpg",
+            "src": "/images/styles/contemporary.jpeg",
             "alt": "@@COPY:home.classstyles.items.contemporary.image.alt"
           }
         },
@@ -416,7 +416,7 @@ export const siteStructure = {
           "slug": "chinese-dance",
           "href": "/classes/chinese-dance",
           "image": {
-            "src": "/images/styles/chinese-dance.jpg",
+            "src": "/images/styles/chinese-dance.jpeg",
             "alt": "@@COPY:home.classstyles.items.chinese_dance.image.alt"
           }
         },
@@ -426,7 +426,7 @@ export const siteStructure = {
           "slug": "tango",
           "href": "/classes/tango",
           "image": {
-            "src": "/images/styles/tango.jpg",
+            "src": "/images/styles/tango.jpeg",
             "alt": "@@COPY:home.classstyles.items.tango.image.alt"
           }
         },
@@ -436,7 +436,7 @@ export const siteStructure = {
           "slug": "yoga",
           "href": "/classes/yoga",
           "image": {
-            "src": "/images/styles/yoga.jpg",
+            "src": "/images/styles/yoga.jpeg",
             "alt": "@@COPY:home.classstyles.items.yoga.image.alt"
           }
         },
@@ -446,7 +446,7 @@ export const siteStructure = {
           "slug": "tai-chi",
           "href": "/classes/tai-chi",
           "image": {
-            "src": "/images/styles/tai-chi.jpg",
+            "src": "/images/styles/tai-chi.jpeg",
             "alt": "@@COPY:home.classstyles.items.tai_chi.image.alt"
           }
         }
@@ -569,7 +569,7 @@ export const siteStructure = {
             "title": "@@COPY:pages.classes.styles.contemporary.hero.title",
             "subtitle": "@@COPY:pages.classes.styles.contemporary.hero.subtitle",
             "image": {
-              "src": "/images/styles/contemporary.jpg",
+              "src": "/images/styles/contemporary.jpeg",
               "alt": "@@COPY:pages.classes.styles.contemporary.hero.image.alt"
             }
           },
@@ -578,7 +578,7 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.contemporary.instructor.role",
             "bio": "@@COPY:pages.classes.styles.contemporary.instructor.bio",
             "image": {
-              "src": "/images/faculty/sophie.svg",
+              "src": "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
               "alt": "@@COPY:pages.classes.styles.contemporary.instructor.image.alt"
             }
           },
@@ -621,7 +621,7 @@ export const siteStructure = {
             "title": "@@COPY:pages.classes.styles.chinese_dance.hero.title",
             "subtitle": "@@COPY:pages.classes.styles.chinese_dance.hero.subtitle",
             "image": {
-              "src": "/images/styles/chinese-dance.jpg",
+              "src": "/images/styles/chinese-dance.jpeg",
               "alt": "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt"
             }
           },
@@ -630,12 +630,13 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
             "bio": "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
             "image": {
-              "src": "/images/faculty/kiki.svg",
+              "src": "/images/faculty/Lisha.jpeg",
               "alt": "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt"
             }
           },
           "intro": [
-            "@@COPY:pages.classes.styles.chinese_dance.intro.0"
+            "@@COPY:pages.classes.styles.chinese_dance.intro.0",
+            "@@COPY:pages.classes.styles.chinese_dance.intro.1"
           ],
           "highlights": [
             {
@@ -672,7 +673,7 @@ export const siteStructure = {
             "title": "@@COPY:pages.classes.styles.tango.hero.title",
             "subtitle": "@@COPY:pages.classes.styles.tango.hero.subtitle",
             "image": {
-              "src": "/images/styles/tango.jpg",
+              "src": "/images/styles/tango.jpeg",
               "alt": "@@COPY:pages.classes.styles.tango.hero.image.alt"
             }
           },
@@ -681,7 +682,7 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.tango.instructor.role",
             "bio": "@@COPY:pages.classes.styles.tango.instructor.bio",
             "image": {
-              "src": "/images/faculty/marcus.svg",
+              "src": "/images/faculty/Rene.jpeg",
               "alt": "@@COPY:pages.classes.styles.tango.instructor.image.alt"
             }
           },
@@ -723,7 +724,7 @@ export const siteStructure = {
             "title": "@@COPY:pages.classes.styles.yoga.hero.title",
             "subtitle": "@@COPY:pages.classes.styles.yoga.hero.subtitle",
             "image": {
-              "src": "/images/styles/yoga.jpg",
+              "src": "/images/styles/yoga.jpeg",
               "alt": "@@COPY:pages.classes.styles.yoga.hero.image.alt"
             }
           },
@@ -732,7 +733,7 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.yoga.instructor.role",
             "bio": "@@COPY:pages.classes.styles.yoga.instructor.bio",
             "image": {
-              "src": "/images/faculty/eleanor.svg",
+              "src": "/images/faculty/Kasen.jpeg",
               "alt": "@@COPY:pages.classes.styles.yoga.instructor.image.alt"
             }
           },
@@ -774,7 +775,7 @@ export const siteStructure = {
             "title": "@@COPY:pages.classes.styles.tai_chi.hero.title",
             "subtitle": "@@COPY:pages.classes.styles.tai_chi.hero.subtitle",
             "image": {
-              "src": "/images/styles/tai-chi.jpg",
+              "src": "/images/styles/tai-chi.jpeg",
               "alt": "@@COPY:pages.classes.styles.tai_chi.hero.image.alt"
             }
           },
@@ -783,7 +784,7 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.tai_chi.instructor.role",
             "bio": "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
             "image": {
-              "src": "/images/faculty/michael.svg",
+              "src": "/images/faculty/coming.svg",
               "alt": "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt"
             }
           },
