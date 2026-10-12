@@ -24,7 +24,7 @@ export function ClassStyleCardGrid({
               src={style.image.src}
               alt={style.image.alt}
               fill
-              className="object-contain object-center"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>

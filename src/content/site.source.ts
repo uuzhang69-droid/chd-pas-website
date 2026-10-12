@@ -522,8 +522,8 @@ export const siteSource = {
             image: { src: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg", alt: "Ka Ki Christina Lai and Ying Yen (Yvonne)" },
           },
           intro: [
-            "As co-founders of C(P)LAY, their choreographic work explores human connection, physicality and contemporary experiences through movement. Their work has been commissioned and presented internationally, including Price of Silence, originally commissioned by Chaos Arts CIC and Culture Liverpool for Leap Dance Festival, and presented through platforms including FUSE International Festival and Pavilion Dance South West. Their work has also been presented at Sadler’s Wells through Double Edged: Laboratory of Human Friction as part of the Concrete Rain Asian Dance Festival.",
-            "Alongside their performance and choreographic practice, they have been invited as Guest Teachers at London Contemporary Dance School, bringing professional contemporary dance training together with an accessible, engaging approach to movement.",
+            " ",
+            " ",
           ],
           highlights: [
             { title: "Creative movement", description: "Explore space, dynamics and personal expression." },
@@ -553,8 +553,8 @@ export const siteSource = {
             image: { src: "/images/faculty/RCDance-Lisa.jpeg", alt: "RCDance Lisa Lin" },
           },
           intro: [
-            "As both a performer and an award-winning instructor, Lisa has participated in notable stage productions and cultural galas, including featured performances in ‘Duo Mie’ at Nanjing University and the large-scale dance drama ‘Song of Youth’. She has received recognition in major regional competitions, including the East China Six-Province Dance Competition (2nd Prize) and the National Vocational College Technical Skills Competition (3rd Prize).",
-            "Specialising in body rhythm, water sleeve techniques, and Han-Tang style dance, Boye combines precise control of movement details with a lively and interactive teaching style. Her classes are known for being both professional and engaging, blending rigorous technique with inspiring instruction.",
+            " ",
+            " ",
           ],
           highlights: [
             { title: "Cultural expression", description: "Discover the artistry of classical Chinese movement." },
@@ -612,7 +612,7 @@ export const siteSource = {
             image: { src: "/images/faculty/Kasen.jpeg", alt: "Kasen" },
           },
           intro: [
-            "Kasen’s teaching style focuses on mindfulness, self-compassion and intentional movement, creating a supportive and inclusive environment for students of all levels. Through carefully designed sequences, gentle guidance and an emphasis on safe alignment, he encourages students to listen to their bodies and enjoy a practice that is both challenging and rejuvenating.",
+            " ",
           ],
           highlights: [
             { title: "Wellbeing focus", description: "Stretch, breathe and restore balance." },
