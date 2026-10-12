@@ -547,13 +547,13 @@ export const siteSource = {
             image: { src: "/images/styles/chinese-dance.jpeg", alt: "Chinese dance class" },
           },
           instructor: {
-            name: "Lisha",
+            name: "RCDance Lisa",
             role: "Chinese dance teacher",
-            bio: "Lisha Lin is a classically trained dance artist and educator specializing in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
-            image: { src: "/images/faculty/Lisha.jpeg", alt: "Lisha Lin" },
+            bio: "RCDance Lisa Lin is a classically trained dance artist and educator specializing in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
+            image: { src: "/images/faculty/RCDance-Lisajpeg", alt: "RCDance Lisa Lin" },
           },
           intro: [
-            "As both a performer and an award-winning instructor, Lisha has participated in notable stage productions and cultural galas, including featured performances in ‘Duo Mie’ at Nanjing University and the large-scale dance drama ‘Song of Youth’. She has received recognition in major regional competitions, including the East China Six-Province Dance Competition (2nd Prize) and the National Vocational College Technical Skills Competition (3rd Prize).",
+            "As both a performer and an award-winning instructor, RCDance Lisa has participated in notable stage productions and cultural galas, including featured performances in ‘Duo Mie’ at Nanjing University and the large-scale dance drama ‘Song of Youth’. She has received recognition in major regional competitions, including the East China Six-Province Dance Competition (2nd Prize) and the National Vocational College Technical Skills Competition (3rd Prize).",
             "Specialising in body rhythm, water sleeve techniques, and Han-Tang style dance, Boye combines precise control of movement details with a lively and interactive teaching style. Her classes are known for being both professional and engaging, blending rigorous technique with inspiring instruction.",
           ],
           highlights: [
