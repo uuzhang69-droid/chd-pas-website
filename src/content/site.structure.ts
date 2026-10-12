@@ -630,7 +630,7 @@ export const siteStructure = {
             "role": "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
             "bio": "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
             "image": {
-              "src": "/images/faculty/RCDance-Lisajpeg",
+              "src": "/images/faculty/RCDance-Lisa.jpeg",
               "alt": "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt"
             }
           },
