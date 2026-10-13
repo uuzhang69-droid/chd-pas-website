@@ -293,7 +293,7 @@ export const copy = {
   "pages.classes.styles.contemporary.highlights.2.description": "Classes labelled Beginner, Open Level or Intermediate.",
   "pages.classes.styles.contemporary.highlights.2.title": "All levels",
   "pages.classes.styles.contemporary.instructor.bio":
-    "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are contemporary dance artists, choreographers based in London. Both hold an MA in Dance Performance from The University of the Arts London and have worked with internationally recognised choreographers and directors including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard.",
+    "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
   "pages.classes.styles.contemporary.instructor.image.alt": "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang",
   "pages.classes.styles.contemporary.instructor.name": "Christina & Yvonne",
   "pages.classes.styles.contemporary.instructor.role": "Contemporary dance teacher",
