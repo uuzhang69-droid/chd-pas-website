@@ -385,7 +385,7 @@ export const siteStructure = {
           "dateIso": "2026-08-08",
           "location": "@@COPY:home.events.items.dance_meets_arts.location",
           "image": {
-            "src": "/images/events/dance-meets-arts.jpg",
+            "src": "/images/events/dance-meets-arts.jpeg",
             "alt": "@@COPY:home.events.items.dance_meets_arts.image.alt"
           },
           "bookNow": {
@@ -1223,7 +1223,7 @@ export const siteStructure = {
             "@@COPY:pages.events.items.dance_meets_arts.description.9"
           ],
           "image": {
-            "src": "/images/events/dance-meets-arts.jpg",
+            "src": "/images/events/dance-meets-arts.jpeg",
             "alt": "@@COPY:pages.events.items.dance_meets_arts.image.alt"
           },
           "bookNow": {

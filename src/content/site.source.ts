@@ -341,7 +341,7 @@ export const siteSource = {
           dateIso: "2026-08-08",
           location: "Members' Terrace, County Hall",
           image: {
-            src: "/images/events/dance-meets-arts.jpg",
+            src: "/images/events/dance-meets-arts.jpeg",
             alt: "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
           },
           bookNow: {
@@ -1110,7 +1110,7 @@ export const siteSource = {
             "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
           ],
           image: {
-            src: "/images/events/dance-meets-arts.jpg",
+            src: "/images/events/dance-meets-arts.jpeg",
             alt: "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
           },
           inlineGalleries: [
