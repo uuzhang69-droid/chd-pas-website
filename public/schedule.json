@@ -3,14 +3,13 @@
     [1, "18:30", "19:30", "Tai Chi", "Tai Chi"],
     [1, "19:40", "20:40", "Contemporary Dance", "Contemporary"],
     [2, "18:30", "19:30", "Yoga (Gentle Flow)", "Yoga"],
-    [2, "19:30", "20:30", "Tango (Beginner)", "Tango"],
-    [2, "20:30", "21:30", "Tango (Intermediate)", "Tango"],
+    [2, "19:30", "20:30", "Argentina Tango (Beginner)", "Tango"],
+    [2, "20:30", "21:30", "Argentina Tango (Advanced)", "Tango"],
     [3, "12:30", "13:20", "Yoga (Therapeutic Yoga)", "Yoga"],
     [3, "18:30", "20:00", "Chinese Dance Class 1 (Classical Dance Performance)", "Chinese Dance"],
     [3, "20:00", "21:30", "Chinese Dance Class 2 (Soft Training)", "Chinese Dance"],
     [4, "18:30", "19:20", "Yoga (Vinyasa Flow)", "Yoga"],
-    [5, "19:00", "20:00", "Tango (Advanced)", "Tango"],
-    [5, "20:00", "23:00", "Tango Milonga", "Tango"],
-    [6, "10:30", "12:00", "Yoga (Inside Flow)", "Yoga"]
+    [5, "13:00", "14:30", "Yoga (Inside Flow)", "Yoga"],
+    [5, "19:00", "20:00", "Argentina Tango (Advanced)", "Tango"]
   ]
 }
