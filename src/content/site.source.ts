@@ -297,7 +297,7 @@ export const siteSource = {
           dateIso: "2026-10-31",
           location: "County Hall Dance Centre",
           image: {
-            src: "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
             alt: "Halloween pumpkins and decorations",
           },
           bookNow: {
@@ -861,7 +861,7 @@ export const siteSource = {
             "For booking enquiries and further information, please contact info@countyhalldancecentre.com.",
           ],
           image: {
-            src: "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
             alt: "Halloween pumpkins and decorations",
           },
           inlineGalleries: [
@@ -1023,7 +1023,7 @@ export const siteSource = {
               alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-03.jpg",
+              src: "/images/events/four-seasons-festival/gallery-03.jpeg",
               alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
             },
             {
@@ -1035,23 +1035,23 @@ export const siteSource = {
               alt: "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-06.webp",
+              src: "/images/events/four-seasons-festival/gallery-06.jpeg",
               alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-07.webp",
+              src: "/images/events/four-seasons-festival/gallery-07.jpeg",
               alt: "Storytelling and craft workshop with author Vivian French at the festival",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-08.webp",
+              src: "/images/events/four-seasons-festival/gallery-08.jpg",
               alt: "Flute and harp performance in the County Hall atrium",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-09.jpg",
+              src: "/images/events/four-seasons-festival/gallery-09.jpeg",
               alt: "Homemade cakes and treats served during the Four Seasons Festival",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-10.webp",
+              src: "/images/events/four-seasons-festival/gallery-10.jpeg",
               alt: "Short film screening as part of Seeds of Change at County Hall",
             },
             {

@@ -344,7 +344,7 @@ export const siteStructure = {
           "dateIso": "2026-10-31",
           "location": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.location",
           "image": {
-            "src": "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            "src": "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
             "alt": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.image.alt"
           },
           "bookNow": {
@@ -1028,7 +1028,7 @@ export const siteStructure = {
             "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.19"
           ],
           "image": {
-            "src": "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            "src": "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
             "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt"
           },
           "inlineGalleries": [
@@ -1174,7 +1174,7 @@ export const siteStructure = {
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-03.jpg",
+              "src": "/images/events/four-seasons-festival/gallery-03.jpeg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt"
             },
             {
@@ -1186,23 +1186,23 @@ export const siteStructure = {
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-06.webp",
+              "src": "/images/events/four-seasons-festival/gallery-06.jpeg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-07.webp",
+              "src": "/images/events/four-seasons-festival/gallery-07.jpeg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.6.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-08.webp",
+              "src": "/images/events/four-seasons-festival/gallery-08.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.7.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-09.jpg",
+              "src": "/images/events/four-seasons-festival/gallery-09.jpeg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.8.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-10.webp",
+              "src": "/images/events/four-seasons-festival/gallery-10.jpeg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.9.alt"
             },
             {

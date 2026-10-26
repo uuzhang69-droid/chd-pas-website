@@ -19,7 +19,7 @@ const FOUR_SEASONS_GALLERY: ImageAsset[] = [
     alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-03.jpg",
+    src: "/images/events/four-seasons-festival/gallery-03.jpeg",
     alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
   },
   {
@@ -31,23 +31,23 @@ const FOUR_SEASONS_GALLERY: ImageAsset[] = [
     alt: "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-06.webp",
+    src: "/images/events/four-seasons-festival/gallery-06.jpeg",
     alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-07.webp",
+    src: "/images/events/four-seasons-festival/gallery-07.jpeg",
     alt: "Storytelling and craft workshop with author Vivian French at the festival",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-08.webp",
+    src: "/images/events/four-seasons-festival/gallery-08.jpg",
     alt: "Flute and harp performance in the County Hall atrium",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-09.jpg",
+    src: "/images/events/four-seasons-festival/gallery-09.jpeg",
     alt: "Homemade cakes and treats served during the Four Seasons Festival",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-10.webp",
+    src: "/images/events/four-seasons-festival/gallery-10.jpeg",
     alt: "Short film screening as part of Seeds of Change at County Hall",
   },
   {
