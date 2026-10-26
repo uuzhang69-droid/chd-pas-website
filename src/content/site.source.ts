@@ -973,7 +973,7 @@ export const siteSource = {
             "Set within the historic County Hall, the festival makes use of the building's distinctive architecture and diverse spaces, from intimate performances and film screenings to interactive workshops and collaborative projects. Through each season, the festival invites visitors to experience art, culture and County Hall in new ways.",
           ],
           image: {
-            src: "/images/events/four-seasons-festival/gallery-01.webp",
+            src: "/images/events/four-seasons-festival/gallery-01.jpg",
             alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
           },
           gallery: [

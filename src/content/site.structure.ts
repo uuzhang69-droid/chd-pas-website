@@ -33,13 +33,18 @@ export const siteStructure = {
       "social": [
         {
           "platform": "instagram",
-          "href": "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
-          "label": "@@COPY:global.footer.social.instagram.label"
+          "href": "https://www.instagram.com/countyhalldancecentre",
+          "label": "@@COPY:global.utilitybar.social.instagram.label"
         },
         {
           "platform": "xiaohongshu",
-          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
-          "label": "@@COPY:global.footer.social.rednote.label"
+          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
+          "label": "@@COPY:global.utilitybar.social.xiaohongshu.label"
+        },
+        {
+          "platform": "tiktok",
+          "href": "https://www.tiktok.com/@county.hall.dance",
+          "label": "@@COPY:global.utilitybar.social.tiktok.label"
         }
       ]
     },
@@ -55,11 +60,11 @@ export const siteStructure = {
           "parentLink": false,
           "children": [
             {
-              "label": "@@COPY:global.navigation.items.classes.children.class_descriptions.label",
+              "label": "@@COPY:global.navigation.items.classes.children.class_descriptions_instructors.label",
               "href": "/classes-info"
             },
             {
-              "label": "@@COPY:global.navigation.items.private_lessons.label",
+              "label": "@@COPY:global.navigation.items.classes.children.private_lessons.label",
               "href": "/private-lessons"
             }
           ]
@@ -69,35 +74,35 @@ export const siteStructure = {
           "href": "/membership"
         },
         {
-          "label": "@@COPY:global.navigation.items.events.label",
+          "label": "@@COPY:global.navigation.items.what_s_on.label",
           "href": "/events"
         },
         {
-          "label": "@@COPY:global.navigation.items.studio_hire.label",
+          "label": "@@COPY:global.navigation.items.venue_hire.label",
           "href": "/venue-hire",
           "parentLink": false,
           "children": [
             {
-              "label": "@@COPY:global.navigation.items.studio_hire.children.venue_hire.label",
+              "label": "@@COPY:global.navigation.items.venue_hire.children.space_hire.label",
               "href": "/venue-hire"
             },
             {
-              "label": "@@COPY:global.navigation.items.studio_hire.children.space_booking.label",
+              "label": "@@COPY:global.navigation.items.venue_hire.children.space_booking.label",
               "href": "/booking"
             }
           ]
         },
         {
-          "label": "@@COPY:global.navigation.items.about_us.label",
+          "label": "@@COPY:global.navigation.items.about.label",
           "href": "/about",
           "parentLink": false,
           "children": [
             {
-              "label": "@@COPY:global.navigation.items.about_us.children.about_us.label",
+              "label": "@@COPY:global.navigation.items.about.children.about_us.label",
               "href": "/about"
             },
             {
-              "label": "@@COPY:global.navigation.items.about_us.children.contact.label",
+              "label": "@@COPY:global.navigation.items.about.children.contact.label",
               "href": "/contact"
             }
           ]
@@ -119,13 +124,18 @@ export const siteStructure = {
       "social": [
         {
           "platform": "instagram",
-          "href": "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          "href": "https://www.instagram.com/countyhalldancecentre",
           "label": "@@COPY:global.footer.social.instagram.label"
         },
         {
           "platform": "xiaohongshu",
-          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
-          "label": "@@COPY:global.footer.social.rednote.label"
+          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
+          "label": "@@COPY:global.footer.social.xiaohongshu.label"
+        },
+        {
+          "platform": "tiktok",
+          "href": "https://www.tiktok.com/@county.hall.dance",
+          "label": "@@COPY:global.footer.social.tiktok.label"
         }
       ],
       "columns": {
@@ -141,7 +151,7 @@ export const siteStructure = {
               "href": "/courses"
             },
             {
-              "label": "@@COPY:global.footer.columns.explore.links.events.label",
+              "label": "@@COPY:global.footer.columns.explore.links.what_s_on.label",
               "href": "/events"
             }
           ]
@@ -267,16 +277,16 @@ export const siteStructure = {
         },
         {
           "id": "hero-venue-hire",
-          "headline": "@@COPY:home.hero.slides.hero_studio_hire.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_studio_hire.blurb",
+          "headline": "@@COPY:home.hero.slides.hero_venue_hire.headline",
+          "blurb": "@@COPY:home.hero.slides.hero_venue_hire.blurb",
           "cta": {
-            "label": "@@COPY:home.hero.slides.hero_studio_hire.cta.label",
+            "label": "@@COPY:home.hero.slides.hero_venue_hire.cta.label",
             "href": "/venue-hire",
             "variant": "primary"
           },
           "image": {
             "src": "/images/hero/slide-5-venue.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_studio_hire.image.alt"
+            "alt": "@@COPY:home.hero.slides.hero_venue_hire.image.alt"
           }
         },
         {
@@ -326,6 +336,24 @@ export const siteStructure = {
       },
       "items": [
         {
+          "id": "2026-halloween",
+          "slug": "halloween-pumpkin-carving-workshop",
+          "listingCategory": "workshop",
+          "title": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.title",
+          "date": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.date",
+          "dateIso": "2026-10-31",
+          "location": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.location",
+          "image": {
+            "src": "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            "alt": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.image.alt"
+          },
+          "bookNow": {
+            "label": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.booknow.label",
+            "href": "/events/halloween-pumpkin-carving-workshop",
+            "variant": "primary"
+          }
+        },
+        {
           "id": "event-1",
           "slug": "memory-of-china",
           "title": "@@COPY:home.events.items.memory_of_china.title",
@@ -346,9 +374,10 @@ export const siteStructure = {
         {
           "id": "event-2",
           "slug": "four-seasons-festival",
+          "listingCategory": "event",
           "title": "@@COPY:home.events.items.four_seasons_festival.title",
           "date": "@@COPY:home.events.items.four_seasons_festival.date",
-          "dateIso": "2026-10-24",
+          "dateIso": "2026-10-25",
           "location": "@@COPY:home.events.items.four_seasons_festival.location",
           "image": {
             "src": "/images/events/four-seasons-festival/gallery-01.webp",
@@ -361,25 +390,9 @@ export const siteStructure = {
           }
         },
         {
-          "id": "event-3",
-          "slug": "lunchtime-concert-series",
-          "title": "@@COPY:home.events.items.lunchtime_concert_series.title",
-          "date": "@@COPY:home.events.items.lunchtime_concert_series.date",
-          "dateIso": "2026-09-25",
-          "location": "@@COPY:home.events.items.lunchtime_concert_series.location",
-          "image": {
-            "src": "/images/events/lunchtime-concert-series.jpg",
-            "alt": "@@COPY:home.events.items.lunchtime_concert_series.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
-            "href": "/events/lunchtime-concert-series",
-            "variant": "primary"
-          }
-        },
-        {
           "id": "event-4",
           "slug": "dance-meets-arts",
+          "listingCategory": "event",
           "title": "@@COPY:home.events.items.dance_meets_arts.title",
           "date": "@@COPY:home.events.items.dance_meets_arts.date",
           "dateIso": "2026-08-08",
@@ -519,12 +532,12 @@ export const siteStructure = {
         }
       },
       "grid": {
-        "prevWeek": "@@COPY:pages.timetable.grid.prevWeek",
-        "thisWeek": "@@COPY:pages.timetable.grid.thisWeek",
-        "nextWeek": "@@COPY:pages.timetable.grid.nextWeek",
-        "goToDate": "@@COPY:pages.timetable.grid.goToDate",
-        "legend": "@@COPY:pages.timetable.grid.legend",
-        "venueNote": "@@COPY:pages.timetable.grid.venueNote"
+        "prevWeek": "Previous week",
+        "thisWeek": "This week",
+        "nextWeek": "Next week",
+        "goToDate": "Go to date",
+        "legend": "Class styles",
+        "venueNote": "The venue can be used privately when there are no classes. Reservations are possible."
       },
       "newcomerNote": "@@COPY:pages.timetable.newcomernote",
       "helpLinks": [
@@ -557,7 +570,7 @@ export const siteStructure = {
       "detailLabels": {
         "ageGroups": "Who it's for",
         "backLink": "@@COPY:pages.classes.detaillabels.backlink",
-        "instructor": "@@COPY:pages.classes.detaillabels.instructor"
+        "instructor": "Instructor"
       },
       "styles": [
         {
@@ -976,13 +989,54 @@ export const siteStructure = {
       },
       "intro": "@@COPY:pages.events.intro",
       "filters": {
-        "all": "@@COPY:pages.events.filters.all",
-        "events": "@@COPY:pages.events.filters.events",
-        "workshops": "@@COPY:pages.events.filters.workshops",
-        "masterclass": "@@COPY:pages.events.filters.masterclass",
-        "empty": "@@COPY:pages.events.filters.empty"
+        "all": "All",
+        "events": "Events",
+        "workshops": "Workshops",
+        "masterclass": "Masterclass",
+        "empty": "Nothing in this category yet — check back soon."
       },
       "items": [
+        {
+          "id": "2026-halloween",
+          "slug": "halloween-pumpkin-carving-workshop",
+          "listingCategory": "workshop",
+          "title": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.title",
+          "date": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.date",
+          "dateIso": "2026-10-31",
+          "location": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.location",
+          "excerpt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.excerpt",
+          "description": [
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.0",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.1",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.2",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.3",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.4",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.5",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.6",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.7",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.8",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.9",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.10",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.11",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.12",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.13",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.14",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.15",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.16",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.17",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.18",
+            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.19"
+          ],
+          "image": {
+            "src": "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt"
+          },
+          "bookNow": {
+            "label": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.booknow.label",
+            "href": "/contact",
+            "variant": "primary"
+          }
+        },
         {
           "id": "event-1",
           "slug": "memory-of-china",
@@ -1031,11 +1085,11 @@ export const siteStructure = {
               "images": [
                 {
                   "src": "/images/events/memory-of-china-schedule-saturday.png",
-                  "alt": "@@COPY:pages.events.items.memory_of_china.inline_galleries.saturday_schedule.alt"
+                  "alt": "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt"
                 },
                 {
                   "src": "/images/events/memory-of-china-schedule-sunday.png",
-                  "alt": "@@COPY:pages.events.items.memory_of_china.inline_galleries.sunday_schedule.alt"
+                  "alt": "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt"
                 }
               ]
             }
@@ -1078,29 +1132,38 @@ export const siteStructure = {
             "@@COPY:pages.events.items.four_seasons_festival.description.0",
             "@@COPY:pages.events.items.four_seasons_festival.description.1",
             "@@COPY:pages.events.items.four_seasons_festival.description.2",
-            "@@COPY:pages.events.items.four_seasons_festival.description.3",
-            "@@COPY:pages.events.items.four_seasons_festival.description.4",
-            "@@COPY:pages.events.items.four_seasons_festival.description.5",
-            "@@COPY:pages.events.items.four_seasons_festival.description.6",
-            "@@COPY:pages.events.items.four_seasons_festival.description.7",
-            "@@COPY:pages.events.items.four_seasons_festival.description.8",
-            "@@COPY:pages.events.items.four_seasons_festival.description.9",
-            "@@COPY:pages.events.items.four_seasons_festival.description.10",
-            "@@COPY:pages.events.items.four_seasons_festival.description.11",
-            "@@COPY:pages.events.items.four_seasons_festival.description.12",
-            "@@COPY:pages.events.items.four_seasons_festival.description.13",
-            "@@COPY:pages.events.items.four_seasons_festival.description.14",
-            "@@COPY:pages.events.items.four_seasons_festival.description.15",
-            "@@COPY:pages.events.items.four_seasons_festival.description.16",
-            "@@COPY:pages.events.items.four_seasons_festival.description.17",
-            "@@COPY:pages.events.items.four_seasons_festival.description.18",
-            "@@COPY:pages.events.items.four_seasons_festival.description.19",
-            "@@COPY:pages.events.items.four_seasons_festival.description.20"
+            "@@COPY:pages.events.items.four_seasons_festival.description.3"
           ],
           "image": {
             "src": "/images/events/four-seasons-festival/gallery-01.webp",
             "alt": "@@COPY:pages.events.items.four_seasons_festival.image.alt"
           },
+          "gallery": [
+            {
+              "src": "/images/events/four-seasons-festival/gallery-01.webp",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-02.jpg",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-03.jpeg",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-04.png",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-05.webp",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-06.jpg",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt"
+            }
+          ],
           "bookNow": {
             "label": "@@COPY:pages.events.items.four_seasons_festival.booknow.label",
             "href": "/events/four-seasons-festival",
@@ -1108,65 +1171,9 @@ export const siteStructure = {
           },
           "descriptionCtas": [
             {
-              "paragraphIndex": 5,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
-              "href": "https://www.eventbrite.co.uk/e/folk-music-irish-dance-opening-celebration-as-the-leaves-turn-tickets-2001253258368",
-              "external": true,
-              "variant": "primary"
-            },
-            {
-              "paragraphIndex": 6,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
-              "href": "https://www.eventbrite.co.uk/e/2002798792101",
-              "external": true,
-              "variant": "primary"
-            },
-            {
-              "paragraphIndex": 7,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
-              "href": "#",
-              "inactive": true,
-              "variant": "secondary"
-            },
-            {
-              "paragraphIndex": 8,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
-              "href": "#",
-              "inactive": true,
-              "variant": "secondary"
-            },
-            {
-              "paragraphIndex": 10,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
-              "href": "https://www.eventbrite.co.uk/e/2002800613549",
-              "external": true,
-              "variant": "primary"
-            },
-            {
-              "paragraphIndex": 11,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
-              "href": "https://www.eventbrite.co.uk/e/young-leaves-classical-concert-as-the-leaves-turn-tickets-2002382589227",
-              "external": true,
-              "variant": "primary"
-            },
-            {
-              "paragraphIndex": 12,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.book_tickets",
-              "href": "https://countyhallpottery.com/product/clay-flowers-workshop-with-county-hall-arts-resident-artist-yasemin-gava/",
-              "external": true,
-              "variant": "primary"
-            },
-            {
-              "paragraphIndex": 13,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.coming_soon",
-              "href": "#",
-              "inactive": true,
-              "variant": "secondary"
-            },
-            {
-              "paragraphIndex": 14,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.cta.free_tickets",
-              "href": "https://www.eventbrite.co.uk/e/short-film-screening-as-the-leaves-turn-tickets-2002426861647",
+              "paragraphIndex": 3,
+              "label": "@@COPY:pages.events.items.four_seasons_festival.descriptionctas.more_details.label",
+              "href": "https://www.countyhallarts.com/stories/four-seasons-festival",
               "external": true,
               "variant": "primary"
             }
@@ -1226,6 +1233,110 @@ export const siteStructure = {
             "src": "/images/events/dance-meets-arts.jpeg",
             "alt": "@@COPY:pages.events.items.dance_meets_arts.image.alt"
           },
+          "inlineGalleries": [
+            {
+              "beforeHeading": "Programme",
+              "variant": "autoplay",
+              "images": [
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-01.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-02.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-03.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-04.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-05.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-06.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-07.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-08.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-09.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-10.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-11.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-12.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-13.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-14.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-15.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt",
+                  "width": 1024,
+                  "height": 682
+                },
+                {
+                  "src": "/images/events/dance-meets-arts/gallery-16.jpg",
+                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt",
+                  "width": 1024,
+                  "height": 682
+                }
+              ]
+            }
+          ],
           "bookNow": {
             "label": "@@COPY:pages.events.items.dance_meets_arts.booknow.label",
             "href": "/events/dance-meets-arts",
@@ -1236,43 +1347,43 @@ export const siteStructure = {
           "id": "event-5",
           "slug": "county-hall-dance-centre-opening-day",
           "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.opening_day.title",
-          "date": "@@COPY:pages.events.items.opening_day.date",
+          "title": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.title",
+          "date": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.date",
           "dateIso": "2026-09-10",
-          "location": "@@COPY:pages.events.items.opening_day.location",
-          "excerpt": "@@COPY:pages.events.items.opening_day.excerpt",
+          "location": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.location",
+          "excerpt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.excerpt",
           "description": [
-            "@@COPY:pages.events.items.opening_day.description.0",
-            "@@COPY:pages.events.items.opening_day.description.1"
+            "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.0",
+            "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.1"
           ],
           "image": {
             "src": "/images/events/opening-day.jpg",
-            "alt": "@@COPY:pages.events.items.opening_day.image.alt"
+            "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.image.alt"
           },
           "gallery": [
             {
               "src": "/images/events/opening-day/ribbon-cutting.jpg",
-              "alt": "@@COPY:pages.events.items.opening_day.gallery.0.alt"
+              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt"
             },
             {
               "src": "/images/events/opening-day/celebration-table.jpg",
-              "alt": "@@COPY:pages.events.items.opening_day.gallery.1.alt"
+              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt"
             },
             {
               "src": "/images/events/opening-day/dressing-room.jpg",
-              "alt": "@@COPY:pages.events.items.opening_day.gallery.2.alt"
+              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt"
             },
             {
               "src": "/images/events/opening-day/bouquet.jpg",
-              "alt": "@@COPY:pages.events.items.opening_day.gallery.3.alt"
+              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt"
             },
             {
               "src": "/images/events/opening-day/crest.jpg",
-              "alt": "@@COPY:pages.events.items.opening_day.gallery.4.alt"
+              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt"
             }
           ],
           "bookNow": {
-            "label": "@@COPY:pages.events.items.opening_day.booknow.label",
+            "label": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.booknow.label",
             "href": "/events/county-hall-dance-centre-opening-day",
             "variant": "primary"
           }
@@ -1430,78 +1541,78 @@ export const siteStructure = {
     "venueHire": {
       "overview": {
         "meta": {
-          "title": "@@COPY:pages.studiohire.overview.meta.title",
-          "description": "@@COPY:pages.studiohire.overview.meta.description"
+          "title": "@@COPY:pages.venuehire.overview.meta.title",
+          "description": "@@COPY:pages.venuehire.overview.meta.description"
         },
         "hero": {
-          "overline": "@@COPY:pages.studiohire.overview.hero.overline",
-          "title": "@@COPY:pages.studiohire.overview.hero.title",
-          "subtitle": "@@COPY:pages.studiohire.overview.hero.subtitle",
+          "overline": "@@COPY:pages.venuehire.overview.hero.overline",
+          "title": "@@COPY:pages.venuehire.overview.hero.title",
+          "subtitle": "@@COPY:pages.venuehire.overview.hero.subtitle",
           "image": {
             "src": "/images/hero/slide-5-venue.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.hero.image.alt"
+            "alt": "@@COPY:pages.venuehire.overview.hero.image.alt"
           }
         },
-        "intro": "@@COPY:pages.studiohire.overview.intro",
+        "intro": "@@COPY:pages.venuehire.overview.intro",
         "gallery": [
           {
             "src": "/images/venue/gallery-01.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.0.alt",
+            "alt": "@@COPY:pages.venuehire.overview.gallery.0.alt",
             "width": 1024,
             "height": 447
           },
           {
             "src": "/images/venue/gallery-02.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt",
+            "alt": "@@COPY:pages.venuehire.overview.gallery.1.alt",
             "width": 1024,
             "height": 519
           },
           {
             "src": "/images/venue/gallery-03.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt",
+            "alt": "@@COPY:pages.venuehire.overview.gallery.2.alt",
             "width": 1024,
             "height": 472
           },
           {
             "src": "/images/venue/gallery-04.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.3.alt",
+            "alt": "@@COPY:pages.venuehire.overview.gallery.3.alt",
             "width": 1024,
             "height": 576
           },
           {
             "src": "/images/venue/gallery-05.jpg",
-            "alt": "@@COPY:pages.studiohire.overview.gallery.4.alt",
+            "alt": "@@COPY:pages.venuehire.overview.gallery.4.alt",
             "width": 1024,
             "height": 486
           }
         ],
         "spaces": {
-          "title": "@@COPY:pages.studiohire.overview.spaces.title",
+          "title": "@@COPY:pages.venuehire.overview.spaces.title",
           "items": [
             {
               "id": "vinyl-venue",
-              "title": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.title",
-              "size": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.size",
-              "floor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.floor",
-              "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.idealfor",
-              "body": "@@COPY:pages.studiohire.overview.spaces.items.vinyl_studio.body",
+              "title": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.title",
+              "size": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.size",
+              "floor": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.floor",
+              "idealFor": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.idealfor",
+              "body": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.body",
               "image": {
                 "src": "/images/venue/vinyl-floor.jpg",
-                "alt": "@@COPY:pages.studiohire.overview.gallery.2.alt",
+                "alt": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.image.alt",
                 "width": 1024,
                 "height": 768
               }
             },
             {
               "id": "wooden-hall",
-              "title": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.title",
-              "size": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.size",
-              "floor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.floor",
-              "idealFor": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.idealfor",
-              "body": "@@COPY:pages.studiohire.overview.spaces.items.wooden_hall.body",
+              "title": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.title",
+              "size": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.size",
+              "floor": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.floor",
+              "idealFor": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.idealfor",
+              "body": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.body",
               "image": {
                 "src": "/images/venue/wooden-floor-hall.jpg",
-                "alt": "@@COPY:pages.studiohire.overview.gallery.1.alt",
+                "alt": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.image.alt",
                 "width": 1024,
                 "height": 768
               }
@@ -1510,165 +1621,165 @@ export const siteStructure = {
           "wholeVenue": "Book both spaces together for approx. 300 m² and up to 120 guests."
         },
         "facts": {
-          "title": "@@COPY:pages.studiohire.overview.facts.title",
+          "title": "@@COPY:pages.venuehire.overview.facts.title",
           "items": [
-            "@@COPY:pages.studiohire.overview.facts.items.0",
-            "@@COPY:pages.studiohire.overview.facts.items.1",
-            "@@COPY:pages.studiohire.overview.facts.items.2",
-            "@@COPY:pages.studiohire.overview.facts.items.3"
+            "@@COPY:pages.venuehire.overview.facts.items.0",
+            "@@COPY:pages.venuehire.overview.facts.items.1",
+            "@@COPY:pages.venuehire.overview.facts.items.2",
+            "@@COPY:pages.venuehire.overview.facts.items.3"
           ]
         },
         "facilities": {
-          "title": "@@COPY:pages.studiohire.overview.facilities.title",
-          "includedNote": "@@COPY:pages.studiohire.overview.facilities.includednote",
+          "title": "@@COPY:pages.venuehire.overview.facilities.title",
+          "includedNote": "@@COPY:pages.venuehire.overview.facilities.includednote",
           "items": [
-            "@@COPY:pages.studiohire.overview.facilities.items.0",
-            "@@COPY:pages.studiohire.overview.facilities.items.1",
-            "@@COPY:pages.studiohire.overview.facilities.items.2",
-            "@@COPY:pages.studiohire.overview.facilities.items.3",
-            "@@COPY:pages.studiohire.overview.facilities.items.4",
-            "@@COPY:pages.studiohire.overview.facilities.items.5",
-            "@@COPY:pages.studiohire.overview.facilities.items.6",
-            "@@COPY:pages.studiohire.overview.facilities.items.7",
-            "@@COPY:pages.studiohire.overview.facilities.items.8",
-            "@@COPY:pages.studiohire.overview.facilities.items.9"
+            "@@COPY:pages.venuehire.overview.facilities.items.0",
+            "@@COPY:pages.venuehire.overview.facilities.items.1",
+            "@@COPY:pages.venuehire.overview.facilities.items.2",
+            "@@COPY:pages.venuehire.overview.facilities.items.3",
+            "@@COPY:pages.venuehire.overview.facilities.items.4",
+            "@@COPY:pages.venuehire.overview.facilities.items.5",
+            "@@COPY:pages.venuehire.overview.facilities.items.6",
+            "@@COPY:pages.venuehire.overview.facilities.items.7",
+            "@@COPY:pages.venuehire.overview.facilities.items.8",
+            "@@COPY:pages.venuehire.overview.facilities.items.9"
           ],
-          "extraNote": "@@COPY:pages.studiohire.overview.facilities.extranote"
+          "extraNote": "@@COPY:pages.venuehire.overview.facilities.extranote"
         },
         "suitableFor": {
-          "title": "@@COPY:pages.studiohire.overview.suitablefor.title",
+          "title": "@@COPY:pages.venuehire.overview.suitablefor.title",
           "items": [
-            "@@COPY:pages.studiohire.overview.suitablefor.items.0",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.1",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.2",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.3",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.4",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.5",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.6",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.7",
-            "@@COPY:pages.studiohire.overview.suitablefor.items.8"
+            "@@COPY:pages.venuehire.overview.suitablefor.items.0",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.1",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.2",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.3",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.4",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.5",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.6",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.7",
+            "@@COPY:pages.venuehire.overview.suitablefor.items.8"
           ]
         },
         "pricing": {
-          "title": "@@COPY:pages.studiohire.overview.pricing.title",
+          "title": "@@COPY:pages.venuehire.overview.pricing.title",
           "columns": [
-            "@@COPY:pages.studiohire.overview.pricing.columns.0",
-            "@@COPY:pages.studiohire.overview.pricing.columns.1",
-            "@@COPY:pages.studiohire.overview.pricing.columns.2"
+            "@@COPY:pages.venuehire.overview.pricing.columns.0",
+            "@@COPY:pages.venuehire.overview.pricing.columns.1",
+            "@@COPY:pages.venuehire.overview.pricing.columns.2"
           ],
           "rows": [
             {
-              "label": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.label",
-              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.standard",
-              "member": "@@COPY:pages.studiohire.overview.pricing.rows.weekday_per_hour.member"
+              "label": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.label",
+              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.standard",
+              "member": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.member"
             },
             {
-              "label": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.label",
-              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.standard",
-              "member": "@@COPY:pages.studiohire.overview.pricing.rows.weekend_daytime_per_hour.member"
+              "label": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.label",
+              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.standard",
+              "member": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.member"
             },
             {
-              "label": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.label",
-              "standard": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.standard",
-              "member": "@@COPY:pages.studiohire.overview.pricing.rows.half_day.member"
+              "label": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.label",
+              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.standard",
+              "member": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.member"
             }
           ],
           "notes": [
-            "@@COPY:pages.studiohire.overview.pricing.notes.0",
-            "@@COPY:pages.studiohire.overview.pricing.notes.1",
-            "@@COPY:pages.studiohire.overview.pricing.notes.2",
-            "@@COPY:pages.studiohire.overview.pricing.notes.3",
-            "@@COPY:pages.studiohire.overview.pricing.notes.4"
+            "@@COPY:pages.venuehire.overview.pricing.notes.0",
+            "@@COPY:pages.venuehire.overview.pricing.notes.1",
+            "@@COPY:pages.venuehire.overview.pricing.notes.2",
+            "@@COPY:pages.venuehire.overview.pricing.notes.3",
+            "@@COPY:pages.venuehire.overview.pricing.notes.4"
           ],
           "membershipLink": {
-            "label": "@@COPY:pages.studiohire.overview.pricing.membershiplink.label",
+            "label": "@@COPY:pages.venuehire.overview.pricing.membershiplink.label",
             "href": "/membership",
             "variant": "text"
           }
         },
         "howToBook": {
-          "title": "@@COPY:pages.studiohire.overview.howtobook.title",
+          "title": "@@COPY:pages.venuehire.overview.howtobook.title",
           "steps": [
             {
-              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.0.title",
-              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.0.body"
+              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.0.title",
+              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.0.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.1.title",
-              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.1.body"
+              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.1.title",
+              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.1.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.2.title",
-              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.2.body"
+              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.2.title",
+              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.2.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.howtobook.steps.3.title",
-              "body": "@@COPY:pages.studiohire.overview.howtobook.steps.3.body"
+              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.3.title",
+              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.3.body"
             }
           ]
         },
         "terms": {
-          "title": "@@COPY:pages.studiohire.overview.terms.title",
+          "title": "@@COPY:pages.venuehire.overview.terms.title",
           "items": [
             {
-              "title": "@@COPY:pages.studiohire.overview.terms.items.0.title",
-              "body": "@@COPY:pages.studiohire.overview.terms.items.0.body"
+              "title": "@@COPY:pages.venuehire.overview.terms.items.0.title",
+              "body": "@@COPY:pages.venuehire.overview.terms.items.0.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.terms.items.1.title",
-              "body": "@@COPY:pages.studiohire.overview.terms.items.1.body"
+              "title": "@@COPY:pages.venuehire.overview.terms.items.1.title",
+              "body": "@@COPY:pages.venuehire.overview.terms.items.1.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.terms.items.2.title",
-              "body": "@@COPY:pages.studiohire.overview.terms.items.2.body"
+              "title": "@@COPY:pages.venuehire.overview.terms.items.2.title",
+              "body": "@@COPY:pages.venuehire.overview.terms.items.2.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.terms.items.3.title",
-              "body": "@@COPY:pages.studiohire.overview.terms.items.3.body"
+              "title": "@@COPY:pages.venuehire.overview.terms.items.3.title",
+              "body": "@@COPY:pages.venuehire.overview.terms.items.3.body"
             },
             {
-              "title": "@@COPY:pages.studiohire.overview.terms.items.4.title",
-              "body": "@@COPY:pages.studiohire.overview.terms.items.4.body"
+              "title": "@@COPY:pages.venuehire.overview.terms.items.4.title",
+              "body": "@@COPY:pages.venuehire.overview.terms.items.4.body"
             }
           ]
         },
         "cta": {
-          "title": "@@COPY:pages.studiohire.overview.cta.title",
-          "body": "@@COPY:pages.studiohire.overview.cta.body",
+          "title": "@@COPY:pages.venuehire.overview.cta.title",
+          "body": "@@COPY:pages.venuehire.overview.cta.body",
           "button": {
-            "label": "@@COPY:pages.studiohire.overview.cta.button.label",
+            "label": "@@COPY:pages.venuehire.overview.cta.button.label",
             "href": "/contact?subject=venue-hire",
             "variant": "primary"
           },
           "secondaryButton": {
-            "label": "@@COPY:pages.studiohire.overview.cta.secondaryButton.label",
+            "label": "@@COPY:pages.venuehire.overview.cta.secondarybutton.label",
             "href": "/timetable",
             "variant": "secondary"
           },
-          "secondary": "@@COPY:pages.studiohire.overview.cta.secondary"
+          "secondary": "@@COPY:pages.venuehire.overview.cta.secondary"
         }
       },
       "subpages": [
         {
           "slug": "space-booking",
           "meta": {
-            "title": "@@COPY:pages.studiohire.subpages.space_booking.meta.title",
-            "description": "@@COPY:pages.studiohire.subpages.space_booking.meta.description"
+            "title": "@@COPY:pages.venuehire.subpages.space_booking.meta.title",
+            "description": "@@COPY:pages.venuehire.subpages.space_booking.meta.description"
           },
           "hero": {
-            "overline": "@@COPY:pages.studiohire.subpages.space_booking.hero.overline",
-            "title": "@@COPY:pages.studiohire.subpages.space_booking.hero.title",
-            "subtitle": "@@COPY:pages.studiohire.subpages.space_booking.hero.subtitle"
+            "overline": "@@COPY:pages.venuehire.subpages.space_booking.hero.overline",
+            "title": "@@COPY:pages.venuehire.subpages.space_booking.hero.title",
+            "subtitle": "@@COPY:pages.venuehire.subpages.space_booking.hero.subtitle"
           },
-          "intro": "@@COPY:pages.studiohire.subpages.space_booking.intro",
+          "intro": "@@COPY:pages.venuehire.subpages.space_booking.intro",
           "sections": [
             {
               "id": "how-to-book",
-              "title": "@@COPY:pages.studiohire.subpages.space_booking.sections.how_to_book.title"
+              "title": "@@COPY:pages.venuehire.subpages.space_booking.sections.how_to_book.title"
             },
             {
               "id": "enquiry-form",
-              "title": "@@COPY:pages.studiohire.subpages.space_booking.sections.enquiry_form.title"
+              "title": "@@COPY:pages.venuehire.subpages.space_booking.sections.enquiry_form.title"
             }
           ]
         }
@@ -1870,7 +1981,7 @@ export const siteStructure = {
         "subtitle": "@@COPY:pages.classesinfo.hero.subtitle"
       },
       "intro": "@@COPY:pages.classesinfo.intro",
-      "cardLink": "@@COPY:pages.classesinfo.cardlink",
+      "cardLink": "View class →",
       "sections": [
         {
           "id": "descriptions",
@@ -2219,7 +2330,7 @@ export const siteStructure = {
             "required": true,
             "options": [
               {
-                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.studio_hire.label",
+                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.venue_hire.label",
                 "value": "venue-hire"
               },
               {
@@ -2330,7 +2441,7 @@ export const siteStructure = {
                 "value": "private-lessons"
               },
               {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.studio_hire.label",
+                "label": "@@COPY:pages.contact.form.fields.subject.options.venue_hire.label",
                 "value": "venue-hire"
               },
               {
