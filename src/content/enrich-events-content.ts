@@ -4,7 +4,7 @@ import type { ImageAsset } from "./types";
 
 const DANCE_MEETS_ARTS_GALLERY_IMAGES: ImageAsset[] = Array.from({ length: 16 }, (_, index) => ({
   src: `/images/events/dance-meets-arts/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
-  alt: copy["pages.events.items.dance_meets_arts.gallery.alt"],
+  alt: copy["pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt"],
   width: 1024,
   height: 682,
 }));
@@ -15,7 +15,7 @@ const FOUR_SEASONS_GALLERY: ImageAsset[] = [
     alt: "Concert in the County Hall atrium during the Four Seasons Festival",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-02.webp",
+    src: "/images/events/four-seasons-festival/gallery-02.jpg",
     alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
   },
   {
@@ -23,7 +23,7 @@ const FOUR_SEASONS_GALLERY: ImageAsset[] = [
     alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
   },
   {
-    src: "/images/events/four-seasons-festival/gallery-04.webp",
+    src: "/images/events/four-seasons-festival/gallery-04.jpg",
     alt: "Guided tour near the South Bank Lion with Big Ben in the background",
   },
   {

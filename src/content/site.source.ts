@@ -1019,7 +1019,7 @@ export const siteSource = {
               alt: "Concert in the County Hall atrium during the Four Seasons Festival",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-02.webp",
+              src: "/images/events/four-seasons-festival/gallery-02.jpg",
               alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
             },
             {
@@ -1027,7 +1027,7 @@ export const siteSource = {
               alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
             },
             {
-              src: "/images/events/four-seasons-festival/gallery-04.webp",
+              src: "/images/events/four-seasons-festival/gallery-04.jpg",
               alt: "Guided tour near the South Bank Lion with Big Ben in the background",
             },
             {

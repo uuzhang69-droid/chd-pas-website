@@ -30,7 +30,7 @@ export function EventsGrid() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {sortEventsByDate(events.items).map((event) => (
+          {sortEventsByDate(events.items).slice(0, 4).map((event) => (
             <article
               key={event.id}
               className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow duration-300 hover:shadow-lg"

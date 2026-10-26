@@ -1170,7 +1170,7 @@ export const siteStructure = {
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-02.webp",
+              "src": "/images/events/four-seasons-festival/gallery-02.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt"
             },
             {
@@ -1178,7 +1178,7 @@ export const siteStructure = {
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-04.webp",
+              "src": "/images/events/four-seasons-festival/gallery-04.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt"
             },
             {
