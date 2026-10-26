@@ -69,14 +69,9 @@ home.classstyles.items.yoga.image.alt,Homepage — classstyles › items › yog
 home.classstyles.items.yoga.name,Homepage — classstyles › items › yoga › name,Yoga
 home.classstyles.overline,Homepage — classstyles › overline,Our disciplines
 home.classstyles.title,Homepage — classstyles › title,Class styles
-home.events.items.dance_meets_arts.booknow.label,Homepage — events › items › dance meets arts › booknow › label,Details
-home.events.items.dance_meets_arts.date,Homepage — events › items › dance meets arts › date,"Saturday 8 August 2026, 7:00pm – 8:30pm"
-home.events.items.dance_meets_arts.image.alt,Homepage — events › items › dance meets arts › image › alt,"Dance Meets Arts at County Hall, celebrating dance, music and visual arts"
-home.events.items.dance_meets_arts.location,Homepage — events › items › dance meets arts › location,"Members' Terrace, County Hall"
-home.events.items.dance_meets_arts.title,Homepage — events › items › dance meets arts › title,Dance Meets Arts
-home.events.items.four_seasons_festival.booknow.label,Homepage — events › items › four seasons festival › booknow › label,Book Now
+home.events.items.four_seasons_festival.booknow.label,Homepage — events › items › four seasons festival › booknow › label,Details
 home.events.items.four_seasons_festival.date,Homepage — events › items › four seasons festival › date,Saturday 24 – Sunday 25 October 2026
-home.events.items.four_seasons_festival.image.alt,Homepage — events › items › four seasons festival › image › alt,"County Hall and the London Eye beside the River Thames, framed by green leaves"
+home.events.items.four_seasons_festival.image.alt,Homepage — events › items › four seasons festival › image › alt,Concert in the County Hall atrium during the Four Seasons Festival
 home.events.items.four_seasons_festival.location,Homepage — events › items › four seasons festival › location,"Riverside Building, County Hall"
 home.events.items.four_seasons_festival.title,Homepage — events › items › four seasons festival › title,Four Seasons Festival
 home.events.items.halloween_pumpkin_carving_workshop.booknow.label,Homepage — events › items › halloween pumpkin carving workshop › booknow › label,Details
@@ -84,6 +79,11 @@ home.events.items.halloween_pumpkin_carving_workshop.date,Homepage — events �
 home.events.items.halloween_pumpkin_carving_workshop.image.alt,Homepage — events › items › halloween pumpkin carving workshop › image › alt,Halloween pumpkins and decorations
 home.events.items.halloween_pumpkin_carving_workshop.location,Homepage — events › items › halloween pumpkin carving workshop › location,County Hall Dance Centre
 home.events.items.halloween_pumpkin_carving_workshop.title,Homepage — events › items › halloween pumpkin carving workshop › title,Halloween Pumpkin Carving Workshop
+home.events.items.lunchtime_concert_series.booknow.label,Homepage — events › items › lunchtime concert series › booknow › label,Details
+home.events.items.lunchtime_concert_series.date,Homepage — events › items › lunchtime concert series › date,"Friday 25 September 2026, 1pm"
+home.events.items.lunchtime_concert_series.image.alt,Homepage — events › items › lunchtime concert series › image › alt,County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja
+home.events.items.lunchtime_concert_series.location,Homepage — events › items › lunchtime concert series › location,"Atrium, County Hall"
+home.events.items.lunchtime_concert_series.title,Homepage — events › items › lunchtime concert series › title,Lunchtime Concert Series
 home.events.items.memory_of_china.booknow.label,Homepage — events › items › memory of china › booknow › label,Book Now
 home.events.items.memory_of_china.date,Homepage — events › items › memory of china › date,Saturday 3 – Sunday 4 October 2026
 home.events.items.memory_of_china.image.alt,Homepage — events › items › memory of china › image › alt,"Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind"
@@ -518,21 +518,37 @@ pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt,Events page �
 pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt,Events page › items › dance meets arts › inlinegalleries › 0 › images › 9 › alt,Dance Meets Arts performance and audience on the County Hall Members' Terrace
 pages.events.items.dance_meets_arts.location,Events page › items › dance meets arts › location,"Members' Terrace, County Hall"
 pages.events.items.dance_meets_arts.title,Events page › items › dance meets arts › title,Dance Meets Arts
-pages.events.items.four_seasons_festival.booknow.label,Events page › items › four seasons festival › booknow › label,Book Now
+pages.events.items.four_seasons_festival.booknow.label,Events page › items › four seasons festival › booknow › label,Details
 pages.events.items.four_seasons_festival.date,Events page › items › four seasons festival › date,Saturday 24 – Sunday 25 October 2026
 pages.events.items.four_seasons_festival.description.0,Events page › items › four seasons festival › description › 0,# Four Seasons Festival
-pages.events.items.four_seasons_festival.description.1,Events page › items › four seasons festival › description › 1,"The Four Seasons Festival is a seasonal multidisciplinary arts programme at County Hall, bringing together music, visual arts, film, dance, performance, storytelling, creative workshops and hands-on experiences."
-pages.events.items.four_seasons_festival.description.2,Events page › items › four seasons festival › description › 2,"Each edition explores a different seasonal theme, creating opportunities for audiences to discover the arts in unexpected combinations, connect with artists and take part in creative experiences."
-pages.events.items.four_seasons_festival.description.3,Events page › items › four seasons festival › description › 3,"Set within the historic County Hall, the festival makes use of the building's distinctive architecture and diverse spaces, from intimate performances and film screenings to interactive workshops and collaborative projects. Through each season, the festival invites visitors to experience art, culture and County Hall in new ways."
+pages.events.items.four_seasons_festival.description.1,Events page › items › four seasons festival › description › 1,"The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences."
+pages.events.items.four_seasons_festival.description.10,Events page › items › four seasons festival › description › 10,At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.
+pages.events.items.four_seasons_festival.description.11,Events page › items › four seasons festival › description › 11,"# Under the Same Sun, Summer 2026"
+pages.events.items.four_seasons_festival.description.12,Events page › items › four seasons festival › description › 12,"The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration."
+pages.events.items.four_seasons_festival.description.13,Events page › items › four seasons festival › description › 13,"Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together."
+pages.events.items.four_seasons_festival.description.14,Events page › items › four seasons festival › description › 14,The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava.
+pages.events.items.four_seasons_festival.description.2,Events page › items › four seasons festival › description › 2,"More than a programme of individual events, each edition is developed around a central theme or idea – creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe."
+pages.events.items.four_seasons_festival.description.3,Events page › items › four seasons festival › description › 3,"County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways."
+pages.events.items.four_seasons_festival.description.4,Events page › items › four seasons festival › description › 4,"# As the Leaves Turn, Autumn 2026"
+pages.events.items.four_seasons_festival.description.5,Events page › items › four seasons festival › description › 5,"The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation."
+pages.events.items.four_seasons_festival.description.6,Events page › items › four seasons festival › description › 6,"Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning. Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go."
+pages.events.items.four_seasons_festival.description.7,Events page › items › four seasons festival › description › 7,"# Seeds of Change, Spring 2026"
+pages.events.items.four_seasons_festival.description.8,Events page › items › four seasons festival › description › 8,"The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility."
+pages.events.items.four_seasons_festival.description.9,Events page › items › four seasons festival › description › 9,"The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening."
 pages.events.items.four_seasons_festival.descriptionctas.more_details.label,Events page › items › four seasons festival › descriptionctas › more details › label,More Details
-pages.events.items.four_seasons_festival.excerpt,Events page › items › four seasons festival › excerpt,"Discover the Four Seasons Festival at County Hall, a seasonal celebration of music, dance, visual arts, film, performances and creative workshops, bringing artists and audiences together through inspiring cultural experiences."
-pages.events.items.four_seasons_festival.gallery.0.alt,Events page › items › four seasons festival › gallery › 0 › alt,Four Seasons Festival at County Hall — photo 1
-pages.events.items.four_seasons_festival.gallery.1.alt,Events page › items › four seasons festival › gallery › 1 › alt,Four Seasons Festival at County Hall — photo 2
-pages.events.items.four_seasons_festival.gallery.2.alt,Events page › items › four seasons festival › gallery › 2 › alt,Four Seasons Festival at County Hall — photo 3
-pages.events.items.four_seasons_festival.gallery.3.alt,Events page › items › four seasons festival › gallery › 3 › alt,Four Seasons Festival at County Hall — photo 4
-pages.events.items.four_seasons_festival.gallery.4.alt,Events page › items › four seasons festival › gallery › 4 › alt,Four Seasons Festival at County Hall — photo 5
-pages.events.items.four_seasons_festival.gallery.5.alt,Events page › items › four seasons festival › gallery › 5 › alt,Four Seasons Festival at County Hall — photo 6
-pages.events.items.four_seasons_festival.image.alt,Events page › items › four seasons festival › image › alt,"County Hall and the London Eye beside the River Thames, framed by green leaves"
+pages.events.items.four_seasons_festival.excerpt,Events page › items › four seasons festival › excerpt,"As the Leaves Turn, Autumn 2026 — a seasonal celebration of music, dance, visual arts, film, performances and creative workshops at County Hall."
+pages.events.items.four_seasons_festival.gallery.0.alt,Events page › items › four seasons festival › gallery › 0 › alt,Concert in the County Hall atrium during the Four Seasons Festival
+pages.events.items.four_seasons_festival.gallery.1.alt,Events page › items › four seasons festival › gallery › 1 › alt,Saxophone and accordion performance beside colourful sculptures at County Hall
+pages.events.items.four_seasons_festival.gallery.10.alt,Events page › items › four seasons festival › gallery › 10 › alt,"Flute, piano and cello trio performing at the Four Seasons Festival"
+pages.events.items.four_seasons_festival.gallery.2.alt,Events page › items › four seasons festival › gallery › 2 › alt,Musicians and dancers with programme booklets at the Four Seasons Festival
+pages.events.items.four_seasons_festival.gallery.3.alt,Events page › items › four seasons festival › gallery › 3 › alt,Guided tour near the South Bank Lion with Big Ben in the background
+pages.events.items.four_seasons_festival.gallery.4.alt,Events page › items › four seasons festival › gallery › 4 › alt,Visitors adding paper leaves to a tree mural at the Four Seasons Festival
+pages.events.items.four_seasons_festival.gallery.5.alt,Events page › items › four seasons festival › gallery › 5 › alt,Outdoor dance and flute performance for Under the Same Sun at County Hall
+pages.events.items.four_seasons_festival.gallery.6.alt,Events page › items › four seasons festival › gallery › 6 › alt,Storytelling and craft workshop with author Vivian French at the festival
+pages.events.items.four_seasons_festival.gallery.7.alt,Events page › items › four seasons festival › gallery › 7 › alt,Flute and harp performance in the County Hall atrium
+pages.events.items.four_seasons_festival.gallery.8.alt,Events page › items › four seasons festival › gallery › 8 › alt,Homemade cakes and treats served during the Four Seasons Festival
+pages.events.items.four_seasons_festival.gallery.9.alt,Events page › items › four seasons festival › gallery › 9 › alt,Short film screening as part of Seeds of Change at County Hall
+pages.events.items.four_seasons_festival.image.alt,Events page › items › four seasons festival › image › alt,Concert in the County Hall atrium during the Four Seasons Festival
 pages.events.items.four_seasons_festival.location,Events page › items › four seasons festival › location,"Riverside Building, County Hall"
 pages.events.items.four_seasons_festival.title,Events page › items › four seasons festival › title,Four Seasons Festival
 pages.events.items.halloween_pumpkin_carving_workshop.booknow.label,Events page › items › halloween pumpkin carving workshop › booknow › label,Enquire Now
@@ -559,6 +575,8 @@ pages.events.items.halloween_pumpkin_carving_workshop.description.8,Events page 
 pages.events.items.halloween_pumpkin_carving_workshop.description.9,Events page › items › halloween pumpkin carving workshop › description › 9,Best Performance Award — For a standout performance during the costume show.
 pages.events.items.halloween_pumpkin_carving_workshop.excerpt,Events page › items › halloween pumpkin carving workshop › excerpt,"Get creative this Halloween with an afternoon of pumpkin carving, followed by a costume show, special awards and professional photography. Fun for all ages!"
 pages.events.items.halloween_pumpkin_carving_workshop.image.alt,Events page › items › halloween pumpkin carving workshop › image › alt,Halloween pumpkins and decorations
+pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt,Events page › items › halloween pumpkin carving workshop › inlinegalleries › 0 › images › 0 › alt,Halloween Costume Show and Pumpkin Workshop poster
+pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt,Events page › items › halloween pumpkin carving workshop › inlinegalleries › 0 › images › 1 › alt,Halloween Costume Play and Pumpkin Carving Workshop poster
 pages.events.items.halloween_pumpkin_carving_workshop.location,Events page › items › halloween pumpkin carving workshop › location,"County Hall Dance Centre, London SE1 7PB"
 pages.events.items.halloween_pumpkin_carving_workshop.title,Events page › items › halloween pumpkin carving workshop › title,Halloween Pumpkin Carving Workshop
 pages.events.items.lunchtime_concert_series.booknow.label,Events page › items › lunchtime concert series › booknow › label,Details

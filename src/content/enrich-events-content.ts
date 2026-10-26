@@ -9,26 +9,52 @@ const DANCE_MEETS_ARTS_GALLERY_IMAGES: ImageAsset[] = Array.from({ length: 16 },
   height: 682,
 }));
 
-const FOUR_SEASONS_GALLERY_ALTS = [
-  "County Hall and the London Eye beside the River Thames, framed by green leaves",
-  "Saxophone and accordion performance beside colourful sculptures at County Hall",
-  "Clay workshop during the Four Seasons Festival at County Hall",
-  "Guided tour near the South Bank Lion with Big Ben in the background",
-  "Children's creative workshop at the Four Seasons Festival",
-  "Outdoor dance and flute performance for Under the Same Sun at County Hall",
-  "Storytelling and craft workshop with author Vivian French at the festival",
-  "Flute and harp performance in the County Hall atrium",
-  "Sitar performance during Afternoon Chai at the Four Seasons Festival",
-  "Short film screening as part of Seeds of Change at County Hall",
-  "Young musician performing violin at the Four Seasons Festival",
-] as const;
-
-const FOUR_SEASONS_GALLERY: ImageAsset[] = FOUR_SEASONS_GALLERY_ALTS.map((alt, index) => ({
-  src: `/images/events/four-seasons-festival/gallery-${String(index + 1).padStart(2, "0")}.webp`,
-  alt,
-  width: index === 0 ? 1024 : 1920,
-  height: index === 0 ? 682 : 1080,
-}));
+const FOUR_SEASONS_GALLERY: ImageAsset[] = [
+  {
+    src: "/images/events/four-seasons-festival/gallery-01.jpg",
+    alt: "Concert in the County Hall atrium during the Four Seasons Festival",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-02.webp",
+    alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-03.jpg",
+    alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-04.webp",
+    alt: "Guided tour near the South Bank Lion with Big Ben in the background",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-05.jpg",
+    alt: "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-06.webp",
+    alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-07.webp",
+    alt: "Storytelling and craft workshop with author Vivian French at the festival",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-08.webp",
+    alt: "Flute and harp performance in the County Hall atrium",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-09.jpg",
+    alt: "Homemade cakes and treats served during the Four Seasons Festival",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-10.webp",
+    alt: "Short film screening as part of Seeds of Change at County Hall",
+  },
+  {
+    src: "/images/events/four-seasons-festival/gallery-11.jpg",
+    alt: "Flute, piano and cello trio performing at the Four Seasons Festival",
+  },
+];
 
 const MEMORY_OF_CHINA_GALLERY_ALTS = [
   "Chinese classical dancer on Members' Terrace with Big Ben in the background",

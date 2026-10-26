@@ -380,7 +380,7 @@ export const siteStructure = {
           "dateIso": "2026-10-25",
           "location": "@@COPY:home.events.items.four_seasons_festival.location",
           "image": {
-            "src": "/images/events/four-seasons-festival/gallery-01.webp",
+            "src": "/images/events/four-seasons-festival/gallery-01.jpg",
             "alt": "@@COPY:home.events.items.four_seasons_festival.image.alt"
           },
           "bookNow": {
@@ -390,20 +390,20 @@ export const siteStructure = {
           }
         },
         {
-          "id": "event-4",
-          "slug": "dance-meets-arts",
+          "id": "event-3",
+          "slug": "lunchtime-concert-series",
           "listingCategory": "event",
-          "title": "@@COPY:home.events.items.dance_meets_arts.title",
-          "date": "@@COPY:home.events.items.dance_meets_arts.date",
-          "dateIso": "2026-08-08",
-          "location": "@@COPY:home.events.items.dance_meets_arts.location",
+          "title": "@@COPY:home.events.items.lunchtime_concert_series.title",
+          "date": "@@COPY:home.events.items.lunchtime_concert_series.date",
+          "dateIso": "2026-09-25",
+          "location": "@@COPY:home.events.items.lunchtime_concert_series.location",
           "image": {
-            "src": "/images/events/dance-meets-arts.jpeg",
-            "alt": "@@COPY:home.events.items.dance_meets_arts.image.alt"
+            "src": "/images/events/lunchtime-concert-series.jpg",
+            "alt": "@@COPY:home.events.items.lunchtime_concert_series.image.alt"
           },
           "bookNow": {
-            "label": "@@COPY:home.events.items.dance_meets_arts.booknow.label",
-            "href": "/events/dance-meets-arts",
+            "label": "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
+            "href": "/events/lunchtime-concert-series",
             "variant": "primary"
           }
         }
@@ -1031,6 +1031,21 @@ export const siteStructure = {
             "src": "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
             "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt"
           },
+          "inlineGalleries": [
+            {
+              "beforeHeading": "Programme",
+              "images": [
+                {
+                  "src": "/images/events/2026-halloween/halloween-poster1.jpeg",
+                  "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt"
+                },
+                {
+                  "src": "/images/events/2026-halloween/halloween-poster2.jpeg",
+                  "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt"
+                }
+              ]
+            }
+          ],
           "bookNow": {
             "label": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.booknow.label",
             "href": "/contact",
@@ -1125,43 +1140,74 @@ export const siteStructure = {
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.four_seasons_festival.title",
           "date": "@@COPY:pages.events.items.four_seasons_festival.date",
-          "dateIso": "2026-10-24",
+          "dateIso": "2026-10-25",
           "location": "@@COPY:pages.events.items.four_seasons_festival.location",
           "excerpt": "@@COPY:pages.events.items.four_seasons_festival.excerpt",
           "description": [
             "@@COPY:pages.events.items.four_seasons_festival.description.0",
             "@@COPY:pages.events.items.four_seasons_festival.description.1",
             "@@COPY:pages.events.items.four_seasons_festival.description.2",
-            "@@COPY:pages.events.items.four_seasons_festival.description.3"
+            "@@COPY:pages.events.items.four_seasons_festival.description.3",
+            "@@COPY:pages.events.items.four_seasons_festival.description.4",
+            "@@COPY:pages.events.items.four_seasons_festival.description.5",
+            "@@COPY:pages.events.items.four_seasons_festival.description.6",
+            "@@COPY:pages.events.items.four_seasons_festival.description.7",
+            "@@COPY:pages.events.items.four_seasons_festival.description.8",
+            "@@COPY:pages.events.items.four_seasons_festival.description.9",
+            "@@COPY:pages.events.items.four_seasons_festival.description.10",
+            "@@COPY:pages.events.items.four_seasons_festival.description.11",
+            "@@COPY:pages.events.items.four_seasons_festival.description.12",
+            "@@COPY:pages.events.items.four_seasons_festival.description.13",
+            "@@COPY:pages.events.items.four_seasons_festival.description.14"
           ],
           "image": {
-            "src": "/images/events/four-seasons-festival/gallery-01.webp",
+            "src": "/images/events/four-seasons-festival/gallery-01.jpg",
             "alt": "@@COPY:pages.events.items.four_seasons_festival.image.alt"
           },
           "gallery": [
             {
-              "src": "/images/events/four-seasons-festival/gallery-01.webp",
+              "src": "/images/events/four-seasons-festival/gallery-01.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-02.jpg",
+              "src": "/images/events/four-seasons-festival/gallery-02.webp",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-03.jpeg",
+              "src": "/images/events/four-seasons-festival/gallery-03.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-04.png",
+              "src": "/images/events/four-seasons-festival/gallery-04.webp",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-05.webp",
+              "src": "/images/events/four-seasons-festival/gallery-05.jpg",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt"
             },
             {
-              "src": "/images/events/four-seasons-festival/gallery-06.jpg",
+              "src": "/images/events/four-seasons-festival/gallery-06.webp",
               "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-07.webp",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.6.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-08.webp",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.7.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-09.jpg",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.8.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-10.webp",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.9.alt"
+            },
+            {
+              "src": "/images/events/four-seasons-festival/gallery-11.jpg",
+              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.10.alt"
             }
           ],
           "bookNow": {
@@ -1171,7 +1217,7 @@ export const siteStructure = {
           },
           "descriptionCtas": [
             {
-              "paragraphIndex": 3,
+              "paragraphIndex": 6,
               "label": "@@COPY:pages.events.items.four_seasons_festival.descriptionctas.more_details.label",
               "href": "https://www.countyhallarts.com/stories/four-seasons-festival",
               "external": true,
