@@ -51,13 +51,18 @@ export const siteSource = {
       social: [
         {
           platform: "instagram",
-          href: "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          href: "https://www.instagram.com/countyhalldancecentre",
           label: "Instagram: @countyhalldancecentre",
         },
         {
           platform: "xiaohongshu",
-          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
           label: "Red Note (小红书)",
+        },
+        {
+          platform: "tiktok",
+          href: "https://www.tiktok.com/@county.hall.dance",
+          label: "TikTok",
         },
       ] satisfies SocialLink[],
     },
@@ -111,13 +116,18 @@ export const siteSource = {
       social: [
         {
           platform: "instagram",
-          href: "https://www.instagram.com/countyhalldancecentre?stkn=djE3bWV2Y3diZDh2&utm_source=qr",
+          href: "https://www.instagram.com/countyhalldancecentre",
           label: "Instagram: @countyhalldancecentre",
         },
         {
           platform: "xiaohongshu",
-          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b?xsec_token=ABnqo7NHdwj_6eEkv10__DULbpB1TlnQCxjKWsvZZgS7o=&xsec_source=pc_user&wechatWid=1a85d684946f292bc2817ade4bd83aeb&wechatOrigin=menu",
+          href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
           label: "Red Note (小红书)",
+        },
+        {
+          platform: "tiktok",
+          href: "https://www.tiktok.com/@county.hall.dance",
+          label: "TikTok",
         },
       ] satisfies SocialLink[],
       columns: {
@@ -279,6 +289,24 @@ export const siteSource = {
       viewAll: { label: "View all", href: "/events" },
       items: [
         {
+          id: "2026-halloween",
+          slug: "halloween-pumpkin-carving-workshop",
+          listingCategory: "workshop",
+          title: "Halloween Pumpkin Carving Workshop",
+          date: "Saturday 31 October 2026, 1:00pm – 5:00pm",
+          dateIso: "2026-10-31",
+          location: "County Hall Dance Centre",
+          image: {
+            src: "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            alt: "Halloween pumpkins and decorations",
+          },
+          bookNow: {
+            label: "Details",
+            href: "/events/halloween-pumpkin-carving-workshop",
+            variant: "primary",
+          },
+        },
+        {
           id: "event-1",
           slug: "memory-of-china",
           title: "Memory of China",
@@ -302,7 +330,7 @@ export const siteSource = {
           listingCategory: "event",
           title: "Four Seasons Festival",
           date: "Saturday 24 – Sunday 25 October 2026",
-          dateIso: "2026-10-24",
+          dateIso: "2026-10-25",
           location: "Riverside Building, County Hall",
           image: {
             src: "/images/events/four-seasons-festival/gallery-01.webp",
@@ -311,24 +339,6 @@ export const siteSource = {
           bookNow: {
             label: "Book Now",
             href: "/events/four-seasons-festival",
-            variant: "primary",
-          },
-        },
-        {
-          id: "event-3",
-          slug: "lunchtime-concert-series",
-          listingCategory: "event",
-          title: "Lunchtime Concert Series",
-          date: "Friday 25 September 2026, 1pm",
-          dateIso: "2026-09-25",
-          location: "Atrium, County Hall",
-          image: {
-            src: "/images/events/lunchtime-concert-series.jpg",
-            alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
-          },
-          bookNow: {
-            label: "Details",
-            href: "/events/lunchtime-concert-series",
             variant: "primary",
           },
         },
@@ -800,6 +810,67 @@ export const siteSource = {
       },
       items: [
         {
+          id: "2026-halloween",
+          slug: "halloween-pumpkin-carving-workshop",
+          listingCategory: "workshop",
+          title: "Halloween Pumpkin Carving Workshop",
+          date: "Saturday 31 October 2026, 1:00pm – 5:00pm",
+          dateIso: "2026-10-31",
+          location: "County Hall Dance Centre, London SE1 7PB",
+          excerpt:
+            "Get creative this Halloween with an afternoon of pumpkin carving, followed by a costume show, special awards and professional photography. Fun for all ages!",
+          description: [
+            "Join us at County Hall Dance Centre for a creative and fun-filled Halloween afternoon! Perfect for adults and children alike, our Pumpkin Carving Workshop is a chance to get into the Halloween spirit, make something of your own and enjoy a festive afternoon together.",
+
+            "The afternoon begins with a hands-on pumpkin carving workshop, where you can create your very own Jack-o'-Lantern. Later, the celebrations continue with a Halloween Costume Show, complete with special awards and a professional photographer to capture the occasion.",
+
+            "# Programme",
+
+            "13:00 — Pumpkin Carving Workshop. Carve and decorate your own Halloween pumpkin and bring your Jack-o'-Lantern to life.",
+
+            "15:00 — Halloween Costume Show. Dress up as your favourite character, show off your Halloween look and join in the fun!",
+
+            "# Costume Show & Awards",
+
+            "The costume show will feature three special awards:",
+
+            "Best Costume Award — Celebrating the most creative and impressive outfit.",
+
+            "Best Makeup Award — Recognising imaginative Halloween makeup.",
+
+            "Best Performance Award — For a standout performance during the costume show.",
+
+            "A professional photographer will be present to capture the fun and memorable moments throughout the afternoon.",
+
+            "# Tickets",
+
+            "£45 — With Costume.",
+
+            "£55 — Without Costume.",
+
+            "# Event Details",
+
+            "Date: Saturday 31 October 2026.",
+
+            "Time: 1:00pm–5:00pm.",
+
+            "Venue: County Hall Dance Centre, London SE1 7PB.",
+
+            "Suitable for adults and children.",
+
+            "For booking enquiries and further information, please contact info@countyhalldancecentre.com.",
+          ],
+          image: {
+            src: "/images/events/2026-halloween/pexels-karola-g-5422738.jpg",
+            alt: "Halloween pumpkins and decorations",
+          },
+          bookNow: {
+            label: "Enquire Now",
+            href: "/contact",
+            variant: "primary",
+          },
+        },
+        {
           id: "event-1",
           slug: "memory-of-china",
           listingCategory: "event",
@@ -891,102 +962,31 @@ export const siteSource = {
           dateIso: "2026-10-24",
           location: "Riverside Building, County Hall",
           excerpt:
-            "As The Leaves Turn — a Four Seasons Festival weekend at County Hall, 24–25 October 2026, with folk music, dance, workshops, concerts and film.",
+            "Discover the Four Seasons Festival at County Hall, a seasonal celebration of music, dance, visual arts, film, performances and creative workshops, bringing artists and audiences together through inspiring cultural experiences.",
           description: [
-            "# A Four Seasons Festival",
-            "As The Leaves Turn is the latest edition of the Four Seasons Festival. Over the weekend of Saturday 24th and Sunday 25th October, the festival will celebrate autumn as a season of change and transformation.",
-            "Following the energy and optimism of Under the Same Sun, this next stage of the journey recognises what has flourished, celebrates what has been achieved, and embraces the changes that prepare us for a new beginning.",
-            "Highlights across the weekend include a lively opening celebration of folk music and Irish dance at the County Hall Dance Centre, the Young Leaves concert showcasing a new generation of musicians, and evening performances selected through the festival's Open Call, bringing fresh interpretations of folk, tradition and transformation to the Atrium.",
-            "# Saturday, 24th October 2026",
-            "11:00–12:00 — Folk Performance and Opening Celebration. A storytelling folk music show by Tog Faire, featuring Gaelic, English and Scottish traditions, with Irish dancers from Jig and a Swig. Welcome breakfast with tea and coffee in the County Hall Dance Centre.",
-            "14:00–15:30 — Art and Craft and Movement Workshop for Children. Make paper autumn leaves in a one-hour craft workshop, followed by 30 minutes of movement and drama.",
-            "16:00–17:30 — Dance Open Class. Tai Chi, Contemporary dance and Chinese dance taster classes with County Hall Dance Centre.",
-            "18:00–19:00 — Evening Concert. A live music performance to round off the day in County Hall's Atrium.",
-            "# Sunday, 25th October 2026",
-            "11:00–12:00 — Folk Music Performance. A lively concert in the Atrium by Loom duo, drawing on folk and early music traditions.",
-            "13:00–14:00 — Young Leaves Concert. A classical music showcase featuring young musicians in solo performances.",
-            "15:00–17:00 — Autumn Leaf Pressing Clay Workshop. Press real autumn leaves and botanical materials into clay to create unique patterns, textures and forms in this beginner-friendly handbuilding workshop.",
-            "18:00–19:00 — Evening Concert. A live performance in the Atrium to round off the day.",
-            "19:30–20:30 — Short Film Screening. A curated screening of short films exploring autumn as a season of memory and transformation, followed by a Q&A.",
-            "# Booking information",
-            "Most festival events are free but require advance booking via Eventbrite due to limited capacity. The Dance Open Class and Autumn Leaf Pressing Clay Workshop are paid events.",
-            "# Finding us",
-            "Attendees should enter County Hall via the main entrance on Belvedere Road. For full information on how to get here, see our contact page to plan your visit.",
-            "Events take place in the County Hall Dance Centre, Atrium, Cinema Room and Glaze Room in the Kiln Courtyard, as indicated in the programme. For each event, follow the directions shared in your booking confirmation and signs at County Hall on the day.",
-            "The workshops are open to all ages. Children under 16 must be accompanied by a parent or guardian. If you have any questions, please contact us at festival@countyhallarts.com.",
+            "# Four Seasons Festival",
+
+            "The Four Seasons Festival is a seasonal multidisciplinary arts programme at County Hall, bringing together music, visual arts, film, dance, performance, storytelling, creative workshops and hands-on experiences.",
+
+            "Each edition explores a different seasonal theme, creating opportunities for audiences to discover the arts in unexpected combinations, connect with artists and take part in creative experiences.",
+
+            "Set within the historic County Hall, the festival makes use of the building's distinctive architecture and diverse spaces, from intimate performances and film screenings to interactive workshops and collaborative projects. Through each season, the festival invites visitors to experience art, culture and County Hall in new ways.",
           ],
           image: {
             src: "/images/events/four-seasons-festival/gallery-01.webp",
             alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
           },
           gallery: [
-            {
-              src: "/images/events/four-seasons-festival/gallery-01.webp",
-              alt: "County Hall and the London Eye beside the River Thames, framed by green leaves",
-              width: 1024,
-              height: 682,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-02.webp",
-              alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-03.webp",
-              alt: "Clay workshop during the Four Seasons Festival at County Hall",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-04.webp",
-              alt: "Guided tour near the South Bank Lion with Big Ben in the background",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-05.webp",
-              alt: "Children's creative workshop at the Four Seasons Festival",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-06.webp",
-              alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-07.webp",
-              alt: "Storytelling and craft workshop with author Vivian French at the festival",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-08.webp",
-              alt: "Flute and harp performance in the County Hall atrium",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-09.webp",
-              alt: "Sitar performance during Afternoon Chai at the Four Seasons Festival",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-10.webp",
-              alt: "Short film screening as part of Seeds of Change at County Hall",
-              width: 1920,
-              height: 1080,
-            },
-            {
-              src: "/images/events/four-seasons-festival/gallery-11.webp",
-              alt: "Young musician performing violin at the Four Seasons Festival",
-              width: 1920,
-              height: 1080,
-            },
-          ],
+            "webp",
+            "jpg",
+            "jpeg",
+            "png",
+            "webp",
+            "jpg",
+          ].map((ext, index) => ({
+            src: `/images/events/four-seasons-festival/gallery-${String(index + 1).padStart(2, "0")}.${ext}`,
+            alt: `Four Seasons Festival at County Hall — photo ${index + 1}`,
+          })),
           bookNow: {
             label: "Book Now",
             href: "/events/four-seasons-festival",
@@ -994,65 +994,9 @@ export const siteSource = {
           },
           descriptionCtas: [
             {
-              paragraphIndex: 5,
-              label: "Free tickets",
-              href: "https://www.eventbrite.co.uk/e/folk-music-irish-dance-opening-celebration-as-the-leaves-turn-tickets-2001253258368",
-              external: true,
-              variant: "primary",
-            },
-            {
-              paragraphIndex: 6,
-              label: "Free tickets",
-              href: "https://www.eventbrite.co.uk/e/2002798792101",
-              external: true,
-              variant: "primary",
-            },
-            {
-              paragraphIndex: 7,
-              label: "Coming soon",
-              href: "#",
-              inactive: true,
-              variant: "secondary",
-            },
-            {
-              paragraphIndex: 8,
-              label: "Coming soon",
-              href: "#",
-              inactive: true,
-              variant: "secondary",
-            },
-            {
-              paragraphIndex: 10,
-              label: "Free tickets",
-              href: "https://www.eventbrite.co.uk/e/2002800613549",
-              external: true,
-              variant: "primary",
-            },
-            {
-              paragraphIndex: 11,
-              label: "Free tickets",
-              href: "https://www.eventbrite.co.uk/e/young-leaves-classical-concert-as-the-leaves-turn-tickets-2002382589227",
-              external: true,
-              variant: "primary",
-            },
-            {
-              paragraphIndex: 12,
-              label: "Book tickets",
-              href: "https://countyhallpottery.com/product/clay-flowers-workshop-with-county-hall-arts-resident-artist-yasemin-gava/",
-              external: true,
-              variant: "primary",
-            },
-            {
-              paragraphIndex: 13,
-              label: "Coming soon",
-              href: "#",
-              inactive: true,
-              variant: "secondary",
-            },
-            {
-              paragraphIndex: 14,
-              label: "Free tickets",
-              href: "https://www.eventbrite.co.uk/e/short-film-screening-as-the-leaves-turn-tickets-2002426861647",
+              paragraphIndex: 3,
+              label: "More Details",
+              href: "https://www.countyhallarts.com/stories/four-seasons-festival",
               external: true,
               variant: "primary",
             },
