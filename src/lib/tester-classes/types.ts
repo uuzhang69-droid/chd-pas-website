@@ -15,6 +15,8 @@ export type TesterClass = {
   startTime: string;
   endTime: string;
   dateRange: string;
+  /** Exact date for a single lesson; never infer it from a marketing date range. */
+  sessionDate?: string;
   ageGroup: string;
   location: string;
   price: number;
