@@ -32,6 +32,21 @@
   box-shadow: 0 6px 25px rgba(90, 31, 43, 0.027);
 }
 
+.calendar-month-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.calendar-month-year {
+    color: #888;
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
 /* ---------- Toolbar ---------- */
 .class-calendar-section .calendar-toolbar {
   display: flex;
@@ -266,14 +281,61 @@
   align-self: center;
 }
 
-@media (max-width: 1200px) {
+/* ---------- Responsive calendar ---------- */
+
+.class-calendar-section,
+.class-calendar-section .calendar-panel,
+.class-calendar-section .calendar-grid {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.class-calendar-section .calendar-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  overflow-x: visible;
+}
+
+.class-calendar-section .calendar-day,
+.class-calendar-section .session-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.class-calendar-section .session-card {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 1200px) and (min-width: 701px) {
   .class-calendar-section .calendar-grid {
-    overflow-x: auto;
-    grid-template-columns: repeat(7, minmax(150px, 1fr));
+    padding: 0 8px 12px;
   }
-  .class-calendar-section .calendar-grid.list-layout,
-  .class-calendar-section .calendar-grid.one-day {
-    grid-template-columns: 1fr;
+
+  .class-calendar-section .calendar-day {
+    padding-inline: 4px;
+  }
+
+  .class-calendar-section .session-card {
+    padding: 9px 6px;
+    gap: 5px;
+  }
+
+  .class-calendar-section .session-card strong {
+    font-size: clamp(11px, 1vw, 14px);
+    line-height: 1.35;
+  }
+
+  .class-calendar-section .session-time,
+  .class-calendar-section .session-kind,
+  .class-calendar-section .session-action {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .class-calendar-section .calendar-day h3 {
+    font-size: 12px;
   }
 }
 
@@ -474,6 +536,10 @@
     width: 100%;
     white-space: normal;
     line-height: 1.5;
+  }
+  .class-calendar-section .calendar-grid.list-layout,
+  .class-calendar-section .calendar-grid.one-day {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 /* ---------- Month view and period navigation ---------- */
