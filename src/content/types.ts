@@ -1,39 +1,39 @@
 /** Shared content types — structured for future CMS swap (Airtable/Sanity). */
 
 export type Link = {
-  label: string;
-  href: string;
-  external?: boolean;
+    label: string;
+    href: string;
+    external?: boolean;
 };
 
 export type ImageAsset = {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
 };
 
 export type CtaButton = {
-  label: string;
-  href: string;
-  variant?: "primary" | "secondary" | "text";
-  external?: boolean;
+    label: string;
+    href: string;
+    variant?: "primary" | "secondary" | "text";
+    external?: boolean;
 };
 
 export type HeroSlide = {
-  id: string;
-  headline: string;
-  blurb: string;
-  cta: CtaButton;
-  image: ImageAsset;
-  videoSrc?: string;
+    id: string;
+    headline: string;
+    blurb: string;
+    cta: CtaButton;
+    image: ImageAsset;
+    videoSrc?: string;
 };
 
 export type EventDescriptionCta = CtaButton & {
-  /** Index in `description` — CTA is shown directly after that paragraph. */
-  paragraphIndex: number;
-  /** Non-link state (e.g. Coming soon). */
-  inactive?: boolean;
+    /** Index in `description` — CTA is shown directly after that paragraph. */
+    paragraphIndex: number;
+    /** Non-link state (e.g. Coming soon). */
+    inactive?: boolean;
 };
 
 export type EventListingCategory = "event" | "workshop" | "masterclass";
@@ -41,224 +41,228 @@ export type EventListingCategory = "event" | "workshop" | "masterclass";
 export type EventRelationship = "organised" | "collaboration" | "hosted";
 
 export type EventAttribution = {
-  relationship?: EventRelationship;
-  organiser?: string;
-  partners?: string[];
-  hostedAt?: string;
-  promotedBy?: string;
+    relationship?: EventRelationship;
+    organiser?: string;
+    partners?: string[];
+    hostedAt?: string;
+    promotedBy?: string;
 };
 
 export type ActivityType = "class" | "workshop" | "event";
 
 /** Local date and wall-clock times in Europe/London. Missing times never imply availability. */
 export type EventSession = EventAttribution & {
-  id: string;
-  eventSlug: string;
-  title: string;
-  date?: string;
-  start?: string;
-  end?: string;
-  venueId?: string;
-  spaceId?: string;
-  type: ActivityType;
-  subtype?: string;
-  style?: string;
-  venueBooking?: boolean;
-  published?: boolean;
-  cancelled?: boolean;
-  private?: boolean;
-  bookingUrl?: string;
-  setupStart?: string;
-  teardownEnd?: string;
-  description?: string[];
+    id: string;
+    eventSlug: string;
+    title: string;
+    date?: string;
+    start?: string;
+    end?: string;
+    /** Only when explicitly confirmed; unknown times are not all-day events. */
+    allDay?: boolean;
+    venueId?: string;
+    spaceId?: string;
+    type: ActivityType;
+    subtype?: string;
+    style?: string;
+    venueBooking?: boolean;
+    /** Explicit public calendar inclusion/exclusion; never overrides privacy or cancellation. */
+    calendarVisible?: boolean;
+    published?: boolean;
+    cancelled?: boolean;
+    private?: boolean;
+    bookingUrl?: string;
+    setupStart?: string;
+    teardownEnd?: string;
+    description?: string[];
 };
 
 export type EventCard = {
-  id: string;
-  slug: string;
-  /** Listing filter on /events — defaults to event when omitted. */
-  listingCategory?: EventListingCategory;
-  relationship?: EventRelationship;
-  organiser?: string;
-  partners?: string[];
-  hostedAt?: string;
-  /** Promotion alone does not imply hosting or co-organisation. */
-  promotedBy?: string;
-  sessions?: EventSession[];
-  title: string;
-  date: string;
-  dateIso?: string;
-  location?: string;
-  image: ImageAsset;
-  bookNow: CtaButton;
-  tickets?: CtaButton[];
-  descriptionCtas?: EventDescriptionCta[];
-  excerpt?: string;
-  description?: string[];
-  gallery?: ImageAsset[];
-  inlineGalleries?: {
-    beforeHeading: string;
-    images: ImageAsset[];
-    variant?: "grid" | "autoplay";
-  }[];
+    id: string;
+    slug: string;
+    /** Listing filter on /events — defaults to event when omitted. */
+    listingCategory?: EventListingCategory;
+    relationship?: EventRelationship;
+    organiser?: string;
+    partners?: string[];
+    hostedAt?: string;
+    /** Promotion alone does not imply hosting or co-organisation. */
+    promotedBy?: string;
+    sessions?: EventSession[];
+    title: string;
+    date: string;
+    dateIso?: string;
+    location?: string;
+    image: ImageAsset;
+    bookNow: CtaButton;
+    tickets?: CtaButton[];
+    descriptionCtas?: EventDescriptionCta[];
+    excerpt?: string;
+    description?: string[];
+    gallery?: ImageAsset[];
+    inlineGalleries?: {
+        beforeHeading: string;
+        images: ImageAsset[];
+        variant?: "grid" | "autoplay";
+    }[];
 };
 
 export type ClassStyleTile = {
-  id: string;
-  name: string;
-  slug: string;
-  image: ImageAsset;
-  href: string;
+    id: string;
+    name: string;
+    slug: string;
+    image: ImageAsset;
+    href: string;
 };
 
 export type ClassInstructor = {
-  name: string;
-  role?: string;
-  bio: string;
-  image: ImageAsset;
+    name: string;
+    role?: string;
+    bio: string;
+    image: ImageAsset;
 };
 
 export type ClassStylePage = {
-  slug: string;
-  name: string;
-  metaDescription: string;
-  hero: {
-    overline: string;
-    title: string;
-    subtitle: string;
-    image: ImageAsset;
-  };
-  instructor: ClassInstructor;
-  intro: string[];
-  highlights: Array<{ title: string; description: string }>;
-  ageGroups: Array<{ label: string; description: string }>;
-  cta: CtaButton;
+    slug: string;
+    name: string;
+    metaDescription: string;
+    hero: {
+        overline: string;
+        title: string;
+        subtitle: string;
+        image: ImageAsset;
+    };
+    instructor: ClassInstructor;
+    intro: string[];
+    highlights: Array<{ title: string; description: string }>;
+    ageGroups: Array<{ label: string; description: string }>;
+    cta: CtaButton;
 };
 
 export type ClassStyleCard = {
-  id: string;
-  name: string;
-  slug: string;
-  href: string;
-  image: ImageAsset;
-  excerpt: string;
+    id: string;
+    name: string;
+    slug: string;
+    href: string;
+    image: ImageAsset;
+    excerpt: string;
 };
 
 export type CourseSummary = {
-  id: string;
-  slug: string;
-  title: string;
-  term: string;
-  level: string;
-  excerpt: string;
-  image: ImageAsset;
-  href: string;
+    id: string;
+    slug: string;
+    title: string;
+    term: string;
+    level: string;
+    excerpt: string;
+    image: ImageAsset;
+    href: string;
 };
 
 export type CourseDetail = CourseSummary & {
-  metaDescription: string;
-  duration: string;
-  schedule: string;
-  price: string;
-  description: string[];
-  includes: string[];
-  cta: CtaButton;
+    metaDescription: string;
+    duration: string;
+    schedule: string;
+    price: string;
+    description: string[];
+    includes: string[];
+    cta: CtaButton;
 };
 
 export type FaqItem = {
-  id: string;
-  question: string;
-  answer: string;
+    id: string;
+    question: string;
+    answer: string;
 };
 
 export type FormField = {
-  name: string;
-  label: string;
-  type: "text" | "email" | "tel" | "textarea" | "select";
-  placeholder?: string;
-  required?: boolean;
-  options?: Array<{ label: string; value: string }>;
+    name: string;
+    label: string;
+    type: "text" | "email" | "tel" | "textarea" | "select";
+    placeholder?: string;
+    required?: boolean;
+    options?: Array<{ label: string; value: string }>;
 };
 
 export type FacultyMember = {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: ImageAsset;
+    id: string;
+    name: string;
+    role: string;
+    bio: string;
+    image: ImageAsset;
 };
 
 export type GiftCardOption = {
-  id: string;
-  title: string;
-  amount: string;
-  description: string;
-  cta: CtaButton;
+    id: string;
+    title: string;
+    amount: string;
+    description: string;
+    cta: CtaButton;
 };
 
 export type PageHeroContent = {
-  overline?: string;
-  title: string;
-  subtitle?: string;
-  image?: ImageAsset;
+    overline?: string;
+    title: string;
+    subtitle?: string;
+    image?: ImageAsset;
 };
 
 export type SectionedPageSection = {
-  id: string;
-  title: string;
-  body?: string;
-  gallery?: readonly ImageAsset[];
-  cta?: CtaButton;
-  /** When set, overrides default alternating layout (even = text left, odd = gallery left). */
-  galleryPosition?: "left" | "right";
+    id: string;
+    title: string;
+    body?: string;
+    gallery?: readonly ImageAsset[];
+    cta?: CtaButton;
+    /** When set, overrides default alternating layout (even = text left, odd = gallery left). */
+    galleryPosition?: "left" | "right";
 };
 
 export type NumberedStep = {
-  title: string;
-  body: string;
+    title: string;
+    body: string;
 };
 
 export type PageCtaBlock = {
-  title: string;
-  body: string;
-  button: CtaButton;
-  secondary?: string;
+    title: string;
+    body: string;
+    button: CtaButton;
+    secondary?: string;
 };
 
 export type SectionedPageContent = {
-  slug?: string;
-  meta: {
-    title: string;
-    description: string;
-  };
-  hero: PageHeroContent;
-  intro?: string;
-  /** Optional autoplay image gallery shown below the intro. */
-  gallery?: readonly ImageAsset[];
-  galleryLabel?: string;
-  sections: SectionedPageSection[];
+    slug?: string;
+    meta: {
+        title: string;
+        description: string;
+    };
+    hero: PageHeroContent;
+    intro?: string;
+    /** Optional autoplay image gallery shown below the intro. */
+    gallery?: readonly ImageAsset[];
+    galleryLabel?: string;
+    sections: SectionedPageSection[];
 };
 
 export type NavItem = {
-  label: string;
-  href: string;
-  /** When true, the parent label is a link as well as opening the submenu. Default: not clickable. */
-  parentLink?: boolean;
-  children?: Link[];
+    label: string;
+    href: string;
+    /** When true, the parent label is a link as well as opening the submenu. Default: not clickable. */
+    parentLink?: boolean;
+    children?: Link[];
 };
 
 export type SocialLink = {
-  platform: string;
-  href: string;
-  label: string;
+    platform: string;
+    href: string;
+    label: string;
 };
 
 export type BookingEmbed = {
-  title: string;
-  description: string;
-  placeholderLabel: string;
-  placeholderHint: string;
-  providerNote: string;
-  embedScriptUrl?: string;
-  image?: ImageAsset;
+    title: string;
+    description: string;
+    placeholderLabel: string;
+    placeholderHint: string;
+    providerNote: string;
+    embedScriptUrl?: string;
+    image?: ImageAsset;
 };

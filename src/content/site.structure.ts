@@ -1,2800 +1,3070 @@
 /** Auto-generated structure — non-text fields and copy references. Regenerate via: npm run content:export */
 
 export const siteStructure = {
-  "meta": {
-    "siteName": "@@COPY:meta.sitename",
-    "shortName": "@@COPY:meta.shortname",
-    "defaultDescription": "@@COPY:meta.defaultdescription"
-  },
-  "global": {
-    "logo": {
-      "src": "/logo.png",
-      "headerSrc": "/header-logo-clear.png",
-      "footerSrc": "/header-logo-clear.png",
-      "alt": "@@COPY:global.logo.alt",
-      "minHeight": 105,
-      "nameLine1": "@@COPY:global.logo.nameline1",
-      "nameLine2": "@@COPY:global.logo.nameline2"
+    meta: {
+        siteName: "@@COPY:meta.sitename",
+        shortName: "@@COPY:meta.shortname",
+        defaultDescription: "@@COPY:meta.defaultdescription",
     },
-    "utilityBar": {
-      "phone": {
-        "label": "@@COPY:global.utilitybar.phone.label",
-        "href": "tel:+447728617531"
-      },
-      "email": {
-        "label": "@@COPY:global.utilitybar.email.label",
-        "href": "mailto:info@countyhalldancecentre.com"
-      },
-      "findUs": {
-        "label": "@@COPY:global.utilitybar.findus.label",
-        "href": "https://share.google/7weL1s5w3ItPjJyAZ",
-        "external": true
-      },
-      "social": [
-        {
-          "platform": "instagram",
-          "href": "https://www.instagram.com/countyhalldancecentre",
-          "label": "@@COPY:global.utilitybar.social.instagram.label"
+    global: {
+        logo: {
+            src: "/logo.png",
+            headerSrc: "/header-logo-clear.png",
+            footerSrc: "/header-logo-clear.png",
+            alt: "@@COPY:global.logo.alt",
+            minHeight: 105,
+            nameLine1: "@@COPY:global.logo.nameline1",
+            nameLine2: "@@COPY:global.logo.nameline2",
         },
-        {
-          "platform": "xiaohongshu",
-          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
-          "label": "@@COPY:global.utilitybar.social.xiaohongshu.label"
-        },
-        {
-          "platform": "tiktok",
-          "href": "https://www.tiktok.com/@county.hall.dance",
-          "label": "@@COPY:global.utilitybar.social.tiktok.label"
-        }
-      ]
-    },
-    "navigation": {
-      "items": [
-        {
-          "label": "@@COPY:global.navigation.items.timetable.label",
-          "href": "/timetable"
-        },
-        {
-          "label": "@@COPY:global.navigation.items.classes.label",
-          "href": "/classes",
-          "parentLink": false,
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.classes.children.class_descriptions_instructors.label",
-              "href": "/classes-info"
+        utilityBar: {
+            phone: {
+                label: "@@COPY:global.utilitybar.phone.label",
+                href: "tel:+447728617531",
             },
-            {
-              "label": "@@COPY:global.navigation.items.classes.children.private_lessons.label",
-              "href": "/private-lessons"
-            }
-          ]
-        },
-        {
-          "label": "@@COPY:global.navigation.items.membership.label",
-          "href": "/membership"
-        },
-        {
-          "label": "@@COPY:global.navigation.items.what_s_on.label",
-          "href": "/events"
-        },
-        {
-          "label": "@@COPY:global.navigation.items.venue_hire.label",
-          "href": "/venue-hire",
-          "parentLink": false,
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.venue_hire.children.space_hire.label",
-              "href": "/venue-hire"
+            email: {
+                label: "@@COPY:global.utilitybar.email.label",
+                href: "mailto:info@countyhalldancecentre.com",
             },
-            {
-              "label": "@@COPY:global.navigation.items.venue_hire.children.space_booking.label",
-              "href": "/booking"
-            }
-          ]
-        },
-        {
-          "label": "@@COPY:global.navigation.items.about.label",
-          "href": "/about",
-          "parentLink": false,
-          "children": [
-            {
-              "label": "@@COPY:global.navigation.items.about.children.about_us.label",
-              "href": "/about"
+            findUs: {
+                label: "@@COPY:global.utilitybar.findus.label",
+                href: "https://share.google/7weL1s5w3ItPjJyAZ",
+                external: true,
             },
-            {
-              "label": "@@COPY:global.navigation.items.about.children.contact.label",
-              "href": "/contact"
-            }
-          ]
-        }
-      ],
-      "bookTrial": {
-        "label": "@@COPY:global.navigation.booktrial.label",
-        "href": "/timetable",
-        "variant": "primary"
-      },
-      "search": {
-        "label": "@@COPY:global.navigation.search.label",
-        "placeholder": "@@COPY:global.navigation.search.placeholder",
-        "action": "/search"
-      }
-    },
-    "footer": {
-      "intro": "@@COPY:global.footer.intro",
-      "social": [
-        {
-          "platform": "instagram",
-          "href": "https://www.instagram.com/countyhalldancecentre",
-          "label": "@@COPY:global.footer.social.instagram.label"
-        },
-        {
-          "platform": "xiaohongshu",
-          "href": "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
-          "label": "@@COPY:global.footer.social.xiaohongshu.label"
-        },
-        {
-          "platform": "tiktok",
-          "href": "https://www.tiktok.com/@county.hall.dance",
-          "label": "@@COPY:global.footer.social.tiktok.label"
-        }
-      ],
-      "columns": {
-        "explore": {
-          "title": "@@COPY:global.footer.columns.explore.title",
-          "links": [
-            {
-              "label": "@@COPY:global.footer.columns.explore.links.classes.label",
-              "href": "/timetable"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.explore.links.courses.label",
-              "href": "/courses"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.explore.links.what_s_on.label",
-              "href": "/events"
-            }
-          ]
-        },
-        "school": {
-          "title": "@@COPY:global.footer.columns.school.title",
-          "links": [
-            {
-              "label": "@@COPY:global.footer.columns.school.links.about_us.label",
-              "href": "/about"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.school.links.private_events.label",
-              "href": "/private-events"
-            },
-            {
-              "label": "@@COPY:global.footer.columns.school.links.careers.label",
-              "href": "/careers"
-            }
-          ]
-        }
-      },
-      "contact": {
-        "title": "@@COPY:global.footer.contact.title",
-        "address": [
-          "@@COPY:global.footer.contact.address.0",
-          "@@COPY:global.footer.contact.address.1",
-          "@@COPY:global.footer.contact.address.2"
-        ],
-        "phone": "@@COPY:global.footer.contact.phone",
-        "wechat": "@@COPY:global.footer.contact.wechat",
-        "email": "@@COPY:global.footer.contact.email"
-      },
-      "newsletter": {
-        "title": "@@COPY:global.footer.newsletter.title",
-        "description": "@@COPY:global.footer.newsletter.description",
-        "placeholder": "@@COPY:global.footer.newsletter.placeholder",
-        "submitLabel": "@@COPY:global.footer.newsletter.submitlabel",
-        "privacyNote": "We respect your privacy. Unsubscribe anytime."
-      },
-      "legal": [
-        {
-          "label": "@@COPY:global.footer.legal.privacy_policy.label",
-          "href": "/privacy"
-        },
-        {
-          "label": "@@COPY:global.footer.legal.terms_conditions.label",
-          "href": "/terms"
-        },
-        {
-          "label": "@@COPY:global.footer.legal.safeguarding.label",
-          "href": "/safeguarding"
-        },
-        {
-          "label": "@@COPY:global.footer.legal.cookie_policy.label",
-          "href": "/cookies"
-        }
-      ],
-      "copyright": "@@COPY:global.footer.copyright"
-    }
-  },
-  "home": {
-    "hero": {
-      "autoplayIntervalMs": 7000,
-      "previousLabel": "@@COPY:home.hero.previouslabel",
-      "nextLabel": "@@COPY:home.hero.nextlabel",
-      "slides": [
-        {
-          "id": "hero-intro",
-          "headline": "@@COPY:home.hero.slides.hero_intro.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_intro.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_intro.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-1-performance.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_intro.image.alt"
-          }
-        },
-        {
-          "id": "hero-classes",
-          "headline": "@@COPY:home.hero.slides.hero_classes.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_classes.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_classes.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-2.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_classes.image.alt"
-          }
-        },
-        {
-          "id": "hero-events",
-          "headline": "@@COPY:home.hero.slides.hero_events.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_events.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_events.cta.label",
-            "href": "/events",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-3.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_events.image.alt"
-          }
-        },
-        {
-          "id": "hero-private-lessons",
-          "headline": "@@COPY:home.hero.slides.hero_private_lessons.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_private_lessons.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_private_lessons.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-4.png",
-            "alt": "@@COPY:home.hero.slides.hero_private_lessons.image.alt"
-          }
-        },
-        {
-          "id": "hero-venue-hire",
-          "headline": "@@COPY:home.hero.slides.hero_venue_hire.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_venue_hire.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_venue_hire.cta.label",
-            "href": "/venue-hire",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-5-venue.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_venue_hire.image.alt"
-          }
-        },
-        {
-          "id": "hero-membership",
-          "headline": "@@COPY:home.hero.slides.hero_membership.headline",
-          "blurb": "@@COPY:home.hero.slides.hero_membership.blurb",
-          "cta": {
-            "label": "@@COPY:home.hero.slides.hero_membership.cta.label",
-            "href": "/contact?subject=membership",
-            "variant": "primary"
-          },
-          "image": {
-            "src": "/images/hero/slide-6.jpg",
-            "alt": "@@COPY:home.hero.slides.hero_membership.image.alt"
-          }
-        }
-      ]
-    },
-    "quickActions": {
-      "overline": "@@COPY:home.quickactions.overline",
-      "linkSuffix": "@@COPY:home.quickactions.linksuffix",
-      "items": [
-        {
-          "label": "@@COPY:home.quickactions.items.book_a_class.label",
-          "href": "/timetable",
-          "description": "@@COPY:home.quickactions.items.book_a_class.description"
-        },
-        {
-          "label": "@@COPY:home.quickactions.items.book_an_event.label",
-          "href": "/events",
-          "description": "@@COPY:home.quickactions.items.book_an_event.description"
-        },
-        {
-          "label": "@@COPY:home.quickactions.items.join_now.label",
-          "href": "/membership",
-          "description": "@@COPY:home.quickactions.items.join_now.description"
-        }
-      ]
-    },
-    "events": {
-      "overline": "@@COPY:home.events.overline",
-      "title": "@@COPY:home.events.title",
-      "subtitle": "@@COPY:home.events.subtitle",
-      "viewAll": {
-        "label": "@@COPY:home.events.viewall.label",
-        "href": "/events"
-      },
-      "items": [
-        {
-          "id": "2026-halloween",
-          "slug": "halloween-pumpkin-carving-workshop",
-          "listingCategory": "workshop",
-          "title": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.title",
-          "date": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.date",
-          "dateIso": "2026-10-31",
-          "location": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.location",
-          "image": {
-            "src": "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
-            "alt": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.booknow.label",
-            "href": "/events/halloween-pumpkin-carving-workshop",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "event-1",
-          "slug": "memory-of-china",
-          "title": "@@COPY:home.events.items.memory_of_china.title",
-          "date": "@@COPY:home.events.items.memory_of_china.date",
-          "dateIso": "2026-10-04",
-          "location": "@@COPY:home.events.items.memory_of_china.location",
-          "image": {
-            "src": "/images/events/memory-of-china/gallery-09.jpg",
-            "alt": "@@COPY:home.events.items.memory_of_china.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:home.events.items.memory_of_china.booknow.label",
-            "href": "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
-            "external": true,
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "event-2",
-          "slug": "four-seasons-festival",
-          "listingCategory": "event",
-          "title": "@@COPY:home.events.items.four_seasons_festival.title",
-          "date": "@@COPY:home.events.items.four_seasons_festival.date",
-          "dateIso": "2026-10-25",
-          "location": "@@COPY:home.events.items.four_seasons_festival.location",
-          "image": {
-            "src": "/images/events/four-seasons-festival/gallery-01.jpg",
-            "alt": "@@COPY:home.events.items.four_seasons_festival.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:home.events.items.four_seasons_festival.booknow.label",
-            "href": "/events/four-seasons-festival",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "event-3",
-          "slug": "lunchtime-concert-series",
-          "listingCategory": "event",
-          "title": "@@COPY:home.events.items.lunchtime_concert_series.title",
-          "date": "@@COPY:home.events.items.lunchtime_concert_series.date",
-          "dateIso": "2026-10-23",
-          "image": {
-            "src": "/images/events/lunchtime-concert-series.jpg",
-            "alt": "@@COPY:home.events.items.lunchtime_concert_series.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
-            "href": "/events/lunchtime-concert-series",
-            "variant": "primary"
-          }
-        }
-      ]
-    },
-    "classStyles": {
-      "overline": "@@COPY:home.classstyles.overline",
-      "title": "@@COPY:home.classstyles.title",
-      "items": [
-        {
-          "id": "style-contemporary",
-          "name": "@@COPY:home.classstyles.items.contemporary.name",
-          "slug": "contemporary",
-          "href": "/classes/contemporary",
-          "image": {
-            "src": "/images/styles/contemporary.jpeg",
-            "alt": "@@COPY:home.classstyles.items.contemporary.image.alt"
-          }
-        },
-        {
-          "id": "style-chinese-dance",
-          "name": "@@COPY:home.classstyles.items.chinese_dance.name",
-          "slug": "chinese-dance",
-          "href": "/classes/chinese-dance",
-          "image": {
-            "src": "/images/styles/chinese-dance.jpeg",
-            "alt": "@@COPY:home.classstyles.items.chinese_dance.image.alt"
-          }
-        },
-        {
-          "id": "style-tango",
-          "name": "@@COPY:home.classstyles.items.tango.name",
-          "slug": "tango",
-          "href": "/classes/tango",
-          "image": {
-            "src": "/images/styles/tango.jpeg",
-            "alt": "@@COPY:home.classstyles.items.tango.image.alt"
-          }
-        },
-        {
-          "id": "style-yoga",
-          "name": "@@COPY:home.classstyles.items.yoga.name",
-          "slug": "yoga",
-          "href": "/classes/yoga",
-          "image": {
-            "src": "/images/styles/yoga.jpeg",
-            "alt": "@@COPY:home.classstyles.items.yoga.image.alt"
-          }
-        },
-        {
-          "id": "style-tai-chi",
-          "name": "@@COPY:home.classstyles.items.tai_chi.name",
-          "slug": "tai-chi",
-          "href": "/classes/tai-chi",
-          "image": {
-            "src": "/images/styles/tai-chi.jpeg",
-            "alt": "@@COPY:home.classstyles.items.tai_chi.image.alt"
-          }
-        }
-      ]
-    },
-    "aboutTeaser": {
-      "overline": "@@COPY:home.aboutteaser.overline",
-      "title": "@@COPY:home.aboutteaser.title",
-      "body": [
-        "@@COPY:home.aboutteaser.body.0",
-        "@@COPY:home.aboutteaser.body.1"
-      ],
-      "cta": {
-        "label": "@@COPY:home.aboutteaser.cta.label",
-        "href": "/about",
-        "variant": "secondary"
-      },
-      "image": {
-        "src": "/images/about/teaser.svg",
-        "alt": "@@COPY:home.aboutteaser.image.alt"
-      }
-    },
-    "newsletter": {
-      "overline": "@@COPY:home.newsletter.overline",
-      "title": "@@COPY:home.newsletter.title",
-      "description": "@@COPY:home.newsletter.description",
-      "placeholder": "@@COPY:home.newsletter.placeholder",
-      "submitLabel": "@@COPY:home.newsletter.submitlabel",
-      "socialHeading": "@@COPY:home.newsletter.socialheading"
-    }
-  },
-  "pages": {
-    "common": {
-      "viewCourseLink": "@@COPY:pages.common.viewcourselink",
-      "eventDetailsLink": "@@COPY:pages.common.eventdetailslink"
-    },
-    "timetable": {
-      "meta": {
-        "title": "@@COPY:pages.timetable.meta.title",
-        "description": "@@COPY:pages.timetable.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.timetable.hero.overline",
-        "title": "@@COPY:pages.timetable.hero.title",
-        "subtitle": "@@COPY:pages.timetable.hero.subtitle"
-      },
-      "trial": {
-        "id": "trial",
-        "overline": "@@COPY:pages.timetable.trial.overline",
-        "title": "@@COPY:pages.timetable.trial.title",
-        "body": "@@COPY:pages.timetable.trial.body",
-        "cta": {
-          "label": "@@COPY:pages.timetable.trial.cta.label",
-          "href": "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
-          "variant": "secondary",
-          "external": true
-        }
-      },
-      "booking": {
-        "title": "@@COPY:pages.timetable.booking.title",
-        "description": "@@COPY:pages.timetable.booking.description",
-        "placeholderLabel": "@@COPY:pages.timetable.booking.placeholderlabel",
-        "placeholderHint": "@@COPY:pages.timetable.booking.placeholderhint",
-        "providerNote": "@@COPY:pages.timetable.booking.providernote",
-        "image": {
-          "src": "/images/timetable/class-schedule.jpg",
-          "alt": "@@COPY:pages.timetable.booking.image.alt",
-          "width": 853,
-          "height": 1024
-        }
-      },
-      "grid": {
-        "prevWeek": "Previous week",
-        "thisWeek": "This week",
-        "nextWeek": "Next week",
-        "goToDate": "Go to date",
-        "legend": "Class styles",
-        "venueNote": "The venue can be used privately when there are no classes. Reservations are possible."
-      },
-      "newcomerNote": "@@COPY:pages.timetable.newcomernote",
-      "helpLinks": [
-        {
-          "label": "@@COPY:pages.timetable.helplinks.browse_courses.label",
-          "href": "/courses"
-        },
-        {
-          "label": "@@COPY:pages.timetable.helplinks.contact_us.label",
-          "href": "/contact"
-        }
-      ]
-    },
-    "classes": {
-      "meta": {
-        "title": "@@COPY:pages.classes.meta.title",
-        "description": "@@COPY:pages.classes.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.classes.hero.overline",
-        "title": "@@COPY:pages.classes.hero.title",
-        "subtitle": "@@COPY:pages.classes.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.classes.intro",
-      "cta": {
-        "label": "@@COPY:pages.classes.cta.label",
-        "href": "/timetable",
-        "variant": "primary"
-      },
-      "detailLabels": {
-        "ageGroups": "Who it's for",
-        "backLink": "@@COPY:pages.classes.detaillabels.backlink",
-        "instructor": "Instructor"
-      },
-      "styles": [
-        {
-          "slug": "contemporary",
-          "name": "@@COPY:pages.classes.styles.contemporary.name",
-          "metaDescription": "@@COPY:pages.classes.styles.contemporary.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.contemporary.hero.overline",
-            "title": "@@COPY:pages.classes.styles.contemporary.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.contemporary.hero.subtitle",
-            "image": {
-              "src": "/images/styles/contemporary.jpeg",
-              "alt": "@@COPY:pages.classes.styles.contemporary.hero.image.alt"
-            }
-          },
-          "instructor": {
-            "name": "@@COPY:pages.classes.styles.contemporary.instructor.name",
-            "role": "@@COPY:pages.classes.styles.contemporary.instructor.role",
-            "bio": "@@COPY:pages.classes.styles.contemporary.instructor.bio",
-            "image": {
-              "src": "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
-              "alt": "@@COPY:pages.classes.styles.contemporary.instructor.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.contemporary.intro.0",
-            "@@COPY:pages.classes.styles.contemporary.intro.1"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.contemporary.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.contemporary.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.contemporary.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.contemporary.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.contemporary.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.contemporary.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.contemporary.agegroups.adults.label",
-              "description": "@@COPY:pages.classes.styles.contemporary.agegroups.adults.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.contemporary.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "slug": "chinese-dance",
-          "name": "@@COPY:pages.classes.styles.chinese_dance.name",
-          "metaDescription": "@@COPY:pages.classes.styles.chinese_dance.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.chinese_dance.hero.overline",
-            "title": "@@COPY:pages.classes.styles.chinese_dance.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.chinese_dance.hero.subtitle",
-            "image": {
-              "src": "/images/styles/chinese-dance.jpeg",
-              "alt": "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt"
-            }
-          },
-          "instructor": {
-            "name": "@@COPY:pages.classes.styles.chinese_dance.instructor.name",
-            "role": "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
-            "bio": "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
-            "image": {
-              "src": "/images/faculty/RCDance-Lisa.jpeg",
-              "alt": "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.chinese_dance.intro.0",
-            "@@COPY:pages.classes.styles.chinese_dance.intro.1"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.chinese_dance.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.chinese_dance.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.chinese_dance.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.chinese_dance.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.chinese_dance.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.chinese_dance.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.label",
-              "description": "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.chinese_dance.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "slug": "tango",
-          "name": "@@COPY:pages.classes.styles.tango.name",
-          "metaDescription": "@@COPY:pages.classes.styles.tango.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.tango.hero.overline",
-            "title": "@@COPY:pages.classes.styles.tango.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.tango.hero.subtitle",
-            "image": {
-              "src": "/images/styles/tango.jpeg",
-              "alt": "@@COPY:pages.classes.styles.tango.hero.image.alt"
-            }
-          },
-          "instructor": {
-            "name": "@@COPY:pages.classes.styles.tango.instructor.name",
-            "role": "@@COPY:pages.classes.styles.tango.instructor.role",
-            "bio": "@@COPY:pages.classes.styles.tango.instructor.bio",
-            "image": {
-              "src": "/images/faculty/Rene.jpeg",
-              "alt": "@@COPY:pages.classes.styles.tango.instructor.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.tango.intro.0"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.tango.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.tango.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.tango.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.tango.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.tango.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.tango.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.tango.agegroups.adults.label",
-              "description": "@@COPY:pages.classes.styles.tango.agegroups.adults.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.tango.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "slug": "yoga",
-          "name": "@@COPY:pages.classes.styles.yoga.name",
-          "metaDescription": "@@COPY:pages.classes.styles.yoga.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.yoga.hero.overline",
-            "title": "@@COPY:pages.classes.styles.yoga.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.yoga.hero.subtitle",
-            "image": {
-              "src": "/images/styles/yoga.jpeg",
-              "alt": "@@COPY:pages.classes.styles.yoga.hero.image.alt"
-            }
-          },
-          "instructor": {
-            "name": "@@COPY:pages.classes.styles.yoga.instructor.name",
-            "role": "@@COPY:pages.classes.styles.yoga.instructor.role",
-            "bio": "@@COPY:pages.classes.styles.yoga.instructor.bio",
-            "image": {
-              "src": "/images/faculty/Kasen.jpeg",
-              "alt": "@@COPY:pages.classes.styles.yoga.instructor.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.yoga.intro.0"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.yoga.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.yoga.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.yoga.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.yoga.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.yoga.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.yoga.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.yoga.agegroups.adults.label",
-              "description": "@@COPY:pages.classes.styles.yoga.agegroups.adults.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.yoga.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "slug": "tai-chi",
-          "name": "@@COPY:pages.classes.styles.tai_chi.name",
-          "metaDescription": "@@COPY:pages.classes.styles.tai_chi.metadescription",
-          "hero": {
-            "overline": "@@COPY:pages.classes.styles.tai_chi.hero.overline",
-            "title": "@@COPY:pages.classes.styles.tai_chi.hero.title",
-            "subtitle": "@@COPY:pages.classes.styles.tai_chi.hero.subtitle",
-            "image": {
-              "src": "/images/styles/tai-chi.jpeg",
-              "alt": "@@COPY:pages.classes.styles.tai_chi.hero.image.alt"
-            }
-          },
-          "instructor": {
-            "name": "@@COPY:pages.classes.styles.tai_chi.instructor.name",
-            "role": "@@COPY:pages.classes.styles.tai_chi.instructor.role",
-            "bio": "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
-            "image": {
-              "src": "/images/faculty/coming.svg",
-              "alt": "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt"
-            }
-          },
-          "intro": [
-            "@@COPY:pages.classes.styles.tai_chi.intro.0"
-          ],
-          "highlights": [
-            {
-              "title": "@@COPY:pages.classes.styles.tai_chi.highlights.0.title",
-              "description": "@@COPY:pages.classes.styles.tai_chi.highlights.0.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.tai_chi.highlights.1.title",
-              "description": "@@COPY:pages.classes.styles.tai_chi.highlights.1.description"
-            },
-            {
-              "title": "@@COPY:pages.classes.styles.tai_chi.highlights.2.title",
-              "description": "@@COPY:pages.classes.styles.tai_chi.highlights.2.description"
-            }
-          ],
-          "ageGroups": [
-            {
-              "label": "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.label",
-              "description": "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.description"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.classes.styles.tai_chi.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        }
-      ]
-    },
-    "courses": {
-      "meta": {
-        "title": "@@COPY:pages.courses.meta.title",
-        "description": "@@COPY:pages.courses.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.courses.hero.overline",
-        "title": "@@COPY:pages.courses.hero.title",
-        "subtitle": "@@COPY:pages.courses.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.courses.intro",
-      "detailLabels": {
-        "duration": "@@COPY:pages.courses.detaillabels.duration",
-        "schedule": "@@COPY:pages.courses.detaillabels.schedule",
-        "price": "@@COPY:pages.courses.detaillabels.price",
-        "includes": "What's included",
-        "backLink": "@@COPY:pages.courses.detaillabels.backlink"
-      },
-      "items": [
-        {
-          "id": "course-1",
-          "slug": "junior-ballet-foundation",
-          "title": "@@COPY:pages.courses.items.junior_ballet_foundation.title",
-          "term": "@@COPY:pages.courses.items.junior_ballet_foundation.term",
-          "level": "@@COPY:pages.courses.items.junior_ballet_foundation.level",
-          "excerpt": "@@COPY:pages.courses.items.junior_ballet_foundation.excerpt",
-          "image": {
-            "src": "/images/courses/junior-ballet.svg",
-            "alt": "@@COPY:pages.courses.items.junior_ballet_foundation.image.alt"
-          },
-          "href": "/courses/junior-ballet-foundation",
-          "metaDescription": "@@COPY:pages.courses.items.junior_ballet_foundation.metadescription",
-          "duration": "@@COPY:pages.courses.items.junior_ballet_foundation.duration",
-          "schedule": "@@COPY:pages.courses.items.junior_ballet_foundation.schedule",
-          "price": "@@COPY:pages.courses.items.junior_ballet_foundation.price",
-          "description": [
-            "@@COPY:pages.courses.items.junior_ballet_foundation.description.0",
-            "@@COPY:pages.courses.items.junior_ballet_foundation.description.1"
-          ],
-          "includes": [
-            "@@COPY:pages.courses.items.junior_ballet_foundation.includes.0",
-            "@@COPY:pages.courses.items.junior_ballet_foundation.includes.1",
-            "@@COPY:pages.courses.items.junior_ballet_foundation.includes.2"
-          ],
-          "cta": {
-            "label": "@@COPY:pages.courses.items.junior_ballet_foundation.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "course-2",
-          "slug": "teen-contemporary-intensive",
-          "title": "@@COPY:pages.courses.items.teen_contemporary_intensive.title",
-          "term": "@@COPY:pages.courses.items.teen_contemporary_intensive.term",
-          "level": "@@COPY:pages.courses.items.teen_contemporary_intensive.level",
-          "excerpt": "@@COPY:pages.courses.items.teen_contemporary_intensive.excerpt",
-          "image": {
-            "src": "/images/courses/teen-contemporary.svg",
-            "alt": "@@COPY:pages.courses.items.teen_contemporary_intensive.image.alt"
-          },
-          "href": "/courses/teen-contemporary-intensive",
-          "metaDescription": "@@COPY:pages.courses.items.teen_contemporary_intensive.metadescription",
-          "duration": "@@COPY:pages.courses.items.teen_contemporary_intensive.duration",
-          "schedule": "@@COPY:pages.courses.items.teen_contemporary_intensive.schedule",
-          "price": "@@COPY:pages.courses.items.teen_contemporary_intensive.price",
-          "description": [
-            "@@COPY:pages.courses.items.teen_contemporary_intensive.description.0",
-            "@@COPY:pages.courses.items.teen_contemporary_intensive.description.1"
-          ],
-          "includes": [
-            "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.0",
-            "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.1",
-            "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.2"
-          ],
-          "cta": {
-            "label": "@@COPY:pages.courses.items.teen_contemporary_intensive.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "course-3",
-          "slug": "adult-ballet-open",
-          "title": "@@COPY:pages.courses.items.adult_ballet_open.title",
-          "term": "@@COPY:pages.courses.items.adult_ballet_open.term",
-          "level": "@@COPY:pages.courses.items.adult_ballet_open.level",
-          "excerpt": "@@COPY:pages.courses.items.adult_ballet_open.excerpt",
-          "image": {
-            "src": "/images/courses/adult-ballet.svg",
-            "alt": "@@COPY:pages.courses.items.adult_ballet_open.image.alt"
-          },
-          "href": "/courses/adult-ballet-open",
-          "metaDescription": "@@COPY:pages.courses.items.adult_ballet_open.metadescription",
-          "duration": "@@COPY:pages.courses.items.adult_ballet_open.duration",
-          "schedule": "@@COPY:pages.courses.items.adult_ballet_open.schedule",
-          "price": "@@COPY:pages.courses.items.adult_ballet_open.price",
-          "description": [
-            "@@COPY:pages.courses.items.adult_ballet_open.description.0",
-            "@@COPY:pages.courses.items.adult_ballet_open.description.1"
-          ],
-          "includes": [
-            "@@COPY:pages.courses.items.adult_ballet_open.includes.0",
-            "@@COPY:pages.courses.items.adult_ballet_open.includes.1",
-            "@@COPY:pages.courses.items.adult_ballet_open.includes.2"
-          ],
-          "cta": {
-            "label": "@@COPY:pages.courses.items.adult_ballet_open.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "course-4",
-          "slug": "musical-theatre-performance",
-          "title": "@@COPY:pages.courses.items.musical_theatre_performance.title",
-          "term": "@@COPY:pages.courses.items.musical_theatre_performance.term",
-          "level": "@@COPY:pages.courses.items.musical_theatre_performance.level",
-          "excerpt": "@@COPY:pages.courses.items.musical_theatre_performance.excerpt",
-          "image": {
-            "src": "/images/courses/musical-theatre.svg",
-            "alt": "@@COPY:pages.courses.items.musical_theatre_performance.image.alt"
-          },
-          "href": "/courses/musical-theatre-performance",
-          "metaDescription": "@@COPY:pages.courses.items.musical_theatre_performance.metadescription",
-          "duration": "@@COPY:pages.courses.items.musical_theatre_performance.duration",
-          "schedule": "@@COPY:pages.courses.items.musical_theatre_performance.schedule",
-          "price": "@@COPY:pages.courses.items.musical_theatre_performance.price",
-          "description": [
-            "@@COPY:pages.courses.items.musical_theatre_performance.description.0",
-            "@@COPY:pages.courses.items.musical_theatre_performance.description.1"
-          ],
-          "includes": [
-            "@@COPY:pages.courses.items.musical_theatre_performance.includes.0",
-            "@@COPY:pages.courses.items.musical_theatre_performance.includes.1",
-            "@@COPY:pages.courses.items.musical_theatre_performance.includes.2"
-          ],
-          "cta": {
-            "label": "@@COPY:pages.courses.items.musical_theatre_performance.cta.label",
-            "href": "/timetable",
-            "variant": "primary"
-          }
-        }
-      ]
-    },
-    "events": {
-      "meta": {
-        "title": "@@COPY:pages.events.meta.title",
-        "description": "@@COPY:pages.events.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.events.hero.overline",
-        "title": "@@COPY:pages.events.hero.title",
-        "subtitle": "@@COPY:pages.events.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.events.intro",
-      "filters": {
-        "all": "All",
-        "events": "Events",
-        "workshops": "Workshops",
-        "masterclass": "Masterclass",
-        "empty": "Nothing in this category yet — check back soon."
-      },
-      "items": [
-        {
-          "id": "2026-halloween",
-          "slug": "halloween-pumpkin-carving-workshop",
-          "sessions": [
-            {
-              "id": "halloween-2026",
-              "eventSlug": "halloween-pumpkin-carving-workshop",
-              "title": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.title",
-              "date": "2026-10-31",
-              "start": "13:00",
-              "end": "17:00",
-              "venueId": "county-hall-dance-school",
-              "type": "workshop",
-              "organiser": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.organiser",
-              "relationship": "organised",
-              "published": true
-            }
-          ],
-          "listingCategory": "workshop",
-          "title": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.title",
-          "date": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.date",
-          "dateIso": "2026-10-31",
-          "location": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.location",
-          "excerpt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.0",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.1",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.2",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.3",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.4",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.5",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.6",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.7",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.8",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.9",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.10",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.11",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.12",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.13",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.14",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.15",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.16",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.17",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.18",
-            "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.19"
-          ],
-          "image": {
-            "src": "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
-            "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt"
-          },
-          "inlineGalleries": [
-            {
-              "beforeHeading": "Programme",
-              "images": [
+            social: [
                 {
-                  "src": "/images/events/2026-halloween/halloween-poster1.jpeg",
-                  "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt"
+                    platform: "instagram",
+                    href: "https://www.instagram.com/countyhalldancecentre",
+                    label: "@@COPY:global.utilitybar.social.instagram.label",
                 },
                 {
-                  "src": "/images/events/2026-halloween/halloween-poster2.jpeg",
-                  "alt": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt"
-                }
-              ]
-            }
-          ],
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.booknow.label",
-            "href": "/contact",
-            "variant": "primary"
-          }
+                    platform: "xiaohongshu",
+                    href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
+                    label: "@@COPY:global.utilitybar.social.xiaohongshu.label",
+                },
+                {
+                    platform: "tiktok",
+                    href: "https://www.tiktok.com/@county.hall.dance",
+                    label: "@@COPY:global.utilitybar.social.tiktok.label",
+                },
+            ],
         },
-        {
-          "id": "event-1",
-          "slug": "memory-of-china",
-          "sessions": [
-            {
-              "id": "memory-2026-03",
-              "relationship": "organised",
-              "organiser": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.organiser",
-              "eventSlug": "memory-of-china",
-              "title": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.title",
-              "date": "2026-10-03",
-              "venueId": "members-terrace",
-              "type": "event",
-              "published": true
-            },
-            {
-              "id": "memory-2026-04",
-              "relationship": "organised",
-              "organiser": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.organiser",
-              "eventSlug": "memory-of-china",
-              "title": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.title",
-              "date": "2026-10-04",
-              "venueId": "members-terrace",
-              "type": "event",
-              "published": true
-            }
-          ],
-          "relationship": "organised",
-          "organiser": "@@COPY:pages.events.items.memory_of_china.organiser",
-          "partners": [
-            "@@COPY:pages.events.items.memory_of_china.partners.0",
-            "@@COPY:pages.events.items.memory_of_china.partners.1",
-            "@@COPY:pages.events.items.memory_of_china.partners.2",
-            "@@COPY:pages.events.items.memory_of_china.partners.3",
-            "@@COPY:pages.events.items.memory_of_china.partners.4",
-            "@@COPY:pages.events.items.memory_of_china.partners.5"
-          ],
-          "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.memory_of_china.title",
-          "date": "@@COPY:pages.events.items.memory_of_china.date",
-          "dateIso": "2026-10-04",
-          "location": "@@COPY:pages.events.items.memory_of_china.location",
-          "excerpt": "@@COPY:pages.events.items.memory_of_china.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.memory_of_china.description.0",
-            "@@COPY:pages.events.items.memory_of_china.description.1",
-            "@@COPY:pages.events.items.memory_of_china.description.2",
-            "@@COPY:pages.events.items.memory_of_china.description.3",
-            "@@COPY:pages.events.items.memory_of_china.description.4",
-            "@@COPY:pages.events.items.memory_of_china.description.5",
-            "@@COPY:pages.events.items.memory_of_china.description.6",
-            "@@COPY:pages.events.items.memory_of_china.description.7",
-            "@@COPY:pages.events.items.memory_of_china.description.8",
-            "@@COPY:pages.events.items.memory_of_china.description.9",
-            "@@COPY:pages.events.items.memory_of_china.description.10",
-            "@@COPY:pages.events.items.memory_of_china.description.11",
-            "@@COPY:pages.events.items.memory_of_china.description.12",
-            "@@COPY:pages.events.items.memory_of_china.description.13",
-            "@@COPY:pages.events.items.memory_of_china.description.14",
-            "@@COPY:pages.events.items.memory_of_china.description.15",
-            "@@COPY:pages.events.items.memory_of_china.description.16",
-            "@@COPY:pages.events.items.memory_of_china.description.17",
-            "@@COPY:pages.events.items.memory_of_china.description.18",
-            "@@COPY:pages.events.items.memory_of_china.description.19",
-            "@@COPY:pages.events.items.memory_of_china.description.20",
-            "@@COPY:pages.events.items.memory_of_china.description.21",
-            "@@COPY:pages.events.items.memory_of_china.description.22",
-            "@@COPY:pages.events.items.memory_of_china.description.23",
-            "@@COPY:pages.events.items.memory_of_china.description.24",
-            "@@COPY:pages.events.items.memory_of_china.description.25",
-            "@@COPY:pages.events.items.memory_of_china.description.26",
-            "@@COPY:pages.events.items.memory_of_china.description.27",
-            "@@COPY:pages.events.items.memory_of_china.description.28",
-            "@@COPY:pages.events.items.memory_of_china.description.29",
-            "@@COPY:pages.events.items.memory_of_china.description.30"
-          ],
-          "inlineGalleries": [
-            {
-              "beforeHeading": "Saturday, 3 October 2026",
-              "images": [
+        navigation: {
+            items: [
                 {
-                  "src": "/images/events/memory-of-china-schedule-saturday.png",
-                  "alt": "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt"
+                    label: "@@COPY:global.navigation.items.timetable.label",
+                    href: "/timetable",
                 },
                 {
-                  "src": "/images/events/memory-of-china-schedule-sunday.png",
-                  "alt": "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt"
-                }
-              ]
-            }
-          ],
-          "image": {
-            "src": "/images/events/memory-of-china/gallery-09.jpg",
-            "alt": "@@COPY:pages.events.items.memory_of_china.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.memory_of_china.booknow.label",
-            "href": "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
-            "external": true,
-            "variant": "primary"
-          },
-          "tickets": [
-            {
-              "label": "@@COPY:pages.events.items.memory_of_china.tickets.saturday_tickets.label",
-              "href": "https://www.eventbrite.co.uk/e/2002061300243",
-              "external": true,
-              "variant": "primary"
+                    label: "@@COPY:global.navigation.items.classes.label",
+                    href: "/classes",
+                    parentLink: false,
+                    children: [
+                        {
+                            label: "@@COPY:global.navigation.items.classes.children.class_descriptions_instructors.label",
+                            href: "/classes-info",
+                        },
+                        {
+                            label: "@@COPY:global.navigation.items.classes.children.private_lessons.label",
+                            href: "/private-lessons",
+                        },
+                    ],
+                },
+                {
+                    label: "@@COPY:global.navigation.items.membership.label",
+                    href: "/membership",
+                },
+                {
+                    label: "@@COPY:global.navigation.items.what_s_on.label",
+                    href: "/events",
+                },
+                {
+                    label: "@@COPY:global.navigation.items.venue_hire.label",
+                    href: "/venue-hire",
+                    parentLink: false,
+                    children: [
+                        {
+                            label: "@@COPY:global.navigation.items.venue_hire.children.space_hire.label",
+                            href: "/venue-hire",
+                        },
+                        {
+                            label: "@@COPY:global.navigation.items.venue_hire.children.space_booking.label",
+                            href: "/booking",
+                        },
+                    ],
+                },
+                {
+                    label: "@@COPY:global.navigation.items.about.label",
+                    href: "/about",
+                    parentLink: false,
+                    children: [
+                        {
+                            label: "@@COPY:global.navigation.items.about.children.about_us.label",
+                            href: "/about",
+                        },
+                        {
+                            label: "@@COPY:global.navigation.items.about.children.contact.label",
+                            href: "/contact",
+                        },
+                    ],
+                },
+            ],
+            bookTrial: {
+                label: "@@COPY:global.navigation.booktrial.label",
+                href: "/timetable",
+                variant: "primary",
             },
-            {
-              "label": "@@COPY:pages.events.items.memory_of_china.tickets.sunday_tickets.label",
-              "href": "https://www.eventbrite.co.uk/e/2002061318297",
-              "external": true,
-              "variant": "secondary"
-            }
-          ]
+            search: {
+                label: "@@COPY:global.navigation.search.label",
+                placeholder: "@@COPY:global.navigation.search.placeholder",
+                action: "/search",
+            },
         },
-        {
-          "id": "event-2",
-          "slug": "four-seasons-festival",
-          "organiser": "@@COPY:pages.events.items.four_seasons_festival.organiser",
-          "sessions": [
-            {
-              "id": "leaves-2026-1",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.title",
-              "date": "2026-10-24",
-              "start": "11:00",
-              "end": "12:00",
-              "venueId": "county-hall-dance-school",
-              "type": "event",
-              "subtype": "performance",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.organiser",
-              "published": true,
-              "relationship": "hosted",
-              "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.hostedat"
+        footer: {
+            intro: "@@COPY:global.footer.intro",
+            social: [
+                {
+                    platform: "instagram",
+                    href: "https://www.instagram.com/countyhalldancecentre",
+                    label: "@@COPY:global.footer.social.instagram.label",
+                },
+                {
+                    platform: "xiaohongshu",
+                    href: "https://www.xiaohongshu.com/user/profile/66decbc5000000000d024c8b",
+                    label: "@@COPY:global.footer.social.xiaohongshu.label",
+                },
+                {
+                    platform: "tiktok",
+                    href: "https://www.tiktok.com/@county.hall.dance",
+                    label: "@@COPY:global.footer.social.tiktok.label",
+                },
+            ],
+            columns: {
+                explore: {
+                    title: "@@COPY:global.footer.columns.explore.title",
+                    links: [
+                        {
+                            label: "@@COPY:global.footer.columns.explore.links.classes.label",
+                            href: "/timetable",
+                        },
+                        {
+                            label: "@@COPY:global.footer.columns.explore.links.courses.label",
+                            href: "/courses",
+                        },
+                        {
+                            label: "@@COPY:global.footer.columns.explore.links.what_s_on.label",
+                            href: "/events",
+                        },
+                    ],
+                },
+                school: {
+                    title: "@@COPY:global.footer.columns.school.title",
+                    links: [
+                        {
+                            label: "@@COPY:global.footer.columns.school.links.about_us.label",
+                            href: "/about",
+                        },
+                        {
+                            label: "@@COPY:global.footer.columns.school.links.private_events.label",
+                            href: "/private-events",
+                        },
+                        {
+                            label: "@@COPY:global.footer.columns.school.links.careers.label",
+                            href: "/careers",
+                        },
+                    ],
+                },
             },
-            {
-              "id": "leaves-2026-2",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.title",
-              "date": "2026-10-24",
-              "start": "14:00",
-              "end": "15:30",
-              "venueId": "county-hall-dance-school",
-              "type": "workshop",
-              "subtype": "arts",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.organiser",
-              "published": true,
-              "relationship": "hosted",
-              "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.hostedat"
+            contact: {
+                title: "@@COPY:global.footer.contact.title",
+                address: [
+                    "@@COPY:global.footer.contact.address.0",
+                    "@@COPY:global.footer.contact.address.1",
+                    "@@COPY:global.footer.contact.address.2",
+                ],
+                phone: "@@COPY:global.footer.contact.phone",
+                wechat: "@@COPY:global.footer.contact.wechat",
+                email: "@@COPY:global.footer.contact.email",
             },
-            {
-              "id": "leaves-2026-3",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.title",
-              "date": "2026-10-24",
-              "start": "16:00",
-              "end": "17:30",
-              "venueId": "county-hall-dance-school",
-              "type": "workshop",
-              "subtype": "wellness",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.organiser",
-              "published": true,
-              "relationship": "collaboration",
-              "partners": [
-                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.0",
-                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.1"
-              ],
-              "style": "Yoga",
-              "venueBooking": false
+            newsletter: {
+                title: "@@COPY:global.footer.newsletter.title",
+                description: "@@COPY:global.footer.newsletter.description",
+                placeholder: "@@COPY:global.footer.newsletter.placeholder",
+                submitLabel: "@@COPY:global.footer.newsletter.submitlabel",
+                privacyNote: "We respect your privacy. Unsubscribe anytime.",
             },
-            {
-              "id": "leaves-2026-4",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.title",
-              "date": "2026-10-24",
-              "start": "18:00",
-              "end": "19:00",
-              "venueId": "county-hall-atrium",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.organiser",
-              "published": true
-            },
-            {
-              "id": "leaves-2026-5",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.title",
-              "date": "2026-10-25",
-              "start": "11:00",
-              "end": "12:00",
-              "venueId": "county-hall-atrium",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.organiser",
-              "published": true
-            },
-            {
-              "id": "leaves-2026-6",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.title",
-              "date": "2026-10-25",
-              "start": "13:00",
-              "end": "14:00",
-              "venueId": "county-hall-atrium",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.organiser",
-              "published": true
-            },
-            {
-              "id": "leaves-2026-7",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.title",
-              "date": "2026-10-25",
-              "start": "15:00",
-              "end": "17:00",
-              "venueId": "kiln-courtyard",
-              "type": "workshop",
-              "subtype": "arts",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.organiser",
-              "published": true
-            },
-            {
-              "id": "leaves-2026-8",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.title",
-              "date": "2026-10-25",
-              "start": "18:00",
-              "end": "19:00",
-              "venueId": "county-hall-atrium",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.organiser",
-              "published": true
-            },
-            {
-              "id": "leaves-2026-9",
-              "eventSlug": "four-seasons-festival",
-              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.title",
-              "date": "2026-10-25",
-              "start": "19:30",
-              "end": "20:30",
-              "venueId": "private-cinema",
-              "type": "event",
-              "subtype": "screening",
-              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.organiser",
-              "published": true
-            }
-          ],
-          "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.four_seasons_festival.title",
-          "date": "@@COPY:pages.events.items.four_seasons_festival.date",
-          "dateIso": "2026-10-25",
-          "location": "@@COPY:pages.events.items.four_seasons_festival.location",
-          "excerpt": "@@COPY:pages.events.items.four_seasons_festival.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.four_seasons_festival.description.0",
-            "@@COPY:pages.events.items.four_seasons_festival.description.1",
-            "@@COPY:pages.events.items.four_seasons_festival.description.2",
-            "@@COPY:pages.events.items.four_seasons_festival.description.3",
-            "@@COPY:pages.events.items.four_seasons_festival.description.4",
-            "@@COPY:pages.events.items.four_seasons_festival.description.5",
-            "@@COPY:pages.events.items.four_seasons_festival.description.6",
-            "@@COPY:pages.events.items.four_seasons_festival.description.7",
-            "@@COPY:pages.events.items.four_seasons_festival.description.8",
-            "@@COPY:pages.events.items.four_seasons_festival.description.9",
-            "@@COPY:pages.events.items.four_seasons_festival.description.10",
-            "@@COPY:pages.events.items.four_seasons_festival.description.11",
-            "@@COPY:pages.events.items.four_seasons_festival.description.12",
-            "@@COPY:pages.events.items.four_seasons_festival.description.13",
-            "@@COPY:pages.events.items.four_seasons_festival.description.14"
-          ],
-          "image": {
-            "src": "/images/events/four-seasons-festival/gallery-01.jpg",
-            "alt": "@@COPY:pages.events.items.four_seasons_festival.image.alt"
-          },
-          "gallery": [
-            {
-              "src": "/images/events/four-seasons-festival/gallery-01.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-02.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-03.jpeg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-04.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-05.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-06.jpeg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-07.jpeg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.6.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-08.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.7.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-09.jpeg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.8.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-10.jpeg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.9.alt"
-            },
-            {
-              "src": "/images/events/four-seasons-festival/gallery-11.jpg",
-              "alt": "@@COPY:pages.events.items.four_seasons_festival.gallery.10.alt"
-            }
-          ],
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.four_seasons_festival.booknow.label",
-            "href": "/events/four-seasons-festival",
-            "variant": "primary"
-          },
-          "descriptionCtas": [
-            {
-              "paragraphIndex": 6,
-              "label": "@@COPY:pages.events.items.four_seasons_festival.descriptionctas.more_details.label",
-              "href": "https://www.countyhallarts.com/stories/four-seasons-festival",
-              "external": true,
-              "variant": "primary"
-            }
-          ]
+            legal: [
+                {
+                    label: "@@COPY:global.footer.legal.privacy_policy.label",
+                    href: "/privacy",
+                },
+                {
+                    label: "@@COPY:global.footer.legal.terms_conditions.label",
+                    href: "/terms",
+                },
+                {
+                    label: "@@COPY:global.footer.legal.safeguarding.label",
+                    href: "/safeguarding",
+                },
+                {
+                    label: "@@COPY:global.footer.legal.cookie_policy.label",
+                    href: "/cookies",
+                },
+            ],
+            copyright: "@@COPY:global.footer.copyright",
         },
-        {
-          "id": "event-3",
-          "slug": "lunchtime-concert-series",
-          "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.lunchtime_concert_series.title",
-          "date": "@@COPY:pages.events.items.lunchtime_concert_series.date",
-          "dateIso": "2026-10-23",
-          "excerpt": "@@COPY:pages.events.items.lunchtime_concert_series.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.0",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.1",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.2",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.3",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.4",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.6"
-          ],
-          "sessions": [
-            {
-              "id": "concert-2026-10-23",
-              "eventSlug": "lunchtime-concert-series",
-              "title": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title",
-              "date": "2026-10-23",
-              "start": "13:00",
-              "venueId": "county-hall-dance-school",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser",
-              "published": true,
-              "description": [
-                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0",
-                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1",
-                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2"
-              ],
-              "relationship": "hosted",
-              "hostedAt": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat"
-            },
-            {
-              "id": "concert-2026-09-25",
-              "eventSlug": "lunchtime-concert-series",
-              "title": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title",
-              "date": "2026-09-25",
-              "start": "13:00",
-              "venueId": "county-hall-atrium",
-              "type": "event",
-              "subtype": "concert",
-              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser",
-              "published": true,
-              "description": [
-                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0"
-              ]
-            }
-          ],
-          "image": {
-            "src": "/images/events/lunchtime-concert-series.jpg",
-            "alt": "@@COPY:pages.events.items.lunchtime_concert_series.image.alt"
-          },
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.lunchtime_concert_series.booknow.label",
-            "href": "/events/lunchtime-concert-series",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "event-4",
-          "slug": "dance-meets-arts",
-          "sessions": [
-            {
-              "id": "dance-meets-arts-2026",
-              "relationship": "organised",
-              "organiser": "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.organiser",
-              "eventSlug": "dance-meets-arts",
-              "title": "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.title",
-              "date": "2026-08-08",
-              "start": "19:00",
-              "end": "20:30",
-              "venueId": "members-terrace",
-              "type": "event",
-              "published": true
-            }
-          ],
-          "relationship": "organised",
-          "organiser": "@@COPY:pages.events.items.dance_meets_arts.organiser",
-          "partners": [
-            "@@COPY:pages.events.items.dance_meets_arts.partners.0"
-          ],
-          "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.dance_meets_arts.title",
-          "date": "@@COPY:pages.events.items.dance_meets_arts.date",
-          "dateIso": "2026-08-08",
-          "location": "@@COPY:pages.events.items.dance_meets_arts.location",
-          "excerpt": "@@COPY:pages.events.items.dance_meets_arts.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.dance_meets_arts.description.0",
-            "@@COPY:pages.events.items.dance_meets_arts.description.1",
-            "@@COPY:pages.events.items.dance_meets_arts.description.2",
-            "@@COPY:pages.events.items.dance_meets_arts.description.3",
-            "@@COPY:pages.events.items.dance_meets_arts.description.4",
-            "@@COPY:pages.events.items.dance_meets_arts.description.5",
-            "@@COPY:pages.events.items.dance_meets_arts.description.6",
-            "@@COPY:pages.events.items.dance_meets_arts.description.7",
-            "@@COPY:pages.events.items.dance_meets_arts.description.8",
-            "@@COPY:pages.events.items.dance_meets_arts.description.9"
-          ],
-          "image": {
-            "src": "/images/events/dance-meets-arts.jpeg",
-            "alt": "@@COPY:pages.events.items.dance_meets_arts.image.alt"
-          },
-          "inlineGalleries": [
-            {
-              "beforeHeading": "Programme",
-              "variant": "autoplay",
-              "images": [
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-01.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-02.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-03.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-04.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-05.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-06.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-07.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-08.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-09.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-10.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-11.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-12.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-13.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-14.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-15.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt",
-                  "width": 1024,
-                  "height": 682
-                },
-                {
-                  "src": "/images/events/dance-meets-arts/gallery-16.jpg",
-                  "alt": "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt",
-                  "width": 1024,
-                  "height": 682
-                }
-              ]
-            }
-          ],
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.dance_meets_arts.booknow.label",
-            "href": "/events/dance-meets-arts",
-            "variant": "primary"
-          }
-        },
-        {
-          "id": "event-5",
-          "slug": "county-hall-dance-centre-opening-day",
-          "sessions": [
-            {
-              "id": "opening-day-2026",
-              "eventSlug": "county-hall-dance-centre-opening-day",
-              "title": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title",
-              "date": "2026-09-10",
-              "venueId": "county-hall",
-              "type": "event",
-              "relationship": "organised",
-              "organiser": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser",
-              "published": true
-            }
-          ],
-          "relationship": "organised",
-          "organiser": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.organiser",
-          "listingCategory": "event",
-          "title": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.title",
-          "date": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.date",
-          "dateIso": "2026-09-10",
-          "location": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.location",
-          "excerpt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.excerpt",
-          "description": [
-            "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.0",
-            "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.1"
-          ],
-          "image": {
-            "src": "/images/events/opening-day.jpg",
-            "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.image.alt"
-          },
-          "gallery": [
-            {
-              "src": "/images/events/opening-day/ribbon-cutting.jpg",
-              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt"
-            },
-            {
-              "src": "/images/events/opening-day/celebration-table.jpg",
-              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt"
-            },
-            {
-              "src": "/images/events/opening-day/dressing-room.jpg",
-              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt"
-            },
-            {
-              "src": "/images/events/opening-day/bouquet.jpg",
-              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt"
-            },
-            {
-              "src": "/images/events/opening-day/crest.jpg",
-              "alt": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt"
-            }
-          ],
-          "bookNow": {
-            "label": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.booknow.label",
-            "href": "/events/county-hall-dance-centre-opening-day",
-            "variant": "primary"
-          }
-        }
-      ],
-      "categories": [
-        {
-          "slug": "milonga",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.milonga.meta.title",
-            "description": "@@COPY:pages.events.categories.milonga.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.milonga.hero.overline",
-            "title": "@@COPY:pages.events.categories.milonga.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.milonga.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.milonga.intro",
-          "sections": [
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.milonga.sections.upcoming.title"
-            },
-            {
-              "id": "what-to-expect",
-              "title": "@@COPY:pages.events.categories.milonga.sections.what_to_expect.title"
-            }
-          ]
-        },
-        {
-          "slug": "social-dance-nights",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.social_dance_nights.meta.title",
-            "description": "@@COPY:pages.events.categories.social_dance_nights.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.social_dance_nights.hero.overline",
-            "title": "@@COPY:pages.events.categories.social_dance_nights.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.social_dance_nights.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.social_dance_nights.intro",
-          "sections": [
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.social_dance_nights.sections.upcoming.title"
-            },
-            {
-              "id": "how-to-join",
-              "title": "@@COPY:pages.events.categories.social_dance_nights.sections.how_to_join.title"
-            }
-          ]
-        },
-        {
-          "slug": "workshops",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.workshops.meta.title",
-            "description": "@@COPY:pages.events.categories.workshops.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.workshops.hero.overline",
-            "title": "@@COPY:pages.events.categories.workshops.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.workshops.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.workshops.intro",
-          "sections": [
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.workshops.sections.upcoming.title"
-            },
-            {
-              "id": "booking",
-              "title": "@@COPY:pages.events.categories.workshops.sections.booking.title"
-            }
-          ]
-        },
-        {
-          "slug": "masterclasses",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.masterclasses.meta.title",
-            "description": "@@COPY:pages.events.categories.masterclasses.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.masterclasses.hero.overline",
-            "title": "@@COPY:pages.events.categories.masterclasses.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.masterclasses.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.masterclasses.intro",
-          "sections": [
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.masterclasses.sections.upcoming.title"
-            },
-            {
-              "id": "levels",
-              "title": "@@COPY:pages.events.categories.masterclasses.sections.levels.title"
-            }
-          ]
-        },
-        {
-          "slug": "performances",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.performances.meta.title",
-            "description": "@@COPY:pages.events.categories.performances.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.performances.hero.overline",
-            "title": "@@COPY:pages.events.categories.performances.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.performances.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.performances.intro",
-          "sections": [
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.performances.sections.upcoming.title"
-            },
-            {
-              "id": "tickets",
-              "title": "@@COPY:pages.events.categories.performances.sections.tickets.title"
-            }
-          ]
-        },
-        {
-          "slug": "cross-arts-events",
-          "meta": {
-            "title": "@@COPY:pages.events.categories.cross_arts_events.meta.title",
-            "description": "@@COPY:pages.events.categories.cross_arts_events.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.events.categories.cross_arts_events.hero.overline",
-            "title": "@@COPY:pages.events.categories.cross_arts_events.hero.title",
-            "subtitle": "@@COPY:pages.events.categories.cross_arts_events.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.events.categories.cross_arts_events.intro",
-          "sections": [
-            {
-              "id": "programme",
-              "title": "@@COPY:pages.events.categories.cross_arts_events.sections.programme.title"
-            },
-            {
-              "id": "upcoming",
-              "title": "@@COPY:pages.events.categories.cross_arts_events.sections.upcoming.title"
-            }
-          ]
-        }
-      ],
-      "detailLabels": {
-        "date": "@@COPY:pages.events.detaillabels.date",
-        "location": "@@COPY:pages.events.detaillabels.location",
-        "backLink": "@@COPY:pages.events.detaillabels.backlink",
-        "eventInformation": "@@COPY:pages.events.detaillabels.eventinformation",
-        "organiser": "@@COPY:pages.events.detaillabels.organiser",
-        "partners": "@@COPY:pages.events.detaillabels.partners",
-        "hostedAt": "@@COPY:pages.events.detaillabels.hostedat",
-        "promotedBy": "@@COPY:pages.events.detaillabels.promotedby",
-        "pastConcerts": "@@COPY:pages.events.detaillabels.pastconcerts",
-        "programme": "@@COPY:pages.events.detaillabels.programme",
-        "booking": "@@COPY:pages.events.detaillabels.booking",
-        "venuePending": "@@COPY:pages.events.detaillabels.venuepending",
-        "timePending": "@@COPY:pages.events.detaillabels.timepending",
-        "endPending": "@@COPY:pages.events.detaillabels.endpending",
-        "room": "@@COPY:pages.events.detaillabels.room",
-        "upcomingConcerts": "@@COPY:pages.events.detaillabels.upcomingconcerts"
-      },
-      "categoryLabels": {
-        "backLink": "@@COPY:pages.events.categorylabels.backlink"
-      }
     },
-    "venueHire": {
-      "overview": {
-        "timetableNote": "@@COPY:pages.venuehire.overview.timetablenote",
-        "timetableLink": {
-          "label": "@@COPY:pages.venuehire.overview.timetablelink.label",
-          "href": "/timetable"
+    home: {
+        hero: {
+            autoplayIntervalMs: 7000,
+            previousLabel: "@@COPY:home.hero.previouslabel",
+            nextLabel: "@@COPY:home.hero.nextlabel",
+            slides: [
+                {
+                    id: "hero-intro",
+                    headline: "@@COPY:home.hero.slides.hero_intro.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_intro.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_intro.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-1-performance.jpg",
+                        alt: "@@COPY:home.hero.slides.hero_intro.image.alt",
+                    },
+                },
+                {
+                    id: "hero-classes",
+                    headline: "@@COPY:home.hero.slides.hero_classes.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_classes.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_classes.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-2.jpg",
+                        alt: "@@COPY:home.hero.slides.hero_classes.image.alt",
+                    },
+                },
+                {
+                    id: "hero-events",
+                    headline: "@@COPY:home.hero.slides.hero_events.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_events.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_events.cta.label",
+                        href: "/events",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-3.jpg",
+                        alt: "@@COPY:home.hero.slides.hero_events.image.alt",
+                    },
+                },
+                {
+                    id: "hero-private-lessons",
+                    headline:
+                        "@@COPY:home.hero.slides.hero_private_lessons.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_private_lessons.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_private_lessons.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-4.png",
+                        alt: "@@COPY:home.hero.slides.hero_private_lessons.image.alt",
+                    },
+                },
+                {
+                    id: "hero-venue-hire",
+                    headline:
+                        "@@COPY:home.hero.slides.hero_venue_hire.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_venue_hire.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_venue_hire.cta.label",
+                        href: "/venue-hire",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-5-venue.jpg",
+                        alt: "@@COPY:home.hero.slides.hero_venue_hire.image.alt",
+                    },
+                },
+                {
+                    id: "hero-membership",
+                    headline:
+                        "@@COPY:home.hero.slides.hero_membership.headline",
+                    blurb: "@@COPY:home.hero.slides.hero_membership.blurb",
+                    cta: {
+                        label: "@@COPY:home.hero.slides.hero_membership.cta.label",
+                        href: "/contact?subject=membership",
+                        variant: "primary",
+                    },
+                    image: {
+                        src: "/images/hero/slide-6.jpg",
+                        alt: "@@COPY:home.hero.slides.hero_membership.image.alt",
+                    },
+                },
+            ],
         },
-        "meta": {
-          "title": "@@COPY:pages.venuehire.overview.meta.title",
-          "description": "@@COPY:pages.venuehire.overview.meta.description"
+        quickActions: {
+            overline: "@@COPY:home.quickactions.overline",
+            linkSuffix: "@@COPY:home.quickactions.linksuffix",
+            items: [
+                {
+                    label: "@@COPY:home.quickactions.items.book_a_class.label",
+                    href: "/timetable",
+                    description:
+                        "@@COPY:home.quickactions.items.book_a_class.description",
+                },
+                {
+                    label: "@@COPY:home.quickactions.items.book_an_event.label",
+                    href: "/events",
+                    description:
+                        "@@COPY:home.quickactions.items.book_an_event.description",
+                },
+                {
+                    label: "@@COPY:home.quickactions.items.join_now.label",
+                    href: "/membership",
+                    description:
+                        "@@COPY:home.quickactions.items.join_now.description",
+                },
+            ],
         },
-        "hero": {
-          "overline": "@@COPY:pages.venuehire.overview.hero.overline",
-          "title": "@@COPY:pages.venuehire.overview.hero.title",
-          "subtitle": "@@COPY:pages.venuehire.overview.hero.subtitle",
-          "image": {
-            "src": "/images/hero/slide-5-venue.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.hero.image.alt"
-          }
+        events: {
+            overline: "@@COPY:home.events.overline",
+            title: "@@COPY:home.events.title",
+            subtitle: "@@COPY:home.events.subtitle",
+            viewAll: {
+                label: "@@COPY:home.events.viewall.label",
+                href: "/events",
+            },
+            items: [
+                {
+                    id: "2026-halloween",
+                    slug: "halloween-pumpkin-carving-workshop",
+                    listingCategory: "workshop",
+                    title: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.title",
+                    date: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.date",
+                    dateIso: "2026-10-31",
+                    location:
+                        "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.location",
+                    image: {
+                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
+                        alt: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.booknow.label",
+                        href: "/events/halloween-pumpkin-carving-workshop",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-1",
+                    slug: "memory-of-china",
+                    title: "@@COPY:home.events.items.memory_of_china.title",
+                    date: "@@COPY:home.events.items.memory_of_china.date",
+                    dateIso: "2026-10-04",
+                    location:
+                        "@@COPY:home.events.items.memory_of_china.location",
+                    image: {
+                        src: "/images/events/memory-of-china/gallery-09.jpg",
+                        alt: "@@COPY:home.events.items.memory_of_china.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:home.events.items.memory_of_china.booknow.label",
+                        href: "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
+                        external: true,
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-2",
+                    slug: "four-seasons-festival",
+                    listingCategory: "event",
+                    title: "@@COPY:home.events.items.four_seasons_festival.title",
+                    date: "@@COPY:home.events.items.four_seasons_festival.date",
+                    dateIso: "2026-10-25",
+                    location:
+                        "@@COPY:home.events.items.four_seasons_festival.location",
+                    image: {
+                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                        alt: "@@COPY:home.events.items.four_seasons_festival.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:home.events.items.four_seasons_festival.booknow.label",
+                        href: "/events/four-seasons-festival",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-3",
+                    slug: "lunchtime-concert-series",
+                    listingCategory: "event",
+                    title: "@@COPY:home.events.items.lunchtime_concert_series.title",
+                    date: "@@COPY:home.events.items.lunchtime_concert_series.date",
+                    dateIso: "2026-10-23",
+                    image: {
+                        src: "/images/events/lunchtime-concert-series.jpg",
+                        alt: "@@COPY:home.events.items.lunchtime_concert_series.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
+                        href: "/events/lunchtime-concert-series",
+                        variant: "primary",
+                    },
+                },
+            ],
         },
-        "intro": "@@COPY:pages.venuehire.overview.intro",
-        "gallery": [
-          {
-            "src": "/images/venue/gallery-01.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.gallery.0.alt",
-            "width": 1024,
-            "height": 447
-          },
-          {
-            "src": "/images/venue/gallery-02.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.gallery.1.alt",
-            "width": 1024,
-            "height": 519
-          },
-          {
-            "src": "/images/venue/gallery-03.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.gallery.2.alt",
-            "width": 1024,
-            "height": 472
-          },
-          {
-            "src": "/images/venue/gallery-04.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.gallery.3.alt",
-            "width": 1024,
-            "height": 576
-          },
-          {
-            "src": "/images/venue/gallery-05.jpg",
-            "alt": "@@COPY:pages.venuehire.overview.gallery.4.alt",
-            "width": 1024,
-            "height": 486
-          }
-        ],
-        "spaces": {
-          "title": "@@COPY:pages.venuehire.overview.spaces.title",
-          "items": [
-            {
-              "id": "vinyl-venue",
-              "title": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.title",
-              "size": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.size",
-              "floor": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.floor",
-              "idealFor": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.idealfor",
-              "body": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.body",
-              "image": {
-                "src": "/images/venue/vinyl-floor.jpg",
-                "alt": "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.image.alt",
-                "width": 1024,
-                "height": 768
-              }
-            },
-            {
-              "id": "wooden-hall",
-              "title": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.title",
-              "size": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.size",
-              "floor": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.floor",
-              "idealFor": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.idealfor",
-              "body": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.body",
-              "image": {
-                "src": "/images/venue/wooden-floor-hall.jpg",
-                "alt": "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.image.alt",
-                "width": 1024,
-                "height": 768
-              }
-            }
-          ],
-          "wholeVenue": "Book both spaces together for approx. 300 m² and up to 120 guests."
+        classStyles: {
+            overline: "@@COPY:home.classstyles.overline",
+            title: "@@COPY:home.classstyles.title",
+            items: [
+                {
+                    id: "style-contemporary",
+                    name: "@@COPY:home.classstyles.items.contemporary.name",
+                    slug: "contemporary",
+                    href: "/classes/contemporary",
+                    image: {
+                        src: "/images/styles/contemporary.jpeg",
+                        alt: "@@COPY:home.classstyles.items.contemporary.image.alt",
+                    },
+                },
+                {
+                    id: "style-chinese-dance",
+                    name: "@@COPY:home.classstyles.items.chinese_dance.name",
+                    slug: "chinese-dance",
+                    href: "/classes/chinese-dance",
+                    image: {
+                        src: "/images/styles/chinese-dance.jpeg",
+                        alt: "@@COPY:home.classstyles.items.chinese_dance.image.alt",
+                    },
+                },
+                {
+                    id: "style-tango",
+                    name: "@@COPY:home.classstyles.items.tango.name",
+                    slug: "tango",
+                    href: "/classes/tango",
+                    image: {
+                        src: "/images/styles/tango.jpeg",
+                        alt: "@@COPY:home.classstyles.items.tango.image.alt",
+                    },
+                },
+                {
+                    id: "style-yoga",
+                    name: "@@COPY:home.classstyles.items.yoga.name",
+                    slug: "yoga",
+                    href: "/classes/yoga",
+                    image: {
+                        src: "/images/styles/yoga.jpeg",
+                        alt: "@@COPY:home.classstyles.items.yoga.image.alt",
+                    },
+                },
+                {
+                    id: "style-tai-chi",
+                    name: "@@COPY:home.classstyles.items.tai_chi.name",
+                    slug: "tai-chi",
+                    href: "/classes/tai-chi",
+                    image: {
+                        src: "/images/styles/tai-chi.jpeg",
+                        alt: "@@COPY:home.classstyles.items.tai_chi.image.alt",
+                    },
+                },
+            ],
         },
-        "facts": {
-          "title": "@@COPY:pages.venuehire.overview.facts.title",
-          "items": [
-            "@@COPY:pages.venuehire.overview.facts.items.0",
-            "@@COPY:pages.venuehire.overview.facts.items.1",
-            "@@COPY:pages.venuehire.overview.facts.items.2",
-            "@@COPY:pages.venuehire.overview.facts.items.3"
-          ]
+        aboutTeaser: {
+            overline: "@@COPY:home.aboutteaser.overline",
+            title: "@@COPY:home.aboutteaser.title",
+            body: [
+                "@@COPY:home.aboutteaser.body.0",
+                "@@COPY:home.aboutteaser.body.1",
+            ],
+            cta: {
+                label: "@@COPY:home.aboutteaser.cta.label",
+                href: "/about",
+                variant: "secondary",
+            },
+            image: {
+                src: "/images/about/teaser.svg",
+                alt: "@@COPY:home.aboutteaser.image.alt",
+            },
         },
-        "facilities": {
-          "title": "@@COPY:pages.venuehire.overview.facilities.title",
-          "includedNote": "@@COPY:pages.venuehire.overview.facilities.includednote",
-          "items": [
-            "@@COPY:pages.venuehire.overview.facilities.items.0",
-            "@@COPY:pages.venuehire.overview.facilities.items.1",
-            "@@COPY:pages.venuehire.overview.facilities.items.2",
-            "@@COPY:pages.venuehire.overview.facilities.items.3",
-            "@@COPY:pages.venuehire.overview.facilities.items.4",
-            "@@COPY:pages.venuehire.overview.facilities.items.5",
-            "@@COPY:pages.venuehire.overview.facilities.items.6",
-            "@@COPY:pages.venuehire.overview.facilities.items.7",
-            "@@COPY:pages.venuehire.overview.facilities.items.8",
-            "@@COPY:pages.venuehire.overview.facilities.items.9"
-          ],
-          "extraNote": "@@COPY:pages.venuehire.overview.facilities.extranote"
+        newsletter: {
+            overline: "@@COPY:home.newsletter.overline",
+            title: "@@COPY:home.newsletter.title",
+            description: "@@COPY:home.newsletter.description",
+            placeholder: "@@COPY:home.newsletter.placeholder",
+            submitLabel: "@@COPY:home.newsletter.submitlabel",
+            socialHeading: "@@COPY:home.newsletter.socialheading",
         },
-        "suitableFor": {
-          "title": "@@COPY:pages.venuehire.overview.suitablefor.title",
-          "items": [
-            "@@COPY:pages.venuehire.overview.suitablefor.items.0",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.1",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.2",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.3",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.4",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.5",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.6",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.7",
-            "@@COPY:pages.venuehire.overview.suitablefor.items.8"
-          ]
-        },
-        "pricing": {
-          "title": "@@COPY:pages.venuehire.overview.pricing.title",
-          "columns": [
-            "@@COPY:pages.venuehire.overview.pricing.columns.0",
-            "@@COPY:pages.venuehire.overview.pricing.columns.1",
-            "@@COPY:pages.venuehire.overview.pricing.columns.2"
-          ],
-          "rows": [
-            {
-              "label": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.label",
-              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.standard",
-              "member": "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.member"
-            },
-            {
-              "label": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.label",
-              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.standard",
-              "member": "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.member"
-            },
-            {
-              "label": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.label",
-              "standard": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.standard",
-              "member": "@@COPY:pages.venuehire.overview.pricing.rows.half_day.member"
-            }
-          ],
-          "notes": [
-            "@@COPY:pages.venuehire.overview.pricing.notes.0",
-            "@@COPY:pages.venuehire.overview.pricing.notes.1",
-            "@@COPY:pages.venuehire.overview.pricing.notes.2",
-            "@@COPY:pages.venuehire.overview.pricing.notes.3",
-            "@@COPY:pages.venuehire.overview.pricing.notes.4"
-          ],
-          "membershipLink": {
-            "label": "@@COPY:pages.venuehire.overview.pricing.membershiplink.label",
-            "href": "/membership",
-            "variant": "text"
-          }
-        },
-        "howToBook": {
-          "title": "@@COPY:pages.venuehire.overview.howtobook.title",
-          "steps": [
-            {
-              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.0.title",
-              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.0.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.1.title",
-              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.1.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.2.title",
-              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.2.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.howtobook.steps.3.title",
-              "body": "@@COPY:pages.venuehire.overview.howtobook.steps.3.body"
-            }
-          ]
-        },
-        "terms": {
-          "title": "@@COPY:pages.venuehire.overview.terms.title",
-          "items": [
-            {
-              "title": "@@COPY:pages.venuehire.overview.terms.items.0.title",
-              "body": "@@COPY:pages.venuehire.overview.terms.items.0.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.terms.items.1.title",
-              "body": "@@COPY:pages.venuehire.overview.terms.items.1.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.terms.items.2.title",
-              "body": "@@COPY:pages.venuehire.overview.terms.items.2.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.terms.items.3.title",
-              "body": "@@COPY:pages.venuehire.overview.terms.items.3.body"
-            },
-            {
-              "title": "@@COPY:pages.venuehire.overview.terms.items.4.title",
-              "body": "@@COPY:pages.venuehire.overview.terms.items.4.body"
-            }
-          ]
-        },
-        "cta": {
-          "title": "@@COPY:pages.venuehire.overview.cta.title",
-          "body": "@@COPY:pages.venuehire.overview.cta.body",
-          "button": {
-            "label": "@@COPY:pages.venuehire.overview.cta.button.label",
-            "href": "/contact?subject=venue-hire",
-            "variant": "primary"
-          },
-          "secondaryButton": {
-            "label": "@@COPY:pages.venuehire.overview.cta.secondarybutton.label",
-            "href": "/timetable",
-            "variant": "secondary"
-          },
-          "secondary": "@@COPY:pages.venuehire.overview.cta.secondary"
-        }
-      },
-      "subpages": [
-        {
-          "slug": "space-booking",
-          "meta": {
-            "title": "@@COPY:pages.venuehire.subpages.space_booking.meta.title",
-            "description": "@@COPY:pages.venuehire.subpages.space_booking.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.venuehire.subpages.space_booking.hero.overline",
-            "title": "@@COPY:pages.venuehire.subpages.space_booking.hero.title",
-            "subtitle": "@@COPY:pages.venuehire.subpages.space_booking.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.venuehire.subpages.space_booking.intro",
-          "sections": [
-            {
-              "id": "how-to-book",
-              "title": "@@COPY:pages.venuehire.subpages.space_booking.sections.how_to_book.title"
-            },
-            {
-              "id": "enquiry-form",
-              "title": "@@COPY:pages.venuehire.subpages.space_booking.sections.enquiry_form.title"
-            }
-          ]
-        }
-      ]
     },
-    "privateLessons": {
-      "meta": {
-        "title": "@@COPY:pages.privatelessons.meta.title",
-        "description": "@@COPY:pages.privatelessons.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.privatelessons.hero.overline",
-        "title": "@@COPY:pages.privatelessons.hero.title",
-        "subtitle": "@@COPY:pages.privatelessons.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.privatelessons.intro",
-      "sections": [
-        {
-          "id": "one-to-one",
-          "title": "@@COPY:pages.privatelessons.sections.one_to_one.title",
-          "body": "@@COPY:pages.privatelessons.sections.one_to_one.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.one_to_one.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/hero/slide-4.png",
-              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.0.alt"
-            },
-            {
-              "src": "/images/hero/slide-1.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.1.alt"
-            },
-            {
-              "src": "/images/hero/slide-6.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.one_to_one.gallery.2.alt"
-            }
-          ]
+    pages: {
+        common: {
+            viewCourseLink: "@@COPY:pages.common.viewcourselink",
+            eventDetailsLink: "@@COPY:pages.common.eventdetailslink",
         },
-        {
-          "id": "couples",
-          "title": "@@COPY:pages.privatelessons.sections.couples.title",
-          "body": "@@COPY:pages.privatelessons.sections.couples.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.couples.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/hero/slide-2.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.0.alt"
+        timetable: {
+            meta: {
+                title: "@@COPY:pages.timetable.meta.title",
+                description: "@@COPY:pages.timetable.meta.description",
             },
-            {
-              "src": "/images/private-events/promo.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.1.alt"
+            hero: {
+                overline: "@@COPY:pages.timetable.hero.overline",
+                title: "@@COPY:pages.timetable.hero.title",
+                subtitle: "@@COPY:pages.timetable.hero.subtitle",
             },
-            {
-              "src": "/images/hero/slide-5.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.couples.gallery.2.alt"
-            }
-          ]
+            trial: {
+                id: "trial",
+                overline: "@@COPY:pages.timetable.trial.overline",
+                title: "@@COPY:pages.timetable.trial.title",
+                body: "@@COPY:pages.timetable.trial.body",
+                cta: {
+                    label: "@@COPY:pages.timetable.trial.cta.label",
+                    href: "https://my.classmanager.com/county-hall-dance-centre/classes?mode=enrol",
+                    variant: "secondary",
+                    external: true,
+                },
+            },
+            booking: {
+                title: "@@COPY:pages.timetable.booking.title",
+                description: "@@COPY:pages.timetable.booking.description",
+                placeholderLabel:
+                    "@@COPY:pages.timetable.booking.placeholderlabel",
+                placeholderHint:
+                    "@@COPY:pages.timetable.booking.placeholderhint",
+                providerNote: "@@COPY:pages.timetable.booking.providernote",
+                image: {
+                    src: "/images/timetable/class-schedule.jpg",
+                    alt: "@@COPY:pages.timetable.booking.image.alt",
+                    width: 853,
+                    height: 1024,
+                },
+            },
+            grid: {
+                prevWeek: "Previous week",
+                thisWeek: "This week",
+                nextWeek: "Next week",
+                goToDate: "Go to date",
+                legend: "Class styles",
+                venueNote:
+                    "The venue can be used privately when there are no classes. Reservations are possible.",
+            },
+            newcomerNote: "@@COPY:pages.timetable.newcomernote",
+            helpLinks: [
+                {
+                    label: "@@COPY:pages.timetable.helplinks.browse_courses.label",
+                    href: "/courses",
+                },
+                {
+                    label: "@@COPY:pages.timetable.helplinks.contact_us.label",
+                    href: "/contact",
+                },
+            ],
         },
-        {
-          "id": "wedding",
-          "title": "@@COPY:pages.privatelessons.sections.wedding.title",
-          "body": "@@COPY:pages.privatelessons.sections.wedding.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.wedding.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/hero/slide-2.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.0.alt"
+        classes: {
+            meta: {
+                title: "@@COPY:pages.classes.meta.title",
+                description: "@@COPY:pages.classes.meta.description",
             },
-            {
-              "src": "/images/events/winter-showcase.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.1.alt"
+            hero: {
+                overline: "@@COPY:pages.classes.hero.overline",
+                title: "@@COPY:pages.classes.hero.title",
+                subtitle: "@@COPY:pages.classes.hero.subtitle",
             },
-            {
-              "src": "/images/hero/slide-4.png",
-              "alt": "@@COPY:pages.privatelessons.sections.wedding.gallery.2.alt"
-            }
-          ]
+            intro: "@@COPY:pages.classes.intro",
+            cta: {
+                label: "@@COPY:pages.classes.cta.label",
+                href: "/timetable",
+                variant: "primary",
+            },
+            detailLabels: {
+                ageGroups: "Who it's for",
+                backLink: "@@COPY:pages.classes.detaillabels.backlink",
+                instructor: "Instructor",
+            },
+            styles: [
+                {
+                    slug: "contemporary",
+                    name: "@@COPY:pages.classes.styles.contemporary.name",
+                    metaDescription:
+                        "@@COPY:pages.classes.styles.contemporary.metadescription",
+                    hero: {
+                        overline:
+                            "@@COPY:pages.classes.styles.contemporary.hero.overline",
+                        title: "@@COPY:pages.classes.styles.contemporary.hero.title",
+                        subtitle:
+                            "@@COPY:pages.classes.styles.contemporary.hero.subtitle",
+                        image: {
+                            src: "/images/styles/contemporary.jpeg",
+                            alt: "@@COPY:pages.classes.styles.contemporary.hero.image.alt",
+                        },
+                    },
+                    instructor: {
+                        name: "@@COPY:pages.classes.styles.contemporary.instructor.name",
+                        role: "@@COPY:pages.classes.styles.contemporary.instructor.role",
+                        bio: "@@COPY:pages.classes.styles.contemporary.instructor.bio",
+                        image: {
+                            src: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
+                            alt: "@@COPY:pages.classes.styles.contemporary.instructor.image.alt",
+                        },
+                    },
+                    intro: [
+                        "@@COPY:pages.classes.styles.contemporary.intro.0",
+                        "@@COPY:pages.classes.styles.contemporary.intro.1",
+                    ],
+                    highlights: [
+                        {
+                            title: "@@COPY:pages.classes.styles.contemporary.highlights.0.title",
+                            description:
+                                "@@COPY:pages.classes.styles.contemporary.highlights.0.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.contemporary.highlights.1.title",
+                            description:
+                                "@@COPY:pages.classes.styles.contemporary.highlights.1.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.contemporary.highlights.2.title",
+                            description:
+                                "@@COPY:pages.classes.styles.contemporary.highlights.2.description",
+                        },
+                    ],
+                    ageGroups: [
+                        {
+                            label: "@@COPY:pages.classes.styles.contemporary.agegroups.adults.label",
+                            description:
+                                "@@COPY:pages.classes.styles.contemporary.agegroups.adults.description",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.classes.styles.contemporary.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    slug: "chinese-dance",
+                    name: "@@COPY:pages.classes.styles.chinese_dance.name",
+                    metaDescription:
+                        "@@COPY:pages.classes.styles.chinese_dance.metadescription",
+                    hero: {
+                        overline:
+                            "@@COPY:pages.classes.styles.chinese_dance.hero.overline",
+                        title: "@@COPY:pages.classes.styles.chinese_dance.hero.title",
+                        subtitle:
+                            "@@COPY:pages.classes.styles.chinese_dance.hero.subtitle",
+                        image: {
+                            src: "/images/styles/chinese-dance.jpeg",
+                            alt: "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt",
+                        },
+                    },
+                    instructor: {
+                        name: "@@COPY:pages.classes.styles.chinese_dance.instructor.name",
+                        role: "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
+                        bio: "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
+                        image: {
+                            src: "/images/faculty/RCDance-Lisa.jpeg",
+                            alt: "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt",
+                        },
+                    },
+                    intro: [
+                        "@@COPY:pages.classes.styles.chinese_dance.intro.0",
+                        "@@COPY:pages.classes.styles.chinese_dance.intro.1",
+                    ],
+                    highlights: [
+                        {
+                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.0.title",
+                            description:
+                                "@@COPY:pages.classes.styles.chinese_dance.highlights.0.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.1.title",
+                            description:
+                                "@@COPY:pages.classes.styles.chinese_dance.highlights.1.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.2.title",
+                            description:
+                                "@@COPY:pages.classes.styles.chinese_dance.highlights.2.description",
+                        },
+                    ],
+                    ageGroups: [
+                        {
+                            label: "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.label",
+                            description:
+                                "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.description",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.classes.styles.chinese_dance.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    slug: "tango",
+                    name: "@@COPY:pages.classes.styles.tango.name",
+                    metaDescription:
+                        "@@COPY:pages.classes.styles.tango.metadescription",
+                    hero: {
+                        overline:
+                            "@@COPY:pages.classes.styles.tango.hero.overline",
+                        title: "@@COPY:pages.classes.styles.tango.hero.title",
+                        subtitle:
+                            "@@COPY:pages.classes.styles.tango.hero.subtitle",
+                        image: {
+                            src: "/images/styles/tango.jpeg",
+                            alt: "@@COPY:pages.classes.styles.tango.hero.image.alt",
+                        },
+                    },
+                    instructor: {
+                        name: "@@COPY:pages.classes.styles.tango.instructor.name",
+                        role: "@@COPY:pages.classes.styles.tango.instructor.role",
+                        bio: "@@COPY:pages.classes.styles.tango.instructor.bio",
+                        image: {
+                            src: "/images/faculty/Rene.jpeg",
+                            alt: "@@COPY:pages.classes.styles.tango.instructor.image.alt",
+                        },
+                    },
+                    intro: ["@@COPY:pages.classes.styles.tango.intro.0"],
+                    highlights: [
+                        {
+                            title: "@@COPY:pages.classes.styles.tango.highlights.0.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tango.highlights.0.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.tango.highlights.1.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tango.highlights.1.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.tango.highlights.2.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tango.highlights.2.description",
+                        },
+                    ],
+                    ageGroups: [
+                        {
+                            label: "@@COPY:pages.classes.styles.tango.agegroups.adults.label",
+                            description:
+                                "@@COPY:pages.classes.styles.tango.agegroups.adults.description",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.classes.styles.tango.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    slug: "yoga",
+                    name: "@@COPY:pages.classes.styles.yoga.name",
+                    metaDescription:
+                        "@@COPY:pages.classes.styles.yoga.metadescription",
+                    hero: {
+                        overline:
+                            "@@COPY:pages.classes.styles.yoga.hero.overline",
+                        title: "@@COPY:pages.classes.styles.yoga.hero.title",
+                        subtitle:
+                            "@@COPY:pages.classes.styles.yoga.hero.subtitle",
+                        image: {
+                            src: "/images/styles/yoga.jpeg",
+                            alt: "@@COPY:pages.classes.styles.yoga.hero.image.alt",
+                        },
+                    },
+                    instructor: {
+                        name: "@@COPY:pages.classes.styles.yoga.instructor.name",
+                        role: "@@COPY:pages.classes.styles.yoga.instructor.role",
+                        bio: "@@COPY:pages.classes.styles.yoga.instructor.bio",
+                        image: {
+                            src: "/images/faculty/Kasen.jpeg",
+                            alt: "@@COPY:pages.classes.styles.yoga.instructor.image.alt",
+                        },
+                    },
+                    intro: ["@@COPY:pages.classes.styles.yoga.intro.0"],
+                    highlights: [
+                        {
+                            title: "@@COPY:pages.classes.styles.yoga.highlights.0.title",
+                            description:
+                                "@@COPY:pages.classes.styles.yoga.highlights.0.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.yoga.highlights.1.title",
+                            description:
+                                "@@COPY:pages.classes.styles.yoga.highlights.1.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.yoga.highlights.2.title",
+                            description:
+                                "@@COPY:pages.classes.styles.yoga.highlights.2.description",
+                        },
+                    ],
+                    ageGroups: [
+                        {
+                            label: "@@COPY:pages.classes.styles.yoga.agegroups.adults.label",
+                            description:
+                                "@@COPY:pages.classes.styles.yoga.agegroups.adults.description",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.classes.styles.yoga.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    slug: "tai-chi",
+                    name: "@@COPY:pages.classes.styles.tai_chi.name",
+                    metaDescription:
+                        "@@COPY:pages.classes.styles.tai_chi.metadescription",
+                    hero: {
+                        overline:
+                            "@@COPY:pages.classes.styles.tai_chi.hero.overline",
+                        title: "@@COPY:pages.classes.styles.tai_chi.hero.title",
+                        subtitle:
+                            "@@COPY:pages.classes.styles.tai_chi.hero.subtitle",
+                        image: {
+                            src: "/images/styles/tai-chi.jpeg",
+                            alt: "@@COPY:pages.classes.styles.tai_chi.hero.image.alt",
+                        },
+                    },
+                    instructor: {
+                        name: "@@COPY:pages.classes.styles.tai_chi.instructor.name",
+                        role: "@@COPY:pages.classes.styles.tai_chi.instructor.role",
+                        bio: "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
+                        image: {
+                            src: "/images/faculty/coming.svg",
+                            alt: "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt",
+                        },
+                    },
+                    intro: ["@@COPY:pages.classes.styles.tai_chi.intro.0"],
+                    highlights: [
+                        {
+                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.0.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tai_chi.highlights.0.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.1.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tai_chi.highlights.1.description",
+                        },
+                        {
+                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.2.title",
+                            description:
+                                "@@COPY:pages.classes.styles.tai_chi.highlights.2.description",
+                        },
+                    ],
+                    ageGroups: [
+                        {
+                            label: "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.label",
+                            description:
+                                "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.description",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.classes.styles.tai_chi.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+            ],
         },
-        {
-          "id": "groups",
-          "title": "@@COPY:pages.privatelessons.sections.groups.title",
-          "body": "@@COPY:pages.privatelessons.sections.groups.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.groups.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/private-events/promo.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.0.alt"
+        courses: {
+            meta: {
+                title: "@@COPY:pages.courses.meta.title",
+                description: "@@COPY:pages.courses.meta.description",
             },
-            {
-              "src": "/images/events/musical-theatre.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.1.alt"
+            hero: {
+                overline: "@@COPY:pages.courses.hero.overline",
+                title: "@@COPY:pages.courses.hero.title",
+                subtitle: "@@COPY:pages.courses.hero.subtitle",
             },
-            {
-              "src": "/images/hero/slide-3.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.groups.gallery.2.alt"
-            }
-          ]
+            intro: "@@COPY:pages.courses.intro",
+            detailLabels: {
+                duration: "@@COPY:pages.courses.detaillabels.duration",
+                schedule: "@@COPY:pages.courses.detaillabels.schedule",
+                price: "@@COPY:pages.courses.detaillabels.price",
+                includes: "What's included",
+                backLink: "@@COPY:pages.courses.detaillabels.backlink",
+            },
+            items: [
+                {
+                    id: "course-1",
+                    slug: "junior-ballet-foundation",
+                    title: "@@COPY:pages.courses.items.junior_ballet_foundation.title",
+                    term: "@@COPY:pages.courses.items.junior_ballet_foundation.term",
+                    level: "@@COPY:pages.courses.items.junior_ballet_foundation.level",
+                    excerpt:
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.excerpt",
+                    image: {
+                        src: "/images/courses/junior-ballet.svg",
+                        alt: "@@COPY:pages.courses.items.junior_ballet_foundation.image.alt",
+                    },
+                    href: "/courses/junior-ballet-foundation",
+                    metaDescription:
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.metadescription",
+                    duration:
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.duration",
+                    schedule:
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.schedule",
+                    price: "@@COPY:pages.courses.items.junior_ballet_foundation.price",
+                    description: [
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.description.0",
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.description.1",
+                    ],
+                    includes: [
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.includes.0",
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.includes.1",
+                        "@@COPY:pages.courses.items.junior_ballet_foundation.includes.2",
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.courses.items.junior_ballet_foundation.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "course-2",
+                    slug: "teen-contemporary-intensive",
+                    title: "@@COPY:pages.courses.items.teen_contemporary_intensive.title",
+                    term: "@@COPY:pages.courses.items.teen_contemporary_intensive.term",
+                    level: "@@COPY:pages.courses.items.teen_contemporary_intensive.level",
+                    excerpt:
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.excerpt",
+                    image: {
+                        src: "/images/courses/teen-contemporary.svg",
+                        alt: "@@COPY:pages.courses.items.teen_contemporary_intensive.image.alt",
+                    },
+                    href: "/courses/teen-contemporary-intensive",
+                    metaDescription:
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.metadescription",
+                    duration:
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.duration",
+                    schedule:
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.schedule",
+                    price: "@@COPY:pages.courses.items.teen_contemporary_intensive.price",
+                    description: [
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.description.0",
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.description.1",
+                    ],
+                    includes: [
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.0",
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.1",
+                        "@@COPY:pages.courses.items.teen_contemporary_intensive.includes.2",
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.courses.items.teen_contemporary_intensive.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "course-3",
+                    slug: "adult-ballet-open",
+                    title: "@@COPY:pages.courses.items.adult_ballet_open.title",
+                    term: "@@COPY:pages.courses.items.adult_ballet_open.term",
+                    level: "@@COPY:pages.courses.items.adult_ballet_open.level",
+                    excerpt:
+                        "@@COPY:pages.courses.items.adult_ballet_open.excerpt",
+                    image: {
+                        src: "/images/courses/adult-ballet.svg",
+                        alt: "@@COPY:pages.courses.items.adult_ballet_open.image.alt",
+                    },
+                    href: "/courses/adult-ballet-open",
+                    metaDescription:
+                        "@@COPY:pages.courses.items.adult_ballet_open.metadescription",
+                    duration:
+                        "@@COPY:pages.courses.items.adult_ballet_open.duration",
+                    schedule:
+                        "@@COPY:pages.courses.items.adult_ballet_open.schedule",
+                    price: "@@COPY:pages.courses.items.adult_ballet_open.price",
+                    description: [
+                        "@@COPY:pages.courses.items.adult_ballet_open.description.0",
+                        "@@COPY:pages.courses.items.adult_ballet_open.description.1",
+                    ],
+                    includes: [
+                        "@@COPY:pages.courses.items.adult_ballet_open.includes.0",
+                        "@@COPY:pages.courses.items.adult_ballet_open.includes.1",
+                        "@@COPY:pages.courses.items.adult_ballet_open.includes.2",
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.courses.items.adult_ballet_open.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "course-4",
+                    slug: "musical-theatre-performance",
+                    title: "@@COPY:pages.courses.items.musical_theatre_performance.title",
+                    term: "@@COPY:pages.courses.items.musical_theatre_performance.term",
+                    level: "@@COPY:pages.courses.items.musical_theatre_performance.level",
+                    excerpt:
+                        "@@COPY:pages.courses.items.musical_theatre_performance.excerpt",
+                    image: {
+                        src: "/images/courses/musical-theatre.svg",
+                        alt: "@@COPY:pages.courses.items.musical_theatre_performance.image.alt",
+                    },
+                    href: "/courses/musical-theatre-performance",
+                    metaDescription:
+                        "@@COPY:pages.courses.items.musical_theatre_performance.metadescription",
+                    duration:
+                        "@@COPY:pages.courses.items.musical_theatre_performance.duration",
+                    schedule:
+                        "@@COPY:pages.courses.items.musical_theatre_performance.schedule",
+                    price: "@@COPY:pages.courses.items.musical_theatre_performance.price",
+                    description: [
+                        "@@COPY:pages.courses.items.musical_theatre_performance.description.0",
+                        "@@COPY:pages.courses.items.musical_theatre_performance.description.1",
+                    ],
+                    includes: [
+                        "@@COPY:pages.courses.items.musical_theatre_performance.includes.0",
+                        "@@COPY:pages.courses.items.musical_theatre_performance.includes.1",
+                        "@@COPY:pages.courses.items.musical_theatre_performance.includes.2",
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.courses.items.musical_theatre_performance.cta.label",
+                        href: "/timetable",
+                        variant: "primary",
+                    },
+                },
+            ],
         },
-        {
-          "id": "corporate",
-          "title": "@@COPY:pages.privatelessons.sections.corporate.title",
-          "body": "@@COPY:pages.privatelessons.sections.corporate.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.corporate.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/hero/slide-3.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.0.alt"
+        events: {
+            meta: {
+                title: "@@COPY:pages.events.meta.title",
+                description: "@@COPY:pages.events.meta.description",
             },
-            {
-              "src": "/images/hero/slide-1.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.1.alt"
+            hero: {
+                overline: "@@COPY:pages.events.hero.overline",
+                title: "@@COPY:pages.events.hero.title",
+                subtitle: "@@COPY:pages.events.hero.subtitle",
             },
-            {
-              "src": "/images/events/contemporary-intensive.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.corporate.gallery.2.alt"
-            }
-          ]
+            intro: "@@COPY:pages.events.intro",
+            filters: {
+                all: "All",
+                events: "Events",
+                workshops: "Workshops",
+                masterclass: "Masterclass",
+                empty: "Nothing in this category yet — check back soon.",
+            },
+            items: [
+                {
+                    id: "2026-halloween",
+                    slug: "halloween-pumpkin-carving-workshop",
+                    sessions: [
+                        {
+                            id: "halloween-2026",
+                            eventSlug: "halloween-pumpkin-carving-workshop",
+                            title: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.title",
+                            date: "2026-10-31",
+                            start: "13:00",
+                            end: "17:00",
+                            venueId: "county-hall-dance-school",
+                            type: "workshop",
+                            organiser:
+                                "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.organiser",
+                            relationship: "organised",
+                            published: true,
+                        },
+                    ],
+                    listingCategory: "workshop",
+                    title: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.title",
+                    date: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.date",
+                    dateIso: "2026-10-31",
+                    location:
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.location",
+                    excerpt:
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.0",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.1",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.2",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.3",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.4",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.5",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.6",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.7",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.8",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.9",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.10",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.11",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.12",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.13",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.14",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.15",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.16",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.17",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.18",
+                        "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.19",
+                    ],
+                    image: {
+                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
+                        alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt",
+                    },
+                    inlineGalleries: [
+                        {
+                            beforeHeading: "Programme",
+                            images: [
+                                {
+                                    src: "/images/events/2026-halloween/halloween-poster1.jpeg",
+                                    alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt",
+                                },
+                                {
+                                    src: "/images/events/2026-halloween/halloween-poster2.jpeg",
+                                    alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt",
+                                },
+                            ],
+                        },
+                    ],
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.booknow.label",
+                        href: "/contact",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-1",
+                    slug: "memory-of-china",
+                    sessions: [
+                        {
+                            id: "memory-2026-03",
+                            start: "12:00",
+                            end: "17:30",
+                            calendarVisible: true,
+                            relationship: "organised",
+                            organiser:
+                                "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.organiser",
+                            eventSlug: "memory-of-china",
+                            title: "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.title",
+                            date: "2026-10-03",
+                            venueId: "members-terrace",
+                            type: "event",
+                            published: true,
+                        },
+                        {
+                            id: "memory-2026-04",
+                            start: "12:00",
+                            end: "17:30",
+                            calendarVisible: true,
+                            relationship: "organised",
+                            organiser:
+                                "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.organiser",
+                            eventSlug: "memory-of-china",
+                            title: "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.title",
+                            date: "2026-10-04",
+                            venueId: "members-terrace",
+                            type: "event",
+                            published: true,
+                        },
+                    ],
+                    relationship: "organised",
+                    organiser:
+                        "@@COPY:pages.events.items.memory_of_china.organiser",
+                    partners: [
+                        "@@COPY:pages.events.items.memory_of_china.partners.0",
+                        "@@COPY:pages.events.items.memory_of_china.partners.1",
+                        "@@COPY:pages.events.items.memory_of_china.partners.2",
+                        "@@COPY:pages.events.items.memory_of_china.partners.3",
+                        "@@COPY:pages.events.items.memory_of_china.partners.4",
+                        "@@COPY:pages.events.items.memory_of_china.partners.5",
+                    ],
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.memory_of_china.title",
+                    date: "@@COPY:pages.events.items.memory_of_china.date",
+                    dateIso: "2026-10-04",
+                    location:
+                        "@@COPY:pages.events.items.memory_of_china.location",
+                    excerpt:
+                        "@@COPY:pages.events.items.memory_of_china.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.memory_of_china.description.0",
+                        "@@COPY:pages.events.items.memory_of_china.description.1",
+                        "@@COPY:pages.events.items.memory_of_china.description.2",
+                        "@@COPY:pages.events.items.memory_of_china.description.3",
+                        "@@COPY:pages.events.items.memory_of_china.description.4",
+                        "@@COPY:pages.events.items.memory_of_china.description.5",
+                        "@@COPY:pages.events.items.memory_of_china.description.6",
+                        "@@COPY:pages.events.items.memory_of_china.description.7",
+                        "@@COPY:pages.events.items.memory_of_china.description.8",
+                        "@@COPY:pages.events.items.memory_of_china.description.9",
+                        "@@COPY:pages.events.items.memory_of_china.description.10",
+                        "@@COPY:pages.events.items.memory_of_china.description.11",
+                        "@@COPY:pages.events.items.memory_of_china.description.12",
+                        "@@COPY:pages.events.items.memory_of_china.description.13",
+                        "@@COPY:pages.events.items.memory_of_china.description.14",
+                        "@@COPY:pages.events.items.memory_of_china.description.15",
+                        "@@COPY:pages.events.items.memory_of_china.description.16",
+                        "@@COPY:pages.events.items.memory_of_china.description.17",
+                        "@@COPY:pages.events.items.memory_of_china.description.18",
+                        "@@COPY:pages.events.items.memory_of_china.description.19",
+                        "@@COPY:pages.events.items.memory_of_china.description.20",
+                        "@@COPY:pages.events.items.memory_of_china.description.21",
+                        "@@COPY:pages.events.items.memory_of_china.description.22",
+                        "@@COPY:pages.events.items.memory_of_china.description.23",
+                        "@@COPY:pages.events.items.memory_of_china.description.24",
+                        "@@COPY:pages.events.items.memory_of_china.description.25",
+                        "@@COPY:pages.events.items.memory_of_china.description.26",
+                        "@@COPY:pages.events.items.memory_of_china.description.27",
+                        "@@COPY:pages.events.items.memory_of_china.description.28",
+                        "@@COPY:pages.events.items.memory_of_china.description.29",
+                        "@@COPY:pages.events.items.memory_of_china.description.30",
+                    ],
+                    inlineGalleries: [
+                        {
+                            beforeHeading: "Saturday, 3 October 2026",
+                            images: [
+                                {
+                                    src: "/images/events/memory-of-china-schedule-saturday.png",
+                                    alt: "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt",
+                                },
+                                {
+                                    src: "/images/events/memory-of-china-schedule-sunday.png",
+                                    alt: "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt",
+                                },
+                            ],
+                        },
+                    ],
+                    image: {
+                        src: "/images/events/memory-of-china/gallery-09.jpg",
+                        alt: "@@COPY:pages.events.items.memory_of_china.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.memory_of_china.booknow.label",
+                        href: "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
+                        external: true,
+                        variant: "primary",
+                    },
+                    tickets: [
+                        {
+                            label: "@@COPY:pages.events.items.memory_of_china.tickets.saturday_tickets.label",
+                            href: "https://www.eventbrite.co.uk/e/2002061300243",
+                            external: true,
+                            variant: "primary",
+                        },
+                        {
+                            label: "@@COPY:pages.events.items.memory_of_china.tickets.sunday_tickets.label",
+                            href: "https://www.eventbrite.co.uk/e/2002061318297",
+                            external: true,
+                            variant: "secondary",
+                        },
+                    ],
+                },
+                {
+                    id: "event-2",
+                    slug: "four-seasons-festival",
+                    organiser:
+                        "@@COPY:pages.events.items.four_seasons_festival.organiser",
+                    sessions: [
+                        {
+                            id: "leaves-2026-1",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.title",
+                            date: "2026-10-24",
+                            start: "11:00",
+                            end: "12:00",
+                            venueId: "county-hall-dance-school",
+                            type: "event",
+                            subtype: "performance",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.organiser",
+                            published: true,
+                            relationship: "hosted",
+                            hostedAt:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.hostedat",
+                        },
+                        {
+                            id: "leaves-2026-2",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.title",
+                            date: "2026-10-24",
+                            start: "14:00",
+                            end: "15:30",
+                            venueId: "county-hall-dance-school",
+                            type: "workshop",
+                            subtype: "arts",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.organiser",
+                            published: true,
+                            relationship: "hosted",
+                            hostedAt:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.hostedat",
+                        },
+                        {
+                            id: "leaves-2026-3",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.title",
+                            date: "2026-10-24",
+                            start: "16:00",
+                            end: "17:30",
+                            venueId: "county-hall-dance-school",
+                            type: "workshop",
+                            subtype: "wellness",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.organiser",
+                            published: true,
+                            relationship: "collaboration",
+                            partners: [
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.0",
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.1",
+                            ],
+                            style: "Yoga",
+                            venueBooking: false,
+                        },
+                        {
+                            id: "leaves-2026-4",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.title",
+                            date: "2026-10-24",
+                            start: "18:00",
+                            end: "19:00",
+                            venueId: "county-hall-atrium",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.organiser",
+                            published: true,
+                        },
+                        {
+                            id: "leaves-2026-5",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.title",
+                            date: "2026-10-25",
+                            start: "11:00",
+                            end: "12:00",
+                            venueId: "county-hall-atrium",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.organiser",
+                            published: true,
+                        },
+                        {
+                            id: "leaves-2026-6",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.title",
+                            date: "2026-10-25",
+                            start: "13:00",
+                            end: "14:00",
+                            venueId: "county-hall-atrium",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.organiser",
+                            published: true,
+                        },
+                        {
+                            id: "leaves-2026-7",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.title",
+                            date: "2026-10-25",
+                            start: "15:00",
+                            end: "17:00",
+                            venueId: "kiln-courtyard",
+                            type: "workshop",
+                            subtype: "arts",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.organiser",
+                            published: true,
+                        },
+                        {
+                            id: "leaves-2026-8",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.title",
+                            date: "2026-10-25",
+                            start: "18:00",
+                            end: "19:00",
+                            venueId: "county-hall-atrium",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.organiser",
+                            published: true,
+                        },
+                        {
+                            id: "leaves-2026-9",
+                            eventSlug: "four-seasons-festival",
+                            title: "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.title",
+                            date: "2026-10-25",
+                            start: "19:30",
+                            end: "20:30",
+                            venueId: "private-cinema",
+                            type: "event",
+                            subtype: "screening",
+                            organiser:
+                                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.organiser",
+                            published: true,
+                        },
+                    ],
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.four_seasons_festival.title",
+                    date: "@@COPY:pages.events.items.four_seasons_festival.date",
+                    dateIso: "2026-10-25",
+                    location:
+                        "@@COPY:pages.events.items.four_seasons_festival.location",
+                    excerpt:
+                        "@@COPY:pages.events.items.four_seasons_festival.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.four_seasons_festival.description.0",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.1",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.2",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.3",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.4",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.5",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.6",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.7",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.8",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.9",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.10",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.11",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.12",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.13",
+                        "@@COPY:pages.events.items.four_seasons_festival.description.14",
+                    ],
+                    image: {
+                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                        alt: "@@COPY:pages.events.items.four_seasons_festival.image.alt",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-02.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-03.jpeg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-04.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-05.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-06.jpeg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-07.jpeg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.6.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-08.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.7.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-09.jpeg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.8.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-10.jpeg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.9.alt",
+                        },
+                        {
+                            src: "/images/events/four-seasons-festival/gallery-11.jpg",
+                            alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.10.alt",
+                        },
+                    ],
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.four_seasons_festival.booknow.label",
+                        href: "/events/four-seasons-festival",
+                        variant: "primary",
+                    },
+                    descriptionCtas: [
+                        {
+                            paragraphIndex: 6,
+                            label: "@@COPY:pages.events.items.four_seasons_festival.descriptionctas.more_details.label",
+                            href: "https://www.countyhallarts.com/stories/four-seasons-festival",
+                            external: true,
+                            variant: "primary",
+                        },
+                    ],
+                },
+                {
+                    id: "event-3",
+                    slug: "lunchtime-concert-series",
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.lunchtime_concert_series.title",
+                    date: "@@COPY:pages.events.items.lunchtime_concert_series.date",
+                    dateIso: "2026-10-23",
+                    excerpt:
+                        "@@COPY:pages.events.items.lunchtime_concert_series.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.0",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.1",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.2",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.3",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.4",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
+                        "@@COPY:pages.events.items.lunchtime_concert_series.description.6",
+                    ],
+                    sessions: [
+                        {
+                            id: "concert-2026-10-23",
+                            eventSlug: "lunchtime-concert-series",
+                            title: "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title",
+                            date: "2026-10-23",
+                            start: "13:00",
+                            venueId: "county-hall-dance-school",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser",
+                            published: true,
+                            description: [
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0",
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1",
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2",
+                            ],
+                            relationship: "hosted",
+                            hostedAt:
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat",
+                        },
+                        {
+                            id: "concert-2026-09-25",
+                            eventSlug: "lunchtime-concert-series",
+                            title: "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title",
+                            date: "2026-09-25",
+                            start: "13:00",
+                            venueId: "county-hall-atrium",
+                            type: "event",
+                            subtype: "concert",
+                            organiser:
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser",
+                            published: true,
+                            description: [
+                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0",
+                            ],
+                        },
+                    ],
+                    image: {
+                        src: "/images/events/lunchtime-concert-series.jpg",
+                        alt: "@@COPY:pages.events.items.lunchtime_concert_series.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.lunchtime_concert_series.booknow.label",
+                        href: "/events/lunchtime-concert-series",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-4",
+                    slug: "dance-meets-arts",
+                    sessions: [
+                        {
+                            id: "dance-meets-arts-2026",
+                            calendarVisible: true,
+                            relationship: "organised",
+                            organiser:
+                                "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.organiser",
+                            eventSlug: "dance-meets-arts",
+                            title: "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.title",
+                            date: "2026-08-08",
+                            start: "19:00",
+                            end: "20:30",
+                            venueId: "members-terrace",
+                            type: "event",
+                            published: true,
+                        },
+                    ],
+                    relationship: "organised",
+                    organiser:
+                        "@@COPY:pages.events.items.dance_meets_arts.organiser",
+                    partners: [
+                        "@@COPY:pages.events.items.dance_meets_arts.partners.0",
+                    ],
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.dance_meets_arts.title",
+                    date: "@@COPY:pages.events.items.dance_meets_arts.date",
+                    dateIso: "2026-08-08",
+                    location:
+                        "@@COPY:pages.events.items.dance_meets_arts.location",
+                    excerpt:
+                        "@@COPY:pages.events.items.dance_meets_arts.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.dance_meets_arts.description.0",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.1",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.2",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.3",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.4",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.5",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.6",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.7",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.8",
+                        "@@COPY:pages.events.items.dance_meets_arts.description.9",
+                    ],
+                    image: {
+                        src: "/images/events/dance-meets-arts.jpeg",
+                        alt: "@@COPY:pages.events.items.dance_meets_arts.image.alt",
+                    },
+                    inlineGalleries: [
+                        {
+                            beforeHeading: "Programme",
+                            variant: "autoplay",
+                            images: [
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-01.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-02.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-03.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-04.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-05.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-06.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-07.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-08.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-09.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-10.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-11.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-12.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-13.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-14.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-15.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                                {
+                                    src: "/images/events/dance-meets-arts/gallery-16.jpg",
+                                    alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt",
+                                    width: 1024,
+                                    height: 682,
+                                },
+                            ],
+                        },
+                    ],
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.dance_meets_arts.booknow.label",
+                        href: "/events/dance-meets-arts",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "event-5",
+                    slug: "county-hall-dance-centre-opening-day",
+                    sessions: [
+                        {
+                            id: "opening-day-2026",
+                            calendarVisible: true,
+                            allDay: true,
+                            eventSlug: "county-hall-dance-centre-opening-day",
+                            title: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title",
+                            date: "2026-09-10",
+                            venueId: "county-hall-dance-school",
+                            type: "event",
+                            relationship: "organised",
+                            organiser:
+                                "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser",
+                            published: true,
+                        },
+                    ],
+                    relationship: "organised",
+                    organiser:
+                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.organiser",
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.title",
+                    date: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.date",
+                    dateIso: "2026-09-10",
+                    location:
+                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.location",
+                    excerpt:
+                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.0",
+                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.1",
+                    ],
+                    image: {
+                        src: "/images/events/opening-day.jpg",
+                        alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.image.alt",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/events/opening-day/ribbon-cutting.jpg",
+                            alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/events/opening-day/celebration-table.jpg",
+                            alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/events/opening-day/dressing-room.jpg",
+                            alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt",
+                        },
+                        {
+                            src: "/images/events/opening-day/bouquet.jpg",
+                            alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt",
+                        },
+                        {
+                            src: "/images/events/opening-day/crest.jpg",
+                            alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt",
+                        },
+                    ],
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.booknow.label",
+                        href: "/events/county-hall-dance-centre-opening-day",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "milonga-ojo-opening-2026",
+                    slug: "milonga-ojo-opening-night",
+                    sessions: [
+                        {
+                            id: "milonga-ojo-workshop-2026-09-26",
+                            eventSlug: "milonga-ojo-opening-night",
+                            title: "@@COPY:pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_workshop_2026_09_26.title",
+                            date: "2026-09-26",
+                            start: "19:00",
+                            end: "20:00",
+                            type: "workshop",
+                            style: "Tango",
+                            relationship: "hosted",
+                            venueId: "county-hall-dance-school",
+                            published: true,
+                        },
+                        {
+                            id: "milonga-ojo-social-2026-09-26",
+                            eventSlug: "milonga-ojo-opening-night",
+                            title: "@@COPY:pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_social_2026_09_26.title",
+                            date: "2026-09-26",
+                            start: "20:00",
+                            end: "23:00",
+                            type: "event",
+                            subtype: "social dance",
+                            style: "Tango",
+                            relationship: "hosted",
+                            venueId: "county-hall-dance-school",
+                            published: true,
+                        },
+                    ],
+                    listingCategory: "event",
+                    title: "@@COPY:pages.events.items.milonga_ojo_opening_night.title",
+                    date: "@@COPY:pages.events.items.milonga_ojo_opening_night.date",
+                    dateIso: "2026-09-26",
+                    location:
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.location",
+                    relationship: "hosted",
+                    hostedAt:
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.hostedat",
+                    excerpt:
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.description.0",
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.description.1",
+                        "@@COPY:pages.events.items.milonga_ojo_opening_night.description.2",
+                    ],
+                    image: {
+                        src: "/images/venue/wooden-floor-hall.jpg",
+                        alt: "@@COPY:pages.events.items.milonga_ojo_opening_night.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.milonga_ojo_opening_night.booknow.label",
+                        href: "/events/milonga-ojo-opening-night",
+                        variant: "primary",
+                    },
+                },
+                {
+                    id: "ceramics-yasemin-2026",
+                    slug: "ceramics-workshop-with-yasemin",
+                    sessions: [
+                        {
+                            id: "ceramics-2026-10-17",
+                            eventSlug: "ceramics-workshop-with-yasemin",
+                            title: "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.title",
+                            date: "2026-10-17",
+                            start: "16:30",
+                            end: "18:00",
+                            type: "workshop",
+                            subtype: "ceramics",
+                            relationship: "organised",
+                            organiser:
+                                "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.organiser",
+                            partners: [
+                                "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.partners.0",
+                            ],
+                            venueId: "county-hall-dance-school",
+                            published: true,
+                        },
+                    ],
+                    listingCategory: "workshop",
+                    title: "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.title",
+                    date: "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.date",
+                    dateIso: "2026-10-17",
+                    location:
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.location",
+                    relationship: "organised",
+                    organiser:
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.organiser",
+                    partners: [
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.partners.0",
+                    ],
+                    excerpt:
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.excerpt",
+                    description: [
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.description.0",
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.description.1",
+                        "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.description.2",
+                    ],
+                    image: {
+                        src: "/images/venue/gallery-01.jpg",
+                        alt: "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.image.alt",
+                    },
+                    bookNow: {
+                        label: "@@COPY:pages.events.items.ceramics_workshop_with_yasemin.booknow.label",
+                        href: "/events/ceramics-workshop-with-yasemin",
+                        variant: "primary",
+                    },
+                },
+            ],
+            categories: [
+                {
+                    slug: "milonga",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.milonga.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.milonga.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.milonga.hero.overline",
+                        title: "@@COPY:pages.events.categories.milonga.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.milonga.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.milonga.intro",
+                    sections: [
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.milonga.sections.upcoming.title",
+                        },
+                        {
+                            id: "what-to-expect",
+                            title: "@@COPY:pages.events.categories.milonga.sections.what_to_expect.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "social-dance-nights",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.social_dance_nights.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.social_dance_nights.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.social_dance_nights.hero.overline",
+                        title: "@@COPY:pages.events.categories.social_dance_nights.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.social_dance_nights.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.social_dance_nights.intro",
+                    sections: [
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.social_dance_nights.sections.upcoming.title",
+                        },
+                        {
+                            id: "how-to-join",
+                            title: "@@COPY:pages.events.categories.social_dance_nights.sections.how_to_join.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "workshops",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.workshops.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.workshops.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.workshops.hero.overline",
+                        title: "@@COPY:pages.events.categories.workshops.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.workshops.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.workshops.intro",
+                    sections: [
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.workshops.sections.upcoming.title",
+                        },
+                        {
+                            id: "booking",
+                            title: "@@COPY:pages.events.categories.workshops.sections.booking.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "masterclasses",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.masterclasses.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.masterclasses.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.masterclasses.hero.overline",
+                        title: "@@COPY:pages.events.categories.masterclasses.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.masterclasses.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.masterclasses.intro",
+                    sections: [
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.masterclasses.sections.upcoming.title",
+                        },
+                        {
+                            id: "levels",
+                            title: "@@COPY:pages.events.categories.masterclasses.sections.levels.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "performances",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.performances.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.performances.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.performances.hero.overline",
+                        title: "@@COPY:pages.events.categories.performances.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.performances.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.performances.intro",
+                    sections: [
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.performances.sections.upcoming.title",
+                        },
+                        {
+                            id: "tickets",
+                            title: "@@COPY:pages.events.categories.performances.sections.tickets.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "cross-arts-events",
+                    meta: {
+                        title: "@@COPY:pages.events.categories.cross_arts_events.meta.title",
+                        description:
+                            "@@COPY:pages.events.categories.cross_arts_events.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.events.categories.cross_arts_events.hero.overline",
+                        title: "@@COPY:pages.events.categories.cross_arts_events.hero.title",
+                        subtitle:
+                            "@@COPY:pages.events.categories.cross_arts_events.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.events.categories.cross_arts_events.intro",
+                    sections: [
+                        {
+                            id: "programme",
+                            title: "@@COPY:pages.events.categories.cross_arts_events.sections.programme.title",
+                        },
+                        {
+                            id: "upcoming",
+                            title: "@@COPY:pages.events.categories.cross_arts_events.sections.upcoming.title",
+                        },
+                    ],
+                },
+            ],
+            detailLabels: {
+                date: "@@COPY:pages.events.detaillabels.date",
+                location: "@@COPY:pages.events.detaillabels.location",
+                backLink: "@@COPY:pages.events.detaillabels.backlink",
+                eventInformation:
+                    "@@COPY:pages.events.detaillabels.eventinformation",
+                organiser: "@@COPY:pages.events.detaillabels.organiser",
+                partners: "@@COPY:pages.events.detaillabels.partners",
+                hostedAt: "@@COPY:pages.events.detaillabels.hostedat",
+                promotedBy: "@@COPY:pages.events.detaillabels.promotedby",
+                pastConcerts: "@@COPY:pages.events.detaillabels.pastconcerts",
+                programme: "@@COPY:pages.events.detaillabels.programme",
+                booking: "@@COPY:pages.events.detaillabels.booking",
+                venuePending: "@@COPY:pages.events.detaillabels.venuepending",
+                timePending: "@@COPY:pages.events.detaillabels.timepending",
+                endPending: "@@COPY:pages.events.detaillabels.endpending",
+                allDay: "@@COPY:pages.events.detaillabels.allday",
+                room: "@@COPY:pages.events.detaillabels.room",
+                upcomingConcerts:
+                    "@@COPY:pages.events.detaillabels.upcomingconcerts",
+            },
+            categoryLabels: {
+                backLink: "@@COPY:pages.events.categorylabels.backlink",
+            },
         },
-        {
-          "id": "schools",
-          "title": "@@COPY:pages.privatelessons.sections.schools.title",
-          "body": "@@COPY:pages.privatelessons.sections.schools.body",
-          "cta": {
-            "label": "@@COPY:pages.privatelessons.sections.schools.cta.label",
-            "href": "/contact?subject=private-lessons",
-            "variant": "secondary"
-          },
-          "gallery": [
-            {
-              "src": "/images/events/ballet-masterclass.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.0.alt"
+        venueHire: {
+            overview: {
+                timetableNote: "@@COPY:pages.venuehire.overview.timetablenote",
+                timetableLink: {
+                    label: "@@COPY:pages.venuehire.overview.timetablelink.label",
+                    href: "/timetable",
+                },
+                meta: {
+                    title: "@@COPY:pages.venuehire.overview.meta.title",
+                    description:
+                        "@@COPY:pages.venuehire.overview.meta.description",
+                },
+                hero: {
+                    overline: "@@COPY:pages.venuehire.overview.hero.overline",
+                    title: "@@COPY:pages.venuehire.overview.hero.title",
+                    subtitle: "@@COPY:pages.venuehire.overview.hero.subtitle",
+                    image: {
+                        src: "/images/hero/slide-5-venue.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.hero.image.alt",
+                    },
+                },
+                intro: "@@COPY:pages.venuehire.overview.intro",
+                gallery: [
+                    {
+                        src: "/images/venue/gallery-01.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.gallery.0.alt",
+                        width: 1024,
+                        height: 447,
+                    },
+                    {
+                        src: "/images/venue/gallery-02.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.gallery.1.alt",
+                        width: 1024,
+                        height: 519,
+                    },
+                    {
+                        src: "/images/venue/gallery-03.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.gallery.2.alt",
+                        width: 1024,
+                        height: 472,
+                    },
+                    {
+                        src: "/images/venue/gallery-04.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.gallery.3.alt",
+                        width: 1024,
+                        height: 576,
+                    },
+                    {
+                        src: "/images/venue/gallery-05.jpg",
+                        alt: "@@COPY:pages.venuehire.overview.gallery.4.alt",
+                        width: 1024,
+                        height: 486,
+                    },
+                ],
+                spaces: {
+                    title: "@@COPY:pages.venuehire.overview.spaces.title",
+                    items: [
+                        {
+                            id: "vinyl-venue",
+                            title: "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.title",
+                            size: "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.size",
+                            floor: "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.floor",
+                            idealFor:
+                                "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.idealfor",
+                            body: "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.body",
+                            image: {
+                                src: "/images/venue/vinyl-floor.jpg",
+                                alt: "@@COPY:pages.venuehire.overview.spaces.items.vinyl_venue.image.alt",
+                                width: 1024,
+                                height: 768,
+                            },
+                        },
+                        {
+                            id: "wooden-hall",
+                            title: "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.title",
+                            size: "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.size",
+                            floor: "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.floor",
+                            idealFor:
+                                "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.idealfor",
+                            body: "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.body",
+                            image: {
+                                src: "/images/venue/wooden-floor-hall.jpg",
+                                alt: "@@COPY:pages.venuehire.overview.spaces.items.wooden_hall.image.alt",
+                                width: 1024,
+                                height: 768,
+                            },
+                        },
+                    ],
+                    wholeVenue:
+                        "Book both spaces together for approx. 300 m² and up to 120 guests.",
+                },
+                facts: {
+                    title: "@@COPY:pages.venuehire.overview.facts.title",
+                    items: [
+                        "@@COPY:pages.venuehire.overview.facts.items.0",
+                        "@@COPY:pages.venuehire.overview.facts.items.1",
+                        "@@COPY:pages.venuehire.overview.facts.items.2",
+                        "@@COPY:pages.venuehire.overview.facts.items.3",
+                    ],
+                },
+                facilities: {
+                    title: "@@COPY:pages.venuehire.overview.facilities.title",
+                    includedNote:
+                        "@@COPY:pages.venuehire.overview.facilities.includednote",
+                    items: [
+                        "@@COPY:pages.venuehire.overview.facilities.items.0",
+                        "@@COPY:pages.venuehire.overview.facilities.items.1",
+                        "@@COPY:pages.venuehire.overview.facilities.items.2",
+                        "@@COPY:pages.venuehire.overview.facilities.items.3",
+                        "@@COPY:pages.venuehire.overview.facilities.items.4",
+                        "@@COPY:pages.venuehire.overview.facilities.items.5",
+                        "@@COPY:pages.venuehire.overview.facilities.items.6",
+                        "@@COPY:pages.venuehire.overview.facilities.items.7",
+                        "@@COPY:pages.venuehire.overview.facilities.items.8",
+                        "@@COPY:pages.venuehire.overview.facilities.items.9",
+                    ],
+                    extraNote:
+                        "@@COPY:pages.venuehire.overview.facilities.extranote",
+                },
+                suitableFor: {
+                    title: "@@COPY:pages.venuehire.overview.suitablefor.title",
+                    items: [
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.0",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.1",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.2",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.3",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.4",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.5",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.6",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.7",
+                        "@@COPY:pages.venuehire.overview.suitablefor.items.8",
+                    ],
+                },
+                pricing: {
+                    title: "@@COPY:pages.venuehire.overview.pricing.title",
+                    columns: [
+                        "@@COPY:pages.venuehire.overview.pricing.columns.0",
+                        "@@COPY:pages.venuehire.overview.pricing.columns.1",
+                        "@@COPY:pages.venuehire.overview.pricing.columns.2",
+                    ],
+                    rows: [
+                        {
+                            label: "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.label",
+                            standard:
+                                "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.standard",
+                            member: "@@COPY:pages.venuehire.overview.pricing.rows.weekday_per_hour.member",
+                        },
+                        {
+                            label: "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.label",
+                            standard:
+                                "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.standard",
+                            member: "@@COPY:pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.member",
+                        },
+                        {
+                            label: "@@COPY:pages.venuehire.overview.pricing.rows.half_day.label",
+                            standard:
+                                "@@COPY:pages.venuehire.overview.pricing.rows.half_day.standard",
+                            member: "@@COPY:pages.venuehire.overview.pricing.rows.half_day.member",
+                        },
+                    ],
+                    notes: [
+                        "@@COPY:pages.venuehire.overview.pricing.notes.0",
+                        "@@COPY:pages.venuehire.overview.pricing.notes.1",
+                        "@@COPY:pages.venuehire.overview.pricing.notes.2",
+                        "@@COPY:pages.venuehire.overview.pricing.notes.3",
+                        "@@COPY:pages.venuehire.overview.pricing.notes.4",
+                    ],
+                    membershipLink: {
+                        label: "@@COPY:pages.venuehire.overview.pricing.membershiplink.label",
+                        href: "/membership",
+                        variant: "text",
+                    },
+                },
+                howToBook: {
+                    title: "@@COPY:pages.venuehire.overview.howtobook.title",
+                    steps: [
+                        {
+                            title: "@@COPY:pages.venuehire.overview.howtobook.steps.0.title",
+                            body: "@@COPY:pages.venuehire.overview.howtobook.steps.0.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.howtobook.steps.1.title",
+                            body: "@@COPY:pages.venuehire.overview.howtobook.steps.1.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.howtobook.steps.2.title",
+                            body: "@@COPY:pages.venuehire.overview.howtobook.steps.2.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.howtobook.steps.3.title",
+                            body: "@@COPY:pages.venuehire.overview.howtobook.steps.3.body",
+                        },
+                    ],
+                },
+                terms: {
+                    title: "@@COPY:pages.venuehire.overview.terms.title",
+                    items: [
+                        {
+                            title: "@@COPY:pages.venuehire.overview.terms.items.0.title",
+                            body: "@@COPY:pages.venuehire.overview.terms.items.0.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.terms.items.1.title",
+                            body: "@@COPY:pages.venuehire.overview.terms.items.1.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.terms.items.2.title",
+                            body: "@@COPY:pages.venuehire.overview.terms.items.2.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.terms.items.3.title",
+                            body: "@@COPY:pages.venuehire.overview.terms.items.3.body",
+                        },
+                        {
+                            title: "@@COPY:pages.venuehire.overview.terms.items.4.title",
+                            body: "@@COPY:pages.venuehire.overview.terms.items.4.body",
+                        },
+                    ],
+                },
+                cta: {
+                    title: "@@COPY:pages.venuehire.overview.cta.title",
+                    body: "@@COPY:pages.venuehire.overview.cta.body",
+                    button: {
+                        label: "@@COPY:pages.venuehire.overview.cta.button.label",
+                        href: "/contact?subject=venue-hire",
+                        variant: "primary",
+                    },
+                    secondaryButton: {
+                        label: "@@COPY:pages.venuehire.overview.cta.secondarybutton.label",
+                        href: "/timetable",
+                        variant: "secondary",
+                    },
+                    secondary: "@@COPY:pages.venuehire.overview.cta.secondary",
+                },
             },
-            {
-              "src": "/images/hero/slide-6.jpg",
-              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.1.alt"
-            },
-            {
-              "src": "/images/courses/junior-ballet.svg",
-              "alt": "@@COPY:pages.privatelessons.sections.schools.gallery.2.alt"
-            }
-          ]
-        }
-      ],
-      "howItWorks": {
-        "title": "@@COPY:pages.privatelessons.howitworks.title",
-        "steps": [
-          {
-            "title": "@@COPY:pages.privatelessons.howitworks.steps.0.title",
-            "body": "@@COPY:pages.privatelessons.howitworks.steps.0.body"
-          },
-          {
-            "title": "@@COPY:pages.privatelessons.howitworks.steps.1.title",
-            "body": "@@COPY:pages.privatelessons.howitworks.steps.1.body"
-          },
-          {
-            "title": "@@COPY:pages.privatelessons.howitworks.steps.2.title",
-            "body": "@@COPY:pages.privatelessons.howitworks.steps.2.body"
-          }
-        ]
-      },
-      "cta": {
-        "title": "@@COPY:pages.privatelessons.cta.title",
-        "body": "@@COPY:pages.privatelessons.cta.body",
-        "button": {
-          "label": "@@COPY:pages.privatelessons.cta.button.label",
-          "href": "/contact?subject=private-lessons",
-          "variant": "primary"
+            subpages: [
+                {
+                    slug: "space-booking",
+                    meta: {
+                        title: "@@COPY:pages.venuehire.subpages.space_booking.meta.title",
+                        description:
+                            "@@COPY:pages.venuehire.subpages.space_booking.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.venuehire.subpages.space_booking.hero.overline",
+                        title: "@@COPY:pages.venuehire.subpages.space_booking.hero.title",
+                        subtitle:
+                            "@@COPY:pages.venuehire.subpages.space_booking.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.venuehire.subpages.space_booking.intro",
+                    sections: [
+                        {
+                            id: "how-to-book",
+                            title: "@@COPY:pages.venuehire.subpages.space_booking.sections.how_to_book.title",
+                        },
+                        {
+                            id: "enquiry-form",
+                            title: "@@COPY:pages.venuehire.subpages.space_booking.sections.enquiry_form.title",
+                        },
+                    ],
+                },
+            ],
         },
-        "secondary": "@@COPY:pages.privatelessons.cta.secondary"
-      }
+        privateLessons: {
+            meta: {
+                title: "@@COPY:pages.privatelessons.meta.title",
+                description: "@@COPY:pages.privatelessons.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.privatelessons.hero.overline",
+                title: "@@COPY:pages.privatelessons.hero.title",
+                subtitle: "@@COPY:pages.privatelessons.hero.subtitle",
+            },
+            intro: "@@COPY:pages.privatelessons.intro",
+            sections: [
+                {
+                    id: "one-to-one",
+                    title: "@@COPY:pages.privatelessons.sections.one_to_one.title",
+                    body: "@@COPY:pages.privatelessons.sections.one_to_one.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.one_to_one.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/hero/slide-4.png",
+                            alt: "@@COPY:pages.privatelessons.sections.one_to_one.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-1.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.one_to_one.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-6.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.one_to_one.gallery.2.alt",
+                        },
+                    ],
+                },
+                {
+                    id: "couples",
+                    title: "@@COPY:pages.privatelessons.sections.couples.title",
+                    body: "@@COPY:pages.privatelessons.sections.couples.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.couples.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/hero/slide-2.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.couples.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/private-events/promo.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.couples.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-5.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.couples.gallery.2.alt",
+                        },
+                    ],
+                },
+                {
+                    id: "wedding",
+                    title: "@@COPY:pages.privatelessons.sections.wedding.title",
+                    body: "@@COPY:pages.privatelessons.sections.wedding.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.wedding.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/hero/slide-2.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.wedding.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/events/winter-showcase.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.wedding.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-4.png",
+                            alt: "@@COPY:pages.privatelessons.sections.wedding.gallery.2.alt",
+                        },
+                    ],
+                },
+                {
+                    id: "groups",
+                    title: "@@COPY:pages.privatelessons.sections.groups.title",
+                    body: "@@COPY:pages.privatelessons.sections.groups.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.groups.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/private-events/promo.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.groups.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/events/musical-theatre.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.groups.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-3.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.groups.gallery.2.alt",
+                        },
+                    ],
+                },
+                {
+                    id: "corporate",
+                    title: "@@COPY:pages.privatelessons.sections.corporate.title",
+                    body: "@@COPY:pages.privatelessons.sections.corporate.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.corporate.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/hero/slide-3.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.corporate.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-1.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.corporate.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/events/contemporary-intensive.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.corporate.gallery.2.alt",
+                        },
+                    ],
+                },
+                {
+                    id: "schools",
+                    title: "@@COPY:pages.privatelessons.sections.schools.title",
+                    body: "@@COPY:pages.privatelessons.sections.schools.body",
+                    cta: {
+                        label: "@@COPY:pages.privatelessons.sections.schools.cta.label",
+                        href: "/contact?subject=private-lessons",
+                        variant: "secondary",
+                    },
+                    gallery: [
+                        {
+                            src: "/images/events/ballet-masterclass.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.schools.gallery.0.alt",
+                        },
+                        {
+                            src: "/images/hero/slide-6.jpg",
+                            alt: "@@COPY:pages.privatelessons.sections.schools.gallery.1.alt",
+                        },
+                        {
+                            src: "/images/courses/junior-ballet.svg",
+                            alt: "@@COPY:pages.privatelessons.sections.schools.gallery.2.alt",
+                        },
+                    ],
+                },
+            ],
+            howItWorks: {
+                title: "@@COPY:pages.privatelessons.howitworks.title",
+                steps: [
+                    {
+                        title: "@@COPY:pages.privatelessons.howitworks.steps.0.title",
+                        body: "@@COPY:pages.privatelessons.howitworks.steps.0.body",
+                    },
+                    {
+                        title: "@@COPY:pages.privatelessons.howitworks.steps.1.title",
+                        body: "@@COPY:pages.privatelessons.howitworks.steps.1.body",
+                    },
+                    {
+                        title: "@@COPY:pages.privatelessons.howitworks.steps.2.title",
+                        body: "@@COPY:pages.privatelessons.howitworks.steps.2.body",
+                    },
+                ],
+            },
+            cta: {
+                title: "@@COPY:pages.privatelessons.cta.title",
+                body: "@@COPY:pages.privatelessons.cta.body",
+                button: {
+                    label: "@@COPY:pages.privatelessons.cta.button.label",
+                    href: "/contact?subject=private-lessons",
+                    variant: "primary",
+                },
+                secondary: "@@COPY:pages.privatelessons.cta.secondary",
+            },
+        },
+        classesInfo: {
+            meta: {
+                title: "@@COPY:pages.classesinfo.meta.title",
+                description: "@@COPY:pages.classesinfo.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.classesinfo.hero.overline",
+                title: "@@COPY:pages.classesinfo.hero.title",
+                subtitle: "@@COPY:pages.classesinfo.hero.subtitle",
+            },
+            intro: "@@COPY:pages.classesinfo.intro",
+            cardLink: "View class →",
+            sections: [
+                {
+                    id: "descriptions",
+                    title: "@@COPY:pages.classesinfo.sections.descriptions.title",
+                },
+                {
+                    id: "instructors",
+                    title: "@@COPY:pages.classesinfo.sections.instructors.title",
+                },
+            ],
+        },
+        classBooking: {
+            meta: {
+                title: "@@COPY:pages.classbooking.meta.title",
+                description: "@@COPY:pages.classbooking.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.classbooking.hero.overline",
+                title: "@@COPY:pages.classbooking.hero.title",
+                subtitle: "@@COPY:pages.classbooking.hero.subtitle",
+            },
+            intro: "@@COPY:pages.classbooking.intro",
+            sections: [
+                {
+                    id: "how-to-book",
+                    title: "@@COPY:pages.classbooking.sections.how_to_book.title",
+                },
+                {
+                    id: "policies",
+                    title: "@@COPY:pages.classbooking.sections.policies.title",
+                },
+            ],
+        },
+        membership: {
+            overview: {
+                meta: {
+                    title: "@@COPY:pages.membership.overview.meta.title",
+                    description:
+                        "@@COPY:pages.membership.overview.meta.description",
+                },
+                hero: {
+                    overline: "@@COPY:pages.membership.overview.hero.overline",
+                    title: "@@COPY:pages.membership.overview.hero.title",
+                    subtitle: "@@COPY:pages.membership.overview.hero.subtitle",
+                },
+                intro: "@@COPY:pages.membership.overview.intro",
+                plans: {
+                    title: "@@COPY:pages.membership.overview.plans.title",
+                    items: [
+                        {
+                            id: "monthly",
+                            title: "@@COPY:pages.membership.overview.plans.items.monthly.title",
+                            price: "@@COPY:pages.membership.overview.plans.items.monthly.price",
+                            body: "@@COPY:pages.membership.overview.plans.items.monthly.body",
+                        },
+                        {
+                            id: "quarterly",
+                            title: "@@COPY:pages.membership.overview.plans.items.quarterly.title",
+                            price: "@@COPY:pages.membership.overview.plans.items.quarterly.price",
+                            body: "@@COPY:pages.membership.overview.plans.items.quarterly.body",
+                        },
+                        {
+                            id: "annual",
+                            title: "@@COPY:pages.membership.overview.plans.items.annual.title",
+                            price: "@@COPY:pages.membership.overview.plans.items.annual.price",
+                            body: "@@COPY:pages.membership.overview.plans.items.annual.body",
+                        },
+                    ],
+                    cta: {
+                        label: "@@COPY:pages.membership.overview.plans.cta.label",
+                        href: "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+                        variant: "primary",
+                        external: true,
+                    },
+                },
+                styles: {
+                    title: "@@COPY:pages.membership.overview.styles.title",
+                    items: [
+                        "@@COPY:pages.membership.overview.styles.items.0",
+                        "@@COPY:pages.membership.overview.styles.items.1",
+                        "@@COPY:pages.membership.overview.styles.items.2",
+                        "@@COPY:pages.membership.overview.styles.items.3",
+                        "@@COPY:pages.membership.overview.styles.items.4",
+                        "@@COPY:pages.membership.overview.styles.items.5",
+                    ],
+                },
+                benefits: {
+                    title: "@@COPY:pages.membership.overview.benefits.title",
+                    items: [
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.0.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.0.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.1.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.1.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.2.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.2.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.3.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.3.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.4.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.4.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.5.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.5.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.6.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.6.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.7.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.7.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.8.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.8.body",
+                        },
+                        {
+                            title: "@@COPY:pages.membership.overview.benefits.items.9.title",
+                            body: "@@COPY:pages.membership.overview.benefits.items.9.body",
+                        },
+                    ],
+                },
+                howToJoin: {
+                    title: "@@COPY:pages.membership.overview.howtojoin.title",
+                    steps: [
+                        "@@COPY:pages.membership.overview.howtojoin.steps.0",
+                        "@@COPY:pages.membership.overview.howtojoin.steps.1",
+                        "@@COPY:pages.membership.overview.howtojoin.steps.2",
+                        "@@COPY:pages.membership.overview.howtojoin.steps.3",
+                    ],
+                },
+                faq: {
+                    title: "@@COPY:pages.membership.overview.faq.title",
+                    items: [
+                        {
+                            id: "membership-faq-trial",
+                            question:
+                                "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.question",
+                            answer: "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.answer",
+                        },
+                        {
+                            id: "membership-faq-styles",
+                            question:
+                                "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.question",
+                            answer: "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.answer",
+                        },
+                        {
+                            id: "membership-faq-hire",
+                            question:
+                                "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.question",
+                            answer: "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.answer",
+                        },
+                    ],
+                },
+                cta: {
+                    title: "@@COPY:pages.membership.overview.cta.title",
+                    body: "@@COPY:pages.membership.overview.cta.body",
+                    button: {
+                        label: "@@COPY:pages.membership.overview.cta.button.label",
+                        href: "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
+                        variant: "primary",
+                        external: true,
+                    },
+                    secondary: "@@COPY:pages.membership.overview.cta.secondary",
+                },
+            },
+            subpages: [
+                {
+                    slug: "member-benefits",
+                    meta: {
+                        title: "@@COPY:pages.membership.subpages.member_benefits.meta.title",
+                        description:
+                            "@@COPY:pages.membership.subpages.member_benefits.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.membership.subpages.member_benefits.hero.overline",
+                        title: "@@COPY:pages.membership.subpages.member_benefits.hero.title",
+                        subtitle:
+                            "@@COPY:pages.membership.subpages.member_benefits.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.membership.subpages.member_benefits.intro",
+                    sections: [
+                        {
+                            id: "benefits",
+                            title: "@@COPY:pages.membership.subpages.member_benefits.sections.benefits.title",
+                        },
+                        {
+                            id: "how-to-join",
+                            title: "@@COPY:pages.membership.subpages.member_benefits.sections.how_to_join.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "monthly-passes",
+                    meta: {
+                        title: "@@COPY:pages.membership.subpages.monthly_passes.meta.title",
+                        description:
+                            "@@COPY:pages.membership.subpages.monthly_passes.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.membership.subpages.monthly_passes.hero.overline",
+                        title: "@@COPY:pages.membership.subpages.monthly_passes.hero.title",
+                        subtitle:
+                            "@@COPY:pages.membership.subpages.monthly_passes.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.membership.subpages.monthly_passes.intro",
+                    sections: [
+                        {
+                            id: "pass-options",
+                            title: "@@COPY:pages.membership.subpages.monthly_passes.sections.pass_options.title",
+                        },
+                        {
+                            id: "terms",
+                            title: "@@COPY:pages.membership.subpages.monthly_passes.sections.terms.title",
+                        },
+                    ],
+                },
+                {
+                    slug: "booking-access",
+                    meta: {
+                        title: "@@COPY:pages.membership.subpages.booking_access.meta.title",
+                        description:
+                            "@@COPY:pages.membership.subpages.booking_access.meta.description",
+                    },
+                    hero: {
+                        overline:
+                            "@@COPY:pages.membership.subpages.booking_access.hero.overline",
+                        title: "@@COPY:pages.membership.subpages.booking_access.hero.title",
+                        subtitle:
+                            "@@COPY:pages.membership.subpages.booking_access.hero.subtitle",
+                    },
+                    intro: "@@COPY:pages.membership.subpages.booking_access.intro",
+                    sections: [
+                        {
+                            id: "member-booking",
+                            title: "@@COPY:pages.membership.subpages.booking_access.sections.member_booking.title",
+                        },
+                        {
+                            id: "support",
+                            title: "@@COPY:pages.membership.subpages.booking_access.sections.support.title",
+                        },
+                    ],
+                },
+            ],
+        },
+        about: {
+            meta: {
+                title: "@@COPY:pages.about.meta.title",
+                description: "@@COPY:pages.about.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.about.hero.overline",
+                title: "@@COPY:pages.about.hero.title",
+                subtitle: "@@COPY:pages.about.hero.subtitle",
+                image: {
+                    src: "/images/about/teaser.svg",
+                    alt: "@@COPY:pages.about.hero.image.alt",
+                },
+            },
+            story: {
+                title: "@@COPY:pages.about.story.title",
+                paragraphs: ["@@COPY:pages.about.story.paragraphs.0"],
+                gallery: [
+                    {
+                        src: "/images/about/story-gallery-01.jpg",
+                        alt: "@@COPY:pages.about.story.gallery.0.alt",
+                        width: 1024,
+                        height: 576,
+                    },
+                ],
+            },
+            values: {
+                overline: "@@COPY:pages.about.values.overline",
+                title: "@@COPY:pages.about.values.title",
+                items: [
+                    {
+                        title: "@@COPY:pages.about.values.items.0.title",
+                        description:
+                            "@@COPY:pages.about.values.items.0.description",
+                    },
+                    {
+                        title: "@@COPY:pages.about.values.items.1.title",
+                        description:
+                            "@@COPY:pages.about.values.items.1.description",
+                    },
+                    {
+                        title: "@@COPY:pages.about.values.items.2.title",
+                        description:
+                            "@@COPY:pages.about.values.items.2.description",
+                    },
+                    {
+                        title: "@@COPY:pages.about.values.items.3.title",
+                        description:
+                            "@@COPY:pages.about.values.items.3.description",
+                    },
+                ],
+            },
+            cta: {
+                title: "@@COPY:pages.about.cta.title",
+                body: "@@COPY:pages.about.cta.body",
+                button: {
+                    label: "@@COPY:pages.about.cta.button.label",
+                    href: "/contact",
+                    variant: "primary",
+                },
+            },
+        },
+        booking: {
+            meta: {
+                title: "@@COPY:pages.booking.meta.title",
+                description: "@@COPY:pages.booking.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.booking.hero.overline",
+                title: "@@COPY:pages.booking.hero.title",
+                subtitle: "@@COPY:pages.booking.hero.subtitle",
+            },
+            form: {
+                title: "@@COPY:pages.booking.form.title",
+                description: "@@COPY:pages.booking.form.description",
+                submitLabel: "@@COPY:pages.booking.form.submitlabel",
+                successMessage: "@@COPY:pages.booking.form.successmessage",
+                selectPlaceholder:
+                    "@@COPY:pages.booking.form.selectplaceholder",
+                action: "mailto:info@countyhalldancecentre.com",
+                fields: [
+                    {
+                        name: "name",
+                        label: "@@COPY:pages.booking.form.fields.full_name.label",
+                        type: "text",
+                        placeholder:
+                            "@@COPY:pages.booking.form.fields.full_name.placeholder",
+                        required: true,
+                    },
+                    {
+                        name: "email",
+                        label: "@@COPY:pages.booking.form.fields.email_address.label",
+                        type: "email",
+                        placeholder:
+                            "@@COPY:pages.booking.form.fields.email_address.placeholder",
+                        required: true,
+                    },
+                    {
+                        name: "phone",
+                        label: "@@COPY:pages.booking.form.fields.phone_optional.label",
+                        type: "tel",
+                        placeholder:
+                            "@@COPY:pages.booking.form.fields.phone_optional.placeholder",
+                    },
+                    {
+                        name: "about",
+                        label: "@@COPY:pages.booking.form.fields.enquiry_about.label",
+                        type: "select",
+                        required: true,
+                        options: [
+                            {
+                                label: "@@COPY:pages.booking.form.fields.enquiry_about.options.venue_hire.label",
+                                value: "venue-hire",
+                            },
+                            {
+                                label: "@@COPY:pages.booking.form.fields.enquiry_about.options.classes_booking.label",
+                                value: "classes-booking",
+                            },
+                            {
+                                label: "@@COPY:pages.booking.form.fields.enquiry_about.options.membership_booking.label",
+                                value: "membership-booking",
+                            },
+                            {
+                                label: "@@COPY:pages.booking.form.fields.enquiry_about.options.general_enquire.label",
+                                value: "general-enquire",
+                            },
+                        ],
+                    },
+                    {
+                        name: "message",
+                        label: "@@COPY:pages.booking.form.fields.message.label",
+                        type: "textarea",
+                        placeholder:
+                            "@@COPY:pages.booking.form.fields.message.placeholder",
+                        required: true,
+                    },
+                ],
+            },
+        },
+        contact: {
+            meta: {
+                title: "@@COPY:pages.contact.meta.title",
+                description: "@@COPY:pages.contact.meta.description",
+            },
+            hero: {
+                overline: "@@COPY:pages.contact.hero.overline",
+                title: "@@COPY:pages.contact.hero.title",
+                subtitle: "@@COPY:pages.contact.hero.subtitle",
+            },
+            details: {
+                title: "@@COPY:pages.contact.details.title",
+                address: [
+                    "@@COPY:pages.contact.details.address.0",
+                    "@@COPY:pages.contact.details.address.1",
+                    "@@COPY:pages.contact.details.address.2",
+                ],
+                phone: "@@COPY:pages.contact.details.phone",
+                email: "@@COPY:pages.contact.details.email",
+                hours: "@@COPY:pages.contact.details.hours",
+                wechat: "@@COPY:pages.contact.details.wechat",
+                instagramLabel: "@@COPY:pages.contact.details.instagramlabel",
+                instagramHref:
+                    "https://www.instagram.com/countyhalldancecentre",
+                membershipLabel: "@@COPY:pages.contact.details.membershiplabel",
+                membershipHref: "mailto:membership@countyhalldancecentre.com",
+                gettingHere: "@@COPY:pages.contact.details.gettinghere",
+            },
+            map: {
+                title: "@@COPY:pages.contact.map.title",
+                embedUrl:
+                    "https://maps.google.com/maps?q=County+Hall+Main+Entrance,+Belvedere+Road,+London+SE1+7PB&output=embed",
+                directionsLabel: "@@COPY:pages.contact.map.directionslabel",
+                directionsHref: "https://share.google/7weL1s5w3ItPjJyAZ",
+            },
+            form: {
+                title: "@@COPY:pages.contact.form.title",
+                description: "@@COPY:pages.contact.form.description",
+                submitLabel: "@@COPY:pages.contact.form.submitlabel",
+                successMessage: "@@COPY:pages.contact.form.successmessage",
+                selectPlaceholder:
+                    "@@COPY:pages.contact.form.selectplaceholder",
+                action: "mailto:info@countyhalldancecentre.com",
+                fields: [
+                    {
+                        name: "name",
+                        label: "@@COPY:pages.contact.form.fields.full_name.label",
+                        type: "text",
+                        placeholder:
+                            "@@COPY:pages.contact.form.fields.full_name.placeholder",
+                        required: true,
+                    },
+                    {
+                        name: "email",
+                        label: "@@COPY:pages.contact.form.fields.email_address.label",
+                        type: "email",
+                        placeholder:
+                            "@@COPY:pages.contact.form.fields.email_address.placeholder",
+                        required: true,
+                    },
+                    {
+                        name: "phone",
+                        label: "@@COPY:pages.contact.form.fields.phone_optional.label",
+                        type: "tel",
+                        placeholder:
+                            "@@COPY:pages.contact.form.fields.phone_optional.placeholder",
+                    },
+                    {
+                        name: "subject",
+                        label: "@@COPY:pages.contact.form.fields.subject.label",
+                        type: "select",
+                        required: true,
+                        options: [
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.general_enquiry.label",
+                                value: "general",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.classes_timetable.label",
+                                value: "classes",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.membership.label",
+                                value: "membership",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.private_lessons_experiences.label",
+                                value: "private-lessons",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.venue_hire.label",
+                                value: "venue-hire",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.events.label",
+                                value: "events",
+                            },
+                        ],
+                    },
+                    {
+                        name: "message",
+                        label: "@@COPY:pages.contact.form.fields.message.label",
+                        type: "textarea",
+                        placeholder:
+                            "@@COPY:pages.contact.form.fields.message.placeholder",
+                        required: true,
+                    },
+                ],
+            },
+        },
     },
-    "classesInfo": {
-      "meta": {
-        "title": "@@COPY:pages.classesinfo.meta.title",
-        "description": "@@COPY:pages.classesinfo.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.classesinfo.hero.overline",
-        "title": "@@COPY:pages.classesinfo.hero.title",
-        "subtitle": "@@COPY:pages.classesinfo.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.classesinfo.intro",
-      "cardLink": "View class →",
-      "sections": [
-        {
-          "id": "descriptions",
-          "title": "@@COPY:pages.classesinfo.sections.descriptions.title"
+    ui: {
+        sectionedPage: {
+            comingSoon: "Content for this section is coming soon.",
         },
-        {
-          "id": "instructors",
-          "title": "@@COPY:pages.classesinfo.sections.instructors.title"
-        }
-      ]
+        header: {
+            mainNavigation: "Main navigation",
+            mobileNavigation: "Mobile navigation",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            submenuSuffix: " submenu",
+        },
+        hero: {
+            featuredHighlights: "Featured highlights",
+            slideNavigation: "Slide navigation",
+            slidePrefix: "Slide",
+        },
+        booking: {
+            preferDirectPrefix: "Prefer to reach us directly? Email",
+            orCall: "or call",
+        },
+        form: {
+            requiredMarker: " *",
+        },
     },
-    "classBooking": {
-      "meta": {
-        "title": "@@COPY:pages.classbooking.meta.title",
-        "description": "@@COPY:pages.classbooking.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.classbooking.hero.overline",
-        "title": "@@COPY:pages.classbooking.hero.title",
-        "subtitle": "@@COPY:pages.classbooking.hero.subtitle"
-      },
-      "intro": "@@COPY:pages.classbooking.intro",
-      "sections": [
-        {
-          "id": "how-to-book",
-          "title": "@@COPY:pages.classbooking.sections.how_to_book.title"
-        },
-        {
-          "id": "policies",
-          "title": "@@COPY:pages.classbooking.sections.policies.title"
-        }
-      ]
-    },
-    "membership": {
-      "overview": {
-        "meta": {
-          "title": "@@COPY:pages.membership.overview.meta.title",
-          "description": "@@COPY:pages.membership.overview.meta.description"
-        },
-        "hero": {
-          "overline": "@@COPY:pages.membership.overview.hero.overline",
-          "title": "@@COPY:pages.membership.overview.hero.title",
-          "subtitle": "@@COPY:pages.membership.overview.hero.subtitle"
-        },
-        "intro": "@@COPY:pages.membership.overview.intro",
-        "plans": {
-          "title": "@@COPY:pages.membership.overview.plans.title",
-          "items": [
-            {
-              "id": "monthly",
-              "title": "@@COPY:pages.membership.overview.plans.items.monthly.title",
-              "price": "@@COPY:pages.membership.overview.plans.items.monthly.price",
-              "body": "@@COPY:pages.membership.overview.plans.items.monthly.body"
-            },
-            {
-              "id": "quarterly",
-              "title": "@@COPY:pages.membership.overview.plans.items.quarterly.title",
-              "price": "@@COPY:pages.membership.overview.plans.items.quarterly.price",
-              "body": "@@COPY:pages.membership.overview.plans.items.quarterly.body"
-            },
-            {
-              "id": "annual",
-              "title": "@@COPY:pages.membership.overview.plans.items.annual.title",
-              "price": "@@COPY:pages.membership.overview.plans.items.annual.price",
-              "body": "@@COPY:pages.membership.overview.plans.items.annual.body"
-            }
-          ],
-          "cta": {
-            "label": "@@COPY:pages.membership.overview.plans.cta.label",
-            "href": "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
-            "variant": "primary",
-            "external": true
-          }
-        },
-        "styles": {
-          "title": "@@COPY:pages.membership.overview.styles.title",
-          "items": [
-            "@@COPY:pages.membership.overview.styles.items.0",
-            "@@COPY:pages.membership.overview.styles.items.1",
-            "@@COPY:pages.membership.overview.styles.items.2",
-            "@@COPY:pages.membership.overview.styles.items.3",
-            "@@COPY:pages.membership.overview.styles.items.4",
-            "@@COPY:pages.membership.overview.styles.items.5"
-          ]
-        },
-        "benefits": {
-          "title": "@@COPY:pages.membership.overview.benefits.title",
-          "items": [
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.0.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.0.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.1.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.1.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.2.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.2.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.3.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.3.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.4.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.4.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.5.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.5.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.6.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.6.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.7.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.7.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.8.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.8.body"
-            },
-            {
-              "title": "@@COPY:pages.membership.overview.benefits.items.9.title",
-              "body": "@@COPY:pages.membership.overview.benefits.items.9.body"
-            }
-          ]
-        },
-        "howToJoin": {
-          "title": "@@COPY:pages.membership.overview.howtojoin.title",
-          "steps": [
-            "@@COPY:pages.membership.overview.howtojoin.steps.0",
-            "@@COPY:pages.membership.overview.howtojoin.steps.1",
-            "@@COPY:pages.membership.overview.howtojoin.steps.2",
-            "@@COPY:pages.membership.overview.howtojoin.steps.3"
-          ]
-        },
-        "faq": {
-          "title": "@@COPY:pages.membership.overview.faq.title",
-          "items": [
-            {
-              "id": "membership-faq-trial",
-              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.question",
-              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_trial.answer"
-            },
-            {
-              "id": "membership-faq-styles",
-              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.question",
-              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_styles.answer"
-            },
-            {
-              "id": "membership-faq-hire",
-              "question": "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.question",
-              "answer": "@@COPY:pages.membership.overview.faq.items.membership_faq_hire.answer"
-            }
-          ]
-        },
-        "cta": {
-          "title": "@@COPY:pages.membership.overview.cta.title",
-          "body": "@@COPY:pages.membership.overview.cta.body",
-          "button": {
-            "label": "@@COPY:pages.membership.overview.cta.button.label",
-            "href": "mailto:membership@countyhalldancecentre.com?subject=Membership%20enquiry",
-            "variant": "primary",
-            "external": true
-          },
-          "secondary": "@@COPY:pages.membership.overview.cta.secondary"
-        }
-      },
-      "subpages": [
-        {
-          "slug": "member-benefits",
-          "meta": {
-            "title": "@@COPY:pages.membership.subpages.member_benefits.meta.title",
-            "description": "@@COPY:pages.membership.subpages.member_benefits.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.membership.subpages.member_benefits.hero.overline",
-            "title": "@@COPY:pages.membership.subpages.member_benefits.hero.title",
-            "subtitle": "@@COPY:pages.membership.subpages.member_benefits.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.membership.subpages.member_benefits.intro",
-          "sections": [
-            {
-              "id": "benefits",
-              "title": "@@COPY:pages.membership.subpages.member_benefits.sections.benefits.title"
-            },
-            {
-              "id": "how-to-join",
-              "title": "@@COPY:pages.membership.subpages.member_benefits.sections.how_to_join.title"
-            }
-          ]
-        },
-        {
-          "slug": "monthly-passes",
-          "meta": {
-            "title": "@@COPY:pages.membership.subpages.monthly_passes.meta.title",
-            "description": "@@COPY:pages.membership.subpages.monthly_passes.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.membership.subpages.monthly_passes.hero.overline",
-            "title": "@@COPY:pages.membership.subpages.monthly_passes.hero.title",
-            "subtitle": "@@COPY:pages.membership.subpages.monthly_passes.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.membership.subpages.monthly_passes.intro",
-          "sections": [
-            {
-              "id": "pass-options",
-              "title": "@@COPY:pages.membership.subpages.monthly_passes.sections.pass_options.title"
-            },
-            {
-              "id": "terms",
-              "title": "@@COPY:pages.membership.subpages.monthly_passes.sections.terms.title"
-            }
-          ]
-        },
-        {
-          "slug": "booking-access",
-          "meta": {
-            "title": "@@COPY:pages.membership.subpages.booking_access.meta.title",
-            "description": "@@COPY:pages.membership.subpages.booking_access.meta.description"
-          },
-          "hero": {
-            "overline": "@@COPY:pages.membership.subpages.booking_access.hero.overline",
-            "title": "@@COPY:pages.membership.subpages.booking_access.hero.title",
-            "subtitle": "@@COPY:pages.membership.subpages.booking_access.hero.subtitle"
-          },
-          "intro": "@@COPY:pages.membership.subpages.booking_access.intro",
-          "sections": [
-            {
-              "id": "member-booking",
-              "title": "@@COPY:pages.membership.subpages.booking_access.sections.member_booking.title"
-            },
-            {
-              "id": "support",
-              "title": "@@COPY:pages.membership.subpages.booking_access.sections.support.title"
-            }
-          ]
-        }
-      ]
-    },
-    "about": {
-      "meta": {
-        "title": "@@COPY:pages.about.meta.title",
-        "description": "@@COPY:pages.about.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.about.hero.overline",
-        "title": "@@COPY:pages.about.hero.title",
-        "subtitle": "@@COPY:pages.about.hero.subtitle",
-        "image": {
-          "src": "/images/about/teaser.svg",
-          "alt": "@@COPY:pages.about.hero.image.alt"
-        }
-      },
-      "story": {
-        "title": "@@COPY:pages.about.story.title",
-        "paragraphs": [
-          "@@COPY:pages.about.story.paragraphs.0"
-        ],
-        "gallery": [
-          {
-            "src": "/images/about/story-gallery-01.jpg",
-            "alt": "@@COPY:pages.about.story.gallery.0.alt",
-            "width": 1024,
-            "height": 576
-          }
-        ]
-      },
-      "values": {
-        "overline": "@@COPY:pages.about.values.overline",
-        "title": "@@COPY:pages.about.values.title",
-        "items": [
-          {
-            "title": "@@COPY:pages.about.values.items.0.title",
-            "description": "@@COPY:pages.about.values.items.0.description"
-          },
-          {
-            "title": "@@COPY:pages.about.values.items.1.title",
-            "description": "@@COPY:pages.about.values.items.1.description"
-          },
-          {
-            "title": "@@COPY:pages.about.values.items.2.title",
-            "description": "@@COPY:pages.about.values.items.2.description"
-          },
-          {
-            "title": "@@COPY:pages.about.values.items.3.title",
-            "description": "@@COPY:pages.about.values.items.3.description"
-          }
-        ]
-      },
-      "cta": {
-        "title": "@@COPY:pages.about.cta.title",
-        "body": "@@COPY:pages.about.cta.body",
-        "button": {
-          "label": "@@COPY:pages.about.cta.button.label",
-          "href": "/contact",
-          "variant": "primary"
-        }
-      }
-    },
-    "booking": {
-      "meta": {
-        "title": "@@COPY:pages.booking.meta.title",
-        "description": "@@COPY:pages.booking.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.booking.hero.overline",
-        "title": "@@COPY:pages.booking.hero.title",
-        "subtitle": "@@COPY:pages.booking.hero.subtitle"
-      },
-      "form": {
-        "title": "@@COPY:pages.booking.form.title",
-        "description": "@@COPY:pages.booking.form.description",
-        "submitLabel": "@@COPY:pages.booking.form.submitlabel",
-        "successMessage": "@@COPY:pages.booking.form.successmessage",
-        "selectPlaceholder": "@@COPY:pages.booking.form.selectplaceholder",
-        "action": "mailto:info@countyhalldancecentre.com",
-        "fields": [
-          {
-            "name": "name",
-            "label": "@@COPY:pages.booking.form.fields.full_name.label",
-            "type": "text",
-            "placeholder": "@@COPY:pages.booking.form.fields.full_name.placeholder",
-            "required": true
-          },
-          {
-            "name": "email",
-            "label": "@@COPY:pages.booking.form.fields.email_address.label",
-            "type": "email",
-            "placeholder": "@@COPY:pages.booking.form.fields.email_address.placeholder",
-            "required": true
-          },
-          {
-            "name": "phone",
-            "label": "@@COPY:pages.booking.form.fields.phone_optional.label",
-            "type": "tel",
-            "placeholder": "@@COPY:pages.booking.form.fields.phone_optional.placeholder"
-          },
-          {
-            "name": "about",
-            "label": "@@COPY:pages.booking.form.fields.enquiry_about.label",
-            "type": "select",
-            "required": true,
-            "options": [
-              {
-                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.venue_hire.label",
-                "value": "venue-hire"
-              },
-              {
-                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.classes_booking.label",
-                "value": "classes-booking"
-              },
-              {
-                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.membership_booking.label",
-                "value": "membership-booking"
-              },
-              {
-                "label": "@@COPY:pages.booking.form.fields.enquiry_about.options.general_enquire.label",
-                "value": "general-enquire"
-              }
-            ]
-          },
-          {
-            "name": "message",
-            "label": "@@COPY:pages.booking.form.fields.message.label",
-            "type": "textarea",
-            "placeholder": "@@COPY:pages.booking.form.fields.message.placeholder",
-            "required": true
-          }
-        ]
-      }
-    },
-    "contact": {
-      "meta": {
-        "title": "@@COPY:pages.contact.meta.title",
-        "description": "@@COPY:pages.contact.meta.description"
-      },
-      "hero": {
-        "overline": "@@COPY:pages.contact.hero.overline",
-        "title": "@@COPY:pages.contact.hero.title",
-        "subtitle": "@@COPY:pages.contact.hero.subtitle"
-      },
-      "details": {
-        "title": "@@COPY:pages.contact.details.title",
-        "address": [
-          "@@COPY:pages.contact.details.address.0",
-          "@@COPY:pages.contact.details.address.1",
-          "@@COPY:pages.contact.details.address.2"
-        ],
-        "phone": "@@COPY:pages.contact.details.phone",
-        "email": "@@COPY:pages.contact.details.email",
-        "hours": "@@COPY:pages.contact.details.hours",
-        "wechat": "@@COPY:pages.contact.details.wechat",
-        "instagramLabel": "@@COPY:pages.contact.details.instagramlabel",
-        "instagramHref": "https://www.instagram.com/countyhalldancecentre",
-        "membershipLabel": "@@COPY:pages.contact.details.membershiplabel",
-        "membershipHref": "mailto:membership@countyhalldancecentre.com",
-        "gettingHere": "@@COPY:pages.contact.details.gettinghere"
-      },
-      "map": {
-        "title": "@@COPY:pages.contact.map.title",
-        "embedUrl": "https://maps.google.com/maps?q=County+Hall+Main+Entrance,+Belvedere+Road,+London+SE1+7PB&output=embed",
-        "directionsLabel": "@@COPY:pages.contact.map.directionslabel",
-        "directionsHref": "https://share.google/7weL1s5w3ItPjJyAZ"
-      },
-      "form": {
-        "title": "@@COPY:pages.contact.form.title",
-        "description": "@@COPY:pages.contact.form.description",
-        "submitLabel": "@@COPY:pages.contact.form.submitlabel",
-        "successMessage": "@@COPY:pages.contact.form.successmessage",
-        "selectPlaceholder": "@@COPY:pages.contact.form.selectplaceholder",
-        "action": "mailto:info@countyhalldancecentre.com",
-        "fields": [
-          {
-            "name": "name",
-            "label": "@@COPY:pages.contact.form.fields.full_name.label",
-            "type": "text",
-            "placeholder": "@@COPY:pages.contact.form.fields.full_name.placeholder",
-            "required": true
-          },
-          {
-            "name": "email",
-            "label": "@@COPY:pages.contact.form.fields.email_address.label",
-            "type": "email",
-            "placeholder": "@@COPY:pages.contact.form.fields.email_address.placeholder",
-            "required": true
-          },
-          {
-            "name": "phone",
-            "label": "@@COPY:pages.contact.form.fields.phone_optional.label",
-            "type": "tel",
-            "placeholder": "@@COPY:pages.contact.form.fields.phone_optional.placeholder"
-          },
-          {
-            "name": "subject",
-            "label": "@@COPY:pages.contact.form.fields.subject.label",
-            "type": "select",
-            "required": true,
-            "options": [
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.general_enquiry.label",
-                "value": "general"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.classes_timetable.label",
-                "value": "classes"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.membership.label",
-                "value": "membership"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.private_lessons_experiences.label",
-                "value": "private-lessons"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.venue_hire.label",
-                "value": "venue-hire"
-              },
-              {
-                "label": "@@COPY:pages.contact.form.fields.subject.options.events.label",
-                "value": "events"
-              }
-            ]
-          },
-          {
-            "name": "message",
-            "label": "@@COPY:pages.contact.form.fields.message.label",
-            "type": "textarea",
-            "placeholder": "@@COPY:pages.contact.form.fields.message.placeholder",
-            "required": true
-          }
-        ]
-      }
-    }
-  },
-  "ui": {
-    "sectionedPage": {
-      "comingSoon": "Content for this section is coming soon."
-    },
-    "header": {
-      "mainNavigation": "Main navigation",
-      "mobileNavigation": "Mobile navigation",
-      "openMenu": "Open menu",
-      "closeMenu": "Close menu",
-      "submenuSuffix": " submenu"
-    },
-    "hero": {
-      "featuredHighlights": "Featured highlights",
-      "slideNavigation": "Slide navigation",
-      "slidePrefix": "Slide"
-    },
-    "booking": {
-      "preferDirectPrefix": "Prefer to reach us directly? Email",
-      "orCall": "or call"
-    },
-    "form": {
-      "requiredMarker": " *"
-    }
-  }
 } as const;

@@ -1,18 +1,359 @@
 {
-  "classes": [
-    [1, "18:30", "19:30", "Tai Chi", "Tai Chi"],
-    [1, "19:40", "20:40", "Contemporary Dance", "Contemporary"],
-    [2, "18:30", "19:30", "Yoga (Gentle Flow)", "Yoga"],
-    [2, "19:30", "20:30", "Argentina Tango (Beginner)", "Tango"],
-    [2, "20:30", "21:30", "Argentina Tango (Advanced)", "Tango"],
-    [3, "19:30", "20:00", "Chinese Dance (Class 1)", "Chinese Dance"],
-    [3, "20:00", "21:30", "Chinese Dance (Soft Training)", "Chinese Dance"],
-    [4, "18:30", "19:20", "Yoga (Vinyasa Flow)", "Yoga"],
-    {"day": 5, "start": "13:00", "end": "14:30", "name": "Yoga (Inside Flow)", "style": "Yoga", "startDate": "2026-11-01", "endDate": "2026-11-30"}
-  ],
-  "datedClasses": [
-    {"date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop"},
-    {"date": "2026-11-21", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop"},
-    {"date": "2026-11-28", "start": "14:30", "end": "17:30", "name": "Performance Workshop", "style": "Performance", "type": "workshop"}
-  ]
+    "classes": [
+        {
+            "id": "oct-1",
+            "day": 1,
+            "start": "18:30",
+            "end": "19:30",
+            "name": "Tai Chi",
+            "style": "Tai Chi",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-2",
+            "day": 1,
+            "start": "19:40",
+            "end": "20:40",
+            "name": "Contemporary Dance",
+            "style": "Contemporary",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-3",
+            "day": 2,
+            "start": "18:30",
+            "end": "19:20",
+            "name": "Yoga (Gentle Flow)",
+            "style": "Yoga",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-4",
+            "day": 2,
+            "start": "19:30",
+            "end": "20:30",
+            "name": "Tango Beginner",
+            "style": "Tango",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-5",
+            "day": 2,
+            "start": "20:30",
+            "end": "21:30",
+            "name": "Tango Intermediate",
+            "style": "Tango",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-6",
+            "day": 3,
+            "start": "12:30",
+            "end": "13:20",
+            "name": "Yoga (Therapeutic Yoga)",
+            "style": "Yoga",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-7",
+            "day": 3,
+            "start": "18:30",
+            "end": "20:00",
+            "name": "Chinese Dance Class 1",
+            "style": "Chinese Dance",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-8",
+            "day": 3,
+            "start": "20:00",
+            "end": "21:30",
+            "name": "Chinese Dance Class 2",
+            "style": "Chinese Dance",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-9",
+            "day": 4,
+            "start": "18:30",
+            "end": "19:20",
+            "name": "Yoga (Vinyasa Flow)",
+            "style": "Yoga",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-10",
+            "day": 5,
+            "start": "19:00",
+            "end": "20:00",
+            "name": "Tango Advanced",
+            "style": "Tango",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-11",
+            "day": 5,
+            "start": "20:00",
+            "end": "23:00",
+            "name": "Tango Milonga",
+            "style": "Tango",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "id": "oct-12",
+            "day": 6,
+            "start": "10:30",
+            "end": "12:00",
+            "name": "Yoga (Inside Flow)",
+            "style": "Yoga",
+            "startDate": "2026-10-01",
+            "endDate": "2026-10-31"
+        },
+        {
+            "day": 1,
+            "start": "18:30",
+            "end": "19:30",
+            "name": "Tai Chi",
+            "style": "Tai Chi",
+            "id": "nov-1",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 1,
+            "start": "19:40",
+            "end": "20:40",
+            "name": "Contemporary Dance",
+            "style": "Contemporary",
+            "id": "nov-2",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 2,
+            "start": "18:30",
+            "end": "19:30",
+            "name": "Yoga (Gentle Flow)",
+            "style": "Yoga",
+            "id": "nov-3",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 2,
+            "start": "19:30",
+            "end": "20:30",
+            "name": "Argentina Tango (Beginner)",
+            "style": "Tango",
+            "id": "nov-4",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 2,
+            "start": "20:30",
+            "end": "21:30",
+            "name": "Argentina Tango (Advanced)",
+            "style": "Tango",
+            "id": "nov-5",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 3,
+            "start": "19:30",
+            "end": "20:00",
+            "name": "Chinese Dance (Class 1)",
+            "style": "Chinese Dance",
+            "id": "nov-6",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 3,
+            "start": "20:00",
+            "end": "21:30",
+            "name": "Chinese Dance (Soft Training)",
+            "style": "Chinese Dance",
+            "id": "nov-7",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 4,
+            "start": "18:30",
+            "end": "19:20",
+            "name": "Yoga (Vinyasa Flow)",
+            "style": "Yoga",
+            "id": "nov-8",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        },
+        {
+            "day": 5,
+            "start": "13:00",
+            "end": "14:30",
+            "name": "Yoga (Inside Flow)",
+            "style": "Yoga",
+            "startDate": "2026-11-01",
+            "endDate": "2026-11-30"
+        }
+    ],
+    "datedClasses": [
+        {
+            "id": "trial-1",
+            "date": "2026-09-15",
+            "start": "12:30",
+            "end": "13:15",
+            "name": "Sound Healing with Yoga",
+            "style": "Yoga"
+        },
+        {
+            "id": "trial-2",
+            "date": "2026-09-15",
+            "start": "18:30",
+            "end": "19:30",
+            "name": "Tai Chi",
+            "style": "Tai Chi"
+        },
+        {
+            "id": "trial-3",
+            "date": "2026-09-15",
+            "start": "19:30",
+            "end": "20:30",
+            "name": "Contemporary Dance",
+            "style": "Contemporary"
+        },
+        {
+            "id": "trial-4",
+            "date": "2026-09-16",
+            "start": "18:30",
+            "end": "19:20",
+            "name": "Yoga (Basic Flow)",
+            "style": "Yoga"
+        },
+        {
+            "id": "trial-5",
+            "date": "2026-09-16",
+            "start": "19:30",
+            "end": "20:30",
+            "name": "Tango Beginner",
+            "style": "Tango"
+        },
+        {
+            "id": "trial-6",
+            "date": "2026-09-16",
+            "start": "20:30",
+            "end": "21:30",
+            "name": "Tango Advanced",
+            "style": "Tango"
+        },
+        {
+            "id": "trial-7",
+            "date": "2026-09-17",
+            "start": "18:30",
+            "end": "20:00",
+            "name": "Chinese Dance Class 1",
+            "style": "Chinese Dance"
+        },
+        {
+            "id": "trial-8",
+            "date": "2026-09-17",
+            "start": "20:00",
+            "end": "21:30",
+            "name": "Chinese Dance Class 2",
+            "style": "Chinese Dance"
+        },
+        {
+            "id": "trial-9",
+            "date": "2026-09-18",
+            "start": "18:30",
+            "end": "19:20",
+            "name": "Yoga (Flow Yoga)",
+            "style": "Yoga"
+        },
+        {
+            "id": "trial-10",
+            "date": "2026-09-18",
+            "start": "19:30",
+            "end": "20:30",
+            "name": "Broadway Jazz",
+            "style": "Broadway Jazz"
+        },
+        {
+            "id": "trial-11",
+            "date": "2026-09-20",
+            "start": "10:30",
+            "end": "12:00",
+            "name": "Yoga (Ground Exploration)",
+            "style": "Yoga"
+        },
+        {
+            "id": "trial-12",
+            "date": "2026-09-20",
+            "start": "15:00",
+            "end": "16:00",
+            "name": "Tango Beginner",
+            "style": "Tango"
+        },
+        {
+            "id": "trial-13",
+            "date": "2026-09-20",
+            "start": "16:00",
+            "end": "19:00",
+            "name": "Tango Milonga",
+            "style": "Tango"
+        },
+        {
+            "id": "sep-chinese-1",
+            "date": "2026-09-24",
+            "start": "19:30",
+            "end": "20:00",
+            "name": "Chinese Dance (Class 1)",
+            "style": "Chinese Dance"
+        },
+        {
+            "id": "sep-chinese-2",
+            "date": "2026-09-24",
+            "start": "20:00",
+            "end": "21:30",
+            "name": "Chinese Dance (Soft Training)",
+            "style": "Chinese Dance"
+        },
+        {
+            "date": "2026-11-14",
+            "start": "15:00",
+            "end": "20:00",
+            "name": "Tango Workshop",
+            "style": "Tango",
+            "type": "workshop"
+        },
+        {
+            "date": "2026-11-21",
+            "start": "15:00",
+            "end": "20:00",
+            "name": "Tango Workshop",
+            "style": "Tango",
+            "type": "workshop"
+        },
+        {
+            "date": "2026-11-28",
+            "start": "14:45",
+            "end": "17:45",
+            "name": "Performance Workshop",
+            "style": "Performance",
+            "type": "workshop"
+        }
+    ]
 }

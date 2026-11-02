@@ -182,9 +182,9 @@ The project ships with simple SVG placeholders in `public/images/`. Replace them
 
 ## Timetable: classes, workshops, events and venue occupancy
 
-The homepage and `/timetable` share the server `Timetable` wrapper and interactive `ClassCalendar`. Week, Month and List views support period navigation, Type/Day/Style filters, today's highlight and mobile date layouts.
+The homepage and `/timetable` share the server `Timetable` wrapper and interactive `ClassCalendar`. Week, Month and List views are restricted to the current London month, with Type/Day/Style filters, today's highlight and mobile date layouts.
 
-Regular classes and schedule-only workshops remain in `public/schedule.json`, including date limits and cancellations. Event programme sessions live once in `src/content/event-sessions.ts`, are attached to event pages through `site.source.ts`, and enter the timetable automatically when the specific published session has a confirmed school venue and complete times, or is explicitly organised by the school (including external venues and date-only entries). Venue IDs are defined in `src/content/venues.ts`; County Hall Atrium and Members' Terrace are not school spaces.
+Regular classes and schedule-only workshops remain in `public/schedule.json`, including date limits and cancellations. Event programme sessions live once in `src/content/event-sessions.ts`, are attached to event pages through `site.source.ts`, and enter the timetable automatically only when the specific published session has a confirmed school venue and complete times (or an explicitly confirmed all-day flag). Venue IDs are defined in `src/content/venues.ts`; County Hall Atrium and Members' Terrace are not school spaces.
 
 `venueBooking` is independent of activity type and organising relationship. Private bookings are anonymised and non-clickable. The calendar is an overview, not a live availability guarantee. No room is assumed free because a cell is empty.
 
@@ -194,10 +194,14 @@ See [CONTENT.md](CONTENT.md) for schemas, private booking handling, current miss
 
 ```bash
 npm run content:export
-npx tsx --test scripts/test-timetable.mts
+npx tsx --test scripts/test-timetable.mts scripts/test-current-month.mts
 npm run lint
 npm run build
 git diff --check
 ```
 
 `content:export` updates generated copy and structure as well as CSV. It is required after event-session changes, but not for schedule-only JSON edits. Review diffs before committing; do not duplicate event sessions in `schedule.json`.
+
+Historical September–November 2026 schedule boundaries and London-time booking expiry are documented in [CONTENT.md](CONTENT.md) and [the history update report](docs/timetable-history-update.md). No December timetable is inferred from November.
+
+Current-month server time, explicit external-event discovery entries, retired routes and November workshop changes: [update report](docs/current-month-calendar-update.md).

@@ -84,7 +84,7 @@ home.events.items.lunchtime_concert_series.date,Homepage — events › items �
 home.events.items.lunchtime_concert_series.image.alt,Homepage — events › items › lunchtime concert series › image › alt,County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja
 home.events.items.lunchtime_concert_series.title,Homepage — events › items › lunchtime concert series › title,Lunchtime Concert Series
 home.events.items.memory_of_china.booknow.label,Homepage — events › items › memory of china › booknow › label,Book Now
-home.events.items.memory_of_china.date,Homepage — events › items › memory of china › date,Saturday 3 – Sunday 4 October 2026
+home.events.items.memory_of_china.date,Homepage — events › items › memory of china › date,"Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day"
 home.events.items.memory_of_china.image.alt,Homepage — events › items › memory of china › image › alt,"Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind"
 home.events.items.memory_of_china.location,Homepage — events › items › memory of china › location,"Members' Terrace, County Hall"
 home.events.items.memory_of_china.title,Homepage — events › items › memory of china › title,Memory of China
@@ -465,6 +465,7 @@ pages.events.categories.workshops.meta.title,Events page › categories › work
 pages.events.categories.workshops.sections.booking.title,Events page › categories › workshops › sections › booking › title,Booking
 pages.events.categories.workshops.sections.upcoming.title,Events page › categories › workshops › sections › upcoming › title,Upcoming workshops
 pages.events.categorylabels.backlink,Events page › categorylabels › backlink,← What's on
+pages.events.detaillabels.allday,Events page › detaillabels › allday,All day
 pages.events.detaillabels.backlink,Events page › detaillabels › backlink,← What's on
 pages.events.detaillabels.booking,Events page › detaillabels › booking,Booking details
 pages.events.detaillabels.date,Events page › detaillabels › date,Date
@@ -485,8 +486,22 @@ pages.events.hero.overline,Events page › hero › overline,What's on
 pages.events.hero.subtitle,Events page › hero › subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
 pages.events.hero.title,Events page › hero › title,What's On
 pages.events.intro,Events page › intro,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
+pages.events.items.ceramics_workshop_with_yasemin.booknow.label,Events page › items › ceramics workshop with yasemin › booknow › label,Details
+pages.events.items.ceramics_workshop_with_yasemin.date,Events page › items › ceramics workshop with yasemin › date,"Saturday 17 October 2026, 16:30–18:00"
+pages.events.items.ceramics_workshop_with_yasemin.description.0,Events page › items › ceramics workshop with yasemin › description › 0,"Our first ceramics workshop at County Hall Dance & Performing Arts School, led by Yasemin Gava (@yasemingava.art)."
+pages.events.items.ceramics_workshop_with_yasemin.description.1,Events page › items › ceramics workshop with yasemin › description › 1,"Make flowers in a creative ceramics session: slow down, get hands-on and create something with your own hands."
+pages.events.items.ceramics_workshop_with_yasemin.description.2,Events page › items › ceramics workshop with yasemin › description › 2,"Part of our growing programme of creative workshops and community experiences. Create, connect and belong."
+pages.events.items.ceramics_workshop_with_yasemin.excerpt,Events page › items › ceramics workshop with yasemin › excerpt,"Make ceramic flowers in a creative, hands-on workshop with Yasemin Gava."
+pages.events.items.ceramics_workshop_with_yasemin.image.alt,Events page › items › ceramics workshop with yasemin › image › alt,Venue at County Hall Dance & Performing Arts School
+pages.events.items.ceramics_workshop_with_yasemin.location,Events page › items › ceramics workshop with yasemin › location,County Hall Dance & Performing Arts School
+pages.events.items.ceramics_workshop_with_yasemin.organiser,Events page › items › ceramics workshop with yasemin › organiser,County Hall Dance & Performing Arts School
+pages.events.items.ceramics_workshop_with_yasemin.partners.0,Events page › items › ceramics workshop with yasemin › partners › 0,Yasemin Gava
+pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.organiser,Events page › items › ceramics workshop with yasemin › sessions › ceramics 2026 10 17 › organiser,County Hall Dance & Performing Arts School
+pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.partners.0,Events page › items › ceramics workshop with yasemin › sessions › ceramics 2026 10 17 › partners › 0,Yasemin Gava
+pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.title,Events page › items › ceramics workshop with yasemin › sessions › ceramics 2026 10 17 › title,Ceramics Workshop with Yasemin — Making Flowers
+pages.events.items.ceramics_workshop_with_yasemin.title,Events page › items › ceramics workshop with yasemin › title,Ceramics Workshop with Yasemin
 pages.events.items.county_hall_dance_centre_opening_day.booknow.label,Events page › items › county hall dance centre opening day › booknow › label,Details
-pages.events.items.county_hall_dance_centre_opening_day.date,Events page › items › county hall dance centre opening day › date,Thursday 10 September 2026
+pages.events.items.county_hall_dance_centre_opening_day.date,Events page › items › county hall dance centre opening day › date,Thursday 10 September 2026 · All day
 pages.events.items.county_hall_dance_centre_opening_day.description.0,Events page › items › county hall dance centre opening day › description › 0,County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.
 pages.events.items.county_hall_dance_centre_opening_day.description.1,Events page › items › county hall dance centre opening day › description › 1,"The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank."
 pages.events.items.county_hall_dance_centre_opening_day.excerpt,Events page › items › county hall dance centre opening day › excerpt,County Hall Dance Centre opened its doors at County Hall on 10 September 2026.
@@ -496,7 +511,7 @@ pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt,Events pag
 pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt,Events page › items › county hall dance centre opening day › gallery › 3 › alt,Flowers marking County Hall Dance Centre Opening Day
 pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt,Events page › items › county hall dance centre opening day › gallery › 4 › alt,County Hall Dance Centre crest on Opening Day
 pages.events.items.county_hall_dance_centre_opening_day.image.alt,Events page › items › county hall dance centre opening day › image › alt,County Hall Dance Centre Opening Day
-pages.events.items.county_hall_dance_centre_opening_day.location,Events page › items › county hall dance centre opening day › location,County Hall
+pages.events.items.county_hall_dance_centre_opening_day.location,Events page › items › county hall dance centre opening day › location,County Hall Dance & Performing Arts School
 pages.events.items.county_hall_dance_centre_opening_day.organiser,Events page › items › county hall dance centre opening day › organiser,County Hall Dance & Performing Arts School
 pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser,Events page › items › county hall dance centre opening day › sessions › opening day 2026 › organiser,County Hall Dance & Performing Arts School
 pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title,Events page › items › county hall dance centre opening day › sessions › opening day 2026 › title,Opening Day
@@ -645,7 +660,7 @@ pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organise
 pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title,Events page › items › lunchtime concert series › sessions › concert 2026 10 23 › title,Fandango! Italian Virtuosity Meets Spanish Dance
 pages.events.items.lunchtime_concert_series.title,Events page › items › lunchtime concert series › title,Lunchtime Concert Series
 pages.events.items.memory_of_china.booknow.label,Events page › items › memory of china › booknow › label,Book Now
-pages.events.items.memory_of_china.date,Events page › items › memory of china › date,Saturday 3 – Sunday 4 October 2026
+pages.events.items.memory_of_china.date,Events page › items › memory of china › date,"Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day"
 pages.events.items.memory_of_china.description.0,Events page › items › memory of china › description › 0,"The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank."
 pages.events.items.memory_of_china.description.1,Events page › items › memory of china › description › 1,"Across Saturday 3 and Sunday 4 October, County Hall Dance Centre will host a varied programme of performances, workshops and hands-on experiences. From the 2nd UK Chinese Yoga Festival, Chinese classical and ethnic dance to calligraphy, acupressure and Yunnan cultural showcases, the weekend offers different ways to discover and experience Chinese culture. Cultural exhibitions, traditional crafts, hands-on activities, a makers' market and tea culture will also feature throughout the festival."
 pages.events.items.memory_of_china.description.10,Events page › items › memory of china › description › 10,15:45–17:00 — Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.
@@ -696,6 +711,18 @@ pages.events.items.memory_of_china.sessions.memory_2026_04.title,Events page ›
 pages.events.items.memory_of_china.tickets.saturday_tickets.label,Events page › items › memory of china › tickets › saturday tickets › label,Saturday tickets
 pages.events.items.memory_of_china.tickets.sunday_tickets.label,Events page › items › memory of china › tickets › sunday tickets › label,Sunday tickets
 pages.events.items.memory_of_china.title,Events page › items › memory of china › title,Memory of China: Chinese Traditional Arts and Culture Festival
+pages.events.items.milonga_ojo_opening_night.booknow.label,Events page › items › milonga ojo opening night › booknow › label,Details
+pages.events.items.milonga_ojo_opening_night.date,Events page › items › milonga ojo opening night › date,"Saturday 26 September 2026, 19:00–23:00"
+pages.events.items.milonga_ojo_opening_night.description.0,Events page › items › milonga ojo opening night › description › 0,"Welcome to Milonga ¡Ojo!, a new Saturday milonga at County Hall on London's South Bank, close to the London Eye."
+pages.events.items.milonga_ojo_opening_night.description.1,Events page › items › milonga ojo opening night › description › 1,"Celebrate the opening night on the school's 200m² sprung wooden dance floor. The evening begins with a pre-milonga workshop with René & Silvia, followed by social dancing with DJ Silvia Bivolaru."
+pages.events.items.milonga_ojo_opening_night.description.2,Events page › items › milonga ojo opening night › description › 2,"Bring your dancing shoes, your friends and your love for tango."
+pages.events.items.milonga_ojo_opening_night.excerpt,Events page › items › milonga ojo opening night › excerpt,"An opening night of tango, connection and dancing on the South Bank, with René, Silvia and DJ Silvia Bivolaru."
+pages.events.items.milonga_ojo_opening_night.hostedat,Events page › items › milonga ojo opening night › hostedat,County Hall Dance & Performing Arts School
+pages.events.items.milonga_ojo_opening_night.image.alt,Events page › items › milonga ojo opening night › image › alt,Wooden-floor dance space at County Hall Dance & Performing Arts School
+pages.events.items.milonga_ojo_opening_night.location,Events page › items › milonga ojo opening night › location,County Hall Dance & Performing Arts School
+pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_social_2026_09_26.title,Events page › items › milonga ojo opening night › sessions › milonga ojo social 2026 09 26 › title,Milonga ¡Ojo! with DJ Silvia Bivolaru
+pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_workshop_2026_09_26.title,Events page › items › milonga ojo opening night › sessions › milonga ojo workshop 2026 09 26 › title,Pre-Milonga Workshop with René & Silvia
+pages.events.items.milonga_ojo_opening_night.title,Events page › items › milonga ojo opening night › title,Milonga ¡Ojo! — Opening Night
 pages.events.meta.description,Events page › meta › description,"Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School."
 pages.events.meta.title,Events page › meta › title,What's On
 pages.membership.overview.benefits.items.0.body,Membership page › overview › benefits › items › 0 › body,"Save on workshops, masterclasses and intensive courses."
@@ -845,7 +872,7 @@ pages.timetable.booking.title,Timetable page › booking › title,Class timetab
 pages.timetable.helplinks.browse_courses.label,Timetable page › helplinks › browse courses › label,Browse courses
 pages.timetable.helplinks.contact_us.label,Timetable page › helplinks › contact us › label,Contact us
 pages.timetable.hero.overline,Timetable page › hero › overline,Plan your classes
-pages.timetable.hero.subtitle,Timetable page › hero › subtitle,"Browse classes, workshops, school-organised events and activities hosted at the school by week or month. Check each event’s location and filter by type, day and style."
+pages.timetable.hero.subtitle,Timetable page › hero › subtitle,"Browse this month’s classes, workshops and events. Dates follow London time. Check each event’s location and filter by type, day and style."
 pages.timetable.hero.title,Timetable page › hero › title,Timetable & Booking
 pages.timetable.meta.description,Timetable page › meta › description,View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.
 pages.timetable.meta.title,Timetable page › meta › title,Timetable & Booking
@@ -952,7 +979,7 @@ pages.venuehire.overview.terms.items.4.body,Venuehire page › overview › term
 pages.venuehire.overview.terms.items.4.title,Venuehire page › overview › terms › items › 4 › title,On-site support:
 pages.venuehire.overview.terms.title,Venuehire page › overview › terms › title,Booking terms
 pages.venuehire.overview.timetablelink.label,Venuehire page › overview › timetablelink › label,View timetable
-pages.venuehire.overview.timetablenote,Venuehire page › overview › timetablenote,The timetable includes school-organised events at other venues. Check each activity’s location. Please contact us to confirm venue availability.
+pages.venuehire.overview.timetablenote,Venuehire page › overview › timetablenote,The timetable provides an overview of scheduled activities. Please contact us to confirm venue availability.
 pages.venuehire.subpages.space_booking.hero.overline,Venuehire page › subpages › space booking › hero › overline,Venue Hire
 pages.venuehire.subpages.space_booking.hero.subtitle,Venuehire page › subpages › space booking › hero › subtitle,"Tell us your preferred date, activity and group size — we will respond with availability."
 pages.venuehire.subpages.space_booking.hero.title,Venuehire page › subpages › space booking › hero › title,Space Booking

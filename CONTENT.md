@@ -1,6 +1,6 @@
 # Website copy (spreadsheet workflow)
 
-Page copy can be edited through the CSV workflow below. Structural changes, new event fields and concert occurrences are authored in `src/content/site.source.ts`; the timetable is maintained separately in `public/schedule.json`.
+Page copy can be edited through the CSV workflow below. Editorial structure is authored in `src/content/site.source.ts`; shared event sessions live in `src/content/event-sessions.ts`, and dated/weekly classes in `public/schedule.json`.
 
 ## Files
 
@@ -100,7 +100,7 @@ The What's On activity filters remain Events / Workshops / Masterclasses. Attrib
 
 ### Public timetable inclusion
 
-`Timetable.tsx` is the server wrapper used on the homepage and `/timetable`. It projects resolved event sessions through `schoolEventSessions` and passes only safe calendar fields to `ClassCalendar`. Inclusion requires `published: true`, not cancelled and a valid date. Hosted sessions require the school venue ID and complete valid times. Public sessions explicitly marked `relationship: "organised"` with the full school organiser name also appear at other venues; missing times are shown as Time to be confirmed, never as all-day occupancy. No description keyword matching or parent-level venue inheritance. Overnight activities must be split into dated sessions when that support is needed.
+`Timetable.tsx` is the server wrapper used on the homepage and `/timetable`. It projects resolved event sessions through `schoolEventSessions` and passes only safe calendar fields to `ClassCalendar`. Inclusion requires `published: true`, not cancelled, a valid date and, by default, the school venue ID. Sessions need complete valid start/end times, or an explicitly confirmed `allDay: true`. The organiser does not override the venue requirement. Explicit calendarVisible: true permits non-private public discovery entries at known external venues; false excludes entries. External entries are not school occupancy. Unknown times are not all-day events. No description keyword matching or parent-level venue inheritance. Overnight activities must be split into dated sessions when that support is needed.
 
 Each unique session ID produces at most one entry, even when it matches both Event and Venue Booking. Regular classes and schedule-only workshops retain their existing ClassManager dialog. Shared event sessions link to `/events/{eventSlug}#session-{id}`. Never duplicate an event session in the legacy schedule.
 
@@ -111,7 +111,10 @@ Private bookings can be recorded with `private: true`, an appropriate activity t
 - Four Seasons has nine programme sessions. Only the three school sessions on 24 October (11:00–12:00, 14:00–15:30, 16:00–17:30) enter the timetable. Autumn Flow and Sound is a collaboration with the school and Sen Yoga, not a confirmed commercial rental. Festival-wide hosting has been removed.
 - Encounters, 25 September: County Hall Atrium, start 13:00, end unknown. Excluded.
 - Fandango, 23 October: school venue/address retained, start 13:00, end unknown. Programme remains visible; timetable inclusion awaits its end time.
-- Memory of China (3–4 October) and Dance Meets Arts (8 August) appear in the timetable as school-organised events, with Members’ Terrace shown on their cards. Opening Day (10 September) also appears; only County Hall is documented as its venue, and its time is unknown.
+- Memory of China (3 and 4 October, 12:00–17:30 each day) and Dance Meets Arts (8 August, 19:00–20:30) have explicit calendarVisible flags and retain Members’ Terrace. They are discovery entries, not school occupancy. The Sunday poster has a conflicting internal calligraphy end time of 18:00; its overall programme heading says 17:30.
+- Opening Day, 10 September, is explicitly confirmed as all day at the school; `allDay: true` is displayed without invented clock times.
+- Milonga ¡Ojo! opening night, 26 September: 19:00–20:00 workshop and 20:00–23:00 milonga. School venue confirmed; Tango Fever as organiser is unconfirmed and not published.
+- Ceramics Workshop with Yasemin, 17 October, 16:30–18:00: school-organised with Yasemin Gava as collaborator. No commercial rental inferred.
 - Halloween's already documented school session is 31 October, 13:00–17:00.
 - No confirmed private bookings, setup/teardown, room IDs, or new future concerts have been invented. Venue Booking is deliberately not enabled for unconfirmed rental arrangements.
 
@@ -127,16 +130,43 @@ After adding a session, attach `publicSessionsForEvent` to its parent event if n
     { "day": 5, "start": "13:00", "end": "14:30", "name": "Yoga (Inside Flow)", "style": "Yoga", "startDate": "2026-11-01", "endDate": "2026-11-30" }
   ],
   "datedClasses": [
-    { "date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop" }
+    { "date": "2026-11-14", "start": "15:00", "end": "20:00", "name": "Tango Workshop", "style": "Tango", "type": "workshop" }
   ]
 }
 ```
 
-Merge entries into the existing schedule; do not replace unrelated classes with this example. A dated entry may set `cancelled: true`. Dates use `YYYY-MM-DD`; times use London local `HH:mm`. Week/List show one week; Month shows all dates in the selected month. All views apply the same date bounds, cancellation rules and filters. November-only Yoga must not appear in December. New styles also need a filter option in `ClassCalendar.tsx` and, optionally, a colour in `src/lib/class-calendar/utils.ts`.
+Merge entries into the existing schedule; do not replace unrelated classes with this example. A dated entry may set `cancelled: true`. Dates use `YYYY-MM-DD`; times use London local `HH:mm`. Month/List show the current London month; Week shows the current week clipped to that month. There is no manual period navigation. All views apply the same date bounds, cancellation rules and filters. November-only Yoga must not appear in December. New styles also need a filter option in `ClassCalendar.tsx` and, optionally, a colour in `src/lib/class-calendar/utils.ts`.
 
 
 The Timetable Type filter offers Classes, Workshops, Events and Venue Bookings. Day/Style filters compose with it. Empty date cells retain the date heading but no placeholder sentence. Today remains highlighted. Month view stacks dates on mobile. Venue Hire links to the timetable as an occupancy overview, explicitly requiring contact to confirm availability; empty slots and unknown rooms are not availability promises.
 
 Social icons share `SocialIcons.tsx` in the header utility bar, footer and newsletter. TikTok and Xiaohongshu use licensed brand paths; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-School-organised events at external venues are discovery entries, not school occupancy. The Venue Bookings filter and setup/teardown bounds apply only to confirmed school sessions with complete times. Calendar cards show event venue names.
+The timetable defaults to school venues, with explicitly approved public external discovery entries via calendarVisible. Event cards show their confirmed venue. Venue Booking is independent of organiser and activity type.
+
+## Historical classes and booking lifecycle
+
+The authoritative 2026 schedule versions are date-bounded:
+
+- 14–20 September: 13 one-off Trial Week lessons, matching the user-provided table. There are no regular classes before 14 September.
+- 21–30 September: only the two Chinese Dance lessons on 24 September have supporting package dates; do not backfill the other October lessons.
+- October: the 12 weekly patterns supplied by the user, bounded to 1–31 October (54 occurrences).
+- November: the existing eight weekly classes plus Saturday Yoga and three dated workshops, bounded through 30 November (39 occurrences).
+- December: no published classes until a new confirmed schedule is provided. Date bounds are confirmation windows, not claims that a class permanently stopped.
+
+`booking-status.ts` compares the actual London date AND clock time (including BST/GMT). At the start a class becomes ongoing; at its end it becomes ended. Session-specific booking is offered only before start because late-entry rules are unconfirmed. Historical cards remain visible, but cannot open the dialog. Event detail links remain available. The clock refreshes every second and on window focus; the dialog checks again on opening and on continuation, and closes if the session starts while open.
+
+The homepage and timetable share this renderer. The tester-class fallback cards have exact Trial Week dates and use the same status helper. Airtable may provide an ISO `Date` for an individual lesson; a date-range-only record offers a generic upcoming-dates check, not a claimed booking for an undated historical lesson. Generic navigation to current ClassManager listings remains available.
+
+See [the history update report](docs/timetable-history-update.md) for evidence, unresolved discrepancies and validation. Keep both source and generated content in sync using `content:export`.
+
+
+## Current-month calendar (2 November 2026)
+
+Timetable uses request-time connection() and a server timestamp for consistent hydration. The uncached /api/time endpoint synchronises a shared performance.now()-based client clock initially, every 15 minutes and on return to the page. Date boundaries use Europe/London and update every second without relying on the visitor clock. Month/List show only the current month; Week is clipped to it. Historical records remain stored.
+
+November one-off workshops: 14 and 21 November Tango 15:00–20:00; 28 November Performance 14:45–17:45.
+
+Retired slugs milonga-ojo-opening-night and ceramics-workshop-with-yasemin are managed in event-visibility.ts. Raw data/media stay intact; resolved public lists and timetable omit them, and detail routes call notFound(). Generic milonga, Tango classes and teacher references remain.
+
+Run npx tsx --test scripts/test-timetable.mts scripts/test-current-month.mts. See docs/current-month-calendar-update.md for validation. Earlier historical reports are superseded where requirements differ.

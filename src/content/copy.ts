@@ -1,968 +1,1550 @@
 /** Auto-generated from site.source.ts — edit content/website-copy.csv then run: npm run content:import */
 
 export const copy = {
-  "global.footer.columns.explore.links.classes.label": "Classes",
-  "global.footer.columns.explore.links.courses.label": "Courses",
-  "global.footer.columns.explore.links.what_s_on.label": "What's On",
-  "global.footer.columns.explore.title": "Explore",
-  "global.footer.columns.school.links.about_us.label": "About Us",
-  "global.footer.columns.school.links.careers.label": "Careers",
-  "global.footer.columns.school.links.private_events.label": "Private Events",
-  "global.footer.columns.school.title": "The School",
-  "global.footer.contact.address.0": "2nd Floor, County Hall Main Entrance",
-  "global.footer.contact.address.1": "Belvedere Road",
-  "global.footer.contact.address.2": "London SE1 7PB",
-  "global.footer.contact.email": "info@countyhalldancecentre.com",
-  "global.footer.contact.phone": "+44 7728 617531",
-  "global.footer.contact.title": "Visit Us",
-  "global.footer.contact.wechat": "WeChat: 18518614868",
-  "global.footer.copyright": "© {year} County Hall Dance & Performing Arts School. All rights reserved.",
-  "global.footer.intro": "A home for dance, movement and creativity at County Hall on the South Bank. Move. Create. Connect. Belong.",
-  "global.footer.legal.cookie_policy.label": "Cookie Policy",
-  "global.footer.legal.privacy_policy.label": "Privacy Policy",
-  "global.footer.legal.safeguarding.label": "Safeguarding",
-  "global.footer.legal.terms_conditions.label": "Terms & Conditions",
-  "global.footer.newsletter.description": "Occasional news on classes, masterclasses, and performances.",
-  "global.footer.newsletter.placeholder": "Your email address",
-  "global.footer.newsletter.submitlabel": "Subscribe",
-  "global.footer.newsletter.title": "Stay in touch",
-  "global.footer.social.instagram.label": "Instagram: @countyhalldancecentre",
-  "global.footer.social.tiktok.label": "TikTok",
-  "global.footer.social.xiaohongshu.label": "Red Note (小红书)",
-  "global.logo.alt": "County Hall Dance & Performing Arts School",
-  "global.logo.nameline1": "County Hall",
-  "global.logo.nameline2": "Dance & Performing Arts School",
-  "global.navigation.booktrial.label": "Book your class",
-  "global.navigation.items.about.children.about_us.label": "About Us",
-  "global.navigation.items.about.children.contact.label": "Contact",
-  "global.navigation.items.about.label": "About",
-  "global.navigation.items.classes.children.class_descriptions_instructors.label": "Class Descriptions & Instructors",
-  "global.navigation.items.classes.children.private_lessons.label": "Private Lessons",
-  "global.navigation.items.classes.label": "Classes",
-  "global.navigation.items.membership.label": "Membership",
-  "global.navigation.items.timetable.label": "Timetable",
-  "global.navigation.items.venue_hire.children.space_booking.label": "Space Booking",
-  "global.navigation.items.venue_hire.children.space_hire.label": "Space Hire",
-  "global.navigation.items.venue_hire.label": "Venue Hire",
-  "global.navigation.items.what_s_on.label": "What's On",
-  "global.navigation.search.label": "Search",
-  "global.navigation.search.placeholder": "Search classes, courses, events…",
-  "global.utilitybar.email.label": "info@countyhalldancecentre.com",
-  "global.utilitybar.findus.label": "Find us",
-  "global.utilitybar.phone.label": "+44 7728 617531",
-  "global.utilitybar.social.instagram.label": "Instagram: @countyhalldancecentre",
-  "global.utilitybar.social.tiktok.label": "TikTok",
-  "global.utilitybar.social.xiaohongshu.label": "Red Note (小红书)",
-  "home.aboutteaser.body.0": "Founded at the historic County Hall, our school brings together rigorous technical training and a deeply supportive community.",
-  "home.aboutteaser.body.1": "Whether you are taking your first plié or preparing for vocational study, our faculty guides every student with patience and precision.",
-  "home.aboutteaser.cta.label": "About the school",
-  "home.aboutteaser.image.alt": "Students and teachers in the County Hall venue corridor",
-  "home.aboutteaser.overline": "Our story",
-  "home.aboutteaser.title": "Rooted in London, reaching for excellence",
-  "home.classstyles.items.chinese_dance.image.alt": "Chinese dance class",
-  "home.classstyles.items.chinese_dance.name": "Chinese Dance",
-  "home.classstyles.items.contemporary.image.alt": "Contemporary dance class",
-  "home.classstyles.items.contemporary.name": "Contemporary",
-  "home.classstyles.items.tai_chi.image.alt": "Tai Chi class",
-  "home.classstyles.items.tai_chi.name": "Tai Chi",
-  "home.classstyles.items.tango.image.alt": "Tango class",
-  "home.classstyles.items.tango.name": "Tango",
-  "home.classstyles.items.yoga.image.alt": "Yoga class",
-  "home.classstyles.items.yoga.name": "Yoga",
-  "home.classstyles.overline": "Our disciplines",
-  "home.classstyles.title": "Class styles",
-  "home.events.items.four_seasons_festival.booknow.label": "Details",
-  "home.events.items.four_seasons_festival.date": "Saturday 24 – Sunday 25 October 2026",
-  "home.events.items.four_seasons_festival.image.alt": "Concert in the County Hall atrium during the Four Seasons Festival",
-  "home.events.items.four_seasons_festival.location": "Riverside Building, County Hall",
-  "home.events.items.four_seasons_festival.title": "Four Seasons Festival",
-  "home.events.items.halloween_pumpkin_carving_workshop.booknow.label": "Details",
-  "home.events.items.halloween_pumpkin_carving_workshop.date": "Saturday 31 October 2026, 1:00pm – 5:00pm",
-  "home.events.items.halloween_pumpkin_carving_workshop.image.alt": "Halloween pumpkins and decorations",
-  "home.events.items.halloween_pumpkin_carving_workshop.location": "County Hall Dance Centre",
-  "home.events.items.halloween_pumpkin_carving_workshop.title": "Halloween Pumpkin Carving Workshop",
-  "home.events.items.lunchtime_concert_series.booknow.label": "Details",
-  "home.events.items.lunchtime_concert_series.date": "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
-  "home.events.items.lunchtime_concert_series.image.alt": "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
-  "home.events.items.lunchtime_concert_series.title": "Lunchtime Concert Series",
-  "home.events.items.memory_of_china.booknow.label": "Book Now",
-  "home.events.items.memory_of_china.date": "Saturday 3 – Sunday 4 October 2026",
-  "home.events.items.memory_of_china.image.alt": "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
-  "home.events.items.memory_of_china.location": "Members' Terrace, County Hall",
-  "home.events.items.memory_of_china.title": "Memory of China",
-  "home.events.overline": "What's on",
-  "home.events.subtitle": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
-  "home.events.title": "What's On",
-  "home.events.viewall.label": "View all",
-  "home.hero.nextlabel": "Next",
-  "home.hero.previouslabel": "Previous",
-  "home.hero.slides.hero_classes.blurb": "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi.",
-  "home.hero.slides.hero_classes.cta.label": "View Classes",
-  "home.hero.slides.hero_classes.headline": "Classes",
-  "home.hero.slides.hero_classes.image.alt": "Couple performing Argentine tango on an outdoor dance floor",
-  "home.hero.slides.hero_events.blurb": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
-  "home.hero.slides.hero_events.cta.label": "View what's on",
-  "home.hero.slides.hero_events.headline": "What's On",
-  "home.hero.slides.hero_events.image.alt": "Contemporary dancers in a bright venue with ballet barres",
-  "home.hero.slides.hero_intro.blurb": "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
-  "home.hero.slides.hero_intro.cta.label": "Explore Classes",
-  "home.hero.slides.hero_intro.headline": "Discover dance, movement and creative experiences at London's iconic County Hall.",
-  "home.hero.slides.hero_intro.image.alt": "Outdoor performance on the South Bank with County Hall and Big Ben beyond the Thames",
-  "home.hero.slides.hero_membership.blurb": "A more flexible way to keep dancing, join events and belong to the community.",
-  "home.hero.slides.hero_membership.cta.label": "Membership",
-  "home.hero.slides.hero_membership.headline": "Membership",
-  "home.hero.slides.hero_membership.image.alt": "Group dance class in a sunlit venue",
-  "home.hero.slides.hero_private_lessons.blurb": "Tailored sessions for individuals, couples, wedding first dances and small groups.",
-  "home.hero.slides.hero_private_lessons.cta.label": "Enquire",
-  "home.hero.slides.hero_private_lessons.headline": "Private Lessons & Experiences",
-  "home.hero.slides.hero_private_lessons.image.alt": "Instructor guiding a student in a one-to-one dance session",
-  "home.hero.slides.hero_venue_hire.blurb": "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
-  "home.hero.slides.hero_venue_hire.cta.label": "Venue Hire",
-  "home.hero.slides.hero_venue_hire.headline": "Venue Hire",
-  "home.hero.slides.hero_venue_hire.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",
-  "home.newsletter.description": "Follow our journey and receive curated updates on classes, performances, and exclusive offers.",
-  "home.newsletter.overline": "Join our circle",
-  "home.newsletter.placeholder": "Email address",
-  "home.newsletter.socialheading": "Connect with us",
-  "home.newsletter.submitlabel": "Sign up",
-  "home.newsletter.title": "Newsletter & social",
-  "home.quickactions.items.book_a_class.description": "See the weekly timetable and reserve your place.",
-  "home.quickactions.items.book_a_class.label": "Book a Class",
-  "home.quickactions.items.book_an_event.description": "Workshops, masterclasses, social nights and performances — see what's on and book your place.",
-  "home.quickactions.items.book_an_event.label": "Book an Event",
-  "home.quickactions.items.join_now.description": "Become a member and enjoy monthly, quarterly or annual plans with exclusive benefits.",
-  "home.quickactions.items.join_now.label": "Join Now",
-  "home.quickactions.linksuffix": "Learn more →",
-  "home.quickactions.overline": "Get started",
-  "meta.defaultdescription": "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
-  "meta.shortname": "CHD PAS",
-  "meta.sitename": "County Hall Dance & Performing Arts School",
-  "pages.about.cta.body": "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
-  "pages.about.cta.button.label": "Get in touch",
-  "pages.about.cta.title": "Visit us",
-  "pages.about.hero.image.alt": "County Hall Dance venue",
-  "pages.about.hero.overline": "Our school",
-  "pages.about.hero.subtitle": "Discover dance, movement and creative experiences at London's iconic County Hall",
-  "pages.about.hero.title": "About County Hall Dance & Performing Arts School",
-  "pages.about.meta.description": "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
-  "pages.about.meta.title": "About Us",
-  "pages.about.story.gallery.0.alt": "County Hall on the South Bank viewed from the River Thames, with the London Eye beside it",
-  "pages.about.story.paragraphs.0": "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
-  "pages.about.story.title": "Our story",
-  "pages.about.values.items.0.description": "To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London.",
-  "pages.about.values.items.0.title": "Mission",
-  "pages.about.values.items.1.description": "To grow from a dedicated professional dance space into a creative destination that brings together dance, performing arts, music, visual arts, and international cultural exchange.",
-  "pages.about.values.items.1.title": "Vision",
-  "pages.about.values.items.2.description": "Move. Create. Connect. Belong. — helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts.",
-  "pages.about.values.items.2.title": "Philosophy",
-  "pages.about.values.items.3.description": "Robust policies ensuring every student feels secure and supported.",
-  "pages.about.values.items.3.title": "Safeguarding",
-  "pages.about.values.overline": "What guides us",
-  "pages.about.values.title": "Our values",
-  "pages.booking.form.description": "Tell us what you are looking for — venue hire, class booking, membership or a general question.",
-  "pages.booking.form.fields.email_address.label": "Email address",
-  "pages.booking.form.fields.email_address.placeholder": "you@example.com",
-  "pages.booking.form.fields.enquiry_about.label": "Enquiry about",
-  "pages.booking.form.fields.enquiry_about.options.classes_booking.label": "Classes Booking",
-  "pages.booking.form.fields.enquiry_about.options.general_enquire.label": "General Enquire",
-  "pages.booking.form.fields.enquiry_about.options.membership_booking.label": "Membership Booking",
-  "pages.booking.form.fields.enquiry_about.options.venue_hire.label": "Venue Hire",
-  "pages.booking.form.fields.full_name.label": "Full name",
-  "pages.booking.form.fields.full_name.placeholder": "Your name",
-  "pages.booking.form.fields.message.label": "Message",
-  "pages.booking.form.fields.message.placeholder": "Please include any relevant details — dates, class names, group size, etc.",
-  "pages.booking.form.fields.phone_optional.label": "Phone (optional)",
-  "pages.booking.form.fields.phone_optional.placeholder": "+44 …",
-  "pages.booking.form.selectplaceholder": "Select an option",
-  "pages.booking.form.submitlabel": "Send message",
-  "pages.booking.form.successmessage": "Thank you — your enquiry has been received. We will be in touch shortly.",
-  "pages.booking.form.title": "Send an enquiry",
-  "pages.booking.hero.overline": "We'd love to hear from you",
-  "pages.booking.hero.subtitle": "Complete the form below and our team will respond by email within two working days.",
-  "pages.booking.hero.title": "Booking & Enquiries",
-  "pages.booking.meta.description": "Send a booking or general enquiry to County Hall Dance Centre — venue hire, classes, membership and more.",
-  "pages.booking.meta.title": "Booking & Enquiries",
-  "pages.classbooking.hero.overline": "Classes",
-  "pages.classbooking.hero.subtitle": "View live availability and reserve your place through our booking partner.",
-  "pages.classbooking.hero.title": "Booking",
-  "pages.classbooking.intro": "Choose a class from the timetable and follow the booking link. Advance booking is recommended.",
-  "pages.classbooking.meta.description": "Book adult dance and movement classes at County Hall Dance Centre.",
-  "pages.classbooking.meta.title": "Class Booking",
-  "pages.classbooking.sections.how_to_book.title": "How to book",
-  "pages.classbooking.sections.policies.title": "Booking policies",
-  "pages.classes.cta.label": "View timetable",
-  "pages.classes.detaillabels.backlink": "Class Descriptions & Instructors",
-  "pages.classes.hero.overline": "Find your style",
-  "pages.classes.hero.subtitle": "Adult dance and movement classes for every background and level — beginners welcome.",
-  "pages.classes.hero.title": "Classes",
-  "pages.classes.intro": "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate.",
-  "pages.classes.meta.description": "Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre.",
-  "pages.classes.meta.title": "Classes",
-  "pages.classes.styles.chinese_dance.agegroups.adults.description": "Designed for adult learners at every stage.",
-  "pages.classes.styles.chinese_dance.agegroups.adults.label": "Adults",
-  "pages.classes.styles.chinese_dance.cta.label": "Book a class",
-  "pages.classes.styles.chinese_dance.hero.image.alt": "Chinese dance class",
-  "pages.classes.styles.chinese_dance.hero.overline": "Grace & line",
-  "pages.classes.styles.chinese_dance.hero.subtitle": "Classical Chinese dance to build body control, flexibility and stage presence.",
-  "pages.classes.styles.chinese_dance.hero.title": "Chinese Dance",
-  "pages.classes.styles.chinese_dance.highlights.0.description": "Discover the artistry of classical Chinese movement.",
-  "pages.classes.styles.chinese_dance.highlights.0.title": "Cultural expression",
-  "pages.classes.styles.chinese_dance.highlights.1.description": "Develop line, poise and body awareness.",
-  "pages.classes.styles.chinese_dance.highlights.1.title": "Flexibility & control",
-  "pages.classes.styles.chinese_dance.highlights.2.description": "Beginners welcome — check the level on each class.",
-  "pages.classes.styles.chinese_dance.highlights.2.title": "All levels",
-  "pages.classes.styles.chinese_dance.instructor.bio": "Lisa Lin from RCDance is a classically trained dance artist and educator specialising in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
-  "pages.classes.styles.chinese_dance.instructor.image.alt": "RCDance Lisa Lin",
-  "pages.classes.styles.chinese_dance.instructor.name": "RCDance Lisa",
-  "pages.classes.styles.chinese_dance.instructor.role": "Chinese dance teacher",
-  "pages.classes.styles.chinese_dance.intro.0": " ",
-  "pages.classes.styles.chinese_dance.intro.1": " ",
-  "pages.classes.styles.chinese_dance.metadescription": "Chinese dance classes blending classical grace, line and cultural expression for adults.",
-  "pages.classes.styles.chinese_dance.name": "Chinese Dance",
-  "pages.classes.styles.contemporary.agegroups.adults.description": "Open to all backgrounds — no dance experience needed.",
-  "pages.classes.styles.contemporary.agegroups.adults.label": "Adults",
-  "pages.classes.styles.contemporary.cta.label": "Book a class",
-  "pages.classes.styles.contemporary.hero.image.alt": "Contemporary dance class",
-  "pages.classes.styles.contemporary.hero.overline": "Modern dance",
-  "pages.classes.styles.contemporary.hero.subtitle": "Develop coordination, strength and creativity through flow, space and physical expression.",
-  "pages.classes.styles.contemporary.hero.title": "Contemporary",
-  "pages.classes.styles.contemporary.highlights.0.description": "Explore space, dynamics and personal expression.",
-  "pages.classes.styles.contemporary.highlights.0.title": "Creative movement",
-  "pages.classes.styles.contemporary.highlights.1.description": "Build physical confidence through structured practice.",
-  "pages.classes.styles.contemporary.highlights.1.title": "Strength & coordination",
-  "pages.classes.styles.contemporary.highlights.2.description": "Classes labelled Beginner, Open Level or Intermediate.",
-  "pages.classes.styles.contemporary.highlights.2.title": "All levels",
-  "pages.classes.styles.contemporary.instructor.bio": "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
-  "pages.classes.styles.contemporary.instructor.image.alt": "Ka Ki Christina Lai and Ying Yen (Yvonne)",
-  "pages.classes.styles.contemporary.instructor.name": "Christina & Yvonne ",
-  "pages.classes.styles.contemporary.instructor.role": "Contemporary dance teacher",
-  "pages.classes.styles.contemporary.intro.0": " ",
-  "pages.classes.styles.contemporary.intro.1": " ",
-  "pages.classes.styles.contemporary.metadescription": "Contemporary dance classes for adults at County Hall Dance Centre — flow, space and physical expression.",
-  "pages.classes.styles.contemporary.name": "Contemporary",
-  "pages.classes.styles.tai_chi.agegroups.adults.description": "Suitable for every age and fitness level.",
-  "pages.classes.styles.tai_chi.agegroups.adults.label": "Adults",
-  "pages.classes.styles.tai_chi.cta.label": "Book a class",
-  "pages.classes.styles.tai_chi.hero.image.alt": "Tai Chi class",
-  "pages.classes.styles.tai_chi.hero.overline": "Flow & balance",
-  "pages.classes.styles.tai_chi.hero.subtitle": "Cultivate balance, relaxation and body awareness through slow, flowing movement.",
-  "pages.classes.styles.tai_chi.hero.title": "Tai Chi",
-  "pages.classes.styles.tai_chi.highlights.0.description": "Slow, intentional movement for calm and focus.",
-  "pages.classes.styles.tai_chi.highlights.0.title": "Mind-body practice",
-  "pages.classes.styles.tai_chi.highlights.1.description": "Develop stability and gentle strength.",
-  "pages.classes.styles.tai_chi.highlights.1.title": "Balance & awareness",
-  "pages.classes.styles.tai_chi.highlights.2.description": "Welcoming to complete beginners.",
-  "pages.classes.styles.tai_chi.highlights.2.title": "All levels",
-  "pages.classes.styles.tai_chi.instructor.bio": "Xintian is a dancer and choreographer based in London. She graduated from the Northern School of Contemporary Dance in 2024. Prior to that, she received seven years of professional ballet training at the Shanghai Ballet School, before switching her major to choreography at university. She is currently working as a freelance artist in London, and also teaches and performs at the Confucius Institute at Goldsmiths, University of London.",
-  "pages.classes.styles.tai_chi.instructor.image.alt": "Xintian Zhao",
-  "pages.classes.styles.tai_chi.instructor.name": "Xintian Zhao",
-  "pages.classes.styles.tai_chi.instructor.role": "Tai Chi teacher",
-  "pages.classes.styles.tai_chi.intro.0": " ",
-  "pages.classes.styles.tai_chi.metadescription": "Tai Chi classes for adults — balance, relaxation and body awareness.",
-  "pages.classes.styles.tai_chi.name": "Tai Chi",
-  "pages.classes.styles.tango.agegroups.adults.description": "No partner or experience required to begin.",
-  "pages.classes.styles.tango.agegroups.adults.label": "Adults",
-  "pages.classes.styles.tango.cta.label": "Book a class",
-  "pages.classes.styles.tango.hero.image.alt": "Tango class",
-  "pages.classes.styles.tango.hero.overline": "Connection & musicality",
-  "pages.classes.styles.tango.hero.subtitle": "Learn lead and follow, musicality and the etiquette of social dance.",
-  "pages.classes.styles.tango.hero.title": "Tango",
-  "pages.classes.styles.tango.highlights.0.description": "Lead, follow and floor etiquette from day one.",
-  "pages.classes.styles.tango.highlights.0.title": "Social dance skills",
-  "pages.classes.styles.tango.highlights.1.description": "Move with confidence to live and recorded tango music.",
-  "pages.classes.styles.tango.highlights.1.title": "Musicality",
-  "pages.classes.styles.tango.highlights.2.description": "Join our social dance nights and themed events.",
-  "pages.classes.styles.tango.highlights.2.title": "Milongas & events",
-  "pages.classes.styles.tango.instructor.bio": "Rene is an experienced Argentine Tango dancer, instructor and performer. With a background in Ballroom and Latin dance, he has spent many years developing his expertise in Argentine Tango, studying with some of the most renowned and influential teachers in Argentina and Europe.",
-  "pages.classes.styles.tango.instructor.image.alt": "Rene",
-  "pages.classes.styles.tango.instructor.name": "Rene",
-  "pages.classes.styles.tango.instructor.role": "Tango teacher",
-  "pages.classes.styles.tango.intro.0": "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
-  "pages.classes.styles.tango.metadescription": "Tango classes for adults — connection, musicality and social dance etiquette.",
-  "pages.classes.styles.tango.name": "Tango",
-  "pages.classes.styles.yoga.agegroups.adults.description": "Open to beginners and returning practitioners.",
-  "pages.classes.styles.yoga.agegroups.adults.label": "Adults",
-  "pages.classes.styles.yoga.cta.label": "Book a class",
-  "pages.classes.styles.yoga.hero.image.alt": "Yoga class",
-  "pages.classes.styles.yoga.hero.overline": "Breath & stretch",
-  "pages.classes.styles.yoga.hero.subtitle": "Improve flexibility and overall wellbeing through breath, stretch and focused practice.",
-  "pages.classes.styles.yoga.hero.title": "Yoga",
-  "pages.classes.styles.yoga.highlights.0.description": "Stretch, breathe and restore balance.",
-  "pages.classes.styles.yoga.highlights.0.title": "Wellbeing focus",
-  "pages.classes.styles.yoga.highlights.1.description": "A calm, focused environment for every body.",
-  "pages.classes.styles.yoga.highlights.1.title": "Music-guided practice",
-  "pages.classes.styles.yoga.highlights.2.description": "Check class information for level and format details.",
-  "pages.classes.styles.yoga.highlights.2.title": "All levels",
-  "pages.classes.styles.yoga.instructor.bio": "Kasen Zhao is the founder of Sen Yoga, a certified Yoga Alliance instructor and Stott Pilates instructor with over eight years of experience. Specialising in Vinyasa, Inside Flow and Yin Yoga, he combines mindful movement, breathwork and alignment to help students build strength, find balance and cultivate inner peace.",
-  "pages.classes.styles.yoga.instructor.image.alt": "Kasen",
-  "pages.classes.styles.yoga.instructor.name": "Kasen",
-  "pages.classes.styles.yoga.instructor.role": "Yoga teacher",
-  "pages.classes.styles.yoga.intro.0": " ",
-  "pages.classes.styles.yoga.metadescription": "Yoga classes for adults — flexibility, breath and wellbeing at County Hall Dance Centre.",
-  "pages.classes.styles.yoga.name": "Yoga",
-  "pages.classesinfo.hero.overline": "Classes",
-  "pages.classesinfo.hero.subtitle": "Explore our adult dance and movement programme and meet the teaching team.",
-  "pages.classesinfo.hero.title": "Class Descriptions & Instructors",
-  "pages.classesinfo.intro": "Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome — no dance experience needed.",
-  "pages.classesinfo.meta.description": "Class descriptions and instructor profiles for adult classes at County Hall Dance Centre.",
-  "pages.classesinfo.meta.title": "Class Descriptions & Instructors",
-  "pages.classesinfo.sections.descriptions.title": "Class Descriptions",
-  "pages.classesinfo.sections.instructors.title": "Instructors",
-  "pages.common.eventdetailslink": "Details →",
-  "pages.common.viewcourselink": "View course →",
-  "pages.contact.details.address.0": "2nd Floor, County Hall Main Entrance",
-  "pages.contact.details.address.1": "Belvedere Road",
-  "pages.contact.details.address.2": "London SE1 7PB",
-  "pages.contact.details.email": "info@countyhalldancecentre.com",
-  "pages.contact.details.gettinghere": "Getting here: a five-minute walk from Waterloo and Westminster stations.",
-  "pages.contact.details.hours": "Office hours: Mon – Fri, 9:00 – 17:30",
-  "pages.contact.details.instagramlabel": "Instagram: @countyhalldancecentre",
-  "pages.contact.details.membershiplabel": "Membership enquiries: membership@countyhalldancecentre.com",
-  "pages.contact.details.phone": "+44 7728 617531",
-  "pages.contact.details.title": "Venue details",
-  "pages.contact.details.wechat": "WeChat: 18518614868",
-  "pages.contact.form.description": "Complete the form below and we will respond within two working days.",
-  "pages.contact.form.fields.email_address.label": "Email address",
-  "pages.contact.form.fields.email_address.placeholder": "you@example.com",
-  "pages.contact.form.fields.full_name.label": "Full name",
-  "pages.contact.form.fields.full_name.placeholder": "Your name",
-  "pages.contact.form.fields.message.label": "Message",
-  "pages.contact.form.fields.message.placeholder": "How can we help?",
-  "pages.contact.form.fields.phone_optional.label": "Phone (optional)",
-  "pages.contact.form.fields.phone_optional.placeholder": "+44 …",
-  "pages.contact.form.fields.subject.label": "Subject",
-  "pages.contact.form.fields.subject.options.classes_timetable.label": "Classes & timetable",
-  "pages.contact.form.fields.subject.options.events.label": "Events",
-  "pages.contact.form.fields.subject.options.general_enquiry.label": "General enquiry",
-  "pages.contact.form.fields.subject.options.membership.label": "Membership",
-  "pages.contact.form.fields.subject.options.private_lessons_experiences.label": "Private lessons & experiences",
-  "pages.contact.form.fields.subject.options.venue_hire.label": "Venue hire",
-  "pages.contact.form.selectplaceholder": "Select an option",
-  "pages.contact.form.submitlabel": "Send message",
-  "pages.contact.form.successmessage": "Thank you — your message has been received. We will be in touch shortly.",
-  "pages.contact.form.title": "Send an enquiry",
-  "pages.contact.hero.overline": "We'd love to hear from you",
-  "pages.contact.hero.subtitle": "Questions about classes, courses, private events, or anything else — send us a message.",
-  "pages.contact.hero.title": "Contact",
-  "pages.contact.map.directionslabel": "Open in Google Maps →",
-  "pages.contact.map.title": "Find us",
-  "pages.contact.meta.description": "Get in touch with County Hall Dance & Performing Arts School.",
-  "pages.contact.meta.title": "Contact",
-  "pages.courses.detaillabels.backlink": "All courses",
-  "pages.courses.detaillabels.duration": "Duration",
-  "pages.courses.detaillabels.price": "Price",
-  "pages.courses.detaillabels.schedule": "Schedule",
-  "pages.courses.hero.overline": "Structured progression",
-  "pages.courses.hero.subtitle": "Immersive term programmes designed to deepen technique, artistry, and performance readiness.",
-  "pages.courses.hero.title": "Courses",
-  "pages.courses.intro": "Courses differ from drop-in classes — they follow a curated syllabus across a full term, culminating in an informal sharing or assessment where appropriate.",
-  "pages.courses.items.adult_ballet_open.cta.label": "Enrol via timetable",
-  "pages.courses.items.adult_ballet_open.description.0": "Rebuild strength and grace at the barre and in centre, with modifications offered throughout.",
-  "pages.courses.items.adult_ballet_open.description.1": "Each block introduces new enchaînements while revisiting core principles.",
-  "pages.courses.items.adult_ballet_open.duration": "6-week blocks",
-  "pages.courses.items.adult_ballet_open.excerpt": "A welcoming ballet class for adults — beginners and returners alike.",
-  "pages.courses.items.adult_ballet_open.image.alt": "Adult ballet open course",
-  "pages.courses.items.adult_ballet_open.includes.0": "Weekly 75-minute class",
-  "pages.courses.items.adult_ballet_open.includes.1": "Technique notes via email",
-  "pages.courses.items.adult_ballet_open.includes.2": "Optional end-of-block class video",
-  "pages.courses.items.adult_ballet_open.level": "All levels",
-  "pages.courses.items.adult_ballet_open.metadescription": "Open-level adult ballet course at CHD PAS, London.",
-  "pages.courses.items.adult_ballet_open.price": "£96 per block",
-  "pages.courses.items.adult_ballet_open.schedule": "Mondays, 19:00 – 20:15",
-  "pages.courses.items.adult_ballet_open.term": "Rolling enrolment",
-  "pages.courses.items.adult_ballet_open.title": "Adult Ballet Open",
-  "pages.courses.items.junior_ballet_foundation.cta.label": "Enrol via timetable",
-  "pages.courses.items.junior_ballet_foundation.description.0": "This course introduces young dancers to the fundamentals of ballet posture, port de bras, and basic allegro.",
-  "pages.courses.items.junior_ballet_foundation.description.1": "Classes are taught in a nurturing environment with clear expectations and plenty of encouragement.",
-  "pages.courses.items.junior_ballet_foundation.duration": "12 weeks",
-  "pages.courses.items.junior_ballet_foundation.excerpt": "A twelve-week introduction to classical ballet for ages 6–9.",
-  "pages.courses.items.junior_ballet_foundation.image.alt": "Junior ballet foundation course",
-  "pages.courses.items.junior_ballet_foundation.includes.0": "Weekly 60-minute class",
-  "pages.courses.items.junior_ballet_foundation.includes.1": "Course handbook and practice notes",
-  "pages.courses.items.junior_ballet_foundation.includes.2": "End-of-term venue sharing",
-  "pages.courses.items.junior_ballet_foundation.level": "Beginner – Elementary",
-  "pages.courses.items.junior_ballet_foundation.metadescription": "Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.",
-  "pages.courses.items.junior_ballet_foundation.price": "£168 per term",
-  "pages.courses.items.junior_ballet_foundation.schedule": "Saturdays, 10:00 – 11:00",
-  "pages.courses.items.junior_ballet_foundation.term": "Autumn Term 2026",
-  "pages.courses.items.junior_ballet_foundation.title": "Junior Ballet Foundation",
-  "pages.courses.items.musical_theatre_performance.cta.label": "Enrol via timetable",
-  "pages.courses.items.musical_theatre_performance.description.0": "Sing, dance, and act your way through a selected musical number, rehearsed for a small invited audience.",
-  "pages.courses.items.musical_theatre_performance.description.1": "Vocal coaching and ensemble work are integrated throughout the term.",
-  "pages.courses.items.musical_theatre_performance.duration": "14 weeks",
-  "pages.courses.items.musical_theatre_performance.excerpt": "Triple-threat training culminating in a staged musical excerpt.",
-  "pages.courses.items.musical_theatre_performance.image.alt": "Musical theatre performance course",
-  "pages.courses.items.musical_theatre_performance.includes.0": "Weekly 3-hour session",
-  "pages.courses.items.musical_theatre_performance.includes.1": "Vocal warm-up resources",
-  "pages.courses.items.musical_theatre_performance.includes.2": "Costume hire for final sharing",
-  "pages.courses.items.musical_theatre_performance.level": "Intermediate – Advanced",
-  "pages.courses.items.musical_theatre_performance.metadescription": "Musical theatre performance course for intermediate and advanced students.",
-  "pages.courses.items.musical_theatre_performance.price": "£320 per term",
-  "pages.courses.items.musical_theatre_performance.schedule": "Saturdays, 13:00 – 16:00",
-  "pages.courses.items.musical_theatre_performance.term": "Spring Term 2027",
-  "pages.courses.items.musical_theatre_performance.title": "Musical Theatre Performance",
-  "pages.courses.items.teen_contemporary_intensive.cta.label": "Enrol via timetable",
-  "pages.courses.items.teen_contemporary_intensive.description.0": "Students explore release technique, contact principles, and choreographic tasks across a focused ten-week block.",
-  "pages.courses.items.teen_contemporary_intensive.description.1": "The course prepares dancers for school showcases and optional audition pieces.",
-  "pages.courses.items.teen_contemporary_intensive.duration": "10 weeks",
-  "pages.courses.items.teen_contemporary_intensive.excerpt": "Develop contemporary technique, improvisation, and performance skills.",
-  "pages.courses.items.teen_contemporary_intensive.image.alt": "Teen contemporary intensive course",
-  "pages.courses.items.teen_contemporary_intensive.includes.0": "Weekly 90-minute class",
-  "pages.courses.items.teen_contemporary_intensive.includes.1": "Guest artist Q&A session",
-  "pages.courses.items.teen_contemporary_intensive.includes.2": "Performance workshop",
-  "pages.courses.items.teen_contemporary_intensive.level": "Intermediate",
-  "pages.courses.items.teen_contemporary_intensive.metadescription": "Intermediate contemporary course for teens at County Hall Dance.",
-  "pages.courses.items.teen_contemporary_intensive.price": "£195 per term",
-  "pages.courses.items.teen_contemporary_intensive.schedule": "Wednesdays, 17:30 – 19:00",
-  "pages.courses.items.teen_contemporary_intensive.term": "Autumn Term 2026",
-  "pages.courses.items.teen_contemporary_intensive.title": "Teen Contemporary Intensive",
-  "pages.courses.meta.description": "Term-length dance and performing arts courses with structured progression at CHD PAS.",
-  "pages.courses.meta.title": "Courses",
-  "pages.events.categories.cross_arts_events.hero.overline": "What's On",
-  "pages.events.categories.cross_arts_events.hero.subtitle": "Where dance meets music, visual art and international cultural exchange.",
-  "pages.events.categories.cross_arts_events.hero.title": "Cross-Arts Events",
-  "pages.events.categories.cross_arts_events.intro": "Our Dance Meets Arts programme brings together movement, live music, visual art and cultural celebration.",
-  "pages.events.categories.cross_arts_events.meta.description": "Dance Meets Arts cross-disciplinary events at County Hall Dance Centre.",
-  "pages.events.categories.cross_arts_events.meta.title": "Cross-Arts Events",
-  "pages.events.categories.cross_arts_events.sections.programme.title": "Programme",
-  "pages.events.categories.cross_arts_events.sections.upcoming.title": "Upcoming events",
-  "pages.events.categories.masterclasses.hero.overline": "What's On",
-  "pages.events.categories.masterclasses.hero.subtitle": "Learn from visiting artists and specialists in intimate venue settings.",
-  "pages.events.categories.masterclasses.hero.title": "Masterclasses",
-  "pages.events.categories.masterclasses.intro": "Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.",
-  "pages.events.categories.masterclasses.meta.description": "Guest artist masterclasses at County Hall Dance Centre.",
-  "pages.events.categories.masterclasses.meta.title": "Masterclasses",
-  "pages.events.categories.masterclasses.sections.levels.title": "Levels & requirements",
-  "pages.events.categories.masterclasses.sections.upcoming.title": "Upcoming masterclasses",
-  "pages.events.categories.milonga.hero.overline": "What's On",
-  "pages.events.categories.milonga.hero.subtitle": "Social tango evenings with live and recorded music in our South Bank venue.",
-  "pages.events.categories.milonga.hero.title": "Milonga",
-  "pages.events.categories.milonga.intro": "Join us for regular milongas — welcoming social dance nights for tango dancers of every level.",
-  "pages.events.categories.milonga.meta.description": "Tango milonga social dance events at County Hall Dance Centre.",
-  "pages.events.categories.milonga.meta.title": "Milonga",
-  "pages.events.categories.milonga.sections.upcoming.title": "Upcoming milongas",
-  "pages.events.categories.milonga.sections.what_to_expect.title": "What to expect",
-  "pages.events.categories.performances.hero.overline": "What's On",
-  "pages.events.categories.performances.hero.subtitle": "Ticketed showcases, sharings and performance events throughout the year.",
-  "pages.events.categories.performances.hero.title": "Performances",
-  "pages.events.categories.performances.intro": "Celebrate the work of our community in performances ranging from informal sharings to ticketed showcase evenings.",
-  "pages.events.categories.performances.meta.description": "Performances and showcases at County Hall Dance Centre.",
-  "pages.events.categories.performances.meta.title": "Performances",
-  "pages.events.categories.performances.sections.tickets.title": "Tickets",
-  "pages.events.categories.performances.sections.upcoming.title": "Upcoming performances",
-  "pages.events.categories.social_dance_nights.hero.overline": "What's On",
-  "pages.events.categories.social_dance_nights.hero.subtitle": "Themed evenings celebrating dance styles, music and community.",
-  "pages.events.categories.social_dance_nights.hero.title": "Social Dance Nights",
-  "pages.events.categories.social_dance_nights.intro": "From salsa socials to cross-style celebrations, our social nights are open to adults who love to move and connect.",
-  "pages.events.categories.social_dance_nights.meta.description": "Themed social dance evenings at County Hall Dance Centre.",
-  "pages.events.categories.social_dance_nights.meta.title": "Social Dance Nights",
-  "pages.events.categories.social_dance_nights.sections.how_to_join.title": "How to join",
-  "pages.events.categories.social_dance_nights.sections.upcoming.title": "Upcoming social nights",
-  "pages.events.categories.workshops.hero.overline": "What's On",
-  "pages.events.categories.workshops.hero.subtitle": "One-off intensives and taster sessions with guest artists and faculty.",
-  "pages.events.categories.workshops.hero.title": "Workshops",
-  "pages.events.categories.workshops.intro": "Workshops offer a focused opportunity to explore a style, technique or theme in a single session or short series.",
-  "pages.events.categories.workshops.meta.description": "Dance and movement workshops at County Hall Dance Centre.",
-  "pages.events.categories.workshops.meta.title": "Workshops",
-  "pages.events.categories.workshops.sections.booking.title": "Booking",
-  "pages.events.categories.workshops.sections.upcoming.title": "Upcoming workshops",
-  "pages.events.categorylabels.backlink": "← What's on",
-  "pages.events.detaillabels.backlink": "← What's on",
-  "pages.events.detaillabels.booking": "Booking details",
-  "pages.events.detaillabels.date": "Date",
-  "pages.events.detaillabels.endpending": "End time to be confirmed",
-  "pages.events.detaillabels.eventinformation": "Event information",
-  "pages.events.detaillabels.hostedat": "Hosted at",
-  "pages.events.detaillabels.location": "Location",
-  "pages.events.detaillabels.organiser": "Organised by",
-  "pages.events.detaillabels.partners": "In collaboration with",
-  "pages.events.detaillabels.pastconcerts": "Past concerts",
-  "pages.events.detaillabels.programme": "Programme sessions",
-  "pages.events.detaillabels.promotedby": "Promoted by",
-  "pages.events.detaillabels.room": "Space",
-  "pages.events.detaillabels.timepending": "Time to be confirmed",
-  "pages.events.detaillabels.upcomingconcerts": "Upcoming concerts",
-  "pages.events.detaillabels.venuepending": "Venue to be confirmed",
-  "pages.events.hero.overline": "What's on",
-  "pages.events.hero.subtitle": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
-  "pages.events.hero.title": "What's On",
-  "pages.events.intro": "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
-  "pages.events.items.county_hall_dance_centre_opening_day.booknow.label": "Details",
-  "pages.events.items.county_hall_dance_centre_opening_day.date": "Thursday 10 September 2026",
-  "pages.events.items.county_hall_dance_centre_opening_day.description.0": "County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.",
-  "pages.events.items.county_hall_dance_centre_opening_day.description.1": "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
-  "pages.events.items.county_hall_dance_centre_opening_day.excerpt": "County Hall Dance Centre opened its doors at County Hall on 10 September 2026.",
-  "pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt": "Ribbon-cutting at County Hall Dance Centre Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt": "Celebration table at the Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt": "Dressing area and costume rails at Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt": "Flowers marking County Hall Dance Centre Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt": "County Hall Dance Centre crest on Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.image.alt": "County Hall Dance Centre Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.location": "County Hall",
-  "pages.events.items.county_hall_dance_centre_opening_day.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title": "Opening Day",
-  "pages.events.items.county_hall_dance_centre_opening_day.title": "County Hall Dance Centre – Opening Day",
-  "pages.events.items.dance_meets_arts.booknow.label": "Details",
-  "pages.events.items.dance_meets_arts.date": "Saturday 8 August 2026, 7:00pm – 8:30pm",
-  "pages.events.items.dance_meets_arts.description.0": "Join us for an inspiring summer evening celebrating the dialogue between dance and the arts in one of London's most iconic cultural settings.",
-  "pages.events.items.dance_meets_arts.description.1": "Dance Meets Arts is the inaugural event presented by County Hall Dance Centre in collaboration with County Hall Arts, exploring how movement can be inspired by painting, sculpture, music and architecture. Set against the spectacular backdrop of the River Thames and the London skyline, the evening invites audiences to experience dance not simply as performance, but as a living artistic conversation.",
-  "pages.events.items.dance_meets_arts.description.2": "Throughout the evening, professional artists will present a series of performances inspired by works of visual art and music, demonstrating how different creative disciplines can influence and enrich one another. The event reflects County Hall Arts' vision of bringing together artists, audiences and ideas through meaningful cultural experiences.",
-  "pages.events.items.dance_meets_arts.description.3": "Whether you are a dance enthusiast, an art lover, or simply looking for a unique summer evening on London's South Bank, Dance Meets Arts offers a warm welcome to everyone.",
-  "pages.events.items.dance_meets_arts.description.4": "The evening also marks the introduction of the County Hall Dance Centre, a new artistic community dedicated to dance, creativity and cultural exchange. Guests will have the opportunity to meet the team, receive a free dance class, discover future classes and events, and learn more about becoming part of this exciting new initiative.",
-  "pages.events.items.dance_meets_arts.description.5": "Admission is free.",
-  "pages.events.items.dance_meets_arts.description.6": "# Programme",
-  "pages.events.items.dance_meets_arts.description.7": "An Artistic Journey Through Movement. Dance performance inspired by the arts.",
-  "pages.events.items.dance_meets_arts.description.8": "An inspiring programme featuring Contemporary Dance & Painting, Classical Ballet, Calligraphy & Dance, Live Piano & Violin, Tea Culture Performance, Tai Chi, Argentine Tango and an Interactive Dance Experience.",
-  "pages.events.items.dance_meets_arts.description.9": "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
-  "pages.events.items.dance_meets_arts.excerpt": "Dance Meets Arts at County Hall celebrates dance, music and visual arts on London's South Bank with free live performances.",
-  "pages.events.items.dance_meets_arts.image.alt": "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt": "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
-  "pages.events.items.dance_meets_arts.location": "Members' Terrace, County Hall",
-  "pages.events.items.dance_meets_arts.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.dance_meets_arts.partners.0": "County Hall Arts",
-  "pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.title": "Dance Meets Arts",
-  "pages.events.items.dance_meets_arts.title": "Dance Meets Arts",
-  "pages.events.items.four_seasons_festival.booknow.label": "Details",
-  "pages.events.items.four_seasons_festival.date": "Saturday 24 – Sunday 25 October 2026",
-  "pages.events.items.four_seasons_festival.description.0": "# Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.description.1": "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
-  "pages.events.items.four_seasons_festival.description.10": "At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.",
-  "pages.events.items.four_seasons_festival.description.11": "# Under the Same Sun, Summer 2026",
-  "pages.events.items.four_seasons_festival.description.12": "The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration.",
-  "pages.events.items.four_seasons_festival.description.13": "Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together.",
-  "pages.events.items.four_seasons_festival.description.14": "The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava.",
-  "pages.events.items.four_seasons_festival.description.2": "More than a programme of individual events, each edition is developed around a central theme or idea – creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
-  "pages.events.items.four_seasons_festival.description.3": "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
-  "pages.events.items.four_seasons_festival.description.4": "# As the Leaves Turn, Autumn 2026",
-  "pages.events.items.four_seasons_festival.description.5": "The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation.",
-  "pages.events.items.four_seasons_festival.description.6": "Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning. Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go.",
-  "pages.events.items.four_seasons_festival.description.7": "# Seeds of Change, Spring 2026",
-  "pages.events.items.four_seasons_festival.description.8": "The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility.",
-  "pages.events.items.four_seasons_festival.description.9": "The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening.",
-  "pages.events.items.four_seasons_festival.descriptionctas.more_details.label": "More Details",
-  "pages.events.items.four_seasons_festival.excerpt": "As the Leaves Turn, Autumn 2026 — a seasonal celebration of music, dance, visual arts, film, performances and creative workshops at County Hall.",
-  "pages.events.items.four_seasons_festival.gallery.0.alt": "Concert in the County Hall atrium during the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.gallery.1.alt": "Saxophone and accordion performance beside colourful sculptures at County Hall",
-  "pages.events.items.four_seasons_festival.gallery.10.alt": "Flute, piano and cello trio performing at the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.gallery.2.alt": "Musicians and dancers with programme booklets at the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.gallery.3.alt": "Guided tour near the South Bank Lion with Big Ben in the background",
-  "pages.events.items.four_seasons_festival.gallery.4.alt": "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.gallery.5.alt": "Outdoor dance and flute performance for Under the Same Sun at County Hall",
-  "pages.events.items.four_seasons_festival.gallery.6.alt": "Storytelling and craft workshop with author Vivian French at the festival",
-  "pages.events.items.four_seasons_festival.gallery.7.alt": "Flute and harp performance in the County Hall atrium",
-  "pages.events.items.four_seasons_festival.gallery.8.alt": "Homemade cakes and treats served during the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.gallery.9.alt": "Short film screening as part of Seeds of Change at County Hall",
-  "pages.events.items.four_seasons_festival.image.alt": "Concert in the County Hall atrium during the Four Seasons Festival",
-  "pages.events.items.four_seasons_festival.location": "Riverside Building, County Hall",
-  "pages.events.items.four_seasons_festival.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.hostedat": "County Hall Dance & Performing Arts School",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.title": "Folk Music, Irish Dance & Opening Celebration",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.hostedat": "County Hall Dance & Performing Arts School",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.title": "Art and Craft and Movement Workshop for Children",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.0": "County Hall Dance & Performing Arts School",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.1": "Sen Yoga",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.title": "Autumn Flow and Sound",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_4.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_4.title": "Around the World Ticket",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_5.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_5.title": "Loom: Folk Traditions & Early Music",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_6.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_6.title": "Young Leaves Concert",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_7.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_7.title": "Autumn Leaf Pressing Clay Workshop",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_8.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_8.title": "Music That Dances",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_9.organiser": "County Hall Arts",
-  "pages.events.items.four_seasons_festival.sessions.leaves_2026_9.title": "Short Film Screening",
-  "pages.events.items.four_seasons_festival.title": "Four Seasons Festival",
-  "pages.events.items.halloween_pumpkin_carving_workshop.booknow.label": "Enquire Now",
-  "pages.events.items.halloween_pumpkin_carving_workshop.date": "Saturday 31 October 2026, 1:00pm – 5:00pm",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.0": "Join us at County Hall Dance Centre for a creative and fun-filled Halloween afternoon! Perfect for adults and children alike, our Pumpkin Carving Workshop is a chance to get into the Halloween spirit, make something of your own and enjoy a festive afternoon together.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.1": "The afternoon begins with a hands-on pumpkin carving workshop, where you can create your very own Jack-o'-Lantern. Later, the celebrations continue with a Halloween Costume Show, complete with special awards and a professional photographer to capture the occasion.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.10": "A professional photographer will be present to capture the fun and memorable moments throughout the afternoon.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.11": "# Tickets",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.12": "£45 — With Costume.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.13": "£55 — Without Costume.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.14": "# Event Details",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.15": "Date: Saturday 31 October 2026.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.16": "Time: 1:00pm–5:00pm.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.17": "Venue: County Hall Dance Centre, London SE1 7PB.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.18": "Suitable for adults and children.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.19": "For booking enquiries and further information, please contact info@countyhalldancecentre.com.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.2": "# Programme",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.3": "13:00 — Pumpkin Carving Workshop. Carve and decorate your own Halloween pumpkin and bring your Jack-o'-Lantern to life.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.4": "15:00 — Halloween Costume Show. Dress up as your favourite character, show off your Halloween look and join in the fun!",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.5": "# Costume Show & Awards",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.6": "The costume show will feature three special awards:",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.7": "Best Costume Award — Celebrating the most creative and impressive outfit.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.8": "Best Makeup Award — Recognising imaginative Halloween makeup.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.description.9": "Best Performance Award — For a standout performance during the costume show.",
-  "pages.events.items.halloween_pumpkin_carving_workshop.excerpt": "Get creative this Halloween with an afternoon of pumpkin carving, followed by a costume show, special awards and professional photography. Fun for all ages!",
-  "pages.events.items.halloween_pumpkin_carving_workshop.image.alt": "Halloween pumpkins and decorations",
-  "pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt": "Halloween Costume Show and Pumpkin Workshop poster",
-  "pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt": "Halloween Costume Play and Pumpkin Carving Workshop poster",
-  "pages.events.items.halloween_pumpkin_carving_workshop.location": "County Hall Dance Centre, London SE1 7PB",
-  "pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.title": "Halloween Pumpkin Carving Workshop",
-  "pages.events.items.halloween_pumpkin_carving_workshop.title": "Halloween Pumpkin Carving Workshop",
-  "pages.events.items.lunchtime_concert_series.booknow.label": "Details",
-  "pages.events.items.lunchtime_concert_series.date": "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
-  "pages.events.items.lunchtime_concert_series.description.0": "The County Hall Quartet presents informal afternoon concerts of classical music at County Hall. Each month brings a new programme, where music becomes our common language.",
-  "pages.events.items.lunchtime_concert_series.description.1": "# Next Concert",
-  "pages.events.items.lunchtime_concert_series.description.2": "The next concert date and programme will be announced once confirmed.",
-  "pages.events.items.lunchtime_concert_series.description.3": "# The County Hall Quartet",
-  "pages.events.items.lunchtime_concert_series.description.4": "The County Hall Quartet comprises four acclaimed and award-winning musicians: Stefano Marzanni (Piano), Emma Arizza (Violin), Natalia Solis Paredes (Viola) and Meera Priyanka Raja (Cello).",
-  "pages.events.items.lunchtime_concert_series.description.5": "# Venue",
-  "pages.events.items.lunchtime_concert_series.description.6": "Please check each concert listing for its confirmed venue and arrival details.",
-  "pages.events.items.lunchtime_concert_series.excerpt": "Enjoy a relaxed lunchtime concert with the County Hall Quartet.",
-  "pages.events.items.lunchtime_concert_series.image.alt": "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0": "A relaxed afternoon of chamber music with the County Hall Quartet. The ensemble welcomed cellist Meera Priyanka Raja, who opened the concert with a special solo performance.",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser": "County Hall Arts",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title": "Encounters",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0": "The programme explored the virtuosity, lyricism and operatic flair of Italian composers including Paganini, Rossini and Boccherini, with a flamenco twist from two dancers from the London School of Flamenco.",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1": "Guest performers included Santy Masciarò on guitar and Mika Enjo on flute. Violinist Juan Manuel Gonzalez Hernandez joined the ensemble for the Fandango, expanding the group into the quintet for which the work was written.",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2": "The concert marked the beginning of As the Leaves Turn (24–25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations.",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat": "County Hall Dance & Performing Arts School",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser": "County Hall Arts",
-  "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title": "Fandango! Italian Virtuosity Meets Spanish Dance",
-  "pages.events.items.lunchtime_concert_series.title": "Lunchtime Concert Series",
-  "pages.events.items.memory_of_china.booknow.label": "Book Now",
-  "pages.events.items.memory_of_china.date": "Saturday 3 – Sunday 4 October 2026",
-  "pages.events.items.memory_of_china.description.0": "The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank.",
-  "pages.events.items.memory_of_china.description.1": "Across Saturday 3 and Sunday 4 October, County Hall Dance Centre will host a varied programme of performances, workshops and hands-on experiences. From the 2nd UK Chinese Yoga Festival, Chinese classical and ethnic dance to calligraphy, acupressure and Yunnan cultural showcases, the weekend offers different ways to discover and experience Chinese culture. Cultural exhibitions, traditional crafts, hands-on activities, a makers' market and tea culture will also feature throughout the festival.",
-  "pages.events.items.memory_of_china.description.10": "15:45–17:00 — Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.",
-  "pages.events.items.memory_of_china.description.11": "17:00–17:30 — Chinese Classical Dance Performance & Experience Class. An evening performance followed by an opportunity to experience Chinese classical dance. £10 per person, payable on the day at the venue.",
-  "pages.events.items.memory_of_china.description.12": "# Sunday, 4 October 2026",
-  "pages.events.items.memory_of_china.description.13": "12:00 — Market Area Opens. Makers' market open.",
-  "pages.events.items.memory_of_china.description.14": "13:00–14:30 — Yoga Experience. An accessible introduction to yoga and movement, open to participants of all experience levels. £10 per person, payable on the day at the venue.",
-  "pages.events.items.memory_of_china.description.15": "14:35–14:40 — Chinese Fusion Fan Veil Belly Dance. A short performance combining fan choreography with belly dance.",
-  "pages.events.items.memory_of_china.description.16": "14:50–15:20 — Classical Dance Performance: The Old Story & Experience Class. A Chinese classical dance performance followed by an experience class inviting participants to explore the movement for themselves. £10 per person, payable on the day at the venue.",
-  "pages.events.items.memory_of_china.description.17": "15:20–15:35 — East-West Cultural Harmony Music Society. Enjoy a live performance featuring music from Game of Thrones, Jasmine Flower and I Love You.",
-  "pages.events.items.memory_of_china.description.18": "15:35–17:30 — Chinese Calligraphy Paper Scroll Workshop. Discover Chinese calligraphy and create your own paper scroll in a guided hands-on workshop. £12 per person / £20 for two people, payable on the day at the venue.",
-  "pages.events.items.memory_of_china.description.19": "16:00–16:20 — Yunnan Cultural Showcase. An introduction to the diverse cultural traditions and heritage of Yunnan.",
-  "pages.events.items.memory_of_china.description.2": "Saturday's programme has been created especially with the Chinese community in mind and will be presented in Chinese and English, while Sunday's programme will be led primarily in English for international and local audiences. Everyone is welcome to join, and no previous experience is required.",
-  "pages.events.items.memory_of_china.description.20": "16:25–16:30 — Chinese Classical Dance Performance: Bu Gua. A performance showcasing the movement and traditions of Chinese dance.",
-  "pages.events.items.memory_of_china.description.21": "16:30–16:35 — Dai Ethnic Dance Performance: Wan Tao & Cultural Showcase. The festival concludes with Dai dance and an introduction to Dai culture and traditions.",
-  "pages.events.items.memory_of_china.description.22": "# Entry & Booking",
-  "pages.events.items.memory_of_china.description.23": "The festival is primarily a walk-in event, and visitors are welcome to drop in throughout the weekend.",
-  "pages.events.items.memory_of_china.description.24": "Selected workshops and experience sessions require a participation fee, payable on the day at the venue. Visitors wishing to take part in these activities, prize draws and other festival activities are encouraged to register in advance via Eventbrite. Places are limited and subject to availability.",
-  "pages.events.items.memory_of_china.description.25": "# Organisers",
-  "pages.events.items.memory_of_china.description.26": "Organised by County Hall Dance & Performing Arts School. Co-organised by Sen Yoga, RCDance, Yi Crafts, Lotus Realm and Inkjoygraphy.",
-  "pages.events.items.memory_of_china.description.27": "# Finding Us",
-  "pages.events.items.memory_of_china.description.28": "Members' Terrace, The Queen's Walk, County Hall, Riverside Building, London SE1 7PB.",
-  "pages.events.items.memory_of_china.description.29": "You should reach the County Hall Members' Terrace via the Queen's Walk on the riverside of the building. Look out for the gate leading to a staircase upwards, signposted for the Peacock Restaurant. This entrance is found between the London Dungeon and Shrek's Adventure on the Queen's Walk.",
-  "pages.events.items.memory_of_china.description.3": "The festival is presented by County Hall Dance Centre in collaboration with County Hall Arts, as part of a growing programme celebrating dance, culture and artistic collaboration at County Hall.",
-  "pages.events.items.memory_of_china.description.30": "Should you have any questions regarding this festival, please contact us at info@countyhalldancecentre.com.",
-  "pages.events.items.memory_of_china.description.4": "# Saturday, 3 October 2026",
-  "pages.events.items.memory_of_china.description.5": "12:00 — Market Area Opens. Makers' market open.",
-  "pages.events.items.memory_of_china.description.6": "13:00–15:00 — 2nd UK Chinese Yoga Festival. An afternoon dedicated to yoga, movement and wellbeing, featuring MYRing Yoga, Yin-Yang Balance, an interactive session and prize draw. £36 per person, payable on the day at the venue. Check-in from 12:30.",
-  "pages.events.items.memory_of_china.description.7": "15:00–15:20 — Yunnan Cultural Showcase. Discover the diverse cultural traditions of Yunnan through an introduction to the region and its heritage.",
-  "pages.events.items.memory_of_china.description.8": "15:20–15:25 — Dai Ethnic Dance Performance: Wan Tao. A performance showcasing the movement and traditions of Dai ethnic dance.",
-  "pages.events.items.memory_of_china.description.9": "15:25–15:40 — Miao Ethnic Dance Performance: Cai Tang & Cultural Showcase. A Miao dance performance accompanied by an introduction to Miao culture and traditions.",
-  "pages.events.items.memory_of_china.excerpt": "A two-day celebration of traditional Chinese arts and culture at County Hall, with dance, yoga, calligraphy, crafts and hands-on experiences.",
-  "pages.events.items.memory_of_china.image.alt": "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
-  "pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt": "Memory of China festival schedule for Saturday 3 October 2026",
-  "pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt": "Memory of China festival schedule for Sunday 4 October 2026",
-  "pages.events.items.memory_of_china.location": "Members' Terrace, County Hall",
-  "pages.events.items.memory_of_china.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.memory_of_china.partners.0": "Sen Yoga",
-  "pages.events.items.memory_of_china.partners.1": "RCDance",
-  "pages.events.items.memory_of_china.partners.2": "Yi Crafts",
-  "pages.events.items.memory_of_china.partners.3": "Lotus Realm",
-  "pages.events.items.memory_of_china.partners.4": "Inkjoygraphy",
-  "pages.events.items.memory_of_china.partners.5": "County Hall Arts",
-  "pages.events.items.memory_of_china.sessions.memory_2026_03.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.memory_of_china.sessions.memory_2026_03.title": "Memory of China",
-  "pages.events.items.memory_of_china.sessions.memory_2026_04.organiser": "County Hall Dance & Performing Arts School",
-  "pages.events.items.memory_of_china.sessions.memory_2026_04.title": "Memory of China",
-  "pages.events.items.memory_of_china.tickets.saturday_tickets.label": "Saturday tickets",
-  "pages.events.items.memory_of_china.tickets.sunday_tickets.label": "Sunday tickets",
-  "pages.events.items.memory_of_china.title": "Memory of China: Chinese Traditional Arts and Culture Festival",
-  "pages.events.meta.description": "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
-  "pages.events.meta.title": "What's On",
-  "pages.membership.overview.benefits.items.0.body": "Save on workshops, masterclasses and intensive courses.",
-  "pages.membership.overview.benefits.items.0.title": "Workshop & masterclass discounts",
-  "pages.membership.overview.benefits.items.1.body": "Be first to sign up for performances, showcases and special events.",
-  "pages.membership.overview.benefits.items.1.title": "Priority registration",
-  "pages.membership.overview.benefits.items.2.body": "Reduced prices on performance and event tickets.",
-  "pages.membership.overview.benefits.items.2.title": "Event ticket discounts",
-  "pages.membership.overview.benefits.items.3.body": "Savings on County Hall merchandise, dancewear and dance shoes.",
-  "pages.membership.overview.benefits.items.3.title": "Merchandise discounts",
-  "pages.membership.overview.benefits.items.4.body": "Member rates on venue and practice-space hire (from £100 per hour on weekdays).",
-  "pages.membership.overview.benefits.items.4.title": "Reduced venue hire",
-  "pages.membership.overview.benefits.items.5.body": "Exclusive discounts with our partner businesses.",
-  "pages.membership.overview.benefits.items.5.title": "Partner offers",
-  "pages.membership.overview.benefits.items.6.body": "Community classes, parties, theatre trips and social gatherings.",
-  "pages.membership.overview.benefits.items.6.title": "Members-only events",
-  "pages.membership.overview.benefits.items.7.body": "Join our private members' group to stay connected.",
-  "pages.membership.overview.benefits.items.7.title": "Member community",
-  "pages.membership.overview.benefits.items.8.body": "Earn rewards when a friend joins.",
-  "pages.membership.overview.benefits.items.8.title": "Refer a friend",
-  "pages.membership.overview.benefits.items.9.body": "Collect points for attendance and redeem them for rewards.",
-  "pages.membership.overview.benefits.items.9.title": "Points & rewards",
-  "pages.membership.overview.benefits.title": "Member benefits",
-  "pages.membership.overview.cta.body": "Email our membership team and we'll help you find the plan that suits you best.",
-  "pages.membership.overview.cta.button.label": "Join now",
-  "pages.membership.overview.cta.secondary": "membership@countyhalldancecentre.com",
-  "pages.membership.overview.cta.title": "Ready to join?",
-  "pages.membership.overview.faq.items.membership_faq_hire.answer": "Simply mention your membership when you enquire.",
-  "pages.membership.overview.faq.items.membership_faq_hire.question": "How do I get member rates for venue hire?",
-  "pages.membership.overview.faq.items.membership_faq_styles.answer": "Membership covers our class styles: Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop.",
-  "pages.membership.overview.faq.items.membership_faq_styles.question": "Which classes are included?",
-  "pages.membership.overview.faq.items.membership_faq_trial.answer": "We don't offer free trial classes, but you're welcome to book a trial class before you join. Email membership@countyhalldancecentre.com and we'll gladly help you choose the class and plan that's right for you.",
-  "pages.membership.overview.faq.items.membership_faq_trial.question": "Do you offer free trial classes?",
-  "pages.membership.overview.faq.title": "Membership FAQ",
-  "pages.membership.overview.hero.overline": "Dance more, belong more",
-  "pages.membership.overview.hero.subtitle": "Make dance part of your week — and become part of a creative community at London's iconic County Hall.",
-  "pages.membership.overview.hero.title": "Membership",
-  "pages.membership.overview.howtojoin.steps.0": "Choose your plan.",
-  "pages.membership.overview.howtojoin.steps.1": "Email us at membership@countyhalldancecentre.com with the plan you'd like.",
-  "pages.membership.overview.howtojoin.steps.2": "Complete your registration and payment.",
-  "pages.membership.overview.howtojoin.steps.3": "Start booking classes and enjoying your member benefits.",
-  "pages.membership.overview.howtojoin.title": "How to join",
-  "pages.membership.overview.intro": "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
-  "pages.membership.overview.meta.description": "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates.",
-  "pages.membership.overview.meta.title": "Membership",
-  "pages.membership.overview.plans.cta.label": "Join now",
-  "pages.membership.overview.plans.items.annual.body": "Our best value. A full year of dance, community and member-only perks.",
-  "pages.membership.overview.plans.items.annual.price": "£[TBC] / year",
-  "pages.membership.overview.plans.items.annual.title": "Annual Membership",
-  "pages.membership.overview.plans.items.monthly.body": "Flexible and easy to start. Ideal if you want to build a regular practice without a long commitment.",
-  "pages.membership.overview.plans.items.monthly.price": "£[TBC] / month",
-  "pages.membership.overview.plans.items.monthly.title": "Monthly Membership",
-  "pages.membership.overview.plans.items.quarterly.body": "Three months of classes and member benefits — a great way to see real progress.",
-  "pages.membership.overview.plans.items.quarterly.price": "£[TBC] / quarter",
-  "pages.membership.overview.plans.items.quarterly.title": "Quarterly Membership",
-  "pages.membership.overview.plans.title": "Plans",
-  "pages.membership.overview.styles.items.0": "Contemporary",
-  "pages.membership.overview.styles.items.1": "Chinese Dance",
-  "pages.membership.overview.styles.items.2": "Tango",
-  "pages.membership.overview.styles.items.3": "Yoga",
-  "pages.membership.overview.styles.items.4": "Tai Chi",
-  "pages.membership.overview.styles.items.5": "K-Pop",
-  "pages.membership.overview.styles.title": "Class styles included",
-  "pages.membership.subpages.booking_access.hero.overline": "Membership",
-  "pages.membership.subpages.booking_access.hero.subtitle": "How members reserve classes and events through our booking system.",
-  "pages.membership.subpages.booking_access.hero.title": "Booking Access",
-  "pages.membership.subpages.booking_access.intro": "Members will receive booking access through our online timetable and companion app — details to follow via our app partner.",
-  "pages.membership.subpages.booking_access.meta.description": "Member booking access at County Hall Dance Centre.",
-  "pages.membership.subpages.booking_access.meta.title": "Booking Access",
-  "pages.membership.subpages.booking_access.sections.member_booking.title": "Member booking",
-  "pages.membership.subpages.booking_access.sections.support.title": "Support",
-  "pages.membership.subpages.member_benefits.hero.overline": "Membership",
-  "pages.membership.subpages.member_benefits.hero.subtitle": "A more flexible way to keep dancing, join events and belong to the community.",
-  "pages.membership.subpages.member_benefits.hero.title": "Member Benefits",
-  "pages.membership.subpages.member_benefits.intro": "Membership offers ongoing access to classes, events and community benefits — details to be confirmed before launch.",
-  "pages.membership.subpages.member_benefits.meta.description": "Benefits of membership at County Hall Dance Centre.",
-  "pages.membership.subpages.member_benefits.meta.title": "Member Benefits",
-  "pages.membership.subpages.member_benefits.sections.benefits.title": "What's included",
-  "pages.membership.subpages.member_benefits.sections.how_to_join.title": "How to join",
-  "pages.membership.subpages.monthly_passes.hero.overline": "Membership",
-  "pages.membership.subpages.monthly_passes.hero.subtitle": "Flexible monthly options for regular class attendance.",
-  "pages.membership.subpages.monthly_passes.hero.title": "Monthly Passes",
-  "pages.membership.subpages.monthly_passes.intro": "Monthly passes will be published with validity, cancellation policy and transferability before online booking opens.",
-  "pages.membership.subpages.monthly_passes.meta.description": "Monthly pass options at County Hall Dance Centre.",
-  "pages.membership.subpages.monthly_passes.meta.title": "Monthly Passes",
-  "pages.membership.subpages.monthly_passes.sections.pass_options.title": "Pass options",
-  "pages.membership.subpages.monthly_passes.sections.terms.title": "Terms",
-  "pages.privatelessons.cta.body": "Send us a few details and our team will be in touch.",
-  "pages.privatelessons.cta.button.label": "Enquire now",
-  "pages.privatelessons.cta.secondary": "WeChat: 18518614868 · Instagram: @countyhalldancecentre",
-  "pages.privatelessons.cta.title": "Plan your experience",
-  "pages.privatelessons.hero.overline": "Tailored for you",
-  "pages.privatelessons.hero.subtitle": "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful venue at County Hall.",
-  "pages.privatelessons.hero.title": "Private Lessons & Experiences",
-  "pages.privatelessons.howitworks.steps.0.body": "the occasion, group size and preferred dates.",
-  "pages.privatelessons.howitworks.steps.0.title": "Tell us your plans",
-  "pages.privatelessons.howitworks.steps.1.body": "style, teacher, length and a clear quote.",
-  "pages.privatelessons.howitworks.steps.1.title": "We design your session",
-  "pages.privatelessons.howitworks.steps.2.body": "arrive, relax and dance.",
-  "pages.privatelessons.howitworks.steps.2.title": "Enjoy the experience",
-  "pages.privatelessons.howitworks.title": "How it works",
-  "pages.privatelessons.intro": "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank.",
-  "pages.privatelessons.meta.description": "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops.",
-  "pages.privatelessons.meta.title": "Private Lessons & Experiences",
-  "pages.privatelessons.sections.corporate.body": "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
-  "pages.privatelessons.sections.corporate.cta.label": "Enquire",
-  "pages.privatelessons.sections.corporate.gallery.0.alt": "Corporate group movement session",
-  "pages.privatelessons.sections.corporate.gallery.1.alt": "Team workshop in the dance venue",
-  "pages.privatelessons.sections.corporate.gallery.2.alt": "Professional venue environment",
-  "pages.privatelessons.sections.corporate.title": "Corporate Events",
-  "pages.privatelessons.sections.couples.body": "Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side — no experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week.",
-  "pages.privatelessons.sections.couples.cta.label": "Enquire",
-  "pages.privatelessons.sections.couples.gallery.0.alt": "Couple learning partner dance",
-  "pages.privatelessons.sections.couples.gallery.1.alt": "Couples dance experience at County Hall",
-  "pages.privatelessons.sections.couples.gallery.2.alt": "Pair practising movement in the venue",
-  "pages.privatelessons.sections.couples.title": "Couples' Dance",
-  "pages.privatelessons.sections.groups.body": "Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles — a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop — and our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests.",
-  "pages.privatelessons.sections.groups.cta.label": "Enquire",
-  "pages.privatelessons.sections.groups.gallery.0.alt": "Group dance experience",
-  "pages.privatelessons.sections.groups.gallery.1.alt": "Musical theatre themed workshop",
-  "pages.privatelessons.sections.groups.gallery.2.alt": "Group class in the venue",
-  "pages.privatelessons.sections.groups.title": "Group Experiences",
-  "pages.privatelessons.sections.one_to_one.body": "Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique — strength, flexibility, control and precision — or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback.",
-  "pages.privatelessons.sections.one_to_one.cta.label": "Enquire",
-  "pages.privatelessons.sections.one_to_one.gallery.0.alt": "One-to-one private dance lesson",
-  "pages.privatelessons.sections.one_to_one.gallery.1.alt": "Dancer in a private contemporary session",
-  "pages.privatelessons.sections.one_to_one.gallery.2.alt": "Instructor working with an individual student",
-  "pages.privatelessons.sections.one_to_one.title": "One-to-One Lessons",
-  "pages.privatelessons.sections.schools.body": "We offer tailored dance and movement workshops for universities, colleges, community groups and cultural organisations. Led by experienced teachers and artists, workshops can introduce a new style, explore the cultural roots of forms such as classical Chinese dance and Tai Chi, or support creative, wellbeing and performance programmes. Every session is planned around your group's size, level and learning goals, and can be delivered as a one-off experience or a series. Tell us about your group and what you hope to achieve, and we'll put together a programme and quote that fits.",
-  "pages.privatelessons.sections.schools.cta.label": "Enquire",
-  "pages.privatelessons.sections.schools.gallery.0.alt": "Young dancers in a workshop",
-  "pages.privatelessons.sections.schools.gallery.1.alt": "Workshop session with students",
-  "pages.privatelessons.sections.schools.gallery.2.alt": "Ballet foundation class",
-  "pages.privatelessons.sections.schools.title": "Workshops for Organisations",
-  "pages.privatelessons.sections.wedding.body": "Your first dance should feel like you — and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment.",
-  "pages.privatelessons.sections.wedding.cta.label": "Enquire",
-  "pages.privatelessons.sections.wedding.gallery.0.alt": "Couple practising a wedding dance",
-  "pages.privatelessons.sections.wedding.gallery.1.alt": "Performance lighting in the venue",
-  "pages.privatelessons.sections.wedding.gallery.2.alt": "Private lesson for wedding preparation",
-  "pages.privatelessons.sections.wedding.title": "First Wedding Dance",
-  "pages.timetable.booking.description": "Browse weekly and monthly classes below. For course enrolment, visit our courses page.",
-  "pages.timetable.booking.image.alt": "Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School",
-  "pages.timetable.booking.placeholderhint": "Replace this container with your ClassForKids, bsport, or other embed code.",
-  "pages.timetable.booking.placeholderlabel": "Booking widget placeholder",
-  "pages.timetable.booking.providernote": "Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.",
-  "pages.timetable.booking.title": "Class timetable",
-  "pages.timetable.helplinks.browse_courses.label": "Browse courses",
-  "pages.timetable.helplinks.contact_us.label": "Contact us",
-  "pages.timetable.hero.overline": "Plan your classes",
-  "pages.timetable.hero.subtitle": "Browse classes, workshops, school-organised events and activities hosted at the school by week or month. Check each event’s location and filter by type, day and style.",
-  "pages.timetable.hero.title": "Timetable & Booking",
-  "pages.timetable.meta.description": "View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.",
-  "pages.timetable.meta.title": "Timetable & Booking",
-  "pages.timetable.newcomernote": "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
-  "pages.timetable.trial.body": "Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival.",
-  "pages.timetable.trial.cta.label": "Book",
-  "pages.timetable.trial.overline": "New to CHD PAS?",
-  "pages.timetable.trial.title": "Book a taster trial",
-  "pages.venuehire.overview.cta.body": "Tell us your preferred date, times, space and group size and we'll come back to you with availability.",
-  "pages.venuehire.overview.cta.button.label": "Enquire about hire",
-  "pages.venuehire.overview.cta.secondary": "Or message us on WeChat: 18518614868 · Instagram: @countyhalldancecentre",
-  "pages.venuehire.overview.cta.secondarybutton.label": "Check availability",
-  "pages.venuehire.overview.cta.title": "Plan your booking",
-  "pages.venuehire.overview.facilities.extranote": "You are welcome to bring your own equipment, set up and decorate the space, and bring your own catering and drinks.",
-  "pages.venuehire.overview.facilities.includednote": "Included in every booking at no extra charge:",
-  "pages.venuehire.overview.facilities.items.0": "Tables and chairs",
-  "pages.venuehire.overview.facilities.items.1": "Wi-Fi",
-  "pages.venuehire.overview.facilities.items.2": "Power sockets",
-  "pages.venuehire.overview.facilities.items.3": "Lighting",
-  "pages.venuehire.overview.facilities.items.4": "Sound system",
-  "pages.venuehire.overview.facilities.items.5": "4 microphones",
-  "pages.venuehire.overview.facilities.items.6": "Kitchen",
-  "pages.venuehire.overview.facilities.items.7": "Tea and refreshment facilities",
-  "pages.venuehire.overview.facilities.items.8": "Toilets",
-  "pages.venuehire.overview.facilities.items.9": "Changing rooms",
-  "pages.venuehire.overview.facilities.title": "Facilities & equipment",
-  "pages.venuehire.overview.facts.items.0": "Approx. 300 m² in total",
-  "pages.venuehire.overview.facts.items.1": "4.5 m ceiling height",
-  "pages.venuehire.overview.facts.items.2": "Up to 120 guests",
-  "pages.venuehire.overview.facts.items.3": "5 minutes' walk from Waterloo and Westminster",
-  "pages.venuehire.overview.facts.title": "Key facts",
-  "pages.venuehire.overview.gallery.0.alt": "County Hall on the South Bank with the London Eye nearby",
-  "pages.venuehire.overview.gallery.1.alt": "Sunset view of Westminster and the Thames from the South Bank",
-  "pages.venuehire.overview.gallery.2.alt": "Classical stone facade of County Hall with columns and signage",
-  "pages.venuehire.overview.gallery.3.alt": "County Hall and the London Eye seen from the River Thames",
-  "pages.venuehire.overview.gallery.4.alt": "Historical photograph of County Hall beside the Thames",
-  "pages.venuehire.overview.hero.image.alt": "Sunlit wooden-floor venue with tall windows at County Hall",
-  "pages.venuehire.overview.hero.overline": "County Hall arts space",
-  "pages.venuehire.overview.hero.subtitle": "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
-  "pages.venuehire.overview.hero.title": "Space Hire",
-  "pages.venuehire.overview.howtobook.steps.0.body": "Contact us through this website, our official WeChat (18518614868) or Instagram (@countyhalldancecentre). Please book at least one week in advance.",
-  "pages.venuehire.overview.howtobook.steps.0.title": "Enquire",
-  "pages.venuehire.overview.howtobook.steps.1.body": "We'll check availability and confirm your date, space and hours.",
-  "pages.venuehire.overview.howtobook.steps.1.title": "Confirm",
-  "pages.venuehire.overview.howtobook.steps.2.body": "Full payment is due no later than three days before your booking, by bank transfer to our company account.",
-  "pages.venuehire.overview.howtobook.steps.2.title": "Pay",
-  "pages.venuehire.overview.howtobook.steps.3.body": "Our on-site manager will welcome you and be available throughout your hire.",
-  "pages.venuehire.overview.howtobook.steps.3.title": "Arrive",
-  "pages.venuehire.overview.howtobook.title": "How to book",
-  "pages.venuehire.overview.intro": "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
-  "pages.venuehire.overview.meta.description": "Hire a 70 m² vinyl-floor venue or a 200 m² Sprung Wooden Floor Hall at County Hall on the South Bank. From £200 per hour, member rates available.",
-  "pages.venuehire.overview.meta.title": "Space Hire",
-  "pages.venuehire.overview.pricing.columns.0": "",
-  "pages.venuehire.overview.pricing.columns.1": "Standard rate",
-  "pages.venuehire.overview.pricing.columns.2": "Member rate",
-  "pages.venuehire.overview.pricing.membershiplink.label": "Learn about membership",
-  "pages.venuehire.overview.pricing.notes.0": "Minimum booking: 1 hour.",
-  "pages.venuehire.overview.pricing.notes.1": "Bookings are available until 18:00; evening bookings after 18:00 are not available.",
-  "pages.venuehire.overview.pricing.notes.2": "Refundable security deposit: £100.",
-  "pages.venuehire.overview.pricing.notes.3": "Prices are final — no additional taxes or fees. All equipment is included.",
-  "pages.venuehire.overview.pricing.notes.4": "Members of County Hall Dance Centre receive reduced hire rates.",
-  "pages.venuehire.overview.pricing.rows.half_day.label": "Half day",
-  "pages.venuehire.overview.pricing.rows.half_day.member": "£500",
-  "pages.venuehire.overview.pricing.rows.half_day.standard": "£1,000",
-  "pages.venuehire.overview.pricing.rows.weekday_per_hour.label": "Weekday, per hour",
-  "pages.venuehire.overview.pricing.rows.weekday_per_hour.member": "£100",
-  "pages.venuehire.overview.pricing.rows.weekday_per_hour.standard": "£200",
-  "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.label": "Weekend daytime, per hour",
-  "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.member": "£150",
-  "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.standard": "£200",
-  "pages.venuehire.overview.pricing.title": "Pricing",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.body": "A focused, practical venue with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.floor": "Dance vinyl",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.idealfor": "Classes, rehearsals, auditions, small workshops and one-to-one sessions",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.image.alt": "Vinyl-floor dance venue with ballet barres and tall windows at County Hall",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.size": "70 m²",
-  "pages.venuehire.overview.spaces.items.vinyl_venue.title": "Vinyl-Floor Venue",
-  "pages.venuehire.overview.spaces.items.wooden_hall.body": "Our largest space, with a sprung wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
-  "pages.venuehire.overview.spaces.items.wooden_hall.floor": "Sprung wooden floor",
-  "pages.venuehire.overview.spaces.items.wooden_hall.idealfor": "Workshops, social dances, performances, parties, exhibitions and corporate events",
-  "pages.venuehire.overview.spaces.items.wooden_hall.image.alt": "Sunlit wooden-floor hall with tall windows at County Hall",
-  "pages.venuehire.overview.spaces.items.wooden_hall.size": "200 m²",
-  "pages.venuehire.overview.spaces.items.wooden_hall.title": "Sprung Wooden Floor Hall",
-  "pages.venuehire.overview.spaces.title": "Our spaces",
-  "pages.venuehire.overview.suitablefor.items.0": "Meetings",
-  "pages.venuehire.overview.suitablefor.items.1": "Training sessions",
-  "pages.venuehire.overview.suitablefor.items.2": "Rehearsals",
-  "pages.venuehire.overview.suitablefor.items.3": "Classes & workshops",
-  "pages.venuehire.overview.suitablefor.items.4": "Photo & film shoots",
-  "pages.venuehire.overview.suitablefor.items.5": "Live streams",
-  "pages.venuehire.overview.suitablefor.items.6": "Parties & celebrations",
-  "pages.venuehire.overview.suitablefor.items.7": "Exhibitions",
-  "pages.venuehire.overview.suitablefor.items.8": "Cultural events",
-  "pages.venuehire.overview.suitablefor.title": "Suitable for",
-  "pages.venuehire.overview.terms.items.0.body": "must be made at least three days before your booking. Cancellations made with less notice are non-refundable.",
-  "pages.venuehire.overview.terms.items.0.title": "Cancellations and date changes",
-  "pages.venuehire.overview.terms.items.1.body": "must be confirmed at least one day in advance.",
-  "pages.venuehire.overview.terms.items.1.title": "Extra time or changes to guest numbers",
-  "pages.venuehire.overview.terms.items.2.body": "your £100 deposit is refunded in full after your hire provided there is no damage. Any damage to the venue, furniture or equipment will be charged at cost.",
-  "pages.venuehire.overview.terms.items.2.title": "Deposit:",
-  "pages.venuehire.overview.terms.items.3.body": "no pets, no smoking, no open flames and no illegal activity. Under-18s are not permitted. Maximum capacity is 120 people.",
-  "pages.venuehire.overview.terms.items.3.title": "House rules:",
-  "pages.venuehire.overview.terms.items.4.body": "a venue manager is present during every booking.",
-  "pages.venuehire.overview.terms.items.4.title": "On-site support:",
-  "pages.venuehire.overview.terms.title": "Booking terms",
-  "pages.venuehire.overview.timetablelink.label": "View timetable",
-  "pages.venuehire.overview.timetablenote": "The timetable includes school-organised events at other venues. Check each activity’s location. Please contact us to confirm venue availability.",
-  "pages.venuehire.subpages.space_booking.hero.overline": "Venue Hire",
-  "pages.venuehire.subpages.space_booking.hero.subtitle": "Tell us your preferred date, activity and group size — we will respond with availability.",
-  "pages.venuehire.subpages.space_booking.hero.title": "Space Booking",
-  "pages.venuehire.subpages.space_booking.intro": "Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details.",
-  "pages.venuehire.subpages.space_booking.meta.description": "Enquire about venue hire at County Hall Dance Centre.",
-  "pages.venuehire.subpages.space_booking.meta.title": "Space Booking",
-  "pages.venuehire.subpages.space_booking.sections.enquiry_form.title": "Enquiry form",
-  "pages.venuehire.subpages.space_booking.sections.how_to_book.title": "How to book"
+    "global.footer.columns.explore.links.classes.label": "Classes",
+    "global.footer.columns.explore.links.courses.label": "Courses",
+    "global.footer.columns.explore.links.what_s_on.label": "What's On",
+    "global.footer.columns.explore.title": "Explore",
+    "global.footer.columns.school.links.about_us.label": "About Us",
+    "global.footer.columns.school.links.careers.label": "Careers",
+    "global.footer.columns.school.links.private_events.label": "Private Events",
+    "global.footer.columns.school.title": "The School",
+    "global.footer.contact.address.0": "2nd Floor, County Hall Main Entrance",
+    "global.footer.contact.address.1": "Belvedere Road",
+    "global.footer.contact.address.2": "London SE1 7PB",
+    "global.footer.contact.email": "info@countyhalldancecentre.com",
+    "global.footer.contact.phone": "+44 7728 617531",
+    "global.footer.contact.title": "Visit Us",
+    "global.footer.contact.wechat": "WeChat: 18518614868",
+    "global.footer.copyright":
+        "© {year} County Hall Dance & Performing Arts School. All rights reserved.",
+    "global.footer.intro":
+        "A home for dance, movement and creativity at County Hall on the South Bank. Move. Create. Connect. Belong.",
+    "global.footer.legal.cookie_policy.label": "Cookie Policy",
+    "global.footer.legal.privacy_policy.label": "Privacy Policy",
+    "global.footer.legal.safeguarding.label": "Safeguarding",
+    "global.footer.legal.terms_conditions.label": "Terms & Conditions",
+    "global.footer.newsletter.description":
+        "Occasional news on classes, masterclasses, and performances.",
+    "global.footer.newsletter.placeholder": "Your email address",
+    "global.footer.newsletter.submitlabel": "Subscribe",
+    "global.footer.newsletter.title": "Stay in touch",
+    "global.footer.social.instagram.label": "Instagram: @countyhalldancecentre",
+    "global.footer.social.tiktok.label": "TikTok",
+    "global.footer.social.xiaohongshu.label": "Red Note (小红书)",
+    "global.logo.alt": "County Hall Dance & Performing Arts School",
+    "global.logo.nameline1": "County Hall",
+    "global.logo.nameline2": "Dance & Performing Arts School",
+    "global.navigation.booktrial.label": "Book your class",
+    "global.navigation.items.about.children.about_us.label": "About Us",
+    "global.navigation.items.about.children.contact.label": "Contact",
+    "global.navigation.items.about.label": "About",
+    "global.navigation.items.classes.children.class_descriptions_instructors.label":
+        "Class Descriptions & Instructors",
+    "global.navigation.items.classes.children.private_lessons.label":
+        "Private Lessons",
+    "global.navigation.items.classes.label": "Classes",
+    "global.navigation.items.membership.label": "Membership",
+    "global.navigation.items.timetable.label": "Timetable",
+    "global.navigation.items.venue_hire.children.space_booking.label":
+        "Space Booking",
+    "global.navigation.items.venue_hire.children.space_hire.label":
+        "Space Hire",
+    "global.navigation.items.venue_hire.label": "Venue Hire",
+    "global.navigation.items.what_s_on.label": "What's On",
+    "global.navigation.search.label": "Search",
+    "global.navigation.search.placeholder": "Search classes, courses, events…",
+    "global.utilitybar.email.label": "info@countyhalldancecentre.com",
+    "global.utilitybar.findus.label": "Find us",
+    "global.utilitybar.phone.label": "+44 7728 617531",
+    "global.utilitybar.social.instagram.label":
+        "Instagram: @countyhalldancecentre",
+    "global.utilitybar.social.tiktok.label": "TikTok",
+    "global.utilitybar.social.xiaohongshu.label": "Red Note (小红书)",
+    "home.aboutteaser.body.0":
+        "Founded at the historic County Hall, our school brings together rigorous technical training and a deeply supportive community.",
+    "home.aboutteaser.body.1":
+        "Whether you are taking your first plié or preparing for vocational study, our faculty guides every student with patience and precision.",
+    "home.aboutteaser.cta.label": "About the school",
+    "home.aboutteaser.image.alt":
+        "Students and teachers in the County Hall venue corridor",
+    "home.aboutteaser.overline": "Our story",
+    "home.aboutteaser.title": "Rooted in London, reaching for excellence",
+    "home.classstyles.items.chinese_dance.image.alt": "Chinese dance class",
+    "home.classstyles.items.chinese_dance.name": "Chinese Dance",
+    "home.classstyles.items.contemporary.image.alt": "Contemporary dance class",
+    "home.classstyles.items.contemporary.name": "Contemporary",
+    "home.classstyles.items.tai_chi.image.alt": "Tai Chi class",
+    "home.classstyles.items.tai_chi.name": "Tai Chi",
+    "home.classstyles.items.tango.image.alt": "Tango class",
+    "home.classstyles.items.tango.name": "Tango",
+    "home.classstyles.items.yoga.image.alt": "Yoga class",
+    "home.classstyles.items.yoga.name": "Yoga",
+    "home.classstyles.overline": "Our disciplines",
+    "home.classstyles.title": "Class styles",
+    "home.events.items.four_seasons_festival.booknow.label": "Details",
+    "home.events.items.four_seasons_festival.date":
+        "Saturday 24 – Sunday 25 October 2026",
+    "home.events.items.four_seasons_festival.image.alt":
+        "Concert in the County Hall atrium during the Four Seasons Festival",
+    "home.events.items.four_seasons_festival.location":
+        "Riverside Building, County Hall",
+    "home.events.items.four_seasons_festival.title": "Four Seasons Festival",
+    "home.events.items.halloween_pumpkin_carving_workshop.booknow.label":
+        "Details",
+    "home.events.items.halloween_pumpkin_carving_workshop.date":
+        "Saturday 31 October 2026, 1:00pm – 5:00pm",
+    "home.events.items.halloween_pumpkin_carving_workshop.image.alt":
+        "Halloween pumpkins and decorations",
+    "home.events.items.halloween_pumpkin_carving_workshop.location":
+        "County Hall Dance Centre",
+    "home.events.items.halloween_pumpkin_carving_workshop.title":
+        "Halloween Pumpkin Carving Workshop",
+    "home.events.items.lunchtime_concert_series.booknow.label": "Details",
+    "home.events.items.lunchtime_concert_series.date":
+        "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
+    "home.events.items.lunchtime_concert_series.image.alt":
+        "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
+    "home.events.items.lunchtime_concert_series.title":
+        "Lunchtime Concert Series",
+    "home.events.items.memory_of_china.booknow.label": "Book Now",
+    "home.events.items.memory_of_china.date":
+        "Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day",
+    "home.events.items.memory_of_china.image.alt":
+        "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
+    "home.events.items.memory_of_china.location":
+        "Members' Terrace, County Hall",
+    "home.events.items.memory_of_china.title": "Memory of China",
+    "home.events.overline": "What's on",
+    "home.events.subtitle":
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+    "home.events.title": "What's On",
+    "home.events.viewall.label": "View all",
+    "home.hero.nextlabel": "Next",
+    "home.hero.previouslabel": "Previous",
+    "home.hero.slides.hero_classes.blurb":
+        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi.",
+    "home.hero.slides.hero_classes.cta.label": "View Classes",
+    "home.hero.slides.hero_classes.headline": "Classes",
+    "home.hero.slides.hero_classes.image.alt":
+        "Couple performing Argentine tango on an outdoor dance floor",
+    "home.hero.slides.hero_events.blurb":
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+    "home.hero.slides.hero_events.cta.label": "View what's on",
+    "home.hero.slides.hero_events.headline": "What's On",
+    "home.hero.slides.hero_events.image.alt":
+        "Contemporary dancers in a bright venue with ballet barres",
+    "home.hero.slides.hero_intro.blurb":
+        "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
+    "home.hero.slides.hero_intro.cta.label": "Explore Classes",
+    "home.hero.slides.hero_intro.headline":
+        "Discover dance, movement and creative experiences at London's iconic County Hall.",
+    "home.hero.slides.hero_intro.image.alt":
+        "Outdoor performance on the South Bank with County Hall and Big Ben beyond the Thames",
+    "home.hero.slides.hero_membership.blurb":
+        "A more flexible way to keep dancing, join events and belong to the community.",
+    "home.hero.slides.hero_membership.cta.label": "Membership",
+    "home.hero.slides.hero_membership.headline": "Membership",
+    "home.hero.slides.hero_membership.image.alt":
+        "Group dance class in a sunlit venue",
+    "home.hero.slides.hero_private_lessons.blurb":
+        "Tailored sessions for individuals, couples, wedding first dances and small groups.",
+    "home.hero.slides.hero_private_lessons.cta.label": "Enquire",
+    "home.hero.slides.hero_private_lessons.headline":
+        "Private Lessons & Experiences",
+    "home.hero.slides.hero_private_lessons.image.alt":
+        "Instructor guiding a student in a one-to-one dance session",
+    "home.hero.slides.hero_venue_hire.blurb":
+        "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
+    "home.hero.slides.hero_venue_hire.cta.label": "Venue Hire",
+    "home.hero.slides.hero_venue_hire.headline": "Venue Hire",
+    "home.hero.slides.hero_venue_hire.image.alt":
+        "Sunlit wooden-floor venue with tall windows at County Hall",
+    "home.newsletter.description":
+        "Follow our journey and receive curated updates on classes, performances, and exclusive offers.",
+    "home.newsletter.overline": "Join our circle",
+    "home.newsletter.placeholder": "Email address",
+    "home.newsletter.socialheading": "Connect with us",
+    "home.newsletter.submitlabel": "Sign up",
+    "home.newsletter.title": "Newsletter & social",
+    "home.quickactions.items.book_a_class.description":
+        "See the weekly timetable and reserve your place.",
+    "home.quickactions.items.book_a_class.label": "Book a Class",
+    "home.quickactions.items.book_an_event.description":
+        "Workshops, masterclasses, social nights and performances — see what's on and book your place.",
+    "home.quickactions.items.book_an_event.label": "Book an Event",
+    "home.quickactions.items.join_now.description":
+        "Become a member and enjoy monthly, quarterly or annual plans with exclusive benefits.",
+    "home.quickactions.items.join_now.label": "Join Now",
+    "home.quickactions.linksuffix": "Learn more →",
+    "home.quickactions.overline": "Get started",
+    "meta.defaultdescription":
+        "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
+    "meta.shortname": "CHD PAS",
+    "meta.sitename": "County Hall Dance & Performing Arts School",
+    "pages.about.cta.body":
+        "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
+    "pages.about.cta.button.label": "Get in touch",
+    "pages.about.cta.title": "Visit us",
+    "pages.about.hero.image.alt": "County Hall Dance venue",
+    "pages.about.hero.overline": "Our school",
+    "pages.about.hero.subtitle":
+        "Discover dance, movement and creative experiences at London's iconic County Hall",
+    "pages.about.hero.title":
+        "About County Hall Dance & Performing Arts School",
+    "pages.about.meta.description":
+        "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
+    "pages.about.meta.title": "About Us",
+    "pages.about.story.gallery.0.alt":
+        "County Hall on the South Bank viewed from the River Thames, with the London Eye beside it",
+    "pages.about.story.paragraphs.0":
+        "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
+    "pages.about.story.title": "Our story",
+    "pages.about.values.items.0.description":
+        "To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London.",
+    "pages.about.values.items.0.title": "Mission",
+    "pages.about.values.items.1.description":
+        "To grow from a dedicated professional dance space into a creative destination that brings together dance, performing arts, music, visual arts, and international cultural exchange.",
+    "pages.about.values.items.1.title": "Vision",
+    "pages.about.values.items.2.description":
+        "Move. Create. Connect. Belong. — helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts.",
+    "pages.about.values.items.2.title": "Philosophy",
+    "pages.about.values.items.3.description":
+        "Robust policies ensuring every student feels secure and supported.",
+    "pages.about.values.items.3.title": "Safeguarding",
+    "pages.about.values.overline": "What guides us",
+    "pages.about.values.title": "Our values",
+    "pages.booking.form.description":
+        "Tell us what you are looking for — venue hire, class booking, membership or a general question.",
+    "pages.booking.form.fields.email_address.label": "Email address",
+    "pages.booking.form.fields.email_address.placeholder": "you@example.com",
+    "pages.booking.form.fields.enquiry_about.label": "Enquiry about",
+    "pages.booking.form.fields.enquiry_about.options.classes_booking.label":
+        "Classes Booking",
+    "pages.booking.form.fields.enquiry_about.options.general_enquire.label":
+        "General Enquire",
+    "pages.booking.form.fields.enquiry_about.options.membership_booking.label":
+        "Membership Booking",
+    "pages.booking.form.fields.enquiry_about.options.venue_hire.label":
+        "Venue Hire",
+    "pages.booking.form.fields.full_name.label": "Full name",
+    "pages.booking.form.fields.full_name.placeholder": "Your name",
+    "pages.booking.form.fields.message.label": "Message",
+    "pages.booking.form.fields.message.placeholder":
+        "Please include any relevant details — dates, class names, group size, etc.",
+    "pages.booking.form.fields.phone_optional.label": "Phone (optional)",
+    "pages.booking.form.fields.phone_optional.placeholder": "+44 …",
+    "pages.booking.form.selectplaceholder": "Select an option",
+    "pages.booking.form.submitlabel": "Send message",
+    "pages.booking.form.successmessage":
+        "Thank you — your enquiry has been received. We will be in touch shortly.",
+    "pages.booking.form.title": "Send an enquiry",
+    "pages.booking.hero.overline": "We'd love to hear from you",
+    "pages.booking.hero.subtitle":
+        "Complete the form below and our team will respond by email within two working days.",
+    "pages.booking.hero.title": "Booking & Enquiries",
+    "pages.booking.meta.description":
+        "Send a booking or general enquiry to County Hall Dance Centre — venue hire, classes, membership and more.",
+    "pages.booking.meta.title": "Booking & Enquiries",
+    "pages.classbooking.hero.overline": "Classes",
+    "pages.classbooking.hero.subtitle":
+        "View live availability and reserve your place through our booking partner.",
+    "pages.classbooking.hero.title": "Booking",
+    "pages.classbooking.intro":
+        "Choose a class from the timetable and follow the booking link. Advance booking is recommended.",
+    "pages.classbooking.meta.description":
+        "Book adult dance and movement classes at County Hall Dance Centre.",
+    "pages.classbooking.meta.title": "Class Booking",
+    "pages.classbooking.sections.how_to_book.title": "How to book",
+    "pages.classbooking.sections.policies.title": "Booking policies",
+    "pages.classes.cta.label": "View timetable",
+    "pages.classes.detaillabels.backlink": "Class Descriptions & Instructors",
+    "pages.classes.hero.overline": "Find your style",
+    "pages.classes.hero.subtitle":
+        "Adult dance and movement classes for every background and level — beginners welcome.",
+    "pages.classes.hero.title": "Classes",
+    "pages.classes.intro":
+        "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate.",
+    "pages.classes.meta.description":
+        "Adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi at County Hall Dance Centre.",
+    "pages.classes.meta.title": "Classes",
+    "pages.classes.styles.chinese_dance.agegroups.adults.description":
+        "Designed for adult learners at every stage.",
+    "pages.classes.styles.chinese_dance.agegroups.adults.label": "Adults",
+    "pages.classes.styles.chinese_dance.cta.label": "Book a class",
+    "pages.classes.styles.chinese_dance.hero.image.alt": "Chinese dance class",
+    "pages.classes.styles.chinese_dance.hero.overline": "Grace & line",
+    "pages.classes.styles.chinese_dance.hero.subtitle":
+        "Classical Chinese dance to build body control, flexibility and stage presence.",
+    "pages.classes.styles.chinese_dance.hero.title": "Chinese Dance",
+    "pages.classes.styles.chinese_dance.highlights.0.description":
+        "Discover the artistry of classical Chinese movement.",
+    "pages.classes.styles.chinese_dance.highlights.0.title":
+        "Cultural expression",
+    "pages.classes.styles.chinese_dance.highlights.1.description":
+        "Develop line, poise and body awareness.",
+    "pages.classes.styles.chinese_dance.highlights.1.title":
+        "Flexibility & control",
+    "pages.classes.styles.chinese_dance.highlights.2.description":
+        "Beginners welcome — check the level on each class.",
+    "pages.classes.styles.chinese_dance.highlights.2.title": "All levels",
+    "pages.classes.styles.chinese_dance.instructor.bio":
+        "Lisa Lin from RCDance is a classically trained dance artist and educator specialising in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
+    "pages.classes.styles.chinese_dance.instructor.image.alt":
+        "RCDance Lisa Lin",
+    "pages.classes.styles.chinese_dance.instructor.name": "RCDance Lisa",
+    "pages.classes.styles.chinese_dance.instructor.role":
+        "Chinese dance teacher",
+    "pages.classes.styles.chinese_dance.intro.0": " ",
+    "pages.classes.styles.chinese_dance.intro.1": " ",
+    "pages.classes.styles.chinese_dance.metadescription":
+        "Chinese dance classes blending classical grace, line and cultural expression for adults.",
+    "pages.classes.styles.chinese_dance.name": "Chinese Dance",
+    "pages.classes.styles.contemporary.agegroups.adults.description":
+        "Open to all backgrounds — no dance experience needed.",
+    "pages.classes.styles.contemporary.agegroups.adults.label": "Adults",
+    "pages.classes.styles.contemporary.cta.label": "Book a class",
+    "pages.classes.styles.contemporary.hero.image.alt":
+        "Contemporary dance class",
+    "pages.classes.styles.contemporary.hero.overline": "Modern dance",
+    "pages.classes.styles.contemporary.hero.subtitle":
+        "Develop coordination, strength and creativity through flow, space and physical expression.",
+    "pages.classes.styles.contemporary.hero.title": "Contemporary",
+    "pages.classes.styles.contemporary.highlights.0.description":
+        "Explore space, dynamics and personal expression.",
+    "pages.classes.styles.contemporary.highlights.0.title": "Creative movement",
+    "pages.classes.styles.contemporary.highlights.1.description":
+        "Build physical confidence through structured practice.",
+    "pages.classes.styles.contemporary.highlights.1.title":
+        "Strength & coordination",
+    "pages.classes.styles.contemporary.highlights.2.description":
+        "Classes labelled Beginner, Open Level or Intermediate.",
+    "pages.classes.styles.contemporary.highlights.2.title": "All levels",
+    "pages.classes.styles.contemporary.instructor.bio":
+        "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
+    "pages.classes.styles.contemporary.instructor.image.alt":
+        "Ka Ki Christina Lai and Ying Yen (Yvonne)",
+    "pages.classes.styles.contemporary.instructor.name": "Christina & Yvonne ",
+    "pages.classes.styles.contemporary.instructor.role":
+        "Contemporary dance teacher",
+    "pages.classes.styles.contemporary.intro.0": " ",
+    "pages.classes.styles.contemporary.intro.1": " ",
+    "pages.classes.styles.contemporary.metadescription":
+        "Contemporary dance classes for adults at County Hall Dance Centre — flow, space and physical expression.",
+    "pages.classes.styles.contemporary.name": "Contemporary",
+    "pages.classes.styles.tai_chi.agegroups.adults.description":
+        "Suitable for every age and fitness level.",
+    "pages.classes.styles.tai_chi.agegroups.adults.label": "Adults",
+    "pages.classes.styles.tai_chi.cta.label": "Book a class",
+    "pages.classes.styles.tai_chi.hero.image.alt": "Tai Chi class",
+    "pages.classes.styles.tai_chi.hero.overline": "Flow & balance",
+    "pages.classes.styles.tai_chi.hero.subtitle":
+        "Cultivate balance, relaxation and body awareness through slow, flowing movement.",
+    "pages.classes.styles.tai_chi.hero.title": "Tai Chi",
+    "pages.classes.styles.tai_chi.highlights.0.description":
+        "Slow, intentional movement for calm and focus.",
+    "pages.classes.styles.tai_chi.highlights.0.title": "Mind-body practice",
+    "pages.classes.styles.tai_chi.highlights.1.description":
+        "Develop stability and gentle strength.",
+    "pages.classes.styles.tai_chi.highlights.1.title": "Balance & awareness",
+    "pages.classes.styles.tai_chi.highlights.2.description":
+        "Welcoming to complete beginners.",
+    "pages.classes.styles.tai_chi.highlights.2.title": "All levels",
+    "pages.classes.styles.tai_chi.instructor.bio":
+        "Xintian is a dancer and choreographer based in London. She graduated from the Northern School of Contemporary Dance in 2024. Prior to that, she received seven years of professional ballet training at the Shanghai Ballet School, before switching her major to choreography at university. She is currently working as a freelance artist in London, and also teaches and performs at the Confucius Institute at Goldsmiths, University of London.",
+    "pages.classes.styles.tai_chi.instructor.image.alt": "Xintian Zhao",
+    "pages.classes.styles.tai_chi.instructor.name": "Xintian Zhao",
+    "pages.classes.styles.tai_chi.instructor.role": "Tai Chi teacher",
+    "pages.classes.styles.tai_chi.intro.0": " ",
+    "pages.classes.styles.tai_chi.metadescription":
+        "Tai Chi classes for adults — balance, relaxation and body awareness.",
+    "pages.classes.styles.tai_chi.name": "Tai Chi",
+    "pages.classes.styles.tango.agegroups.adults.description":
+        "No partner or experience required to begin.",
+    "pages.classes.styles.tango.agegroups.adults.label": "Adults",
+    "pages.classes.styles.tango.cta.label": "Book a class",
+    "pages.classes.styles.tango.hero.image.alt": "Tango class",
+    "pages.classes.styles.tango.hero.overline": "Connection & musicality",
+    "pages.classes.styles.tango.hero.subtitle":
+        "Learn lead and follow, musicality and the etiquette of social dance.",
+    "pages.classes.styles.tango.hero.title": "Tango",
+    "pages.classes.styles.tango.highlights.0.description":
+        "Lead, follow and floor etiquette from day one.",
+    "pages.classes.styles.tango.highlights.0.title": "Social dance skills",
+    "pages.classes.styles.tango.highlights.1.description":
+        "Move with confidence to live and recorded tango music.",
+    "pages.classes.styles.tango.highlights.1.title": "Musicality",
+    "pages.classes.styles.tango.highlights.2.description":
+        "Join our social dance nights and themed events.",
+    "pages.classes.styles.tango.highlights.2.title": "Milongas & events",
+    "pages.classes.styles.tango.instructor.bio":
+        "Rene is an experienced Argentine Tango dancer, instructor and performer. With a background in Ballroom and Latin dance, he has spent many years developing his expertise in Argentine Tango, studying with some of the most renowned and influential teachers in Argentina and Europe.",
+    "pages.classes.styles.tango.instructor.image.alt": "Rene",
+    "pages.classes.styles.tango.instructor.name": "Rene",
+    "pages.classes.styles.tango.instructor.role": "Tango teacher",
+    "pages.classes.styles.tango.intro.0":
+        "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
+    "pages.classes.styles.tango.metadescription":
+        "Tango classes for adults — connection, musicality and social dance etiquette.",
+    "pages.classes.styles.tango.name": "Tango",
+    "pages.classes.styles.yoga.agegroups.adults.description":
+        "Open to beginners and returning practitioners.",
+    "pages.classes.styles.yoga.agegroups.adults.label": "Adults",
+    "pages.classes.styles.yoga.cta.label": "Book a class",
+    "pages.classes.styles.yoga.hero.image.alt": "Yoga class",
+    "pages.classes.styles.yoga.hero.overline": "Breath & stretch",
+    "pages.classes.styles.yoga.hero.subtitle":
+        "Improve flexibility and overall wellbeing through breath, stretch and focused practice.",
+    "pages.classes.styles.yoga.hero.title": "Yoga",
+    "pages.classes.styles.yoga.highlights.0.description":
+        "Stretch, breathe and restore balance.",
+    "pages.classes.styles.yoga.highlights.0.title": "Wellbeing focus",
+    "pages.classes.styles.yoga.highlights.1.description":
+        "A calm, focused environment for every body.",
+    "pages.classes.styles.yoga.highlights.1.title": "Music-guided practice",
+    "pages.classes.styles.yoga.highlights.2.description":
+        "Check class information for level and format details.",
+    "pages.classes.styles.yoga.highlights.2.title": "All levels",
+    "pages.classes.styles.yoga.instructor.bio":
+        "Kasen Zhao is the founder of Sen Yoga, a certified Yoga Alliance instructor and Stott Pilates instructor with over eight years of experience. Specialising in Vinyasa, Inside Flow and Yin Yoga, he combines mindful movement, breathwork and alignment to help students build strength, find balance and cultivate inner peace.",
+    "pages.classes.styles.yoga.instructor.image.alt": "Kasen",
+    "pages.classes.styles.yoga.instructor.name": "Kasen",
+    "pages.classes.styles.yoga.instructor.role": "Yoga teacher",
+    "pages.classes.styles.yoga.intro.0": " ",
+    "pages.classes.styles.yoga.metadescription":
+        "Yoga classes for adults — flexibility, breath and wellbeing at County Hall Dance Centre.",
+    "pages.classes.styles.yoga.name": "Yoga",
+    "pages.classesinfo.hero.overline": "Classes",
+    "pages.classesinfo.hero.subtitle":
+        "Explore our adult dance and movement programme and meet the teaching team.",
+    "pages.classesinfo.hero.title": "Class Descriptions & Instructors",
+    "pages.classesinfo.intro":
+        "Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome — no dance experience needed.",
+    "pages.classesinfo.meta.description":
+        "Class descriptions and instructor profiles for adult classes at County Hall Dance Centre.",
+    "pages.classesinfo.meta.title": "Class Descriptions & Instructors",
+    "pages.classesinfo.sections.descriptions.title": "Class Descriptions",
+    "pages.classesinfo.sections.instructors.title": "Instructors",
+    "pages.common.eventdetailslink": "Details →",
+    "pages.common.viewcourselink": "View course →",
+    "pages.contact.details.address.0": "2nd Floor, County Hall Main Entrance",
+    "pages.contact.details.address.1": "Belvedere Road",
+    "pages.contact.details.address.2": "London SE1 7PB",
+    "pages.contact.details.email": "info@countyhalldancecentre.com",
+    "pages.contact.details.gettinghere":
+        "Getting here: a five-minute walk from Waterloo and Westminster stations.",
+    "pages.contact.details.hours": "Office hours: Mon – Fri, 9:00 – 17:30",
+    "pages.contact.details.instagramlabel": "Instagram: @countyhalldancecentre",
+    "pages.contact.details.membershiplabel":
+        "Membership enquiries: membership@countyhalldancecentre.com",
+    "pages.contact.details.phone": "+44 7728 617531",
+    "pages.contact.details.title": "Venue details",
+    "pages.contact.details.wechat": "WeChat: 18518614868",
+    "pages.contact.form.description":
+        "Complete the form below and we will respond within two working days.",
+    "pages.contact.form.fields.email_address.label": "Email address",
+    "pages.contact.form.fields.email_address.placeholder": "you@example.com",
+    "pages.contact.form.fields.full_name.label": "Full name",
+    "pages.contact.form.fields.full_name.placeholder": "Your name",
+    "pages.contact.form.fields.message.label": "Message",
+    "pages.contact.form.fields.message.placeholder": "How can we help?",
+    "pages.contact.form.fields.phone_optional.label": "Phone (optional)",
+    "pages.contact.form.fields.phone_optional.placeholder": "+44 …",
+    "pages.contact.form.fields.subject.label": "Subject",
+    "pages.contact.form.fields.subject.options.classes_timetable.label":
+        "Classes & timetable",
+    "pages.contact.form.fields.subject.options.events.label": "Events",
+    "pages.contact.form.fields.subject.options.general_enquiry.label":
+        "General enquiry",
+    "pages.contact.form.fields.subject.options.membership.label": "Membership",
+    "pages.contact.form.fields.subject.options.private_lessons_experiences.label":
+        "Private lessons & experiences",
+    "pages.contact.form.fields.subject.options.venue_hire.label": "Venue hire",
+    "pages.contact.form.selectplaceholder": "Select an option",
+    "pages.contact.form.submitlabel": "Send message",
+    "pages.contact.form.successmessage":
+        "Thank you — your message has been received. We will be in touch shortly.",
+    "pages.contact.form.title": "Send an enquiry",
+    "pages.contact.hero.overline": "We'd love to hear from you",
+    "pages.contact.hero.subtitle":
+        "Questions about classes, courses, private events, or anything else — send us a message.",
+    "pages.contact.hero.title": "Contact",
+    "pages.contact.map.directionslabel": "Open in Google Maps →",
+    "pages.contact.map.title": "Find us",
+    "pages.contact.meta.description":
+        "Get in touch with County Hall Dance & Performing Arts School.",
+    "pages.contact.meta.title": "Contact",
+    "pages.courses.detaillabels.backlink": "All courses",
+    "pages.courses.detaillabels.duration": "Duration",
+    "pages.courses.detaillabels.price": "Price",
+    "pages.courses.detaillabels.schedule": "Schedule",
+    "pages.courses.hero.overline": "Structured progression",
+    "pages.courses.hero.subtitle":
+        "Immersive term programmes designed to deepen technique, artistry, and performance readiness.",
+    "pages.courses.hero.title": "Courses",
+    "pages.courses.intro":
+        "Courses differ from drop-in classes — they follow a curated syllabus across a full term, culminating in an informal sharing or assessment where appropriate.",
+    "pages.courses.items.adult_ballet_open.cta.label": "Enrol via timetable",
+    "pages.courses.items.adult_ballet_open.description.0":
+        "Rebuild strength and grace at the barre and in centre, with modifications offered throughout.",
+    "pages.courses.items.adult_ballet_open.description.1":
+        "Each block introduces new enchaînements while revisiting core principles.",
+    "pages.courses.items.adult_ballet_open.duration": "6-week blocks",
+    "pages.courses.items.adult_ballet_open.excerpt":
+        "A welcoming ballet class for adults — beginners and returners alike.",
+    "pages.courses.items.adult_ballet_open.image.alt":
+        "Adult ballet open course",
+    "pages.courses.items.adult_ballet_open.includes.0":
+        "Weekly 75-minute class",
+    "pages.courses.items.adult_ballet_open.includes.1":
+        "Technique notes via email",
+    "pages.courses.items.adult_ballet_open.includes.2":
+        "Optional end-of-block class video",
+    "pages.courses.items.adult_ballet_open.level": "All levels",
+    "pages.courses.items.adult_ballet_open.metadescription":
+        "Open-level adult ballet course at CHD PAS, London.",
+    "pages.courses.items.adult_ballet_open.price": "£96 per block",
+    "pages.courses.items.adult_ballet_open.schedule": "Mondays, 19:00 – 20:15",
+    "pages.courses.items.adult_ballet_open.term": "Rolling enrolment",
+    "pages.courses.items.adult_ballet_open.title": "Adult Ballet Open",
+    "pages.courses.items.junior_ballet_foundation.cta.label":
+        "Enrol via timetable",
+    "pages.courses.items.junior_ballet_foundation.description.0":
+        "This course introduces young dancers to the fundamentals of ballet posture, port de bras, and basic allegro.",
+    "pages.courses.items.junior_ballet_foundation.description.1":
+        "Classes are taught in a nurturing environment with clear expectations and plenty of encouragement.",
+    "pages.courses.items.junior_ballet_foundation.duration": "12 weeks",
+    "pages.courses.items.junior_ballet_foundation.excerpt":
+        "A twelve-week introduction to classical ballet for ages 6–9.",
+    "pages.courses.items.junior_ballet_foundation.image.alt":
+        "Junior ballet foundation course",
+    "pages.courses.items.junior_ballet_foundation.includes.0":
+        "Weekly 60-minute class",
+    "pages.courses.items.junior_ballet_foundation.includes.1":
+        "Course handbook and practice notes",
+    "pages.courses.items.junior_ballet_foundation.includes.2":
+        "End-of-term venue sharing",
+    "pages.courses.items.junior_ballet_foundation.level":
+        "Beginner – Elementary",
+    "pages.courses.items.junior_ballet_foundation.metadescription":
+        "Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.",
+    "pages.courses.items.junior_ballet_foundation.price": "£168 per term",
+    "pages.courses.items.junior_ballet_foundation.schedule":
+        "Saturdays, 10:00 – 11:00",
+    "pages.courses.items.junior_ballet_foundation.term": "Autumn Term 2026",
+    "pages.courses.items.junior_ballet_foundation.title":
+        "Junior Ballet Foundation",
+    "pages.courses.items.musical_theatre_performance.cta.label":
+        "Enrol via timetable",
+    "pages.courses.items.musical_theatre_performance.description.0":
+        "Sing, dance, and act your way through a selected musical number, rehearsed for a small invited audience.",
+    "pages.courses.items.musical_theatre_performance.description.1":
+        "Vocal coaching and ensemble work are integrated throughout the term.",
+    "pages.courses.items.musical_theatre_performance.duration": "14 weeks",
+    "pages.courses.items.musical_theatre_performance.excerpt":
+        "Triple-threat training culminating in a staged musical excerpt.",
+    "pages.courses.items.musical_theatre_performance.image.alt":
+        "Musical theatre performance course",
+    "pages.courses.items.musical_theatre_performance.includes.0":
+        "Weekly 3-hour session",
+    "pages.courses.items.musical_theatre_performance.includes.1":
+        "Vocal warm-up resources",
+    "pages.courses.items.musical_theatre_performance.includes.2":
+        "Costume hire for final sharing",
+    "pages.courses.items.musical_theatre_performance.level":
+        "Intermediate – Advanced",
+    "pages.courses.items.musical_theatre_performance.metadescription":
+        "Musical theatre performance course for intermediate and advanced students.",
+    "pages.courses.items.musical_theatre_performance.price": "£320 per term",
+    "pages.courses.items.musical_theatre_performance.schedule":
+        "Saturdays, 13:00 – 16:00",
+    "pages.courses.items.musical_theatre_performance.term": "Spring Term 2027",
+    "pages.courses.items.musical_theatre_performance.title":
+        "Musical Theatre Performance",
+    "pages.courses.items.teen_contemporary_intensive.cta.label":
+        "Enrol via timetable",
+    "pages.courses.items.teen_contemporary_intensive.description.0":
+        "Students explore release technique, contact principles, and choreographic tasks across a focused ten-week block.",
+    "pages.courses.items.teen_contemporary_intensive.description.1":
+        "The course prepares dancers for school showcases and optional audition pieces.",
+    "pages.courses.items.teen_contemporary_intensive.duration": "10 weeks",
+    "pages.courses.items.teen_contemporary_intensive.excerpt":
+        "Develop contemporary technique, improvisation, and performance skills.",
+    "pages.courses.items.teen_contemporary_intensive.image.alt":
+        "Teen contemporary intensive course",
+    "pages.courses.items.teen_contemporary_intensive.includes.0":
+        "Weekly 90-minute class",
+    "pages.courses.items.teen_contemporary_intensive.includes.1":
+        "Guest artist Q&A session",
+    "pages.courses.items.teen_contemporary_intensive.includes.2":
+        "Performance workshop",
+    "pages.courses.items.teen_contemporary_intensive.level": "Intermediate",
+    "pages.courses.items.teen_contemporary_intensive.metadescription":
+        "Intermediate contemporary course for teens at County Hall Dance.",
+    "pages.courses.items.teen_contemporary_intensive.price": "£195 per term",
+    "pages.courses.items.teen_contemporary_intensive.schedule":
+        "Wednesdays, 17:30 – 19:00",
+    "pages.courses.items.teen_contemporary_intensive.term": "Autumn Term 2026",
+    "pages.courses.items.teen_contemporary_intensive.title":
+        "Teen Contemporary Intensive",
+    "pages.courses.meta.description":
+        "Term-length dance and performing arts courses with structured progression at CHD PAS.",
+    "pages.courses.meta.title": "Courses",
+    "pages.events.categories.cross_arts_events.hero.overline": "What's On",
+    "pages.events.categories.cross_arts_events.hero.subtitle":
+        "Where dance meets music, visual art and international cultural exchange.",
+    "pages.events.categories.cross_arts_events.hero.title": "Cross-Arts Events",
+    "pages.events.categories.cross_arts_events.intro":
+        "Our Dance Meets Arts programme brings together movement, live music, visual art and cultural celebration.",
+    "pages.events.categories.cross_arts_events.meta.description":
+        "Dance Meets Arts cross-disciplinary events at County Hall Dance Centre.",
+    "pages.events.categories.cross_arts_events.meta.title": "Cross-Arts Events",
+    "pages.events.categories.cross_arts_events.sections.programme.title":
+        "Programme",
+    "pages.events.categories.cross_arts_events.sections.upcoming.title":
+        "Upcoming events",
+    "pages.events.categories.masterclasses.hero.overline": "What's On",
+    "pages.events.categories.masterclasses.hero.subtitle":
+        "Learn from visiting artists and specialists in intimate venue settings.",
+    "pages.events.categories.masterclasses.hero.title": "Masterclasses",
+    "pages.events.categories.masterclasses.intro":
+        "Masterclasses bring professional artists to County Hall for intensive teaching sessions across styles and levels.",
+    "pages.events.categories.masterclasses.meta.description":
+        "Guest artist masterclasses at County Hall Dance Centre.",
+    "pages.events.categories.masterclasses.meta.title": "Masterclasses",
+    "pages.events.categories.masterclasses.sections.levels.title":
+        "Levels & requirements",
+    "pages.events.categories.masterclasses.sections.upcoming.title":
+        "Upcoming masterclasses",
+    "pages.events.categories.milonga.hero.overline": "What's On",
+    "pages.events.categories.milonga.hero.subtitle":
+        "Social tango evenings with live and recorded music in our South Bank venue.",
+    "pages.events.categories.milonga.hero.title": "Milonga",
+    "pages.events.categories.milonga.intro":
+        "Join us for regular milongas — welcoming social dance nights for tango dancers of every level.",
+    "pages.events.categories.milonga.meta.description":
+        "Tango milonga social dance events at County Hall Dance Centre.",
+    "pages.events.categories.milonga.meta.title": "Milonga",
+    "pages.events.categories.milonga.sections.upcoming.title":
+        "Upcoming milongas",
+    "pages.events.categories.milonga.sections.what_to_expect.title":
+        "What to expect",
+    "pages.events.categories.performances.hero.overline": "What's On",
+    "pages.events.categories.performances.hero.subtitle":
+        "Ticketed showcases, sharings and performance events throughout the year.",
+    "pages.events.categories.performances.hero.title": "Performances",
+    "pages.events.categories.performances.intro":
+        "Celebrate the work of our community in performances ranging from informal sharings to ticketed showcase evenings.",
+    "pages.events.categories.performances.meta.description":
+        "Performances and showcases at County Hall Dance Centre.",
+    "pages.events.categories.performances.meta.title": "Performances",
+    "pages.events.categories.performances.sections.tickets.title": "Tickets",
+    "pages.events.categories.performances.sections.upcoming.title":
+        "Upcoming performances",
+    "pages.events.categories.social_dance_nights.hero.overline": "What's On",
+    "pages.events.categories.social_dance_nights.hero.subtitle":
+        "Themed evenings celebrating dance styles, music and community.",
+    "pages.events.categories.social_dance_nights.hero.title":
+        "Social Dance Nights",
+    "pages.events.categories.social_dance_nights.intro":
+        "From salsa socials to cross-style celebrations, our social nights are open to adults who love to move and connect.",
+    "pages.events.categories.social_dance_nights.meta.description":
+        "Themed social dance evenings at County Hall Dance Centre.",
+    "pages.events.categories.social_dance_nights.meta.title":
+        "Social Dance Nights",
+    "pages.events.categories.social_dance_nights.sections.how_to_join.title":
+        "How to join",
+    "pages.events.categories.social_dance_nights.sections.upcoming.title":
+        "Upcoming social nights",
+    "pages.events.categories.workshops.hero.overline": "What's On",
+    "pages.events.categories.workshops.hero.subtitle":
+        "One-off intensives and taster sessions with guest artists and faculty.",
+    "pages.events.categories.workshops.hero.title": "Workshops",
+    "pages.events.categories.workshops.intro":
+        "Workshops offer a focused opportunity to explore a style, technique or theme in a single session or short series.",
+    "pages.events.categories.workshops.meta.description":
+        "Dance and movement workshops at County Hall Dance Centre.",
+    "pages.events.categories.workshops.meta.title": "Workshops",
+    "pages.events.categories.workshops.sections.booking.title": "Booking",
+    "pages.events.categories.workshops.sections.upcoming.title":
+        "Upcoming workshops",
+    "pages.events.categorylabels.backlink": "← What's on",
+    "pages.events.detaillabels.allday": "All day",
+    "pages.events.detaillabels.backlink": "← What's on",
+    "pages.events.detaillabels.booking": "Booking details",
+    "pages.events.detaillabels.date": "Date",
+    "pages.events.detaillabels.endpending": "End time to be confirmed",
+    "pages.events.detaillabels.eventinformation": "Event information",
+    "pages.events.detaillabels.hostedat": "Hosted at",
+    "pages.events.detaillabels.location": "Location",
+    "pages.events.detaillabels.organiser": "Organised by",
+    "pages.events.detaillabels.partners": "In collaboration with",
+    "pages.events.detaillabels.pastconcerts": "Past concerts",
+    "pages.events.detaillabels.programme": "Programme sessions",
+    "pages.events.detaillabels.promotedby": "Promoted by",
+    "pages.events.detaillabels.room": "Space",
+    "pages.events.detaillabels.timepending": "Time to be confirmed",
+    "pages.events.detaillabels.upcomingconcerts": "Upcoming concerts",
+    "pages.events.detaillabels.venuepending": "Venue to be confirmed",
+    "pages.events.hero.overline": "What's on",
+    "pages.events.hero.subtitle":
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+    "pages.events.hero.title": "What's On",
+    "pages.events.intro":
+        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+    "pages.events.items.ceramics_workshop_with_yasemin.booknow.label":
+        "Details",
+    "pages.events.items.ceramics_workshop_with_yasemin.date":
+        "Saturday 17 October 2026, 16:30–18:00",
+    "pages.events.items.ceramics_workshop_with_yasemin.description.0":
+        "Our first ceramics workshop at County Hall Dance & Performing Arts School, led by Yasemin Gava (@yasemingava.art).",
+    "pages.events.items.ceramics_workshop_with_yasemin.description.1":
+        "Make flowers in a creative ceramics session: slow down, get hands-on and create something with your own hands.",
+    "pages.events.items.ceramics_workshop_with_yasemin.description.2":
+        "Part of our growing programme of creative workshops and community experiences. Create, connect and belong.",
+    "pages.events.items.ceramics_workshop_with_yasemin.excerpt":
+        "Make ceramic flowers in a creative, hands-on workshop with Yasemin Gava.",
+    "pages.events.items.ceramics_workshop_with_yasemin.image.alt":
+        "Venue at County Hall Dance & Performing Arts School",
+    "pages.events.items.ceramics_workshop_with_yasemin.location":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.ceramics_workshop_with_yasemin.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.ceramics_workshop_with_yasemin.partners.0":
+        "Yasemin Gava",
+    "pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.partners.0":
+        "Yasemin Gava",
+    "pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.title":
+        "Ceramics Workshop with Yasemin — Making Flowers",
+    "pages.events.items.ceramics_workshop_with_yasemin.title":
+        "Ceramics Workshop with Yasemin",
+    "pages.events.items.county_hall_dance_centre_opening_day.booknow.label":
+        "Details",
+    "pages.events.items.county_hall_dance_centre_opening_day.date":
+        "Thursday 10 September 2026 · All day",
+    "pages.events.items.county_hall_dance_centre_opening_day.description.0":
+        "County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.",
+    "pages.events.items.county_hall_dance_centre_opening_day.description.1":
+        "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
+    "pages.events.items.county_hall_dance_centre_opening_day.excerpt":
+        "County Hall Dance Centre opened its doors at County Hall on 10 September 2026.",
+    "pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt":
+        "Ribbon-cutting at County Hall Dance Centre Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt":
+        "Celebration table at the Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt":
+        "Dressing area and costume rails at Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt":
+        "Flowers marking County Hall Dance Centre Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt":
+        "County Hall Dance Centre crest on Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.image.alt":
+        "County Hall Dance Centre Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.location":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.county_hall_dance_centre_opening_day.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title":
+        "Opening Day",
+    "pages.events.items.county_hall_dance_centre_opening_day.title":
+        "County Hall Dance Centre – Opening Day",
+    "pages.events.items.dance_meets_arts.booknow.label": "Details",
+    "pages.events.items.dance_meets_arts.date":
+        "Saturday 8 August 2026, 7:00pm – 8:30pm",
+    "pages.events.items.dance_meets_arts.description.0":
+        "Join us for an inspiring summer evening celebrating the dialogue between dance and the arts in one of London's most iconic cultural settings.",
+    "pages.events.items.dance_meets_arts.description.1":
+        "Dance Meets Arts is the inaugural event presented by County Hall Dance Centre in collaboration with County Hall Arts, exploring how movement can be inspired by painting, sculpture, music and architecture. Set against the spectacular backdrop of the River Thames and the London skyline, the evening invites audiences to experience dance not simply as performance, but as a living artistic conversation.",
+    "pages.events.items.dance_meets_arts.description.2":
+        "Throughout the evening, professional artists will present a series of performances inspired by works of visual art and music, demonstrating how different creative disciplines can influence and enrich one another. The event reflects County Hall Arts' vision of bringing together artists, audiences and ideas through meaningful cultural experiences.",
+    "pages.events.items.dance_meets_arts.description.3":
+        "Whether you are a dance enthusiast, an art lover, or simply looking for a unique summer evening on London's South Bank, Dance Meets Arts offers a warm welcome to everyone.",
+    "pages.events.items.dance_meets_arts.description.4":
+        "The evening also marks the introduction of the County Hall Dance Centre, a new artistic community dedicated to dance, creativity and cultural exchange. Guests will have the opportunity to meet the team, receive a free dance class, discover future classes and events, and learn more about becoming part of this exciting new initiative.",
+    "pages.events.items.dance_meets_arts.description.5": "Admission is free.",
+    "pages.events.items.dance_meets_arts.description.6": "# Programme",
+    "pages.events.items.dance_meets_arts.description.7":
+        "An Artistic Journey Through Movement. Dance performance inspired by the arts.",
+    "pages.events.items.dance_meets_arts.description.8":
+        "An inspiring programme featuring Contemporary Dance & Painting, Classical Ballet, Calligraphy & Dance, Live Piano & Violin, Tea Culture Performance, Tai Chi, Argentine Tango and an Interactive Dance Experience.",
+    "pages.events.items.dance_meets_arts.description.9":
+        "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
+    "pages.events.items.dance_meets_arts.excerpt":
+        "Dance Meets Arts at County Hall celebrates dance, music and visual arts on London's South Bank with free live performances.",
+    "pages.events.items.dance_meets_arts.image.alt":
+        "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt":
+        "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
+    "pages.events.items.dance_meets_arts.location":
+        "Members' Terrace, County Hall",
+    "pages.events.items.dance_meets_arts.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.dance_meets_arts.partners.0": "County Hall Arts",
+    "pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.title":
+        "Dance Meets Arts",
+    "pages.events.items.dance_meets_arts.title": "Dance Meets Arts",
+    "pages.events.items.four_seasons_festival.booknow.label": "Details",
+    "pages.events.items.four_seasons_festival.date":
+        "Saturday 24 – Sunday 25 October 2026",
+    "pages.events.items.four_seasons_festival.description.0":
+        "# Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.description.1":
+        "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
+    "pages.events.items.four_seasons_festival.description.10":
+        "At the heart of the season was the idea of the seed: something small with the potential to grow and make an impact.",
+    "pages.events.items.four_seasons_festival.description.11":
+        "# Under the Same Sun, Summer 2026",
+    "pages.events.items.four_seasons_festival.description.12":
+        "The second edition, Under the Same Sun, continued the festival's exploration of growth with a particular focus on collaboration.",
+    "pages.events.items.four_seasons_festival.description.13":
+        "Creating opportunities for different artistic practices to intersect, the festival featured live music and dance, improvisational concerts, craft activities for children and collaborative artworks. The season became a celebration of collective creativity, exploring what can emerge when artists, audiences and different art forms come together.",
+    "pages.events.items.four_seasons_festival.description.14":
+        "The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava.",
+    "pages.events.items.four_seasons_festival.description.2":
+        "More than a programme of individual events, each edition is developed around a central theme or idea – creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
+    "pages.events.items.four_seasons_festival.description.3":
+        "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
+    "pages.events.items.four_seasons_festival.description.4":
+        "# As the Leaves Turn, Autumn 2026",
+    "pages.events.items.four_seasons_festival.description.5":
+        "The latest edition of the festival is As the Leaves Turn, celebrating autumn as a season of change and transformation.",
+    "pages.events.items.four_seasons_festival.description.6":
+        "Following the energy and optimism of Under the Same Sun, this autumn edition explores the next stage of the journey: recognising what has flourished, celebrating what has been achieved, and embracing the changes that prepare us for a new beginning. Growth is not only about moving forward. Nature teaches us that every season has its purpose, and that change often begins with the courage to let go.",
+    "pages.events.items.four_seasons_festival.description.7":
+        "# Seeds of Change, Spring 2026",
+    "pages.events.items.four_seasons_festival.description.8":
+        "The inaugural Four Seasons Festival was Seeds of Change, a celebration of beginnings, growth and possibility.",
+    "pages.events.items.four_seasons_festival.description.9":
+        "The programme included classical music concerts, a sitar and tabla performance with Afternoon Chai, guided tours of County Hall and its surroundings, storytelling with children's author Vivian French, clay workshops, performances by emerging young musicians and a curated short-film screening.",
+    "pages.events.items.four_seasons_festival.descriptionctas.more_details.label":
+        "More Details",
+    "pages.events.items.four_seasons_festival.excerpt":
+        "As the Leaves Turn, Autumn 2026 — a seasonal celebration of music, dance, visual arts, film, performances and creative workshops at County Hall.",
+    "pages.events.items.four_seasons_festival.gallery.0.alt":
+        "Concert in the County Hall atrium during the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.gallery.1.alt":
+        "Saxophone and accordion performance beside colourful sculptures at County Hall",
+    "pages.events.items.four_seasons_festival.gallery.10.alt":
+        "Flute, piano and cello trio performing at the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.gallery.2.alt":
+        "Musicians and dancers with programme booklets at the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.gallery.3.alt":
+        "Guided tour near the South Bank Lion with Big Ben in the background",
+    "pages.events.items.four_seasons_festival.gallery.4.alt":
+        "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.gallery.5.alt":
+        "Outdoor dance and flute performance for Under the Same Sun at County Hall",
+    "pages.events.items.four_seasons_festival.gallery.6.alt":
+        "Storytelling and craft workshop with author Vivian French at the festival",
+    "pages.events.items.four_seasons_festival.gallery.7.alt":
+        "Flute and harp performance in the County Hall atrium",
+    "pages.events.items.four_seasons_festival.gallery.8.alt":
+        "Homemade cakes and treats served during the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.gallery.9.alt":
+        "Short film screening as part of Seeds of Change at County Hall",
+    "pages.events.items.four_seasons_festival.image.alt":
+        "Concert in the County Hall atrium during the Four Seasons Festival",
+    "pages.events.items.four_seasons_festival.location":
+        "Riverside Building, County Hall",
+    "pages.events.items.four_seasons_festival.organiser": "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.hostedat":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_1.title":
+        "Folk Music, Irish Dance & Opening Celebration",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.hostedat":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_2.title":
+        "Art and Craft and Movement Workshop for Children",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.0":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.1":
+        "Sen Yoga",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_3.title":
+        "Autumn Flow and Sound",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_4.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_4.title":
+        "Around the World Ticket",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_5.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_5.title":
+        "Loom: Folk Traditions & Early Music",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_6.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_6.title":
+        "Young Leaves Concert",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_7.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_7.title":
+        "Autumn Leaf Pressing Clay Workshop",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_8.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_8.title":
+        "Music That Dances",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_9.organiser":
+        "County Hall Arts",
+    "pages.events.items.four_seasons_festival.sessions.leaves_2026_9.title":
+        "Short Film Screening",
+    "pages.events.items.four_seasons_festival.title": "Four Seasons Festival",
+    "pages.events.items.halloween_pumpkin_carving_workshop.booknow.label":
+        "Enquire Now",
+    "pages.events.items.halloween_pumpkin_carving_workshop.date":
+        "Saturday 31 October 2026, 1:00pm – 5:00pm",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.0":
+        "Join us at County Hall Dance Centre for a creative and fun-filled Halloween afternoon! Perfect for adults and children alike, our Pumpkin Carving Workshop is a chance to get into the Halloween spirit, make something of your own and enjoy a festive afternoon together.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.1":
+        "The afternoon begins with a hands-on pumpkin carving workshop, where you can create your very own Jack-o'-Lantern. Later, the celebrations continue with a Halloween Costume Show, complete with special awards and a professional photographer to capture the occasion.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.10":
+        "A professional photographer will be present to capture the fun and memorable moments throughout the afternoon.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.11":
+        "# Tickets",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.12":
+        "£45 — With Costume.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.13":
+        "£55 — Without Costume.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.14":
+        "# Event Details",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.15":
+        "Date: Saturday 31 October 2026.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.16":
+        "Time: 1:00pm–5:00pm.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.17":
+        "Venue: County Hall Dance Centre, London SE1 7PB.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.18":
+        "Suitable for adults and children.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.19":
+        "For booking enquiries and further information, please contact info@countyhalldancecentre.com.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.2":
+        "# Programme",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.3":
+        "13:00 — Pumpkin Carving Workshop. Carve and decorate your own Halloween pumpkin and bring your Jack-o'-Lantern to life.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.4":
+        "15:00 — Halloween Costume Show. Dress up as your favourite character, show off your Halloween look and join in the fun!",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.5":
+        "# Costume Show & Awards",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.6":
+        "The costume show will feature three special awards:",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.7":
+        "Best Costume Award — Celebrating the most creative and impressive outfit.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.8":
+        "Best Makeup Award — Recognising imaginative Halloween makeup.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.description.9":
+        "Best Performance Award — For a standout performance during the costume show.",
+    "pages.events.items.halloween_pumpkin_carving_workshop.excerpt":
+        "Get creative this Halloween with an afternoon of pumpkin carving, followed by a costume show, special awards and professional photography. Fun for all ages!",
+    "pages.events.items.halloween_pumpkin_carving_workshop.image.alt":
+        "Halloween pumpkins and decorations",
+    "pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt":
+        "Halloween Costume Show and Pumpkin Workshop poster",
+    "pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt":
+        "Halloween Costume Play and Pumpkin Carving Workshop poster",
+    "pages.events.items.halloween_pumpkin_carving_workshop.location":
+        "County Hall Dance Centre, London SE1 7PB",
+    "pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.title":
+        "Halloween Pumpkin Carving Workshop",
+    "pages.events.items.halloween_pumpkin_carving_workshop.title":
+        "Halloween Pumpkin Carving Workshop",
+    "pages.events.items.lunchtime_concert_series.booknow.label": "Details",
+    "pages.events.items.lunchtime_concert_series.date":
+        "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
+    "pages.events.items.lunchtime_concert_series.description.0":
+        "The County Hall Quartet presents informal afternoon concerts of classical music at County Hall. Each month brings a new programme, where music becomes our common language.",
+    "pages.events.items.lunchtime_concert_series.description.1":
+        "# Next Concert",
+    "pages.events.items.lunchtime_concert_series.description.2":
+        "The next concert date and programme will be announced once confirmed.",
+    "pages.events.items.lunchtime_concert_series.description.3":
+        "# The County Hall Quartet",
+    "pages.events.items.lunchtime_concert_series.description.4":
+        "The County Hall Quartet comprises four acclaimed and award-winning musicians: Stefano Marzanni (Piano), Emma Arizza (Violin), Natalia Solis Paredes (Viola) and Meera Priyanka Raja (Cello).",
+    "pages.events.items.lunchtime_concert_series.description.5": "# Venue",
+    "pages.events.items.lunchtime_concert_series.description.6":
+        "Please check each concert listing for its confirmed venue and arrival details.",
+    "pages.events.items.lunchtime_concert_series.excerpt":
+        "Enjoy a relaxed lunchtime concert with the County Hall Quartet.",
+    "pages.events.items.lunchtime_concert_series.image.alt":
+        "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0":
+        "A relaxed afternoon of chamber music with the County Hall Quartet. The ensemble welcomed cellist Meera Priyanka Raja, who opened the concert with a special solo performance.",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser":
+        "County Hall Arts",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title":
+        "Encounters",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0":
+        "The programme explored the virtuosity, lyricism and operatic flair of Italian composers including Paganini, Rossini and Boccherini, with a flamenco twist from two dancers from the London School of Flamenco.",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1":
+        "Guest performers included Santy Masciarò on guitar and Mika Enjo on flute. Violinist Juan Manuel Gonzalez Hernandez joined the ensemble for the Fandango, expanding the group into the quintet for which the work was written.",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2":
+        "The concert marked the beginning of As the Leaves Turn (24–25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations.",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser":
+        "County Hall Arts",
+    "pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title":
+        "Fandango! Italian Virtuosity Meets Spanish Dance",
+    "pages.events.items.lunchtime_concert_series.title":
+        "Lunchtime Concert Series",
+    "pages.events.items.memory_of_china.booknow.label": "Book Now",
+    "pages.events.items.memory_of_china.date":
+        "Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day",
+    "pages.events.items.memory_of_china.description.0":
+        "The Memory of China Festival comes to County Hall this October for a two-day celebration of traditional Chinese arts and culture, bringing together dance, wellbeing, craftsmanship and cultural exchange in the heart of London's South Bank.",
+    "pages.events.items.memory_of_china.description.1":
+        "Across Saturday 3 and Sunday 4 October, County Hall Dance Centre will host a varied programme of performances, workshops and hands-on experiences. From the 2nd UK Chinese Yoga Festival, Chinese classical and ethnic dance to calligraphy, acupressure and Yunnan cultural showcases, the weekend offers different ways to discover and experience Chinese culture. Cultural exhibitions, traditional crafts, hands-on activities, a makers' market and tea culture will also feature throughout the festival.",
+    "pages.events.items.memory_of_china.description.10":
+        "15:45–17:00 — Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.",
+    "pages.events.items.memory_of_china.description.11":
+        "17:00–17:30 — Chinese Classical Dance Performance & Experience Class. An evening performance followed by an opportunity to experience Chinese classical dance. £10 per person, payable on the day at the venue.",
+    "pages.events.items.memory_of_china.description.12":
+        "# Sunday, 4 October 2026",
+    "pages.events.items.memory_of_china.description.13":
+        "12:00 — Market Area Opens. Makers' market open.",
+    "pages.events.items.memory_of_china.description.14":
+        "13:00–14:30 — Yoga Experience. An accessible introduction to yoga and movement, open to participants of all experience levels. £10 per person, payable on the day at the venue.",
+    "pages.events.items.memory_of_china.description.15":
+        "14:35–14:40 — Chinese Fusion Fan Veil Belly Dance. A short performance combining fan choreography with belly dance.",
+    "pages.events.items.memory_of_china.description.16":
+        "14:50–15:20 — Classical Dance Performance: The Old Story & Experience Class. A Chinese classical dance performance followed by an experience class inviting participants to explore the movement for themselves. £10 per person, payable on the day at the venue.",
+    "pages.events.items.memory_of_china.description.17":
+        "15:20–15:35 — East-West Cultural Harmony Music Society. Enjoy a live performance featuring music from Game of Thrones, Jasmine Flower and I Love You.",
+    "pages.events.items.memory_of_china.description.18":
+        "15:35–17:30 — Chinese Calligraphy Paper Scroll Workshop. Discover Chinese calligraphy and create your own paper scroll in a guided hands-on workshop. £12 per person / £20 for two people, payable on the day at the venue.",
+    "pages.events.items.memory_of_china.description.19":
+        "16:00–16:20 — Yunnan Cultural Showcase. An introduction to the diverse cultural traditions and heritage of Yunnan.",
+    "pages.events.items.memory_of_china.description.2":
+        "Saturday's programme has been created especially with the Chinese community in mind and will be presented in Chinese and English, while Sunday's programme will be led primarily in English for international and local audiences. Everyone is welcome to join, and no previous experience is required.",
+    "pages.events.items.memory_of_china.description.20":
+        "16:25–16:30 — Chinese Classical Dance Performance: Bu Gua. A performance showcasing the movement and traditions of Chinese dance.",
+    "pages.events.items.memory_of_china.description.21":
+        "16:30–16:35 — Dai Ethnic Dance Performance: Wan Tao & Cultural Showcase. The festival concludes with Dai dance and an introduction to Dai culture and traditions.",
+    "pages.events.items.memory_of_china.description.22": "# Entry & Booking",
+    "pages.events.items.memory_of_china.description.23":
+        "The festival is primarily a walk-in event, and visitors are welcome to drop in throughout the weekend.",
+    "pages.events.items.memory_of_china.description.24":
+        "Selected workshops and experience sessions require a participation fee, payable on the day at the venue. Visitors wishing to take part in these activities, prize draws and other festival activities are encouraged to register in advance via Eventbrite. Places are limited and subject to availability.",
+    "pages.events.items.memory_of_china.description.25": "# Organisers",
+    "pages.events.items.memory_of_china.description.26":
+        "Organised by County Hall Dance & Performing Arts School. Co-organised by Sen Yoga, RCDance, Yi Crafts, Lotus Realm and Inkjoygraphy.",
+    "pages.events.items.memory_of_china.description.27": "# Finding Us",
+    "pages.events.items.memory_of_china.description.28":
+        "Members' Terrace, The Queen's Walk, County Hall, Riverside Building, London SE1 7PB.",
+    "pages.events.items.memory_of_china.description.29":
+        "You should reach the County Hall Members' Terrace via the Queen's Walk on the riverside of the building. Look out for the gate leading to a staircase upwards, signposted for the Peacock Restaurant. This entrance is found between the London Dungeon and Shrek's Adventure on the Queen's Walk.",
+    "pages.events.items.memory_of_china.description.3":
+        "The festival is presented by County Hall Dance Centre in collaboration with County Hall Arts, as part of a growing programme celebrating dance, culture and artistic collaboration at County Hall.",
+    "pages.events.items.memory_of_china.description.30":
+        "Should you have any questions regarding this festival, please contact us at info@countyhalldancecentre.com.",
+    "pages.events.items.memory_of_china.description.4":
+        "# Saturday, 3 October 2026",
+    "pages.events.items.memory_of_china.description.5":
+        "12:00 — Market Area Opens. Makers' market open.",
+    "pages.events.items.memory_of_china.description.6":
+        "13:00–15:00 — 2nd UK Chinese Yoga Festival. An afternoon dedicated to yoga, movement and wellbeing, featuring MYRing Yoga, Yin-Yang Balance, an interactive session and prize draw. £36 per person, payable on the day at the venue. Check-in from 12:30.",
+    "pages.events.items.memory_of_china.description.7":
+        "15:00–15:20 — Yunnan Cultural Showcase. Discover the diverse cultural traditions of Yunnan through an introduction to the region and its heritage.",
+    "pages.events.items.memory_of_china.description.8":
+        "15:20–15:25 — Dai Ethnic Dance Performance: Wan Tao. A performance showcasing the movement and traditions of Dai ethnic dance.",
+    "pages.events.items.memory_of_china.description.9":
+        "15:25–15:40 — Miao Ethnic Dance Performance: Cai Tang & Cultural Showcase. A Miao dance performance accompanied by an introduction to Miao culture and traditions.",
+    "pages.events.items.memory_of_china.excerpt":
+        "A two-day celebration of traditional Chinese arts and culture at County Hall, with dance, yoga, calligraphy, crafts and hands-on experiences.",
+    "pages.events.items.memory_of_china.image.alt":
+        "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
+    "pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt":
+        "Memory of China festival schedule for Saturday 3 October 2026",
+    "pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt":
+        "Memory of China festival schedule for Sunday 4 October 2026",
+    "pages.events.items.memory_of_china.location":
+        "Members' Terrace, County Hall",
+    "pages.events.items.memory_of_china.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.memory_of_china.partners.0": "Sen Yoga",
+    "pages.events.items.memory_of_china.partners.1": "RCDance",
+    "pages.events.items.memory_of_china.partners.2": "Yi Crafts",
+    "pages.events.items.memory_of_china.partners.3": "Lotus Realm",
+    "pages.events.items.memory_of_china.partners.4": "Inkjoygraphy",
+    "pages.events.items.memory_of_china.partners.5": "County Hall Arts",
+    "pages.events.items.memory_of_china.sessions.memory_2026_03.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.memory_of_china.sessions.memory_2026_03.title":
+        "Memory of China",
+    "pages.events.items.memory_of_china.sessions.memory_2026_04.organiser":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.memory_of_china.sessions.memory_2026_04.title":
+        "Memory of China",
+    "pages.events.items.memory_of_china.tickets.saturday_tickets.label":
+        "Saturday tickets",
+    "pages.events.items.memory_of_china.tickets.sunday_tickets.label":
+        "Sunday tickets",
+    "pages.events.items.memory_of_china.title":
+        "Memory of China: Chinese Traditional Arts and Culture Festival",
+    "pages.events.items.milonga_ojo_opening_night.booknow.label": "Details",
+    "pages.events.items.milonga_ojo_opening_night.date":
+        "Saturday 26 September 2026, 19:00–23:00",
+    "pages.events.items.milonga_ojo_opening_night.description.0":
+        "Welcome to Milonga ¡Ojo!, a new Saturday milonga at County Hall on London's South Bank, close to the London Eye.",
+    "pages.events.items.milonga_ojo_opening_night.description.1":
+        "Celebrate the opening night on the school's 200m² sprung wooden dance floor. The evening begins with a pre-milonga workshop with René & Silvia, followed by social dancing with DJ Silvia Bivolaru.",
+    "pages.events.items.milonga_ojo_opening_night.description.2":
+        "Bring your dancing shoes, your friends and your love for tango.",
+    "pages.events.items.milonga_ojo_opening_night.excerpt":
+        "An opening night of tango, connection and dancing on the South Bank, with René, Silvia and DJ Silvia Bivolaru.",
+    "pages.events.items.milonga_ojo_opening_night.hostedat":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.milonga_ojo_opening_night.image.alt":
+        "Wooden-floor dance space at County Hall Dance & Performing Arts School",
+    "pages.events.items.milonga_ojo_opening_night.location":
+        "County Hall Dance & Performing Arts School",
+    "pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_social_2026_09_26.title":
+        "Milonga ¡Ojo! with DJ Silvia Bivolaru",
+    "pages.events.items.milonga_ojo_opening_night.sessions.milonga_ojo_workshop_2026_09_26.title":
+        "Pre-Milonga Workshop with René & Silvia",
+    "pages.events.items.milonga_ojo_opening_night.title":
+        "Milonga ¡Ojo! — Opening Night",
+    "pages.events.meta.description":
+        "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
+    "pages.events.meta.title": "What's On",
+    "pages.membership.overview.benefits.items.0.body":
+        "Save on workshops, masterclasses and intensive courses.",
+    "pages.membership.overview.benefits.items.0.title":
+        "Workshop & masterclass discounts",
+    "pages.membership.overview.benefits.items.1.body":
+        "Be first to sign up for performances, showcases and special events.",
+    "pages.membership.overview.benefits.items.1.title": "Priority registration",
+    "pages.membership.overview.benefits.items.2.body":
+        "Reduced prices on performance and event tickets.",
+    "pages.membership.overview.benefits.items.2.title":
+        "Event ticket discounts",
+    "pages.membership.overview.benefits.items.3.body":
+        "Savings on County Hall merchandise, dancewear and dance shoes.",
+    "pages.membership.overview.benefits.items.3.title": "Merchandise discounts",
+    "pages.membership.overview.benefits.items.4.body":
+        "Member rates on venue and practice-space hire (from £100 per hour on weekdays).",
+    "pages.membership.overview.benefits.items.4.title": "Reduced venue hire",
+    "pages.membership.overview.benefits.items.5.body":
+        "Exclusive discounts with our partner businesses.",
+    "pages.membership.overview.benefits.items.5.title": "Partner offers",
+    "pages.membership.overview.benefits.items.6.body":
+        "Community classes, parties, theatre trips and social gatherings.",
+    "pages.membership.overview.benefits.items.6.title": "Members-only events",
+    "pages.membership.overview.benefits.items.7.body":
+        "Join our private members' group to stay connected.",
+    "pages.membership.overview.benefits.items.7.title": "Member community",
+    "pages.membership.overview.benefits.items.8.body":
+        "Earn rewards when a friend joins.",
+    "pages.membership.overview.benefits.items.8.title": "Refer a friend",
+    "pages.membership.overview.benefits.items.9.body":
+        "Collect points for attendance and redeem them for rewards.",
+    "pages.membership.overview.benefits.items.9.title": "Points & rewards",
+    "pages.membership.overview.benefits.title": "Member benefits",
+    "pages.membership.overview.cta.body":
+        "Email our membership team and we'll help you find the plan that suits you best.",
+    "pages.membership.overview.cta.button.label": "Join now",
+    "pages.membership.overview.cta.secondary":
+        "membership@countyhalldancecentre.com",
+    "pages.membership.overview.cta.title": "Ready to join?",
+    "pages.membership.overview.faq.items.membership_faq_hire.answer":
+        "Simply mention your membership when you enquire.",
+    "pages.membership.overview.faq.items.membership_faq_hire.question":
+        "How do I get member rates for venue hire?",
+    "pages.membership.overview.faq.items.membership_faq_styles.answer":
+        "Membership covers our class styles: Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop.",
+    "pages.membership.overview.faq.items.membership_faq_styles.question":
+        "Which classes are included?",
+    "pages.membership.overview.faq.items.membership_faq_trial.answer":
+        "We don't offer free trial classes, but you're welcome to book a trial class before you join. Email membership@countyhalldancecentre.com and we'll gladly help you choose the class and plan that's right for you.",
+    "pages.membership.overview.faq.items.membership_faq_trial.question":
+        "Do you offer free trial classes?",
+    "pages.membership.overview.faq.title": "Membership FAQ",
+    "pages.membership.overview.hero.overline": "Dance more, belong more",
+    "pages.membership.overview.hero.subtitle":
+        "Make dance part of your week — and become part of a creative community at London's iconic County Hall.",
+    "pages.membership.overview.hero.title": "Membership",
+    "pages.membership.overview.howtojoin.steps.0": "Choose your plan.",
+    "pages.membership.overview.howtojoin.steps.1":
+        "Email us at membership@countyhalldancecentre.com with the plan you'd like.",
+    "pages.membership.overview.howtojoin.steps.2":
+        "Complete your registration and payment.",
+    "pages.membership.overview.howtojoin.steps.3":
+        "Start booking classes and enjoying your member benefits.",
+    "pages.membership.overview.howtojoin.title": "How to join",
+    "pages.membership.overview.intro":
+        "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
+    "pages.membership.overview.meta.description":
+        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates.",
+    "pages.membership.overview.meta.title": "Membership",
+    "pages.membership.overview.plans.cta.label": "Join now",
+    "pages.membership.overview.plans.items.annual.body":
+        "Our best value. A full year of dance, community and member-only perks.",
+    "pages.membership.overview.plans.items.annual.price": "£[TBC] / year",
+    "pages.membership.overview.plans.items.annual.title": "Annual Membership",
+    "pages.membership.overview.plans.items.monthly.body":
+        "Flexible and easy to start. Ideal if you want to build a regular practice without a long commitment.",
+    "pages.membership.overview.plans.items.monthly.price": "£[TBC] / month",
+    "pages.membership.overview.plans.items.monthly.title": "Monthly Membership",
+    "pages.membership.overview.plans.items.quarterly.body":
+        "Three months of classes and member benefits — a great way to see real progress.",
+    "pages.membership.overview.plans.items.quarterly.price": "£[TBC] / quarter",
+    "pages.membership.overview.plans.items.quarterly.title":
+        "Quarterly Membership",
+    "pages.membership.overview.plans.title": "Plans",
+    "pages.membership.overview.styles.items.0": "Contemporary",
+    "pages.membership.overview.styles.items.1": "Chinese Dance",
+    "pages.membership.overview.styles.items.2": "Tango",
+    "pages.membership.overview.styles.items.3": "Yoga",
+    "pages.membership.overview.styles.items.4": "Tai Chi",
+    "pages.membership.overview.styles.items.5": "K-Pop",
+    "pages.membership.overview.styles.title": "Class styles included",
+    "pages.membership.subpages.booking_access.hero.overline": "Membership",
+    "pages.membership.subpages.booking_access.hero.subtitle":
+        "How members reserve classes and events through our booking system.",
+    "pages.membership.subpages.booking_access.hero.title": "Booking Access",
+    "pages.membership.subpages.booking_access.intro":
+        "Members will receive booking access through our online timetable and companion app — details to follow via our app partner.",
+    "pages.membership.subpages.booking_access.meta.description":
+        "Member booking access at County Hall Dance Centre.",
+    "pages.membership.subpages.booking_access.meta.title": "Booking Access",
+    "pages.membership.subpages.booking_access.sections.member_booking.title":
+        "Member booking",
+    "pages.membership.subpages.booking_access.sections.support.title":
+        "Support",
+    "pages.membership.subpages.member_benefits.hero.overline": "Membership",
+    "pages.membership.subpages.member_benefits.hero.subtitle":
+        "A more flexible way to keep dancing, join events and belong to the community.",
+    "pages.membership.subpages.member_benefits.hero.title": "Member Benefits",
+    "pages.membership.subpages.member_benefits.intro":
+        "Membership offers ongoing access to classes, events and community benefits — details to be confirmed before launch.",
+    "pages.membership.subpages.member_benefits.meta.description":
+        "Benefits of membership at County Hall Dance Centre.",
+    "pages.membership.subpages.member_benefits.meta.title": "Member Benefits",
+    "pages.membership.subpages.member_benefits.sections.benefits.title":
+        "What's included",
+    "pages.membership.subpages.member_benefits.sections.how_to_join.title":
+        "How to join",
+    "pages.membership.subpages.monthly_passes.hero.overline": "Membership",
+    "pages.membership.subpages.monthly_passes.hero.subtitle":
+        "Flexible monthly options for regular class attendance.",
+    "pages.membership.subpages.monthly_passes.hero.title": "Monthly Passes",
+    "pages.membership.subpages.monthly_passes.intro":
+        "Monthly passes will be published with validity, cancellation policy and transferability before online booking opens.",
+    "pages.membership.subpages.monthly_passes.meta.description":
+        "Monthly pass options at County Hall Dance Centre.",
+    "pages.membership.subpages.monthly_passes.meta.title": "Monthly Passes",
+    "pages.membership.subpages.monthly_passes.sections.pass_options.title":
+        "Pass options",
+    "pages.membership.subpages.monthly_passes.sections.terms.title": "Terms",
+    "pages.privatelessons.cta.body":
+        "Send us a few details and our team will be in touch.",
+    "pages.privatelessons.cta.button.label": "Enquire now",
+    "pages.privatelessons.cta.secondary":
+        "WeChat: 18518614868 · Instagram: @countyhalldancecentre",
+    "pages.privatelessons.cta.title": "Plan your experience",
+    "pages.privatelessons.hero.overline": "Tailored for you",
+    "pages.privatelessons.hero.subtitle":
+        "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful venue at County Hall.",
+    "pages.privatelessons.hero.title": "Private Lessons & Experiences",
+    "pages.privatelessons.howitworks.steps.0.body":
+        "the occasion, group size and preferred dates.",
+    "pages.privatelessons.howitworks.steps.0.title": "Tell us your plans",
+    "pages.privatelessons.howitworks.steps.1.body":
+        "style, teacher, length and a clear quote.",
+    "pages.privatelessons.howitworks.steps.1.title": "We design your session",
+    "pages.privatelessons.howitworks.steps.2.body": "arrive, relax and dance.",
+    "pages.privatelessons.howitworks.steps.2.title": "Enjoy the experience",
+    "pages.privatelessons.howitworks.title": "How it works",
+    "pages.privatelessons.intro":
+        "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank.",
+    "pages.privatelessons.meta.description":
+        "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops.",
+    "pages.privatelessons.meta.title": "Private Lessons & Experiences",
+    "pages.privatelessons.sections.corporate.body":
+        "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
+    "pages.privatelessons.sections.corporate.cta.label": "Enquire",
+    "pages.privatelessons.sections.corporate.gallery.0.alt":
+        "Corporate group movement session",
+    "pages.privatelessons.sections.corporate.gallery.1.alt":
+        "Team workshop in the dance venue",
+    "pages.privatelessons.sections.corporate.gallery.2.alt":
+        "Professional venue environment",
+    "pages.privatelessons.sections.corporate.title": "Corporate Events",
+    "pages.privatelessons.sections.couples.body":
+        "Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side — no experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week.",
+    "pages.privatelessons.sections.couples.cta.label": "Enquire",
+    "pages.privatelessons.sections.couples.gallery.0.alt":
+        "Couple learning partner dance",
+    "pages.privatelessons.sections.couples.gallery.1.alt":
+        "Couples dance experience at County Hall",
+    "pages.privatelessons.sections.couples.gallery.2.alt":
+        "Pair practising movement in the venue",
+    "pages.privatelessons.sections.couples.title": "Couples' Dance",
+    "pages.privatelessons.sections.groups.body":
+        "Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles — a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop — and our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests.",
+    "pages.privatelessons.sections.groups.cta.label": "Enquire",
+    "pages.privatelessons.sections.groups.gallery.0.alt":
+        "Group dance experience",
+    "pages.privatelessons.sections.groups.gallery.1.alt":
+        "Musical theatre themed workshop",
+    "pages.privatelessons.sections.groups.gallery.2.alt":
+        "Group class in the venue",
+    "pages.privatelessons.sections.groups.title": "Group Experiences",
+    "pages.privatelessons.sections.one_to_one.body":
+        "Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique — strength, flexibility, control and precision — or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback.",
+    "pages.privatelessons.sections.one_to_one.cta.label": "Enquire",
+    "pages.privatelessons.sections.one_to_one.gallery.0.alt":
+        "One-to-one private dance lesson",
+    "pages.privatelessons.sections.one_to_one.gallery.1.alt":
+        "Dancer in a private contemporary session",
+    "pages.privatelessons.sections.one_to_one.gallery.2.alt":
+        "Instructor working with an individual student",
+    "pages.privatelessons.sections.one_to_one.title": "One-to-One Lessons",
+    "pages.privatelessons.sections.schools.body":
+        "We offer tailored dance and movement workshops for universities, colleges, community groups and cultural organisations. Led by experienced teachers and artists, workshops can introduce a new style, explore the cultural roots of forms such as classical Chinese dance and Tai Chi, or support creative, wellbeing and performance programmes. Every session is planned around your group's size, level and learning goals, and can be delivered as a one-off experience or a series. Tell us about your group and what you hope to achieve, and we'll put together a programme and quote that fits.",
+    "pages.privatelessons.sections.schools.cta.label": "Enquire",
+    "pages.privatelessons.sections.schools.gallery.0.alt":
+        "Young dancers in a workshop",
+    "pages.privatelessons.sections.schools.gallery.1.alt":
+        "Workshop session with students",
+    "pages.privatelessons.sections.schools.gallery.2.alt":
+        "Ballet foundation class",
+    "pages.privatelessons.sections.schools.title":
+        "Workshops for Organisations",
+    "pages.privatelessons.sections.wedding.body":
+        "Your first dance should feel like you — and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment.",
+    "pages.privatelessons.sections.wedding.cta.label": "Enquire",
+    "pages.privatelessons.sections.wedding.gallery.0.alt":
+        "Couple practising a wedding dance",
+    "pages.privatelessons.sections.wedding.gallery.1.alt":
+        "Performance lighting in the venue",
+    "pages.privatelessons.sections.wedding.gallery.2.alt":
+        "Private lesson for wedding preparation",
+    "pages.privatelessons.sections.wedding.title": "First Wedding Dance",
+    "pages.timetable.booking.description":
+        "Browse weekly and monthly classes below. For course enrolment, visit our courses page.",
+    "pages.timetable.booking.image.alt":
+        "Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School",
+    "pages.timetable.booking.placeholderhint":
+        "Replace this container with your ClassForKids, bsport, or other embed code.",
+    "pages.timetable.booking.placeholderlabel": "Booking widget placeholder",
+    "pages.timetable.booking.providernote":
+        "Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.",
+    "pages.timetable.booking.title": "Class timetable",
+    "pages.timetable.helplinks.browse_courses.label": "Browse courses",
+    "pages.timetable.helplinks.contact_us.label": "Contact us",
+    "pages.timetable.hero.overline": "Plan your classes",
+    "pages.timetable.hero.subtitle":
+        "Browse this month’s classes, workshops and events. Dates follow London time. Check each event’s location and filter by type, day and style.",
+    "pages.timetable.hero.title": "Timetable & Booking",
+    "pages.timetable.meta.description":
+        "View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.",
+    "pages.timetable.meta.title": "Timetable & Booking",
+    "pages.timetable.newcomernote":
+        "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
+    "pages.timetable.trial.body":
+        "Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival.",
+    "pages.timetable.trial.cta.label": "Book",
+    "pages.timetable.trial.overline": "New to CHD PAS?",
+    "pages.timetable.trial.title": "Book a taster trial",
+    "pages.venuehire.overview.cta.body":
+        "Tell us your preferred date, times, space and group size and we'll come back to you with availability.",
+    "pages.venuehire.overview.cta.button.label": "Enquire about hire",
+    "pages.venuehire.overview.cta.secondary":
+        "Or message us on WeChat: 18518614868 · Instagram: @countyhalldancecentre",
+    "pages.venuehire.overview.cta.secondarybutton.label": "Check availability",
+    "pages.venuehire.overview.cta.title": "Plan your booking",
+    "pages.venuehire.overview.facilities.extranote":
+        "You are welcome to bring your own equipment, set up and decorate the space, and bring your own catering and drinks.",
+    "pages.venuehire.overview.facilities.includednote":
+        "Included in every booking at no extra charge:",
+    "pages.venuehire.overview.facilities.items.0": "Tables and chairs",
+    "pages.venuehire.overview.facilities.items.1": "Wi-Fi",
+    "pages.venuehire.overview.facilities.items.2": "Power sockets",
+    "pages.venuehire.overview.facilities.items.3": "Lighting",
+    "pages.venuehire.overview.facilities.items.4": "Sound system",
+    "pages.venuehire.overview.facilities.items.5": "4 microphones",
+    "pages.venuehire.overview.facilities.items.6": "Kitchen",
+    "pages.venuehire.overview.facilities.items.7":
+        "Tea and refreshment facilities",
+    "pages.venuehire.overview.facilities.items.8": "Toilets",
+    "pages.venuehire.overview.facilities.items.9": "Changing rooms",
+    "pages.venuehire.overview.facilities.title": "Facilities & equipment",
+    "pages.venuehire.overview.facts.items.0": "Approx. 300 m² in total",
+    "pages.venuehire.overview.facts.items.1": "4.5 m ceiling height",
+    "pages.venuehire.overview.facts.items.2": "Up to 120 guests",
+    "pages.venuehire.overview.facts.items.3":
+        "5 minutes' walk from Waterloo and Westminster",
+    "pages.venuehire.overview.facts.title": "Key facts",
+    "pages.venuehire.overview.gallery.0.alt":
+        "County Hall on the South Bank with the London Eye nearby",
+    "pages.venuehire.overview.gallery.1.alt":
+        "Sunset view of Westminster and the Thames from the South Bank",
+    "pages.venuehire.overview.gallery.2.alt":
+        "Classical stone facade of County Hall with columns and signage",
+    "pages.venuehire.overview.gallery.3.alt":
+        "County Hall and the London Eye seen from the River Thames",
+    "pages.venuehire.overview.gallery.4.alt":
+        "Historical photograph of County Hall beside the Thames",
+    "pages.venuehire.overview.hero.image.alt":
+        "Sunlit wooden-floor venue with tall windows at County Hall",
+    "pages.venuehire.overview.hero.overline": "County Hall arts space",
+    "pages.venuehire.overview.hero.subtitle":
+        "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
+    "pages.venuehire.overview.hero.title": "Space Hire",
+    "pages.venuehire.overview.howtobook.steps.0.body":
+        "Contact us through this website, our official WeChat (18518614868) or Instagram (@countyhalldancecentre). Please book at least one week in advance.",
+    "pages.venuehire.overview.howtobook.steps.0.title": "Enquire",
+    "pages.venuehire.overview.howtobook.steps.1.body":
+        "We'll check availability and confirm your date, space and hours.",
+    "pages.venuehire.overview.howtobook.steps.1.title": "Confirm",
+    "pages.venuehire.overview.howtobook.steps.2.body":
+        "Full payment is due no later than three days before your booking, by bank transfer to our company account.",
+    "pages.venuehire.overview.howtobook.steps.2.title": "Pay",
+    "pages.venuehire.overview.howtobook.steps.3.body":
+        "Our on-site manager will welcome you and be available throughout your hire.",
+    "pages.venuehire.overview.howtobook.steps.3.title": "Arrive",
+    "pages.venuehire.overview.howtobook.title": "How to book",
+    "pages.venuehire.overview.intro":
+        "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
+    "pages.venuehire.overview.meta.description":
+        "Hire a 70 m² vinyl-floor venue or a 200 m² Sprung Wooden Floor Hall at County Hall on the South Bank. From £200 per hour, member rates available.",
+    "pages.venuehire.overview.meta.title": "Space Hire",
+    "pages.venuehire.overview.pricing.columns.0": "",
+    "pages.venuehire.overview.pricing.columns.1": "Standard rate",
+    "pages.venuehire.overview.pricing.columns.2": "Member rate",
+    "pages.venuehire.overview.pricing.membershiplink.label":
+        "Learn about membership",
+    "pages.venuehire.overview.pricing.notes.0": "Minimum booking: 1 hour.",
+    "pages.venuehire.overview.pricing.notes.1":
+        "Bookings are available until 18:00; evening bookings after 18:00 are not available.",
+    "pages.venuehire.overview.pricing.notes.2":
+        "Refundable security deposit: £100.",
+    "pages.venuehire.overview.pricing.notes.3":
+        "Prices are final — no additional taxes or fees. All equipment is included.",
+    "pages.venuehire.overview.pricing.notes.4":
+        "Members of County Hall Dance Centre receive reduced hire rates.",
+    "pages.venuehire.overview.pricing.rows.half_day.label": "Half day",
+    "pages.venuehire.overview.pricing.rows.half_day.member": "£500",
+    "pages.venuehire.overview.pricing.rows.half_day.standard": "£1,000",
+    "pages.venuehire.overview.pricing.rows.weekday_per_hour.label":
+        "Weekday, per hour",
+    "pages.venuehire.overview.pricing.rows.weekday_per_hour.member": "£100",
+    "pages.venuehire.overview.pricing.rows.weekday_per_hour.standard": "£200",
+    "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.label":
+        "Weekend daytime, per hour",
+    "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.member":
+        "£150",
+    "pages.venuehire.overview.pricing.rows.weekend_daytime_per_hour.standard":
+        "£200",
+    "pages.venuehire.overview.pricing.title": "Pricing",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.body":
+        "A focused, practical venue with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.floor": "Dance vinyl",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.idealfor":
+        "Classes, rehearsals, auditions, small workshops and one-to-one sessions",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.image.alt":
+        "Vinyl-floor dance venue with ballet barres and tall windows at County Hall",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.size": "70 m²",
+    "pages.venuehire.overview.spaces.items.vinyl_venue.title":
+        "Vinyl-Floor Venue",
+    "pages.venuehire.overview.spaces.items.wooden_hall.body":
+        "Our largest space, with a sprung wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
+    "pages.venuehire.overview.spaces.items.wooden_hall.floor":
+        "Sprung wooden floor",
+    "pages.venuehire.overview.spaces.items.wooden_hall.idealfor":
+        "Workshops, social dances, performances, parties, exhibitions and corporate events",
+    "pages.venuehire.overview.spaces.items.wooden_hall.image.alt":
+        "Sunlit wooden-floor hall with tall windows at County Hall",
+    "pages.venuehire.overview.spaces.items.wooden_hall.size": "200 m²",
+    "pages.venuehire.overview.spaces.items.wooden_hall.title":
+        "Sprung Wooden Floor Hall",
+    "pages.venuehire.overview.spaces.title": "Our spaces",
+    "pages.venuehire.overview.suitablefor.items.0": "Meetings",
+    "pages.venuehire.overview.suitablefor.items.1": "Training sessions",
+    "pages.venuehire.overview.suitablefor.items.2": "Rehearsals",
+    "pages.venuehire.overview.suitablefor.items.3": "Classes & workshops",
+    "pages.venuehire.overview.suitablefor.items.4": "Photo & film shoots",
+    "pages.venuehire.overview.suitablefor.items.5": "Live streams",
+    "pages.venuehire.overview.suitablefor.items.6": "Parties & celebrations",
+    "pages.venuehire.overview.suitablefor.items.7": "Exhibitions",
+    "pages.venuehire.overview.suitablefor.items.8": "Cultural events",
+    "pages.venuehire.overview.suitablefor.title": "Suitable for",
+    "pages.venuehire.overview.terms.items.0.body":
+        "must be made at least three days before your booking. Cancellations made with less notice are non-refundable.",
+    "pages.venuehire.overview.terms.items.0.title":
+        "Cancellations and date changes",
+    "pages.venuehire.overview.terms.items.1.body":
+        "must be confirmed at least one day in advance.",
+    "pages.venuehire.overview.terms.items.1.title":
+        "Extra time or changes to guest numbers",
+    "pages.venuehire.overview.terms.items.2.body":
+        "your £100 deposit is refunded in full after your hire provided there is no damage. Any damage to the venue, furniture or equipment will be charged at cost.",
+    "pages.venuehire.overview.terms.items.2.title": "Deposit:",
+    "pages.venuehire.overview.terms.items.3.body":
+        "no pets, no smoking, no open flames and no illegal activity. Under-18s are not permitted. Maximum capacity is 120 people.",
+    "pages.venuehire.overview.terms.items.3.title": "House rules:",
+    "pages.venuehire.overview.terms.items.4.body":
+        "a venue manager is present during every booking.",
+    "pages.venuehire.overview.terms.items.4.title": "On-site support:",
+    "pages.venuehire.overview.terms.title": "Booking terms",
+    "pages.venuehire.overview.timetablelink.label": "View timetable",
+    "pages.venuehire.overview.timetablenote":
+        "The timetable provides an overview of scheduled activities. Please contact us to confirm venue availability.",
+    "pages.venuehire.subpages.space_booking.hero.overline": "Venue Hire",
+    "pages.venuehire.subpages.space_booking.hero.subtitle":
+        "Tell us your preferred date, activity and group size — we will respond with availability.",
+    "pages.venuehire.subpages.space_booking.hero.title": "Space Booking",
+    "pages.venuehire.subpages.space_booking.intro":
+        "Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details.",
+    "pages.venuehire.subpages.space_booking.meta.description":
+        "Enquire about venue hire at County Hall Dance Centre.",
+    "pages.venuehire.subpages.space_booking.meta.title": "Space Booking",
+    "pages.venuehire.subpages.space_booking.sections.enquiry_form.title":
+        "Enquiry form",
+    "pages.venuehire.subpages.space_booking.sections.how_to_book.title":
+        "How to book",
 } as const;
 
 export type CopyId = keyof typeof copy;
