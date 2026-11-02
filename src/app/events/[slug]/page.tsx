@@ -163,6 +163,37 @@ export default async function EventDetailPage({ params }: PageProps) {
                 })}
               </div>
             )}
+            {event.occurrences && [false, true].map((past) => {
+              const occurrences = event.occurrences!.filter((item) => isEventBeforeToday(item.dateIso) === past)
+                .sort((a, b) => past ? b.dateIso.localeCompare(a.dateIso) : a.dateIso.localeCompare(b.dateIso));
+              if (!occurrences.length) return null;
+              return (
+                <section className="mt-10 space-y-6" key={String(past)}>
+                  <h2 className="text-h3 text-charcoal">{past ? detailLabels.pastConcerts : detailLabels.upcomingConcerts}</h2>
+                  {occurrences.map((occurrence) => (
+                    <article key={occurrence.id} className="rounded-sm border border-taupe/30 p-6">
+                      <time dateTime={occurrence.dateIso} className="text-overline text-rose">{occurrence.date}</time>
+                      <h3 className="text-h3 mt-2 text-charcoal">{occurrence.title}</h3>
+                      {occurrence.description.map((paragraph, index) => <p key={index} className="text-body mt-4 text-charcoal/75">{paragraph}</p>)}
+                      <dl className="mt-6 grid gap-4 border-t border-taupe/30 pt-4 sm:grid-cols-2">
+                        {[
+                          [detailLabels.location, occurrence.location],
+                          [detailLabels.organiser, occurrence.organiser],
+                          [detailLabels.partners, occurrence.partners?.join(", ")],
+                          [detailLabels.hostedAt, occurrence.relationship === "hosted" ? occurrence.hostedAt : undefined],
+                          [detailLabels.promotedBy, occurrence.promotedBy],
+                        ].filter(([, value]) => Boolean(value)).map(([label, value]) => (
+                          <div key={label}>
+                            <dt className="text-overline text-rose">{label}</dt>
+                            <dd className="text-body mt-1 text-charcoal/75">{value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </article>
+                  ))}
+                </section>
+              );
+            })}
             <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
               <div>
                 <dt className="text-overline text-rose">{detailLabels.date}</dt>
@@ -184,6 +215,25 @@ export default async function EventDetailPage({ params }: PageProps) {
                   <Button key={`${cta.label}-${cta.href}`} {...cta} />
                 ))}
               </div>
+            )}
+            {(event.organiser || event.partners?.length || event.hostedAt || event.promotedBy) && (
+              <section aria-labelledby="event-information" className="mt-12 border-t border-taupe/30 pt-8">
+                <h2 id="event-information" className="text-h3 text-charcoal">{detailLabels.eventInformation}</h2>
+                <dl className="mt-5 grid gap-6 sm:grid-cols-2">
+                  {event.organiser && (
+                    <div><dt className="text-overline text-rose">{detailLabels.organiser}</dt><dd className="text-body mt-1 text-charcoal/75">{event.organiser}</dd></div>
+                  )}
+                  {!!event.partners?.length && (
+                    <div><dt className="text-overline text-rose">{detailLabels.partners}</dt><dd className="text-body mt-1 text-charcoal/75">{event.partners.join(", ")}</dd></div>
+                  )}
+                  {event.relationship === "hosted" && event.hostedAt && (
+                    <div><dt className="text-overline text-rose">{detailLabels.hostedAt}</dt><dd className="text-body mt-1 text-charcoal/75">{event.hostedAt}</dd></div>
+                  )}
+                  {event.promotedBy && (
+                    <div><dt className="text-overline text-rose">{detailLabels.promotedBy}</dt><dd className="text-body mt-1 text-charcoal/75">{event.promotedBy}</dd></div>
+                  )}
+                </dl>
+              </section>
             )}
         </Container>
       </section>

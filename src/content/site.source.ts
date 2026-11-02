@@ -347,9 +347,8 @@ export const siteSource = {
           slug: "lunchtime-concert-series",
           listingCategory: "event",
           title: "Lunchtime Concert Series",
-          date: "Friday 25 September 2026, 1pm",
-          dateIso: "2026-09-25",
-          location: "Atrium, County Hall",
+          date: "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
+          dateIso: "2026-10-23",
           image: {
             src: "/images/events/lunchtime-concert-series.jpg",
             alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
@@ -443,10 +442,10 @@ export const siteSource = {
           "View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.",
       },
       hero: {
-        overline: "Plan your week",
+        overline: "Plan your classes",
         title: "Timetable & Booking",
         subtitle:
-          "Browse this week's classes by day and style, then reserve your place through our secure booking system.",
+          "Browse classes by week or month, filter by day and style, then reserve your place through our secure booking system.",
       } satisfies PageHeroContent,
       trial: {
         id: "trial",
@@ -463,7 +462,7 @@ export const siteSource = {
       booking: {
         title: "Class timetable",
         description:
-          "Browse this week's classes below. For course enrolment, visit our courses page.",
+          "Browse weekly and monthly classes below. For course enrolment, visit our courses page.",
         placeholderLabel: "Booking widget placeholder",
         placeholderHint:
           "Replace this container with your ClassForKids, bsport, or other embed code.",
@@ -888,6 +887,9 @@ export const siteSource = {
         {
           id: "event-1",
           slug: "memory-of-china",
+          relationship: "organised",
+          organiser: "County Hall Dance & Performing Arts School",
+          partners: ["Sen Yoga", "RCDance", "Yi Crafts", "Lotus Realm", "Inkjoygraphy", "County Hall Arts"],
           listingCategory: "event",
           title: "Memory of China: Chinese Traditional Arts and Culture Festival",
           date: "Saturday 3 – Sunday 4 October 2026",
@@ -971,6 +973,9 @@ export const siteSource = {
         {
           id: "event-2",
           slug: "four-seasons-festival",
+          relationship: "hosted",
+          organiser: "County Hall Arts",
+          hostedAt: "County Hall Dance & Performing Arts School",
           listingCategory: "event",
           title: "Four Seasons Festival",
           date: "Saturday 24 – Sunday 25 October 2026",
@@ -1079,19 +1084,44 @@ export const siteSource = {
           slug: "lunchtime-concert-series",
           listingCategory: "event",
           title: "Lunchtime Concert Series",
-          date: "Friday 25 September 2026, 1pm",
-          dateIso: "2026-09-25",
-          location: "Atrium, County Hall",
+          date: "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
+          dateIso: "2026-10-23",
           excerpt: "Enjoy a relaxed lunchtime concert with the County Hall Quartet.",
           description: [
-            "The County Hall Quartet return for another laid back, informal afternoon concert of classical music at County Hall.",
-            "Every month, the quartet perform a new programme of music, this next event is themed 'Encounters'.",
-            "On this occasion, we are delighted to welcome our new cellist, Meera Priyanka Raja, who will open the concert with a special solo performance.",
-            "So come along to discover the latest programme and enjoy a peaceful afternoon of chamber music - where no words are necessary as music becomes our common language.",
+            "The County Hall Quartet presents informal afternoon concerts of classical music at County Hall. Each month brings a new programme, where music becomes our common language.",
+            "# Next Concert",
+            "The next concert date and programme will be announced once confirmed.",
             "# The County Hall Quartet",
             "The County Hall Quartet comprises four acclaimed and award-winning musicians: Stefano Marzanni (Piano), Emma Arizza (Violin), Natalia Solis Paredes (Viola) and Meera Priyanka Raja (Cello).",
-            "# Finding Us",
-            "Attendees should enter County Hall via the main entrance on Belvedere Road and follow directions for the concert in the Atrium.",
+            "# Venue",
+            "Please check each concert listing for its confirmed venue and arrival details."
+          ],
+          occurrences: [
+            {
+              "id": "2026-10-23",
+              "title": "Fandango! Italian Virtuosity Meets Spanish Dance",
+              "date": "Friday 23 October 2026, 1pm",
+              "dateIso": "2026-10-23",
+              "location": "County Hall Dance & Performing Arts School, 2nd Floor, County Hall Main Entrance, Belvedere Road, London SE1 7PB",
+              "relationship": "hosted",
+              "organiser": "County Hall Arts",
+              "hostedAt": "County Hall Dance & Performing Arts School",
+              "description": [
+                "The programme explored the virtuosity, lyricism and operatic flair of Italian composers including Paganini, Rossini and Boccherini, with a flamenco twist from two dancers from the London School of Flamenco.",
+                "Guest performers included Santy Masciarò on guitar and Mika Enjo on flute. Violinist Juan Manuel Gonzalez Hernandez joined the ensemble for the Fandango, expanding the group into the quintet for which the work was written.",
+                "The concert marked the beginning of As the Leaves Turn (24–25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations."
+              ]
+            },
+            {
+              "id": "2026-09-25",
+              "title": "Encounters",
+              "date": "Friday 25 September 2026, 1pm",
+              "dateIso": "2026-09-25",
+              "organiser": "County Hall Arts",
+              "description": [
+                "A relaxed afternoon of chamber music with the County Hall Quartet. The ensemble welcomed cellist Meera Priyanka Raja, who opened the concert with a special solo performance."
+              ]
+            }
           ],
           image: {
             src: "/images/events/lunchtime-concert-series.jpg",
@@ -1106,6 +1136,9 @@ export const siteSource = {
         {
           id: "event-4",
           slug: "dance-meets-arts",
+          relationship: "organised",
+          organiser: "County Hall Dance & Performing Arts School",
+          partners: ["County Hall Arts"],
           listingCategory: "event",
           title: "Dance Meets Arts",
           date: "Saturday 8 August 2026, 7:00pm – 8:30pm",
@@ -1307,6 +1340,13 @@ export const siteSource = {
         date: "Date",
         location: "Location",
         backLink: "← What's on",
+        eventInformation: "Event information",
+        organiser: "Organised by",
+        partners: "In collaboration with",
+        hostedAt: "Hosted at",
+        promotedBy: "Promoted by",
+        pastConcerts: "Past concerts",
+        upcomingConcerts: "Upcoming concerts",
       },
       categoryLabels: {
         backLink: "← What's on",

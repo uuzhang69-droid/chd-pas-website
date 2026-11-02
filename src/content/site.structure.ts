@@ -395,8 +395,7 @@ export const siteStructure = {
           "listingCategory": "event",
           "title": "@@COPY:home.events.items.lunchtime_concert_series.title",
           "date": "@@COPY:home.events.items.lunchtime_concert_series.date",
-          "dateIso": "2026-09-25",
-          "location": "@@COPY:home.events.items.lunchtime_concert_series.location",
+          "dateIso": "2026-10-23",
           "image": {
             "src": "/images/events/lunchtime-concert-series.jpg",
             "alt": "@@COPY:home.events.items.lunchtime_concert_series.image.alt"
@@ -1055,6 +1054,16 @@ export const siteStructure = {
         {
           "id": "event-1",
           "slug": "memory-of-china",
+          "relationship": "organised",
+          "organiser": "@@COPY:pages.events.items.memory_of_china.organiser",
+          "partners": [
+            "@@COPY:pages.events.items.memory_of_china.partners.0",
+            "@@COPY:pages.events.items.memory_of_china.partners.1",
+            "@@COPY:pages.events.items.memory_of_china.partners.2",
+            "@@COPY:pages.events.items.memory_of_china.partners.3",
+            "@@COPY:pages.events.items.memory_of_china.partners.4",
+            "@@COPY:pages.events.items.memory_of_china.partners.5"
+          ],
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.memory_of_china.title",
           "date": "@@COPY:pages.events.items.memory_of_china.date",
@@ -1137,6 +1146,9 @@ export const siteStructure = {
         {
           "id": "event-2",
           "slug": "four-seasons-festival",
+          "relationship": "hosted",
+          "organiser": "@@COPY:pages.events.items.four_seasons_festival.organiser",
+          "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.hostedat",
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.four_seasons_festival.title",
           "date": "@@COPY:pages.events.items.four_seasons_festival.date",
@@ -1231,8 +1243,7 @@ export const siteStructure = {
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.lunchtime_concert_series.title",
           "date": "@@COPY:pages.events.items.lunchtime_concert_series.date",
-          "dateIso": "2026-09-25",
-          "location": "@@COPY:pages.events.items.lunchtime_concert_series.location",
+          "dateIso": "2026-10-23",
           "excerpt": "@@COPY:pages.events.items.lunchtime_concert_series.excerpt",
           "description": [
             "@@COPY:pages.events.items.lunchtime_concert_series.description.0",
@@ -1241,8 +1252,34 @@ export const siteStructure = {
             "@@COPY:pages.events.items.lunchtime_concert_series.description.3",
             "@@COPY:pages.events.items.lunchtime_concert_series.description.4",
             "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.6",
-            "@@COPY:pages.events.items.lunchtime_concert_series.description.7"
+            "@@COPY:pages.events.items.lunchtime_concert_series.description.6"
+          ],
+          "occurrences": [
+            {
+              "id": "2026-10-23",
+              "title": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.title",
+              "date": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.date",
+              "dateIso": "2026-10-23",
+              "location": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.location",
+              "relationship": "hosted",
+              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.organiser",
+              "hostedAt": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.hostedat",
+              "description": [
+                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.0",
+                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.1",
+                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.2"
+              ]
+            },
+            {
+              "id": "2026-09-25",
+              "title": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.title",
+              "date": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.date",
+              "dateIso": "2026-09-25",
+              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.organiser",
+              "description": [
+                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.description.0"
+              ]
+            }
           ],
           "image": {
             "src": "/images/events/lunchtime-concert-series.jpg",
@@ -1257,6 +1294,11 @@ export const siteStructure = {
         {
           "id": "event-4",
           "slug": "dance-meets-arts",
+          "relationship": "organised",
+          "organiser": "@@COPY:pages.events.items.dance_meets_arts.organiser",
+          "partners": [
+            "@@COPY:pages.events.items.dance_meets_arts.partners.0"
+          ],
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.dance_meets_arts.title",
           "date": "@@COPY:pages.events.items.dance_meets_arts.date",
@@ -1578,7 +1620,14 @@ export const siteStructure = {
       "detailLabels": {
         "date": "@@COPY:pages.events.detaillabels.date",
         "location": "@@COPY:pages.events.detaillabels.location",
-        "backLink": "@@COPY:pages.events.detaillabels.backlink"
+        "backLink": "@@COPY:pages.events.detaillabels.backlink",
+        "eventInformation": "@@COPY:pages.events.detaillabels.eventinformation",
+        "organiser": "@@COPY:pages.events.detaillabels.organiser",
+        "partners": "@@COPY:pages.events.detaillabels.partners",
+        "hostedAt": "@@COPY:pages.events.detaillabels.hostedat",
+        "promotedBy": "@@COPY:pages.events.detaillabels.promotedby",
+        "pastConcerts": "@@COPY:pages.events.detaillabels.pastconcerts",
+        "upcomingConcerts": "@@COPY:pages.events.detaillabels.upcomingconcerts"
       },
       "categoryLabels": {
         "backLink": "@@COPY:pages.events.categorylabels.backlink"

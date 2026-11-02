@@ -1,19 +1,22 @@
 # Editing website content
 
-This README was updated on 15 September 2026.
+This README was updated on 1 November 2026.
 
 All user-facing text, button labels, links, and image paths live in one file:
 
-**`src/content/site.ts`**
+**`src/content/site.source.ts`**
 
 You do not need to touch any React components to update copy or swap images. Components read everything from this central file, which is structured so it could later be replaced by a CMS (Airtable, Sanity, etc.) without changing the site layout.
 
 ## Quick start
 
-1. Open `src/content/site.ts` in any text editor.
+1. Open `src/content/site.source.ts` in any text editor.
 2. Find the section you want to change (see structure below).
 3. Edit the text or image path.
-4. Save the file. If the dev server is running (`npm run dev`), the site updates automatically.
+4. Run `npm run content:export` to regenerate the runtime content and CSV.
+5. Check `npm run build` and preview with `npm run dev`. Commit source, generated content and any new images together.
+
+The runtime entry point is `src/content/site.ts`; it resolves `site.structure.ts` and `copy.ts`, then applies event enrichment. Do not edit generated files by hand. CSV-only edits use `npm run content:import`; see [CONTENT.md](CONTENT.md) before mixing workflows.
 
 ## File structure
 
@@ -43,7 +46,7 @@ siteContent
 
 ## Inner pages
 
-| URL | Content section in `site.ts` |
+| URL | Content section in `site.source.ts` |
 |-----|------------------------------|
 | `/timetable` | `pages.timetable` |
 | `/classes` | `pages.classes` |
@@ -96,7 +99,7 @@ cta: { label: "Book a Free Trial", href: "/timetable#trial", variant: "primary" 
 ## Changing images
 
 1. Add your image file to the `public/` folder (e.g. `public/images/hero/my-photo.jpg`).
-2. Update the `src` path in `site.ts` (paths start with `/`, which maps to `public/`):
+2. Update the `src` path in `site.source.ts` (paths start with `/`, which maps to `public/`):
 
 ```ts
 image: {
@@ -174,4 +177,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Placeholder images
 
-The project ships with simple SVG placeholders in `public/images/`. Replace them with your own photography and update the paths in `site.ts`.
+The project ships with simple SVG placeholders in `public/images/`. Replace them with your own photography and update the paths in `site.source.ts`.
+
+
+## Timetable: week, month and list
+
+The homepage and `/timetable` share `ClassCalendar`. The source is `public/schedule.json`, not the copy spreadsheet. Week and List show the selected week; Month shows the full selected month, with previous/next month and This month controls. Day/style filters and booking options work in each view. Mobile Month view stacks dates vertically. All times are London time.
+
+Weekly entries support date limits and cancellations; `datedClasses` holds single-date workshops. See [CONTENT.md](CONTENT.md) for the schema. Updating schedule JSON does not require `content:export`.
+
+## Events, relationships and concert series
+
+Activity filters remain Events / Workshops / Masterclasses. Organiser, collaboration, hosting and promotion are separate metadata, displayed beneath the event details using full organisation names.
+
+Recurring concerts use `occurrences` inside their existing event page. Each occurrence has its own date, programme, location and attribution. **Never assume the series venue applies to every concert.** The 23 October 2026 Fandango concert is confirmed at County Hall Dance & Performing Arts School; other concert venues are unconfirmed and omitted. Retain past programmes when adding a new one. See [CONTENT.md](CONTENT.md) for maintenance instructions.

@@ -8,7 +8,6 @@ import {
   computeWeekDates,
   londonToday,
   type ScheduleEntry,
-  weekKeyFromDates,
   weekRangeLabel,
 } from "@/lib/class-calendar/utils";
 import { BookingOptionsDialog } from "@/components/timetable/BookingOptionsDialog";
@@ -49,16 +48,17 @@ const STYLE_FILTER_OPTIONS = [
   "Contemporary", "Chinese Dance", "Tango", "Yoga", "Tai Chi", "Broadway Jazz", "Performance",
 ] as const;
 const LOAD_ERROR_MESSAGE = "The published timetable could not be loaded. Use Upcoming dates & booking to continue to ClassManager.";
-const EMPTY_FILTER_MESSAGE = "No sessions in this week match your filters. Try another week, day or style, or check upcoming dates in ClassManager.";
+const EMPTY_FILTER_MESSAGE = "No sessions in this period match your filters. Try another week or month, day or style, or check upcoming dates in ClassManager.";
 
 function dateKey(date: Date): string {
   return date.toISOString().slice(0, 10);
 }
 
-function shiftWeek(week: Date[], amount: number): Date[] {
-  const monday = new Date(week[0]);
-  monday.setUTCDate(monday.getUTCDate() + amount * 7);
-  return computeWeekDates(monday);
+function monthDates(date: Date): Date[] {
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth();
+  const count = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+  return Array.from({ length: count }, (_, i) => new Date(Date.UTC(year, month, i + 1)));
 }
 
 function weeklyObject(entry: ScheduleEntry | WeeklyClass): WeeklyClass {
@@ -68,49 +68,55 @@ function weeklyObject(entry: ScheduleEntry | WeeklyClass): WeeklyClass {
   return entry as WeeklyClass;
 }
 
-function sessionsForWeek(data: ScheduleData, week: Date[]): Session[] {
-  const dates = week.map(dateKey);
+function sessionsForDates(data: ScheduleData, dates: Date[]): Session[] {
   const sessions: Session[] = [];
-  for (const original of data.classes) {
-    const item = weeklyObject(original);
-    const date = dates[item.day];
-    if (!date || (item.startDate && date < item.startDate) || (item.endDate && date > item.endDate)) continue;
-    if (item.cancelledDates?.includes(date)) continue;
-    sessions.push({ date, day: item.day, start: item.start, end: item.end, name: item.name, style: item.style });
+  for (const current of dates) {
+    const date = dateKey(current);
+    const day = (current.getUTCDay() + 6) % 7;
+    for (const original of data.classes) {
+      const item = weeklyObject(original);
+      if (item.day !== day || (item.startDate && date < item.startDate) || (item.endDate && date > item.endDate)) continue;
+      if (item.cancelledDates?.includes(date)) continue;
+      sessions.push({ date, day, start: item.start, end: item.end, name: item.name, style: item.style });
+    }
+    for (const item of data.datedClasses ?? []) {
+      if (item.cancelled || item.date !== date) continue;
+      sessions.push({ date, day, start: item.start, end: item.end, name: item.name, style: item.style });
+    }
   }
-  for (const item of data.datedClasses ?? []) {
-    if (item.cancelled || !dates.includes(item.date)) continue;
-    const day = dates.indexOf(item.date);
-    sessions.push({ date: item.date, day, start: item.start, end: item.end, name: item.name, style: item.style });
-  }
-  return sessions.sort((a, b) => a.day - b.day || a.start.localeCompare(b.start) || a.name.localeCompare(b.name));
+  return sessions.sort((a, b) => a.date.localeCompare(b.date) || a.start.localeCompare(b.start) || a.name.localeCompare(b.name));
 }
 
 export function ClassCalendar() {
   const sectionRef = useRef<HTMLElement>(null);
   const [schedule, setSchedule] = useState<ScheduleData>({ classes: [], datedClasses: [] });
-  const [layout, setLayout] = useState<"week" | "list">("week");
+  const [layout, setLayout] = useState<"week" | "month" | "list">("week");
   const [dayFilter, setDayFilter] = useState("all");
   const [styleFilter, setStyleFilter] = useState("all");
-  const [weekDates, setWeekDates] = useState<Date[]>(() => computeWeekDates(londonToday()));
+  const [selectedDate, setSelectedDate] = useState(londonToday);
+  const [today, setToday] = useState(londonToday);
   const [loadState, setLoadState] = useState<"loading" | "ready" | "error">("loading");
 
-  const weekRangeText = useMemo(() => weekDates.length === 7 ? weekRangeLabel(weekDates[0], weekDates[6]) : "", [weekDates]);
-  const weekKey = weekKeyFromDates(weekDates);
-  const currentWeekKey = weekKeyFromDates(computeWeekDates(londonToday()));
-  const isCurrentWeek = weekKey === currentWeekKey;
-  const weekKeyRef = useRef(weekKey);
-  weekKeyRef.current = weekKey;
+  const weekDates = useMemo(() => computeWeekDates(selectedDate), [selectedDate]);
+  const displayDates = useMemo(() => layout === "month" ? monthDates(selectedDate) : weekDates, [layout, selectedDate, weekDates]);
+  const rangeText = layout === "month"
+    ? `${CLASS_CALENDAR_MONTHS[selectedDate.getUTCMonth()]} ${selectedDate.getUTCFullYear()}`
+    : weekRangeLabel(weekDates[0], weekDates[6]);
+  const isCurrentPeriod = layout === "month"
+    ? dateKey(selectedDate).slice(0, 7) === dateKey(today).slice(0, 7)
+    : dateKey(weekDates[0]) === dateKey(computeWeekDates(today)[0]);
+  const period = layout === "month" ? "month" : "week";
+
+  function navigate(amount: number) {
+    setSelectedDate((date) => layout === "month"
+      ? new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + amount, 1))
+      : new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + amount * 7)));
+  }
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      // Only advance automatically if the visitor is still viewing the previous current week.
-      const previousCurrent = computeWeekDates(new Date(Date.now() - 24 * 60 * 60 * 1000));
-      const now = computeWeekDates(londonToday());
-      if (weekKeyRef.current === weekKeyFromDates(previousCurrent) &&
-          weekKeyFromDates(previousCurrent) !== weekKeyFromDates(now)) {
-        setWeekDates(now);
-      }
+      const now = londonToday();
+      setToday((previous) => dateKey(previous) === dateKey(now) ? previous : now);
     }, 60 * 1000);
     return () => window.clearInterval(timer);
   }, []);
@@ -126,10 +132,10 @@ export function ClassCalendar() {
       .catch(() => setLoadState("error"));
   }, []);
 
-  const visible = useMemo(() => sessionsForWeek(schedule, weekDates).filter((e) =>
+  const visible = useMemo(() => sessionsForDates(schedule, displayDates).filter((e) =>
     (dayFilter === "all" || e.day === Number(dayFilter)) &&
     (styleFilter === "all" || e.style === styleFilter)
-  ), [schedule, weekDates, dayFilter, styleFilter]);
+  ), [schedule, displayDates, dayFilter, styleFilter]);
 
   const resultCountText = loadState === "error" ? "Timetable unavailable" :
     loadState === "loading" ? "Loading timetable…" : `${visible.length} published sessions`;
@@ -137,6 +143,7 @@ export function ClassCalendar() {
   const gridClassName = useMemo(() => {
     const parts = ["calendar-grid"];
     if (layout === "list") parts.push("list-layout");
+    if (layout === "month") parts.push("month-layout");
     if (dayFilter !== "all") parts.push("one-day");
     return parts.join(" ");
   }, [layout, dayFilter]);
@@ -145,19 +152,25 @@ export function ClassCalendar() {
     if (loadState !== "ready") return null;
     if (!visible.length) return <p className="calendar-empty">{EMPTY_FILTER_MESSAGE}</p>;
     const columns: ReactNode[] = [];
-    CLASS_CALENDAR_DAYS.forEach((name, i) => {
+    if (layout === "month" && dayFilter === "all") {
+      const padding = (displayDates[0].getUTCDay() + 6) % 7;
+      for (let i = 0; i < padding; i++) {
+        columns.push(<div className="calendar-padding" aria-hidden="true" key={`padding-${i}`} />);
+      }
+    }
+    displayDates.forEach((date) => {
+      const i = (date.getUTCDay() + 6) % 7;
+      const name = CLASS_CALENDAR_DAYS[i];
       if (dayFilter !== "all" && Number(dayFilter) !== i) return;
-      const items = visible.filter((e) => e.day === i);
+      const items = visible.filter((e) => e.date === dateKey(date));
       if (layout === "list" && !items.length) return;
-      const date = weekDates[i];
-      if (!date) return;
       const dayNum = date.getUTCDate();
       const month = CLASS_CALENDAR_MONTHS[date.getUTCMonth()];
       const year = date.getUTCFullYear();
       columns.push(
         <section className="calendar-day" key={dateKey(date)}>
-          <h3>{name.slice(0, 3)} {dayNum}</h3>
-          {!items.length ? <p className="quiet">No listed sessions</p> : items.map((e, index) => {
+          <h3><time dateTime={dateKey(date)} aria-current={dateKey(date) === dateKey(today) ? "date" : undefined}>{name.slice(0, 3)} {dayNum}</time></h3>
+          {items.map((e, index) => {
             const colourClass = CLASS_CALENDAR_STYLE_COLOUR[e.style] ?? "";
             const bookLabel = `${e.name} · published ${name} ${dayNum} ${month} ${year}, ${e.start}–${e.end}`;
             return (
@@ -178,7 +191,7 @@ export function ClassCalendar() {
       );
     });
     return columns;
-  }, [dayFilter, layout, loadState, visible, weekDates]);
+  }, [dayFilter, layout, loadState, visible, displayDates, today]);
 
   return (
     <section className="class-calendar-section" ref={sectionRef}>
@@ -186,18 +199,19 @@ export function ClassCalendar() {
         <div className="calendar-toolbar">
           <div>
             <h2>Class calendar</h2>
-            <p>Published timetable · <span id="week-range">{weekRangeText}</span></p>
+            <p>Published timetable · <span id="week-range">{rangeText}</span></p>
           </div>
           <div className="view-buttons" role="group" aria-label="Timetable layout">
             <button type="button" id="week-view" aria-pressed={layout === "week"} onClick={() => setLayout("week")}>Week</button>
+            <button type="button" id="month-view" aria-pressed={layout === "month"} onClick={() => setLayout("month")}>Month</button>
             <button type="button" id="list-view" aria-pressed={layout === "list"} onClick={() => setLayout("list")}>List</button>
           </div>
         </div>
 
-        <div className="calendar-week-navigation" role="group" aria-label="Navigate timetable weeks" style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1rem" }}>
-          <button type="button" className="button" onClick={() => setWeekDates((week) => shiftWeek(week, -1))}>← Previous week</button>
-          <button type="button" className="button" disabled={isCurrentWeek} onClick={() => setWeekDates(computeWeekDates(londonToday()))}>This week</button>
-          <button type="button" className="button" onClick={() => setWeekDates((week) => shiftWeek(week, 1))}>Next week →</button>
+        <div className="calendar-period-navigation" role="group" aria-label={`Navigate timetable ${period}s`}>
+          <button type="button" className="button" onClick={() => navigate(-1)}>← Previous {period}</button>
+          <button type="button" className="button" disabled={isCurrentPeriod} onClick={() => setSelectedDate(londonToday())}>This {period}</button>
+          <button type="button" className="button" onClick={() => navigate(1)}>Next {period} →</button>
         </div>
 
         <div className="filter-bar">

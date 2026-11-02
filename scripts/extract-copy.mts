@@ -15,6 +15,13 @@ const COPY_PREFIX = "@@COPY:";
 
 const TEXT_KEYS = new Set([
   "label",
+  "organiser",
+  "hostedAt",
+  "promotedBy",
+  "eventInformation",
+  "partners",
+  "pastConcerts",
+  "upcomingConcerts",
   "title",
   "subtitle",
   "overline",

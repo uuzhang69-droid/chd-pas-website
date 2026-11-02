@@ -38,11 +38,38 @@ export type EventDescriptionCta = CtaButton & {
 
 export type EventListingCategory = "event" | "workshop" | "masterclass";
 
+export type EventRelationship = "organised" | "collaboration" | "hosted";
+
+export type EventAttribution = {
+  relationship?: EventRelationship;
+  organiser?: string;
+  partners?: string[];
+  hostedAt?: string;
+  promotedBy?: string;
+};
+
+/** Attribution and venue are specific to this date; never inherit from the series. */
+export type EventOccurrence = EventAttribution & {
+  id: string;
+  title: string;
+  date: string;
+  dateIso: string;
+  location?: string;
+  description: string[];
+};
+
 export type EventCard = {
   id: string;
   slug: string;
   /** Listing filter on /events — defaults to event when omitted. */
   listingCategory?: EventListingCategory;
+  relationship?: EventRelationship;
+  organiser?: string;
+  partners?: string[];
+  hostedAt?: string;
+  /** Promotion alone does not imply hosting or co-organisation. */
+  promotedBy?: string;
+  occurrences?: EventOccurrence[];
   title: string;
   date: string;
   dateIso?: string;

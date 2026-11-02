@@ -476,3 +476,60 @@
     line-height: 1.5;
   }
 }
+/* ---------- Month view and period navigation ---------- */
+.class-calendar-section .calendar-period-navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 25px 18px;
+}
+.class-calendar-section .calendar-period-navigation .button {
+  padding: 10px 14px;
+}
+.class-calendar-section .button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.class-calendar-section .month-layout .calendar-day {
+  border-bottom: 1px solid var(--line);
+  min-height: 125px;
+}
+.class-calendar-section .month-layout .session-card {
+  min-height: 0;
+  gap: 5px;
+}
+.class-calendar-section time[aria-current="date"] {
+  background: var(--wine);
+  color: white;
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+@media (max-width: 700px) {
+  .class-calendar-section .calendar-toolbar {
+    flex-wrap: wrap;
+  }
+  .class-calendar-section .calendar-period-navigation {
+    padding: 0 15px 15px;
+    gap: 8px;
+  }
+  .class-calendar-section .calendar-period-navigation .button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .class-calendar-section .calendar-grid.month-layout {
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+  }
+  .class-calendar-section .month-layout .calendar-padding {
+    display: none;
+  }
+  .class-calendar-section .month-layout .calendar-day {
+    min-height: 0;
+    border-right: 0;
+    padding-bottom: 12px;
+  }
+  .class-calendar-section .month-layout .calendar-day h3 {
+    text-align: left;
+  }
+}
