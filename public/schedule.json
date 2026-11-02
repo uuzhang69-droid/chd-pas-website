@@ -8,11 +8,11 @@
     [3, "19:30", "20:00", "Chinese Dance (Class 1)", "Chinese Dance"],
     [3, "20:00", "21:30", "Chinese Dance (Soft Training)", "Chinese Dance"],
     [4, "18:30", "19:20", "Yoga (Vinyasa Flow)", "Yoga"],
-    { "day": 5, "start": "13:00", "end": "14:30", "name": "Yoga (Inside Flow)", "style": "Yoga", "startDate": "2026-11-01", "endDate": "2026-11-30" }
+    {"day": 5, "start": "13:00", "end": "14:30", "name": "Yoga (Inside Flow)", "style": "Yoga", "startDate": "2026-11-01", "endDate": "2026-11-30"}
   ],
   "datedClasses": [
-    { "date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango" },
-    { "date": "2026-11-21", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango" },
-    { "date": "2026-11-28", "start": "14:30", "end": "17:30", "name": "Performance Workshop", "style": "Performance" }
+    {"date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop"},
+    {"date": "2026-11-21", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop"},
+    {"date": "2026-11-28", "start": "14:30", "end": "17:30", "name": "Performance Workshop", "style": "Performance", "type": "workshop"}
   ]
 }

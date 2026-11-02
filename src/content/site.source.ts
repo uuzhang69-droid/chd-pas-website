@@ -1,3 +1,4 @@
+import { publicSessionsForEvent } from "./event-sessions";
 import type {
   BookingEmbed,
   ClassStylePage,
@@ -445,7 +446,7 @@ export const siteSource = {
         overline: "Plan your classes",
         title: "Timetable & Booking",
         subtitle:
-          "Browse classes by week or month, filter by day and style, then reserve your place through our secure booking system.",
+          "Browse classes, workshops, school-organised events and activities hosted at the school by week or month. Check each event’s location and filter by type, day and style.",
       } satisfies PageHeroContent,
       trial: {
         id: "trial",
@@ -811,6 +812,7 @@ export const siteSource = {
         {
           id: "2026-halloween",
           slug: "halloween-pumpkin-carving-workshop",
+          sessions: publicSessionsForEvent("halloween-pumpkin-carving-workshop"),
           listingCategory: "workshop",
           title: "Halloween Pumpkin Carving Workshop",
           date: "Saturday 31 October 2026, 1:00pm – 5:00pm",
@@ -887,6 +889,7 @@ export const siteSource = {
         {
           id: "event-1",
           slug: "memory-of-china",
+          sessions: publicSessionsForEvent("memory-of-china"),
           relationship: "organised",
           organiser: "County Hall Dance & Performing Arts School",
           partners: ["Sen Yoga", "RCDance", "Yi Crafts", "Lotus Realm", "Inkjoygraphy", "County Hall Arts"],
@@ -973,9 +976,8 @@ export const siteSource = {
         {
           id: "event-2",
           slug: "four-seasons-festival",
-          relationship: "hosted",
           organiser: "County Hall Arts",
-          hostedAt: "County Hall Dance & Performing Arts School",
+          sessions: publicSessionsForEvent("four-seasons-festival"),
           listingCategory: "event",
           title: "Four Seasons Festival",
           date: "Saturday 24 – Sunday 25 October 2026",
@@ -1096,33 +1098,7 @@ export const siteSource = {
             "# Venue",
             "Please check each concert listing for its confirmed venue and arrival details."
           ],
-          occurrences: [
-            {
-              "id": "2026-10-23",
-              "title": "Fandango! Italian Virtuosity Meets Spanish Dance",
-              "date": "Friday 23 October 2026, 1pm",
-              "dateIso": "2026-10-23",
-              "location": "County Hall Dance & Performing Arts School, 2nd Floor, County Hall Main Entrance, Belvedere Road, London SE1 7PB",
-              "relationship": "hosted",
-              "organiser": "County Hall Arts",
-              "hostedAt": "County Hall Dance & Performing Arts School",
-              "description": [
-                "The programme explored the virtuosity, lyricism and operatic flair of Italian composers including Paganini, Rossini and Boccherini, with a flamenco twist from two dancers from the London School of Flamenco.",
-                "Guest performers included Santy Masciarò on guitar and Mika Enjo on flute. Violinist Juan Manuel Gonzalez Hernandez joined the ensemble for the Fandango, expanding the group into the quintet for which the work was written.",
-                "The concert marked the beginning of As the Leaves Turn (24–25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations."
-              ]
-            },
-            {
-              "id": "2026-09-25",
-              "title": "Encounters",
-              "date": "Friday 25 September 2026, 1pm",
-              "dateIso": "2026-09-25",
-              "organiser": "County Hall Arts",
-              "description": [
-                "A relaxed afternoon of chamber music with the County Hall Quartet. The ensemble welcomed cellist Meera Priyanka Raja, who opened the concert with a special solo performance."
-              ]
-            }
-          ],
+          sessions: publicSessionsForEvent("lunchtime-concert-series"),
           image: {
             src: "/images/events/lunchtime-concert-series.jpg",
             alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
@@ -1136,6 +1112,7 @@ export const siteSource = {
         {
           id: "event-4",
           slug: "dance-meets-arts",
+          sessions: publicSessionsForEvent("dance-meets-arts"),
           relationship: "organised",
           organiser: "County Hall Dance & Performing Arts School",
           partners: ["County Hall Arts"],
@@ -1183,6 +1160,9 @@ export const siteSource = {
         {
           id: "event-5",
           slug: "county-hall-dance-centre-opening-day",
+          sessions: publicSessionsForEvent("county-hall-dance-centre-opening-day"),
+          relationship: "organised",
+          organiser: "County Hall Dance & Performing Arts School",
           listingCategory: "event",
           title: "County Hall Dance Centre – Opening Day",
           date: "Thursday 10 September 2026",
@@ -1346,6 +1326,12 @@ export const siteSource = {
         hostedAt: "Hosted at",
         promotedBy: "Promoted by",
         pastConcerts: "Past concerts",
+        programme: "Programme sessions",
+        booking: "Booking details",
+        venuePending: "Venue to be confirmed",
+        timePending: "Time to be confirmed",
+        endPending: "End time to be confirmed",
+        room: "Space",
         upcomingConcerts: "Upcoming concerts",
       },
       categoryLabels: {
@@ -1355,6 +1341,8 @@ export const siteSource = {
 
     venueHire: {
       overview: {
+        timetableNote: "The timetable includes school-organised events at other venues. Check each activity’s location. Please contact us to confirm venue availability.",
+        timetableLink: { label: "View timetable", href: "/timetable" },
         meta: {
           title: "Space Hire",
           description:

@@ -15,6 +15,13 @@ const COPY_PREFIX = "@@COPY:";
 
 const TEXT_KEYS = new Set([
   "label",
+  "programme",
+  "booking",
+  "venuePending",
+  "timePending",
+  "endPending",
+  "room",
+  "timetableNote",
   "organiser",
   "hostedAt",
   "promotedBy",
@@ -142,6 +149,7 @@ function isStructuralString(key: string, value: string, parent: unknown): boolea
   if (key === "href" || key === "src" || key === "headerSrc" || key === "footerSrc") return true;
   if (key === "action" || key === "embedUrl" || key === "directionsHref") return true;
   if (key === "dateIso" || key === "value") return true;
+  if (key === "date" && parent && typeof parent === "object" && "eventSlug" in parent) return true;
   if (key === "name" && parent && typeof parent === "object" && "type" in parent) return true;
   if (value.startsWith("/") || value.startsWith("http") || value.startsWith("tel:") || value.startsWith("mailto:")) {
     return key !== "label" && key !== "email" && key !== "phone";

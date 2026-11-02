@@ -998,6 +998,21 @@ export const siteStructure = {
         {
           "id": "2026-halloween",
           "slug": "halloween-pumpkin-carving-workshop",
+          "sessions": [
+            {
+              "id": "halloween-2026",
+              "eventSlug": "halloween-pumpkin-carving-workshop",
+              "title": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.title",
+              "date": "2026-10-31",
+              "start": "13:00",
+              "end": "17:00",
+              "venueId": "county-hall-dance-school",
+              "type": "workshop",
+              "organiser": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.sessions.halloween_2026.organiser",
+              "relationship": "organised",
+              "published": true
+            }
+          ],
           "listingCategory": "workshop",
           "title": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.title",
           "date": "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.date",
@@ -1054,6 +1069,30 @@ export const siteStructure = {
         {
           "id": "event-1",
           "slug": "memory-of-china",
+          "sessions": [
+            {
+              "id": "memory-2026-03",
+              "relationship": "organised",
+              "organiser": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.organiser",
+              "eventSlug": "memory-of-china",
+              "title": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_03.title",
+              "date": "2026-10-03",
+              "venueId": "members-terrace",
+              "type": "event",
+              "published": true
+            },
+            {
+              "id": "memory-2026-04",
+              "relationship": "organised",
+              "organiser": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.organiser",
+              "eventSlug": "memory-of-china",
+              "title": "@@COPY:pages.events.items.memory_of_china.sessions.memory_2026_04.title",
+              "date": "2026-10-04",
+              "venueId": "members-terrace",
+              "type": "event",
+              "published": true
+            }
+          ],
           "relationship": "organised",
           "organiser": "@@COPY:pages.events.items.memory_of_china.organiser",
           "partners": [
@@ -1146,9 +1185,137 @@ export const siteStructure = {
         {
           "id": "event-2",
           "slug": "four-seasons-festival",
-          "relationship": "hosted",
           "organiser": "@@COPY:pages.events.items.four_seasons_festival.organiser",
-          "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.hostedat",
+          "sessions": [
+            {
+              "id": "leaves-2026-1",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.title",
+              "date": "2026-10-24",
+              "start": "11:00",
+              "end": "12:00",
+              "venueId": "county-hall-dance-school",
+              "type": "event",
+              "subtype": "performance",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.organiser",
+              "published": true,
+              "relationship": "hosted",
+              "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_1.hostedat"
+            },
+            {
+              "id": "leaves-2026-2",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.title",
+              "date": "2026-10-24",
+              "start": "14:00",
+              "end": "15:30",
+              "venueId": "county-hall-dance-school",
+              "type": "workshop",
+              "subtype": "arts",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.organiser",
+              "published": true,
+              "relationship": "hosted",
+              "hostedAt": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_2.hostedat"
+            },
+            {
+              "id": "leaves-2026-3",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.title",
+              "date": "2026-10-24",
+              "start": "16:00",
+              "end": "17:30",
+              "venueId": "county-hall-dance-school",
+              "type": "workshop",
+              "subtype": "wellness",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.organiser",
+              "published": true,
+              "relationship": "collaboration",
+              "partners": [
+                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.0",
+                "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_3.partners.1"
+              ],
+              "style": "Yoga",
+              "venueBooking": false
+            },
+            {
+              "id": "leaves-2026-4",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.title",
+              "date": "2026-10-24",
+              "start": "18:00",
+              "end": "19:00",
+              "venueId": "county-hall-atrium",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_4.organiser",
+              "published": true
+            },
+            {
+              "id": "leaves-2026-5",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.title",
+              "date": "2026-10-25",
+              "start": "11:00",
+              "end": "12:00",
+              "venueId": "county-hall-atrium",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_5.organiser",
+              "published": true
+            },
+            {
+              "id": "leaves-2026-6",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.title",
+              "date": "2026-10-25",
+              "start": "13:00",
+              "end": "14:00",
+              "venueId": "county-hall-atrium",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_6.organiser",
+              "published": true
+            },
+            {
+              "id": "leaves-2026-7",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.title",
+              "date": "2026-10-25",
+              "start": "15:00",
+              "end": "17:00",
+              "venueId": "kiln-courtyard",
+              "type": "workshop",
+              "subtype": "arts",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_7.organiser",
+              "published": true
+            },
+            {
+              "id": "leaves-2026-8",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.title",
+              "date": "2026-10-25",
+              "start": "18:00",
+              "end": "19:00",
+              "venueId": "county-hall-atrium",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_8.organiser",
+              "published": true
+            },
+            {
+              "id": "leaves-2026-9",
+              "eventSlug": "four-seasons-festival",
+              "title": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.title",
+              "date": "2026-10-25",
+              "start": "19:30",
+              "end": "20:30",
+              "venueId": "private-cinema",
+              "type": "event",
+              "subtype": "screening",
+              "organiser": "@@COPY:pages.events.items.four_seasons_festival.sessions.leaves_2026_9.organiser",
+              "published": true
+            }
+          ],
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.four_seasons_festival.title",
           "date": "@@COPY:pages.events.items.four_seasons_festival.date",
@@ -1254,30 +1421,39 @@ export const siteStructure = {
             "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
             "@@COPY:pages.events.items.lunchtime_concert_series.description.6"
           ],
-          "occurrences": [
+          "sessions": [
             {
-              "id": "2026-10-23",
-              "title": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.title",
-              "date": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.date",
-              "dateIso": "2026-10-23",
-              "location": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.location",
-              "relationship": "hosted",
-              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.organiser",
-              "hostedAt": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.hostedat",
+              "id": "concert-2026-10-23",
+              "eventSlug": "lunchtime-concert-series",
+              "title": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title",
+              "date": "2026-10-23",
+              "start": "13:00",
+              "venueId": "county-hall-dance-school",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser",
+              "published": true,
               "description": [
-                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.0",
-                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.1",
-                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_10_23.description.2"
-              ]
+                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0",
+                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1",
+                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2"
+              ],
+              "relationship": "hosted",
+              "hostedAt": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat"
             },
             {
-              "id": "2026-09-25",
-              "title": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.title",
-              "date": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.date",
-              "dateIso": "2026-09-25",
-              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.organiser",
+              "id": "concert-2026-09-25",
+              "eventSlug": "lunchtime-concert-series",
+              "title": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title",
+              "date": "2026-09-25",
+              "start": "13:00",
+              "venueId": "county-hall-atrium",
+              "type": "event",
+              "subtype": "concert",
+              "organiser": "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser",
+              "published": true,
               "description": [
-                "@@COPY:pages.events.items.lunchtime_concert_series.occurrences.2026_09_25.description.0"
+                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0"
               ]
             }
           ],
@@ -1294,6 +1470,21 @@ export const siteStructure = {
         {
           "id": "event-4",
           "slug": "dance-meets-arts",
+          "sessions": [
+            {
+              "id": "dance-meets-arts-2026",
+              "relationship": "organised",
+              "organiser": "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.organiser",
+              "eventSlug": "dance-meets-arts",
+              "title": "@@COPY:pages.events.items.dance_meets_arts.sessions.dance_meets_arts_2026.title",
+              "date": "2026-08-08",
+              "start": "19:00",
+              "end": "20:30",
+              "venueId": "members-terrace",
+              "type": "event",
+              "published": true
+            }
+          ],
           "relationship": "organised",
           "organiser": "@@COPY:pages.events.items.dance_meets_arts.organiser",
           "partners": [
@@ -1434,6 +1625,21 @@ export const siteStructure = {
         {
           "id": "event-5",
           "slug": "county-hall-dance-centre-opening-day",
+          "sessions": [
+            {
+              "id": "opening-day-2026",
+              "eventSlug": "county-hall-dance-centre-opening-day",
+              "title": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.title",
+              "date": "2026-09-10",
+              "venueId": "county-hall",
+              "type": "event",
+              "relationship": "organised",
+              "organiser": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.sessions.opening_day_2026.organiser",
+              "published": true
+            }
+          ],
+          "relationship": "organised",
+          "organiser": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.organiser",
           "listingCategory": "event",
           "title": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.title",
           "date": "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.date",
@@ -1627,6 +1833,12 @@ export const siteStructure = {
         "hostedAt": "@@COPY:pages.events.detaillabels.hostedat",
         "promotedBy": "@@COPY:pages.events.detaillabels.promotedby",
         "pastConcerts": "@@COPY:pages.events.detaillabels.pastconcerts",
+        "programme": "@@COPY:pages.events.detaillabels.programme",
+        "booking": "@@COPY:pages.events.detaillabels.booking",
+        "venuePending": "@@COPY:pages.events.detaillabels.venuepending",
+        "timePending": "@@COPY:pages.events.detaillabels.timepending",
+        "endPending": "@@COPY:pages.events.detaillabels.endpending",
+        "room": "@@COPY:pages.events.detaillabels.room",
         "upcomingConcerts": "@@COPY:pages.events.detaillabels.upcomingconcerts"
       },
       "categoryLabels": {
@@ -1635,6 +1847,11 @@ export const siteStructure = {
     },
     "venueHire": {
       "overview": {
+        "timetableNote": "@@COPY:pages.venuehire.overview.timetablenote",
+        "timetableLink": {
+          "label": "@@COPY:pages.venuehire.overview.timetablelink.label",
+          "href": "/timetable"
+        },
         "meta": {
           "title": "@@COPY:pages.venuehire.overview.meta.title",
           "description": "@@COPY:pages.venuehire.overview.meta.description"

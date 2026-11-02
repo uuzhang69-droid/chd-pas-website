@@ -65,41 +65,57 @@ This updates `website-copy.csv`, `copy.ts`, and `site.structure.ts`. Review the 
 
 `content:export` regenerates CSV, `copy.ts` and `site.structure.ts` from `site.source.ts`. `content:import` only updates `copy.ts` from CSV; it does not write changes back into the source. Before exporting, reconcile any CSV-only edits into `site.source.ts` so they are not overwritten. Commit generated files alongside the source. `website-copy.md` is a historical editorial brief, not the current runtime source.
 
-## Event information (added 1 November 2026)
+## Shared event sessions (updated 2 November 2026)
 
-Keep `listingCategory` (`event`, `workshop`, `masterclass`) independent of these optional fields:
+`src/content/event-sessions.ts` is the single programme source for both event details and the school timetable. `site.source.ts` attaches `publicSessionsForEvent(eventSlug)` to each relevant event's `sessions`. The exporter produces copy/structure, `site.ts` resolves it, and gallery enrichment preserves the sessions. `EventProgramme` renders each date's venue and attribution. Do not maintain an identical event session in `schedule.json`.
 
-| Field | Meaning / display |
-| --- | --- |
-| `relationship` | `organised`: school-led; `collaboration`: jointly produced; `hosted`: school provides the venue |
-| `organiser` | Full organisation name, under Organised by |
-| `partners` | Full partner names, under In collaboration with |
-| `hostedAt` | Confirmed hosting venue; displayed only when relationship is `hosted` |
-| `promotedBy` | Promotion support only; does not imply hosting or co-organisation |
-
-One-off events show this information at the bottom of their detail page. Four Seasons Festival is organised by County Hall Arts and hosted at County Hall Dance & Performing Arts School. Memory of China and Dance Meets Arts are school-led, with their collaborators listed separately. Do not invent promotion or partnership credits for events without confirmation.
-
-### Recurring concerts
-
-Use `pages.events.items[].occurrences` to retain individual programmes:
+The previous concert `occurrences` have been migrated to this shared `EventSession` model. Existing programmes and descriptions are retained. Add future concerts to the same series slug; never infer the venue of a new concert from an earlier one.
 
 ```ts
 {
-  id: "2026-10-23",
-  title: "Fandango! Italian Virtuosity Meets Spanish Dance",
-  date: "Friday 23 October 2026, 1pm",
-  dateIso: "2026-10-23",
-  location: "County Hall Dance & Performing Arts School, 2nd Floor, County Hall Main Entrance, Belvedere Road, London SE1 7PB",
-  relationship: "hosted",
-  organiser: "County Hall Arts",
-  hostedAt: "County Hall Dance & Performing Arts School",
-  description: ["Programme details…"],
+  id: "unique-stable-session-id",
+  eventSlug: "existing-parent-event-slug",
+  title: "Confirmed programme title",
+  date: "YYYY-MM-DD", // Europe/London local date
+  start: "HH:mm",    // omit if unknown
+  end: "HH:mm",      // omit if unknown; never guess
+  venueId: "county-hall-dance-school", // only after confirmation
+  type: "event",     // class | workshop | event
+  subtype: "concert",
+  published: true,
+  organiser: "Full organisation name",
+  // relationship: organised | collaboration | hosted
+  // partners: ["Full organisation name"], promotedBy: "Full organisation name"
+  // venueBooking: true ONLY when the venue booking arrangement is confirmed
+  // spaceId, bookingUrl, setupStart, teardownEnd: only if confirmed
+  description: ["Programme details"],
 }
 ```
 
-Each occurrence supports its own `location`, `organiser`, `partners`, `relationship`, `hostedAt` and `promotedBy`. These are displayed inside that concert's card and are never inherited from the series. Omit unknown venues or relationships. Only 23 October's school venue is confirmed; do not apply it to September or future concerts.
+### Venue registry and attribution
 
-When adding a confirmed concert, retain older entries, update the series introduction/Next Concert text, and update the listing `date`/`dateIso` in both `home.events.items` and `pages.events.items`. Those summary fields are maintained manually. Occurrences are grouped into upcoming and past on render; production prerendered pages require a rebuild/redeployment to refresh time-based groups. Never invent a next monthly date. Run `npm run content:export` and `npm run build`.
+Canonical IDs live in `src/content/venues.ts`: `county-hall-dance-school`, `county-hall`, `county-hall-atrium`, `members-terrace`, `kiln-courtyard`, `private-cinema`. Full school display name: **County Hall Dance & Performing Arts School**. Legacy aliases use exact matching; unknown strings and generic County Hall never map to the school. `spaces` is empty until actual rooms and venue associations are verified.
+
+The What's On activity filters remain Events / Workshops / Masterclasses. Attribution is separate, shown beneath programme/event details: Organised by, In collaboration with, Hosted at, Promoted by. Use full names. `venueBooking` is an independent attribute, not a type; hosting or collaboration does not prove a paid rental.
+
+### Public timetable inclusion
+
+`Timetable.tsx` is the server wrapper used on the homepage and `/timetable`. It projects resolved event sessions through `schoolEventSessions` and passes only safe calendar fields to `ClassCalendar`. Inclusion requires `published: true`, not cancelled and a valid date. Hosted sessions require the school venue ID and complete valid times. Public sessions explicitly marked `relationship: "organised"` with the full school organiser name also appear at other venues; missing times are shown as Time to be confirmed, never as all-day occupancy. No description keyword matching or parent-level venue inheritance. Overnight activities must be split into dated sessions when that support is needed.
+
+Each unique session ID produces at most one entry, even when it matches both Event and Venue Booking. Regular classes and schedule-only workshops retain their existing ClassManager dialog. Shared event sessions link to `/events/{eventSlug}#session-{id}`. Never duplicate an event session in the legacy schedule.
+
+Private bookings can be recorded with `private: true`, an appropriate activity type, a confirmed date/time/school venue and `published: true` to expose anonymous occupancy. They must contain no customer personal information in this repository. They are excluded from generated client content; the server supplies only a generic Private booking card, with no event link or booking action. `setupStart` and `teardownEnd`, when supplied, are displayed as additional occupancy bounds. Nothing is inferred as free or available. Do not add example/private/maintenance reservations as real production data.
+
+### Confirmed historical coverage and missing data
+
+- Four Seasons has nine programme sessions. Only the three school sessions on 24 October (11:00–12:00, 14:00–15:30, 16:00–17:30) enter the timetable. Autumn Flow and Sound is a collaboration with the school and Sen Yoga, not a confirmed commercial rental. Festival-wide hosting has been removed.
+- Encounters, 25 September: County Hall Atrium, start 13:00, end unknown. Excluded.
+- Fandango, 23 October: school venue/address retained, start 13:00, end unknown. Programme remains visible; timetable inclusion awaits its end time.
+- Memory of China (3–4 October) and Dance Meets Arts (8 August) appear in the timetable as school-organised events, with Members’ Terrace shown on their cards. Opening Day (10 September) also appears; only County Hall is documented as its venue, and its time is unknown.
+- Halloween's already documented school session is 31 October, 13:00–17:00.
+- No confirmed private bookings, setup/teardown, room IDs, or new future concerts have been invented. Venue Booking is deliberately not enabled for unconfirmed rental arrangements.
+
+After adding a session, attach `publicSessionsForEvent` to its parent event if necessary; update any manually maintained homepage/event summary date and Next Concert text. Run `npm run content:export`, `npx tsx --test scripts/test-timetable.mts` and `npm run build`. Review generated diffs and deploy for production changes. Do not edit generated sessions separately.
 
 ## Timetable data
 
@@ -111,9 +127,16 @@ When adding a confirmed concert, retain older entries, update the series introdu
     { "day": 5, "start": "13:00", "end": "14:30", "name": "Yoga (Inside Flow)", "style": "Yoga", "startDate": "2026-11-01", "endDate": "2026-11-30" }
   ],
   "datedClasses": [
-    { "date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango" }
+    { "date": "2026-11-14", "start": "14:30", "end": "19:30", "name": "Tango Workshop", "style": "Tango", "type": "workshop" }
   ]
 }
 ```
 
-Merge entries into the existing schedule; do not replace unrelated classes with this example. A dated entry may set `cancelled: true`. Dates use `YYYY-MM-DD`; times use London local `HH:mm`. Week/List show one week; Month shows all dates in the selected month. Both apply the same date bounds, cancellation rules and filters. November-only Yoga must not appear in December. New styles also need a filter option in `ClassCalendar.tsx` and, optionally, a colour in `src/lib/class-calendar/utils.ts`.
+Merge entries into the existing schedule; do not replace unrelated classes with this example. A dated entry may set `cancelled: true`. Dates use `YYYY-MM-DD`; times use London local `HH:mm`. Week/List show one week; Month shows all dates in the selected month. All views apply the same date bounds, cancellation rules and filters. November-only Yoga must not appear in December. New styles also need a filter option in `ClassCalendar.tsx` and, optionally, a colour in `src/lib/class-calendar/utils.ts`.
+
+
+The Timetable Type filter offers Classes, Workshops, Events and Venue Bookings. Day/Style filters compose with it. Empty date cells retain the date heading but no placeholder sentence. Today remains highlighted. Month view stacks dates on mobile. Venue Hire links to the timetable as an occupancy overview, explicitly requiring contact to confirm availability; empty slots and unknown rooms are not availability promises.
+
+Social icons share `SocialIcons.tsx` in the header utility bar, footer and newsletter. TikTok and Xiaohongshu use licensed brand paths; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+School-organised events at external venues are discovery entries, not school occupancy. The Venue Bookings filter and setup/teardown bounds apply only to confirmed school sessions with complete times. Calendar cards show event venue names.

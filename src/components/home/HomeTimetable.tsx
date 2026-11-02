@@ -1,5 +1,5 @@
-import { ClassCalendar } from "@/components/timetable/ClassCalendar";
+import { Timetable } from "@/components/timetable/Timetable";
 
 export function HomeTimetable() {
-  return <ClassCalendar />;
+  return <Timetable />;
 }

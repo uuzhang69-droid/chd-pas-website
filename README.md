@@ -1,8 +1,8 @@
 # Editing website content
 
-This README was updated on 1 November 2026.
+This README was updated on 2 November 2026.
 
-All user-facing text, button labels, links, and image paths live in one file:
+Most editorial text, button labels, links, and image paths live in:
 
 **`src/content/site.source.ts`**
 
@@ -180,14 +180,24 @@ Open [http://localhost:3000](http://localhost:3000).
 The project ships with simple SVG placeholders in `public/images/`. Replace them with your own photography and update the paths in `site.source.ts`.
 
 
-## Timetable: week, month and list
+## Timetable: classes, workshops, events and venue occupancy
 
-The homepage and `/timetable` share `ClassCalendar`. The source is `public/schedule.json`, not the copy spreadsheet. Week and List show the selected week; Month shows the full selected month, with previous/next month and This month controls. Day/style filters and booking options work in each view. Mobile Month view stacks dates vertically. All times are London time.
+The homepage and `/timetable` share the server `Timetable` wrapper and interactive `ClassCalendar`. Week, Month and List views support period navigation, Type/Day/Style filters, today's highlight and mobile date layouts.
 
-Weekly entries support date limits and cancellations; `datedClasses` holds single-date workshops. See [CONTENT.md](CONTENT.md) for the schema. Updating schedule JSON does not require `content:export`.
+Regular classes and schedule-only workshops remain in `public/schedule.json`, including date limits and cancellations. Event programme sessions live once in `src/content/event-sessions.ts`, are attached to event pages through `site.source.ts`, and enter the timetable automatically when the specific published session has a confirmed school venue and complete times, or is explicitly organised by the school (including external venues and date-only entries). Venue IDs are defined in `src/content/venues.ts`; County Hall Atrium and Members' Terrace are not school spaces.
 
-## Events, relationships and concert series
+`venueBooking` is independent of activity type and organising relationship. Private bookings are anonymised and non-clickable. The calendar is an overview, not a live availability guarantee. No room is assumed free because a cell is empty.
 
-Activity filters remain Events / Workshops / Masterclasses. Organiser, collaboration, hosting and promotion are separate metadata, displayed beneath the event details using full organisation names.
+See [CONTENT.md](CONTENT.md) for schemas, private booking handling, current missing data and how to add future programmes. Shared social brand assets are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Recurring concerts use `occurrences` inside their existing event page. Each occurrence has its own date, programme, location and attribution. **Never assume the series venue applies to every concert.** The 23 October 2026 Fandango concert is confirmed at County Hall Dance & Performing Arts School; other concert venues are unconfirmed and omitted. Retain past programmes when adding a new one. See [CONTENT.md](CONTENT.md) for maintenance instructions.
+### Validation
+
+```bash
+npm run content:export
+npx tsx --test scripts/test-timetable.mts
+npm run lint
+npm run build
+git diff --check
+```
+
+`content:export` updates generated copy and structure as well as CSV. It is required after event-session changes, but not for schedule-only JSON edits. Review diffs before committing; do not duplicate event sessions in `schedule.json`.

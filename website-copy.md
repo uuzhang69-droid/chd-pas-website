@@ -1,8 +1,8 @@
 # County Hall Dance Centre — Historical Website Copy Brief
 
-Updated maintenance note: 1 November 2026. This document preserves the original editorial brief; it is not a current source of truth and must not be imported wholesale over newer content. For current copy, event attribution, concert occurrences and monthly timetable maintenance, see [CONTENT.md](CONTENT.md) and [README.md](README.md).
+Updated maintenance note: 2 November 2026. This document preserves the original editorial brief; it is not a current source of truth and must not be imported wholesale over newer content. For current copy, event attribution, shared concert sessions and monthly timetable maintenance, see [CONTENT.md](CONTENT.md) and [README.md](README.md).
 
-Current authoring source: `src/content/site.source.ts`. Runtime content: generated `src/content/site.structure.ts` plus `src/content/copy.ts`. Schedule: `public/schedule.json`.
+Current authoring source: `src/content/site.source.ts`. Runtime content: generated `src/content/site.structure.ts` plus `src/content/copy.ts`. Regular schedule: `public/schedule.json`. Shared event sessions: `src/content/event-sessions.ts`. Venue identities: `src/content/venues.ts`.
 
 ## Basic info
 - Centre name: County Hall Dance Centre

@@ -533,3 +533,10 @@
     text-align: left;
   }
 }
+
+/* Mixed activity timetable: links share card styling with class booking buttons. */
+.class-calendar-section .filter-bar { flex-wrap: wrap; }
+.class-calendar-section a.session-card { text-decoration: none; }
+.class-calendar-section .session-kind { font-size: 12px; line-height: 1.4; }
+.class-calendar-section div.session-card:hover { box-shadow: none; outline: none; }
+.class-calendar-section a.session-card:focus-visible { outline: 3px solid var(--wine); outline-offset: 3px; }

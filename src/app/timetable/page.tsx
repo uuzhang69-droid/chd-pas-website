@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
-import { ClassCalendar } from "@/components/timetable/ClassCalendar";
+import { Timetable } from "@/components/timetable/Timetable";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 
@@ -17,7 +17,7 @@ export default function TimetablePage() {
   return (
     <PageShell>
       <PageHero {...timetable.hero} />
-      <ClassCalendar />
+      <Timetable />
       <section className="py-8">
         <Container>
           <p className="text-body text-charcoal/75">{timetable.newcomerNote}</p>

@@ -48,14 +48,29 @@ export type EventAttribution = {
   promotedBy?: string;
 };
 
-/** Attribution and venue are specific to this date; never inherit from the series. */
-export type EventOccurrence = EventAttribution & {
+export type ActivityType = "class" | "workshop" | "event";
+
+/** Local date and wall-clock times in Europe/London. Missing times never imply availability. */
+export type EventSession = EventAttribution & {
   id: string;
+  eventSlug: string;
   title: string;
-  date: string;
-  dateIso: string;
-  location?: string;
-  description: string[];
+  date?: string;
+  start?: string;
+  end?: string;
+  venueId?: string;
+  spaceId?: string;
+  type: ActivityType;
+  subtype?: string;
+  style?: string;
+  venueBooking?: boolean;
+  published?: boolean;
+  cancelled?: boolean;
+  private?: boolean;
+  bookingUrl?: string;
+  setupStart?: string;
+  teardownEnd?: string;
+  description?: string[];
 };
 
 export type EventCard = {
@@ -69,7 +84,7 @@ export type EventCard = {
   hostedAt?: string;
   /** Promotion alone does not imply hosting or co-organisation. */
   promotedBy?: string;
-  occurrences?: EventOccurrence[];
+  sessions?: EventSession[];
   title: string;
   date: string;
   dateIso?: string;

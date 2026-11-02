@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
@@ -31,6 +32,12 @@ export default function VenueHirePage() {
             )}
             <p className="text-body-lg text-charcoal/80 lg:flex lg:items-center">{page.intro}</p>
           </div>
+        </Container>
+      </section>
+      <section className="border-y border-taupe/30 py-8">
+        <Container>
+          <p className="text-body text-charcoal/75">{page.timetableNote}</p>
+          <Link href={page.timetableLink.href} className="mt-3 inline-block text-rose underline">{page.timetableLink.label}</Link>
         </Container>
       </section>
       <VenueHireContent />
