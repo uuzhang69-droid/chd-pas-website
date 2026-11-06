@@ -423,7 +423,7 @@ test("November workshop changes are one-off, complete and unique", () => {
         [
             ["2026-11-14", "15:00", "20:00", "Tango Workshop"],
             ["2026-11-21", "15:00", "20:00", "Tango Workshop"],
-            ["2026-11-28", "14:45", "17:45", "Performance Workshop"],
+            ["2026-11-28", "15:00", "18:00", "Acting Workshop"],
         ],
     );
 });

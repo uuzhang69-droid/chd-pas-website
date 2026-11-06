@@ -25,6 +25,13 @@ export type WeeklyClass = {
     type?: ActivityType;
     venueId?: string;
     spaceId?: string;
+    /** Optional link to a detail page, e.g. a one-off workshop event. */
+    href?: string;
+    /** Full event title when `name` is a short calendar label. */
+    title?: string;
+    teacher?: string;
+    /** External booking page for one-off workshops. */
+    bookingUrl?: string;
 };
 export type DatedClass = Omit<
     WeeklyClass,
@@ -49,6 +56,9 @@ export type CalendarSession = {
     venueBooking: boolean;
     room?: string;
     href?: string;
+    title?: string;
+    teacher?: string;
+    bookingUrl?: string;
     private?: boolean;
     location?: string;
     occupancyStart?: string;
@@ -168,6 +178,10 @@ export function sessionsForDates(
                 type: item.type ?? "class",
                 venueBooking: false,
                 room: spaceName(item.spaceId, item.venueId ?? SCHOOL_VENUE_ID),
+                href: item.href,
+                title: item.title,
+                teacher: item.teacher,
+                bookingUrl: item.bookingUrl,
             });
         };
         data.classes.forEach((original, index) => {

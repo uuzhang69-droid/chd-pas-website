@@ -1,5 +1,10 @@
 /** Auto-generated structure — non-text fields and copy references. Regenerate via: npm run content:export */
 
+import {
+    anActorsWorkWithAnObjectEvent,
+    homeAnActorsWorkWithAnObject,
+} from "./events/an-actors-work-with-an-object";
+
 export const siteStructure = {
     meta: {
         siteName: "@@COPY:meta.sitename",
@@ -341,6 +346,7 @@ export const siteStructure = {
                 href: "/events",
             },
             items: [
+                homeAnActorsWorkWithAnObject,
                 {
                     id: "2026-halloween",
                     slug: "halloween-pumpkin-carving-workshop",
@@ -1052,6 +1058,7 @@ export const siteStructure = {
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
+                anActorsWorkWithAnObjectEvent,
                 {
                     id: "2026-halloween",
                     slug: "halloween-pumpkin-carving-workshop",

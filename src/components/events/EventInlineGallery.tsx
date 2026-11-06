@@ -23,8 +23,8 @@ export function EventInlineGallery({ images, label }: EventInlineGalleryProps) {
           <Image
             src={image.src}
             alt={image.alt}
-            width={1200}
-            height={1600}
+            width={image.width ?? 1200}
+            height={image.height ?? 1600}
             className="h-auto w-full object-contain"
             sizes="(max-width: 640px) 100vw, 50vw"
           />

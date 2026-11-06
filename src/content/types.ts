@@ -90,10 +90,30 @@ export type EventCard = {
     promotedBy?: string;
     sessions?: EventSession[];
     title: string;
+    /** Optional line shown under the title on the event page. */
+    subtitle?: string;
+    /** Optional descriptive facts shown on the event page. */
+    category?: string;
+    discipline?: string;
+    teacher?: string;
+    /** Display time range, e.g. "15:00–18:00". */
+    time?: string;
     date: string;
     dateIso?: string;
     location?: string;
     image: ImageAsset;
+    /** Official booking page. Used by every Book Now button for this event. */
+    bookingUrl?: string;
+    /** Swipeable photo strip shown after the description. */
+    photoCarousel?: { label: string; images: ImageAsset[] };
+    /** Two-column teacher section shown after the photo strip. */
+    teacherBio?: {
+        heading: string;
+        name: string;
+        role?: string;
+        paragraphs: string[];
+        image: ImageAsset;
+    };
     bookNow: CtaButton;
     tickets?: CtaButton[];
     descriptionCtas?: EventDescriptionCta[];

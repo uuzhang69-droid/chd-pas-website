@@ -1,4 +1,8 @@
 import { publicSessionsForEvent } from "./event-sessions";
+import {
+    anActorsWorkWithAnObjectEvent,
+    homeAnActorsWorkWithAnObject,
+} from "./events/an-actors-work-with-an-object";
 import type {
     BookingEmbed,
     ClassStylePage,
@@ -312,6 +316,7 @@ export const siteSource = {
                 "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
             viewAll: { label: "View all", href: "/events" },
             items: [
+                homeAnActorsWorkWithAnObject,
                 {
                     id: "2026-halloween",
                     slug: "halloween-pumpkin-carving-workshop",
@@ -1015,6 +1020,7 @@ export const siteSource = {
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
+                anActorsWorkWithAnObjectEvent,
                 {
                     id: "2026-halloween",
                     slug: "halloween-pumpkin-carving-workshop",

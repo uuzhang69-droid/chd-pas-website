@@ -15,6 +15,7 @@ import { Container } from "@/components/ui/Container";
 import { EventInlineGallery } from "@/components/events/EventInlineGallery";
 import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { SectionedPage } from "@/components/ui/SectionedPage";
+import { EventPhotoCarousel } from "@/components/events/EventPhotoCarousel";
 import { EventProgramme } from "@/components/events/EventProgramme";
 import { isEventBeforeToday } from "@/lib/events/event-cta";
 import { isPublicEvent } from "@/content/event-visibility";
@@ -74,6 +75,29 @@ export default async function EventDetailPage({ params }: PageProps) {
         descriptionCtasByIndex.set(cta.paragraphIndex, existing);
     }
 
+    const hasPortraitHero =
+        !event.gallery?.length &&
+        Boolean(
+            event.image.width &&
+            event.image.height &&
+            event.image.height > event.image.width,
+        );
+    const heroDate = event.dateIso
+        ? new Intl.DateTimeFormat("en-GB", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+              timeZone: "UTC",
+          }).format(new Date(`${event.dateIso}T12:00:00Z`))
+        : event.date;
+    const facts = [
+        [detailLabels.date, heroDate],
+        ["Time", event.time],
+        ["Teacher", event.teacher],
+        [detailLabels.location, event.location],
+    ].filter(([, value]) => Boolean(value));
+
     const showFooterCtas =
         !isEventBeforeToday(event.dateIso) &&
         !event.descriptionCtas?.length &&
@@ -89,22 +113,80 @@ export default async function EventDetailPage({ params }: PageProps) {
                     >
                         {detailLabels.backLink}
                     </Link>
-                    <time
-                        dateTime={event.dateIso}
-                        className="text-overline text-rose mt-6 block"
-                    >
-                        {event.date}
-                    </time>
-                    <h1 className="text-h1 mt-2 max-w-3xl text-charcoal">
-                        {event.title}
-                    </h1>
-                    {event.location && (
-                        <p className="text-body mt-3 text-charcoal/60">
-                            {detailLabels.location}: {event.location}
-                        </p>
+                    {hasPortraitHero ? (
+                        <div className="mt-6 grid items-center gap-8 md:grid-cols-[minmax(0,22rem)_1fr] md:gap-10 lg:grid-cols-[minmax(0,24rem)_1fr] lg:gap-14">
+                            <Image
+                                src={event.image.src}
+                                alt={event.image.alt}
+                                width={event.image.width}
+                                height={event.image.height}
+                                className="h-auto w-full max-w-sm rounded-sm border border-taupe/20 bg-blush/20 shadow-sm md:max-w-none"
+                                sizes="(max-width: 768px) 100vw, 384px"
+                                priority
+                            />
+                            <div>
+                                <p className="text-overline text-rose">
+                                    {[event.category, event.discipline]
+                                        .filter(Boolean)
+                                        .join(" · ")}
+                                </p>
+                                <h1 className="text-h1 mt-2 text-charcoal">
+                                    {event.title}
+                                </h1>
+                                {event.subtitle && (
+                                    <p className="text-body-lg mt-3 text-charcoal/80">
+                                        {event.subtitle}
+                                    </p>
+                                )}
+                                <dl className="mt-6 divide-y divide-taupe/25 border-y border-taupe/25">
+                                    {facts.map(([label, value]) => (
+                                        <div
+                                            key={label}
+                                            className="grid gap-x-4 gap-y-0.5 py-3 sm:grid-cols-[6rem_1fr]"
+                                        >
+                                            <dt className="text-overline text-rose">
+                                                {label}
+                                            </dt>
+                                            <dd className="text-body text-charcoal">
+                                                {value}
+                                            </dd>
+                                        </div>
+                                    ))}
+                                </dl>
+                                {!isEventBeforeToday(event.dateIso) && (
+                                    <Button
+                                        {...event.bookNow}
+                                        className="mt-6 w-full sm:w-auto sm:min-w-48"
+                                    />
+                                )}
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            <time
+                                dateTime={event.dateIso}
+                                className="text-overline text-rose mt-6 block"
+                            >
+                                {event.date}
+                            </time>
+                            <h1 className="text-h1 mt-2 max-w-3xl text-charcoal">
+                                {event.title}
+                            </h1>
+                            {event.subtitle && (
+                                <p className="text-body-lg mt-3 max-w-3xl text-charcoal/80">
+                                    {event.subtitle}
+                                </p>
+                            )}
+                            {event.location && (
+                                <p className="text-body mt-3 text-charcoal/60">
+                                    {detailLabels.location}: {event.location}
+                                </p>
+                            )}
+                        </>
                     )}
 
-                    {event.gallery && event.gallery.length > 0 ? (
+                    {hasPortraitHero ? null : event.gallery &&
+                      event.gallery.length > 0 ? (
                         <AutoPlayGallery
                             images={event.gallery}
                             label={`${event.title} photos`}
@@ -127,15 +209,23 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </Container>
             </section>
 
-            <section className="py-16 md:py-24">
+            <section
+                className={hasPortraitHero ? "py-10 md:py-14" : "py-16 md:py-24"}
+            >
                 <Container>
-                    {event.excerpt && (
+                    {event.excerpt && !hasPortraitHero && (
                         <p className="text-body-lg text-charcoal/80">
                             {event.excerpt}
                         </p>
                     )}
                     {event.description && (
-                        <div className="mt-6 space-y-4">
+                        <div
+                            className={
+                                hasPortraitHero
+                                    ? "max-w-2xl space-y-4"
+                                    : "mt-6 space-y-4"
+                            }
+                        >
                             {event.description.map((paragraph, index) => {
                                 const heading = paragraph.startsWith("# ")
                                     ? paragraph.slice(2)
@@ -204,27 +294,77 @@ export default async function EventDetailPage({ params }: PageProps) {
                             })}
                         </div>
                     )}
+                    {event.photoCarousel && (
+                        <EventPhotoCarousel
+                            images={event.photoCarousel.images}
+                            label={event.photoCarousel.label}
+                            className="mt-10 md:mt-12"
+                        />
+                    )}
+                    {event.teacherBio && (
+                        <section
+                            aria-labelledby="teacher-bio"
+                            className="mt-12 grid items-start gap-8 border-t border-taupe/30 pt-10 md:mt-16 md:grid-cols-[3fr_2fr] md:gap-12 md:pt-12"
+                        >
+                            <div className="max-w-2xl">
+                                <h2
+                                    id="teacher-bio"
+                                    className="text-h2 text-charcoal"
+                                >
+                                    {event.teacherBio.heading}
+                                </h2>
+                                {event.teacherBio.role && (
+                                    <p className="text-overline mt-3 text-rose">
+                                        {event.teacherBio.name} ·{" "}
+                                        {event.teacherBio.role}
+                                    </p>
+                                )}
+                                <div className="mt-5 space-y-4">
+                                    {event.teacherBio.paragraphs.map(
+                                        (paragraph) => (
+                                            <p
+                                                key={paragraph}
+                                                className="text-body text-charcoal/75"
+                                            >
+                                                {paragraph}
+                                            </p>
+                                        ),
+                                    )}
+                                </div>
+                            </div>
+                            <Image
+                                src={event.teacherBio.image.src}
+                                alt={event.teacherBio.image.alt}
+                                width={event.teacherBio.image.width}
+                                height={event.teacherBio.image.height}
+                                className="h-auto w-full max-w-56 rounded-sm md:max-w-sm md:justify-self-end"
+                                sizes="(max-width: 768px) 288px, 384px"
+                            />
+                        </section>
+                    )}
                     <EventProgramme sessions={event.sessions ?? []} />
-                    <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
-                        <div>
-                            <dt className="text-overline text-rose">
-                                {detailLabels.date}
-                            </dt>
-                            <dd className="text-body mt-1 text-charcoal">
-                                {event.date}
-                            </dd>
-                        </div>
-                        {event.location && (
+                    {!hasPortraitHero && (
+                        <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
                             <div>
                                 <dt className="text-overline text-rose">
-                                    {detailLabels.location}
+                                    {detailLabels.date}
                                 </dt>
                                 <dd className="text-body mt-1 text-charcoal">
-                                    {event.location}
+                                    {event.date}
                                 </dd>
                             </div>
-                        )}
-                    </dl>
+                            {event.location && (
+                                <div>
+                                    <dt className="text-overline text-rose">
+                                        {detailLabels.location}
+                                    </dt>
+                                    <dd className="text-body mt-1 text-charcoal">
+                                        {event.location}
+                                    </dd>
+                                </div>
+                            )}
+                        </dl>
+                    )}
                     {showFooterCtas && (
                         <div className="mt-8 flex flex-wrap gap-3">
                             {(event.tickets && event.tickets.length > 0

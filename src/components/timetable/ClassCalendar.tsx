@@ -35,6 +35,7 @@ const STYLE_FILTER_OPTIONS = [
     "Tai Chi",
     "Broadway Jazz",
     "Performance",
+    "Acting",
 ] as const;
 const LOAD_ERROR_MESSAGE =
     "Regular classes could not be loaded. Published events are shown below where available. Please contact us for the full timetable.";
@@ -181,6 +182,16 @@ export function ClassCalendar({
                                           : "Time to be confirmed"}
                                 </span>
                                 <strong>{e.name}</strong>
+                                {e.title && (
+                                    <span className="session-kind">
+                                        {e.title}
+                                    </span>
+                                )}
+                                {e.teacher && (
+                                    <span className="session-kind">
+                                        with {e.teacher}
+                                    </span>
+                                )}
                                 <span className="session-kind">
                                     {e.private
                                         ? "Reserved"
@@ -236,6 +247,22 @@ export function ClassCalendar({
                             return (
                                 <div key={e.id} className={className}>
                                     {contents}
+                                </div>
+                            );
+                        if (e.href && e.bookingUrl)
+                            return (
+                                <div key={e.id} className={className}>
+                                    <Link href={e.href} className="contents">
+                                        {contents}
+                                    </Link>
+                                    <a
+                                        href={e.bookingUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="session-action !mt-0 font-semibold"
+                                    >
+                                        Book Now ↗
+                                    </a>
                                 </div>
                             );
                         if (e.href)
