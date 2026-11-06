@@ -222,7 +222,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                         <div
                             className={
                                 hasPortraitHero
-                                    ? "max-w-2xl space-y-4"
+                                    ? "w-full space-y-4"
                                     : "mt-6 space-y-4"
                             }
                         >
