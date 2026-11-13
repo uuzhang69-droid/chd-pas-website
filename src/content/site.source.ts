@@ -1,8 +1,13 @@
 import { publicSessionsForEvent } from "./event-sessions";
 import {
     anActorsWorkWithAnObjectEvent,
-    homeAnActorsWorkWithAnObject,
 } from "./events/an-actors-work-with-an-object";
+import {
+    withinOneRoomEvent,
+} from "./events/within-one-room-stillness-in-motion";
+import {
+    lunchtimeConcertSeriesEvent,
+} from "./events/lunchtime-concert-series";
 import type {
     BookingEmbed,
     ClassStylePage,
@@ -315,80 +320,7 @@ export const siteSource = {
             subtitle:
                 "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
             viewAll: { label: "View all", href: "/events" },
-            items: [
-                homeAnActorsWorkWithAnObject,
-                {
-                    id: "2026-halloween",
-                    slug: "halloween-pumpkin-carving-workshop",
-                    listingCategory: "workshop",
-                    title: "Halloween Pumpkin Carving Workshop",
-                    date: "Saturday 31 October 2026, 1:00pm – 5:00pm",
-                    dateIso: "2026-10-31",
-                    location: "County Hall Dance Centre",
-                    image: {
-                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
-                        alt: "Halloween pumpkins and decorations",
-                    },
-                    bookNow: {
-                        label: "Details",
-                        href: "/events/halloween-pumpkin-carving-workshop",
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-1",
-                    slug: "memory-of-china",
-                    title: "Memory of China",
-                    date: "Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day",
-                    dateIso: "2026-10-04",
-                    location: "Members' Terrace, County Hall",
-                    image: {
-                        src: "/images/events/memory-of-china/gallery-09.jpg",
-                        alt: "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
-                    },
-                    bookNow: {
-                        label: "Book Now",
-                        href: "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
-                        external: true,
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-2",
-                    slug: "four-seasons-festival",
-                    listingCategory: "event",
-                    title: "Four Seasons Festival",
-                    date: "Saturday 24 – Sunday 25 October 2026",
-                    dateIso: "2026-10-25",
-                    location: "Riverside Building, County Hall",
-                    image: {
-                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
-                        alt: "Concert in the County Hall atrium during the Four Seasons Festival",
-                    },
-                    bookNow: {
-                        label: "Details",
-                        href: "/events/four-seasons-festival",
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-3",
-                    slug: "lunchtime-concert-series",
-                    listingCategory: "event",
-                    title: "Lunchtime Concert Series",
-                    date: "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
-                    dateIso: "2026-10-23",
-                    image: {
-                        src: "/images/events/lunchtime-concert-series.jpg",
-                        alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
-                    },
-                    bookNow: {
-                        label: "Details",
-                        href: "/events/lunchtime-concert-series",
-                        variant: "primary",
-                    },
-                },
-            ] satisfies EventCard[],
+            /* Items come from pages.events.items (see site.ts). */
         },
 
         classStyles: {
@@ -1020,6 +952,7 @@ export const siteSource = {
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
+                withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
                     id: "2026-halloween",
@@ -1302,37 +1235,7 @@ export const siteSource = {
                         },
                     ],
                 },
-                {
-                    id: "event-3",
-                    slug: "lunchtime-concert-series",
-                    listingCategory: "event",
-                    title: "Lunchtime Concert Series",
-                    date: "Monthly series · Latest concert: Friday 23 October 2026, 1pm",
-                    dateIso: "2026-10-23",
-                    excerpt:
-                        "Enjoy a relaxed lunchtime concert with the County Hall Quartet.",
-                    description: [
-                        "The County Hall Quartet presents informal afternoon concerts of classical music at County Hall. Each month brings a new programme, where music becomes our common language.",
-                        "# Next Concert",
-                        "The next concert date and programme will be announced once confirmed.",
-                        "# The County Hall Quartet",
-                        "The County Hall Quartet comprises four acclaimed and award-winning musicians: Stefano Marzanni (Piano), Emma Arizza (Violin), Natalia Solis Paredes (Viola) and Meera Priyanka Raja (Cello).",
-                        "# Venue",
-                        "Please check each concert listing for its confirmed venue and arrival details.",
-                    ],
-                    sessions: publicSessionsForEvent(
-                        "lunchtime-concert-series",
-                    ),
-                    image: {
-                        src: "/images/events/lunchtime-concert-series.jpg",
-                        alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
-                    },
-                    bookNow: {
-                        label: "Details",
-                        href: "/events/lunchtime-concert-series",
-                        variant: "primary",
-                    },
-                },
+                lunchtimeConcertSeriesEvent,
                 {
                     id: "event-4",
                     slug: "dance-meets-arts",

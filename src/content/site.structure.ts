@@ -2,8 +2,13 @@
 
 import {
     anActorsWorkWithAnObjectEvent,
-    homeAnActorsWorkWithAnObject,
 } from "./events/an-actors-work-with-an-object";
+import {
+    withinOneRoomEvent,
+} from "./events/within-one-room-stillness-in-motion";
+import {
+    lunchtimeConcertSeriesEvent,
+} from "./events/lunchtime-concert-series";
 
 export const siteStructure = {
     meta: {
@@ -345,83 +350,7 @@ export const siteStructure = {
                 label: "@@COPY:home.events.viewall.label",
                 href: "/events",
             },
-            items: [
-                homeAnActorsWorkWithAnObject,
-                {
-                    id: "2026-halloween",
-                    slug: "halloween-pumpkin-carving-workshop",
-                    listingCategory: "workshop",
-                    title: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.title",
-                    date: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.date",
-                    dateIso: "2026-10-31",
-                    location:
-                        "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.location",
-                    image: {
-                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
-                        alt: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.image.alt",
-                    },
-                    bookNow: {
-                        label: "@@COPY:home.events.items.halloween_pumpkin_carving_workshop.booknow.label",
-                        href: "/events/halloween-pumpkin-carving-workshop",
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-1",
-                    slug: "memory-of-china",
-                    title: "@@COPY:home.events.items.memory_of_china.title",
-                    date: "@@COPY:home.events.items.memory_of_china.date",
-                    dateIso: "2026-10-04",
-                    location:
-                        "@@COPY:home.events.items.memory_of_china.location",
-                    image: {
-                        src: "/images/events/memory-of-china/gallery-09.jpg",
-                        alt: "@@COPY:home.events.items.memory_of_china.image.alt",
-                    },
-                    bookNow: {
-                        label: "@@COPY:home.events.items.memory_of_china.booknow.label",
-                        href: "https://www.eventbrite.co.uk/e/memory-of-china-chinese-traditional-arts-culture-festival-at-county-hal-tickets-2001937386614",
-                        external: true,
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-2",
-                    slug: "four-seasons-festival",
-                    listingCategory: "event",
-                    title: "@@COPY:home.events.items.four_seasons_festival.title",
-                    date: "@@COPY:home.events.items.four_seasons_festival.date",
-                    dateIso: "2026-10-25",
-                    location:
-                        "@@COPY:home.events.items.four_seasons_festival.location",
-                    image: {
-                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
-                        alt: "@@COPY:home.events.items.four_seasons_festival.image.alt",
-                    },
-                    bookNow: {
-                        label: "@@COPY:home.events.items.four_seasons_festival.booknow.label",
-                        href: "/events/four-seasons-festival",
-                        variant: "primary",
-                    },
-                },
-                {
-                    id: "event-3",
-                    slug: "lunchtime-concert-series",
-                    listingCategory: "event",
-                    title: "@@COPY:home.events.items.lunchtime_concert_series.title",
-                    date: "@@COPY:home.events.items.lunchtime_concert_series.date",
-                    dateIso: "2026-10-23",
-                    image: {
-                        src: "/images/events/lunchtime-concert-series.jpg",
-                        alt: "@@COPY:home.events.items.lunchtime_concert_series.image.alt",
-                    },
-                    bookNow: {
-                        label: "@@COPY:home.events.items.lunchtime_concert_series.booknow.label",
-                        href: "/events/lunchtime-concert-series",
-                        variant: "primary",
-                    },
-                },
-            ],
+            /* Items come from pages.events.items (see site.ts). */
         },
         classStyles: {
             overline: "@@COPY:home.classstyles.overline",
@@ -1058,6 +987,7 @@ export const siteStructure = {
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
+                withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
                     id: "2026-halloween",
@@ -1496,73 +1426,7 @@ export const siteStructure = {
                         },
                     ],
                 },
-                {
-                    id: "event-3",
-                    slug: "lunchtime-concert-series",
-                    listingCategory: "event",
-                    title: "@@COPY:pages.events.items.lunchtime_concert_series.title",
-                    date: "@@COPY:pages.events.items.lunchtime_concert_series.date",
-                    dateIso: "2026-10-23",
-                    excerpt:
-                        "@@COPY:pages.events.items.lunchtime_concert_series.excerpt",
-                    description: [
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.0",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.1",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.2",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.3",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.4",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.5",
-                        "@@COPY:pages.events.items.lunchtime_concert_series.description.6",
-                    ],
-                    sessions: [
-                        {
-                            id: "concert-2026-10-23",
-                            eventSlug: "lunchtime-concert-series",
-                            title: "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.title",
-                            date: "2026-10-23",
-                            start: "13:00",
-                            venueId: "county-hall-dance-school",
-                            type: "event",
-                            subtype: "concert",
-                            organiser:
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.organiser",
-                            published: true,
-                            description: [
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.0",
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.1",
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.description.2",
-                            ],
-                            relationship: "hosted",
-                            hostedAt:
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_10_23.hostedat",
-                        },
-                        {
-                            id: "concert-2026-09-25",
-                            eventSlug: "lunchtime-concert-series",
-                            title: "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.title",
-                            date: "2026-09-25",
-                            start: "13:00",
-                            venueId: "county-hall-atrium",
-                            type: "event",
-                            subtype: "concert",
-                            organiser:
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.organiser",
-                            published: true,
-                            description: [
-                                "@@COPY:pages.events.items.lunchtime_concert_series.sessions.concert_2026_09_25.description.0",
-                            ],
-                        },
-                    ],
-                    image: {
-                        src: "/images/events/lunchtime-concert-series.jpg",
-                        alt: "@@COPY:pages.events.items.lunchtime_concert_series.image.alt",
-                    },
-                    bookNow: {
-                        label: "@@COPY:pages.events.items.lunchtime_concert_series.booknow.label",
-                        href: "/events/lunchtime-concert-series",
-                        variant: "primary",
-                    },
-                },
+                lunchtimeConcertSeriesEvent,
                 {
                     id: "event-4",
                     slug: "dance-meets-arts",

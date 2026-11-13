@@ -5,6 +5,9 @@ import { EventsListing } from "@/components/events/EventsListing";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 
+/* Event order and Past Event labels depend on the date, so these pages refresh every 15 minutes. All three use the same value so they never disagree for long. */
+export const revalidate = 900;
+
 const { events } = siteContent.pages;
 
 export const metadata: Metadata = {

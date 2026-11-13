@@ -14,6 +14,7 @@ import { resolveVenueId, SCHOOL_VENUE_ID } from "../src/content/venues";
 import type { EventCard, EventSession } from "../src/content/types";
 import {
     filterSessions,
+    calendarSessionsForEvents,
     schoolEventSessions,
     sessionsForDates,
     type ScheduleData,
@@ -21,7 +22,7 @@ import {
 const schedule: ScheduleData = JSON.parse(
     readFileSync("public/schedule.json", "utf8"),
 );
-const projected = schoolEventSessions(siteContent.pages.events.items);
+const projected = calendarSessionsForEvents(siteContent.pages.events.items);
 const dates = (year: number, month: number) =>
     Array.from(
         { length: new Date(Date.UTC(year, month, 0)).getUTCDate() },
@@ -66,8 +67,14 @@ test("festival page retains nine sessions, calendar includes exactly the three s
     );
 });
 test("external venue events and incomplete concerts do not enter timetable", () => {
-    for (const slug of ["lunchtime-concert-series"])
-        assert(!projected.some((x) => x.href?.includes(slug)));
+    /* Concerts without an end time stay out; the confirmed 20 November concert appears once. */
+    const concertItems = projected.filter((x) =>
+        x.href?.includes("lunchtime-concert-series"),
+    );
+    assert.deepEqual(
+        concertItems.map((x) => [x.date, x.start, x.end, x.name]),
+        [["2026-11-20", "13:00", "14:00", "The Romantic Heart"]],
+    );
     const concerts = publicSessionsForEvent("lunchtime-concert-series");
     assert.equal(
         concerts.find((x) => x.date === "2026-09-25")?.venueId,
@@ -77,7 +84,19 @@ test("external venue events and incomplete concerts do not enter timetable", () 
         concerts.find((x) => x.date === "2026-10-23")?.venueId,
         SCHOOL_VENUE_ID,
     );
-    assert(concerts.every((x) => !x.end));
+    /* Only concerts without a published end time stay out of the timetable. */
+    assert(
+        concerts.filter((x) => x.date !== "2026-11-20").every((x) => !x.end),
+    );
+    const romantic = concerts.find((x) => x.date === "2026-11-20");
+    assert.equal(romantic?.title, "The Romantic Heart");
+    assert.equal(romantic?.start, "13:00");
+    assert.equal(romantic?.end, "14:00");
+    assert.equal(romantic?.venueId, "london-county-hall");
+    assert.equal(
+        concerts.filter((x) => x.title === "The Romantic Heart").length,
+        1,
+    );
 });
 test("November-only classes and workshops do not leak into December", () => {
     const november = sessionsForDates(schedule, dates(2026, 11), projected);
@@ -86,7 +105,7 @@ test("November-only classes and workshops do not leak into December", () => {
         4,
     );
     assert.equal(november.filter((x) => x.type === "workshop").length, 3);
-    assert.equal(november.length, 39);
+    assert.equal(november.length, 41);
     assert(
         !sessionsForDates(schedule, dates(2026, 12), projected).some(
             (x) =>
@@ -196,7 +215,12 @@ test("unpublished and private programme entries never enter generated client cop
 });
 test("event links target the parent page and stable session anchor", () => {
     for (const item of projected)
-        assert.match(item.href!, /^\/events\/[^/]+#session-/);
+        assert.match(
+            item.href!,
+            item.id.startsWith("event-")
+                ? /^\/events\/[^/#]+$/
+                : /^\/events\/[^/]+#session-/,
+        );
     const schoolConcert = {
         ...base,
         eventSlug: "lunchtime-concert-series",
@@ -289,7 +313,7 @@ test("October and November use distinct versions without extending into December
             .every((x) => x.end === "19:20"),
     );
     const november = sessionsForDates(schedule, dates(2026, 11));
-    assert.equal(november.length, 39);
+    assert.equal(november.length, 38);
     assert(
         november
             .filter((x) => x.name === "Yoga (Gentle Flow)")
@@ -426,6 +450,20 @@ test("November workshop changes are one-off, complete and unique", () => {
             ["2026-11-28", "15:00", "18:00", "Acting Workshop"],
         ],
     );
+});
+
+test("28 November shows the workshop and the evening event separately", () => {
+    const day = sessionsForDates(schedule, dates(2026, 11), projected).filter(
+        (x) => x.date === "2026-11-28" && x.type !== "class",
+    );
+    assert.deepEqual(
+        day.map((x) => [x.start, x.end, x.name, x.href]),
+        [
+            ["15:00", "18:00", "Acting Workshop", "/events/an-actors-work-with-an-object"],
+            ["19:30", "20:00", "Within One Room", "/events/within-one-room-stillness-in-motion"],
+        ],
+    );
+    assert.equal(day[1].admission, "Free admission");
 });
 
 test("published timed lessons and event sessions have no overlapping school intervals", () => {

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ClassStyleCard, ClassStyleTile, CourseSummary, EventCard } from "@/content/types";
-import { getEventCardCta, isEventBeforeToday, sortEventsByDate } from "@/lib/events/event-cta";
+import { sortEventsByDate } from "@/lib/events/event-cta";
+import { EventSummaryCard } from "@/components/events/EventSummaryCard";
 import { siteContent } from "@/content/site";
-import { Button } from "@/components/ui/Button";
 
 export function ClassStyleCardGrid({
   items,
@@ -117,49 +117,15 @@ export function CourseCardGrid({ items }: { items: CourseSummary[] }) {
 }
 
 export function EventListingGrid({ items }: { items: EventCard[] }) {
-  const { eventDetailsLink } = siteContent.pages.common;
   return (
     <div className="grid gap-6 sm:grid-cols-2">
       {sortEventsByDate(items).map((event) => (
-        <article
+        <EventSummaryCard
           key={event.id}
-          className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow hover:shadow-lg"
-        >
-          <Link
-            href={`/events/${event.slug}`}
-            className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-inset"
-          >
-            <div className="relative aspect-[16/9] overflow-hidden">
-              <Image
-                src={event.image.src}
-                alt={event.image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <div className="flex flex-1 flex-col p-6">
-              <time dateTime={event.dateIso} className="text-overline text-rose">
-                {event.date}
-              </time>
-              <h2 className="text-h3 mt-2 text-charcoal group-hover:text-rose">{event.title}</h2>
-              {event.excerpt && (
-                <p className="text-body mt-3 flex-1 text-charcoal/75">{event.excerpt}</p>
-              )}
-            </div>
-          </Link>
-          <div className="flex flex-wrap gap-3 px-6 pb-6">
-            <Button {...getEventCardCta(event)} className="!py-2.5" />
-            {!isEventBeforeToday(event.dateIso) && (
-              <Link
-                href={`/events/${event.slug}`}
-                className="inline-flex items-center text-small font-semibold text-rose hover:text-rose/80"
-              >
-                {eventDetailsLink}
-              </Link>
-            )}
-          </div>
-        </article>
+          event={event}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          headingLevel="h2"
+        />
       ))}
     </div>
   );

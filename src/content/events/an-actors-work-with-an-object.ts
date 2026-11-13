@@ -49,6 +49,7 @@ export const anActorsWorkWithAnObjectEvent: EventCard = {
     image: mainImage,
     photoCarousel: {
         label: "Workshop photos",
+        display: "natural",
         images: [
             {
                 src: `${IMAGE_DIR}/workshop-rehearsal-01.jpg`,
@@ -92,20 +93,7 @@ export const anActorsWorkWithAnObjectEvent: EventCard = {
             height: 2048,
         },
     },
-    bookingUrl: AN_ACTORS_WORK_WITH_AN_OBJECT_BOOKING_URL,
-    bookNow,
-};
-
-/** Compact card for the home page "What's On" grid. */
-export const homeAnActorsWorkWithAnObject: EventCard = {
-    id: anActorsWorkWithAnObjectEvent.id,
-    slug: anActorsWorkWithAnObjectEvent.slug,
-    listingCategory: "workshop",
-    title: anActorsWorkWithAnObjectEvent.title,
-    date: anActorsWorkWithAnObjectEvent.date,
-    dateIso: anActorsWorkWithAnObjectEvent.dateIso,
-    location: "County Hall Dance & Performing Arts School",
-    image: anActorsWorkWithAnObjectEvent.image,
+    calendar: { name: "Acting Workshop", style: "Acting", type: "workshop" },
     bookingUrl: AN_ACTORS_WORK_WITH_AN_OBJECT_BOOKING_URL,
     bookNow,
 };

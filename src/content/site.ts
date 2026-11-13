@@ -2,12 +2,15 @@ import { enrichEventsContent } from "./enrich-events-content";
 import { siteStructure } from "./site.structure";
 import { resolveSiteContent } from "./resolve-site-content";
 import type { SiteSource } from "./site.source";
-import { isPublicEvent } from "./event-visibility";
+import { publicEvents } from "../lib/events/event-dates";
 
 /** Resolved site content — all user-facing text comes from copy.ts (via website-copy.csv). */
 const resolved = enrichEventsContent(
     resolveSiteContent(siteStructure) as unknown as SiteSource,
 );
+
+/** One public collection: the home grid is a view of the /events list, not a second list. */
+const publicEventItems = publicEvents(resolved.pages.events.items);
 
 export const siteContent = {
     ...resolved,
@@ -15,18 +18,14 @@ export const siteContent = {
         ...resolved.home,
         events: {
             ...resolved.home.events,
-            items: resolved.home.events.items.filter((event) =>
-                isPublicEvent(event.slug),
-            ),
+            items: publicEventItems,
         },
     },
     pages: {
         ...resolved.pages,
         events: {
             ...resolved.pages.events,
-            items: resolved.pages.events.items.filter((event) =>
-                isPublicEvent(event.slug),
-            ),
+            items: publicEventItems,
         },
     },
 };

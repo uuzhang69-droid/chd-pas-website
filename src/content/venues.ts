@@ -8,6 +8,7 @@ export const venues = {
     aliases: ["County Hall Dance Centre", "CHDC"],
   },
   "county-hall": { name: "County Hall", aliases: ["Riverside Building, County Hall"] },
+  "london-county-hall": { name: "London County Hall", address: "Belvedere Road, London SE1 7GP", aliases: [] },
   "county-hall-atrium": { name: "County Hall Atrium", aliases: ["Atrium, County Hall"] },
   "members-terrace": { name: "Members’ Terrace", aliases: ["Members' Terrace, County Hall"] },
   "kiln-courtyard": { name: "Kiln Courtyard", aliases: ["Kiln Courtyard / Glaze Room", "Glaze Room"] },

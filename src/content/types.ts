@@ -104,8 +104,31 @@ export type EventCard = {
     image: ImageAsset;
     /** Official booking page. Used by every Book Now button for this event. */
     bookingUrl?: string;
+    /** Admission note shown in the event facts, e.g. "Free admission". */
+    admission?: string;
+    /** Opt in to the Timetable calendar for a single-day event with a confirmed start and end time. */
+    calendar?: {
+        /** Short name on the calendar card; the full title and page link are kept. */
+        name: string;
+        /** Type line on the calendar card, e.g. "Art & Performance". Defaults to `name`. */
+        label?: string;
+        style: string;
+        type?: ActivityType;
+        admission?: string;
+    };
+    /** Ongoing series: the page lists sessions (latest first) instead of a single date. */
+    isSeries?: boolean;
+    /** Shows a "Free admission" tag in the event hero. */
+    freeAdmission?: boolean;
+    /** True while no official booking page exists; hides Book Now on the detail page. */
+    bookingPending?: boolean;
     /** Swipeable photo strip shown after the description. */
-    photoCarousel?: { label: string; images: ImageAsset[] };
+    photoCarousel?: {
+        label: string;
+        images: ImageAsset[];
+        /** Optional. "natural" keeps each image at its own ratio, uncropped. */
+        display?: "cover" | "natural";
+    };
     /** Two-column teacher section shown after the photo strip. */
     teacherBio?: {
         heading: string;

@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { siteContent } from "@/content/site";
-import { Button } from "@/components/ui/Button";
+import { EventSummaryCard } from "@/components/events/EventSummaryCard";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { getEventCardCta, sortEventsByDate } from "@/lib/events/event-cta";
+import { sortEventsByDate } from "@/lib/events/event-cta";
 
 export function EventsGrid() {
   const { events } = siteContent.home;
@@ -31,39 +30,11 @@ export function EventsGrid() {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {sortEventsByDate(events.items).slice(0, 4).map((event) => (
-            <article
+            <EventSummaryCard
               key={event.id}
-              className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow duration-300 hover:shadow-lg"
-            >
-              <Link
-                href={`/events/${event.slug}`}
-                className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-inset"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={event.image.src}
-                    alt={event.image.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <time dateTime={event.dateIso} className="text-overline text-rose">
-                    {event.date}
-                  </time>
-                  <h3 id={`event-${event.id}`} className="text-h3 mt-2 text-charcoal">
-                    {event.title}
-                  </h3>
-                  {event.location && (
-                    <p className="text-small mt-2 text-charcoal/60">{event.location}</p>
-                  )}
-                </div>
-              </Link>
-              <div className="px-5 pb-5">
-                <Button {...getEventCardCta(event)} className="w-full !py-2.5" />
-              </div>
-            </article>
+              event={event}
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
           ))}
         </div>
       </Container>

@@ -8,6 +8,8 @@ type EventPhotoCarouselProps = {
     images: readonly ImageAsset[];
     label: string;
     className?: string;
+    /** "natural" shows each image at its own ratio at one shared height, uncropped and without a backing colour. */
+    display?: "cover" | "natural";
 };
 
 /** Scroll-snap photo strip with arrows, touch swipe and a "1 / N" indicator. */
@@ -15,6 +17,7 @@ export function EventPhotoCarousel({
     images,
     label,
     className = "",
+    display = "cover",
 }: EventPhotoCarouselProps) {
     const trackRef = useRef<HTMLUListElement>(null);
     const [active, setActive] = useState(0);
@@ -32,7 +35,8 @@ export function EventPhotoCarousel({
                 nearest = index;
             }
         });
-        const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+        const atEnd =
+            track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
         setActive(atEnd ? slides.length - 1 : nearest);
     }, []);
 
@@ -55,6 +59,8 @@ export function EventPhotoCarousel({
 
     if (images.length === 0) return null;
 
+    const natural = display === "natural";
+
     const arrowClass =
         "inline-flex h-10 w-10 items-center justify-center rounded-full border border-taupe/40 bg-ivory text-charcoal transition-colors hover:border-rose hover:text-rose focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy disabled:cursor-default disabled:opacity-40 disabled:hover:border-taupe/40 disabled:hover:text-charcoal";
 
@@ -66,26 +72,60 @@ export function EventPhotoCarousel({
         >
             <ul
                 ref={trackRef}
-                className="relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden"
+                className={`relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden ${natural ? "scroll-pl-4 sm:scroll-pl-0 [--slide-h:300px] sm:[--slide-h:420px] lg:[--slide-h:520px]" : ""}`}
                 tabIndex={0}
                 aria-label={`${label}, swipe or use the arrows`}
             >
-                {images.map((image, index) => (
-                    <li
-                        key={image.src}
-                        className="relative aspect-[3/2] w-[88%] shrink-0 snap-start overflow-hidden rounded-sm bg-blush/30 sm:w-[82%] lg:w-[78%]"
-                        aria-roledescription="slide"
-                        aria-label={`${index + 1} of ${images.length}`}
-                    >
-                        <Image
-                            src={image.src}
-                            alt={image.alt}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 640px) 88vw, (max-width: 1024px) 82vw, 780px"
-                        />
-                    </li>
-                ))}
+                {images.map((image, index) => {
+                    /* Portrait images (posters, paintings) are shown whole, not cropped. */
+                    const portrait =
+                        Boolean(image.width && image.height) &&
+                        (image.height ?? 0) > (image.width ?? 0);
+                    if (natural) {
+                        const ratio =
+                            image.width && image.height
+                                ? image.width / image.height
+                                : 3 / 2;
+                        return (
+                            <li
+                                key={image.src}
+                                className="relative shrink-0 snap-start overflow-hidden rounded-sm"
+                                style={{
+                                    aspectRatio: ratio,
+                                    width: `min(calc(var(--slide-h) * ${ratio}), 88%)`,
+                                }}
+                                aria-roledescription="slide"
+                                aria-label={`${index + 1} of ${images.length}`}
+                            >
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    fill
+                                    className="object-contain"
+                                    sizes={`(max-width: 640px) 88vw, ${Math.round(520 * ratio)}px`}
+                                />
+                            </li>
+                        );
+                    }
+                    return (
+                        <li
+                            key={image.src}
+                            className="relative aspect-[3/2] w-[88%] shrink-0 snap-start overflow-hidden rounded-sm bg-blush/30 sm:w-[82%] lg:w-[78%]"
+                            aria-roledescription="slide"
+                            aria-label={`${index + 1} of ${images.length}`}
+                        >
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                fill
+                                className={
+                                    portrait ? "object-contain" : "object-cover"
+                                }
+                                sizes="(max-width: 640px) 88vw, (max-width: 1024px) 82vw, 780px"
+                            />
+                        </li>
+                    );
+                })}
             </ul>
             <div className="mt-3 flex items-center gap-3">
                 <button
@@ -106,10 +146,7 @@ export function EventPhotoCarousel({
                 >
                     <span aria-hidden="true">→</span>
                 </button>
-                <p
-                    className="text-small text-charcoal/60"
-                    aria-live="polite"
-                >
+                <p className="text-small text-charcoal/60" aria-live="polite">
                     {active + 1} / {images.length}
                 </p>
             </div>

@@ -6,6 +6,7 @@ import {
     CLASS_CALENDAR_MONTHS,
     CLASS_CALENDAR_STYLE_COLOUR,
 } from "@/lib/class-calendar/utils";
+import { SCHOOL_VENUE_ID, venueName } from "@/content/venues";
 import { BookingOptionsDialog } from "@/components/timetable/BookingOptionsDialog";
 import Link from "next/link";
 import {
@@ -36,6 +37,7 @@ const STYLE_FILTER_OPTIONS = [
     "Broadway Jazz",
     "Performance",
     "Acting",
+    "Art & Performance",
 ] as const;
 const LOAD_ERROR_MESSAGE =
     "Regular classes could not be loaded. Published events are shown below where available. Please contact us for the full timetable.";
@@ -202,6 +204,11 @@ export function ClassCalendar({
                                             : "Event"}
                                     {e.venueBooking ? " · Venue Booking" : ""}
                                 </span>
+                                {e.admission && (
+                                    <span className="session-kind">
+                                        {e.admission}
+                                    </span>
+                                )}
                                 {e.location && (
                                     <span className="session-kind">
                                         {e.location}
@@ -242,27 +249,58 @@ export function ClassCalendar({
                                     )}
                             </>
                         );
-                        const className = `session-card ${colourClass}`.trim();
+                        /* Event cards: time, official title, "type · extra", Event details. */
+                        const officialTitle = e.title ?? e.name;
+                        const extra = [
+                            e.teacher ? `With ${e.teacher}` : undefined,
+                            e.admission,
+                            e.location &&
+                            e.location !== venueName(SCHOOL_VENUE_ID)
+                                ? e.location
+                                : undefined,
+                            e.room,
+                        ];
+                        const typeLine = [
+                            e.label && e.label !== officialTitle
+                                ? e.label
+                                : undefined,
+                            ...extra,
+                        ]
+                            .filter(Boolean)
+                            .join(" · ");
+                        const eventContents = (
+                            <>
+                                <span className="session-time">
+                                    {e.allDay
+                                        ? "All day"
+                                        : e.start
+                                          ? `${e.start}${e.end ? `–${e.end}` : " · End time to be confirmed"}`
+                                          : "Time to be confirmed"}
+                                </span>
+                                <strong>{officialTitle}</strong>
+                                {typeLine && (
+                                    <span className="session-kind">
+                                        {typeLine}
+                                    </span>
+                                )}
+                                {(e.occupancyStart || e.occupancyEnd) && (
+                                    <span className="session-kind">
+                                        Including setup / teardown:{" "}
+                                        {e.occupancyStart ?? e.start}–
+                                        {e.occupancyEnd ?? e.end}
+                                    </span>
+                                )}
+                                <span className="session-action">
+                                    Event details →
+                                </span>
+                            </>
+                        );
+                        const className =
+                            `session-card ${e.href && !e.private ? "event-card" : colourClass}`.trim();
                         if (e.private)
                             return (
                                 <div key={e.id} className={className}>
                                     {contents}
-                                </div>
-                            );
-                        if (e.href && e.bookingUrl)
-                            return (
-                                <div key={e.id} className={className}>
-                                    <Link href={e.href} className="contents">
-                                        {contents}
-                                    </Link>
-                                    <a
-                                        href={e.bookingUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="session-action !mt-0 font-semibold"
-                                    >
-                                        Book Now ↗
-                                    </a>
                                 </div>
                             );
                         if (e.href)
@@ -272,7 +310,7 @@ export function ClassCalendar({
                                     href={e.href}
                                     className={className}
                                 >
-                                    {contents}
+                                    {eventContents}
                                 </Link>
                             );
                         if (!bookable)

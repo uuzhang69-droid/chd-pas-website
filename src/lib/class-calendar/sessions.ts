@@ -10,6 +10,7 @@ import {
     venueName,
 } from "../../content/venues";
 import { isPublicEvent } from "../../content/event-visibility";
+import { eventWindow } from "../events/event-dates";
 import type { ScheduleEntry } from "./utils";
 
 export type WeeklyClass = {
@@ -30,8 +31,8 @@ export type WeeklyClass = {
     /** Full event title when `name` is a short calendar label. */
     title?: string;
     teacher?: string;
-    /** External booking page for one-off workshops. */
-    bookingUrl?: string;
+    /** Admission note for one-off events, e.g. "Free admission". */
+    admission?: string;
 };
 export type DatedClass = Omit<
     WeeklyClass,
@@ -58,7 +59,9 @@ export type CalendarSession = {
     href?: string;
     title?: string;
     teacher?: string;
-    bookingUrl?: string;
+    admission?: string;
+    /** Type or series line for event cards, e.g. "Lunchtime Concert Series". */
+    label?: string;
     private?: boolean;
     location?: string;
     occupancyStart?: string;
@@ -93,6 +96,9 @@ export function schoolEventSessions(
         ),
     );
     const unique = new Map<string, CalendarSession>();
+    const titleBySlug = new Map(
+        events.map((event) => [event.slug, event.title]),
+    );
     for (const session of [
         ...records,
         ...privateBookings.filter((session) => session.private),
@@ -129,6 +135,9 @@ export function schoolEventSessions(
             venueBooking:
                 atSchool && completeTime && session.venueBooking === true,
             private: session.private,
+            label: session.private
+                ? undefined
+                : titleBySlug.get(session.eventSlug),
             room: spaceName(session.spaceId, session.venueId),
             href: session.private
                 ? undefined
@@ -149,6 +158,65 @@ export function schoolEventSessions(
                     : undefined,
         });
     }
+    return [...unique.values()];
+}
+
+/**
+ * Single-day events that opt in with `calendar` and have a confirmed start and end time.
+ * Events with EventSession records are handled by `schoolEventSessions`, so nothing appears twice.
+ */
+export function eventCalendarSessions(
+    events: readonly EventCard[],
+): CalendarSession[] {
+    const sessions: CalendarSession[] = [];
+    for (const event of events) {
+        if (
+            !event.calendar ||
+            event.isSeries ||
+            (event.sessions?.length ?? 0) > 0 ||
+            !isPublicEvent(event.slug)
+        )
+            continue;
+        const window = eventWindow(event);
+        if (
+            !window ||
+            !window.startTime ||
+            !window.endTime ||
+            window.startDate !== window.endDate ||
+            window.endTime <= window.startTime
+        )
+            continue;
+        sessions.push({
+            id: `event-${event.id}`,
+            date: window.startDate,
+            day: dayIndex(window.startDate),
+            start: window.startTime,
+            end: window.endTime,
+            name: event.calendar.name,
+            title: event.title,
+            teacher: event.teacher,
+            style: event.calendar.style,
+            type: event.calendar.type ?? "event",
+            venueBooking: false,
+            href: `/events/${event.slug}`,
+            admission: event.calendar.admission,
+            label: event.calendar.label ?? event.calendar.name,
+        });
+    }
+    return sessions;
+}
+
+/** Everything the Timetable shows from Events data: session records plus opted-in single events. */
+export function calendarSessionsForEvents(
+    events: readonly EventCard[],
+    privateBookings: readonly EventSession[] = [],
+): CalendarSession[] {
+    const unique = new Map(
+        [
+            ...schoolEventSessions(events, privateBookings),
+            ...eventCalendarSessions(events),
+        ].map((session) => [session.id, session]),
+    );
     return [...unique.values()];
 }
 
@@ -181,7 +249,7 @@ export function sessionsForDates(
                 href: item.href,
                 title: item.title,
                 teacher: item.teacher,
-                bookingUrl: item.bookingUrl,
+                admission: item.admission,
             });
         };
         data.classes.forEach((original, index) => {

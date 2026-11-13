@@ -12,13 +12,18 @@ import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { EventInlineGallery } from "@/components/events/EventInlineGallery";
+import { EventSeriesSections } from "@/components/events/EventSeriesSections";
 import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { SectionedPage } from "@/components/ui/SectionedPage";
 import { EventPhotoCarousel } from "@/components/events/EventPhotoCarousel";
 import { EventProgramme } from "@/components/events/EventProgramme";
-import { isEventBeforeToday } from "@/lib/events/event-cta";
+import { isEventEnded } from "@/lib/events/event-dates";
+import { withImageSizes } from "@/lib/events/image-dimensions";
+import { latestSession, longDate, sessionTimeRange } from "@/lib/events/series";
 import { isPublicEvent } from "@/content/event-visibility";
+
+/* Event order and Past Event labels depend on the date, so these pages refresh every 15 minutes. All three use the same value so they never disagree for long. */
+export const revalidate = 900;
 
 type PageProps = {
     params: Promise<{ slug: string }>;
@@ -75,13 +80,18 @@ export default async function EventDetailPage({ params }: PageProps) {
         descriptionCtasByIndex.set(cta.paragraphIndex, existing);
     }
 
-    const hasPortraitHero =
-        !event.gallery?.length &&
-        Boolean(
-            event.image.width &&
-            event.image.height &&
-            event.image.height > event.image.width,
-        );
+    /* One static hero image. Sizes come from the file when the content data omits them. */
+    const [heroImage] = withImageSizes([event.image]);
+    const hasPortraitHero = Boolean(
+        heroImage.width &&
+        heroImage.height &&
+        heroImage.height > heroImage.width,
+    );
+    /* Extra photos go in the gallery below About; the hero image is not repeated there. */
+    const galleryImages = withImageSizes(
+        (event.gallery ?? []).filter((image) => image.src !== event.image.src),
+    );
+    const latest = event.isSeries ? latestSession(event.sessions) : undefined;
     const heroDate = event.dateIso
         ? new Intl.DateTimeFormat("en-GB", {
               weekday: "long",
@@ -91,17 +101,41 @@ export default async function EventDetailPage({ params }: PageProps) {
               timeZone: "UTC",
           }).format(new Date(`${event.dateIso}T12:00:00Z`))
         : event.date;
-    const facts = [
-        [detailLabels.date, heroDate],
-        ["Time", event.time],
-        ["Teacher", event.teacher],
-        [detailLabels.location, event.location],
-    ].filter(([, value]) => Boolean(value));
-
-    const showFooterCtas =
-        !isEventBeforeToday(event.dateIso) &&
-        !event.descriptionCtas?.length &&
-        Boolean((event.tickets?.length ?? 0) > 0 || event.bookNow);
+    /* Events with a separate time field show the plain date; older events keep their full date and time string. */
+    const latestWhen = latest?.date
+        ? [
+              longDate(latest.date),
+              latest.start ? sessionTimeRange(latest) : undefined,
+          ]
+              .filter(Boolean)
+              .join(", ")
+        : undefined;
+    const facts = (
+        event.isSeries
+            ? [
+                  ["Series", "Monthly series"],
+                  ["Latest concert", latestWhen],
+              ]
+            : [
+                  [detailLabels.date, event.time ? heroDate : event.date],
+                  ["Time", event.time],
+                  ["Teacher", event.teacher],
+                  ["Admission", event.admission],
+                  [detailLabels.location, event.location],
+              ]
+    ).filter(([, value]) => Boolean(value));
+    const overline = [event.category, event.discipline]
+        .filter(Boolean)
+        .join(" · ");
+    const isPast = !event.isSeries && isEventEnded(event);
+    /* Booking lives in the hero only. A button pointing back at this page is not a booking link. */
+    const ownPage = `/events/${event.slug}`;
+    const bookingButtons =
+        event.tickets && event.tickets.length > 0
+            ? event.tickets
+            : event.bookingPending || event.bookNow.href === ownPage
+              ? []
+              : [event.bookNow];
 
     return (
         <PageShell>
@@ -113,194 +147,189 @@ export default async function EventDetailPage({ params }: PageProps) {
                     >
                         {detailLabels.backLink}
                     </Link>
-                    {hasPortraitHero ? (
-                        <div className="mt-6 grid items-center gap-8 md:grid-cols-[minmax(0,22rem)_1fr] md:gap-10 lg:grid-cols-[minmax(0,24rem)_1fr] lg:gap-14">
-                            <Image
-                                src={event.image.src}
-                                alt={event.image.alt}
-                                width={event.image.width}
-                                height={event.image.height}
-                                className="h-auto w-full max-w-sm rounded-sm border border-taupe/20 bg-blush/20 shadow-sm md:max-w-none"
-                                sizes="(max-width: 768px) 100vw, 384px"
-                                priority
-                            />
-                            <div>
+                    <div
+                        className={`mt-6 grid gap-8 md:gap-10 lg:gap-14 ${
+                            hasPortraitHero
+                                ? "items-center md:grid-cols-[minmax(0,22rem)_1fr] lg:grid-cols-[minmax(0,24rem)_1fr]"
+                                : "items-start md:grid-cols-2"
+                        }`}
+                    >
+                        <Image
+                            src={heroImage.src}
+                            alt={heroImage.alt}
+                            width={heroImage.width ?? 0}
+                            height={heroImage.height ?? 0}
+                            className="h-auto w-full max-w-sm rounded-sm shadow-sm md:max-w-none"
+                            style={{ width: "100%", height: "auto" }}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority
+                        />
+                        <div>
+                            {overline && (
                                 <p className="text-overline text-rose">
-                                    {[event.category, event.discipline]
-                                        .filter(Boolean)
-                                        .join(" · ")}
+                                    {overline}
                                 </p>
-                                <h1 className="text-h1 mt-2 text-charcoal">
-                                    {event.title}
-                                </h1>
-                                {event.subtitle && (
-                                    <p className="text-body-lg mt-3 text-charcoal/80">
-                                        {event.subtitle}
-                                    </p>
-                                )}
-                                <dl className="mt-6 divide-y divide-taupe/25 border-y border-taupe/25">
-                                    {facts.map(([label, value]) => (
-                                        <div
-                                            key={label}
-                                            className="grid gap-x-4 gap-y-0.5 py-3 sm:grid-cols-[6rem_1fr]"
-                                        >
-                                            <dt className="text-overline text-rose">
-                                                {label}
-                                            </dt>
-                                            <dd className="text-body text-charcoal">
-                                                {value}
-                                            </dd>
-                                        </div>
-                                    ))}
-                                </dl>
-                                {!isEventBeforeToday(event.dateIso) && (
-                                    <Button
-                                        {...event.bookNow}
-                                        className="mt-6 w-full sm:w-auto sm:min-w-48"
-                                    />
-                                )}
-                            </div>
-                        </div>
-                    ) : (
-                        <>
-                            <time
-                                dateTime={event.dateIso}
-                                className="text-overline text-rose mt-6 block"
-                            >
-                                {event.date}
-                            </time>
-                            <h1 className="text-h1 mt-2 max-w-3xl text-charcoal">
+                            )}
+                            <h1 className="text-h1 mt-2 text-charcoal">
                                 {event.title}
                             </h1>
                             {event.subtitle && (
-                                <p className="text-body-lg mt-3 max-w-3xl text-charcoal/80">
+                                <p className="text-body-lg mt-3 text-charcoal/80">
                                     {event.subtitle}
                                 </p>
                             )}
-                            {event.location && (
-                                <p className="text-body mt-3 text-charcoal/60">
-                                    {detailLabels.location}: {event.location}
+                            {event.freeAdmission && (
+                                <p className="text-overline mt-4 inline-block rounded-full border border-rose/50 px-3 py-1 text-rose">
+                                    Free admission
                                 </p>
                             )}
-                        </>
-                    )}
-
-                    {hasPortraitHero ? null : event.gallery &&
-                      event.gallery.length > 0 ? (
-                        <AutoPlayGallery
-                            images={event.gallery}
-                            label={`${event.title} photos`}
-                            className="mt-8 md:mt-10"
-                            frameClassName="aspect-[16/9] w-full"
-                            sizes="(max-width: 1280px) 100vw, 1280px"
-                        />
-                    ) : (
-                        <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-sm bg-blush/30 md:mt-10 md:aspect-[21/9]">
-                            <Image
-                                src={event.image.src}
-                                alt={event.image.alt}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 1280px) 100vw, 1280px"
-                                priority
-                            />
+                            <dl className="mt-6 divide-y divide-taupe/25 border-y border-taupe/25">
+                                {facts.map(([label, value]) => (
+                                    <div
+                                        key={label}
+                                        className="grid gap-x-4 gap-y-0.5 py-3 sm:grid-cols-[6rem_1fr]"
+                                    >
+                                        <dt className="text-overline text-rose">
+                                            {label}
+                                        </dt>
+                                        <dd className="text-body text-charcoal">
+                                            {value}
+                                        </dd>
+                                    </div>
+                                ))}
+                            </dl>
+                            {event.isSeries ? null : isPast ? (
+                                <p className="text-overline mt-6 text-charcoal/60">
+                                    Past Event
+                                </p>
+                            ) : bookingButtons.length > 0 ? (
+                                <div className="mt-6 flex flex-wrap gap-3">
+                                    {bookingButtons.map((cta) => (
+                                        <Button
+                                            key={`${cta.label}-${cta.href}`}
+                                            {...cta}
+                                            className="w-full sm:w-auto sm:min-w-48"
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <p className="text-body mt-6 text-charcoal/60">
+                                    Booking details coming soon
+                                </p>
+                            )}
                         </div>
-                    )}
+                    </div>
                 </Container>
             </section>
 
-            <section
-                className={hasPortraitHero ? "py-10 md:py-14" : "py-16 md:py-24"}
-            >
+            <section className="py-10 md:py-14">
                 <Container>
-                    {event.excerpt && !hasPortraitHero && (
+                    {event.excerpt && !event.subtitle && (
                         <p className="text-body-lg text-charcoal/80">
                             {event.excerpt}
                         </p>
                     )}
-                    {event.description && (
-                        <div
-                            className={
-                                hasPortraitHero
-                                    ? "w-full space-y-4"
-                                    : "mt-6 space-y-4"
-                            }
-                        >
-                            {event.description.map((paragraph, index) => {
-                                const heading = paragraph.startsWith("# ")
-                                    ? paragraph.slice(2)
-                                    : null;
-                                const inlineGallery = heading
-                                    ? event.inlineGalleries?.find(
-                                          (entry) =>
-                                              entry.beforeHeading === heading,
-                                      )
-                                    : undefined;
+                    {event.isSeries ? (
+                        <EventSeriesSections event={event} />
+                    ) : (
+                        event.description && (
+                            <div className="mt-6 w-full space-y-4 first:mt-0">
+                                {event.description.map((paragraph, index) => {
+                                    const heading = paragraph.startsWith("# ")
+                                        ? paragraph.slice(2)
+                                        : null;
+                                    const inlineGallery = heading
+                                        ? event.inlineGalleries?.find(
+                                              (entry) =>
+                                                  entry.beforeHeading ===
+                                                  heading,
+                                          )
+                                        : undefined;
 
-                                return (
-                                    <Fragment key={`block-${index}`}>
-                                        {inlineGallery &&
-                                            inlineGallery.images.length > 0 &&
-                                            (inlineGallery.variant ===
-                                            "autoplay" ? (
-                                                <AutoPlayGallery
-                                                    images={
-                                                        inlineGallery.images
-                                                    }
-                                                    label={`${heading} photos`}
-                                                    naturalSize
-                                                    sizes="(max-width: 1280px) 100vw, 768px"
-                                                />
+                                    return (
+                                        <Fragment key={`block-${index}`}>
+                                            {inlineGallery &&
+                                                inlineGallery.images.length >
+                                                    0 &&
+                                                (inlineGallery.variant ===
+                                                "autoplay" ? (
+                                                    <AutoPlayGallery
+                                                        images={
+                                                            inlineGallery.images
+                                                        }
+                                                        label={`${heading} photos`}
+                                                        naturalSize
+                                                        sizes="(max-width: 1280px) 100vw, 768px"
+                                                    />
+                                                ) : (
+                                                    <EventPhotoCarousel
+                                                        images={withImageSizes(
+                                                            inlineGallery.images,
+                                                        )}
+                                                        label={`${heading} images`}
+                                                        display="natural"
+                                                    />
+                                                ))}
+                                            {heading ? (
+                                                <h2 className="text-h3 pt-4 text-charcoal first:pt-0">
+                                                    {heading}
+                                                </h2>
                                             ) : (
-                                                <EventInlineGallery
-                                                    images={
-                                                        inlineGallery.images
-                                                    }
-                                                    label={`${heading} schedule`}
-                                                />
-                                            ))}
-                                        {heading ? (
-                                            <h2 className="text-h3 pt-4 text-charcoal first:pt-0">
-                                                {heading}
-                                            </h2>
-                                        ) : (
-                                            <p className="text-body text-charcoal/75">
-                                                {paragraph}
-                                            </p>
-                                        )}
-                                        {!heading &&
-                                            !isEventBeforeToday(
-                                                event.dateIso,
-                                            ) &&
-                                            descriptionCtasByIndex
-                                                .get(index)
-                                                ?.map((cta) => {
-                                                    const {
-                                                        paragraphIndex: _i,
-                                                        inactive,
-                                                        ...buttonProps
-                                                    } = cta;
-                                                    return (
-                                                        <Button
-                                                            key={`${index}-${cta.label}-${cta.href ?? "inactive"}`}
-                                                            {...buttonProps}
-                                                            inactive={inactive}
-                                                            className="mt-3 !py-2.5"
-                                                        />
-                                                    );
-                                                })}
-                                    </Fragment>
-                                );
-                            })}
-                        </div>
+                                                <p className="text-body text-charcoal/75">
+                                                    {paragraph}
+                                                </p>
+                                            )}
+                                            {!heading &&
+                                                !isPast &&
+                                                descriptionCtasByIndex
+                                                    .get(index)
+                                                    ?.map((cta) => {
+                                                        const {
+                                                            paragraphIndex: _i,
+                                                            inactive,
+                                                            ...buttonProps
+                                                        } = cta;
+                                                        return (
+                                                            <Button
+                                                                key={`${index}-${cta.label}-${cta.href ?? "inactive"}`}
+                                                                {...buttonProps}
+                                                                inactive={
+                                                                    inactive
+                                                                }
+                                                                className="mt-3 !py-2.5"
+                                                            />
+                                                        );
+                                                    })}
+                                        </Fragment>
+                                    );
+                                })}
+                            </div>
+                        )
                     )}
-                    {event.photoCarousel && (
+                    {event.photoCarousel ? (
                         <EventPhotoCarousel
                             images={event.photoCarousel.images}
                             label={event.photoCarousel.label}
+                            display={event.photoCarousel.display}
                             className="mt-10 md:mt-12"
                         />
-                    )}
+                    ) : galleryImages.length > 1 ? (
+                        <EventPhotoCarousel
+                            images={galleryImages}
+                            label="Event gallery"
+                            display="natural"
+                            className="mt-10 md:mt-12"
+                        />
+                    ) : galleryImages.length === 1 ? (
+                        <Image
+                            src={galleryImages[0].src}
+                            alt={galleryImages[0].alt}
+                            width={galleryImages[0].width ?? 0}
+                            height={galleryImages[0].height ?? 0}
+                            className="mt-10 h-auto max-h-[520px] w-auto max-w-full rounded-sm md:mt-12"
+                            sizes="(max-width: 1280px) 100vw, 1280px"
+                        />
+                    ) : null}
                     {event.teacherBio && (
                         <section
                             aria-labelledby="teacher-bio"
@@ -342,41 +371,8 @@ export default async function EventDetailPage({ params }: PageProps) {
                             />
                         </section>
                     )}
-                    <EventProgramme sessions={event.sessions ?? []} />
-                    {!hasPortraitHero && (
-                        <dl className="mt-8 space-y-3 rounded-sm border border-taupe/30 p-6">
-                            <div>
-                                <dt className="text-overline text-rose">
-                                    {detailLabels.date}
-                                </dt>
-                                <dd className="text-body mt-1 text-charcoal">
-                                    {event.date}
-                                </dd>
-                            </div>
-                            {event.location && (
-                                <div>
-                                    <dt className="text-overline text-rose">
-                                        {detailLabels.location}
-                                    </dt>
-                                    <dd className="text-body mt-1 text-charcoal">
-                                        {event.location}
-                                    </dd>
-                                </div>
-                            )}
-                        </dl>
-                    )}
-                    {showFooterCtas && (
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            {(event.tickets && event.tickets.length > 0
-                                ? event.tickets
-                                : [event.bookNow]
-                            ).map((cta) => (
-                                <Button
-                                    key={`${cta.label}-${cta.href}`}
-                                    {...cta}
-                                />
-                            ))}
-                        </div>
+                    {!event.isSeries && (
+                        <EventProgramme sessions={event.sessions ?? []} />
                     )}
                     {(event.organiser ||
                         event.partners?.length ||

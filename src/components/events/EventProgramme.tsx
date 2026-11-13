@@ -3,13 +3,27 @@ import type { EventSession } from "@/content/types";
 import { siteContent } from "@/content/site";
 import { spaceName, venueName, venueAddress, TIMETABLE_TIME_ZONE } from "@/content/venues";
 
-export function EventProgramme({ sessions }: { sessions: readonly EventSession[] }) {
+export function EventProgramme({
+  sessions,
+  heading,
+  id = "event-programme",
+  newestFirst = false,
+}: {
+  sessions: readonly EventSession[];
+  /** Defaults to the shared Programme label. */
+  heading?: string;
+  id?: string;
+  newestFirst?: boolean;
+}) {
   const labels = siteContent.pages.events.detailLabels;
   const visible = sessions.filter((session) => session.published === true && !session.cancelled && !session.private)
-    .toSorted((a, b) => (a.date ?? "9999").localeCompare(b.date ?? "9999") || (a.start ?? "").localeCompare(b.start ?? ""));
+    .toSorted((a, b) => {
+      const order = (a.date ?? "9999").localeCompare(b.date ?? "9999") || (a.start ?? "").localeCompare(b.start ?? "");
+      return newestFirst ? -order : order;
+    });
   if (!visible.length) return null;
-  return <section className="mt-10 space-y-6" aria-labelledby="event-programme">
-    <h2 id="event-programme" className="text-h3 text-charcoal">{labels.programme}</h2>
+  return <section className="mt-10 space-y-6" aria-labelledby={id}>
+    <h2 id={id} className="text-h3 text-charcoal">{heading ?? labels.programme}</h2>
     {visible.map((session) => {
       const venue = venueName(session.venueId);
       const details = [

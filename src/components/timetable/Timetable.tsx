@@ -1,6 +1,6 @@
 import { siteContent } from "@/content/site";
 import { eventSessions } from "@/content/event-sessions";
-import { schoolEventSessions } from "@/lib/class-calendar/sessions";
+import { calendarSessionsForEvents } from "@/lib/class-calendar/sessions";
 import { ClassCalendar } from "./ClassCalendar";
 import { connection } from "next/server";
 import { ServerTimeProvider } from "@/lib/class-calendar/use-now";
@@ -14,7 +14,7 @@ export async function Timetable() {
     return (
         <ServerTimeProvider initialTime={initialTime}>
             <ClassCalendar
-                eventSessions={schoolEventSessions(
+                eventSessions={calendarSessionsForEvents(
                     siteContent.pages.events.items,
                     eventSessions.filter((session) => session.private),
                 )}

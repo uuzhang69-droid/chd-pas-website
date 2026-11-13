@@ -221,6 +221,12 @@
   border-color: #e8d0ad #e8d0ad #e8d0ad #c39c64;
 }
 
+/* Events and workshops from the Events data share one muted style, whatever their discipline. */
+.class-calendar-section .session-card.event-card {
+  background: #f4efe9;
+  border-color: #ded2ce #ded2ce #ded2ce var(--wine);
+}
+
 /* ---------- Footer ---------- */
 .class-calendar-section .calendar-footer {
   border-top: 1px solid var(--line);
