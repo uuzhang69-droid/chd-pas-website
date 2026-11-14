@@ -229,7 +229,7 @@ export function ClassCalendar({
                                 {!e.private &&
                                     !e.bookingPending &&
                                     (e.href ||
-                                        (e.bookingUrl && status !== "ended") ||
+                                        (e.bookingUrl && bookable) ||
                                         bookable) && (
                                         <span className="session-action">
                                             {e.href
@@ -325,7 +325,7 @@ export function ClassCalendar({
                                 </Link>
                             );
                         /* One-off workshop booked on another site: open that page in a new tab. */
-                        if (e.bookingUrl && status !== "ended")
+                        if (e.bookingUrl && bookable)
                             return (
                                 <a
                                     key={e.id}
