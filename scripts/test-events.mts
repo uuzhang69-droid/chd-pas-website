@@ -290,7 +290,7 @@ test("Calendar: no duplicates, same-day events ascending, series only by real se
         false,
     );
     // No external booking link reaches the calendar.
-    assert(all.every((s) => !("bookingUrl" in s)));
+    assert(all.filter((s) => s.href).every((s) => !s.bookingUrl));
     // Events data replaced the old hand-kept schedule.json rows.
     assert(
         !schedule.datedClasses?.some(

@@ -33,6 +33,10 @@ export type WeeklyClass = {
     teacher?: string;
     /** Admission note for one-off events, e.g. "Free admission". */
     admission?: string;
+    /** External booking page for one-off workshops that are booked off-site. */
+    bookingUrl?: string;
+    /** Booking link not available yet: show no booking action (not the ClassManager dialog). */
+    bookingPending?: boolean;
 };
 export type DatedClass = Omit<
     WeeklyClass,
@@ -60,6 +64,9 @@ export type CalendarSession = {
     title?: string;
     teacher?: string;
     admission?: string;
+    /** Opens in a new tab; used by one-off workshops booked on another site. */
+    bookingUrl?: string;
+    bookingPending?: boolean;
     /** Type or series line for event cards, e.g. "Lunchtime Concert Series". */
     label?: string;
     private?: boolean;
@@ -250,6 +257,8 @@ export function sessionsForDates(
                 title: item.title,
                 teacher: item.teacher,
                 admission: item.admission,
+                bookingUrl: item.bookingUrl,
+                bookingPending: item.bookingPending,
             });
         };
         data.classes.forEach((original, index) => {

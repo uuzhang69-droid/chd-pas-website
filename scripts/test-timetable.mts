@@ -445,8 +445,8 @@ test("November workshop changes are one-off, complete and unique", () => {
     assert.deepEqual(
         november.map((x) => [x.date, x.start, x.end, x.name]),
         [
-            ["2026-11-14", "15:00", "20:00", "Tango Workshop"],
-            ["2026-11-21", "15:00", "20:00", "Tango Workshop"],
+            ["2026-11-14", "15:00", "20:00", "¡Ojito! Workshops & Practilonga"],
+            ["2026-11-21", "15:00", "20:00", "¡Ojito! Workshops & Practilonga"],
             ["2026-11-28", "15:00", "18:00", "Acting Workshop"],
         ],
     );
@@ -459,8 +459,18 @@ test("28 November shows the workshop and the evening event separately", () => {
     assert.deepEqual(
         day.map((x) => [x.start, x.end, x.name, x.href]),
         [
-            ["15:00", "18:00", "Acting Workshop", "/events/an-actors-work-with-an-object"],
-            ["19:30", "20:00", "Within One Room", "/events/within-one-room-stillness-in-motion"],
+            [
+                "15:00",
+                "18:00",
+                "Acting Workshop",
+                "/events/an-actors-work-with-an-object",
+            ],
+            [
+                "19:30",
+                "20:00",
+                "Within One Room",
+                "/events/within-one-room-stillness-in-motion",
+            ],
         ],
     );
     assert.equal(day[1].admission, "Free admission");
@@ -492,4 +502,24 @@ test("published timed lessons and event sessions have no overlapping school inte
                 );
             }
     }
+});
+
+test("both November ¡Ojito! workshop dates link to the Tango Fever booking page", () => {
+    const november = sessionsForDates(schedule, dates(2026, 11), projected);
+    const tango = november.filter(
+        (x) => x.name === "¡Ojito! Workshops & Practilonga",
+    );
+    assert.deepEqual(
+        tango.map((x) => [x.date, x.bookingUrl]),
+        [
+            [
+                "2026-11-14",
+                "https://www.tango-fever.com/london-milongas/rodrigo-fonti/",
+            ],
+            [
+                "2026-11-21",
+                "https://www.tango-fever.com/london-milongas/rodrigo-fonti/",
+            ],
+        ],
+    );
 });

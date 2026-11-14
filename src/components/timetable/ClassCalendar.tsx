@@ -226,11 +226,22 @@ export function ClassCalendar({
                                         {e.occupancyEnd ?? e.end}
                                     </span>
                                 )}
-                                {!e.private && (e.href || bookable) && (
-                                    <span className="session-action">
-                                        {e.href
-                                            ? "Event details →"
-                                            : "Booking options ↗"}
+                                {!e.private &&
+                                    !e.bookingPending &&
+                                    (e.href ||
+                                        (e.bookingUrl && status !== "ended") ||
+                                        bookable) && (
+                                        <span className="session-action">
+                                            {e.href
+                                                ? "Event details →"
+                                                : e.bookingUrl
+                                                  ? "Book Now ↗"
+                                                  : "Booking options ↗"}
+                                        </span>
+                                    )}
+                                {!e.private && e.bookingPending && (
+                                    <span className="session-kind">
+                                        Booking details coming soon
                                     </span>
                                 )}
                                 {!e.private &&
@@ -313,7 +324,20 @@ export function ClassCalendar({
                                     {eventContents}
                                 </Link>
                             );
-                        if (!bookable)
+                        /* One-off workshop booked on another site: open that page in a new tab. */
+                        if (e.bookingUrl && status !== "ended")
+                            return (
+                                <a
+                                    key={e.id}
+                                    href={e.bookingUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={className}
+                                >
+                                    {contents}
+                                </a>
+                            );
+                        if (e.bookingPending || !bookable)
                             return (
                                 <div key={e.id} className={className}>
                                     {contents}
