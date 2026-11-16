@@ -12,10 +12,11 @@ const mainImage = {
 };
 
 /**
- * Official booking page. Not supplied yet: set this one value and the detail page
- * switches to a real Book Now button (cards always say View Details).
+ * Official Eventbrite page. Single source for every Book Now button for this event: the detail page
+ * and the calendar both read it (cards always say View Details).
  */
-export const WITHIN_ONE_ROOM_BOOKING_URL: string | undefined = undefined;
+export const WITHIN_ONE_ROOM_BOOKING_URL: string | undefined =
+    "https://www.eventbrite.co.uk/e/within-one-room-stillness-in-motion-tickets-2004916771033";
 
 const bookNow: EventCard["bookNow"] = WITHIN_ONE_ROOM_BOOKING_URL
     ? {
