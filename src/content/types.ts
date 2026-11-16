@@ -225,6 +225,8 @@ export type FormField = {
     placeholder?: string;
     required?: boolean;
     options?: Array<{ label: string; value: string }>;
+    /** Show (and accept) this field only while another field has the given value. */
+    showWhen?: { field: string; value: string };
 };
 
 export type FacultyMember = {

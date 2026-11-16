@@ -93,12 +93,12 @@ export const siteStructure = {
                     parentLink: false,
                     children: [
                         {
-                            label: "@@COPY:global.navigation.items.venue_hire.children.space_hire.label",
+                            label: "@@COPY:global.navigation.items.venue_hire.children.overview.label",
                             href: "/venue-hire",
                         },
                         {
-                            label: "@@COPY:global.navigation.items.venue_hire.children.space_booking.label",
-                            href: "/booking",
+                            label: "@@COPY:global.navigation.items.venue_hire.children.make_an_enquiry.label",
+                            href: "/contact?subject=venue-hire",
                         },
                     ],
                 },
@@ -111,11 +111,11 @@ export const siteStructure = {
                             label: "@@COPY:global.navigation.items.about.children.about_us.label",
                             href: "/about",
                         },
-                        {
-                            label: "@@COPY:global.navigation.items.about.children.contact.label",
-                            href: "/contact",
-                        },
                     ],
+                },
+                {
+                    label: "@@COPY:global.navigation.items.contact.label",
+                    href: "/contact",
                 },
             ],
             bookTrial: {
@@ -195,12 +195,14 @@ export const siteStructure = {
                 wechat: "@@COPY:global.footer.contact.wechat",
                 email: "@@COPY:global.footer.contact.email",
             },
+            stayInTouch: {
+                title: "@@COPY:global.footer.stayintouch.title",
+            },
             newsletter: {
                 title: "@@COPY:global.footer.newsletter.title",
                 description: "@@COPY:global.footer.newsletter.description",
                 placeholder: "@@COPY:global.footer.newsletter.placeholder",
                 submitLabel: "@@COPY:global.footer.newsletter.submitlabel",
-                privacyNote: "We respect your privacy. Unsubscribe anytime.",
             },
             legal: [
                 {
@@ -983,7 +985,7 @@ export const siteStructure = {
                 all: "All",
                 events: "Events",
                 workshops: "Workshops",
-                masterclass: "Masterclass",
+                masterclass: "Masterclasses",
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
@@ -2680,7 +2682,11 @@ export const siteStructure = {
             },
             story: {
                 title: "@@COPY:pages.about.story.title",
-                paragraphs: ["@@COPY:pages.about.story.paragraphs.0"],
+                paragraphs: [
+                    "@@COPY:pages.about.story.paragraphs.0",
+                    "@@COPY:pages.about.story.paragraphs.1",
+                    "@@COPY:pages.about.story.paragraphs.2",
+                ],
                 gallery: [
                     {
                         src: "/images/about/story-gallery-01.jpg",
@@ -2900,7 +2906,19 @@ export const siteStructure = {
                                 label: "@@COPY:pages.contact.form.fields.subject.options.events.label",
                                 value: "events",
                             },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.other_enquiry.label",
+                                value: "other",
+                            },
                         ],
+                    },
+                    {
+                        name: "subjectOther",
+                        label: "@@COPY:pages.contact.form.fields.subject_other.label",
+                        type: "text",
+                        placeholder:
+                            "@@COPY:pages.contact.form.fields.subject_other.placeholder",
+                        showWhen: { field: "subject", value: "other" },
                     },
                     {
                         name: "message",
