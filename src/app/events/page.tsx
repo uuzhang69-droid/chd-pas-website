@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { EventsListing } from "@/components/events/EventsListing";
@@ -10,10 +11,11 @@ export const revalidate = 900;
 
 const { events } = siteContent.pages;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: events.meta.title,
   description: events.meta.description,
-};
+  path: "/events",
+});
 
 export default function EventsPage() {
   return (

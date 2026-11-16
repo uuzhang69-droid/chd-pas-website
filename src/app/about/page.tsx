@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
@@ -10,10 +11,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const { about } = siteContent.pages;
 const { aboutTeaser } = siteContent.home;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: about.meta.title,
   description: about.meta.description,
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

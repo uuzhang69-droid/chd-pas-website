@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat, EB_Garamond } from "next/font/google";
 import { WhatsAppSupportWidget } from "@/components/support/WhatsAppSupportWidget";
 import { siteContent } from "@/content/site";
+import { SITE_NAME, SITE_URL, isIndexingEnabled } from "@/lib/seo/site";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -26,11 +27,15 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
   title: {
-    default: siteContent.meta.siteName,
-    template: `%s | ${siteContent.meta.siteName}`,
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
   },
   description: siteContent.meta.defaultDescription,
+  /* Only the real production site may be indexed. Local, preview and unconfigured hosts stay noindex. */
+  ...(isIndexingEnabled() ? {} : { robots: { index: false, follow: false } }),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllClassSlugs, getClassBySlug } from "@/content/helpers";
 import { siteContent } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -20,10 +23,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const style = getClassBySlug(slug);
   if (!style) return {};
-  return {
+  return pageMetadata({
     title: style.name,
     description: style.metaDescription,
-  };
+    path: `/classes/${slug}`,
+    image: style.hero.image,
+  });
 }
 
 export default async function ClassStylePage({ params }: PageProps) {
@@ -35,6 +40,15 @@ export default async function ClassStylePage({ params }: PageProps) {
 
   return (
     <PageShell>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          {
+            name: siteContent.pages.classesInfo.meta.title,
+            path: "/classes-info",
+          },
+          { name: style.name, path: `/classes/${slug}` },
+        ])}
+      />
       <section className="relative overflow-hidden bg-charcoal text-ivory">
         <div className="absolute inset-0">
           <Image
