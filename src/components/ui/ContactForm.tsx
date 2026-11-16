@@ -4,6 +4,8 @@ import { useCallback, useState } from "react";
 import { siteContent } from "@/content/site";
 import type { FormField } from "@/content/types";
 import { TurnstileField } from "@/components/security/TurnstileField";
+import { contactFailureMessage } from "@/lib/contact/messages";
+import { validateContact } from "@/lib/contact/validate";
 
 type ContactFormProps = {
     fields: FormField[];
@@ -27,28 +29,10 @@ type Status = "idle" | "submitting" | "success" | "error";
 const PRIVACY_NOTE =
     "We’ll use the information you provide to respond to your enquiry. We won’t add you to our marketing mailing list.";
 
-function errorMessage(code: string | undefined, retryAfter?: number): string {
-    const { email, phone } = siteContent.pages.contact.details;
-    const fallback = `You can also email ${email} or call ${phone}.`;
-    switch (code) {
-        case "rate_limited": {
-            const minutes = retryAfter
-                ? Math.max(1, Math.ceil(retryAfter / 60))
-                : undefined;
-            return `You have sent several messages in a short time. Please try again${minutes ? ` in about ${minutes} minute${minutes === 1 ? "" : "s"}` : " later"}. ${fallback}`;
-        }
-        case "not_configured":
-            return `Our contact form is not available right now, and your message has not been sent. ${fallback}`;
-        case "bot":
-            return "We could not confirm that you are a person. Please reload the page and try again.";
-        case "form_expired":
-            return "This form has expired. Please reload the page and try again.";
-        case "validation":
-            return "Please check the highlighted fields.";
-        default:
-            return `Sorry, your message could not be sent. Please try again in a few minutes. ${fallback}`;
-    }
-}
+const inputBase =
+    "mt-2 w-full rounded-sm border bg-ivory px-4 py-3 text-body outline-none";
+const inputOk = "border-taupe/50 focus:border-rose";
+const inputBad = "border-red-600 focus:border-red-600";
 
 export function ContactForm({
     fields,
@@ -67,7 +51,7 @@ export function ContactForm({
     const [token, setToken] = useState("");
     const [resetKey, setResetKey] = useState(0);
     const handleToken = useCallback((value: string) => setToken(value), []);
-    const requiredMarker = siteContent.ui.form.requiredMarker;
+    const requiredMarker = siteContent.ui.form.requiredMarker.trim();
     // Tracks the chosen subject so conditional fields (such as "Please specify") can appear.
     const [subject, setSubject] = useState(() =>
         fields
@@ -79,6 +63,26 @@ export function ContactForm({
     const isVisible = (field: FormField) =>
         !field.showWhen ||
         (field.showWhen.field === "subject" && subject === field.showWhen.value);
+    const visibleFields = fields.filter(isVisible);
+    const { email: fallbackEmail, phone: fallbackPhone } =
+        siteContent.pages.contact.details;
+
+    function clearError(name: string) {
+        setFieldErrors((current) => {
+            if (!current[name]) return current;
+            const { [name]: _removed, ...rest } = current;
+            void _removed;
+            return rest;
+        });
+    }
+
+    function focusFirstError(errors: Record<string, string>) {
+        const first = visibleFields.find((field) => errors[field.name]);
+        if (!first) return;
+        const element = document.getElementById(first.name);
+        element?.scrollIntoView({ block: "center", behavior: "smooth" });
+        element?.focus({ preventScroll: true });
+    }
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -89,17 +93,31 @@ export function ContactForm({
             t: String(renderedAt),
             turnstileToken: token,
         };
-        for (const field of fields.filter(isVisible))
+        for (const field of visibleFields)
             payload[field.name] = String(formData.get(field.name) ?? "");
 
+        // 1. Check every field in the browser first: all problems are shown at once and nothing is sent.
+        const { errors } = validateContact(fields, payload);
+        if (Object.keys(errors).length > 0) {
+            setFieldErrors(errors);
+            setMessage("Please check the highlighted fields.");
+            setStatus("error");
+            focusFirstError(errors);
+            return;
+        }
         if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !token) {
-            setMessage("Please complete the security check first.");
+            setFieldErrors({});
+            setMessage(
+                "Please wait for the security check to finish, then send your message again.",
+            );
             setStatus("error");
             return;
         }
+
         setStatus("submitting");
         setMessage("");
         setFieldErrors({});
+        let failure: Parameters<typeof contactFailureMessage>[0] = {};
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
@@ -111,17 +129,34 @@ export function ContactForm({
                 code?: string;
                 errors?: Record<string, string>;
                 retryAfter?: number;
+                ref?: string;
             };
             // Success is shown only when the server says the mail service accepted the message.
             if (response.ok && data.ok === true) {
                 setStatus("success");
                 return;
             }
-            setFieldErrors(data.errors ?? {});
-            setMessage(errorMessage(data.code, data.retryAfter));
+            failure = {
+                status: response.status,
+                code: data.code,
+                retryAfter: data.retryAfter,
+                ref: data.ref,
+            };
+            if (data.errors) {
+                setFieldErrors(data.errors);
+                focusFirstError(data.errors);
+            }
         } catch {
-            setMessage(errorMessage(undefined));
+            failure = {};
         }
+        // Everything typed stays in the form. The security check is single-use, so ask for a new one.
+        setMessage(
+            contactFailureMessage(failure, {
+                email: fallbackEmail,
+                phone: fallbackPhone,
+            }),
+        );
+        setToken("");
         setResetKey((value) => value + 1);
         setStatus("error");
     }
@@ -143,18 +178,28 @@ export function ContactForm({
             method="post"
             onSubmit={handleSubmit}
             className="space-y-5"
-            noValidate={false}
+            noValidate
         >
-            {fields.filter(isVisible).map((field) => {
+            {visibleFields.map((field) => {
                 const error = fieldErrors[field.name];
                 const describedBy = error ? `${field.name}-error` : undefined;
                 const common = {
                     id: field.name,
                     name: field.name,
-                    required: field.required,
+                    "aria-required": field.required || field.type === "email" ? true : undefined,
                     "aria-invalid": error ? true : undefined,
                     "aria-describedby": describedBy,
+                    onChange: (
+                        event: React.ChangeEvent<
+                            HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+                        >,
+                    ) => {
+                        clearError(field.name);
+                        if (field.name === "subject") setSubject(event.target.value);
+                    },
                 };
+                const className = `${inputBase} ${error ? inputBad : inputOk}`;
+                const isRequired = field.required === true || field.type === "email";
                 return (
                     <div key={field.name}>
                         <label
@@ -162,8 +207,12 @@ export function ContactForm({
                             className="text-small font-semibold text-charcoal"
                         >
                             {field.label}
-                            {field.required && (
-                                <span className="text-rose">
+                            {isRequired && (
+                                <span
+                                    className="font-bold text-red-600"
+                                    aria-hidden="true"
+                                >
+                                    {" "}
                                     {requiredMarker}
                                 </span>
                             )}
@@ -179,17 +228,12 @@ export function ContactForm({
                                         ? defaultMessage
                                         : undefined
                                 }
-                                className="mt-2 w-full rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
+                                className={className}
                             />
                         ) : field.type === "select" ? (
                             <select
                                 {...common}
-                                className="mt-2 w-full rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
-                                onChange={
-                                    field.name === "subject"
-                                        ? (event) => setSubject(event.target.value)
-                                        : undefined
-                                }
+                                className={className}
                                 defaultValue={
                                     field.name === "subject" &&
                                     field.options?.some(
@@ -225,13 +269,13 @@ export function ContactForm({
                                 type={field.type}
                                 maxLength={field.type === "email" ? 254 : 200}
                                 placeholder={field.placeholder}
-                                className="mt-2 w-full rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
+                                className={className}
                             />
                         )}
                         {error && (
                             <p
                                 id={describedBy}
-                                className="text-small mt-1 text-burgundy"
+                                className="text-small mt-1 font-medium text-red-700"
                             >
                                 {error}
                             </p>
@@ -266,7 +310,7 @@ export function ContactForm({
             {message && (
                 <p
                     role="alert"
-                    className="rounded-sm border border-burgundy/40 bg-ivory px-4 py-3 text-small text-burgundy"
+                    className="rounded-sm border border-red-300 bg-red-50 px-4 py-3 text-small text-red-800"
                 >
                     {message}
                 </p>

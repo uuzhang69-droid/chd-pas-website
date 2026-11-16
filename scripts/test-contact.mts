@@ -175,18 +175,26 @@ test("honeypot, too-fast and expired forms are refused", async () => {
     assert.equal(checkFormTiming(NOW - 10_000, NOW), "ok");
 });
 
-test("rate limits: two per ten minutes per address, three per hour per email", async () => {
+test("rate limits: four sends per ten minutes per address, three per hour per email", async () => {
     const { deps: d, sent } = deps();
-    for (let i = 0; i < 2; i++)
+    // Different visitors behind one address use different emails, so only the address limit applies.
+    for (let i = 0; i < 4; i++)
         assert.equal(
-            (await handleContact(d, { body: valid(), ip: "198.51.100.1" }))
-                .status,
+            (
+                await handleContact(d, {
+                    body: valid({ email: `person${i}@example.com` }),
+                    ip: "198.51.100.1",
+                })
+            ).status,
             200,
         );
-    const third = await handleContact(d, { body: valid(), ip: "198.51.100.1" });
-    assert.equal(third.status, 429);
-    assert.equal(typeof third.retryAfterSeconds, "number");
-    assert.equal(sent.length, 2);
+    const fifth = await handleContact(d, {
+        body: valid({ email: "person9@example.com" }),
+        ip: "198.51.100.1",
+    });
+    assert.equal(fifth.status, 429);
+    assert.equal(typeof fifth.retryAfterSeconds, "number");
+    assert.equal(sent.length, 4);
     // Different addresses, same email: the per-email limit stops the fourth message.
     const second = deps();
     let last = 200;
@@ -250,35 +258,20 @@ test("the Turnstile verifier calls Cloudflare and rejects missing tokens", async
         called,
         /challenges\.cloudflare\.com\/turnstile\/v0\/siteverify/,
     );
-    assert.deepEqual(await verifyTurnstile("secret", "", "1.2.3.4", fetchOk), {
-        ok: false,
-        reason: "failed",
-    });
+    const missing = await verifyTurnstile("secret", "", "1.2.3.4", fetchOk);
+    assert.equal(missing.ok, false);
+    assert.equal(!missing.ok && missing.reason, "failed");
     const fetchFail = (async () =>
         new Response(JSON.stringify({ success: false }), {
             status: 200,
         })) as unknown as typeof fetch;
-    assert.deepEqual(
-        await verifyTurnstile(
-            "secret",
-            "token-token-token",
-            "1.2.3.4",
-            fetchFail,
-        ),
-        { ok: false, reason: "failed" },
-    );
+    const refused = await verifyTurnstile("secret", "token-token-token", "1.2.3.4", fetchFail);
+    assert.equal(!refused.ok && refused.reason, "failed");
     const fetchThrow = (async () => {
         throw new Error("network");
     }) as unknown as typeof fetch;
-    assert.deepEqual(
-        await verifyTurnstile(
-            "secret",
-            "token-token-token",
-            "1.2.3.4",
-            fetchThrow,
-        ),
-        { ok: false, reason: "unavailable" },
-    );
+    const outage = await verifyTurnstile("secret", "token-token-token", "1.2.3.4", fetchThrow);
+    assert.equal(!outage.ok && outage.reason, "unavailable");
 });
 
 test("the Resend adapter maps provider answers without exposing the key", async () => {
@@ -521,4 +514,115 @@ test("production refuses to send when Turnstile is not configured, instead of sk
     );
     assert.equal(blocked.status, 403);
     assert.equal(blockedMail.sent.length, 0);
+});
+
+import { readFileSync } from "node:fs";
+import { contactFailureMessage } from "../src/lib/contact/messages";
+import { validateContact } from "../src/lib/contact/validate";
+
+test("validation reports every problem at once, with plain English messages", () => {
+    const empty = validateContact(fields, {});
+    assert.deepEqual(Object.keys(empty.errors).sort(), ["email", "message", "name", "subject"]);
+    assert.equal(empty.errors.subject, "Please choose a subject.");
+    assert.equal(empty.errors.name, "Please enter your full name.");
+    const bad = validateContact(fields, {
+        name: "A",
+        email: "not-an-email",
+        phone: "abc",
+        subject: "nonsense",
+        message: "short",
+    });
+    assert.deepEqual(Object.keys(bad.errors).sort(), ["email", "message", "name", "phone", "subject"]);
+    assert.match(bad.errors.email, /valid email address/);
+    assert.match(bad.errors.phone, /valid phone number/);
+    assert.match(bad.errors.message, /at least 10 characters/);
+    // The optional topic is only checked and kept while "Other enquiry" is chosen.
+    const other = validateContact(fields, { ...valid(), subject: "other", subjectOther: "Press" });
+    assert.deepEqual(other.errors, {});
+    assert.equal(other.values.subjectOther, "Press");
+    assert.equal(validateContact(fields, { ...valid(), subjectOther: "Press" }).values.subjectOther, "");
+});
+
+test("mistakes in the form never use up the sending limits, and the server answers with every field error", async () => {
+    const { deps: d, sent } = deps();
+    for (let i = 0; i < 10; i++) {
+        const result = await handleContact(d, { body: valid({ subject: "", name: "" }), ip: "198.51.100.40" });
+        assert.equal(result.status, 400);
+        assert.deepEqual(Object.keys(result.body.errors as object).sort(), ["name", "subject"]);
+    }
+    for (let i = 0; i < 4; i++)
+        assert.equal(
+            (await handleContact(d, { body: valid({ email: `p${i}@example.com` }), ip: "198.51.100.40" })).status,
+            200,
+        );
+    assert.equal(sent.length, 4);
+});
+
+test("failures carry a short reference, are logged with the cause and never log the visitor's text or a secret", async () => {
+    const logged: unknown[][] = [];
+    const original = console.error;
+    console.error = (...args: unknown[]) => void logged.push(args);
+    try {
+        const mailFail = deps({ newRef: () => "AB12CD34" }, mailer({ ok: false, reason: "rejected", status: 403, detail: "domain not verified" }));
+        const rejected = await handleContact(mailFail.deps, { body: valid({ message: "Private words about my enquiry" }), ip: "198.51.100.50" });
+        assert.equal(rejected.status, 502);
+        assert.equal(rejected.body.code, "mail_rejected");
+        assert.equal(rejected.body.ref, "AB12CD34");
+
+        const check = deps({
+            newRef: () => "EF56GH78",
+            turnstile: { secret: "very-secret-value", verify: async () => ({ ok: false, reason: "failed", codes: ["invalid-input-response"] }) },
+        });
+        const blocked = await handleContact(check.deps, { body: valid({ turnstileToken: "x".repeat(20) }), ip: "198.51.100.51" });
+        assert.equal(blocked.status, 403);
+        assert.equal(blocked.body.code, "bot");
+    } finally {
+        console.error = original;
+    }
+    const text = JSON.stringify(logged);
+    assert.match(text, /contact_mail_failed/);
+    assert.match(text, /domain not verified/);
+    assert.match(text, /contact_turnstile_failed/);
+    assert.match(text, /invalid-input-response/);
+    assert.ok(!text.includes("Private words"), "the visitor's message must not be logged");
+    assert.ok(!text.includes("very-secret-value"), "the secret must not be logged");
+});
+
+test("visitor messages: every error kind has plain wording, keeps the text, shows no internals", () => {
+    const contact = { email: "info@example.test", phone: "+44 0000 000000" };
+    const cases: Array<[Parameters<typeof contactFailureMessage>[0], RegExp]> = [
+        [{ status: 400, code: "validation" }, /highlighted fields/],
+        [{ status: 400, code: "form_expired" }, /reload/],
+        [{ status: 403, code: "bot" }, /security check/],
+        [{ status: 403, code: "bad_origin" }, /refresh/],
+        [{ status: 403 }, /refresh/],
+        [{ status: 429, code: "rate_limited", retryAfter: 170 }, /about 3 minutes/],
+        [{ status: 502, code: "mail_rejected", ref: "AB12CD34" }, /Reference: AB12CD34/],
+        [{ status: 502, code: "mail_unavailable", ref: "AB12CD34" }, /still in the form/],
+        [{ status: 502, code: "verification_unavailable", ref: "AB12CD34" }, /security check/],
+        [{ status: 503, code: "not_configured" }, /info@example.test/],
+        [{ status: 500 }, /try again/],
+        [{}, /could not reach the website/],
+    ];
+    for (const [failure, expected] of cases) {
+        const message = contactFailureMessage(failure, contact);
+        assert.match(message, expected, JSON.stringify(failure));
+        assert.ok(!/(resend|supabase|cloudflare|secret|api key|stack|onboarding@)/i.test(message), message);
+    }
+    for (const status of [502, 503]) assert.match(contactFailureMessage({ status, code: "x" }, contact), /info@example.test|still in the form/);
+});
+
+test("the form component: red required marker, custom checks before any request, focus on the first error, input kept", () => {
+    const source = readFileSync("src/components/ui/ContactForm.tsx", "utf8");
+    assert.ok(source.includes("text-red-600"));
+    assert.ok(source.includes("noValidate"));
+    assert.ok(source.includes("border-red-600"));
+    assert.ok(source.includes("aria-invalid"));
+    assert.ok(source.indexOf("validateContact(") > 0);
+    assert.ok(source.indexOf("validateContact(") < source.indexOf('fetch("/api/contact"'), "validate before sending");
+    assert.ok(source.includes("focusFirstError(errors)"));
+    // The form is not re-created on failure, so typed text stays; success is the only thing that replaces it.
+    assert.equal((source.match(/setStatus\("success"\)/g) ?? []).length, 1);
+    assert.ok(source.includes("We’ll use the information you provide to respond to your enquiry."));
+    assert.ok(!source.includes("/privacy"));
 });
