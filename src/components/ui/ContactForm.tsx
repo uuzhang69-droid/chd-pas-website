@@ -20,6 +20,13 @@ type ContactFormProps = {
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+/**
+ * Plain statement of what happens to the details sent through this form. It is not a consent box
+ * and it does not link to a privacy policy page, because none has been approved and published yet.
+ */
+const PRIVACY_NOTE =
+    "We’ll use the information you provide to respond to your enquiry. We won’t add you to our marketing mailing list.";
+
 function errorMessage(code: string | undefined, retryAfter?: number): string {
     const { email, phone } = siteContent.pages.contact.details;
     const fallback = `You can also email ${email} or call ${phone}.`;
@@ -272,6 +279,7 @@ export function ContactForm({
             >
                 {status === "submitting" ? "Sending…" : submitLabel}
             </button>
+            <p className="text-small text-charcoal/65">{PRIVACY_NOTE}</p>
             <noscript>
                 <p className="text-small text-charcoal/70">
                     This form needs JavaScript. Please email{" "}
