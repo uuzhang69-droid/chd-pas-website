@@ -166,8 +166,8 @@ export const siteSource = {
             contact: {
                 title: "Visit Us",
                 address: [
-                    "2nd Floor, County Hall Main Entrance",
-                    "Belvedere Road",
+                    "2nd Floor, County Hall,",
+                    "Belvedere Road,",
                     "London SE1 7PB",
                 ],
                 phone: "+44 7728 617531",
@@ -411,6 +411,17 @@ export const siteSource = {
             placeholder: "Email address",
             submitLabel: "Sign up",
             socialHeading: "Connect with us",
+        },
+
+        discover: {
+            overline: "Discover your next step",
+            title: "Find your rhythm",
+            description: "Dance, move and discover something new at County Hall.",
+            cta: {
+                label: "Explore our classes",
+                href: "/classes-info",
+                variant: "primary",
+            } satisfies CtaButton,
         },
     },
 

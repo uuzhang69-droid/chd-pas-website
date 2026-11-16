@@ -9,8 +9,8 @@ export const copy = {
     "global.footer.columns.school.links.careers.label": "Careers",
     "global.footer.columns.school.links.private_events.label": "Private Events",
     "global.footer.columns.school.title": "The School",
-    "global.footer.contact.address.0": "2nd Floor, County Hall Main Entrance",
-    "global.footer.contact.address.1": "Belvedere Road",
+    "global.footer.contact.address.0": "2nd Floor, County Hall,",
+    "global.footer.contact.address.1": "Belvedere Road,",
     "global.footer.contact.address.2": "London SE1 7PB",
     "global.footer.contact.email": "info@countyhalldancecentre.com",
     "global.footer.contact.phone": "+44 7728 617531",
@@ -157,6 +157,11 @@ export const copy = {
     "home.hero.slides.hero_venue_hire.blurb":
         "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
     "home.hero.slides.hero_venue_hire.cta.label": "Venue Hire",
+    "home.discover.cta.label": "Explore our classes",
+    "home.discover.description":
+        "Dance, move and discover something new at County Hall.",
+    "home.discover.overline": "Discover your next step",
+    "home.discover.title": "Find your rhythm",
     "home.hero.slides.hero_venue_hire.headline": "Venue Hire",
     "home.hero.slides.hero_venue_hire.image.alt":
         "Sunlit wooden-floor venue with tall windows at County Hall",

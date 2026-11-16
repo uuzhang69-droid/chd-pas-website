@@ -9,7 +9,7 @@ import { ClassStyles } from "@/components/home/ClassStyles";
 import { EventsGrid } from "@/components/home/EventsGrid";
 import { HeroSlider } from "@/components/home/HeroSlider";
 import { HomeTimetable } from "@/components/home/HomeTimetable";
-import { NewsletterBand } from "@/components/home/NewsletterBand";
+import { DiscoverBand } from "@/components/home/DiscoverBand";
 import { QuickActions } from "@/components/home/QuickActions";
 
 export const metadata: Metadata = pageMetadata({
@@ -31,7 +31,7 @@ export default function Home() {
       <EventsGrid />
       <ClassStyles />
       <AboutTeaser />
-      <NewsletterBand />
+      <DiscoverBand />
     </PageShell>
   );
 }

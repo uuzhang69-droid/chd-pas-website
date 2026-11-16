@@ -435,6 +435,16 @@ export const siteStructure = {
             submitLabel: "@@COPY:home.newsletter.submitlabel",
             socialHeading: "@@COPY:home.newsletter.socialheading",
         },
+        discover: {
+            overline: "@@COPY:home.discover.overline",
+            title: "@@COPY:home.discover.title",
+            description: "@@COPY:home.discover.description",
+            cta: {
+                label: "@@COPY:home.discover.cta.label",
+                href: "/classes-info",
+                variant: "primary",
+            },
+        },
     },
     pages: {
         common: {
