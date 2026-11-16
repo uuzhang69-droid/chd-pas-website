@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { VenueHireContent } from "@/components/venue-hire/VenueHireContent";
@@ -9,10 +10,11 @@ import { PageHero } from "@/components/ui/PageHero";
 
 const page = siteContent.pages.venueHire.overview;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: page.meta.title,
   description: page.meta.description,
-};
+  path: "/venue-hire",
+});
 
 export default function VenueHirePage() {
   return (

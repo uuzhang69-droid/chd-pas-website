@@ -25,6 +25,12 @@ function subjectFromAbout(about: string): string {
   }
 }
 
+/** Accepts "venue-hire" as well as "Venue hire" or "Venue%20hire". */
+function normaliseSubject(value: string | undefined): string | undefined {
+  if (value === undefined) return undefined;
+  return value.trim().toLowerCase().replace(/\s+/g, "-");
+}
+
 export function contactPrefillFromSearchParams(params: ContactSearchParams): {
   defaultSubject: string;
   defaultMessage: string;
@@ -32,7 +38,7 @@ export function contactPrefillFromSearchParams(params: ContactSearchParams): {
   const bookingPrefill = buildBookingPrefillFromSearchParams(params);
 
   const defaultSubject =
-    params.subject ??
+    normaliseSubject(params.subject) ??
     (bookingPrefill.defaultAbout ? subjectFromAbout(bookingPrefill.defaultAbout) : "") ??
     subjectFromAbout(params.about ?? "");
 

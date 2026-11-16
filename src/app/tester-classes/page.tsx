@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Classes",
   description:
     "Browse active classes at County Hall Dance Centre and enrol via our secure booking system.",
+  // Internal test page: never index, never list in the sitemap.
+  robots: { index: false, follow: false },
 };
 
 export const revalidate = 300;

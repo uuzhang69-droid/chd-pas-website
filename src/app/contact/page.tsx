@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { ContactForm } from "@/components/ui/ContactForm";
@@ -8,10 +9,11 @@ import { contactPrefillFromSearchParams } from "@/lib/contact/prefill-from-searc
 
 const { contact } = siteContent.pages;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: contact.meta.title,
   description: contact.meta.description,
-};
+  path: "/contact",
+});
 
 type ContactPageProps = {
   searchParams: Promise<{

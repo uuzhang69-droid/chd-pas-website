@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { ClassStyleCardGrid } from "@/components/ui/ContentGrids";
@@ -9,10 +10,11 @@ import type { ClassStyleCard } from "@/content/types";
 const page = siteContent.pages.classesInfo;
 const { styles } = siteContent.pages.classes;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: page.meta.title,
   description: page.meta.description,
-};
+  path: "/classes-info",
+});
 
 export default function ClassesInfoPage() {
   const cards: ClassStyleCard[] = styles.map((style) => ({

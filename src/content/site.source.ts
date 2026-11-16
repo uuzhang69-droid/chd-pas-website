@@ -28,10 +28,10 @@ import type {
 
 export const siteSource = {
     meta: {
-        siteName: "County Hall Dance & Performing Arts School",
-        shortName: "CHD PAS",
+        siteName: "County Hall Dance Centre",
+        shortName: "CHDC",
         defaultDescription:
-            "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
+            "Adult dance classes at London's County Hall — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus workshops, private lessons and venue hire.",
     },
 
     global: {
@@ -98,8 +98,11 @@ export const siteSource = {
                     href: "/venue-hire",
                     parentLink: false,
                     children: [
-                        { label: "Space Hire", href: "/venue-hire" },
-                        { label: "Space Booking", href: "/booking" },
+                        { label: "Overview", href: "/venue-hire" },
+                        {
+                            label: "Make an Enquiry",
+                            href: "/contact?subject=venue-hire",
+                        },
                     ] satisfies Link[],
                 },
                 {
@@ -108,9 +111,9 @@ export const siteSource = {
                     parentLink: false,
                     children: [
                         { label: "About Us", href: "/about" },
-                        { label: "Contact", href: "/contact" },
                     ] satisfies Link[],
                 },
+                { label: "Contact", href: "/contact" },
             ] satisfies NavItem[],
             bookTrial: {
                 label: "Book your class",
@@ -163,21 +166,23 @@ export const siteSource = {
             contact: {
                 title: "Visit Us",
                 address: [
-                    "2nd Floor, County Hall Main Entrance",
-                    "Belvedere Road",
+                    "2nd Floor, County Hall,",
+                    "Belvedere Road,",
                     "London SE1 7PB",
                 ],
                 phone: "+44 7728 617531",
                 wechat: "WeChat: 18518614868",
                 email: "info@countyhalldancecentre.com",
             },
-            newsletter: {
+            stayInTouch: {
                 title: "Stay in touch",
+            },
+            newsletter: {
+                title: "Subscribe to our newsletter",
                 description:
-                    "Occasional news on classes, masterclasses, and performances.",
+                    "Get occasional updates on classes, workshops, performances and special offers.",
                 placeholder: "Your email address",
                 submitLabel: "Subscribe",
-                privacyNote: "We respect your privacy. Unsubscribe anytime.",
             },
             legal: [
                 { label: "Privacy Policy", href: "/privacy" },
@@ -407,6 +412,17 @@ export const siteSource = {
             submitLabel: "Sign up",
             socialHeading: "Connect with us",
         },
+
+        discover: {
+            overline: "Discover your next step",
+            title: "Find your rhythm",
+            description: "Dance, move and discover something new at County Hall.",
+            cta: {
+                label: "Explore our classes",
+                href: "/classes-info",
+                variant: "primary",
+            } satisfies CtaButton,
+        },
     },
 
     pages: {
@@ -419,7 +435,7 @@ export const siteSource = {
             meta: {
                 title: "Timetable & Booking",
                 description:
-                    "View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.",
+                    "View the weekly class timetable and book your place at County Hall Dance Centre.",
             },
             hero: {
                 overline: "Plan your classes",
@@ -429,7 +445,7 @@ export const siteSource = {
             } satisfies PageHeroContent,
             trial: {
                 id: "trial",
-                overline: "New to CHD PAS?",
+                overline: "New to CHDPAS?",
                 title: "Book a taster trial",
                 body: "Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival.",
                 cta: {
@@ -447,7 +463,7 @@ export const siteSource = {
                 placeholderHint:
                     "Replace this container with your ClassForKids, bsport, or other embed code.",
                 providerNote:
-                    "Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.",
+                    "Real-time booking is handled by our external provider. CHDPAS does not process class payments on this website.",
                 image: {
                     src: "/images/timetable/class-schedule.jpg",
                     alt: "Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School",
@@ -512,7 +528,7 @@ export const siteSource = {
                         },
                     },
                     instructor: {
-                        name: "Christina & Yvonne ",
+                        name: "Christina & Yvonne",
                         role: "Contemporary dance teacher",
                         bio: "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
                         image: {
@@ -779,7 +795,7 @@ export const siteSource = {
             meta: {
                 title: "Courses",
                 description:
-                    "Term-length dance and performing arts courses with structured progression at CHD PAS.",
+                    "Term-length dance and performing arts courses with structured progression at County Hall Dance Centre.",
             },
             hero: {
                 overline: "Structured progression",
@@ -810,7 +826,7 @@ export const siteSource = {
                     },
                     href: "/courses/junior-ballet-foundation",
                     metaDescription:
-                        "Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.",
+                        "Twelve-week junior ballet foundation course for ages 6–9 at County Hall Dance Centre.",
                     duration: "12 weeks",
                     schedule: "Saturdays, 10:00 – 11:00",
                     price: "£168 per term",
@@ -843,7 +859,7 @@ export const siteSource = {
                     },
                     href: "/courses/teen-contemporary-intensive",
                     metaDescription:
-                        "Intermediate contemporary course for teens at County Hall Dance.",
+                        "Intermediate contemporary course for teens at County Hall Dance Centre.",
                     duration: "10 weeks",
                     schedule: "Wednesdays, 17:30 – 19:00",
                     price: "£195 per term",
@@ -876,7 +892,7 @@ export const siteSource = {
                     },
                     href: "/courses/adult-ballet-open",
                     metaDescription:
-                        "Open-level adult ballet course at CHD PAS, London.",
+                        "Open-level adult ballet course at County Hall Dance Centre, London.",
                     duration: "6-week blocks",
                     schedule: "Mondays, 19:00 – 20:15",
                     price: "£96 per block",
@@ -935,7 +951,7 @@ export const siteSource = {
             meta: {
                 title: "What's On",
                 description:
-                    "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
+                    "Masterclasses, workshops, and performances at County Hall Dance Centre.",
             },
             hero: {
                 overline: "What's on",
@@ -948,7 +964,7 @@ export const siteSource = {
                 all: "All",
                 events: "Events",
                 workshops: "Workshops",
-                masterclass: "Masterclass",
+                masterclass: "Masterclasses",
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
@@ -1792,7 +1808,7 @@ export const siteSource = {
             meta: {
                 title: "Private Lessons & Experiences",
                 description:
-                    "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops.",
+                    "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances and group events.",
             },
             hero: {
                 overline: "Tailored for you",
@@ -2021,7 +2037,7 @@ export const siteSource = {
                 meta: {
                     title: "Membership",
                     description:
-                        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates.",
+                        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire.",
                 },
                 hero: {
                     overline: "Dance more, belong more",
@@ -2222,11 +2238,11 @@ export const siteSource = {
             meta: {
                 title: "About Us",
                 description:
-                    "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
+                    "Discover County Hall Dance Centre: dance classes, creative workshops and live performances at London's iconic County Hall.",
             },
             hero: {
                 overline: "Our school",
-                title: "About County Hall Dance & Performing Arts School",
+                title: "About County Hall Dance Centre",
                 subtitle:
                     "Discover dance, movement and creative experiences at London's iconic County Hall",
                 image: {
@@ -2237,7 +2253,9 @@ export const siteSource = {
             story: {
                 title: "Our story",
                 paragraphs: [
-                    "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
+                    "County Hall Dance Centre (CHDC), also known as County Hall Dance & Performing Arts School (CHDPAS), is a creative space for dance, movement and the performing arts, located at London's iconic County Hall.",
+                    "We bring together regular dance and movement classes, creative workshops, live performances and opportunities for artistic collaboration. Whether you're taking your first steps in dance, developing your skills or exploring new artistic experiences, we welcome people of different backgrounds and levels of experience.",
+                    "The Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
                 ],
                 gallery: [
                     {
@@ -2343,7 +2361,7 @@ export const siteSource = {
                                 value: "membership-booking",
                             },
                             {
-                                label: "General Enquire",
+                                label: "General Enquiry",
                                 value: "general-enquire",
                             },
                         ],
@@ -2364,7 +2382,7 @@ export const siteSource = {
             meta: {
                 title: "Contact",
                 description:
-                    "Get in touch with County Hall Dance & Performing Arts School.",
+                    "Contact County Hall Dance Centre about classes, membership, private lessons, workshops and venue hire at County Hall on London's South Bank.",
             },
             hero: {
                 overline: "We'd love to hear from you",
@@ -2444,7 +2462,15 @@ export const siteSource = {
                             },
                             { label: "Venue hire", value: "venue-hire" },
                             { label: "Events", value: "events" },
+                            { label: "Other enquiry", value: "other" },
                         ],
+                    },
+                    {
+                        name: "subjectOther",
+                        label: "Please specify (optional)",
+                        type: "text",
+                        placeholder: "e.g. press, partnerships, lost property",
+                        showWhen: { field: "subject", value: "other" },
                     },
                     {
                         name: "message",

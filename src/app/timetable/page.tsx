@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import Link from "next/link";
 import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
@@ -8,10 +9,11 @@ import { PageHero } from "@/components/ui/PageHero";
 
 const { timetable } = siteContent.pages;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: timetable.meta.title,
   description: timetable.meta.description,
-};
+  path: "/timetable",
+});
 
 export default function TimetablePage() {
   return (

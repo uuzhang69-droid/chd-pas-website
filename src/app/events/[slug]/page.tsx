@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
@@ -12,6 +13,8 @@ import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd, eventJsonLd } from "@/lib/seo/structured-data";
 import { EventSeriesSections } from "@/components/events/EventSeriesSections";
 import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { SectionedPage } from "@/components/ui/SectionedPage";
@@ -40,17 +43,22 @@ export async function generateMetadata({
     if (!isPublicEvent(slug)) notFound();
     const category = getEventCategoryBySlug(slug);
     if (category) {
-        return {
+        return pageMetadata({
             title: category.meta.title,
             description: category.meta.description,
-        };
+            path: `/events/${slug}`,
+            // Sections still say "coming soon" and nothing links here, so keep them out of search for now.
+            noindex: true,
+        });
     }
     const event = getEventBySlug(slug);
     if (!event) return {};
-    return {
+    return pageMetadata({
         title: event.title,
         description: event.excerpt,
-    };
+        path: `/events/${slug}`,
+        image: event.image,
+    });
 }
 
 export default async function EventDetailPage({ params }: PageProps) {
@@ -60,6 +68,15 @@ export default async function EventDetailPage({ params }: PageProps) {
     if (category) {
         return (
             <PageShell>
+                <JsonLd
+                    data={breadcrumbJsonLd([
+                        {
+                            name: siteContent.pages.events.meta.title,
+                            path: "/events",
+                        },
+                        { name: category.meta.title, path: `/events/${slug}` },
+                    ])}
+                />
                 <SectionedPage {...category} />
             </PageShell>
         );
@@ -139,6 +156,16 @@ export default async function EventDetailPage({ params }: PageProps) {
 
     return (
         <PageShell>
+            <JsonLd data={eventJsonLd(event)} />
+            <JsonLd
+                data={breadcrumbJsonLd([
+                    {
+                        name: siteContent.pages.events.meta.title,
+                        path: "/events",
+                    },
+                    { name: event.title, path: `/events/${slug}` },
+                ])}
+            />
             <section className="border-b border-taupe/30 bg-ivory">
                 <Container className="py-12 md:py-16">
                     <Link

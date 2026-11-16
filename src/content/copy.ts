@@ -9,8 +9,8 @@ export const copy = {
     "global.footer.columns.school.links.careers.label": "Careers",
     "global.footer.columns.school.links.private_events.label": "Private Events",
     "global.footer.columns.school.title": "The School",
-    "global.footer.contact.address.0": "2nd Floor, County Hall Main Entrance",
-    "global.footer.contact.address.1": "Belvedere Road",
+    "global.footer.contact.address.0": "2nd Floor, County Hall,",
+    "global.footer.contact.address.1": "Belvedere Road,",
     "global.footer.contact.address.2": "London SE1 7PB",
     "global.footer.contact.email": "info@countyhalldancecentre.com",
     "global.footer.contact.phone": "+44 7728 617531",
@@ -25,10 +25,11 @@ export const copy = {
     "global.footer.legal.safeguarding.label": "Safeguarding",
     "global.footer.legal.terms_conditions.label": "Terms & Conditions",
     "global.footer.newsletter.description":
-        "Occasional news on classes, masterclasses, and performances.",
+        "Get occasional updates on classes, workshops, performances and special offers.",
     "global.footer.newsletter.placeholder": "Your email address",
     "global.footer.newsletter.submitlabel": "Subscribe",
-    "global.footer.newsletter.title": "Stay in touch",
+    "global.footer.newsletter.title": "Subscribe to our newsletter",
+    "global.footer.stayintouch.title": "Stay in touch",
     "global.footer.social.instagram.label": "Instagram: @countyhalldancecentre",
     "global.footer.social.tiktok.label": "TikTok",
     "global.footer.social.xiaohongshu.label": "Red Note (小红书)",
@@ -37,19 +38,18 @@ export const copy = {
     "global.logo.nameline2": "Dance & Performing Arts School",
     "global.navigation.booktrial.label": "Book your class",
     "global.navigation.items.about.children.about_us.label": "About Us",
-    "global.navigation.items.about.children.contact.label": "Contact",
     "global.navigation.items.about.label": "About",
     "global.navigation.items.classes.children.class_descriptions_instructors.label":
         "Class Descriptions & Instructors",
     "global.navigation.items.classes.children.private_lessons.label":
         "Private Lessons",
     "global.navigation.items.classes.label": "Classes",
+    "global.navigation.items.contact.label": "Contact",
     "global.navigation.items.membership.label": "Membership",
     "global.navigation.items.timetable.label": "Timetable",
-    "global.navigation.items.venue_hire.children.space_booking.label":
-        "Space Booking",
-    "global.navigation.items.venue_hire.children.space_hire.label":
-        "Space Hire",
+    "global.navigation.items.venue_hire.children.make_an_enquiry.label":
+        "Make an Enquiry",
+    "global.navigation.items.venue_hire.children.overview.label": "Overview",
     "global.navigation.items.venue_hire.label": "Venue Hire",
     "global.navigation.items.what_s_on.label": "What's On",
     "global.navigation.search.label": "Search",
@@ -157,6 +157,11 @@ export const copy = {
     "home.hero.slides.hero_venue_hire.blurb":
         "A South Bank space for dance, theatre and film rehearsals, castings, workshops and events.",
     "home.hero.slides.hero_venue_hire.cta.label": "Venue Hire",
+    "home.discover.cta.label": "Explore our classes",
+    "home.discover.description":
+        "Dance, move and discover something new at County Hall.",
+    "home.discover.overline": "Discover your next step",
+    "home.discover.title": "Find your rhythm",
     "home.hero.slides.hero_venue_hire.headline": "Venue Hire",
     "home.hero.slides.hero_venue_hire.image.alt":
         "Sunlit wooden-floor venue with tall windows at County Hall",
@@ -179,9 +184,9 @@ export const copy = {
     "home.quickactions.linksuffix": "Learn more →",
     "home.quickactions.overline": "Get started",
     "meta.defaultdescription":
-        "Adult dance and movement classes at London's iconic County Hall on the South Bank — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
-    "meta.shortname": "CHD PAS",
-    "meta.sitename": "County Hall Dance & Performing Arts School",
+        "Adult dance classes at London's County Hall — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus workshops, private lessons and venue hire.",
+    "meta.shortname": "CHDC",
+    "meta.sitename": "County Hall Dance Centre",
     "pages.about.cta.body":
         "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
     "pages.about.cta.button.label": "Get in touch",
@@ -190,15 +195,18 @@ export const copy = {
     "pages.about.hero.overline": "Our school",
     "pages.about.hero.subtitle":
         "Discover dance, movement and creative experiences at London's iconic County Hall",
-    "pages.about.hero.title":
-        "About County Hall Dance & Performing Arts School",
+    "pages.about.hero.title": "About County Hall Dance Centre",
     "pages.about.meta.description":
-        "Learn about County Hall Dance & Performing Arts School — our history, values, and faculty.",
+        "Discover County Hall Dance Centre: dance classes, creative workshops and live performances at London's iconic County Hall.",
     "pages.about.meta.title": "About Us",
     "pages.about.story.gallery.0.alt":
         "County Hall on the South Bank viewed from the River Thames, with the London Eye beside it",
     "pages.about.story.paragraphs.0":
-        "County Hall Dance Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
+        "County Hall Dance Centre (CHDC), also known as County Hall Dance & Performing Arts School (CHDPAS), is a creative space for dance, movement and the performing arts, located at London's iconic County Hall.",
+    "pages.about.story.paragraphs.1":
+        "We bring together regular dance and movement classes, creative workshops, live performances and opportunities for artistic collaboration. Whether you're taking your first steps in dance, developing your skills or exploring new artistic experiences, we welcome people of different backgrounds and levels of experience.",
+    "pages.about.story.paragraphs.2":
+        "The Centre is a new home for dance, movement and creativity in the heart of London. Located inside the iconic County Hall on the South Bank, the Centre brings together the best dance classes, workshops, social dances, private experiences and special events. More than a dance venue, it is a welcoming creative community where people can move, learn, connect and enjoy the arts together.",
     "pages.about.story.title": "Our story",
     "pages.about.values.items.0.description":
         "To make high-quality dance and mind-body classes open, welcoming, and connected in the heart of London.",
@@ -222,7 +230,7 @@ export const copy = {
     "pages.booking.form.fields.enquiry_about.options.classes_booking.label":
         "Classes Booking",
     "pages.booking.form.fields.enquiry_about.options.general_enquire.label":
-        "General Enquire",
+        "General Enquiry",
     "pages.booking.form.fields.enquiry_about.options.membership_booking.label":
         "Membership Booking",
     "pages.booking.form.fields.enquiry_about.options.venue_hire.label":
@@ -324,7 +332,7 @@ export const copy = {
         "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
     "pages.classes.styles.contemporary.instructor.image.alt":
         "Ka Ki Christina Lai and Ying Yen (Yvonne)",
-    "pages.classes.styles.contemporary.instructor.name": "Christina & Yvonne ",
+    "pages.classes.styles.contemporary.instructor.name": "Christina & Yvonne",
     "pages.classes.styles.contemporary.instructor.role":
         "Contemporary dance teacher",
     "pages.classes.styles.contemporary.intro.0": " ",
@@ -459,7 +467,12 @@ export const copy = {
     "pages.contact.form.fields.subject.options.membership.label": "Membership",
     "pages.contact.form.fields.subject.options.private_lessons_experiences.label":
         "Private lessons & experiences",
+    "pages.contact.form.fields.subject.options.other_enquiry.label":
+        "Other enquiry",
     "pages.contact.form.fields.subject.options.venue_hire.label": "Venue hire",
+    "pages.contact.form.fields.subject_other.label": "Please specify (optional)",
+    "pages.contact.form.fields.subject_other.placeholder":
+        "e.g. press, partnerships, lost property",
     "pages.contact.form.selectplaceholder": "Select an option",
     "pages.contact.form.submitlabel": "Send message",
     "pages.contact.form.successmessage":
@@ -472,7 +485,7 @@ export const copy = {
     "pages.contact.map.directionslabel": "Open in Google Maps →",
     "pages.contact.map.title": "Find us",
     "pages.contact.meta.description":
-        "Get in touch with County Hall Dance & Performing Arts School.",
+        "Contact County Hall Dance Centre about classes, membership, private lessons, workshops and venue hire at County Hall on London's South Bank.",
     "pages.contact.meta.title": "Contact",
     "pages.courses.detaillabels.backlink": "All courses",
     "pages.courses.detaillabels.duration": "Duration",
@@ -502,7 +515,7 @@ export const copy = {
         "Optional end-of-block class video",
     "pages.courses.items.adult_ballet_open.level": "All levels",
     "pages.courses.items.adult_ballet_open.metadescription":
-        "Open-level adult ballet course at CHD PAS, London.",
+        "Open-level adult ballet course at County Hall Dance Centre, London.",
     "pages.courses.items.adult_ballet_open.price": "£96 per block",
     "pages.courses.items.adult_ballet_open.schedule": "Mondays, 19:00 – 20:15",
     "pages.courses.items.adult_ballet_open.term": "Rolling enrolment",
@@ -527,7 +540,7 @@ export const copy = {
     "pages.courses.items.junior_ballet_foundation.level":
         "Beginner – Elementary",
     "pages.courses.items.junior_ballet_foundation.metadescription":
-        "Twelve-week junior ballet foundation course for ages 6–9 at CHD PAS.",
+        "Twelve-week junior ballet foundation course for ages 6–9 at County Hall Dance Centre.",
     "pages.courses.items.junior_ballet_foundation.price": "£168 per term",
     "pages.courses.items.junior_ballet_foundation.schedule":
         "Saturdays, 10:00 – 11:00",
@@ -580,7 +593,7 @@ export const copy = {
         "Performance workshop",
     "pages.courses.items.teen_contemporary_intensive.level": "Intermediate",
     "pages.courses.items.teen_contemporary_intensive.metadescription":
-        "Intermediate contemporary course for teens at County Hall Dance.",
+        "Intermediate contemporary course for teens at County Hall Dance Centre.",
     "pages.courses.items.teen_contemporary_intensive.price": "£195 per term",
     "pages.courses.items.teen_contemporary_intensive.schedule":
         "Wednesdays, 17:30 – 19:00",
@@ -588,7 +601,7 @@ export const copy = {
     "pages.courses.items.teen_contemporary_intensive.title":
         "Teen Contemporary Intensive",
     "pages.courses.meta.description":
-        "Term-length dance and performing arts courses with structured progression at CHD PAS.",
+        "Term-length dance and performing arts courses with structured progression at County Hall Dance Centre.",
     "pages.courses.meta.title": "Courses",
     "pages.events.categories.cross_arts_events.hero.overline": "What's On",
     "pages.events.categories.cross_arts_events.hero.subtitle":
@@ -1146,7 +1159,7 @@ export const copy = {
     "pages.events.items.milonga_ojo_opening_night.title":
         "Milonga ¡Ojo! — Opening Night",
     "pages.events.meta.description":
-        "Masterclasses, workshops, and performances at County Hall Dance & Performing Arts School.",
+        "Masterclasses, workshops, and performances at County Hall Dance Centre.",
     "pages.events.meta.title": "What's On",
     "pages.membership.overview.benefits.items.0.body":
         "Save on workshops, masterclasses and intensive courses.",
@@ -1215,7 +1228,7 @@ export const copy = {
     "pages.membership.overview.intro":
         "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
     "pages.membership.overview.meta.description":
-        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire rates.",
+        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire.",
     "pages.membership.overview.meta.title": "Membership",
     "pages.membership.overview.plans.cta.label": "Join now",
     "pages.membership.overview.plans.items.annual.body":
@@ -1299,7 +1312,7 @@ export const copy = {
     "pages.privatelessons.intro":
         "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank.",
     "pages.privatelessons.meta.description":
-        "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances, group experiences, corporate events and workshops.",
+        "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances and group events.",
     "pages.privatelessons.meta.title": "Private Lessons & Experiences",
     "pages.privatelessons.sections.corporate.body":
         "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
@@ -1370,7 +1383,7 @@ export const copy = {
         "Replace this container with your ClassForKids, bsport, or other embed code.",
     "pages.timetable.booking.placeholderlabel": "Booking widget placeholder",
     "pages.timetable.booking.providernote":
-        "Real-time booking is handled by our external provider. CHD PAS does not process class payments on this website.",
+        "Real-time booking is handled by our external provider. CHDPAS does not process class payments on this website.",
     "pages.timetable.booking.title": "Class timetable",
     "pages.timetable.helplinks.browse_courses.label": "Browse courses",
     "pages.timetable.helplinks.contact_us.label": "Contact us",
@@ -1379,14 +1392,14 @@ export const copy = {
         "Browse this month’s classes, workshops and events. Dates follow London time. Check each event’s location and filter by type, day and style.",
     "pages.timetable.hero.title": "Timetable & Booking",
     "pages.timetable.meta.description":
-        "View the weekly class timetable and book your place at County Hall Dance & Performing Arts School.",
+        "View the weekly class timetable and book your place at County Hall Dance Centre.",
     "pages.timetable.meta.title": "Timetable & Booking",
     "pages.timetable.newcomernote":
         "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
     "pages.timetable.trial.body":
         "Select a suitable class from the timetable below, then choose the trial option at checkout. Our team will welcome you on arrival.",
     "pages.timetable.trial.cta.label": "Book",
-    "pages.timetable.trial.overline": "New to CHD PAS?",
+    "pages.timetable.trial.overline": "New to CHDPAS?",
     "pages.timetable.trial.title": "Book a taster trial",
     "pages.venuehire.overview.cta.body":
         "Tell us your preferred date, times, space and group size and we'll come back to you with availability.",

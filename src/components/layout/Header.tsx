@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteContent } from "@/content/site";
 import { BrandMark } from "@/components/layout/BrandMark";
 import type { NavItem } from "@/content/types";
@@ -11,6 +11,7 @@ import {
 } from "@/components/icons/SocialIcons";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SITE_SEARCH_LIVE } from "@/lib/features";
 
 type NavItemWithChildren = NavItem & { children: NonNullable<NavItem["children"]> };
 
@@ -165,6 +166,10 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const mobilePanelRef = useRef<HTMLElement>(null);
 
   function hasNavChildren(item: NavItem): item is NavItemWithChildren {
     return Boolean(item.children?.length);
@@ -174,6 +179,43 @@ export function Header() {
     setMobileOpen(false);
     setMobileExpanded(null);
   }
+
+  // Opening the desktop search puts the cursor in the box.
+  useEffect(() => {
+    if (searchOpen) searchInputRef.current?.focus();
+  }, [searchOpen]);
+
+  // Keyboard support for the mobile menu: focus moves in, Tab stays inside, Escape closes and returns focus.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const toggle = menuButtonRef.current;
+    const panel = mobilePanelRef.current;
+    panel?.querySelector<HTMLElement>("a, button")?.focus();
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        setMobileExpanded(null);
+        return;
+      }
+      if (event.key !== "Tab" || !panel) return;
+      const focusable = panel.querySelectorAll<HTMLElement>("a[href], button:not([disabled])");
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      toggle?.focus();
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -194,7 +236,7 @@ export function Header() {
 
         <div className="flex min-w-0 flex-1 items-center gap-3 pr-5 sm:pr-6 lg:gap-5 lg:pl-8 lg:pr-8 xl:pl-12 xl:gap-6 xl:pr-10 2xl:pl-16">
           <nav
-            className="hidden min-w-0 flex-1 flex-nowrap items-center justify-evenly gap-0.5 lg:flex xl:gap-1.5 2xl:gap-3"
+            className="hidden min-w-0 flex-1 flex-nowrap items-center justify-evenly gap-0.5 min-[1320px]:flex xl:gap-1.5 2xl:gap-3"
             aria-label={headerUi.mainNavigation}
           >
             {navigation.items.map((item) =>
@@ -206,22 +248,26 @@ export function Header() {
             )}
           </nav>
 
-          <div className="hidden shrink-0 items-center gap-2 lg:flex xl:gap-3">
-            <button
-              type="button"
-              className="shrink-0 rounded-full p-2 text-charcoal transition-colors hover:bg-rose/15 hover:text-rose"
-              aria-label={navigation.search.label}
-              aria-expanded={searchOpen}
-              onClick={() => setSearchOpen((open) => !open)}
-            >
-              <SearchIcon />
-            </button>
+          <div className="hidden shrink-0 items-center gap-2 min-[1320px]:flex xl:gap-3">
+            {SITE_SEARCH_LIVE && (
+              <button
+                type="button"
+                className="shrink-0 rounded-full p-2 text-charcoal transition-colors hover:bg-rose/15 hover:text-rose"
+                ref={searchButtonRef}
+                aria-label={navigation.search.label}
+                aria-expanded={searchOpen}
+                onClick={() => setSearchOpen((open) => !open)}
+              >
+                <SearchIcon />
+              </button>
+            )}
             <Button {...navigation.bookTrial} className="shrink-0 whitespace-nowrap !px-3 !py-2.5 xl:!px-5" />
           </div>
 
           <button
             type="button"
-            className="ml-auto inline-flex shrink-0 flex-col justify-center gap-1.5 rounded p-2 lg:hidden"
+            className="ml-auto inline-flex shrink-0 flex-col justify-center gap-1.5 rounded p-2 min-[1320px]:hidden"
+            ref={menuButtonRef}
             aria-label={mobileOpen ? headerUi.closeMenu : headerUi.openMenu}
             aria-expanded={mobileOpen}
             onClick={() => {
@@ -236,12 +282,19 @@ export function Header() {
         </div>
       </div>
 
-      {searchOpen && (
+      {SITE_SEARCH_LIVE && searchOpen && (
         <Container>
           <form
             action={navigation.search.action}
             method="get"
-            className="hidden border-t border-taupe/20 py-4 lg:block"
+            role="search"
+            className="hidden border-t border-taupe/20 py-4 min-[1320px]:block"
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                setSearchOpen(false);
+                searchButtonRef.current?.focus();
+              }
+            }}
           >
             <label htmlFor="site-search" className="sr-only">
               {navigation.search.label}
@@ -249,7 +302,9 @@ export function Header() {
             <div className="flex gap-3">
               <input
                 id="site-search"
+                ref={searchInputRef}
                 name="q"
+                maxLength={100}
                 type="search"
                 placeholder={navigation.search.placeholder}
                 className="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-2.5 text-body outline-none focus:border-rose"
@@ -268,7 +323,12 @@ export function Header() {
     </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-[60] lg:hidden">
+        <div
+          className="fixed inset-0 z-[60] min-[1320px]:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label={headerUi.mobileNavigation}
+        >
           <button
             type="button"
             className="absolute inset-0 bg-charcoal/50"
@@ -276,6 +336,7 @@ export function Header() {
             onClick={closeMobileMenu}
           />
           <nav
+            ref={mobilePanelRef}
             className="animate-slide-in-right absolute right-0 top-0 flex h-full w-[80%] max-w-[320px] flex-col overflow-y-auto border-l border-taupe/30 bg-ivory shadow-xl"
             aria-label={headerUi.mobileNavigation}
           >
@@ -307,6 +368,34 @@ export function Header() {
                     </Link>
                   </div>
                 ),
+              )}
+              {SITE_SEARCH_LIVE && (
+                <form
+                  action={navigation.search.action}
+                  method="get"
+                  role="search"
+                  className="mt-3 border-t border-taupe/30 pt-3"
+                >
+                  <label htmlFor="mobile-site-search" className="sr-only">
+                    {navigation.search.label}
+                  </label>
+                  <div className="flex gap-2">
+                    <input
+                      id="mobile-site-search"
+                      name="q"
+                      type="search"
+                      maxLength={100}
+                      placeholder={navigation.search.placeholder}
+                      className="min-w-0 flex-1 rounded-sm border border-taupe/50 bg-ivory px-3 py-2 text-small outline-none focus:border-rose"
+                    />
+                    <button
+                      type="submit"
+                      className="rounded-sm bg-burgundy px-3 py-2 text-small font-medium text-ivory"
+                    >
+                      {navigation.search.label}
+                    </button>
+                  </div>
+                </form>
               )}
               <div className="mt-3 border-t border-taupe/30 pt-3">
                 <Button {...navigation.bookTrial} className="w-full" />

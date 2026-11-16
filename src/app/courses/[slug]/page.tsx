@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllCourseSlugs, getCourseBySlug } from "@/content/helpers";
 import { siteContent } from "@/content/site";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -20,10 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const course = getCourseBySlug(slug);
   if (!course) return {};
-  return {
+  return pageMetadata({
     title: course.title,
     description: course.metaDescription,
-  };
+    path: `/courses/${slug}`,
+  });
 }
 
 export default async function CourseDetailPage({ params }: PageProps) {
@@ -35,6 +39,12 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
   return (
     <PageShell>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: siteContent.pages.courses.meta.title, path: "/courses" },
+          { name: course.title, path: `/courses/${slug}` },
+        ])}
+      />
       <section className="border-b border-taupe/30 bg-ivory">
         <Container className="py-12 md:py-16">
           <Link href="/courses" className="text-small font-semibold text-rose hover:text-rose/80">
