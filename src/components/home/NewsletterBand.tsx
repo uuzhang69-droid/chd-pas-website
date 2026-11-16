@@ -1,7 +1,9 @@
 import { siteContent } from "@/content/site";
 import { SocialIcon } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
+import { NewsletterComingSoon } from "@/components/ui/NewsletterComingSoon";
 import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
+import { NEWSLETTER_ONLINE_SIGNUP_LIVE } from "@/lib/features";
 
 export function NewsletterBand() {
   const { newsletter } = siteContent.home;
@@ -18,14 +20,18 @@ export function NewsletterBand() {
           <p className="text-body-lg mt-4 text-charcoal/75">{newsletter.description}</p>
 
           <div className="mt-8">
-            <NewsletterSignupForm
-              inputId="home-newsletter-email"
-              placeholder={newsletter.placeholder}
-              submitLabel={newsletter.submitLabel}
-              formClassName="flex flex-col gap-3 sm:flex-row"
-              inputClassName="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
-              buttonClassName="rounded-sm bg-burgundy px-6 py-3 text-small font-semibold text-ivory transition-colors hover:bg-burgundy/90"
-            />
+            {NEWSLETTER_ONLINE_SIGNUP_LIVE ? (
+              <NewsletterSignupForm
+                inputId="home-newsletter-email"
+                placeholder={newsletter.placeholder}
+                submitLabel={newsletter.submitLabel}
+                formClassName="flex flex-col gap-3 sm:flex-row"
+                inputClassName="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-3 text-body outline-none focus:border-rose"
+                buttonClassName="rounded-sm bg-burgundy px-6 py-3 text-small font-semibold text-ivory transition-colors hover:bg-burgundy/90"
+              />
+            ) : (
+              <NewsletterComingSoon align="center" />
+            )}
           </div>
 
           <div className="mt-10">

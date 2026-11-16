@@ -54,6 +54,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        // Old empty page (no content, no booking system): its job is now done by the enquiry form.
+        source: "/venue-hire/space-booking",
+        destination: "/contact?subject=venue-hire",
+        permanent: true,
+      },
+      {
         source: "/membership/member-benefits",
         destination: "/membership",
         permanent: true,
