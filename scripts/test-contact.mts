@@ -626,3 +626,23 @@ test("the form component: red required marker, custom checks before any request,
     assert.ok(source.includes("We’ll use the information you provide to respond to your enquiry."));
     assert.ok(!source.includes("/privacy"));
 });
+
+test("mail settings pasted with quotes or spaces are cleaned, so the sender address is valid", async () => {
+    const { cleanSetting, getMailConfig } = await import("../src/lib/mail");
+    const good = "County Hall Dance & Performing Arts School <onboarding@resend.dev>";
+    for (const pasted of [good, `"${good}"`, `'${good}'`, `  ${good}\n`, ` "${good}" `])
+        assert.equal(cleanSetting(pasted), good, JSON.stringify(pasted));
+    assert.equal(cleanSetting(""), undefined);
+    assert.equal(cleanSetting("   "), undefined);
+    const saved = { ...process.env };
+    try {
+        process.env.MAIL_API_KEY = ' "re_example_key_value" ';
+        process.env.MAIL_FROM = `"${good}"`;
+        process.env.MAIL_PROVIDER = " Resend ";
+        assert.equal(getMailConfig()?.from, good);
+        delete process.env.MAIL_FROM;
+        assert.equal(getMailConfig(), undefined);
+    } finally {
+        process.env = saved;
+    }
+});
