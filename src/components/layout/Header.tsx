@@ -11,6 +11,7 @@ import {
 } from "@/components/icons/SocialIcons";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SITE_SEARCH_LIVE } from "@/lib/features";
 
 type NavItemWithChildren = NavItem & { children: NonNullable<NavItem["children"]> };
 
@@ -166,6 +167,8 @@ export function Header() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const mobilePanelRef = useRef<HTMLElement>(null);
 
   function hasNavChildren(item: NavItem): item is NavItemWithChildren {
@@ -176,6 +179,11 @@ export function Header() {
     setMobileOpen(false);
     setMobileExpanded(null);
   }
+
+  // Opening the desktop search puts the cursor in the box.
+  useEffect(() => {
+    if (searchOpen) searchInputRef.current?.focus();
+  }, [searchOpen]);
 
   // Keyboard support for the mobile menu: focus moves in, Tab stays inside, Escape closes and returns focus.
   useEffect(() => {
@@ -241,15 +249,18 @@ export function Header() {
           </nav>
 
           <div className="hidden shrink-0 items-center gap-2 min-[1320px]:flex xl:gap-3">
-            <button
-              type="button"
-              className="shrink-0 rounded-full p-2 text-charcoal transition-colors hover:bg-rose/15 hover:text-rose"
-              aria-label={navigation.search.label}
-              aria-expanded={searchOpen}
-              onClick={() => setSearchOpen((open) => !open)}
-            >
-              <SearchIcon />
-            </button>
+            {SITE_SEARCH_LIVE && (
+              <button
+                type="button"
+                className="shrink-0 rounded-full p-2 text-charcoal transition-colors hover:bg-rose/15 hover:text-rose"
+                ref={searchButtonRef}
+                aria-label={navigation.search.label}
+                aria-expanded={searchOpen}
+                onClick={() => setSearchOpen((open) => !open)}
+              >
+                <SearchIcon />
+              </button>
+            )}
             <Button {...navigation.bookTrial} className="shrink-0 whitespace-nowrap !px-3 !py-2.5 xl:!px-5" />
           </div>
 
@@ -271,12 +282,19 @@ export function Header() {
         </div>
       </div>
 
-      {searchOpen && (
+      {SITE_SEARCH_LIVE && searchOpen && (
         <Container>
           <form
             action={navigation.search.action}
             method="get"
+            role="search"
             className="hidden border-t border-taupe/20 py-4 min-[1320px]:block"
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                setSearchOpen(false);
+                searchButtonRef.current?.focus();
+              }
+            }}
           >
             <label htmlFor="site-search" className="sr-only">
               {navigation.search.label}
@@ -284,7 +302,9 @@ export function Header() {
             <div className="flex gap-3">
               <input
                 id="site-search"
+                ref={searchInputRef}
                 name="q"
+                maxLength={100}
                 type="search"
                 placeholder={navigation.search.placeholder}
                 className="flex-1 rounded-sm border border-taupe/50 bg-ivory px-4 py-2.5 text-body outline-none focus:border-rose"
@@ -348,6 +368,34 @@ export function Header() {
                     </Link>
                   </div>
                 ),
+              )}
+              {SITE_SEARCH_LIVE && (
+                <form
+                  action={navigation.search.action}
+                  method="get"
+                  role="search"
+                  className="mt-3 border-t border-taupe/30 pt-3"
+                >
+                  <label htmlFor="mobile-site-search" className="sr-only">
+                    {navigation.search.label}
+                  </label>
+                  <div className="flex gap-2">
+                    <input
+                      id="mobile-site-search"
+                      name="q"
+                      type="search"
+                      maxLength={100}
+                      placeholder={navigation.search.placeholder}
+                      className="min-w-0 flex-1 rounded-sm border border-taupe/50 bg-ivory px-3 py-2 text-small outline-none focus:border-rose"
+                    />
+                    <button
+                      type="submit"
+                      className="rounded-sm bg-burgundy px-3 py-2 text-small font-medium text-ivory"
+                    >
+                      {navigation.search.label}
+                    </button>
+                  </div>
+                </form>
               )}
               <div className="mt-3 border-t border-taupe/30 pt-3">
                 <Button {...navigation.bookTrial} className="w-full" />
