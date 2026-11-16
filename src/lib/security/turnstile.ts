@@ -1,5 +1,7 @@
 export type TurnstileResult =
-    { ok: true } | { ok: false; reason: "failed" | "unavailable" };
+    | { ok: true }
+    /** `codes` are Cloudflare's own error codes (for example "invalid-input-response"). They hold no secrets. */
+    | { ok: false; reason: "failed" | "unavailable"; codes?: string[] };
 
 type Fetch = typeof fetch;
 
@@ -19,13 +21,19 @@ export async function verifyTurnstile(
             "https://challenges.cloudflare.com/turnstile/v0/siteverify",
             { method: "POST", body, signal: AbortSignal.timeout(8_000) },
         );
-        if (!response.ok) return { ok: false, reason: "unavailable" };
-        const data = (await response.json()) as { success?: boolean };
-        return data.success === true
-            ? { ok: true }
-            : { ok: false, reason: "failed" };
+        if (!response.ok)
+            return { ok: false, reason: "unavailable", codes: [`http-${response.status}`] };
+        const data = (await response.json()) as {
+            success?: boolean;
+            "error-codes"?: unknown;
+        };
+        if (data.success === true) return { ok: true };
+        const codes = Array.isArray(data["error-codes"])
+            ? data["error-codes"].filter((code): code is string => typeof code === "string").slice(0, 5)
+            : undefined;
+        return { ok: false, reason: "failed", codes };
     } catch {
-        return { ok: false, reason: "unavailable" };
+        return { ok: false, reason: "unavailable", codes: ["network-error"] };
     }
 }
 
