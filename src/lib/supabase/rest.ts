@@ -16,9 +16,16 @@ export class SupabaseError extends Error {
     }
 }
 
+/**
+ * Names set by the Vercel Marketplace integration are used as they come:
+ * SUPABASE_URL (or the public NEXT_PUBLIC_SUPABASE_URL, which holds the same address) and
+ * SUPABASE_SERVICE_ROLE_KEY. SUPABASE_SECRET_KEY is accepted for projects that use the newer secret keys.
+ * None of these is ever sent to the browser: only the address could be public, and the key is read on the server.
+ */
 export function getSupabaseConfig(): SupabaseConfig | undefined {
-    const url = process.env.SUPABASE_URL;
-    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const serviceKey =
+        process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
     if (!url || !serviceKey) return undefined;
     return { url: url.replace(/\/+$/, ""), serviceKey };
 }
@@ -34,7 +41,11 @@ export async function supabaseRest(
         ...rest,
         headers: {
             apikey: config.serviceKey,
-            Authorization: `Bearer ${config.serviceKey}`,
+            // The older service_role key is a JWT and is also sent as the bearer token.
+            // The newer "sb_secret_" keys are not JWTs and go in the apikey header only.
+            ...(config.serviceKey.startsWith("eyJ")
+                ? { Authorization: `Bearer ${config.serviceKey}` }
+                : {}),
             "Content-Type": "application/json",
             ...(prefer ? { Prefer: prefer } : {}),
             ...(headers as Record<string, string> | undefined),

@@ -4,6 +4,7 @@ import {
     getAllCourseSlugs,
     getAllEventSlugs,
 } from "@/content/helpers";
+import { isLegalPagePublished } from "@/lib/legal-pages";
 import { absoluteUrl, isIndexingEnabled } from "@/lib/seo/site";
 
 /**
@@ -32,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!isIndexingEnabled()) return [];
     const paths = [
         ...STATIC_PATHS,
+        // Legal pages are listed only once the organisation has approved and published them (src/lib/legal-pages.ts).
+        ...(isLegalPagePublished("/privacy") ? ["/privacy"] : []),
         ...getAllClassSlugs().map((slug) => `/classes/${slug}`),
         ...getAllCourseSlugs().map((slug) => `/courses/${slug}`),
         // Already limited to public events; retired events are filtered out upstream.

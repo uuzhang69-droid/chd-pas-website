@@ -4,7 +4,7 @@ import { BrandMark } from "@/components/layout/BrandMark";
 import { SocialIcon } from "@/components/icons/SocialIcons";
 import { Container } from "@/components/ui/Container";
 import { NewsletterSignupForm } from "@/components/ui/NewsletterSignupForm";
-import { NEWSLETTER_ONLINE_SIGNUP_LIVE } from "@/lib/features";
+import { isNewsletterSignupLive } from "@/lib/features";
 import { isLegalPagePublished } from "@/lib/legal-pages";
 
 export function Footer() {
@@ -70,8 +70,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Shown only when online sign-up is switched on in lib/features.ts. */}
-        {NEWSLETTER_ONLINE_SIGNUP_LIVE && (
+        {/* Shown only when the server-side NEWSLETTER_ONLINE_SIGNUP_LIVE variable is exactly "true" (see lib/features.ts). */}
+        {isNewsletterSignupLive() && (
           <div data-tone="dark" className="group/tone mt-10 border-t border-ivory/15 pt-8 lg:max-w-xl">
             <h3 className="text-h4 text-ivory mb-3">{footer.newsletter.title}</h3>
             <p className="text-small text-ivory/75 mb-4">{footer.newsletter.description}</p>
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
         )}
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-ivory/15 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-ivory/15 pt-8">
           {legalLinks.length > 0 && (
             <ul className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal notices">
               {legalLinks.map((item) => (
@@ -97,7 +97,7 @@ export function Footer() {
               ))}
             </ul>
           )}
-          <p className="text-small text-ivory/60">{copyright}</p>
+          <p className="w-full text-center text-small text-ivory/60">{copyright}</p>
         </div>
       </Container>
     </footer>

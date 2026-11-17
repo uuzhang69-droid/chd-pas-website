@@ -1,6 +1,22 @@
 import type { NextConfig } from "next";
 
+/** Pages and APIs with personal data or one-time tokens: never cached, never framed, no referrer sent. */
+const privateHeaders = [
+  { key: "Cache-Control", value: "no-store, max-age=0" },
+  { key: "X-Robots-Tag", value: "noindex, nofollow" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "no-referrer" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+];
+
 const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      { source: "/admin/:path*", headers: privateHeaders },
+      { source: "/api/admin/:path*", headers: privateHeaders },
+      { source: "/newsletter/:path*", headers: privateHeaders },
+    ];
+  },
   async redirects() {
     return [
       {
