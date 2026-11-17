@@ -22,3 +22,7 @@ next-env.d.ts
 .turbo
 npm-debug.log*
 yarn-debug.log*
+
+# Throw-away copy used by the mocked end-to-end tests (scripts/e2e)
+/.e2e-build/
+/.real-test/
