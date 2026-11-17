@@ -12,6 +12,11 @@ const variants = {
   text: "bg-transparent text-rose hover:text-rose/80 underline-offset-4 hover:underline px-0 py-0",
 };
 
+/** The look of a button, for a card's decorative call to action when the whole card is already the link. */
+export function buttonClasses(variant: keyof typeof variants = "primary", className = "") {
+  return `${base} ${variants[variant]} ${className}`;
+}
+
 type ButtonProps = CtaButton & {
   className?: string;
   inactive?: boolean;

@@ -33,7 +33,7 @@
 /* === Type scale === */
 @utility text-display {
   font-family: var(--font-cormorant), serif;
-  font-size: 4rem;
+  font-size: clamp(2.75rem, 1.7rem + 3.6vw, 4.5rem);
   line-height: 1.05;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -41,7 +41,7 @@
 
 @utility text-h1 {
   font-family: var(--font-cormorant), serif;
-  font-size: 2.75rem;
+  font-size: clamp(2.125rem, 1.5rem + 2.2vw, 3.25rem);
   line-height: 1.1;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -49,7 +49,7 @@
 
 @utility text-h2 {
   font-family: var(--font-cormorant), serif;
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 1.35rem + 1.3vw, 2.5rem);
   line-height: 1.15;
   font-weight: 500;
   letter-spacing: 0;
@@ -57,7 +57,7 @@
 
 @utility text-h3 {
   font-family: var(--font-cormorant), serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0;
@@ -73,15 +73,15 @@
 
 @utility text-body-lg {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 1.1875rem;
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.125rem); /* 16px on phones, 17px on tablets, 18px on desktops */
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400; /* Montserrat 300 is too thin to read comfortably at length on a light background */
   letter-spacing: 0;
 }
 
 @utility text-body {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.9375rem, 0.88rem + 0.22vw, 1.0625rem); /* secondary text in cards and lists: 15 to 17px */
   line-height: 1.65;
   font-weight: 400;
   letter-spacing: 0;
@@ -89,8 +89,8 @@
 
 @utility text-small {
   font-family: var(--font-montserrat), sans-serif;
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  font-size: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  line-height: 1.55;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
@@ -104,6 +104,83 @@
   text-transform: uppercase;
 }
 
+/* === Page layout (one system for every public page) ===
+   ONE outer width: --page-width, used by the Container component for the header, every section and the footer.
+   Inside it:
+   - a section WITHOUT an image is a single column that uses the whole container width (heading above its text);
+   - a section WITH an image is two columns (editorial-split, or portrait-split for a person) that together fill the same width;
+   - the only narrower blocks are deliberate: centred calls to action (cta-block) and hero copy over a photograph.
+   There is no general "reading width" class: text is as wide as its section. */
+:root {
+  --page-width: 72rem;
+}
+
+/* Tighter vertical padding for stacked, divided sections inside one container. */
+@utility section-y-tight {
+  padding-block: clamp(2rem, 1.2rem + 2.4vw, 3.5rem);
+}
+
+/* A centred call to action: short, centred text and buttons. A deliberate exception to the full-width rule. */
+@utility cta-block {
+  max-width: 48rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Whole-card link: put this on the card's one real link (its heading). The link's invisible overlay covers the card,
+   so a click or tap anywhere opens the page, while the markup keeps a single, semantic link. The card must be `relative`. */
+@utility card-link {
+  outline: none;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+}
+
+/* Two columns for a section that has an image (a photograph beside its heading and text). One column on phones and tablets.
+   The two columns together fill the container; the picture takes the smaller share. */
+@utility editorial-split {
+  display: grid;
+  row-gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  @media (min-width: 1024px) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(2.5rem, 1rem + 4vw, 5rem);
+    align-items: start;
+  }
+}
+
+/* Two columns for a person: a portrait with the name beside the biography, which takes all the remaining width. */
+@utility portrait-split {
+  display: grid;
+  row-gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  @media (min-width: 1024px) {
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 1rem + 4vw, 5rem);
+    align-items: start;
+  }
+}
+
+/* Top and bottom padding of a section, on their own. */
+@utility section-pt {
+  padding-top: clamp(3rem, 2rem + 3.6vw, 6rem);
+}
+
+@utility section-pb {
+  padding-bottom: clamp(3rem, 2rem + 3.6vw, 6rem);
+}
+
+/* Vertical padding of a page section: 48px on phones growing to 96px on wide desktops. */
+@utility section-y {
+  padding-block: clamp(3rem, 2rem + 3.6vw, 6rem);
+}
+
+/* Gap between the columns of two-column sections. */
+@utility grid-gap-x {
+  column-gap: clamp(2rem, 1rem + 3.5vw, 4.5rem);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -114,15 +191,6 @@ body {
   font-family: var(--font-montserrat), sans-serif;
 }
 
-@media (max-width: 768px) {
-  .text-display {
-    font-size: 2.75rem;
-  }
-
-  .text-h1 {
-    font-size: 2rem;
-  }
-}
 
 /* Subtle motion */
 @keyframes fade-up {

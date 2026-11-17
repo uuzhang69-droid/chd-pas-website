@@ -9,7 +9,7 @@ export function EventsGrid() {
   const { events } = siteContent.home;
 
   return (
-    <section className="py-16 md:py-24" aria-labelledby="events-heading">
+    <section className="section-y" aria-labelledby="events-heading">
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="mb-0">

@@ -28,7 +28,7 @@ export function VenueSpacesSection({ title, items, wholeVenue }: VenueSpacesSect
   if (!activeSpace) return null;
 
   return (
-    <section className="py-8 md:py-12">
+    <section className="section-y-tight">
       <Container>
         <h2 className="text-h2 text-charcoal">{title}</h2>
         <div className="mt-4 grid gap-8 md:grid-cols-2 md:items-stretch">

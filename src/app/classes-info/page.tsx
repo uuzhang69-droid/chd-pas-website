@@ -29,9 +29,9 @@ export default function ClassesInfoPage() {
   return (
     <PageShell>
       <PageHero {...page.hero} />
-      <section className="py-12 md:py-16">
+      <section className="section-y">
         <Container>
-          <p className="text-body-lg max-w-3xl text-charcoal/80">{page.intro}</p>
+          <p className="text-body-lg text-charcoal/80">{page.intro}</p>
           <div className="mt-10">
             <ClassStyleCardGrid items={cards} linkLabel={page.cardLink} />
           </div>

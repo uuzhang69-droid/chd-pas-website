@@ -3,7 +3,7 @@
  * Run: npx tsx scripts/export-home-copy.mts
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import ExcelJS from "exceljs";
 import { copy } from "../src/content/copy";

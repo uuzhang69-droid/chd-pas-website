@@ -187,11 +187,12 @@ test("single events use confirmed times and invent no offers, URLs or end times"
     assert.equal(within["@type"], "Event");
     assert.equal(within.startDate, "2026-11-28T19:30:00+00:00");
     assert.equal(within.endDate, "2026-11-28T20:00:00+00:00");
-    // Free admission is confirmed; booking is not, so the offer has no URL.
+    // Free admission is confirmed, and the official Eventbrite page is now the offer's URL.
     assert.deepEqual(within.offers, {
         "@type": "Offer",
         price: "0",
         priceCurrency: "GBP",
+        url: "https://www.eventbrite.co.uk/e/within-one-room-stillness-in-motion-tickets-2004916771033",
     });
     const acting = eventJsonLd(bySlug("an-actors-work-with-an-object"))!;
     assert.equal(acting.startDate, "2026-11-28T15:00:00+00:00");

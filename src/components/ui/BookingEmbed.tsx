@@ -16,12 +16,12 @@ export function BookingEmbedPlaceholder({
   image,
 }: BookingEmbedProps) {
   return (
-    <section id={id} className="scroll-mt-28 py-16 md:py-20" aria-labelledby="booking-heading">
+    <section id={id} className="scroll-mt-28 section-y" aria-labelledby="booking-heading">
       <Container>
         <h2 id="booking-heading" className="text-h2 text-charcoal">
           {title}
         </h2>
-        <p className="text-body-lg mt-4 max-w-3xl text-charcoal/75">{description}</p>
+        <p className="text-body-lg mt-4 text-charcoal/75">{description}</p>
 
         {image ? (
           <div className="mt-10 overflow-hidden rounded-sm border border-taupe/30 bg-ivory">

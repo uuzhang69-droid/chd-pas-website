@@ -12,10 +12,11 @@ const mainImage = {
 };
 
 /**
- * Official booking page. Not supplied yet: set this one value and the detail page
- * switches to a real Book Now button (cards always say View Details).
+ * Official Eventbrite page. Single source for every Book Now button for this event: the detail page
+ * and the calendar both read it (cards always say View Details).
  */
-export const WITHIN_ONE_ROOM_BOOKING_URL: string | undefined = undefined;
+export const WITHIN_ONE_ROOM_BOOKING_URL: string | undefined =
+    "https://www.eventbrite.co.uk/e/within-one-room-stillness-in-motion-tickets-2004916771033";
 
 const bookNow: EventCard["bookNow"] = WITHIN_ONE_ROOM_BOOKING_URL
     ? {
@@ -38,9 +39,9 @@ export const withinOneRoomEvent: EventCard = {
     title: "Within One Room · Stillness in Motion",
     subtitle: "One room. Six art forms. An evening to stir the senses.",
     category: "Art & Performance",
-    date: "Saturday 28 November 2026, 7:30pm – 8:00pm",
+    date: "Saturday 28 November 2026, 7:30pm to 8:00pm",
     dateIso: "2026-11-28",
-    time: "19:30–20:00",
+    time: "19:30 to 20:00",
     location:
         "County Hall Dance Centre, 2nd Floor, County Hall, Riverside Building, Belvedere Road, London SE1 7PB",
     excerpt:
@@ -88,7 +89,7 @@ export const withinOneRoomEvent: EventCard = {
         name: "Megan Xiong",
         role: "Mixed media artist and storyteller",
         paragraphs: [
-            "Megan Xiong is a mixed media artist and storyteller creating richly layered worlds — where everyday emotions, private thoughts, and human encounters unfold through imaginative visual narratives.",
+            "Megan Xiong is a mixed media artist and storyteller creating richly layered worlds, where everyday emotions, private thoughts, and human encounters unfold through imaginative visual narratives.",
             "Within One Room is her series of paintings, and the inspiration for this evening. In this collaboration her paintings come to life, weaving everyday emotions with a quiet thread of Eastern philosophy.",
         ],
         image: {

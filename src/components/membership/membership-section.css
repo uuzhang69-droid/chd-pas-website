@@ -15,7 +15,8 @@
   --connect-tint: #f7f2f9;
   --connect-soft: #e9ddef;
 
-  padding: 65px 5%;
+  /* Horizontal edges come from the shared Container, like every other page. */
+  padding: 65px 0;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-montserrat), Montserrat, Arial, sans-serif;

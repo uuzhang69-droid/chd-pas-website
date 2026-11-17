@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllCourseSlugs, getCourseBySlug } from "@/content/helpers";
 import { siteContent } from "@/content/site";
@@ -10,6 +9,7 @@ import { breadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Eyebrow, HeroBackLink } from "@/components/ui/HeroParts";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -47,25 +47,23 @@ export default async function CourseDetailPage({ params }: PageProps) {
       />
       <section className="border-b border-taupe/30 bg-ivory">
         <Container className="py-12 md:py-16">
-          <Link href="/courses" className="text-small font-semibold text-rose hover:text-rose/80">
-            ← {labels.backLink}
-          </Link>
-          <p className="text-overline text-rose mt-6">{course.term}</p>
+          <HeroBackLink href="/courses" tone="light">{labels.backLink}</HeroBackLink>
+          <Eyebrow tone="light" className="mt-8">{course.term}</Eyebrow>
           <h1 className="text-h1 mt-2 max-w-3xl text-charcoal">{course.title}</h1>
           <p className="text-body mt-2 text-charcoal/60">{course.level}</p>
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="section-y">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="editorial-split">
             <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
               <Image
                 src={course.image.src}
                 alt={course.image.alt}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 priority
               />
             </div>

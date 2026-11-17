@@ -162,7 +162,18 @@ export type ClassInstructor = {
     name: string;
     role?: string;
     bio: string;
+    /** Further verified paragraphs shown after the main biography. */
+    moreBio?: string[];
     image: ImageAsset;
+};
+
+/** One way of taking a class, as listed on the timetable (for example "Gentle Flow"). */
+export type ClassFormat = {
+    /** Optional public heading; the canonical class name remains unchanged. */
+    title?: string;
+    name: string;
+    summary: string;
+    image?: ImageAsset;
 };
 
 export type ClassStylePage = {
@@ -176,9 +187,17 @@ export type ClassStylePage = {
         image: ImageAsset;
     };
     instructor: ClassInstructor;
-    intro: string[];
-    highlights: Array<{ title: string; description: string }>;
-    ageGroups: Array<{ label: string; description: string }>;
+    /** "Meet your instructor" or "Meet your instructors". */
+    instructorHeading: string;
+    /** About the discipline, in a few short paragraphs. */
+    about: { title?: string; paragraphs: string[]; image?: ImageAsset };
+    /** The classes actually offered, each described separately. */
+    formats: ClassFormat[];
+    formatSection?: { title: string };
+    formatsNote?: string;
+    /** What to expect: only what is true and useful for this class. */
+    expect?: { title?: string; items: Array<{ title: string; description: string }> };
+    closing: { title: string; body: string };
     cta: CtaButton;
 };
 

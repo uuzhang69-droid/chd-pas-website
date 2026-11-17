@@ -1,64 +1,34 @@
 import type { SectionedPageSection } from "@/content/types";
-import { AutoPlayGallery } from "@/components/ui/AutoPlayGallery";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 type PrivateLessonsSectionsProps = {
-  sections: readonly SectionedPageSection[];
+    sections: readonly SectionedPageSection[];
 };
 
-function SectionBlock({
-  section,
-  index,
-}: {
-  section: SectionedPageSection;
-  index: number;
-}) {
-  const galleryOnLeft =
-    section.galleryPosition === "left" ||
-    (section.galleryPosition !== "right" && index % 2 === 1);
-
-  const textBlock = (
-    <div className={galleryOnLeft ? "md:order-2" : "md:order-1"}>
-      <h2 className="text-h2 text-charcoal">{section.title}</h2>
-      {section.body && (
-        <p className="text-body-lg mt-5 text-charcoal/80">{section.body}</p>
-      )}
-      {section.cta && (
-        <div className="mt-6">
-          <Button {...section.cta} />
-        </div>
-      )}
-    </div>
-  );
-
-  const galleryBlock = section.gallery?.length ? (
-    <div className={galleryOnLeft ? "md:order-1" : "md:order-2"}>
-      <AutoPlayGallery images={section.gallery} label={`${section.title} gallery`} />
-    </div>
-  ) : null;
-
-  return (
-    <section
-      id={section.id}
-      className={`scroll-mt-32 py-16 md:py-24 ${index % 2 === 1 ? "bg-ivory" : ""}`}
-    >
-      <Container>
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
-          {textBlock}
-          {galleryBlock}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
+/** These sections have no image, so each is ONE column: the heading above its text, on the same left edge, inside the page container. */
 export function PrivateLessonsSections({ sections }: PrivateLessonsSectionsProps) {
-  return (
-    <>
-      {sections.map((section, index) => (
-        <SectionBlock key={section.id} section={section} index={index} />
-      ))}
-    </>
-  );
+    return (
+        <Container>
+            <div className="border-t border-taupe/40">
+                {sections.map((section, index) => (
+                    <section
+                        key={section.id}
+                        id={section.id}
+                        className={`scroll-mt-32 section-y-tight ${index > 0 ? "border-t border-taupe/40" : ""}`}
+                    >
+                        <div>
+                            <h2 className="text-h2 text-charcoal">{section.title}</h2>
+                            {section.body && <p className="text-body-lg mt-5 text-charcoal/85">{section.body}</p>}
+                            {section.cta && (
+                                <div className="mt-7">
+                                    <Button {...section.cta} />
+                                </div>
+                            )}
+                        </div>
+                    </section>
+                ))}
+            </div>
+        </Container>
+    );
 }

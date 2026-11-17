@@ -26,6 +26,7 @@ import {
     type ScheduleData,
 } from "@/lib/class-calendar/sessions";
 
+import { Container } from "@/components/ui/Container";
 import "./class-calendar.css";
 
 const STYLE_FILTER_OPTIONS = [
@@ -375,6 +376,7 @@ export function ClassCalendar({
 
     return (
         <section className="class-calendar-section" ref={sectionRef}>
+            <Container>
             <div className="calendar-panel">
                 <div className="calendar-toolbar">
                     <div>
@@ -496,6 +498,7 @@ export function ClassCalendar({
                     </button>
                 </div>
             </div>
+            </Container>
             <BookingOptionsDialog sectionRef={sectionRef} />
         </section>
     );
