@@ -103,11 +103,13 @@ export default async function ClassStylePage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* 3. Compact editorial options; a single format is introduced above. One column: heading above the list. */}
+      {/* 3. Compact editorial options; a single format is introduced above. One column: heading above the list.
+             No line between the introduction and this heading (the section spacing is enough); the list keeps its own
+             separators between the individual sessions. */}
       {style.formats.length > 1 && (
         <section id="classes" className="scroll-mt-32 section-pb">
           <Container>
-            <div className="border-t border-taupe/40 section-pt">
+            <div>
               <div>
                 <h2 className="text-h2 text-charcoal">
                   {style.formatSection?.title ?? withName(detailLabels.formats, style.name)}
@@ -146,7 +148,7 @@ export default async function ClassStylePage({ params }: PageProps) {
       {!!style.expect?.items.length && (
         <section id="expect" className="scroll-mt-32 section-pb">
           <Container>
-            <div className="border-t border-taupe/40 section-pt">
+            <div>
               <h2 className="text-h2 text-charcoal">{style.expect.title ?? detailLabels.expect}</h2>
               <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {style.expect.items.map((item) => (

@@ -5,7 +5,7 @@ type ContainerProps = {
   className?: string;
   as?: "div" | "section" | "header" | "footer" | "nav";
   id?: string;
-  /** For data-dense blocks (the timetable calendar, the membership cards): same gutters and centring, a wider maximum. */
+  /** Follow the Header: no maximum width and the Header's own side gutters (20, 24, 32, then 40 px). For the timetable and membership. */
   wide?: boolean;
 };
 
@@ -14,9 +14,10 @@ type ContainerProps = {
  * padding everywhere. Header, footer, every section and every hero use it, so all left and right edges line up.
  */
 export function Container({ children, className = "", as: Tag = "div", id, wide = false }: ContainerProps) {
-  const width = wide ? "max-w-[var(--page-width-wide)]" : "max-w-[var(--page-width)]";
+  // The Header (components/layout/Header.tsx) is full width with pl/pr of 5, 6, 8 and 10 (xl). The wide variant uses exactly those.
+  const frame = wide ? "px-5 sm:px-6 lg:px-8 xl:px-10" : "max-w-[var(--page-width)] px-5 sm:px-6 lg:px-8";
   return (
-    <Tag id={id} className={`mx-auto w-full ${width} px-5 sm:px-6 lg:px-8 ${className}`}>
+    <Tag id={id} className={`mx-auto w-full ${frame} ${className}`}>
       {children}
     </Tag>
   );

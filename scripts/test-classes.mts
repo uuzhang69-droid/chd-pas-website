@@ -142,11 +142,12 @@ test("single-format pages retain searchable class data and multi-format pages re
     assert.ok(chinese.formats[1].image?.src.endsWith("chinese-dance-soft-training.jpg"));
 });
 
-test("a class with several formats is divided from its introduction by one subtle line; a class with one format has no divider", () => {
+test("no divider line sits between a class introduction and its formats heading; the list keeps its separators between sessions", () => {
     const page = readFileSync("src/app/classes/[slug]/page.tsx", "utf8");
     const intro = page.slice(page.indexOf('id="about"'), page.indexOf("style.formats.length > 1"));
     const categories = page.slice(page.indexOf("style.formats.length > 1"), page.indexOf('id="instructor"'));
     assert.ok(!/border-t/.test(intro), "no divider inside the introduction, between ordinary paragraphs");
-    assert.match(categories, /<Container>\s*<div className="border-t border-taupe\/40 section-pt">/, "the divider sits in the shared container, in the design system border colour, with space below it");
+    assert.ok(!/border-t/.test(categories.slice(0, categories.indexOf("<ul"))), "no line above the formats heading");
+    assert.match(categories, /<ul className="[^"]*divide-y divide-taupe\/40 border-y border-taupe\/40">/, "separators between the individual sessions are kept");
     assert.equal(styles.filter((style) => style.formats.length > 1).map((style) => style.slug).sort().join(","), "chinese-dance,tango,yoga");
 });
