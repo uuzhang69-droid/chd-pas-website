@@ -76,3 +76,11 @@ The contact tests used fake settings, a mock database and a mock mailbox, with e
 3. Intermediate commits are not individually build-verified.
 4. Visual sign-off on layout and typography is still yours; there is no automated visual regression test.
 5. Newsletter, Admin, Supabase, Sanity and the Privacy Policy remain unreleased on `fix/contact-form-validation`.
+
+## Refinement round (18 November 2026)
+
+- **Timetable and Membership:** the shared container had narrowed both from about 90 percent of the screen (1283 px at 1440 px wide) to 1088 px, so every calendar cell and membership card was about 16 percent narrower and felt crowded. They now use `<Container wide>` (same gutters and centring, maximum `--page-width-wide: 84rem`). Measured against the live site at 1440 px: calendar panel 1280 px (was 1283), day cell 179 x 125 px (identical), membership card 412 px (was 413). At 768 px the Membership layout is identical and the calendar is 706 px (live 679 px); at 375 px both are within 3 px of the live site. No data, price, date, booking URL or behaviour changed.
+- **Membership on phones:** a leftover `padding: 50px 5%` in the 700 px media query doubled the side margins once the shared container was added. It is now `50px 0`.
+- **Class category divider:** the divider between the introduction and the Beginner / Advanced (or other format) section was already present in this branch (a 1 px line in the design-system border colour, inside the shared container, with generous space above and below). It appears on Tango, Yoga and Chinese Dance (the three classes with several formats) and not on Contemporary or Tai Chi. No second divider was added; a test now guards the rule.
+- **Checks:** `tsc` and full ESLint pass; 108 tests pass; production build passes; no horizontal overflow at 375, 768 and 1440 px on the timetable and membership pages.
+- **Trade-off:** at screens wider than 1152 px the calendar and membership cards are slightly wider than the text column above them. That is deliberate, to keep the previous proportions.
