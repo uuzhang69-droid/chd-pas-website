@@ -69,7 +69,7 @@ export function BookingOptionsDialog({
         : !membershipChoice
           ? "Select an option to continue."
           : membershipChoice === "new"
-            ? "See current membership tiers, benefits and how to sign up — then return to book your class when you are ready."
+            ? "See current membership tiers, benefits and how to sign up, then return to book your class when you are ready."
             : membershipChoice === "existing"
               ? "Sign in to ClassManager and check the options available for your membership. No card or discount has been applied here."
               : "Choose an upcoming class and review the final price in ClassManager. Opens in a new tab.";

@@ -89,11 +89,23 @@ export function createResendSender(
 
 export type MailConfig = { sender: MailSender; from: string };
 
+/**
+ * Settings pasted into a hosting dashboard often carry stray spaces, a trailing line break or a pair of
+ * quotation marks. The provider rejects a sender address like that, so they are removed here.
+ */
+export function cleanSetting(value: string | undefined): string | undefined {
+    const cleaned = value
+        ?.trim()
+        .replace(/^(["'])([\s\S]*)\1$/, "$2")
+        .trim();
+    return cleaned ? cleaned : undefined;
+}
+
 /** Undefined when the mail service is not configured. Nothing is assumed about the sender address. */
 export function getMailConfig(): MailConfig | undefined {
-    const provider = (process.env.MAIL_PROVIDER || "resend").toLowerCase();
-    const apiKey = process.env.MAIL_API_KEY;
-    const from = process.env.MAIL_FROM;
+    const provider = (process.env.MAIL_PROVIDER || "resend").trim().toLowerCase();
+    const apiKey = cleanSetting(process.env.MAIL_API_KEY);
+    const from = cleanSetting(process.env.MAIL_FROM);
     if (!apiKey || !from) return undefined;
     if (provider === "resend")
         return { sender: createResendSender(apiKey), from };

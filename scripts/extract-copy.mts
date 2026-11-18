@@ -7,19 +7,34 @@
  * Run: npx tsx scripts/extract-copy.mts
  */
 
-import { writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { siteSource } from "../src/content/site.source";
+import { anActorsWorkWithAnObjectEvent } from "../src/content/events/an-actors-work-with-an-object";
+import { withinOneRoomEvent } from "../src/content/events/within-one-room-stillness-in-motion";
+import { lunchtimeConcertSeriesEvent } from "../src/content/events/lunchtime-concert-series";
+import { replaceClassCopy, replaceClassCsv, replaceContentPath } from "./lib/scoped-content-export.mts";
+
+const classesOnly = process.argv.includes("--classes");
+const outputArg = process.argv.indexOf("--output-dir");
+if (outputArg >= 0 && !process.argv[outputArg + 1]) throw new Error("--output-dir requires a path");
+const eventModules = [
+    { value: anActorsWorkWithAnObjectEvent, name: "anActorsWorkWithAnObjectEvent", path: "./events/an-actors-work-with-an-object" },
+    { value: withinOneRoomEvent, name: "withinOneRoomEvent", path: "./events/within-one-room-stillness-in-motion" },
+    { value: lunchtimeConcertSeriesEvent, name: "lunchtimeConcertSeriesEvent", path: "./events/lunchtime-concert-series" },
+];
 
 const COPY_PREFIX = "@@COPY:";
 
 const TEXT_KEYS = new Set([
   "label",
+  "taughtBy",
   "programme",
   "booking",
   "venuePending",
   "timePending",
   "endPending",
+  "allDay",
   "room",
   "timetableNote",
   "organiser",
@@ -108,14 +123,6 @@ function humanLocation(id: string): string {
   const parts = id.split(".");
   const root = parts[0];
 
-  const rootLabels: Record<string, string> = {
-    meta: "Site metadata (SEO defaults)",
-    global: "Global shell (header, footer, utility bar)",
-    home: "Homepage",
-    pages: "Inner page",
-    ui: "Site-wide UI label",
-  };
-
   if (root === "ui") {
     return `Site-wide UI — ${parts.slice(1).join(" ").replace(/_/g, " ")}`;
   }
@@ -180,9 +187,13 @@ function registerCopy(id: string, text: string) {
 }
 
 function extractValue(value: unknown, path: string[], parent?: unknown): unknown {
+    const eventModule = eventModules.find((entry) => entry.value === value);
+    if (eventModule) return `@@MODULE:${eventModule.name}`;
   if (typeof value === "string") {
     const key = path[path.length - 1] ?? "text";
-    if (!TEXT_KEYS.has(key) || isStructuralString(key, value, parent)) {
+    const classField = path[0] === "pages" && path[1] === "classes" &&
+        ["summary", "formatsNote", "instructorHeading", "about", "formats", "expect", "askUs"].includes(key);
+    if ((!TEXT_KEYS.has(key) && !classField) || isStructuralString(key, value, parent)) {
       return value;
     }
     const id = path.map(sanitizeSegment).join(".");
@@ -213,7 +224,9 @@ function extractValue(value: unknown, path: string[], parent?: unknown): unknown
   return value;
 }
 
-const siteStructure = extractValue(siteSource, []);
+const siteStructure = classesOnly
+    ? extractValue(siteSource.pages.classes, ["pages", "classes"])
+    : extractValue(siteSource, []);
 
 copyEntries.sort((a, b) => a.id.localeCompare(b.id));
 
@@ -233,7 +246,19 @@ const csv = [
   ),
 ].join("\n");
 
-const root = join(process.cwd());
+const root = outputArg >= 0 ? join(process.argv[outputArg + 1]) : process.cwd();
+mkdirSync(join(root, "src/content"), { recursive: true });
+mkdirSync(join(root, "content"), { recursive: true });
+
+if (classesOnly) {
+    // Scoped export accepts only the approved Classes subtree; everything else is preserved verbatim.
+    writeFileSync(join(root, "src/content/copy.ts"), replaceClassCopy(readFileSync("src/content/copy.ts", "utf8"), copyObject));
+    writeFileSync(join(root, "src/content/site.structure.ts"), replaceContentPath(readFileSync("src/content/site.structure.ts", "utf8"), "siteStructure", ["pages", "classes"], siteStructure));
+    writeFileSync(join(root, "content/website-copy.csv"), replaceClassCsv(readFileSync("content/website-copy.csv", "utf8"), copyEntries.map((entry) => [entry.id, entry.location, entry.text].map(escapeCsv).join(","))));
+} else {
+const imports = eventModules.map((entry) => `import { ${entry.name} } from ${JSON.stringify(entry.path)};`).join("\n");
+let structureText = JSON.stringify(siteStructure, null, 2);
+for (const entry of eventModules) structureText = structureText.replaceAll(JSON.stringify(`@@MODULE:${entry.name}`), entry.name);
 
 writeFileSync(
   join(root, "src/content/copy.ts"),
@@ -242,9 +267,10 @@ writeFileSync(
 
 writeFileSync(
   join(root, "src/content/site.structure.ts"),
-  `/** Auto-generated structure — non-text fields and copy references. Regenerate via: npm run content:export */\n\nexport const siteStructure = ${JSON.stringify(siteStructure, null, 2)} as const;\n`,
+  `/** Auto-generated structure — non-text fields and copy references. Regenerate via: npm run content:export */\n\n${imports}\n\nexport const siteStructure = ${structureText} as const;\n`,
 );
 
 writeFileSync(join(root, "content/website-copy.csv"), `${csv}\n`);
+}
 
 console.log(`Extracted ${copyEntries.length} strings to content/website-copy.csv`);

@@ -18,9 +18,9 @@ export default function CoursesPage() {
   return (
     <PageShell>
       <PageHero {...courses.hero} />
-      <section className="py-16 md:py-24">
+      <section className="section-y">
         <Container>
-          <p className="text-body-lg max-w-3xl text-charcoal/75">{courses.intro}</p>
+          <p className="text-body-lg text-charcoal/75">{courses.intro}</p>
           <div className="mt-12">
             <CourseCardGrid items={courses.items} />
           </div>

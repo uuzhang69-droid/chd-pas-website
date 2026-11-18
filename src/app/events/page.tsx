@@ -21,7 +21,7 @@ export default function EventsPage() {
   return (
     <PageShell>
       <PageHero {...events.hero} />
-      <section className="py-16 md:py-24">
+      <section className="section-y">
         <Container>
           <EventsListing items={events.items} filterLabels={events.filters} />
         </Container>

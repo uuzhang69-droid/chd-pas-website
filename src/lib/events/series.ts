@@ -35,8 +35,8 @@ export function longDate(dateIso: string): string {
     }).format(new Date(`${dateIso}T12:00:00Z`));
 }
 
-/** "13:00–14:00", or just the start when no end time is known. */
+/** "13:00 to 14:00", or just the start when no end time is known. */
 export function sessionTimeRange(session: EventSession): string | undefined {
     if (!session.start) return undefined;
-    return session.end ? `${session.start}–${session.end}` : session.start;
+    return session.end ? `${session.start} to ${session.end}` : session.start;
 }

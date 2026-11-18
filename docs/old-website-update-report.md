@@ -1,5 +1,7 @@
 # OLD website update report — 2 November 2026
 
+Historical implementation record. The later [timetable history update](timetable-history-update.md) supersedes the external-venue inclusion change at the end of this document. Current authoring rules are in [CONTENT.md](../CONTENT.md).
+
 Implemented directly in E:/Website/CHDC-Old. No commit or push performed.
 
 ## Delivered

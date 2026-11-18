@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllClassSlugs, getClassBySlug } from "@/content/helpers";
 import { siteContent } from "@/content/site";
@@ -10,6 +9,7 @@ import { breadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Eyebrow, HeroBackLink, HeroBanner } from "@/components/ui/HeroParts";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -24,12 +24,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const style = getClassBySlug(slug);
   if (!style) return {};
   return pageMetadata({
-    title: style.name,
+    title: `${style.hero.title} Classes in London`,
     description: style.metaDescription,
     path: `/classes/${slug}`,
     image: style.hero.image,
   });
 }
+
+/** "About {name}" style labels keep the wording in the content files. */
+const withName = (label: string, name: string) => label.replace("{name}", name);
 
 export default async function ClassStylePage({ params }: PageProps) {
   const { slug } = await params;
@@ -37,6 +40,12 @@ export default async function ClassStylePage({ params }: PageProps) {
   if (!style) notFound();
 
   const { detailLabels } = siteContent.pages.classes;
+  const instructors = [style.instructor, ...(style.additionalInstructors ?? [])];
+  // Three formats without pictures sit side by side as cards on wide screens; any other set stays a list.
+  const formatColumns = style.formats.length === 3 && style.formats.every((format) => !format.image);
+  const aboutTitle = style.about.title ?? withName(detailLabels.about, style.name);
+  // A single format is introduced here, as one more paragraph of the introduction.
+  const aboutParagraphs = [...style.about.paragraphs, ...(style.formats.length === 1 ? [style.formats[0].summary] : [])];
 
   return (
     <PageShell>
@@ -49,86 +58,188 @@ export default async function ClassStylePage({ params }: PageProps) {
           { name: style.name, path: `/classes/${slug}` },
         ])}
       />
-      <section className="relative overflow-hidden bg-charcoal text-ivory">
-        <div className="absolute inset-0">
-          <Image
-            src={style.hero.image.src}
-            alt={style.hero.image.alt}
-            fill
-            className="object-cover opacity-35"
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 to-charcoal/50" />
-        </div>
-        <Container className="relative py-20 md:py-28">
-          <Link
-            href="/classes-info"
-            className="text-small font-semibold text-rose hover:text-ivory"
-          >
-            ← {detailLabels.backLink}
-          </Link>
-          <p className="text-overline text-rose mt-6 mb-3">{style.hero.overline}</p>
-          <h1 className="text-display max-w-3xl text-ivory">{style.hero.title}</h1>
-          <p className="text-body-lg mt-5 max-w-2xl text-ivory/85">{style.hero.subtitle}</p>
+
+      {/* 1. Hero */}
+      <HeroBanner image={style.hero.image}>
+        <HeroBackLink href="/classes-info">{detailLabels.backLink}</HeroBackLink>
+        <Eyebrow className="mt-8 mb-5">{style.hero.overline}</Eyebrow>
+        <h1 className="text-display max-w-4xl text-ivory">{style.hero.title}</h1>
+        <p className="text-body-lg mt-5 max-w-[52rem] text-ivory/90">{style.hero.subtitle}</p>
+      </HeroBanner>
+
+      {/* 2. Introduction. One rule for every section on this page:
+             - with an image: two columns (picture, then heading and text);
+             - without an image: ONE column, the heading above the paragraphs, all on the same left edge.
+             Both sit in the same Container, so the outer left and right edges never change. */}
+      <section id="about" className="scroll-mt-32 section-y">
+        <Container>
+          {style.about.image ? (
+            <div className="editorial-split">
+              <Image
+                src={style.about.image.src}
+                alt={style.about.image.alt}
+                width={style.about.image.width}
+                height={style.about.image.height}
+                sizes="(max-width: 1023px) 92vw, 36vw"
+                className="h-auto w-full rounded-sm shadow-sm"
+              />
+              <div>
+                <h2 className="text-h2 text-charcoal">{aboutTitle}</h2>
+                <div className="mt-6 space-y-5">
+                  {aboutParagraphs.map((paragraph) => (
+                    <p key={paragraph.slice(0, 40)} className="text-body-lg text-charcoal/85">{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <h2 className="text-h2 text-charcoal">{aboutTitle}</h2>
+              <div className="mt-6 space-y-5">
+                {aboutParagraphs.map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)} className="text-body-lg text-charcoal/85">{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          )}
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,16rem)_1fr] lg:items-start lg:gap-12">
-            <div className="flex flex-col items-center text-center lg:sticky lg:top-28 lg:items-start lg:text-left">
-              <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border-4 border-rose/25 bg-blush/30 shadow-sm md:h-40 md:w-40">
-                <Image
-                  src={style.instructor.image.src}
-                  alt={style.instructor.image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
+      {/* 3. Compact editorial options; a single format is introduced above. One column: heading above the list.
+             No line between the introduction and this heading (the section spacing is enough); the list keeps its own
+             separators between the individual sessions. */}
+      {style.formats.length > 1 && (
+        <section id="classes" className="scroll-mt-32 section-pb">
+          <Container>
+            <div>
+              <div>
+                <h2 className="text-h2 text-charcoal">
+                  {style.formatSection?.title ?? withName(detailLabels.formats, style.name)}
+                </h2>
               </div>
-              <p className="text-overline text-rose mt-5">{detailLabels.instructor}</p>
-              <h2 className="text-h3 mt-1 text-charcoal">{style.instructor.name}</h2>
-              {style.instructor.role && (
-                <p className="text-small mt-2 text-charcoal/65">{style.instructor.role}</p>
+              {formatColumns ? (
+                <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+                  {style.formats.map((format) => (
+                    <li key={format.name} className="flex flex-col rounded-sm border border-taupe/40 bg-white/50 p-6 sm:p-7">
+                      <h3 className="text-h3 text-charcoal">{format.title ?? format.name}</h3>
+                      <p className="text-body mt-3 text-charcoal/85">{format.summary}</p>
+                      {format.taughtBy && <p className="text-small mt-auto pt-5 font-medium text-burgundy">{format.taughtBy}</p>}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="mt-8 divide-y divide-taupe/40 border-y border-taupe/40">
+                  {style.formats.map((format) => (
+                    <li
+                      key={format.name}
+                      className={`py-7 ${format.image ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_12rem] md:gap-12" : ""}`}
+                    >
+                      <div>
+                        <h3 className="text-h3 text-charcoal">{format.title ?? format.name}</h3>
+                        <p className="text-body-lg mt-3 text-charcoal/85">{format.summary}</p>
+                        {format.taughtBy && <p className="text-small mt-3 font-medium text-burgundy">{format.taughtBy}</p>}
+                      </div>
+                      {format.image && (
+                        <Image
+                          src={format.image.src}
+                          alt={format.image.alt}
+                          width={format.image.width}
+                          height={format.image.height}
+                          sizes="192px"
+                          className="h-auto w-44 rounded-sm md:w-48 md:justify-self-end"
+                        />
+                      )}
+                    </li>
+                  ))}
+                </ul>
               )}
+              {style.formatsNote && <p className="text-body mt-5 text-charcoal/70">{style.formatsNote}</p>}
             </div>
-            <div className="space-y-4">
-              <p className="text-body text-charcoal/80">{style.instructor.bio}</p>
-              {style.intro.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)} className="text-body text-charcoal/80">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </div>
+          </Container>
+        </section>
+      )}
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-3 lg:items-start">
-            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
-              {style.highlights.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-sm border border-taupe/30 p-6 transition-shadow hover:shadow-md"
-                >
-                  <h3 className="text-h3 text-charcoal">{item.title}</h3>
-                  <p className="text-body mt-3 text-charcoal/75">{item.description}</p>
-                </article>
-              ))}
-            </div>
-            <aside className="h-fit rounded-sm border border-rose/25 bg-ivory p-6">
-              <h2 className="text-h4 text-rose">{detailLabels.ageGroups}</h2>
-              <ul className="mt-4 space-y-4">
-                {style.ageGroups.map((group) => (
-                  <li key={group.label}>
-                    <p className="text-body font-semibold text-charcoal">{group.label}</p>
-                    <p className="text-small mt-1 text-charcoal/65">{group.description}</p>
+      {/* 4. Optional additional information (a heading above a grid of cards: one column of content). */}
+      {!!style.expect?.items.length && (
+        <section id="expect" className="scroll-mt-32 section-pb">
+          <Container>
+            <div>
+              <h2 className="text-h2 text-charcoal">{style.expect.title ?? detailLabels.expect}</h2>
+              <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {style.expect.items.map((item) => (
+                  <li key={item.title} className="rounded-sm border border-taupe/40 bg-white/50 p-6">
+                    <h3 className="text-h4 text-charcoal">{item.title}</h3>
+                    <p className="text-body mt-3 text-charcoal/80">{item.description}</p>
                   </li>
                 ))}
               </ul>
-              <div className="mt-6">
-                <Button {...style.cta} className="w-full" />
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* 5. The instructor(s). One teacher: portrait beside the biography. Several: equal columns, each with its own portrait. */}
+      <section id="instructor" className="scroll-mt-32 bg-blush/30 section-y">
+        <Container>
+          <h2 className="text-h2 text-charcoal">{style.instructorHeading}</h2>
+          {instructors.length > 1 ? (
+            <div className="mt-10 grid gap-14 lg:grid-cols-2 lg:gap-x-16">
+              {instructors.map((person) => (
+                <article key={person.name}>
+                  <div className="flex items-center gap-5">
+                    <div className="relative size-28 shrink-0 overflow-hidden rounded-full border-4 border-ivory shadow-md sm:size-32">
+                      <Image src={person.image.src} alt={person.image.alt} fill className="object-cover" sizes="128px" />
+                    </div>
+                    <div>
+                      <h3 className="text-h3 text-charcoal">{person.name}</h3>
+                    </div>
+                  </div>
+                  <div className="mt-6 space-y-5">
+                    <p className="text-body-lg text-charcoal/85">{person.bio}</p>
+                    {person.moreBio?.map((paragraph) => (
+                      <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/85">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            instructors.map((person) => (
+              <div key={person.name} className="portrait-split mt-10">
+                <div className="flex items-center gap-6 lg:flex-col lg:items-start lg:gap-5">
+                  <div className="relative size-36 shrink-0 overflow-hidden rounded-full border-4 border-ivory shadow-md sm:size-40 lg:size-52">
+                    <Image src={person.image.src} alt={person.image.alt} fill className="object-cover" sizes="208px" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 text-charcoal">{person.name}</h3>
+                  </div>
+                </div>
+                <div className="space-y-5">
+                  <p className="text-body-lg text-charcoal/85">{person.bio}</p>
+                  {person.moreBio?.map((paragraph) => (
+                    <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/85">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </aside>
+            ))
+          )}
+        </Container>
+      </section>
+
+      {/* 6. Next step */}
+      <section id="next" className="section-y">
+        <Container>
+          <div className="cta-block">
+            <h2 className="text-h2 text-charcoal">{style.closing.title}</h2>
+            <p className="text-body-lg mt-5 text-charcoal/85">{style.closing.body}</p>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+              <Button {...style.cta} />
+              <Button label={detailLabels.askUs} href="/contact?subject=classes" variant="secondary" />
+            </div>
           </div>
         </Container>
       </section>

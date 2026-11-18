@@ -17,7 +17,7 @@ export function ClassStyleCardGrid({
       {items.map((style) => (
         <article
           key={style.id}
-          className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow hover:shadow-lg"
+          className="relative group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition duration-300 hover:-translate-y-1 hover:border-rose hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 has-[a:focus-visible]:-translate-y-1 has-[a:focus-visible]:shadow-xl has-[a:focus-visible]:ring-4 has-[a:focus-visible]:ring-burgundy has-[a:focus-visible]:ring-offset-2 has-[a:focus-visible]:ring-offset-ivory"
         >
           <div className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-blush/25">
             <Image
@@ -30,17 +30,14 @@ export function ClassStyleCardGrid({
           </div>
           <div className="flex flex-1 flex-col p-6">
             <h2 className="text-h3 text-charcoal">
-              <Link href={style.href} className="hover:text-rose">
+              <Link href={style.href} className="card-link underline-offset-4 transition-colors group-hover:text-burgundy group-hover:underline group-has-[a:focus-visible]:text-burgundy group-has-[a:focus-visible]:underline">
                 {style.name}
               </Link>
             </h2>
-            <p className="text-body mt-3 flex-1 text-charcoal/75">{style.excerpt}</p>
-            <Link
-              href={style.href}
-              className="mt-5 text-small font-semibold uppercase tracking-wider text-rose hover:text-rose/80"
-            >
+            <p className="text-body mt-3 flex-1 text-charcoal/85">{style.excerpt}</p>
+            <span aria-hidden="true" className="mt-5 text-small font-semibold uppercase tracking-wider text-burgundy transition-colors group-hover:text-charcoal">
               {linkLabel}
-            </Link>
+            </span>
           </div>
         </article>
       ))}
@@ -83,7 +80,7 @@ export function CourseCardGrid({ items }: { items: CourseSummary[] }) {
       {items.map((course) => (
         <article
           key={course.id}
-          className="group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition-shadow hover:shadow-lg"
+          className="relative group flex flex-col overflow-hidden rounded-sm border border-taupe/30 bg-ivory transition duration-300 hover:-translate-y-1 hover:border-rose hover:shadow-xl motion-reduce:transition-none motion-reduce:hover:translate-y-0 has-[a:focus-visible]:-translate-y-1 has-[a:focus-visible]:shadow-xl has-[a:focus-visible]:ring-4 has-[a:focus-visible]:ring-burgundy has-[a:focus-visible]:ring-offset-2 has-[a:focus-visible]:ring-offset-ivory"
         >
           <div className="relative aspect-[16/9] overflow-hidden">
             <Image
@@ -95,20 +92,17 @@ export function CourseCardGrid({ items }: { items: CourseSummary[] }) {
             />
           </div>
           <div className="flex flex-1 flex-col p-6">
-            <p className="text-overline text-rose">{course.term}</p>
+            <p className="text-overline text-burgundy">{course.term}</p>
             <h2 className="text-h3 mt-2 text-charcoal">
-              <Link href={course.href} className="hover:text-rose">
+              <Link href={course.href} className="card-link underline-offset-4 transition-colors group-hover:text-burgundy group-hover:underline group-has-[a:focus-visible]:text-burgundy group-has-[a:focus-visible]:underline">
                 {course.title}
               </Link>
             </h2>
             <p className="text-small mt-1 text-charcoal/60">{course.level}</p>
-            <p className="text-body mt-3 flex-1 text-charcoal/75">{course.excerpt}</p>
-            <Link
-              href={course.href}
-              className="mt-5 text-small font-semibold uppercase tracking-wider text-rose hover:text-rose/80"
-            >
+            <p className="text-body mt-3 flex-1 text-charcoal/85">{course.excerpt}</p>
+            <span aria-hidden="true" className="mt-5 text-small font-semibold uppercase tracking-wider text-burgundy transition-colors group-hover:text-charcoal">
               {viewCourseLink}
-            </Link>
+            </span>
           </div>
         </article>
       ))}

@@ -3,13 +3,8 @@ import type { MailConfig } from "../mail";
 import type { RateLimiter } from "../security/rate-limit";
 import { hashKey, checkFormTiming } from "../security/request";
 import type { TurnstileResult } from "../security/turnstile";
-import {
-    cleanText,
-    countLinks,
-    escapeHtml,
-    isValidEmail,
-    normaliseEmail,
-} from "../security/validation";
+import { cleanText, escapeHtml, normaliseEmail } from "../security/validation";
+import { validateContact } from "./validate";
 
 /** Test inbox. It is only used outside production; production must set CONTACT_RECIPIENT_EMAIL itself. */
 export const TEST_CONTACT_RECIPIENT = "website.countyhalldance@gmail.com";
@@ -39,6 +34,8 @@ export type ContactDeps = {
     /** When true (production), a missing Turnstile configuration refuses every submission instead of skipping the check. */
     requireTurnstile?: boolean;
     nowMs: () => number;
+    /** Short reference shown to the visitor and written to the server log. */
+    newRef?: () => string;
 };
 
 export type ContactRequest = { body: unknown; ip: string };
@@ -49,68 +46,8 @@ export type ApiResponse = {
     retryAfterSeconds?: number;
 };
 
-const LIMITS = { name: 100, email: 254, phone: 20, message: 5000, other: 200 };
-
-function limitFor(field: FormField): number {
-    if (field.name === "message" || field.type === "textarea")
-        return LIMITS.message;
-    if (field.name === "name") return LIMITS.name;
-    if (field.type === "email") return LIMITS.email;
-    if (field.type === "tel") return LIMITS.phone;
-    return LIMITS.other;
-}
-
-type Cleaned = {
-    values: Record<string, string>;
-    errors: Record<string, string>;
-};
-
-function validate(fields: FormField[], body: Record<string, unknown>): Cleaned {
-    const values: Record<string, string> = {};
-    const errors: Record<string, string> = {};
-    for (const field of fields) {
-        // A conditional field (for example "Please specify") only counts while its trigger matches.
-        // The trigger is checked against the server's own cleaned value, never the browser's say-so.
-        if (field.showWhen) {
-            const trigger = fields.find((item) => item.name === field.showWhen?.field);
-            const triggerValue = trigger
-                ? cleanText(body[trigger.name], limitFor(trigger), false)
-                : "";
-            if (triggerValue !== field.showWhen.value) {
-                values[field.name] = "";
-                continue;
-            }
-        }
-        const raw = body[field.name];
-        const value = cleanText(
-            raw,
-            limitFor(field),
-            field.type === "textarea",
-        );
-        values[field.name] = value;
-        const required = field.required === true || field.type === "email";
-        if (!value) {
-            if (required) errors[field.name] = `${field.label} is required.`;
-            continue;
-        }
-        if (field.type === "email" && !isValidEmail(value))
-            errors[field.name] = "Please enter a valid email address.";
-        else if (field.type === "tel" && !/^[+()\-\d\s]{7,20}$/.test(value))
-            errors[field.name] = "Please enter a valid phone number.";
-        else if (field.type === "select") {
-            if (!field.options?.some((option) => option.value === value))
-                errors[field.name] = "Please choose one of the options.";
-        } else if (field.name === "name" && value.length < 2)
-            errors[field.name] = "Please enter your name.";
-        else if (field.name === "message") {
-            if (value.length < 10)
-                errors[field.name] =
-                    "Please write a little more (at least 10 characters).";
-            else if (countLinks(value) > 3)
-                errors[field.name] = "Please remove some of the links.";
-        }
-    }
-    return { values, errors };
+function defaultRef(): string {
+    return globalThis.crypto.randomUUID().slice(0, 8).toUpperCase();
 }
 
 function subjectLabel(
@@ -136,6 +73,19 @@ function customTopic(
     return field ? (values[field.name] ?? "") : "";
 }
 
+/**
+ * Limits, in the order they are applied:
+ * 1. a wide guard on every request from one address (protects the security check and the server);
+ * 2. stricter limits on actual sending, counted only for a request that passed validation and the
+ *    security check, so mistakes in the form never use them up.
+ */
+const GUARD = { limit: 15, windowSeconds: 600 };
+const SEND_RULES = [
+    { suffix: "ip10", limit: 4, windowSeconds: 600 },
+    { suffix: "ip1h", limit: 10, windowSeconds: 3600 },
+];
+const SEND_PER_EMAIL = { limit: 3, windowSeconds: 3600 };
+
 export async function handleContact(
     deps: ContactDeps,
     request: ContactRequest,
@@ -151,6 +101,7 @@ export async function handleContact(
     if (!body || typeof body !== "object" || Array.isArray(body))
         return { status: 400, body: { ok: false, code: "invalid_json" } };
     const input = body as Record<string, unknown>;
+    const ref = (deps.newRef ?? defaultRef)();
 
     // Spam traps: a filled hidden field, or a form submitted faster than a person can type.
     if (typeof input.hp === "string" && input.hp.trim() !== "")
@@ -162,24 +113,19 @@ export async function handleContact(
         return { status: 400, body: { ok: false, code: "form_expired" } };
 
     const ipKey = hashKey(deps.rateSalt, request.ip);
-    for (const rule of [
-        { key: `contact:ip10:${ipKey}`, limit: 2, windowSeconds: 600 },
-        { key: `contact:ip1h:${ipKey}`, limit: 5, windowSeconds: 3600 },
-    ]) {
-        const result = await deps.limiter.hit(rule);
-        if (!result.allowed)
-            return {
-                status: 429,
-                body: {
-                    ok: false,
-                    code: "rate_limited",
-                    retryAfter: result.retryAfterSeconds,
-                },
-                retryAfterSeconds: result.retryAfterSeconds,
-            };
-    }
+    const rateLimited = (retryAfter: number): ApiResponse => ({
+        status: 429,
+        body: { ok: false, code: "rate_limited", retryAfter },
+        retryAfterSeconds: retryAfter,
+    });
 
-    const { values, errors } = validate(deps.fields, input);
+    const guard = await deps.limiter.hit({
+        key: `contact:guard:${ipKey}`,
+        ...GUARD,
+    });
+    if (!guard.allowed) return rateLimited(guard.retryAfterSeconds);
+
+    const { values, errors } = validateContact(deps.fields, input);
     if (Object.keys(errors).length > 0)
         return { status: 400, body: { ok: false, code: "validation", errors } };
 
@@ -189,31 +135,36 @@ export async function handleContact(
             input.turnstileToken,
             request.ip,
         );
-        if (!check.ok)
+        if (!check.ok) {
+            // Cloudflare's error codes name the problem (for example a hostname that is not allowed). No secrets.
+            console.error("contact_turnstile_failed", {
+                ref,
+                reason: check.reason,
+                codes: check.codes,
+            });
             return check.reason === "unavailable"
                 ? {
                       status: 502,
-                      body: { ok: false, code: "verification_unavailable" },
+                      body: { ok: false, code: "verification_unavailable", ref },
                   }
                 : { status: 403, body: { ok: false, code: "bot" } };
+        }
     }
 
+    for (const rule of SEND_RULES) {
+        const hit = await deps.limiter.hit({
+            key: `contact:${rule.suffix}:${ipKey}`,
+            limit: rule.limit,
+            windowSeconds: rule.windowSeconds,
+        });
+        if (!hit.allowed) return rateLimited(hit.retryAfterSeconds);
+    }
     const emailKey = hashKey(deps.rateSalt, normaliseEmail(values.email ?? ""));
     const perEmail = await deps.limiter.hit({
         key: `contact:email:${emailKey}`,
-        limit: 3,
-        windowSeconds: 3600,
+        ...SEND_PER_EMAIL,
     });
-    if (!perEmail.allowed)
-        return {
-            status: 429,
-            body: {
-                ok: false,
-                code: "rate_limited",
-                retryAfter: perEmail.retryAfterSeconds,
-            },
-            retryAfterSeconds: perEmail.retryAfterSeconds,
-        };
+    if (!perEmail.allowed) return rateLimited(perEmail.retryAfterSeconds);
 
     const label = subjectLabel(deps.fields, values);
     const topic = customTopic(deps.fields, values);
@@ -255,8 +206,9 @@ export async function handleContact(
     });
 
     if (result.ok) return { status: 200, body: { ok: true } };
-    // Never log the enquirer's details, only the outcome.
+    // Never log the enquirer's details, only the outcome. `detail` is the provider's own explanation.
     console.error("contact_mail_failed", {
+        ref,
         reason: result.reason,
         status: result.status,
         detail: "detail" in result ? result.detail : undefined,
@@ -269,6 +221,7 @@ export async function handleContact(
                 result.reason === "rejected"
                     ? "mail_rejected"
                     : "mail_unavailable",
+            ref,
         },
     };
 }

@@ -8,7 +8,7 @@ export function ClassStyles() {
   const { classStyles } = siteContent.home;
 
   return (
-    <section className="bg-ivory py-16 md:py-20" aria-labelledby="class-styles-heading">
+    <section className="bg-ivory section-y" aria-labelledby="class-styles-heading">
       <Container>
         <SectionHeading
           overline={classStyles.overline}

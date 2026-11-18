@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { PageHeroContent } from "@/content/types";
 import { Container } from "@/components/ui/Container";
+import { Eyebrow, HeroBanner } from "@/components/ui/HeroParts";
 
 type PageHeroProps = PageHeroContent & {
   compact?: boolean;
@@ -17,37 +17,20 @@ export function PageHero({
 }: PageHeroProps) {
   if (image) {
     return (
-      <section className="relative overflow-hidden bg-charcoal text-ivory">
-        <div className="absolute inset-0">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className={`object-cover opacity-40 ${imageClassName}`.trim()}
-            sizes="100vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
-        </div>
-        <Container className={`relative ${compact ? "py-16 md:py-20" : "py-20 md:py-28"}`}>
-          {overline && <p className="text-overline text-rose mb-3">{overline}</p>}
-          <h1 className="text-h1 md:text-display max-w-3xl text-ivory">{title}</h1>
-          {subtitle && (
-            <p className="text-body-lg mt-5 max-w-2xl text-ivory/85">{subtitle}</p>
-          )}
-        </Container>
-      </section>
+      <HeroBanner image={image} imageClassName={imageClassName}>
+        {overline && <Eyebrow className="mb-5">{overline}</Eyebrow>}
+        <h1 className="text-h1 md:text-display max-w-4xl text-ivory">{title}</h1>
+        {subtitle && <p className="text-body-lg mt-5 max-w-[52rem] text-ivory/90">{subtitle}</p>}
+      </HeroBanner>
     );
   }
 
   return (
-    <section className="border-b border-taupe/30 bg-ivory">
-      <Container className={`${compact ? "py-14 md:py-16" : "py-16 md:py-24"}`}>
-        {overline && <p className="text-overline text-rose mb-3">{overline}</p>}
-        <h1 className="text-h1 max-w-3xl text-charcoal">{title}</h1>
-        {subtitle && (
-          <p className="text-body-lg mt-5 max-w-2xl text-charcoal/75">{subtitle}</p>
-        )}
+    <section className="border-b border-taupe/30 bg-blush/20">
+      <Container className={compact ? "py-12 md:py-16" : "section-y"}>
+        {overline && <Eyebrow tone="light" className="mb-5">{overline}</Eyebrow>}
+        <h1 className="text-h1 md:text-display max-w-4xl text-charcoal">{title}</h1>
+        {subtitle && <p className="text-body-lg mt-5 max-w-[52rem] text-charcoal/80">{subtitle}</p>}
       </Container>
     </section>
   );

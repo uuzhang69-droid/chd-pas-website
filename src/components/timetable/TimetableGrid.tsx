@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { buildTimetableBookingHref } from "@/lib/timetable/booking-link";
 import { buildTimetableColumns, overlappingSlotIds } from "@/lib/timetable/build-grid";
@@ -84,6 +84,14 @@ function ClassBlock({
   );
 }
 
+const subscribeNever = () => () => {};
+
+/** 0 = Monday ... 6 = Sunday. */
+function mondayFirstDay(date: Date) {
+  const jsDay = date.getDay();
+  return jsDay === 0 ? 6 : jsDay - 1;
+}
+
 export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -91,15 +99,15 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
     parseWeekParam(weekStartIso) ?? startOfWeekMonday(new Date()),
   );
   const [hover, setHover] = useState<HoverTarget | null>(null);
-  const [mobileDayIndex, setMobileDayIndex] = useState(0);
+  // The day the visitor tapped on a phone; until then the phone shows today (when this is the current week).
+  const [pickedDayIndex, setPickedDayIndex] = useState<number | null>(null);
+  const todayIndex = useSyncExternalStore(
+    subscribeNever,
+    () => (isSameWeek(weekStart, new Date()) ? mondayFirstDay(new Date()) : null),
+    () => null,
+  );
+  const mobileDayIndex = pickedDayIndex ?? todayIndex ?? 0;
   const [pickerValue, setPickerValue] = useState(formatIsoDate(weekStart));
-
-  useEffect(() => {
-    const today = new Date();
-    if (!isSameWeek(weekStart, today)) return;
-    const jsDay = today.getDay();
-    setMobileDayIndex(jsDay === 0 ? 6 : jsDay - 1);
-  }, [weekStart]);
 
   const weekDays = useMemo(() => getWeekDays(weekStart), [weekStart]);
   const columns = useMemo(() => buildTimetableColumns(sessions, weekStart), [sessions, weekStart]);
@@ -108,6 +116,8 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
     const monday = startOfWeekMonday(date);
     const iso = formatIsoDate(monday);
     setWeekStart(monday);
+    // Returning to the current week shows today again.
+    if (isSameWeek(monday, new Date())) setPickedDayIndex(null);
     setPickerValue(iso);
     router.replace(`${pathname}?week=${iso}`, { scroll: false });
   }
@@ -164,9 +174,9 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
   }
 
   return (
-    <section className="border-b border-taupe/30 py-12 md:py-16" aria-labelledby="timetable-grid-heading">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+    <section className="border-b border-taupe/30 section-y" aria-labelledby="timetable-grid-heading">
+      <div className="mx-auto w-full max-w-[var(--page-width)] px-5 sm:px-6 lg:px-8">
+        <div>
           <h2 id="timetable-grid-heading" className="text-h2 text-charcoal">
             {ui.title}
           </h2>
@@ -298,7 +308,7 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
                     ? "border-rose bg-rose/15 font-semibold text-charcoal"
                     : "border-taupe/35 bg-ivory text-charcoal/80"
                 }`}
-                onClick={() => setMobileDayIndex(dayIndex)}
+                onClick={() => setPickedDayIndex(dayIndex)}
               >
                 <span className="block">{day.weekday}</span>
                 <span className="block text-xs opacity-80">{day.label}</span>
@@ -328,7 +338,7 @@ export function TimetableGrid({ sessions, weekStartIso, ui }: TimetableGridProps
           </div>
         </div>
 
-        <p className="text-body mt-6 max-w-3xl text-charcoal/75">{ui.venueNote}</p>
+        <p className="text-body mt-6 text-charcoal/75">{ui.venueNote}</p>
       </div>
     </section>
   );

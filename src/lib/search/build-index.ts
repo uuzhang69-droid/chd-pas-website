@@ -1,5 +1,6 @@
 import { siteContent } from "../../content/site";
 import schedule from "../../../public/schedule.json";
+import type { ClassStylePage } from "../../content/types";
 import type { SearchDoc } from "./types";
 
 /**
@@ -167,16 +168,20 @@ export function buildSearchIndex(): SearchDoc[] {
     hub("/events", pages.events, "Page", [pages.events.items.map((event) => event.title)], [], ["items", "categories", "filters"]);
 
     // Classes (with the instructor, who has no page of their own)
-    for (const style of pages.classes.styles) {
+    for (const style of pages.classes.styles as ClassStylePage[]) {
         add({
             url: `/classes/${style.slug}`,
             title: style.name,
             type: "Class",
-            summary: firstText(style.metaDescription, style.hero.subtitle, style.intro),
-            keywords: textOf(style.instructor.name, style.instructor.role, style.hero.overline),
+            summary: firstText(style.metaDescription, style.hero.subtitle, style.about.paragraphs),
+            keywords: textOf(style.instructor.name, style.instructor.role, style.additionalInstructors?.map((person) => [person.name, person.role]), style.hero.overline),
+            // The names of the class formats ("Gentle Flow", "Vinyasa Flow") are things people search for,
+            // so they rank like intent words: the class page ahead of the timetable that merely lists them.
+            aliases: style.formats.map((format) => format.name),
             body: textOf(
-                style.hero.title, style.hero.subtitle, style.intro, style.highlights, style.ageGroups,
-                style.instructor.bio, timetable.byStyle.get(style.name.toLowerCase()) ?? [],
+                style.hero.title, style.hero.subtitle, style.about, style.formats, style.formatsNote,
+                style.expect, style.instructor.bio, style.instructor.moreBio, style.additionalInstructors?.map((person) => [person.bio, person.moreBio]), style.closing,
+                timetable.byStyle.get(style.name.toLowerCase()) ?? [],
             ),
         });
     }

@@ -13,10 +13,10 @@ export function SectionHeading({
   align = "left",
   className = "",
 }: SectionHeadingProps) {
-  const alignClass = align === "center" ? "text-center mx-auto" : "text-left";
+  const alignClass = align === "center" ? "text-center mx-auto max-w-2xl" : "text-left";
 
   return (
-    <header className={`mb-10 md:mb-14 max-w-2xl ${alignClass} ${className}`}>
+    <header className={`mb-10 md:mb-14 ${alignClass} ${className}`}>
       {overline && (
         <p className="text-overline text-rose mb-3">{overline}</p>
       )}

@@ -31,7 +31,7 @@ export const siteSource = {
         siteName: "County Hall Dance Centre",
         shortName: "CHDC",
         defaultDescription:
-            "Adult dance classes at London's County Hall — Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus workshops, private lessons and venue hire.",
+            "Adult dance classes at London's County Hall: Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus workshops, private lessons and venue hire.",
     },
 
     global: {
@@ -205,7 +205,7 @@ export const siteSource = {
                     id: "hero-intro",
                     headline:
                         "Discover dance, movement and creative experiences at London's iconic County Hall.",
-                    blurb: "Dance, movement and creative experiences at London's iconic County Hall on the South Bank — classes, workshops and events for adults of every background and level of experience.",
+                    blurb: "Dance, movement and creative experiences at London's iconic County Hall on the South Bank: classes, workshops and events for adults of every background and level of experience.",
                     cta: {
                         label: "Explore Classes",
                         href: "/timetable",
@@ -303,7 +303,7 @@ export const siteSource = {
                     label: "Book an Event",
                     href: "/events",
                     description:
-                        "Workshops, masterclasses, social nights and performances — see what's on and book your place.",
+                        "Workshops, masterclasses, social nights and performances. See what's on and book your place.",
                 },
                 {
                     label: "Join Now",
@@ -466,7 +466,7 @@ export const siteSource = {
                     "Real-time booking is handled by our external provider. CHDPAS does not process class payments on this website.",
                 image: {
                     src: "/images/timetable/class-schedule.jpg",
-                    alt: "Class schedule for 14–20 September 2026 at County Hall Dance & Performing Arts School",
+                    alt: "Class schedule for 14 to 20 September 2026 at County Hall Dance & Performing Arts School",
                     width: 853,
                     height: 1024,
                 },
@@ -481,7 +481,7 @@ export const siteSource = {
                     "The venue can be used privately when there are no classes. Reservations are possible.",
             },
             newcomerNote:
-                "New to the Centre? Get in touch and we'll help you choose the right class — WeChat: 18518614868.",
+                "New to the Centre? Get in touch and we'll help you choose the right class. WeChat: 18518614868.",
             helpLinks: [
                 { label: "Browse courses", href: "/courses" },
                 { label: "Contact us", href: "/contact" },
@@ -498,7 +498,7 @@ export const siteSource = {
                 overline: "Find your style",
                 title: "Classes",
                 subtitle:
-                    "Adult dance and movement classes for every background and level — beginners welcome.",
+                    "Adult dance and movement classes for every background and level. Beginners welcome.",
             } satisfies PageHeroContent,
             intro: "Explore adult classes in Contemporary, Chinese Dance, Tango, Yoga and Tai Chi. Every class is clearly labelled Beginner, Open Level or Intermediate.",
             cta: {
@@ -507,7 +507,10 @@ export const siteSource = {
                 variant: "primary",
             },
             detailLabels: {
-                ageGroups: "Who it's for",
+                about: "About {name}",
+                formats: "Our {name} classes",
+                expect: "What to expect",
+                askUs: "Ask us a question",
                 backLink: "Class Descriptions & Instructors",
                 instructor: "Instructor",
             },
@@ -516,74 +519,71 @@ export const siteSource = {
                     slug: "contemporary",
                     name: "Contemporary",
                     metaDescription:
-                        "Contemporary dance classes for adults at County Hall Dance Centre — flow, space and physical expression.",
+                        "Explore contemporary dance, movement and expression at County Hall Dance & Performing Arts School in London. Find class and booking information.",
                     hero: {
-                        overline: "Modern dance",
-                        title: "Contemporary",
+                        overline: "Weight, space and expression",
+                        title: "Contemporary Dance",
                         subtitle:
-                            "Develop coordination, strength and creativity through flow, space and physical expression.",
+                            "Bring technique and imagination together through the many possibilities of movement.",
                         image: {
                             src: "/images/styles/contemporary.jpeg",
                             alt: "Contemporary dance class",
                         },
                     },
                     instructor: {
-                        name: "Christina & Yvonne",
+                        name: "Christina Lai & Yvonne Wang",
                         role: "Contemporary dance teacher",
                         bio: "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
                         image: {
                             src: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
-                            alt: "Ka Ki Christina Lai and Ying Yen (Yvonne)",
+                            alt: "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang",
                         },
                     },
-                    intro: [" ", " "],
-                    highlights: [
+                    about: {
+                        "title": "Movement with room for expression",
+                        "paragraphs": [
+                            "Contemporary dance finds expression in the way a body moves: the sweep of an arm, the momentum of a turn or a change of direction. It can be fluid, sharp, grounded or expansive, with space for different dancers to bring their own qualities to a phrase.",
+                            "Technique and creativity work side by side. Learning movement gives you something to work with; playing with its timing, energy and intention can make it feel entirely different. That relationship is part of what makes contemporary dance so rewarding to learn."
+                        ]
+                    },
+                    formats: [
                         {
-                            title: "Creative movement",
-                            description:
-                                "Explore space, dynamics and personal expression.",
-                        },
-                        {
-                            title: "Strength & coordination",
-                            description:
-                                "Build physical confidence through structured practice.",
-                        },
-                        {
-                            title: "All levels",
-                            description:
-                                "Classes labelled Beginner, Open Level or Intermediate.",
-                        },
+                            "name": "Contemporary Dance",
+                            "summary": "Our weekly Contemporary Dance class brings this varied discipline into the studio at County Hall."
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "Adults",
-                            description:
-                                "Open to all backgrounds — no dance experience needed.",
-                        },
-                    ],
+
+                    instructorHeading: "Meet your instructors",
+                    closing: {
+                        "title": "Join the class",
+                        "body": "Find the next session below. If you are new to contemporary dance, ask us about the experience expected before booking."
+                    },
                     cta: {
-                        label: "Book a class",
+                        label: "View the timetable",
                         href: "/timetable",
                         variant: "primary",
                     },
                 },
                 {
+                    formatSection: {
+                        "title": "Two distinct sessions"
+                    },
                     slug: "chinese-dance",
                     name: "Chinese Dance",
                     metaDescription:
-                        "Chinese dance classes blending classical grace, line and cultural expression for adults.",
+                        "Learn about Chinese dance and the Class 1 and Soft Training sessions listed at County Hall Dance & Performing Arts School in London.",
                     hero: {
-                        overline: "Grace & line",
+                        overline: "Form and expression",
                         title: "Chinese Dance",
                         subtitle:
-                            "Classical Chinese dance to build body control, flexibility and stage presence.",
+                            "Expressive movement and a rich dance tradition, with Chinese Classical Dance and Soft Training at County Hall.",
                         image: {
                             src: "/images/styles/chinese-dance.jpeg",
                             alt: "Chinese dance class",
                         },
                     },
                     instructor: {
-                        name: "RCDance Lisa",
+                        name: "RCDance Lisa Lin",
                         role: "Chinese dance teacher",
                         bio: "Lisa Lin from RCDance is a classically trained dance artist and educator specialising in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
                         image: {
@@ -591,145 +591,195 @@ export const siteSource = {
                             alt: "RCDance Lisa Lin",
                         },
                     },
-                    intro: [" ", " "],
-                    highlights: [
+                    about: {
+                        "title": "Expression in every gesture",
+                        "paragraphs": [
+                            "In Chinese Classical Dance, a glance, a curve of the arm and a turn of the torso can work together to give a movement its meaning. Rhythm and breath shape the phrasing, connecting technical detail with expression.",
+                            "Chinese dance encompasses many classical, folk and ethnic traditions. Our programme focuses primarily on Chinese Classical Dance, with Soft Training offered as a separate session."
+                        ]
+                    },
+                    formats: [
                         {
-                            title: "Cultural expression",
-                            description:
-                                "Discover the artistry of classical Chinese movement.",
+                            "name": "Chinese Dance: Class 1",
+                            "summary": "Our main Chinese Classical Dance session, centred on this expressive form and its coordinated use of the body, arms and gaze.",
+                            "title": "Chinese Classical Dance",
+                            "image": {
+                                "src": "/images/classes/chinese-dance/chinese-classical-dance-class.jpg",
+                                "alt": "Participants practising Chinese Classical Dance with raised arms in a studio.",
+                                "width": 1536,
+                                "height": 2048
+                            }
                         },
                         {
-                            title: "Flexibility & control",
-                            description:
-                                "Develop line, poise and body awareness.",
-                        },
-                        {
-                            title: "All levels",
-                            description:
-                                "Beginners welcome — check the level on each class.",
-                        },
+                            "name": "Chinese Dance: Soft Training",
+                            "summary": "A separate Chinese Dance session. For the current class content and advice on suitability, please speak with us before booking.",
+                            "image": {
+                                "src": "/images/classes/chinese-dance/chinese-dance-soft-training.jpg",
+                                "alt": "Participants stretching beside a ballet barre during Chinese Dance Soft Training.",
+                                "width": 1536,
+                                "height": 2048
+                            },
+                            "title": "Soft Training"
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "Adults",
-                            description:
-                                "Designed for adult learners at every stage.",
-                        },
-                    ],
+
+
+                    instructorHeading: "Meet your instructor",
+                    closing: {
+                        "title": "Join our Chinese Dance programme",
+                        "body": "Find Chinese Classical Dance and Soft Training on the timetable, or ask us which session would suit you."
+                    },
                     cta: {
-                        label: "Book a class",
+                        label: "View the timetable",
                         href: "/timetable",
                         variant: "primary",
                     },
                 },
                 {
+                    formatSection: {
+                        "title": "Beginner and Advanced classes"
+                    },
                     slug: "tango",
                     name: "Tango",
                     metaDescription:
-                        "Tango classes for adults — connection, musicality and social dance etiquette.",
+                        "Get to know Argentine tango at County Hall Dance & Performing Arts School in London, with Beginner and Advanced classes. View the timetable.",
                     hero: {
-                        overline: "Connection & musicality",
-                        title: "Tango",
+                        overline: "Music and connection",
+                        title: "Argentine Tango",
                         subtitle:
-                            "Learn lead and follow, musicality and the etiquette of social dance.",
+                            "Music, connection and the pleasure of a dance that unfolds one step at a time.",
                         image: {
                             src: "/images/styles/tango.jpeg",
                             alt: "Tango class",
                         },
                     },
                     instructor: {
-                        name: "Rene",
+                        name: "Rene Hellemons",
                         role: "Tango teacher",
                         bio: "Rene is an experienced Argentine Tango dancer, instructor and performer. With a background in Ballroom and Latin dance, he has spent many years developing his expertise in Argentine Tango, studying with some of the most renowned and influential teachers in Argentina and Europe.",
+                        moreBio: [
+                            "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba Faisal. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
+                        ],
                         image: {
                             src: "/images/faculty/Rene.jpeg",
-                            alt: "Rene",
+                            alt: "Rene Hellemons",
                         },
                     },
-                    intro: [
-                        "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
+                    about: {
+                        "title": "A conversation on the dance floor",
+                        "paragraphs": [
+                            "Argentine tango is a social, improvised dance with roots in Argentina and Uruguay. Partners respond to the music and to each other, finding expression in a walk, a turn or a well-timed pause. Its embrace, rhythms and movement vocabulary give it a character distinct from ballroom tango.",
+                            "Learning tango means developing balance, musicality and clear communication through movement. You are welcome to join our Beginner or Advanced class on your own; there is no need to bring a dance partner."
+                        ],
+                        "image": {
+                            "src": "/images/classes/tango/argentine-tango-class.jpg",
+                            "alt": "Pairs practising Argentine tango in a mirrored dance studio.",
+                            "width": 4000,
+                            "height": 3000
+                        }
+                    },
+                    formats: [
+                        {
+                            "name": "Argentine Tango: Beginner",
+                            "summary": "Begin with the foundations: walking, balance and the communication between leading and following. These are the building blocks of an improvised social dance."
+                        },
+                        {
+                            "name": "Argentine Tango: Advanced",
+                            "summary": "For dancers with Argentine tango experience who want to continue learning. If you are returning after a break or joining from another class, we can help you decide whether this is the right session."
+                        }
                     ],
-                    highlights: [
-                        {
-                            title: "Social dance skills",
-                            description:
-                                "Lead, follow and floor etiquette from day one.",
-                        },
-                        {
-                            title: "Musicality",
-                            description:
-                                "Move with confidence to live and recorded tango music.",
-                        },
-                        {
-                            title: "Milongas & events",
-                            description:
-                                "Join our social dance nights and themed events.",
-                        },
-                    ],
-                    ageGroups: [
-                        {
-                            label: "Adults",
-                            description:
-                                "No partner or experience required to begin.",
-                        },
-                    ],
+
+
+                    instructorHeading: "Meet your instructor",
+                    closing: {
+                        "title": "Join us for tango",
+                        "body": "Choose your class and find the next session on the timetable."
+                    },
                     cta: {
-                        label: "Book a class",
+                        label: "View the timetable",
                         href: "/timetable",
                         variant: "primary",
                     },
                 },
                 {
+                    formatSection: {
+                        "title": "Three ways to flow"
+                    },
                     slug: "yoga",
                     name: "Yoga",
                     metaDescription:
-                        "Yoga classes for adults — flexibility, breath and wellbeing at County Hall Dance Centre.",
+                        "Explore Gentle Flow, Vinyasa Flow and Inside Flow yoga at County Hall Dance & Performing Arts School in London. View the timetable and booking information.",
                     hero: {
-                        overline: "Breath & stretch",
+                        overline: "Breath and movement",
                         title: "Yoga",
                         subtitle:
-                            "Improve flexibility and overall wellbeing through breath, stretch and focused practice.",
+                            "Find your pace with Gentle Flow, Vinyasa Flow and music-led Inside Flow at County Hall.",
                         image: {
                             src: "/images/styles/yoga.jpeg",
                             alt: "Yoga class",
                         },
                     },
                     instructor: {
-                        name: "Kasen",
+                        name: "Kasen Zhao",
                         role: "Yoga teacher",
                         bio: "Kasen Zhao is the founder of Sen Yoga, a certified Yoga Alliance instructor and Stott Pilates instructor with over eight years of experience. Specialising in Vinyasa, Inside Flow and Yin Yoga, he combines mindful movement, breathwork and alignment to help students build strength, find balance and cultivate inner peace.",
                         image: {
                             src: "/images/faculty/Kasen.jpeg",
-                            alt: "Kasen",
+                            alt: "Kasen Zhao",
                         },
                     },
-                    intro: [" "],
-                    highlights: [
+                    additionalInstructors: [
                         {
-                            title: "Wellbeing focus",
-                            description:
-                                "Stretch, breathe and restore balance.",
-                        },
-                        {
-                            title: "Music-guided practice",
-                            description:
-                                "A calm, focused environment for every body.",
-                        },
-                        {
-                            title: "All levels",
-                            description:
-                                "Check class information for level and format details.",
+                            name: "Debbie Bhowmik",
+                            role: "Gentle Flow Yoga Instructor",
+                            bio: "Debbie Bhowmik is a London-based yoga teacher and founder of The Joy of Yoga. Her journey began in 2005, and she went on to train as a yoga teacher in Rishikesh, India, in 2015.",
+                            moreBio: [
+                                "With a background in Chromatic Yoga and Inside Flow, Debbie brings a thoughtful, welcoming approach to her teaching. She believes yoga begins with the breath and that everyone should feel able to take part, whatever their age or experience.",
+                                "At County Hall, Debbie teaches Wednesday evening Gentle Flow Yoga, offering beginners a supportive space to explore movement, breathing and relaxation at their own pace.",
+                            ],
+                            image: {
+                                src: "/images/faculty/debbie-bhowmik-gentle-flow-yoga.jpg",
+                                alt: "Debbie Bhowmik, a yoga teacher, smiling with her hands together in front of her chest.",
+                            },
                         },
                     ],
-                    ageGroups: [
+                    about: {
+                        "title": "Space for your practice",
+                        "paragraphs": [
+                            "Yoga offers time to pay attention to how you move and how you feel in the moment. Rooted in a tradition that extends beyond physical exercise, its movement practice brings posture, breath and concentration together.",
+                            "At County Hall, you can choose from three flow formats, each with a different rhythm. You might prefer the unhurried pace of Gentle Flow, the continuity of Vinyasa or the musical choreography of Inside Flow."
+                        ],
+                        "image": {
+                            "src": "/images/classes/yoga/yoga-class.jpg",
+                            "alt": "People practising yoga on mats in a bright wooden-floor studio.",
+                            "width": 4000,
+                            "height": 3000
+                        }
+                    },
+                    formats: [
                         {
-                            label: "Adults",
-                            description:
-                                "Open to beginners and returning practitioners.",
+                            "name": "Gentle Flow",
+                            "summary": "A slower-paced flowing practice, with time to settle into postures and move thoughtfully between them.",
+                            "taughtBy": "Wednesday evenings with Debbie Bhowmik"
                         },
+                        {
+                            "name": "Vinyasa Flow",
+                            "summary": "A flowing sequence in which movement is coordinated with the breath. The emphasis is on the connection between postures as well as the postures themselves."
+                        },
+                        {
+                            "name": "Inside Flow",
+                            "summary": "Music shapes this practice. A choreographed sequence builds towards a song, bringing the rhythm of the music, movement and breath together."
+                        }
                     ],
+
+
+                    instructorHeading: "Meet your instructors",
+                    closing: {
+                        "title": "Make time for yoga",
+                        "body": "Find a session that suits your week. If you have questions about what to bring or access to the studio, we are happy to help."
+                    },
                     cta: {
-                        label: "Book a class",
+                        label: "View the timetable",
                         href: "/timetable",
                         variant: "primary",
                     },
@@ -738,12 +788,12 @@ export const siteSource = {
                     slug: "tai-chi",
                     name: "Tai Chi",
                     metaDescription:
-                        "Tai Chi classes for adults — balance, relaxation and body awareness.",
+                        "Learn about Tai Chi and find the class timetable for County Hall Dance & Performing Arts School in London, with booking and contact information.",
                     hero: {
-                        overline: "Flow & balance",
+                        overline: "Attention in movement",
                         title: "Tai Chi",
                         subtitle:
-                            "Cultivate balance, relaxation and body awareness through slow, flowing movement.",
+                            "Give your attention to balance, coordination and the way one movement leads into the next.",
                         image: {
                             src: "/images/styles/tai-chi.jpeg",
                             alt: "Tai Chi class",
@@ -758,32 +808,27 @@ export const siteSource = {
                             alt: "Xintian Zhao",
                         },
                     },
-                    intro: [" "],
-                    highlights: [
+                    about: {
+                        "title": "The detail in a slower movement",
+                        "paragraphs": [
+                            "Tai Chi, or Taijiquan, has its roots in Chinese martial arts. Its connected movements draw attention to posture and balance: how weight passes from one foot to the other, how a turn begins and how the whole body moves together.",
+                            "A slower pace gives you time to notice details that are easy to miss. A small adjustment can change the feel of a movement, making the practice an absorbing study of coordination rather than simply a sequence to remember."
+                        ]
+                    },
+                    formats: [
                         {
-                            title: "Mind-body practice",
-                            description:
-                                "Slow, intentional movement for calm and focus.",
-                        },
-                        {
-                            title: "Balance & awareness",
-                            description:
-                                "Develop stability and gentle strength.",
-                        },
-                        {
-                            title: "All levels",
-                            description: "Welcoming to complete beginners.",
-                        },
+                            "name": "Tai Chi",
+                            "summary": "Our weekly Tai Chi class offers a regular opportunity to practise at County Hall."
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "Adults",
-                            description:
-                                "Suitable for every age and fitness level.",
-                        },
-                    ],
+
+                    instructorHeading: "Meet your instructor",
+                    closing: {
+                        "title": "Practise Tai Chi with us",
+                        "body": "View the next session and booking details below. For questions about the class or joining, get in touch."
+                    },
                     cta: {
-                        label: "Book a class",
+                        label: "View the timetable",
                         href: "/timetable",
                         variant: "primary",
                     },
@@ -803,7 +848,7 @@ export const siteSource = {
                 subtitle:
                     "Immersive term programmes designed to deepen technique, artistry, and performance readiness.",
             } satisfies PageHeroContent,
-            intro: "Courses differ from drop-in classes — they follow a curated syllabus across a full term, culminating in an informal sharing or assessment where appropriate.",
+            intro: "Courses differ from drop-in classes. They follow a curated syllabus across a full term, culminating in an informal sharing or assessment where appropriate.",
             detailLabels: {
                 duration: "Duration",
                 schedule: "Schedule",
@@ -817,18 +862,18 @@ export const siteSource = {
                     slug: "junior-ballet-foundation",
                     title: "Junior Ballet Foundation",
                     term: "Autumn Term 2026",
-                    level: "Beginner – Elementary",
+                    level: "Beginner to Elementary",
                     excerpt:
-                        "A twelve-week introduction to classical ballet for ages 6–9.",
+                        "A twelve-week introduction to classical ballet for ages 6 to 9.",
                     image: {
                         src: "/images/courses/junior-ballet.svg",
                         alt: "Junior ballet foundation course",
                     },
                     href: "/courses/junior-ballet-foundation",
                     metaDescription:
-                        "Twelve-week junior ballet foundation course for ages 6–9 at County Hall Dance Centre.",
+                        "Twelve-week junior ballet foundation course for ages 6 to 9 at County Hall Dance Centre.",
                     duration: "12 weeks",
-                    schedule: "Saturdays, 10:00 – 11:00",
+                    schedule: "Saturdays, 10:00 to 11:00",
                     price: "£168 per term",
                     description: [
                         "This course introduces young dancers to the fundamentals of ballet posture, port de bras, and basic allegro.",
@@ -861,7 +906,7 @@ export const siteSource = {
                     metaDescription:
                         "Intermediate contemporary course for teens at County Hall Dance Centre.",
                     duration: "10 weeks",
-                    schedule: "Wednesdays, 17:30 – 19:00",
+                    schedule: "Wednesdays, 17:30 to 19:00",
                     price: "£195 per term",
                     description: [
                         "Students explore release technique, contact principles, and choreographic tasks across a focused ten-week block.",
@@ -885,7 +930,7 @@ export const siteSource = {
                     term: "Rolling enrolment",
                     level: "All levels",
                     excerpt:
-                        "A welcoming ballet class for adults — beginners and returners alike.",
+                        "A welcoming ballet class for adults, for beginners and returners alike.",
                     image: {
                         src: "/images/courses/adult-ballet.svg",
                         alt: "Adult ballet open course",
@@ -894,7 +939,7 @@ export const siteSource = {
                     metaDescription:
                         "Open-level adult ballet course at County Hall Dance Centre, London.",
                     duration: "6-week blocks",
-                    schedule: "Mondays, 19:00 – 20:15",
+                    schedule: "Mondays, 19:00 to 20:15",
                     price: "£96 per block",
                     description: [
                         "Rebuild strength and grace at the barre and in centre, with modifications offered throughout.",
@@ -916,7 +961,7 @@ export const siteSource = {
                     slug: "musical-theatre-performance",
                     title: "Musical Theatre Performance",
                     term: "Spring Term 2027",
-                    level: "Intermediate – Advanced",
+                    level: "Intermediate to Advanced",
                     excerpt:
                         "Triple-threat training culminating in a staged musical excerpt.",
                     image: {
@@ -927,7 +972,7 @@ export const siteSource = {
                     metaDescription:
                         "Musical theatre performance course for intermediate and advanced students.",
                     duration: "14 weeks",
-                    schedule: "Saturdays, 13:00 – 16:00",
+                    schedule: "Saturdays, 13:00 to 16:00",
                     price: "£320 per term",
                     description: [
                         "Sing, dance, and act your way through a selected musical number, rehearsed for a small invited audience.",
@@ -965,7 +1010,7 @@ export const siteSource = {
                 events: "Events",
                 workshops: "Workshops",
                 masterclass: "Masterclasses",
-                empty: "Nothing in this category yet — check back soon.",
+                empty: "Nothing in this category yet. Check back soon.",
             },
             items: [
                 withinOneRoomEvent,
@@ -978,7 +1023,7 @@ export const siteSource = {
                     ),
                     listingCategory: "workshop",
                     title: "Halloween Pumpkin Carving Workshop",
-                    date: "Saturday 31 October 2026, 1:00pm – 5:00pm",
+                    date: "Saturday 31 October 2026, 1:00pm to 5:00pm",
                     dateIso: "2026-10-31",
                     location: "County Hall Dance Centre, London SE1 7PB",
                     excerpt:
@@ -990,33 +1035,33 @@ export const siteSource = {
 
                         "# Programme",
 
-                        "13:00 — Pumpkin Carving Workshop. Carve and decorate your own Halloween pumpkin and bring your Jack-o'-Lantern to life.",
+                        "13:00: Pumpkin Carving Workshop. Carve and decorate your own Halloween pumpkin and bring your Jack-o'-Lantern to life.",
 
-                        "15:00 — Halloween Costume Show. Dress up as your favourite character, show off your Halloween look and join in the fun!",
+                        "15:00: Halloween Costume Show. Dress up as your favourite character, show off your Halloween look and join in the fun!",
 
                         "# Costume Show & Awards",
 
                         "The costume show will feature three special awards:",
 
-                        "Best Costume Award — Celebrating the most creative and impressive outfit.",
+                        "Best Costume Award: Celebrating the most creative and impressive outfit.",
 
-                        "Best Makeup Award — Recognising imaginative Halloween makeup.",
+                        "Best Makeup Award: Recognising imaginative Halloween makeup.",
 
-                        "Best Performance Award — For a standout performance during the costume show.",
+                        "Best Performance Award: For a standout performance during the costume show.",
 
                         "A professional photographer will be present to capture the fun and memorable moments throughout the afternoon.",
 
                         "# Tickets",
 
-                        "£45 — With Costume.",
+                        "£45: With Costume.",
 
-                        "£55 — Without Costume.",
+                        "£55: Without Costume.",
 
                         "# Event Details",
 
                         "Date: Saturday 31 October 2026.",
 
-                        "Time: 1:00pm–5:00pm.",
+                        "Time: 1:00pm to 5:00pm.",
 
                         "Venue: County Hall Dance Centre, London SE1 7PB.",
 
@@ -1065,7 +1110,7 @@ export const siteSource = {
                     ],
                     listingCategory: "event",
                     title: "Memory of China: Chinese Traditional Arts and Culture Festival",
-                    date: "Saturday 3 – Sunday 4 October 2026, 12:00–17:30 each day",
+                    date: "Saturday 3 to Sunday 4 October 2026, 12:00 to 17:30 each day",
                     dateIso: "2026-10-04",
                     location: "Members' Terrace, County Hall",
                     excerpt:
@@ -1076,23 +1121,23 @@ export const siteSource = {
                         "Saturday's programme has been created especially with the Chinese community in mind and will be presented in Chinese and English, while Sunday's programme will be led primarily in English for international and local audiences. Everyone is welcome to join, and no previous experience is required.",
                         "The festival is presented by County Hall Dance Centre in collaboration with County Hall Arts, as part of a growing programme celebrating dance, culture and artistic collaboration at County Hall.",
                         "# Saturday, 3 October 2026",
-                        "12:00 — Market Area Opens. Makers' market open.",
-                        "13:00–15:00 — 2nd UK Chinese Yoga Festival. An afternoon dedicated to yoga, movement and wellbeing, featuring MYRing Yoga, Yin-Yang Balance, an interactive session and prize draw. £36 per person, payable on the day at the venue. Check-in from 12:30.",
-                        "15:00–15:20 — Yunnan Cultural Showcase. Discover the diverse cultural traditions of Yunnan through an introduction to the region and its heritage.",
-                        "15:20–15:25 — Dai Ethnic Dance Performance: Wan Tao. A performance showcasing the movement and traditions of Dai ethnic dance.",
-                        "15:25–15:40 — Miao Ethnic Dance Performance: Cai Tang & Cultural Showcase. A Miao dance performance accompanied by an introduction to Miao culture and traditions.",
-                        "15:45–17:00 — Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.",
-                        "17:00–17:30 — Chinese Classical Dance Performance & Experience Class. An evening performance followed by an opportunity to experience Chinese classical dance. £10 per person, payable on the day at the venue.",
+                        "12:00: Market Area Opens. Makers' market open.",
+                        "13:00 to 15:00 to 2nd UK Chinese Yoga Festival. An afternoon dedicated to yoga, movement and wellbeing, featuring MYRing Yoga, Yin-Yang Balance, an interactive session and prize draw. £36 per person, payable on the day at the venue. Check-in from 12:30.",
+                        "15:00 to 15:20: Yunnan Cultural Showcase. Discover the diverse cultural traditions of Yunnan through an introduction to the region and its heritage.",
+                        "15:20 to 15:25: Dai Ethnic Dance Performance: Wan Tao. A performance showcasing the movement and traditions of Dai ethnic dance.",
+                        "15:25 to 15:40: Miao Ethnic Dance Performance: Cai Tang & Cultural Showcase. A Miao dance performance accompanied by an introduction to Miao culture and traditions.",
+                        "15:45 to 17:00: Acupressure Workshop. A practical workshop introducing participants to acupressure and traditional approaches to wellbeing.",
+                        "17:00 to 17:30: Chinese Classical Dance Performance & Experience Class. An evening performance followed by an opportunity to experience Chinese classical dance. £10 per person, payable on the day at the venue.",
                         "# Sunday, 4 October 2026",
-                        "12:00 — Market Area Opens. Makers' market open.",
-                        "13:00–14:30 — Yoga Experience. An accessible introduction to yoga and movement, open to participants of all experience levels. £10 per person, payable on the day at the venue.",
-                        "14:35–14:40 — Chinese Fusion Fan Veil Belly Dance. A short performance combining fan choreography with belly dance.",
-                        "14:50–15:20 — Classical Dance Performance: The Old Story & Experience Class. A Chinese classical dance performance followed by an experience class inviting participants to explore the movement for themselves. £10 per person, payable on the day at the venue.",
-                        "15:20–15:35 — East-West Cultural Harmony Music Society. Enjoy a live performance featuring music from Game of Thrones, Jasmine Flower and I Love You.",
-                        "15:35–17:30 — Chinese Calligraphy Paper Scroll Workshop. Discover Chinese calligraphy and create your own paper scroll in a guided hands-on workshop. £12 per person / £20 for two people, payable on the day at the venue.",
-                        "16:00–16:20 — Yunnan Cultural Showcase. An introduction to the diverse cultural traditions and heritage of Yunnan.",
-                        "16:25–16:30 — Chinese Classical Dance Performance: Bu Gua. A performance showcasing the movement and traditions of Chinese dance.",
-                        "16:30–16:35 — Dai Ethnic Dance Performance: Wan Tao & Cultural Showcase. The festival concludes with Dai dance and an introduction to Dai culture and traditions.",
+                        "12:00: Market Area Opens. Makers' market open.",
+                        "13:00 to 14:30: Yoga Experience. An accessible introduction to yoga and movement, open to participants of all experience levels. £10 per person, payable on the day at the venue.",
+                        "14:35 to 14:40: Chinese Fusion Fan Veil Belly Dance. A short performance combining fan choreography with belly dance.",
+                        "14:50 to 15:20: Classical Dance Performance: The Old Story & Experience Class. A Chinese classical dance performance followed by an experience class inviting participants to explore the movement for themselves. £10 per person, payable on the day at the venue.",
+                        "15:20 to 15:35: East-West Cultural Harmony Music Society. Enjoy a live performance featuring music from Game of Thrones, Jasmine Flower and I Love You.",
+                        "15:35 to 17:30: Chinese Calligraphy Paper Scroll Workshop. Discover Chinese calligraphy and create your own paper scroll in a guided hands-on workshop. £12 per person / £20 for two people, payable on the day at the venue.",
+                        "16:00 to 16:20: Yunnan Cultural Showcase. An introduction to the diverse cultural traditions and heritage of Yunnan.",
+                        "16:25 to 16:30: Chinese Classical Dance Performance: Bu Gua. A performance showcasing the movement and traditions of Chinese dance.",
+                        "16:30 to 16:35: Dai Ethnic Dance Performance: Wan Tao & Cultural Showcase. The festival concludes with Dai dance and an introduction to Dai culture and traditions.",
                         "# Entry & Booking",
                         "The festival is primarily a walk-in event, and visitors are welcome to drop in throughout the weekend.",
                         "Selected workshops and experience sessions require a participation fee, payable on the day at the venue. Visitors wishing to take part in these activities, prize draws and other festival activities are encouraged to register in advance via Eventbrite. Places are limited and subject to availability.",
@@ -1150,17 +1195,17 @@ export const siteSource = {
                     sessions: publicSessionsForEvent("four-seasons-festival"),
                     listingCategory: "event",
                     title: "Four Seasons Festival",
-                    date: "Saturday 24 – Sunday 25 October 2026",
+                    date: "Saturday 24 to Sunday 25 October 2026",
                     dateIso: "2026-10-25",
                     location: "Riverside Building, County Hall",
                     excerpt:
-                        "As the Leaves Turn, Autumn 2026 — a seasonal celebration of music, dance, visual arts, film, performances and creative workshops at County Hall.",
+                        "As the Leaves Turn, Autumn 2026: a seasonal celebration of music, dance, visual arts, film, performances and creative workshops at County Hall.",
                     description: [
                         "# Four Seasons Festival",
 
                         "The Four Seasons Festival is a seasonal multidisciplinary cultural programme at County Hall, bringing together music, visual art, film, dance, workshops, performance, storytelling and participatory experiences.",
 
-                        "More than a programme of individual events, each edition is developed around a central theme or idea – creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
+                        "More than a programme of individual events, each edition is developed around a central theme or idea, creating opportunities for audiences to enjoy the arts in unexpected combinations and to take part rather than simply observe.",
 
                         "County Hall is an integral part of the festival. Its architecture, history and spaces shape each season, from performances and screenings to creative workshops and collaborative installations. By bringing cultural experiences into different parts of the building and its surroundings, the festival invites people to encounter County Hall in new ways.",
 
@@ -1261,7 +1306,7 @@ export const siteSource = {
                     partners: ["County Hall Arts"],
                     listingCategory: "event",
                     title: "Dance Meets Arts",
-                    date: "Saturday 8 August 2026, 7:00pm – 8:30pm",
+                    date: "Saturday 8 August 2026, 7:00pm to 8:30pm",
                     dateIso: "2026-08-08",
                     location: "Members' Terrace, County Hall",
                     excerpt:
@@ -1309,7 +1354,7 @@ export const siteSource = {
                     relationship: "organised",
                     organiser: "County Hall Dance & Performing Arts School",
                     listingCategory: "event",
-                    title: "County Hall Dance Centre – Opening Day",
+                    title: "County Hall Dance Centre: Opening Day",
                     date: "Thursday 10 September 2026 · All day",
                     dateIso: "2026-09-10",
                     location: "County Hall Dance & Performing Arts School",
@@ -1358,8 +1403,8 @@ export const siteSource = {
                         "milonga-ojo-opening-night",
                     ),
                     listingCategory: "event",
-                    title: "Milonga ¡Ojo! — Opening Night",
-                    date: "Saturday 26 September 2026, 19:00–23:00",
+                    title: "Milonga ¡Ojo! Opening Night",
+                    date: "Saturday 26 September 2026, 19:00 to 23:00",
                     dateIso: "2026-09-26",
                     location: "County Hall Dance & Performing Arts School",
                     relationship: "hosted",
@@ -1389,7 +1434,7 @@ export const siteSource = {
                     ),
                     listingCategory: "workshop",
                     title: "Ceramics Workshop with Yasemin",
-                    date: "Saturday 17 October 2026, 16:30–18:00",
+                    date: "Saturday 17 October 2026, 16:30 to 18:00",
                     dateIso: "2026-10-17",
                     location: "County Hall Dance & Performing Arts School",
                     relationship: "organised",
@@ -1427,7 +1472,7 @@ export const siteSource = {
                         subtitle:
                             "Social tango evenings with live and recorded music in our South Bank venue.",
                     },
-                    intro: "Join us for regular milongas — welcoming social dance nights for tango dancers of every level.",
+                    intro: "Join us for regular milongas, welcoming social dance nights for tango dancers of every level.",
                     sections: [
                         { id: "upcoming", title: "Upcoming milongas" },
                         { id: "what-to-expect", title: "What to expect" },
@@ -1567,13 +1612,13 @@ export const siteSource = {
                     overline: "County Hall arts space",
                     title: "Space Hire",
                     subtitle:
-                        "Two flexible spaces inside London's iconic County Hall — for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
+                        "Two flexible spaces inside London's iconic County Hall, for rehearsals, classes, meetings, filming, parties, exhibitions and live events.",
                     image: {
                         src: "/images/hero/slide-5-venue.jpg",
                         alt: "Sunlit wooden-floor venue with tall windows at County Hall",
                     },
                 },
-                intro: "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately — the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
+                intro: "Set on the 2nd floor of County Hall on the South Bank, our venue offers around 300 m² of bright, versatile space with 4.5-metre ceilings. Hire the whole venue or book one of our two spaces separately: the 70 m² vinyl-floor venue for classes, rehearsals and smaller sessions, or the 200 m² Sprung Wooden Floor Hall for workshops, performances, parties and larger events. With Waterloo and Westminster stations each just a five-minute walk away, it's easy for your team, cast or guests to reach.",
                 gallery: [
                     {
                         src: "/images/venue/gallery-01.jpg",
@@ -1616,7 +1661,7 @@ export const siteSource = {
                             floor: "Dance vinyl",
                             idealFor:
                                 "Classes, rehearsals, auditions, small workshops and one-to-one sessions",
-                            body: "A focused, practical venue with a professional vinyl dance floor — well suited to regular classes, rehearsals, auditions and smaller group sessions.",
+                            body: "A focused, practical venue with a professional vinyl dance floor, well suited to regular classes, rehearsals, auditions and smaller group sessions.",
                             image: {
                                 src: "/images/venue/vinyl-floor.jpg",
                                 alt: "Vinyl-floor dance venue with ballet barres and tall windows at County Hall",
@@ -1631,7 +1676,7 @@ export const siteSource = {
                             floor: "Sprung wooden floor",
                             idealFor:
                                 "Workshops, social dances, performances, parties, exhibitions and corporate events",
-                            body: "Our largest space, with a sprung wooden floor and generous 4.5-metre ceilings — room to move, perform, present or celebrate with larger groups.",
+                            body: "Our largest space, with a sprung wooden floor and generous 4.5-metre ceilings, with room to move, perform, present or celebrate with larger groups.",
                             image: {
                                 src: "/images/venue/wooden-floor-hall.jpg",
                                 alt: "Sunlit wooden-floor hall with tall windows at County Hall",
@@ -1709,7 +1754,7 @@ export const siteSource = {
                         "Minimum booking: 1 hour.",
                         "Bookings are available until 18:00; evening bookings after 18:00 are not available.",
                         "Refundable security deposit: £100.",
-                        "Prices are final — no additional taxes or fees. All equipment is included.",
+                        "Prices are final, with no additional taxes or fees. All equipment is included.",
                         "Members of County Hall Dance Centre receive reduced hire rates.",
                     ],
                     membershipLink: {
@@ -1793,7 +1838,7 @@ export const siteSource = {
                         overline: "Venue Hire",
                         title: "Space Booking",
                         subtitle:
-                            "Tell us your preferred date, activity and group size — we will respond with availability.",
+                            "Tell us your preferred date, activity and group size. We will respond with availability.",
                     },
                     intro: "Enquire via our Venue Hire form or email info@countyhalldancecentre.com. The form collects your preferred date and time, activity type, expected numbers, equipment needs and contact details.",
                     sections: [
@@ -1808,20 +1853,20 @@ export const siteSource = {
             meta: {
                 title: "Private Lessons & Experiences",
                 description:
-                    "Private dance lessons and bespoke experiences at County Hall — one-to-one coaching, couples' dance, wedding first dances and group events.",
+                    "Private dance lessons and bespoke experiences at County Hall: one-to-one coaching, couples' dance, wedding first dances and group events.",
             },
             hero: {
                 overline: "Tailored for you",
                 title: "Private Lessons & Experiences",
                 subtitle:
-                    "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations — in a beautiful venue at County Hall.",
+                    "Personal coaching and bespoke dance experiences for individuals, couples, groups and organisations, in a beautiful venue at County Hall.",
             },
             intro: "Whether you want focused one-to-one coaching, a first dance to remember or a celebration your guests will talk about for years, we'll design a session around your goals, your group and your schedule. Every experience is led by experienced teachers and artists, and takes place in our venues on the South Bank.",
             sections: [
                 {
                     id: "one-to-one",
                     title: "One-to-One Lessons",
-                    body: "Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique — strength, flexibility, control and precision — or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback.",
+                    body: "Our one-to-one lessons are built entirely around you. Every journey begins with a goal assessment, where your teacher gets to know your experience, strengths and ambitions, then designs a personalised training plan to match. Sessions can focus on technique, including strength, flexibility, control and precision, or on performance quality, musicality and stage presence. We also offer targeted preparation for dance exams and auditions, helping you refine your repertoire, build confidence and walk into the room ready. Whether you're an absolute beginner who prefers to learn privately or an experienced dancer refining the details, you'll progress faster with undivided attention and honest, supportive feedback.",
                     cta: {
                         label: "Enquire",
                         href: "/contact?subject=private-lessons",
@@ -1845,7 +1890,7 @@ export const siteSource = {
                 {
                     id: "couples",
                     title: "Couples' Dance",
-                    body: "Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side — no experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week.",
+                    body: "Dancing together is one of the most joyful ways to connect. Our couples' sessions offer a relaxed, private setting where you can learn side by side. No experience needed. Celebrate an anniversary or special occasion with a memorable shared experience, surprise your partner with something new, or take your first steps into social dance and learn the essentials of leading, following and moving to music together. Your teacher will tailor the style and pace to you, whether you'd like a light-hearted one-off session or a series of lessons that builds real confidence on the dance floor. Many couples find it becomes a favourite ritual of their week.",
                     cta: {
                         label: "Enquire",
                         href: "/contact?subject=private-lessons",
@@ -1869,7 +1914,7 @@ export const siteSource = {
                 {
                     id: "wedding",
                     title: "First Wedding Dance",
-                    body: "Your first dance should feel like you — and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment.",
+                    body: "Your first dance should feel like you, and we'll help you make it unforgettable. We start by helping you choose or edit your song, then create choreography that suits your music, your style and your comfort level, from a simple, elegant sway to a fully staged performance with lifts and flourishes. We'll recommend how many rehearsals you need based on your wedding date and experience, and plan a clear schedule so there's no last-minute stress. Short on time? Our pre-wedding intensive sessions are designed to get you polished and confident in the final weeks. On the day, all you need to do is enjoy the moment.",
                     cta: {
                         label: "Enquire",
                         href: "/contact?subject=private-lessons",
@@ -1893,7 +1938,7 @@ export const siteSource = {
                 {
                     id: "groups",
                     title: "Group Experiences",
-                    body: "Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles — a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop — and our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests.",
+                    body: "Celebrate with the people who matter most. Our group experiences are perfect for hen and stag parties, birthdays, reunions and friendship groups, and can welcome up to 120 guests. Choose from themed sessions across our styles: a tango taster, a K-Pop routine, a Chinese dance experience or a creative movement workshop. Our teachers will lead a fun, inclusive session that everyone can enjoy, whatever their experience. You're welcome to bring your own music and drinks to make the occasion truly yours, and we can help you plan timings, the space and the flow of the day so you can relax and enjoy the celebration with your guests.",
                     cta: {
                         label: "Enquire",
                         href: "/contact?subject=private-lessons",
@@ -1917,7 +1962,7 @@ export const siteSource = {
                 {
                     id: "corporate",
                     title: "Corporate Events",
-                    body: "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day — no dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
+                    body: "Bring your team together through movement. Our corporate sessions are an energising, inclusive alternative to the usual away day. No dance experience required. We design each event around your goals, whether that's building trust and communication, sparking creativity, welcoming new starters or simply giving your people a well-earned reward. Choose a short, high-energy session to open a conference, a half-day team-building workshop, or a full event combining movement with meetings in our fully equipped spaces, complete with sound system, microphones, tables and chairs. Sessions can be tailored to group size and schedule, and our team will handle the planning so you can focus on your people.",
                     cta: {
                         label: "Enquire",
                         href: "/contact?subject=private-lessons",
@@ -2005,7 +2050,7 @@ export const siteSource = {
                 subtitle:
                     "Explore our adult dance and movement programme and meet the teaching team.",
             },
-            intro: "Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome — no dance experience needed.",
+            intro: "Every class is clearly labelled Beginner, Open Level or Intermediate. Beginners welcome. No dance experience needed.",
             cardLink: "View class →",
             sections: [
                 { id: "descriptions", title: "Class Descriptions" },
@@ -2037,15 +2082,15 @@ export const siteSource = {
                 meta: {
                     title: "Membership",
                     description:
-                        "County Hall Dance Centre membership — monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire.",
+                        "County Hall Dance Centre membership: monthly, quarterly and annual plans with member discounts, priority booking, community events and reduced venue hire.",
                 },
                 hero: {
                     overline: "Dance more, belong more",
                     title: "Membership",
                     subtitle:
-                        "Make dance part of your week — and become part of a creative community at London's iconic County Hall.",
+                        "Make dance part of your week and become part of a creative community at London's iconic County Hall.",
                 },
-                intro: "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop — plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
+                intro: "Membership is the best way to experience County Hall Dance Centre. Choose a plan that suits your routine and enjoy classes across Contemporary, Chinese Dance, Tango, Yoga, Tai Chi and K-Pop, plus exclusive discounts, priority access to events and a friendly community of fellow movers. Whether you're starting out or deepening your practice, our members get more from every visit.",
                 plans: {
                     title: "Plans",
                     items: [
@@ -2059,7 +2104,7 @@ export const siteSource = {
                             id: "quarterly",
                             title: "Quarterly Membership",
                             price: "£[TBC] / quarter",
-                            body: "Three months of classes and member benefits — a great way to see real progress.",
+                            body: "Three months of classes and member benefits, a great way to see real progress.",
                         },
                         {
                             id: "annual",
@@ -2187,7 +2232,7 @@ export const siteSource = {
                         subtitle:
                             "A more flexible way to keep dancing, join events and belong to the community.",
                     },
-                    intro: "Membership offers ongoing access to classes, events and community benefits — details to be confirmed before launch.",
+                    intro: "Membership offers ongoing access to classes, events and community benefits. Details to be confirmed before launch.",
                     sections: [
                         { id: "benefits", title: "What's included" },
                         { id: "how-to-join", title: "How to join" },
@@ -2225,7 +2270,7 @@ export const siteSource = {
                         subtitle:
                             "How members reserve classes and events through our booking system.",
                     },
-                    intro: "Members will receive booking access through our online timetable and companion app — details to follow via our app partner.",
+                    intro: "Members will receive booking access through our online timetable and companion app. Details to follow via our app partner.",
                     sections: [
                         { id: "member-booking", title: "Member booking" },
                         { id: "support", title: "Support" },
@@ -2283,7 +2328,7 @@ export const siteSource = {
                     {
                         title: "Philosophy",
                         description:
-                            "Move. Create. Connect. Belong. — helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts.",
+                            "Move. Create. Connect. Belong. Helping adults of every background and level of experience build confidence, wellbeing, and a sense of belonging through the arts.",
                     },
                     {
                         title: "Safeguarding",
@@ -2294,7 +2339,7 @@ export const siteSource = {
             },
             cta: {
                 title: "Visit us",
-                body: "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team — we'd love to meet you in person.",
+                body: "We welcome you to County Hall on the South Bank. Come and see the studios, ask about classes, or arrange a visit with our team. We'd love to meet you in person.",
                 button: {
                     label: "Get in touch",
                     href: "/contact",
@@ -2307,7 +2352,7 @@ export const siteSource = {
             meta: {
                 title: "Booking & Enquiries",
                 description:
-                    "Send a booking or general enquiry to County Hall Dance Centre — venue hire, classes, membership and more.",
+                    "Send a booking or general enquiry to County Hall Dance Centre, including venue hire, classes, membership and more.",
             },
             hero: {
                 overline: "We'd love to hear from you",
@@ -2318,10 +2363,10 @@ export const siteSource = {
             form: {
                 title: "Send an enquiry",
                 description:
-                    "Tell us what you are looking for — venue hire, class booking, membership or a general question.",
+                    "Tell us what you are looking for: venue hire, class booking, membership or a general question.",
                 submitLabel: "Send message",
                 successMessage:
-                    "Thank you — your enquiry has been received. We will be in touch shortly.",
+                    "Thank you, your enquiry has been received. We will be in touch shortly.",
                 selectPlaceholder: "Select an option",
                 action: "mailto:info@countyhalldancecentre.com",
                 fields: [
@@ -2371,7 +2416,7 @@ export const siteSource = {
                         label: "Message",
                         type: "textarea",
                         placeholder:
-                            "Please include any relevant details — dates, class names, group size, etc.",
+                            "Please include any relevant details: dates, class names, group size, etc.",
                         required: true,
                     },
                 ] satisfies FormField[],
@@ -2388,7 +2433,7 @@ export const siteSource = {
                 overline: "We'd love to hear from you",
                 title: "Contact",
                 subtitle:
-                    "Questions about classes, courses, private events, or anything else — send us a message.",
+                    "Questions about classes, courses, private events, or anything else. Send us a message.",
             } satisfies PageHeroContent,
             details: {
                 title: "Venue details",
@@ -2399,7 +2444,7 @@ export const siteSource = {
                 ],
                 phone: "+44 7728 617531",
                 email: "info@countyhalldancecentre.com",
-                hours: "Office hours: Mon – Fri, 9:00 – 17:30",
+                hours: "Office hours: Mon to Fri, 9:00 to 17:30",
                 wechat: "WeChat: 18518614868",
                 instagramLabel: "Instagram: @countyhalldancecentre",
                 instagramHref:
@@ -2423,7 +2468,7 @@ export const siteSource = {
                     "Complete the form below and we will respond within two working days.",
                 submitLabel: "Send message",
                 successMessage:
-                    "Thank you — your message has been received. We will be in touch shortly.",
+                    "Thank you, your message has been received. We will be in touch shortly.",
                 selectPlaceholder: "Select an option",
                 action: "mailto:info@countyhalldancecentre.com",
                 fields: [
@@ -2462,6 +2507,14 @@ export const siteSource = {
                             },
                             { label: "Venue hire", value: "venue-hire" },
                             { label: "Events", value: "events" },
+                            {
+                                label: "Teaching opportunities",
+                                value: "teaching-opportunities",
+                            },
+                            {
+                                label: "Partnerships & collaborations",
+                                value: "partnerships-collaborations",
+                            },
                             { label: "Other enquiry", value: "other" },
                         ],
                     },
@@ -2469,7 +2522,7 @@ export const siteSource = {
                         name: "subjectOther",
                         label: "Please specify (optional)",
                         type: "text",
-                        placeholder: "e.g. press, partnerships, lost property",
+                        placeholder: "e.g. press or lost property",
                         showWhen: { field: "subject", value: "other" },
                     },
                     {
@@ -2478,6 +2531,12 @@ export const siteSource = {
                         type: "textarea",
                         placeholder: "How can we help?",
                         required: true,
+                        guidance: [
+                            {
+                                value: "teaching-opportunities",
+                                text: "Please describe your teaching background, the classes you would like to teach and when you are available. You are welcome to include a link to your portfolio or professional profile. This form cannot take attachments, so please share a link rather than a CV.",
+                            },
+                        ],
                     },
                 ] satisfies FormField[],
             },

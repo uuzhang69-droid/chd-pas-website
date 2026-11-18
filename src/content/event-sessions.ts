@@ -141,7 +141,7 @@ export const eventSessions: EventSession[] = [
         description: [
             "The programme explored the virtuosity, lyricism and operatic flair of Italian composers including Paganini, Rossini and Boccherini, with a flamenco twist from two dancers from the London School of Flamenco.",
             "Guest performers included Santy Masciarò on guitar and Mika Enjo on flute. Violinist Juan Manuel Gonzalez Hernandez joined the ensemble for the Fandango, expanding the group into the quintet for which the work was written.",
-            "The concert marked the beginning of As the Leaves Turn (24–25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations.",
+            "The concert marked the beginning of As the Leaves Turn (24 to 25 October), exploring folk traditions, transformation, memory and the ways music and art are continually reshaped across cultures and generations.",
         ],
         relationship: "hosted",
         hostedAt: "County Hall Dance & Performing Arts School",
@@ -277,7 +277,7 @@ export const eventSessions: EventSession[] = [
     {
         id: "ceramics-2026-10-17",
         eventSlug: "ceramics-workshop-with-yasemin",
-        title: "Ceramics Workshop with Yasemin — Making Flowers",
+        title: "Ceramics Workshop with Yasemin: Making Flowers",
         date: "2026-10-17",
         start: "16:30",
         end: "18:00",

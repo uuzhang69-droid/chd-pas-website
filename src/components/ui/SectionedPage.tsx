@@ -19,14 +19,14 @@ export function SectionedPage({
     <>
       <PageHero {...hero} />
       {intro && (
-        <section className="py-12 md:py-16">
+        <section className="section-y">
           <Container>
-            <p className="text-body-lg max-w-3xl text-charcoal/80">{intro}</p>
+            <p className="text-body-lg text-charcoal/80">{intro}</p>
           </Container>
         </section>
       )}
       {gallery && gallery.length > 0 && (
-        <section className="border-y border-taupe/20 bg-blush/25 py-12 md:py-16">
+        <section className="border-y border-taupe/20 bg-blush/25 section-y">
           <Container>
             {galleryLabel && (
               <h2 className="text-h2 mb-8 text-center text-charcoal">{galleryLabel}</h2>
@@ -43,11 +43,11 @@ export function SectionedPage({
         <section
           key={section.id}
           id={section.id}
-          className={`scroll-mt-32 py-16 md:py-24 ${index % 2 === 1 ? "bg-ivory" : ""}`}
+          className={`scroll-mt-32 section-y ${index % 2 === 1 ? "bg-ivory" : ""}`}
         >
           <Container>
             <h2 className="text-h2 text-charcoal">{section.title}</h2>
-            <p className="text-body mt-4 max-w-3xl text-charcoal/75">{comingSoon}</p>
+            <p className="text-body-lg mt-4 text-charcoal/75">{comingSoon}</p>
           </Container>
         </section>
       ))}

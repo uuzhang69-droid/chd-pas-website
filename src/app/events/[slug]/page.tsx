@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
-import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import {
@@ -13,6 +12,7 @@ import { siteContent } from "@/content/site";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { Eyebrow, HeroBackLink } from "@/components/ui/HeroParts";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd, eventJsonLd } from "@/lib/seo/structured-data";
 import { EventSeriesSections } from "@/components/events/EventSeriesSections";
@@ -166,16 +166,13 @@ export default async function EventDetailPage({ params }: PageProps) {
                     { name: event.title, path: `/events/${slug}` },
                 ])}
             />
-            <section className="border-b border-taupe/30 bg-ivory">
-                <Container className="py-12 md:py-16">
-                    <Link
-                        href="/events"
-                        className="text-small font-semibold text-rose hover:text-rose/80"
-                    >
+            <section className="border-b border-taupe/30 bg-blush/20">
+                <Container className="section-y">
+                    <HeroBackLink href="/events" tone="light">
                         {detailLabels.backLink}
-                    </Link>
+                    </HeroBackLink>
                     <div
-                        className={`mt-6 grid gap-8 md:gap-10 lg:gap-14 ${
+                        className={`mt-8 grid gap-8 grid-gap-x ${
                             hasPortraitHero
                                 ? "items-center md:grid-cols-[minmax(0,22rem)_1fr] lg:grid-cols-[minmax(0,24rem)_1fr]"
                                 : "items-start md:grid-cols-2"
@@ -193,33 +190,31 @@ export default async function EventDetailPage({ params }: PageProps) {
                         />
                         <div>
                             {overline && (
-                                <p className="text-overline text-rose">
-                                    {overline}
-                                </p>
+                                <Eyebrow tone="light">{overline}</Eyebrow>
                             )}
-                            <h1 className="text-h1 mt-2 text-charcoal">
+                            <h1 className="text-h1 mt-4 text-charcoal lg:text-[3.25rem]">
                                 {event.title}
                             </h1>
                             {event.subtitle && (
-                                <p className="text-body-lg mt-3 text-charcoal/80">
+                                <p className="text-body-lg mt-4 text-charcoal/85">
                                     {event.subtitle}
                                 </p>
                             )}
                             {event.freeAdmission && (
-                                <p className="text-overline mt-4 inline-block rounded-full border border-rose/50 px-3 py-1 text-rose">
+                                <p className="text-overline mt-4 inline-block rounded-full border border-burgundy/50 px-3 py-1 text-burgundy">
                                     Free admission
                                 </p>
                             )}
-                            <dl className="mt-6 divide-y divide-taupe/25 border-y border-taupe/25">
+                            <dl className="mt-7 divide-y divide-taupe/40 border-y border-taupe/40">
                                 {facts.map(([label, value]) => (
                                     <div
                                         key={label}
-                                        className="grid gap-x-4 gap-y-0.5 py-3 sm:grid-cols-[6rem_1fr]"
+                                        className="grid gap-x-5 gap-y-1 py-4 sm:grid-cols-[7rem_1fr]"
                                     >
-                                        <dt className="text-overline text-rose">
+                                        <dt className="text-overline text-burgundy">
                                             {label}
                                         </dt>
-                                        <dd className="text-body text-charcoal">
+                                        <dd className="text-body-lg text-charcoal">
                                             {value}
                                         </dd>
                                     </div>
@@ -249,10 +244,10 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </Container>
             </section>
 
-            <section className="py-10 md:py-14">
+            <section className="section-y">
                 <Container>
                     {event.excerpt && !event.subtitle && (
-                        <p className="text-body-lg text-charcoal/80">
+                        <p className="text-body-lg mb-10 text-charcoal/85">
                             {event.excerpt}
                         </p>
                     )}
@@ -260,7 +255,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                         <EventSeriesSections event={event} />
                     ) : (
                         event.description && (
-                            <div className="mt-6 w-full space-y-4 first:mt-0">
+                            <div className="mt-6 w-full space-y-5 first:mt-0">
                                 {event.description.map((paragraph, index) => {
                                     const heading = paragraph.startsWith("# ")
                                         ? paragraph.slice(2)
@@ -298,11 +293,11 @@ export default async function EventDetailPage({ params }: PageProps) {
                                                     />
                                                 ))}
                                             {heading ? (
-                                                <h2 className="text-h3 pt-4 text-charcoal first:pt-0">
+                                                <h2 className="text-h2 pt-8 text-charcoal first:pt-0">
                                                     {heading}
                                                 </h2>
                                             ) : (
-                                                <p className="text-body text-charcoal/75">
+                                                <p className="text-body-lg text-charcoal/85">
                                                     {paragraph}
                                                 </p>
                                             )}
@@ -311,17 +306,15 @@ export default async function EventDetailPage({ params }: PageProps) {
                                                 descriptionCtasByIndex
                                                     .get(index)
                                                     ?.map((cta) => {
-                                                        const {
-                                                            paragraphIndex: _i,
-                                                            inactive,
-                                                            ...buttonProps
-                                                        } = cta;
                                                         return (
                                                             <Button
                                                                 key={`${index}-${cta.label}-${cta.href ?? "inactive"}`}
-                                                                {...buttonProps}
+                                                                label={cta.label}
+                                                                href={cta.href}
+                                                                variant={cta.variant}
+                                                                external={cta.external}
                                                                 inactive={
-                                                                    inactive
+                                                                    cta.inactive
                                                                 }
                                                                 className="mt-3 !py-2.5"
                                                             />
@@ -370,7 +363,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                                     {event.teacherBio.heading}
                                 </h2>
                                 {event.teacherBio.role && (
-                                    <p className="text-overline mt-3 text-rose">
+                                    <p className="text-overline mt-3 text-burgundy">
                                         {event.teacherBio.name} ·{" "}
                                         {event.teacherBio.role}
                                     </p>
@@ -418,7 +411,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                             <dl className="mt-5 grid gap-6 sm:grid-cols-2">
                                 {event.organiser && (
                                     <div>
-                                        <dt className="text-overline text-rose">
+                                        <dt className="text-overline text-burgundy">
                                             {detailLabels.organiser}
                                         </dt>
                                         <dd className="text-body mt-1 text-charcoal/75">
@@ -428,7 +421,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                                 )}
                                 {!!event.partners?.length && (
                                     <div>
-                                        <dt className="text-overline text-rose">
+                                        <dt className="text-overline text-burgundy">
                                             {detailLabels.partners}
                                         </dt>
                                         <dd className="text-body mt-1 text-charcoal/75">
@@ -439,7 +432,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                                 {event.relationship === "hosted" &&
                                     event.hostedAt && (
                                         <div>
-                                            <dt className="text-overline text-rose">
+                                            <dt className="text-overline text-burgundy">
                                                 {detailLabels.hostedAt}
                                             </dt>
                                             <dd className="text-body mt-1 text-charcoal/75">
@@ -449,7 +442,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                                     )}
                                 {event.promotedBy && (
                                     <div>
-                                        <dt className="text-overline text-rose">
+                                        <dt className="text-overline text-burgundy">
                                             {detailLabels.promotedBy}
                                         </dt>
                                         <dd className="text-body mt-1 text-charcoal/75">

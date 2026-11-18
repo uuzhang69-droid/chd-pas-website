@@ -16,9 +16,11 @@ export function Footer() {
 
   return (
     <footer className="bg-burgundy text-ivory">
-      <Container className="py-12 md:py-14">
-        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr] lg:gap-12">
-          <div className="md:col-span-2 lg:col-span-1">
+      {/* Same side gutters and no maximum width, like the Header (see Container wide). */}
+      <Container wide className="py-12 md:py-14">
+        {/* Two columns on desktop: the brand, and the contact details (Visit Us above Stay in touch). One column on phones. */}
+        <div className="grid items-start gap-12 md:grid-cols-2 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-16">
+          <div>
             <div className="mb-6">
               <BrandMark variant="footer" />
             </div>
@@ -39,34 +41,36 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.contact.title}</h3>
-            <address className="not-italic text-body text-ivory/85">
-              <p className="whitespace-pre-line">{footer.contact.address.join("\n")}</p>
-            </address>
-          </div>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.contact.title}</h3>
+              <address className="not-italic text-body text-ivory/85">
+                <p className="whitespace-pre-line">{footer.contact.address.join("\n")}</p>
+              </address>
+            </div>
 
-          <div>
-            <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.stayInTouch.title}</h3>
-            <ul className="text-body text-ivory/85 space-y-1">
-              <li>
-                <a
-                  href={`tel:${footer.contact.phone.replace(/\s/g, "")}`}
-                  className="transition-colors hover:text-rose"
-                >
-                  {footer.contact.phone}
-                </a>
-              </li>
-              <li>{footer.contact.wechat}</li>
-              <li>
-                <a
-                  href={`mailto:${footer.contact.email}`}
-                  className="break-all transition-colors hover:text-rose"
-                >
-                  {footer.contact.email}
-                </a>
-              </li>
-            </ul>
+            <div>
+              <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.stayInTouch.title}</h3>
+              <ul className="text-body text-ivory/85 space-y-1">
+                <li>
+                  <a
+                    href={`tel:${footer.contact.phone.replace(/\s/g, "")}`}
+                    className="transition-colors hover:text-rose"
+                  >
+                    {footer.contact.phone}
+                  </a>
+                </li>
+                <li>{footer.contact.wechat}</li>
+                <li>
+                  <a
+                    href={`mailto:${footer.contact.email}`}
+                    className="break-words transition-colors hover:text-rose"
+                  >
+                    {footer.contact.email}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -85,9 +89,9 @@ export function Footer() {
           </div>
         )}
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-ivory/15 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col items-center gap-4 border-t border-ivory/15 pt-8 text-center">
           {legalLinks.length > 0 && (
-            <ul className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal notices">
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Legal notices">
               {legalLinks.map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="text-small text-ivory/70 underline hover:text-ivory">

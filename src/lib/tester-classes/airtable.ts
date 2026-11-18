@@ -65,6 +65,7 @@ function mapAirtableRecord(record: AirtableRecord): TesterClass | null {
     startTime: asString(fields["Start Time"]),
     endTime: asString(fields["End Time"]),
     dateRange: asString(fields["Date Range"]),
+    sessionDate: /^\d{4}-\d{2}-\d{2}$/.test(asString(fields.Date)) ? asString(fields.Date) : undefined,
     ageGroup: asString(fields["Age Group"], "Any age"),
     location: asString(fields.Location, "County Hall Dance Centre"),
     price: asNumber(fields.Price, 10),

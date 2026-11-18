@@ -162,7 +162,20 @@ export type ClassInstructor = {
     name: string;
     role?: string;
     bio: string;
+    /** Further verified paragraphs shown after the main biography. */
+    moreBio?: string[];
     image: ImageAsset;
+};
+
+/** One way of taking a class, as listed on the timetable (for example "Gentle Flow"). */
+export type ClassFormat = {
+    /** Optional public heading; the canonical class name remains unchanged. */
+    title?: string;
+    name: string;
+    summary: string;
+    image?: ImageAsset;
+    /** Who teaches this format, only where the assignment is confirmed (for example "Wednesday evenings with Debbie Bhowmik"). */
+    taughtBy?: string;
 };
 
 export type ClassStylePage = {
@@ -176,9 +189,19 @@ export type ClassStylePage = {
         image: ImageAsset;
     };
     instructor: ClassInstructor;
-    intro: string[];
-    highlights: Array<{ title: string; description: string }>;
-    ageGroups: Array<{ label: string; description: string }>;
+    /** Further teachers of the same class, shown after the main instructor under one heading. */
+    additionalInstructors?: ClassInstructor[];
+    /** "Meet your instructor" or "Meet your instructors". */
+    instructorHeading: string;
+    /** About the discipline, in a few short paragraphs. */
+    about: { title?: string; paragraphs: string[]; image?: ImageAsset };
+    /** The classes actually offered, each described separately. */
+    formats: ClassFormat[];
+    formatSection?: { title: string };
+    formatsNote?: string;
+    /** What to expect: only what is true and useful for this class. */
+    expect?: { title?: string; items: Array<{ title: string; description: string }> };
+    closing: { title: string; body: string };
     cta: CtaButton;
 };
 
@@ -227,6 +250,8 @@ export type FormField = {
     options?: Array<{ label: string; value: string }>;
     /** Show (and accept) this field only while another field has the given value. */
     showWhen?: { field: string; value: string };
+    /** Extra help shown under the label while the Subject has the given value (display only; the server ignores it). */
+    guidance?: Array<{ value: string; text: string }>;
 };
 
 export type FacultyMember = {

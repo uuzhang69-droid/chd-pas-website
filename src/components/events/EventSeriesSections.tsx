@@ -22,11 +22,11 @@ function splitDescription(description: readonly string[] = []) {
 
 function TextSection({ heading, paragraphs }: Section) {
     return (
-        <section className="mt-10 md:mt-12">
-            <h2 className="text-h3 text-charcoal">{heading}</h2>
-            <div className="mt-4 space-y-4">
+        <section className="mt-12 md:mt-16">
+            <h2 className="text-h2 text-charcoal">{heading}</h2>
+            <div className="mt-5 space-y-5">
                 {paragraphs.map((paragraph) => (
-                    <p key={paragraph} className="text-body text-charcoal/75">
+                    <p key={paragraph} className="text-body-lg text-charcoal/85">
                         {paragraph}
                     </p>
                 ))}
@@ -49,12 +49,12 @@ export function EventSeriesSections({ event }: { event: EventCard }) {
         <>
             {intro.length > 0 && (
                 <section>
-                    <h2 className="text-h3 text-charcoal">About the Series</h2>
-                    <div className="mt-4 w-full space-y-4">
+                    <h2 className="text-h2 text-charcoal">About the Series</h2>
+                    <div className="mt-5 w-full space-y-5">
                         {intro.map((paragraph) => (
                             <p
                                 key={paragraph}
-                                className="text-body text-charcoal/75"
+                                className="text-body-lg text-charcoal/85"
                             >
                                 {paragraph}
                             </p>
