@@ -182,7 +182,10 @@ export function ContactForm({
         >
             {visibleFields.map((field) => {
                 const error = fieldErrors[field.name];
-                const describedBy = error ? `${field.name}-error` : undefined;
+                const guidance = field.guidance?.find((item) => item.value === subject)?.text;
+                const guidanceId = guidance ? `${field.name}-guidance` : undefined;
+                const describedBy =
+                    [guidanceId, error ? `${field.name}-error` : undefined].filter(Boolean).join(" ") || undefined;
                 const common = {
                     id: field.name,
                     name: field.name,
@@ -217,6 +220,11 @@ export function ContactForm({
                                 </span>
                             )}
                         </label>
+                        {guidance && (
+                            <p id={guidanceId} className="mt-1 text-small text-charcoal/75">
+                                {guidance}
+                            </p>
+                        )}
                         {field.type === "textarea" ? (
                             <textarea
                                 {...common}
