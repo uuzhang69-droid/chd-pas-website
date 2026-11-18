@@ -164,7 +164,7 @@ export const siteSource = {
                 },
             },
             contact: {
-                title: "Visit Us",
+                title: "Visit & Contact",
                 address: [
                     "2nd Floor, County Hall,",
                     "Belvedere Road,",

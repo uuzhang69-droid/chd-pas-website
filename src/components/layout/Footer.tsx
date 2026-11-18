@@ -18,8 +18,9 @@ export function Footer() {
     <footer className="bg-burgundy text-ivory">
       {/* Same side gutters and no maximum width, like the Header (see Container wide). */}
       <Container wide className="py-12 md:py-14">
-        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-x-16">
-          <div className="md:col-span-2 lg:col-span-1">
+        {/* Two regions today: the brand, and Visit & Contact. A third column (Newsletter) can be added to this grid later. */}
+        <div className="grid items-start gap-12 md:grid-cols-2 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-16">
+          <div>
             <div className="mb-6">
               <BrandMark variant="footer" />
             </div>
@@ -42,32 +43,30 @@ export function Footer() {
 
           <div>
             <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.contact.title}</h3>
-            <address className="not-italic text-body text-ivory/85">
-              <p className="whitespace-pre-line">{footer.contact.address.join("\n")}</p>
-            </address>
-          </div>
-
-          <div>
-            <h3 className="text-h4 text-ivory mb-4 !leading-none">{footer.stayInTouch.title}</h3>
-            <ul className="text-body text-ivory/85 space-y-1">
-              <li>
-                <a
-                  href={`tel:${footer.contact.phone.replace(/\s/g, "")}`}
-                  className="transition-colors hover:text-rose"
-                >
-                  {footer.contact.phone}
-                </a>
-              </li>
-              <li>{footer.contact.wechat}</li>
-              <li>
-                <a
-                  href={`mailto:${footer.contact.email}`}
-                  className="break-words transition-colors hover:text-rose"
-                >
-                  {footer.contact.email}
-                </a>
-              </li>
-            </ul>
+            <div className="grid gap-6 xl:grid-cols-2 xl:gap-x-12">
+              <address className="not-italic text-body text-ivory/85">
+                <p className="whitespace-pre-line">{footer.contact.address.join("\n")}</p>
+              </address>
+              <ul className="text-body text-ivory/85 space-y-1">
+                <li>
+                  <a
+                    href={`tel:${footer.contact.phone.replace(/\s/g, "")}`}
+                    className="transition-colors hover:text-rose"
+                  >
+                    {footer.contact.phone}
+                  </a>
+                </li>
+                <li>{footer.contact.wechat}</li>
+                <li>
+                  <a
+                    href={`mailto:${footer.contact.email}`}
+                    className="break-words transition-colors hover:text-rose"
+                  >
+                    {footer.contact.email}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
