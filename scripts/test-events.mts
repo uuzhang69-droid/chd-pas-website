@@ -433,3 +433,20 @@ test("Calendar event cards carry one official title plus a type line, with no ex
         assert.equal("bookingUrl" in item, false);
     }
 });
+
+test("booking buttons are driven by event data: Within One Room has its official Eventbrite page, and no event invents a link", () => {
+    const events = siteContent.pages.events.items as readonly EventCard[];
+    const within = events.find((event) => event.slug === "within-one-room-stillness-in-motion");
+    assert.ok(within, "the event exists");
+    assert.equal(within.bookingPending, false);
+    assert.deepEqual(within.bookNow, {
+        label: "Book Now",
+        href: "https://www.eventbrite.co.uk/e/within-one-room-stillness-in-motion-tickets-2004916771033",
+        variant: "primary",
+        external: true,
+    });
+    // An event that is not pending must point somewhere real; a pending one must not carry an external booking link.
+    for (const event of events) {
+        if (event.bookingPending) assert.ok(!event.bookNow.external, `${event.slug} is pending but has an external link`);
+    }
+});
