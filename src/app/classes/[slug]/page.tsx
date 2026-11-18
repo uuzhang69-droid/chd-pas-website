@@ -40,7 +40,9 @@ export default async function ClassStylePage({ params }: PageProps) {
   if (!style) notFound();
 
   const { detailLabels } = siteContent.pages.classes;
-  const { instructor } = style;
+  const instructors = [style.instructor, ...(style.additionalInstructors ?? [])];
+  // Three formats without pictures sit side by side as cards on wide screens; any other set stays a list.
+  const formatColumns = style.formats.length === 3 && style.formats.every((format) => !format.image);
   const aboutTitle = style.about.title ?? withName(detailLabels.about, style.name);
   // A single format is introduced here, as one more paragraph of the introduction.
   const aboutParagraphs = [...style.about.paragraphs, ...(style.formats.length === 1 ? [style.formats[0].summary] : [])];
@@ -115,29 +117,42 @@ export default async function ClassStylePage({ params }: PageProps) {
                   {style.formatSection?.title ?? withName(detailLabels.formats, style.name)}
                 </h2>
               </div>
-              <ul className="mt-8 divide-y divide-taupe/40 border-y border-taupe/40">
-                {style.formats.map((format) => (
-                  <li
-                    key={format.name}
-                    className={`py-7 ${format.image ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_12rem] md:gap-12" : ""}`}
-                  >
-                    <div>
+              {formatColumns ? (
+                <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+                  {style.formats.map((format) => (
+                    <li key={format.name} className="flex flex-col rounded-sm border border-taupe/40 bg-white/50 p-6 sm:p-7">
                       <h3 className="text-h3 text-charcoal">{format.title ?? format.name}</h3>
-                      <p className="text-body-lg mt-3 text-charcoal/85">{format.summary}</p>
-                    </div>
-                    {format.image && (
-                      <Image
-                        src={format.image.src}
-                        alt={format.image.alt}
-                        width={format.image.width}
-                        height={format.image.height}
-                        sizes="192px"
-                        className="h-auto w-44 rounded-sm md:w-48 md:justify-self-end"
-                      />
-                    )}
-                  </li>
-                ))}
-              </ul>
+                      <p className="text-body mt-3 text-charcoal/85">{format.summary}</p>
+                      {format.taughtBy && <p className="text-small mt-auto pt-5 font-medium text-burgundy">{format.taughtBy}</p>}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="mt-8 divide-y divide-taupe/40 border-y border-taupe/40">
+                  {style.formats.map((format) => (
+                    <li
+                      key={format.name}
+                      className={`py-7 ${format.image ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_12rem] md:gap-12" : ""}`}
+                    >
+                      <div>
+                        <h3 className="text-h3 text-charcoal">{format.title ?? format.name}</h3>
+                        <p className="text-body-lg mt-3 text-charcoal/85">{format.summary}</p>
+                        {format.taughtBy && <p className="text-small mt-3 font-medium text-burgundy">{format.taughtBy}</p>}
+                      </div>
+                      {format.image && (
+                        <Image
+                          src={format.image.src}
+                          alt={format.image.alt}
+                          width={format.image.width}
+                          height={format.image.height}
+                          sizes="192px"
+                          className="h-auto w-44 rounded-sm md:w-48 md:justify-self-end"
+                        />
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
               {style.formatsNote && <p className="text-body mt-5 text-charcoal/70">{style.formatsNote}</p>}
             </div>
           </Container>
@@ -163,35 +178,55 @@ export default async function ClassStylePage({ params }: PageProps) {
         </section>
       )}
 
-      {/* 5. The instructor(s). The portrait is an image, so this section has two columns under one heading. */}
+      {/* 5. The instructor(s). One teacher: portrait beside the biography. Several: equal columns, each with its own portrait. */}
       <section id="instructor" className="scroll-mt-32 bg-blush/30 section-y">
         <Container>
           <h2 className="text-h2 text-charcoal">{style.instructorHeading}</h2>
-          <div className="portrait-split mt-10">
-            <div className="flex items-center gap-6 lg:flex-col lg:items-start lg:gap-5">
-              <div className="relative size-36 shrink-0 overflow-hidden rounded-full border-4 border-ivory shadow-md sm:size-40 lg:size-52">
-                <Image
-                  src={instructor.image.src}
-                  alt={instructor.image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="208px"
-                />
-              </div>
-              <div>
-                <h3 className="text-h3 text-charcoal">{instructor.name}</h3>
-                {instructor.role && <p className="text-body mt-1 text-charcoal/70">{instructor.role}</p>}
-              </div>
-            </div>
-            <div className="space-y-5">
-              <p className="text-body-lg text-charcoal/85">{instructor.bio}</p>
-              {instructor.moreBio?.map((paragraph) => (
-                <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/85">
-                  {paragraph}
-                </p>
+          {instructors.length > 1 ? (
+            <div className="mt-10 grid gap-14 lg:grid-cols-2 lg:gap-x-16">
+              {instructors.map((person) => (
+                <article key={person.name}>
+                  <div className="flex items-center gap-5">
+                    <div className="relative size-28 shrink-0 overflow-hidden rounded-full border-4 border-ivory shadow-md sm:size-32">
+                      <Image src={person.image.src} alt={person.image.alt} fill className="object-cover" sizes="128px" />
+                    </div>
+                    <div>
+                      <h3 className="text-h3 text-charcoal">{person.name}</h3>
+                    </div>
+                  </div>
+                  <div className="mt-6 space-y-5">
+                    <p className="text-body-lg text-charcoal/85">{person.bio}</p>
+                    {person.moreBio?.map((paragraph) => (
+                      <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/85">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </article>
               ))}
             </div>
-          </div>
+          ) : (
+            instructors.map((person) => (
+              <div key={person.name} className="portrait-split mt-10">
+                <div className="flex items-center gap-6 lg:flex-col lg:items-start lg:gap-5">
+                  <div className="relative size-36 shrink-0 overflow-hidden rounded-full border-4 border-ivory shadow-md sm:size-40 lg:size-52">
+                    <Image src={person.image.src} alt={person.image.alt} fill className="object-cover" sizes="208px" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 text-charcoal">{person.name}</h3>
+                  </div>
+                </div>
+                <div className="space-y-5">
+                  <p className="text-body-lg text-charcoal/85">{person.bio}</p>
+                  {person.moreBio?.map((paragraph) => (
+                    <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/85">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          )}
         </Container>
       </section>
 
