@@ -16,8 +16,9 @@ export function Footer() {
 
   return (
     <footer className="bg-burgundy text-ivory">
-      <Container className="py-12 md:py-14">
-        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr] lg:gap-12">
+      {/* Same side gutters and no maximum width, like the Header (see Container wide). */}
+      <Container wide className="py-12 md:py-14">
+        <div className="grid items-start gap-10 md:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-x-16">
           <div className="md:col-span-2 lg:col-span-1">
             <div className="mb-6">
               <BrandMark variant="footer" />
@@ -61,7 +62,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${footer.contact.email}`}
-                  className="break-all transition-colors hover:text-rose"
+                  className="break-words transition-colors hover:text-rose"
                 >
                   {footer.contact.email}
                 </a>
@@ -85,9 +86,9 @@ export function Footer() {
           </div>
         )}
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-ivory/15 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col items-center gap-4 border-t border-ivory/15 pt-8 text-center">
           {legalLinks.length > 0 && (
-            <ul className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Legal notices">
+            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Legal notices">
               {legalLinks.map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="text-small text-ivory/70 underline hover:text-ivory">
