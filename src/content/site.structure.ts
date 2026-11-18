@@ -510,314 +510,315 @@ export const siteStructure = {
             ],
         },
         classes: {
-            meta: {
-                title: "@@COPY:pages.classes.meta.title",
-                description: "@@COPY:pages.classes.meta.description",
+            "meta": {
+                "title": "@@COPY:pages.classes.meta.title",
+                "description": "@@COPY:pages.classes.meta.description"
             },
-            hero: {
-                overline: "@@COPY:pages.classes.hero.overline",
-                title: "@@COPY:pages.classes.hero.title",
-                subtitle: "@@COPY:pages.classes.hero.subtitle",
+            "hero": {
+                "overline": "@@COPY:pages.classes.hero.overline",
+                "title": "@@COPY:pages.classes.hero.title",
+                "subtitle": "@@COPY:pages.classes.hero.subtitle"
             },
-            intro: "@@COPY:pages.classes.intro",
-            cta: {
-                label: "@@COPY:pages.classes.cta.label",
-                href: "/timetable",
-                variant: "primary",
+            "intro": "@@COPY:pages.classes.intro",
+            "cta": {
+                "label": "@@COPY:pages.classes.cta.label",
+                "href": "/timetable",
+                "variant": "primary"
             },
-            detailLabels: {
-                ageGroups: "Who it's for",
-                backLink: "@@COPY:pages.classes.detaillabels.backlink",
-                instructor: "Instructor",
+            "detailLabels": {
+                "about": "@@COPY:pages.classes.detaillabels.about",
+                "formats": "@@COPY:pages.classes.detaillabels.formats",
+                "expect": "@@COPY:pages.classes.detaillabels.expect",
+                "askUs": "@@COPY:pages.classes.detaillabels.askus",
+                "backLink": "@@COPY:pages.classes.detaillabels.backlink",
+                "instructor": "Instructor"
             },
-            styles: [
+            "styles": [
                 {
-                    slug: "contemporary",
-                    name: "@@COPY:pages.classes.styles.contemporary.name",
-                    metaDescription:
-                        "@@COPY:pages.classes.styles.contemporary.metadescription",
-                    hero: {
-                        overline:
-                            "@@COPY:pages.classes.styles.contemporary.hero.overline",
-                        title: "@@COPY:pages.classes.styles.contemporary.hero.title",
-                        subtitle:
-                            "@@COPY:pages.classes.styles.contemporary.hero.subtitle",
-                        image: {
-                            src: "/images/styles/contemporary.jpeg",
-                            alt: "@@COPY:pages.classes.styles.contemporary.hero.image.alt",
-                        },
+                    "slug": "contemporary",
+                    "name": "@@COPY:pages.classes.styles.contemporary.name",
+                    "metaDescription": "@@COPY:pages.classes.styles.contemporary.metadescription",
+                    "hero": {
+                        "overline": "@@COPY:pages.classes.styles.contemporary.hero.overline",
+                        "title": "@@COPY:pages.classes.styles.contemporary.hero.title",
+                        "subtitle": "@@COPY:pages.classes.styles.contemporary.hero.subtitle",
+                        "image": {
+                            "src": "/images/styles/contemporary.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.contemporary.hero.image.alt"
+                        }
                     },
-                    instructor: {
-                        name: "@@COPY:pages.classes.styles.contemporary.instructor.name",
-                        role: "@@COPY:pages.classes.styles.contemporary.instructor.role",
-                        bio: "@@COPY:pages.classes.styles.contemporary.instructor.bio",
-                        image: {
-                            src: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
-                            alt: "@@COPY:pages.classes.styles.contemporary.instructor.image.alt",
-                        },
+                    "instructor": {
+                        "name": "@@COPY:pages.classes.styles.contemporary.instructor.name",
+                        "role": "@@COPY:pages.classes.styles.contemporary.instructor.role",
+                        "bio": "@@COPY:pages.classes.styles.contemporary.instructor.bio",
+                        "image": {
+                            "src": "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.contemporary.instructor.image.alt"
+                        }
                     },
-                    intro: [
-                        "@@COPY:pages.classes.styles.contemporary.intro.0",
-                        "@@COPY:pages.classes.styles.contemporary.intro.1",
-                    ],
-                    highlights: [
-                        {
-                            title: "@@COPY:pages.classes.styles.contemporary.highlights.0.title",
-                            description:
-                                "@@COPY:pages.classes.styles.contemporary.highlights.0.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.contemporary.highlights.1.title",
-                            description:
-                                "@@COPY:pages.classes.styles.contemporary.highlights.1.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.contemporary.highlights.2.title",
-                            description:
-                                "@@COPY:pages.classes.styles.contemporary.highlights.2.description",
-                        },
-                    ],
-                    ageGroups: [
-                        {
-                            label: "@@COPY:pages.classes.styles.contemporary.agegroups.adults.label",
-                            description:
-                                "@@COPY:pages.classes.styles.contemporary.agegroups.adults.description",
-                        },
-                    ],
-                    cta: {
-                        label: "@@COPY:pages.classes.styles.contemporary.cta.label",
-                        href: "/timetable",
-                        variant: "primary",
+                    "about": {
+                        "title": "@@COPY:pages.classes.styles.contemporary.about.title",
+                        "paragraphs": [
+                            "@@COPY:pages.classes.styles.contemporary.about.paragraphs.0",
+                            "@@COPY:pages.classes.styles.contemporary.about.paragraphs.1"
+                        ]
                     },
+                    "formats": [
+                        {
+                            "name": "@@COPY:pages.classes.styles.contemporary.formats.0.name",
+                            "summary": "@@COPY:pages.classes.styles.contemporary.formats.0.summary"
+                        }
+                    ],
+                    "instructorHeading": "@@COPY:pages.classes.styles.contemporary.instructorheading",
+                    "closing": {
+                        "title": "@@COPY:pages.classes.styles.contemporary.closing.title",
+                        "body": "@@COPY:pages.classes.styles.contemporary.closing.body"
+                    },
+                    "cta": {
+                        "label": "@@COPY:pages.classes.styles.contemporary.cta.label",
+                        "href": "/timetable",
+                        "variant": "primary"
+                    }
                 },
                 {
-                    slug: "chinese-dance",
-                    name: "@@COPY:pages.classes.styles.chinese_dance.name",
-                    metaDescription:
-                        "@@COPY:pages.classes.styles.chinese_dance.metadescription",
-                    hero: {
-                        overline:
-                            "@@COPY:pages.classes.styles.chinese_dance.hero.overline",
-                        title: "@@COPY:pages.classes.styles.chinese_dance.hero.title",
-                        subtitle:
-                            "@@COPY:pages.classes.styles.chinese_dance.hero.subtitle",
-                        image: {
-                            src: "/images/styles/chinese-dance.jpeg",
-                            alt: "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt",
-                        },
+                    "formatSection": {
+                        "title": "@@COPY:pages.classes.styles.chinese_dance.formatsection.title"
                     },
-                    instructor: {
-                        name: "@@COPY:pages.classes.styles.chinese_dance.instructor.name",
-                        role: "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
-                        bio: "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
-                        image: {
-                            src: "/images/faculty/RCDance-Lisa.jpeg",
-                            alt: "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt",
-                        },
+                    "slug": "chinese-dance",
+                    "name": "@@COPY:pages.classes.styles.chinese_dance.name",
+                    "metaDescription": "@@COPY:pages.classes.styles.chinese_dance.metadescription",
+                    "hero": {
+                        "overline": "@@COPY:pages.classes.styles.chinese_dance.hero.overline",
+                        "title": "@@COPY:pages.classes.styles.chinese_dance.hero.title",
+                        "subtitle": "@@COPY:pages.classes.styles.chinese_dance.hero.subtitle",
+                        "image": {
+                            "src": "/images/styles/chinese-dance.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.chinese_dance.hero.image.alt"
+                        }
                     },
-                    intro: [
-                        "@@COPY:pages.classes.styles.chinese_dance.intro.0",
-                        "@@COPY:pages.classes.styles.chinese_dance.intro.1",
-                    ],
-                    highlights: [
-                        {
-                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.0.title",
-                            description:
-                                "@@COPY:pages.classes.styles.chinese_dance.highlights.0.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.1.title",
-                            description:
-                                "@@COPY:pages.classes.styles.chinese_dance.highlights.1.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.chinese_dance.highlights.2.title",
-                            description:
-                                "@@COPY:pages.classes.styles.chinese_dance.highlights.2.description",
-                        },
-                    ],
-                    ageGroups: [
-                        {
-                            label: "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.label",
-                            description:
-                                "@@COPY:pages.classes.styles.chinese_dance.agegroups.adults.description",
-                        },
-                    ],
-                    cta: {
-                        label: "@@COPY:pages.classes.styles.chinese_dance.cta.label",
-                        href: "/timetable",
-                        variant: "primary",
+                    "instructor": {
+                        "name": "@@COPY:pages.classes.styles.chinese_dance.instructor.name",
+                        "role": "@@COPY:pages.classes.styles.chinese_dance.instructor.role",
+                        "bio": "@@COPY:pages.classes.styles.chinese_dance.instructor.bio",
+                        "image": {
+                            "src": "/images/faculty/RCDance-Lisa.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.chinese_dance.instructor.image.alt"
+                        }
                     },
+                    "about": {
+                        "title": "@@COPY:pages.classes.styles.chinese_dance.about.title",
+                        "paragraphs": [
+                            "@@COPY:pages.classes.styles.chinese_dance.about.paragraphs.0",
+                            "@@COPY:pages.classes.styles.chinese_dance.about.paragraphs.1"
+                        ]
+                    },
+                    "formats": [
+                        {
+                            "name": "@@COPY:pages.classes.styles.chinese_dance.formats.0.name",
+                            "summary": "@@COPY:pages.classes.styles.chinese_dance.formats.0.summary",
+                            "title": "@@COPY:pages.classes.styles.chinese_dance.formats.0.title",
+                            "image": {
+                                "src": "/images/classes/chinese-dance/chinese-classical-dance-class.jpg",
+                                "alt": "@@COPY:pages.classes.styles.chinese_dance.formats.0.image.alt",
+                                "width": 1536,
+                                "height": 2048
+                            }
+                        },
+                        {
+                            "name": "@@COPY:pages.classes.styles.chinese_dance.formats.1.name",
+                            "summary": "@@COPY:pages.classes.styles.chinese_dance.formats.1.summary",
+                            "image": {
+                                "src": "/images/classes/chinese-dance/chinese-dance-soft-training.jpg",
+                                "alt": "@@COPY:pages.classes.styles.chinese_dance.formats.1.image.alt",
+                                "width": 1536,
+                                "height": 2048
+                            },
+                            "title": "@@COPY:pages.classes.styles.chinese_dance.formats.1.title"
+                        }
+                    ],
+                    "instructorHeading": "@@COPY:pages.classes.styles.chinese_dance.instructorheading",
+                    "closing": {
+                        "title": "@@COPY:pages.classes.styles.chinese_dance.closing.title",
+                        "body": "@@COPY:pages.classes.styles.chinese_dance.closing.body"
+                    },
+                    "cta": {
+                        "label": "@@COPY:pages.classes.styles.chinese_dance.cta.label",
+                        "href": "/timetable",
+                        "variant": "primary"
+                    }
                 },
                 {
-                    slug: "tango",
-                    name: "@@COPY:pages.classes.styles.tango.name",
-                    metaDescription:
-                        "@@COPY:pages.classes.styles.tango.metadescription",
-                    hero: {
-                        overline:
-                            "@@COPY:pages.classes.styles.tango.hero.overline",
-                        title: "@@COPY:pages.classes.styles.tango.hero.title",
-                        subtitle:
-                            "@@COPY:pages.classes.styles.tango.hero.subtitle",
-                        image: {
-                            src: "/images/styles/tango.jpeg",
-                            alt: "@@COPY:pages.classes.styles.tango.hero.image.alt",
-                        },
+                    "formatSection": {
+                        "title": "@@COPY:pages.classes.styles.tango.formatsection.title"
                     },
-                    instructor: {
-                        name: "@@COPY:pages.classes.styles.tango.instructor.name",
-                        role: "@@COPY:pages.classes.styles.tango.instructor.role",
-                        bio: "@@COPY:pages.classes.styles.tango.instructor.bio",
-                        image: {
-                            src: "/images/faculty/Rene.jpeg",
-                            alt: "@@COPY:pages.classes.styles.tango.instructor.image.alt",
-                        },
+                    "slug": "tango",
+                    "name": "@@COPY:pages.classes.styles.tango.name",
+                    "metaDescription": "@@COPY:pages.classes.styles.tango.metadescription",
+                    "hero": {
+                        "overline": "@@COPY:pages.classes.styles.tango.hero.overline",
+                        "title": "@@COPY:pages.classes.styles.tango.hero.title",
+                        "subtitle": "@@COPY:pages.classes.styles.tango.hero.subtitle",
+                        "image": {
+                            "src": "/images/styles/tango.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.tango.hero.image.alt"
+                        }
                     },
-                    intro: ["@@COPY:pages.classes.styles.tango.intro.0"],
-                    highlights: [
+                    "instructor": {
+                        "name": "@@COPY:pages.classes.styles.tango.instructor.name",
+                        "role": "@@COPY:pages.classes.styles.tango.instructor.role",
+                        "bio": "@@COPY:pages.classes.styles.tango.instructor.bio",
+                        "moreBio": [
+                            "@@COPY:pages.classes.styles.tango.instructor.morebio.0"
+                        ],
+                        "image": {
+                            "src": "/images/faculty/Rene.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.tango.instructor.image.alt"
+                        }
+                    },
+                    "about": {
+                        "title": "@@COPY:pages.classes.styles.tango.about.title",
+                        "paragraphs": [
+                            "@@COPY:pages.classes.styles.tango.about.paragraphs.0",
+                            "@@COPY:pages.classes.styles.tango.about.paragraphs.1"
+                        ],
+                        "image": {
+                            "src": "/images/classes/tango/argentine-tango-class.jpg",
+                            "alt": "@@COPY:pages.classes.styles.tango.about.image.alt",
+                            "width": 4000,
+                            "height": 3000
+                        }
+                    },
+                    "formats": [
                         {
-                            title: "@@COPY:pages.classes.styles.tango.highlights.0.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tango.highlights.0.description",
+                            "name": "@@COPY:pages.classes.styles.tango.formats.0.name",
+                            "summary": "@@COPY:pages.classes.styles.tango.formats.0.summary"
                         },
                         {
-                            title: "@@COPY:pages.classes.styles.tango.highlights.1.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tango.highlights.1.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.tango.highlights.2.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tango.highlights.2.description",
-                        },
+                            "name": "@@COPY:pages.classes.styles.tango.formats.1.name",
+                            "summary": "@@COPY:pages.classes.styles.tango.formats.1.summary"
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "@@COPY:pages.classes.styles.tango.agegroups.adults.label",
-                            description:
-                                "@@COPY:pages.classes.styles.tango.agegroups.adults.description",
-                        },
-                    ],
-                    cta: {
-                        label: "@@COPY:pages.classes.styles.tango.cta.label",
-                        href: "/timetable",
-                        variant: "primary",
+                    "instructorHeading": "@@COPY:pages.classes.styles.tango.instructorheading",
+                    "closing": {
+                        "title": "@@COPY:pages.classes.styles.tango.closing.title",
+                        "body": "@@COPY:pages.classes.styles.tango.closing.body"
                     },
+                    "cta": {
+                        "label": "@@COPY:pages.classes.styles.tango.cta.label",
+                        "href": "/timetable",
+                        "variant": "primary"
+                    }
                 },
                 {
-                    slug: "yoga",
-                    name: "@@COPY:pages.classes.styles.yoga.name",
-                    metaDescription:
-                        "@@COPY:pages.classes.styles.yoga.metadescription",
-                    hero: {
-                        overline:
-                            "@@COPY:pages.classes.styles.yoga.hero.overline",
-                        title: "@@COPY:pages.classes.styles.yoga.hero.title",
-                        subtitle:
-                            "@@COPY:pages.classes.styles.yoga.hero.subtitle",
-                        image: {
-                            src: "/images/styles/yoga.jpeg",
-                            alt: "@@COPY:pages.classes.styles.yoga.hero.image.alt",
-                        },
+                    "formatSection": {
+                        "title": "@@COPY:pages.classes.styles.yoga.formatsection.title"
                     },
-                    instructor: {
-                        name: "@@COPY:pages.classes.styles.yoga.instructor.name",
-                        role: "@@COPY:pages.classes.styles.yoga.instructor.role",
-                        bio: "@@COPY:pages.classes.styles.yoga.instructor.bio",
-                        image: {
-                            src: "/images/faculty/Kasen.jpeg",
-                            alt: "@@COPY:pages.classes.styles.yoga.instructor.image.alt",
-                        },
+                    "slug": "yoga",
+                    "name": "@@COPY:pages.classes.styles.yoga.name",
+                    "metaDescription": "@@COPY:pages.classes.styles.yoga.metadescription",
+                    "hero": {
+                        "overline": "@@COPY:pages.classes.styles.yoga.hero.overline",
+                        "title": "@@COPY:pages.classes.styles.yoga.hero.title",
+                        "subtitle": "@@COPY:pages.classes.styles.yoga.hero.subtitle",
+                        "image": {
+                            "src": "/images/styles/yoga.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.yoga.hero.image.alt"
+                        }
                     },
-                    intro: ["@@COPY:pages.classes.styles.yoga.intro.0"],
-                    highlights: [
+                    "instructor": {
+                        "name": "@@COPY:pages.classes.styles.yoga.instructor.name",
+                        "role": "@@COPY:pages.classes.styles.yoga.instructor.role",
+                        "bio": "@@COPY:pages.classes.styles.yoga.instructor.bio",
+                        "image": {
+                            "src": "/images/faculty/Kasen.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.yoga.instructor.image.alt"
+                        }
+                    },
+                    "about": {
+                        "title": "@@COPY:pages.classes.styles.yoga.about.title",
+                        "paragraphs": [
+                            "@@COPY:pages.classes.styles.yoga.about.paragraphs.0",
+                            "@@COPY:pages.classes.styles.yoga.about.paragraphs.1"
+                        ],
+                        "image": {
+                            "src": "/images/classes/yoga/yoga-class.jpg",
+                            "alt": "@@COPY:pages.classes.styles.yoga.about.image.alt",
+                            "width": 4000,
+                            "height": 3000
+                        }
+                    },
+                    "formats": [
                         {
-                            title: "@@COPY:pages.classes.styles.yoga.highlights.0.title",
-                            description:
-                                "@@COPY:pages.classes.styles.yoga.highlights.0.description",
+                            "name": "@@COPY:pages.classes.styles.yoga.formats.0.name",
+                            "summary": "@@COPY:pages.classes.styles.yoga.formats.0.summary"
                         },
                         {
-                            title: "@@COPY:pages.classes.styles.yoga.highlights.1.title",
-                            description:
-                                "@@COPY:pages.classes.styles.yoga.highlights.1.description",
+                            "name": "@@COPY:pages.classes.styles.yoga.formats.1.name",
+                            "summary": "@@COPY:pages.classes.styles.yoga.formats.1.summary"
                         },
                         {
-                            title: "@@COPY:pages.classes.styles.yoga.highlights.2.title",
-                            description:
-                                "@@COPY:pages.classes.styles.yoga.highlights.2.description",
-                        },
+                            "name": "@@COPY:pages.classes.styles.yoga.formats.2.name",
+                            "summary": "@@COPY:pages.classes.styles.yoga.formats.2.summary"
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "@@COPY:pages.classes.styles.yoga.agegroups.adults.label",
-                            description:
-                                "@@COPY:pages.classes.styles.yoga.agegroups.adults.description",
-                        },
-                    ],
-                    cta: {
-                        label: "@@COPY:pages.classes.styles.yoga.cta.label",
-                        href: "/timetable",
-                        variant: "primary",
+                    "instructorHeading": "@@COPY:pages.classes.styles.yoga.instructorheading",
+                    "closing": {
+                        "title": "@@COPY:pages.classes.styles.yoga.closing.title",
+                        "body": "@@COPY:pages.classes.styles.yoga.closing.body"
                     },
+                    "cta": {
+                        "label": "@@COPY:pages.classes.styles.yoga.cta.label",
+                        "href": "/timetable",
+                        "variant": "primary"
+                    }
                 },
                 {
-                    slug: "tai-chi",
-                    name: "@@COPY:pages.classes.styles.tai_chi.name",
-                    metaDescription:
-                        "@@COPY:pages.classes.styles.tai_chi.metadescription",
-                    hero: {
-                        overline:
-                            "@@COPY:pages.classes.styles.tai_chi.hero.overline",
-                        title: "@@COPY:pages.classes.styles.tai_chi.hero.title",
-                        subtitle:
-                            "@@COPY:pages.classes.styles.tai_chi.hero.subtitle",
-                        image: {
-                            src: "/images/styles/tai-chi.jpeg",
-                            alt: "@@COPY:pages.classes.styles.tai_chi.hero.image.alt",
-                        },
+                    "slug": "tai-chi",
+                    "name": "@@COPY:pages.classes.styles.tai_chi.name",
+                    "metaDescription": "@@COPY:pages.classes.styles.tai_chi.metadescription",
+                    "hero": {
+                        "overline": "@@COPY:pages.classes.styles.tai_chi.hero.overline",
+                        "title": "@@COPY:pages.classes.styles.tai_chi.hero.title",
+                        "subtitle": "@@COPY:pages.classes.styles.tai_chi.hero.subtitle",
+                        "image": {
+                            "src": "/images/styles/tai-chi.jpeg",
+                            "alt": "@@COPY:pages.classes.styles.tai_chi.hero.image.alt"
+                        }
                     },
-                    instructor: {
-                        name: "@@COPY:pages.classes.styles.tai_chi.instructor.name",
-                        role: "@@COPY:pages.classes.styles.tai_chi.instructor.role",
-                        bio: "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
-                        image: {
-                            src: "/images/faculty/coming.svg",
-                            alt: "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt",
-                        },
+                    "instructor": {
+                        "name": "@@COPY:pages.classes.styles.tai_chi.instructor.name",
+                        "role": "@@COPY:pages.classes.styles.tai_chi.instructor.role",
+                        "bio": "@@COPY:pages.classes.styles.tai_chi.instructor.bio",
+                        "image": {
+                            "src": "/images/faculty/coming.svg",
+                            "alt": "@@COPY:pages.classes.styles.tai_chi.instructor.image.alt"
+                        }
                     },
-                    intro: ["@@COPY:pages.classes.styles.tai_chi.intro.0"],
-                    highlights: [
+                    "about": {
+                        "title": "@@COPY:pages.classes.styles.tai_chi.about.title",
+                        "paragraphs": [
+                            "@@COPY:pages.classes.styles.tai_chi.about.paragraphs.0",
+                            "@@COPY:pages.classes.styles.tai_chi.about.paragraphs.1"
+                        ]
+                    },
+                    "formats": [
                         {
-                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.0.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tai_chi.highlights.0.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.1.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tai_chi.highlights.1.description",
-                        },
-                        {
-                            title: "@@COPY:pages.classes.styles.tai_chi.highlights.2.title",
-                            description:
-                                "@@COPY:pages.classes.styles.tai_chi.highlights.2.description",
-                        },
+                            "name": "@@COPY:pages.classes.styles.tai_chi.formats.0.name",
+                            "summary": "@@COPY:pages.classes.styles.tai_chi.formats.0.summary"
+                        }
                     ],
-                    ageGroups: [
-                        {
-                            label: "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.label",
-                            description:
-                                "@@COPY:pages.classes.styles.tai_chi.agegroups.adults.description",
-                        },
-                    ],
-                    cta: {
-                        label: "@@COPY:pages.classes.styles.tai_chi.cta.label",
-                        href: "/timetable",
-                        variant: "primary",
+                    "instructorHeading": "@@COPY:pages.classes.styles.tai_chi.instructorheading",
+                    "closing": {
+                        "title": "@@COPY:pages.classes.styles.tai_chi.closing.title",
+                        "body": "@@COPY:pages.classes.styles.tai_chi.closing.body"
                     },
-                },
-            ],
+                    "cta": {
+                        "label": "@@COPY:pages.classes.styles.tai_chi.cta.label",
+                        "href": "/timetable",
+                        "variant": "primary"
+                    }
+                }
+            ]
         },
         courses: {
             meta: {

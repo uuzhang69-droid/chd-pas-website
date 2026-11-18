@@ -1,15 +1,16 @@
 import type { TesterClass } from "@/lib/tester-classes/types";
 import { DEFAULT_BOOKING_URL } from "@/lib/tester-classes/types";
 
-/** Fallback data when Airtable is not configured. Matches the five live classes. */
+/** Fallback data when Airtable is not configured. Historical Trial Week cards; exact dates prevent expired enrolment links. */
 export const SEED_CLASSES: TesterClass[] = [
   {
     id: "seed-sound-healing-yoga",
     title: "Sound Healing Yoga",
     day: "Tue",
     startTime: "12:30 pm",
-    endTime: "1:25 pm",
-    dateRange: "Sept – Sept 2026",
+    endTime: "1:15 pm",
+    dateRange: "15 September 2026",
+    sessionDate: "2026-09-15",
     ageGroup: "Any age",
     location: "County Hall Dance Centre",
     price: 10,
@@ -23,7 +24,8 @@ export const SEED_CLASSES: TesterClass[] = [
     day: "Tue",
     startTime: "6:30 pm",
     endTime: "7:30 pm",
-    dateRange: "Sept – Sept 2026",
+    dateRange: "15 September 2026",
+    sessionDate: "2026-09-15",
     ageGroup: "Any age",
     location: "County Hall Dance Centre",
     price: 10,
@@ -37,7 +39,8 @@ export const SEED_CLASSES: TesterClass[] = [
     day: "Tue",
     startTime: "7:30 pm",
     endTime: "8:30 pm",
-    dateRange: "Sept – Sept 2026",
+    dateRange: "15 September 2026",
+    sessionDate: "2026-09-15",
     ageGroup: "Any age",
     location: "County Hall Dance Centre",
     price: 10,
@@ -51,7 +54,8 @@ export const SEED_CLASSES: TesterClass[] = [
     day: "Wed",
     startTime: "6:30 pm",
     endTime: "7:20 pm",
-    dateRange: "Sept – Sept 2026",
+    dateRange: "16 September 2026",
+    sessionDate: "2026-09-16",
     ageGroup: "Any age",
     location: "County Hall Dance Centre",
     price: 10,
@@ -65,7 +69,8 @@ export const SEED_CLASSES: TesterClass[] = [
     day: "Wed",
     startTime: "7:30 pm",
     endTime: "8:30 pm",
-    dateRange: "Sept – Sept 2026",
+    dateRange: "16 September 2026",
+    sessionDate: "2026-09-16",
     ageGroup: "Any age",
     location: "County Hall Dance Centre",
     price: 10,
