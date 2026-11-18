@@ -26,12 +26,12 @@ export default function AboutPage() {
         imageClassName="object-[center_20%]"
       />
 
-      <section className="py-16 md:py-24">
+      <section className="section-y">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-16">
-            <div className="lg:flex lg:flex-col lg:justify-center">
+          <div className="editorial-split">
+            <div className="lg:order-2">
               <h2 className="text-h2 text-charcoal">{about.story.title}</h2>
-              <div className="mt-6 space-y-4">
+              <div className="mt-6 space-y-5">
                 {about.story.paragraphs.map((paragraph) => (
                   <p key={paragraph.slice(0, 32)} className="text-body-lg text-charcoal/80">
                     {paragraph}
@@ -43,15 +43,15 @@ export default function AboutPage() {
               <AutoPlayGallery
                 images={about.story.gallery}
                 label="About County Hall Dance Centre photos"
-                className="aspect-[4/3] w-full"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="aspect-[4/3] w-full lg:order-1"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
             )}
           </div>
         </Container>
       </section>
 
-      <section className="bg-ivory py-16 md:py-24">
+      <section className="bg-ivory section-y">
         <Container>
           <SectionHeading
             overline={about.values.overline}
@@ -73,7 +73,7 @@ export default function AboutPage() {
       <section className="border-t border-taupe/30 bg-charcoal py-16 text-ivory md:py-20">
         <Container className="text-center">
           <h2 className="text-h2">{about.cta.title}</h2>
-          <p className="text-body-lg mx-auto mt-4 max-w-xl text-ivory/85">{about.cta.body}</p>
+          <p className="text-body-lg mx-auto mt-4 max-w-2xl text-ivory/85">{about.cta.body}</p>
           <div className="mt-8">
             <Button {...about.cta.button} />
           </div>

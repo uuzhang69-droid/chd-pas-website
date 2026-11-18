@@ -12,14 +12,14 @@ export function AboutTeaser() {
       aria-labelledby="about-teaser-heading"
     >
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="editorial-split">
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
             <Image
               src={aboutTeaser.image.src}
               alt={aboutTeaser.image.alt}
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </div>
           <div>

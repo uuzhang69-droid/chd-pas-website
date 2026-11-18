@@ -18,7 +18,7 @@ import {
   Wind,
   type LucideIcon,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import {
   isFoundingGiftActive,
   MEMBERSHIP_TIER_CONTACT_HREF,
@@ -66,7 +66,7 @@ const MOVE_BENEFITS: Benefit[] = [
   { icon: Star, text: "Free access to selected masterclasses" },
   {
     icon: Gift,
-    text: "September–October founding gift",
+    text: "September to October founding gift",
     detail: "CHDPAS dance bag or dance shoes",
     foundingGift: true,
   },
@@ -83,7 +83,7 @@ const CONNECT_BENEFITS: Benefit[] = [
   { icon: Star, text: "Free access to selected masterclasses" },
   {
     icon: Gift,
-    text: "September–October founding gift",
+    text: "September to October founding gift",
     detail: "CHDPAS dance bag or dance shoes",
     foundingGift: true,
   },
@@ -98,12 +98,11 @@ const STYLE_ITEMS: { label: string; icon: LucideIcon }[] = [
   { label: "Meditation", icon: Leaf },
 ];
 
-export function MembershipSection() {
-  const [showFoundingGift, setShowFoundingGift] = useState(true);
+const subscribeNever = () => () => {};
 
-  useEffect(() => {
-    setShowFoundingGift(isFoundingGiftActive());
-  }, []);
+export function MembershipSection() {
+  // The server (and the first client render) shows the gift; once hydrated, the browser's own date decides.
+  const showFoundingGift = useSyncExternalStore(subscribeNever, () => isFoundingGiftActive(), () => true);
 
   const filterBenefits = (items: Benefit[]) =>
     items.filter((item) => !item.foundingGift || showFoundingGift);

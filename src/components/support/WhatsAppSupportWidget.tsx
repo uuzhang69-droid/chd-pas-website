@@ -33,7 +33,7 @@ function validatePhone(raw: string): string | null {
   }
   const digits = trimmed.replace(/\D/g, "");
   if (digits.length < 10 || digits.length > 15) {
-    return "Enter a valid phone number (10–15 digits). Include your country code if needed.";
+    return "Enter a valid phone number (10 to 15 digits). Include your country code if needed.";
   }
   return null;
 }

@@ -8,7 +8,7 @@ export function isFoundingGiftActive(now = Date.now()): boolean {
 }
 
 const FOUNDING_GIFT_LINE =
-  "• September–October founding gift: complimentary CHDPAS dance bag or dance shoes (if I join before 31 October 2026)";
+  "• September to October founding gift: complimentary CHDPAS dance bag or dance shoes (if I join before 31 October 2026)";
 
 function membershipEnquiryMessage(tier: MembershipTierId, includeFoundingGift: boolean): string {
   const lines = ["Hello,", ""];

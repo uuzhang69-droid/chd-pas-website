@@ -36,7 +36,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
     <PageShell>
       <PageHero {...contact.hero} compact />
 
-      <section className="py-16 md:py-24">
+      <section className="section-y">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <div>

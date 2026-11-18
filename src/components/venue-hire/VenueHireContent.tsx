@@ -14,7 +14,7 @@ export function VenueHireContent() {
         wholeVenue={page.spaces.wholeVenue}
       />
 
-      <section className="bg-ivory py-8 md:py-12">
+      <section className="bg-ivory section-y-tight">
         <Container>
           <h2 className="text-h2 text-charcoal">{page.facts.title}</h2>
           <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -30,7 +30,7 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="py-8 md:py-12">
+      <section className="section-y-tight">
         <Container>
           <h2 className="text-h2 text-charcoal">{page.facilities.title}</h2>
           <p className="text-body mt-3 text-charcoal/80">{page.facilities.includedNote}</p>
@@ -45,7 +45,7 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="bg-ivory py-8 md:py-12">
+      <section className="bg-ivory section-y-tight">
         <Container>
           <h2 className="text-h2 text-charcoal">{page.suitableFor.title}</h2>
           <p className="text-body mt-3 text-charcoal/80">
@@ -54,7 +54,7 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="py-8 md:py-12">
+      <section className="section-y-tight">
         <Container>
           <h2 className="text-h2 text-charcoal">{page.pricing.title}</h2>
           <div className="mt-4 overflow-x-auto">
@@ -95,8 +95,8 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="bg-ivory py-8 md:py-12">
-        <Container className="max-w-3xl">
+      <section className="bg-ivory section-y-tight">
+        <Container>
           <h2 className="text-h2 text-charcoal">{page.howToBook.title}</h2>
           <ol className="mt-4 space-y-3">
             {page.howToBook.steps.map((step, index) => (
@@ -104,7 +104,7 @@ export function VenueHireContent() {
                 <span className="text-h3 text-rose">{index + 1}</span>
                 <p className="text-body text-charcoal/80">
                   <strong className="text-charcoal">{step.title}</strong>
-                  {" — "}
+                  {": "}
                   {step.body}
                 </p>
               </li>
@@ -113,8 +113,8 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="py-8 md:py-12">
-        <Container className="max-w-3xl">
+      <section className="section-y-tight">
+        <Container>
           <h2 className="text-h2 text-charcoal">{page.terms.title}</h2>
           <ul className="mt-4 space-y-2">
             {page.terms.items.map((item) => (
@@ -126,8 +126,9 @@ export function VenueHireContent() {
         </Container>
       </section>
 
-      <section className="bg-ivory py-16 md:py-24">
-        <Container className="max-w-3xl text-center">
+      <section className="bg-ivory section-y">
+        <Container>
+          <div className="cta-block">
           <h2 className="text-h2 text-charcoal">{page.cta.title}</h2>
           <p className="text-body-lg mt-4 text-charcoal/80">{page.cta.body}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -137,6 +138,7 @@ export function VenueHireContent() {
           {page.cta.secondary && (
             <p className="text-body mt-4 text-charcoal/65">{page.cta.secondary}</p>
           )}
+          </div>
         </Container>
       </section>
     </>

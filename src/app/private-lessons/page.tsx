@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { siteContent } from "@/content/site";
@@ -20,32 +21,44 @@ export default function PrivateLessonsPage() {
     <PageShell>
       <PageHero {...page.hero} />
       {page.intro && (
-        <section className="py-12 md:py-16">
+        <section className="section-y">
           <Container>
-            <p className="text-body-lg max-w-3xl text-charcoal/80">{page.intro}</p>
+            <p className="text-body-lg text-charcoal/85">{page.intro}</p>
+            <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-sm sm:aspect-[2/1] lg:aspect-[5/2]">
+                <Image
+                    src="/images/private-lessons/county-hall-dance-studio.jpg"
+                    alt="Sunlit wooden-floor dance studio at County Hall, with mirrors and tall windows."
+                    fill
+                    sizes="(max-width: 1279px) 100vw, 1216px"
+                    className="object-cover object-[50%_60%]"
+                />
+            </div>
           </Container>
         </section>
       )}
       <PrivateLessonsSections sections={page.sections} />
-      <section className="bg-ivory py-16 md:py-24">
-        <Container className="max-w-3xl">
+      <section className="bg-blush/30 section-y">
+        <Container>
+          <div>
           <h2 className="text-h2 text-charcoal">{page.howItWorks.title}</h2>
-          <ol className="mt-8 space-y-5">
+          <ol className="mt-8 space-y-7">
             {page.howItWorks.steps.map((step, index) => (
-              <li key={step.title} className="flex gap-4">
-                <span className="text-h3 text-rose">{index + 1}</span>
-                <p className="text-body-lg text-charcoal/80">
+              <li key={step.title} className="flex gap-5">
+                <span aria-hidden="true" className="text-h3 flex size-11 shrink-0 items-center justify-center rounded-full bg-burgundy text-ivory">{index + 1}</span>
+                <p className="text-body-lg pt-1 text-charcoal/85">
                   <strong className="text-charcoal">{step.title}</strong>
-                  {" — "}
+                  {": "}
                   {step.body}
                 </p>
               </li>
             ))}
           </ol>
+          </div>
         </Container>
       </section>
-      <section className="py-16 md:py-24">
-        <Container className="max-w-3xl text-center">
+      <section className="section-y">
+        <Container>
+          <div className="cta-block">
           <h2 className="text-h2 text-charcoal">{page.cta.title}</h2>
           <p className="text-body-lg mt-4 text-charcoal/80">{page.cta.body}</p>
           <div className="mt-8">
@@ -54,6 +67,7 @@ export default function PrivateLessonsPage() {
           {page.cta.secondary && (
             <p className="text-body mt-4 text-charcoal/65">{page.cta.secondary}</p>
           )}
+          </div>
         </Container>
       </section>
     </PageShell>

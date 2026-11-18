@@ -60,7 +60,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     <PageShell>
       <PageHero overline="Search" title="Search the site" compact />
 
-      <section className="py-12 md:py-16">
+      <section className="section-y">
         <Container>
           <div className="mx-auto max-w-3xl">
             <form action="/search" method="get" role="search" className="flex gap-3">

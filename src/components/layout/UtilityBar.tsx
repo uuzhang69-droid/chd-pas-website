@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteContent } from "@/content/site";
 import {
   EnvelopeIcon,

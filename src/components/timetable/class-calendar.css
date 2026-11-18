@@ -5,7 +5,8 @@
   --line: #ded2ce;
   --muted: #675c5b;
 
-  padding: 30px 5% 40px;
+  /* Horizontal edges come from the shared Container, like every other section. */
+  padding: 30px 0 40px;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-montserrat), Montserrat, Arial, sans-serif;

@@ -30,7 +30,7 @@ export function ClassCard({ classItem }: ClassCardProps) {
     };
     const bookable = now !== null && canBookSession(timing, now);
     const ended = now !== null && sessionStatus(timing, now) === "ended";
-    const timeRange = `${classItem.startTime} – ${classItem.endTime}`;
+    const timeRange = `${classItem.startTime} to ${classItem.endTime}`;
 
     return (
         <article className="border-b border-taupe/30 py-5 last:border-b-0 sm:py-6">
