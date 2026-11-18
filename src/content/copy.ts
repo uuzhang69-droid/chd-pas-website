@@ -14,7 +14,7 @@ export const copy = {
     "global.footer.contact.address.2": "London SE1 7PB",
     "global.footer.contact.email": "info@countyhalldancecentre.com",
     "global.footer.contact.phone": "+44 7728 617531",
-    "global.footer.contact.title": "Visit & Contact",
+    "global.footer.contact.title": "Visit Us",
     "global.footer.contact.wechat": "WeChat: 18518614868",
     "global.footer.copyright":
         "© {year} County Hall Dance & Performing Arts School. All rights reserved.",
