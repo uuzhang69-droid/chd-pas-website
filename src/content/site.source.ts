@@ -531,12 +531,12 @@ export const siteSource = {
                         },
                     },
                     instructor: {
-                        name: "Christina & Yvonne",
+                        name: "Christina Lai & Yvonne Wang",
                         role: "Contemporary dance teacher",
                         bio: "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells.",
                         image: {
                             src: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
-                            alt: "Ka Ki Christina Lai and Ying Yen (Yvonne)",
+                            alt: "Ka Ki Christina Lai and Ying Yen (Yvonne) Wang",
                         },
                     },
                     about: {
@@ -583,7 +583,7 @@ export const siteSource = {
                         },
                     },
                     instructor: {
-                        name: "RCDance Lisa",
+                        name: "RCDance Lisa Lin",
                         role: "Chinese dance teacher",
                         bio: "Lisa Lin from RCDance is a classically trained dance artist and educator specialising in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language.",
                         image: {
@@ -654,15 +654,15 @@ export const siteSource = {
                         },
                     },
                     instructor: {
-                        name: "Rene",
+                        name: "Rene Hellemons",
                         role: "Tango teacher",
                         bio: "Rene is an experienced Argentine Tango dancer, instructor and performer. With a background in Ballroom and Latin dance, he has spent many years developing his expertise in Argentine Tango, studying with some of the most renowned and influential teachers in Argentina and Europe.",
                         moreBio: [
-                            "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
+                            "In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba Faisal. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires.",
                         ],
                         image: {
                             src: "/images/faculty/Rene.jpeg",
-                            alt: "Rene",
+                            alt: "Rene Hellemons",
                         },
                     },
                     about: {
@@ -720,14 +720,29 @@ export const siteSource = {
                         },
                     },
                     instructor: {
-                        name: "Kasen",
+                        name: "Kasen Zhao",
                         role: "Yoga teacher",
                         bio: "Kasen Zhao is the founder of Sen Yoga, a certified Yoga Alliance instructor and Stott Pilates instructor with over eight years of experience. Specialising in Vinyasa, Inside Flow and Yin Yoga, he combines mindful movement, breathwork and alignment to help students build strength, find balance and cultivate inner peace.",
                         image: {
                             src: "/images/faculty/Kasen.jpeg",
-                            alt: "Kasen",
+                            alt: "Kasen Zhao",
                         },
                     },
+                    additionalInstructors: [
+                        {
+                            name: "Debbie Bhowmik",
+                            role: "Gentle Flow Yoga Instructor",
+                            bio: "Debbie Bhowmik is a London-based yoga teacher and founder of The Joy of Yoga. Her journey began in 2005, and she went on to train as a yoga teacher in Rishikesh, India, in 2015.",
+                            moreBio: [
+                                "With a background in Chromatic Yoga and Inside Flow, Debbie brings a thoughtful, welcoming approach to her teaching. She believes yoga begins with the breath and that everyone should feel able to take part, whatever their age or experience.",
+                                "At County Hall, Debbie teaches Wednesday evening Gentle Flow Yoga, offering beginners a supportive space to explore movement, breathing and relaxation at their own pace.",
+                            ],
+                            image: {
+                                src: "/images/faculty/debbie-bhowmik-gentle-flow-yoga.jpg",
+                                alt: "Debbie Bhowmik, a yoga teacher, smiling with her hands together in front of her chest.",
+                            },
+                        },
+                    ],
                     about: {
                         "title": "Space for your practice",
                         "paragraphs": [
@@ -744,7 +759,8 @@ export const siteSource = {
                     formats: [
                         {
                             "name": "Gentle Flow",
-                            "summary": "A slower-paced flowing practice, with time to settle into postures and move thoughtfully between them."
+                            "summary": "A slower-paced flowing practice, with time to settle into postures and move thoughtfully between them.",
+                            "taughtBy": "Wednesday evenings with Debbie Bhowmik"
                         },
                         {
                             "name": "Vinyasa Flow",
@@ -757,7 +773,7 @@ export const siteSource = {
                     ],
 
 
-                    instructorHeading: "Meet your instructor",
+                    instructorHeading: "Meet your instructors",
                     closing: {
                         "title": "Make time for yoga",
                         "body": "Find a session that suits your week. If you have questions about what to bring or access to the studio, we are happy to help."
@@ -2491,6 +2507,14 @@ export const siteSource = {
                             },
                             { label: "Venue hire", value: "venue-hire" },
                             { label: "Events", value: "events" },
+                            {
+                                label: "Teaching opportunities",
+                                value: "teaching-opportunities",
+                            },
+                            {
+                                label: "Partnerships & collaborations",
+                                value: "partnerships-collaborations",
+                            },
                             { label: "Other enquiry", value: "other" },
                         ],
                     },
@@ -2498,7 +2522,7 @@ export const siteSource = {
                         name: "subjectOther",
                         label: "Please specify (optional)",
                         type: "text",
-                        placeholder: "e.g. press, partnerships, lost property",
+                        placeholder: "e.g. press or lost property",
                         showWhen: { field: "subject", value: "other" },
                     },
                     {
@@ -2507,6 +2531,12 @@ export const siteSource = {
                         type: "textarea",
                         placeholder: "How can we help?",
                         required: true,
+                        guidance: [
+                            {
+                                value: "teaching-opportunities",
+                                text: "Please describe your teaching background, the classes you would like to teach and when you are available. You are welcome to include a link to your portfolio or professional profile. This form cannot take attachments, so please share a link rather than a CV.",
+                            },
+                        ],
                     },
                 ] satisfies FormField[],
             },

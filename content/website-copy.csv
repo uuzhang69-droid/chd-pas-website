@@ -221,7 +221,7 @@ pages.classes.styles.chinese_dance.hero.subtitle,Classes page › styles › chi
 pages.classes.styles.chinese_dance.hero.title,Classes page › styles › chinese dance › hero › title,Chinese Dance
 pages.classes.styles.chinese_dance.instructor.bio,Classes page › styles › chinese dance › instructor › bio,"Lisa Lin from RCDance is a classically trained dance artist and educator specialising in traditional Chinese dance, ethnic and folk dance forms, choreography, and performance pedagogy. She earned her Bachelor’s degree in Dance and Practice from Nanjing University of the Arts and later completed her Master’s degree in Dance Practice and Performance at Roehampton University, London, where she further refined her artistic research and contemporary performance language."
 pages.classes.styles.chinese_dance.instructor.image.alt,Classes page › styles › chinese dance › instructor › image › alt,RCDance Lisa Lin
-pages.classes.styles.chinese_dance.instructor.name,Classes page › styles › chinese dance › instructor › name,RCDance Lisa
+pages.classes.styles.chinese_dance.instructor.name,Classes page › styles › chinese dance › instructor › name,RCDance Lisa Lin
 pages.classes.styles.chinese_dance.instructor.role,Classes page › styles › chinese dance › instructor › role,Chinese dance teacher
 pages.classes.styles.chinese_dance.instructorheading,Classes page › styles › chinese dance › instructorheading,Meet your instructor
 pages.classes.styles.chinese_dance.metadescription,Classes page › styles › chinese dance › metadescription,Learn about Chinese dance and the Class 1 and Soft Training sessions listed at County Hall Dance & Performing Arts School in London.
@@ -239,8 +239,8 @@ pages.classes.styles.contemporary.hero.overline,Classes page › styles › cont
 pages.classes.styles.contemporary.hero.subtitle,Classes page › styles › contemporary › hero › subtitle,Bring technique and imagination together through the many possibilities of movement.
 pages.classes.styles.contemporary.hero.title,Classes page › styles › contemporary › hero › title,Contemporary Dance
 pages.classes.styles.contemporary.instructor.bio,Classes page › styles › contemporary › instructor › bio,"Ka Ki Christina Lai and Ying Yen (Yvonne) Wang are London-based contemporary dance artists, choreographers and co-founders of C(P)LAY. Both hold an MA in Dance Performance from the University of the Arts London and have worked with internationally recognised choreographers and directors, including Yeji Kim, Dickson Mbi, Hannes Langolf and Theo Clinkard. Their choreographic work explores human connection, physicality and contemporary experiences through movement, and has been presented internationally, including at FUSE International Festival, Pavilion Dance South West and Sadler’s Wells."
-pages.classes.styles.contemporary.instructor.image.alt,Classes page › styles › contemporary › instructor › image › alt,Ka Ki Christina Lai and Ying Yen (Yvonne)
-pages.classes.styles.contemporary.instructor.name,Classes page › styles › contemporary › instructor › name,Christina & Yvonne
+pages.classes.styles.contemporary.instructor.image.alt,Classes page › styles › contemporary › instructor › image › alt,Ka Ki Christina Lai and Ying Yen (Yvonne) Wang
+pages.classes.styles.contemporary.instructor.name,Classes page › styles › contemporary › instructor › name,Christina Lai & Yvonne Wang
 pages.classes.styles.contemporary.instructor.role,Classes page › styles › contemporary › instructor › role,Contemporary dance teacher
 pages.classes.styles.contemporary.instructorheading,Classes page › styles › contemporary › instructorheading,Meet your instructors
 pages.classes.styles.contemporary.metadescription,Classes page › styles › contemporary › metadescription,"Explore contemporary dance, movement and expression at County Hall Dance & Performing Arts School in London. Find class and booking information."
@@ -281,9 +281,9 @@ pages.classes.styles.tango.hero.overline,Classes page › styles › tango › h
 pages.classes.styles.tango.hero.subtitle,Classes page › styles › tango › hero › subtitle,"Music, connection and the pleasure of a dance that unfolds one step at a time."
 pages.classes.styles.tango.hero.title,Classes page › styles › tango › hero › title,Argentine Tango
 pages.classes.styles.tango.instructor.bio,Classes page › styles › tango › instructor › bio,"Rene is an experienced Argentine Tango dancer, instructor and performer. With a background in Ballroom and Latin dance, he has spent many years developing his expertise in Argentine Tango, studying with some of the most renowned and influential teachers in Argentina and Europe."
-pages.classes.styles.tango.instructor.image.alt,Classes page › styles › tango › instructor › image › alt,Rene
-pages.classes.styles.tango.instructor.morebio.0,Classes page › styles › tango › instructor › morebio › 0,"In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires."
-pages.classes.styles.tango.instructor.name,Classes page › styles › tango › instructor › name,Rene
+pages.classes.styles.tango.instructor.image.alt,Classes page › styles › tango › instructor › image › alt,Rene Hellemons
+pages.classes.styles.tango.instructor.morebio.0,Classes page › styles › tango › instructor › morebio › 0,"In 2008, Rene co-founded Tango-Fever in London with his dance partner Hiba Faisal. Since then, they have taught and performed internationally, including at the renowned DNI Tango School in Buenos Aires."
+pages.classes.styles.tango.instructor.name,Classes page › styles › tango › instructor › name,Rene Hellemons
 pages.classes.styles.tango.instructor.role,Classes page › styles › tango › instructor › role,Tango teacher
 pages.classes.styles.tango.instructorheading,Classes page › styles › tango › instructorheading,Meet your instructor
 pages.classes.styles.tango.metadescription,Classes page › styles › tango › metadescription,"Get to know Argentine tango at County Hall Dance & Performing Arts School in London, with Beginner and Advanced classes. View the timetable."
@@ -292,11 +292,18 @@ pages.classes.styles.yoga.about.image.alt,Classes page › styles › yoga › a
 pages.classes.styles.yoga.about.paragraphs.0,Classes page › styles › yoga › about › paragraphs › 0,"Yoga offers time to pay attention to how you move and how you feel in the moment. Rooted in a tradition that extends beyond physical exercise, its movement practice brings posture, breath and concentration together."
 pages.classes.styles.yoga.about.paragraphs.1,Classes page › styles › yoga › about › paragraphs › 1,"At County Hall, you can choose from three flow formats, each with a different rhythm. You might prefer the unhurried pace of Gentle Flow, the continuity of Vinyasa or the musical choreography of Inside Flow."
 pages.classes.styles.yoga.about.title,Classes page › styles › yoga › about › title,Space for your practice
+pages.classes.styles.yoga.additionalinstructors.0.bio,Classes page › styles › yoga › additionalinstructors › 0 › bio,"Debbie Bhowmik is a London-based yoga teacher and founder of The Joy of Yoga. Her journey began in 2005, and she went on to train as a yoga teacher in Rishikesh, India, in 2015."
+pages.classes.styles.yoga.additionalinstructors.0.image.alt,Classes page › styles › yoga › additionalinstructors › 0 › image › alt,"Debbie Bhowmik, a yoga teacher, smiling with her hands together in front of her chest."
+pages.classes.styles.yoga.additionalinstructors.0.morebio.0,Classes page › styles › yoga › additionalinstructors › 0 › morebio › 0,"With a background in Chromatic Yoga and Inside Flow, Debbie brings a thoughtful, welcoming approach to her teaching. She believes yoga begins with the breath and that everyone should feel able to take part, whatever their age or experience."
+pages.classes.styles.yoga.additionalinstructors.0.morebio.1,Classes page › styles › yoga › additionalinstructors › 0 › morebio › 1,"At County Hall, Debbie teaches Wednesday evening Gentle Flow Yoga, offering beginners a supportive space to explore movement, breathing and relaxation at their own pace."
+pages.classes.styles.yoga.additionalinstructors.0.name,Classes page › styles › yoga › additionalinstructors › 0 › name,Debbie Bhowmik
+pages.classes.styles.yoga.additionalinstructors.0.role,Classes page › styles › yoga › additionalinstructors › 0 › role,Gentle Flow Yoga Instructor
 pages.classes.styles.yoga.closing.body,Classes page › styles › yoga › closing › body,"Find a session that suits your week. If you have questions about what to bring or access to the studio, we are happy to help."
 pages.classes.styles.yoga.closing.title,Classes page › styles › yoga › closing › title,Make time for yoga
 pages.classes.styles.yoga.cta.label,Classes page › styles › yoga › cta › label,View the timetable
 pages.classes.styles.yoga.formats.0.name,Classes page › styles › yoga › formats › 0 › name,Gentle Flow
 pages.classes.styles.yoga.formats.0.summary,Classes page › styles › yoga › formats › 0 › summary,"A slower-paced flowing practice, with time to settle into postures and move thoughtfully between them."
+pages.classes.styles.yoga.formats.0.taughtby,Classes page › styles › yoga › formats › 0 › taughtby,Wednesday evenings with Debbie Bhowmik
 pages.classes.styles.yoga.formats.1.name,Classes page › styles › yoga › formats › 1 › name,Vinyasa Flow
 pages.classes.styles.yoga.formats.1.summary,Classes page › styles › yoga › formats › 1 › summary,A flowing sequence in which movement is coordinated with the breath. The emphasis is on the connection between postures as well as the postures themselves.
 pages.classes.styles.yoga.formats.2.name,Classes page › styles › yoga › formats › 2 › name,Inside Flow
@@ -307,10 +314,10 @@ pages.classes.styles.yoga.hero.overline,Classes page › styles › yoga › her
 pages.classes.styles.yoga.hero.subtitle,Classes page › styles › yoga › hero › subtitle,"Find your pace with Gentle Flow, Vinyasa Flow and music-led Inside Flow at County Hall."
 pages.classes.styles.yoga.hero.title,Classes page › styles › yoga › hero › title,Yoga
 pages.classes.styles.yoga.instructor.bio,Classes page › styles › yoga › instructor › bio,"Kasen Zhao is the founder of Sen Yoga, a certified Yoga Alliance instructor and Stott Pilates instructor with over eight years of experience. Specialising in Vinyasa, Inside Flow and Yin Yoga, he combines mindful movement, breathwork and alignment to help students build strength, find balance and cultivate inner peace."
-pages.classes.styles.yoga.instructor.image.alt,Classes page › styles › yoga › instructor › image › alt,Kasen
-pages.classes.styles.yoga.instructor.name,Classes page › styles › yoga › instructor › name,Kasen
+pages.classes.styles.yoga.instructor.image.alt,Classes page › styles › yoga › instructor › image › alt,Kasen Zhao
+pages.classes.styles.yoga.instructor.name,Classes page › styles › yoga › instructor › name,Kasen Zhao
 pages.classes.styles.yoga.instructor.role,Classes page › styles › yoga › instructor › role,Yoga teacher
-pages.classes.styles.yoga.instructorheading,Classes page › styles › yoga › instructorheading,Meet your instructor
+pages.classes.styles.yoga.instructorheading,Classes page › styles › yoga › instructorheading,Meet your instructors
 pages.classes.styles.yoga.metadescription,Classes page › styles › yoga › metadescription,"Explore Gentle Flow, Vinyasa Flow and Inside Flow yoga at County Hall Dance & Performing Arts School in London. View the timetable and booking information."
 pages.classes.styles.yoga.name,Classes page › styles › yoga › name,Yoga
 pages.classesinfo.hero.overline,Classesinfo page › hero › overline,Classes
@@ -339,6 +346,7 @@ pages.contact.form.fields.email_address.label,Contact page › form › fields �
 pages.contact.form.fields.email_address.placeholder,Contact page › form › fields › email address › placeholder,you@example.com
 pages.contact.form.fields.full_name.label,Contact page › form › fields › full name › label,Full name
 pages.contact.form.fields.full_name.placeholder,Contact page › form › fields › full name › placeholder,Your name
+pages.contact.form.fields.message.guidance.0.text,Contact page › form › fields › message › guidance › 0 › text,"Please describe your teaching background, the classes you would like to teach and when you are available. You are welcome to include a link to your portfolio or professional profile. This form cannot take attachments, so please share a link rather than a CV."
 pages.contact.form.fields.message.label,Contact page › form › fields › message › label,Message
 pages.contact.form.fields.message.placeholder,Contact page › form › fields › message › placeholder,How can we help?
 pages.contact.form.fields.phone_optional.label,Contact page › form › fields › phone optional › label,Phone (optional)
@@ -349,6 +357,8 @@ pages.contact.form.fields.subject.options.events.label,Contact page › form ›
 pages.contact.form.fields.subject.options.general_enquiry.label,Contact page › form › fields › subject › options › general enquiry › label,General enquiry
 pages.contact.form.fields.subject.options.membership.label,Contact page › form › fields › subject › options › membership › label,Membership
 pages.contact.form.fields.subject.options.private_lessons_experiences.label,Contact page › form › fields › subject › options › private lessons experiences › label,Private lessons & experiences
+pages.contact.form.fields.subject.options.partnerships_collaborations.label,Contact page › form › fields › subject › options › partnerships collaborations › label,Partnerships & collaborations
+pages.contact.form.fields.subject.options.teaching_opportunities.label,Contact page › form › fields › subject › options › teaching opportunities › label,Teaching opportunities
 pages.contact.form.fields.subject.options.venue_hire.label,Contact page › form › fields › subject › options › venue hire › label,Venue hire
 pages.contact.form.selectplaceholder,Contact page › form › selectplaceholder,Select an option
 pages.contact.form.submitlabel,Contact page › form › submitlabel,Send message

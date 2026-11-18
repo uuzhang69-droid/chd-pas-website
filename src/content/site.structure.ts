@@ -734,6 +734,21 @@ export const siteStructure = {
                             "alt": "@@COPY:pages.classes.styles.yoga.instructor.image.alt"
                         }
                     },
+                    "additionalInstructors": [
+                        {
+                            "name": "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.name",
+                            "role": "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.role",
+                            "bio": "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.bio",
+                            "moreBio": [
+                                "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.morebio.0",
+                                "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.morebio.1"
+                            ],
+                            "image": {
+                                "src": "/images/faculty/debbie-bhowmik-gentle-flow-yoga.jpg",
+                                "alt": "@@COPY:pages.classes.styles.yoga.additionalinstructors.0.image.alt"
+                            }
+                        }
+                    ],
                     "about": {
                         "title": "@@COPY:pages.classes.styles.yoga.about.title",
                         "paragraphs": [
@@ -750,7 +765,8 @@ export const siteStructure = {
                     "formats": [
                         {
                             "name": "@@COPY:pages.classes.styles.yoga.formats.0.name",
-                            "summary": "@@COPY:pages.classes.styles.yoga.formats.0.summary"
+                            "summary": "@@COPY:pages.classes.styles.yoga.formats.0.summary",
+                            "taughtBy": "@@COPY:pages.classes.styles.yoga.formats.0.taughtby"
                         },
                         {
                             "name": "@@COPY:pages.classes.styles.yoga.formats.1.name",
@@ -2918,6 +2934,14 @@ export const siteStructure = {
                                 value: "events",
                             },
                             {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.teaching_opportunities.label",
+                                value: "teaching-opportunities",
+                            },
+                            {
+                                label: "@@COPY:pages.contact.form.fields.subject.options.partnerships_collaborations.label",
+                                value: "partnerships-collaborations",
+                            },
+                            {
                                 label: "@@COPY:pages.contact.form.fields.subject.options.other_enquiry.label",
                                 value: "other",
                             },
@@ -2938,6 +2962,12 @@ export const siteStructure = {
                         placeholder:
                             "@@COPY:pages.contact.form.fields.message.placeholder",
                         required: true,
+                        guidance: [
+                            {
+                                value: "teaching-opportunities",
+                                text: "@@COPY:pages.contact.form.fields.message.guidance.0.text",
+                            },
+                        ],
                     },
                 ],
             },

@@ -28,6 +28,7 @@ const COPY_PREFIX = "@@COPY:";
 
 const TEXT_KEYS = new Set([
   "label",
+  "taughtBy",
   "programme",
   "booking",
   "venuePending",

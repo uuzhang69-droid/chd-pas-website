@@ -174,6 +174,8 @@ export type ClassFormat = {
     name: string;
     summary: string;
     image?: ImageAsset;
+    /** Who teaches this format, only where the assignment is confirmed (for example "Wednesday evenings with Debbie Bhowmik"). */
+    taughtBy?: string;
 };
 
 export type ClassStylePage = {
@@ -187,6 +189,8 @@ export type ClassStylePage = {
         image: ImageAsset;
     };
     instructor: ClassInstructor;
+    /** Further teachers of the same class, shown after the main instructor under one heading. */
+    additionalInstructors?: ClassInstructor[];
     /** "Meet your instructor" or "Meet your instructors". */
     instructorHeading: string;
     /** About the discipline, in a few short paragraphs. */
@@ -246,6 +250,8 @@ export type FormField = {
     options?: Array<{ label: string; value: string }>;
     /** Show (and accept) this field only while another field has the given value. */
     showWhen?: { field: string; value: string };
+    /** Extra help shown under the label while the Subject has the given value (display only; the server ignores it). */
+    guidance?: Array<{ value: string; text: string }>;
 };
 
 export type FacultyMember = {
