@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { siteContent } from "../src/content/site";
 import {
@@ -13,6 +14,7 @@ import {
     type MailResult,
     type MailSender,
 } from "../src/lib/mail";
+import { contactPrefillFromSearchParams } from "../src/lib/contact/prefill-from-search-params";
 import { MemoryRateLimiter } from "../src/lib/security/rate-limit";
 import {
     checkFormTiming,
@@ -645,4 +647,70 @@ test("mail settings pasted with quotes or spaces are cleaned, so the sender addr
     } finally {
         process.env = saved;
     }
+});
+
+test("every original subject is kept and the two new ones are added before Other enquiry", () => {
+    const subject = fields.find((field) => field.name === "subject")!;
+    const options = subject.options!.map((option) => [option.value, option.label]);
+    assert.deepEqual(options.slice(0, 6), [
+        ["general", "General enquiry"],
+        ["classes", "Classes & timetable"],
+        ["membership", "Membership"],
+        ["private-lessons", "Private lessons & experiences"],
+        ["venue-hire", "Venue hire"],
+        ["events", "Events"],
+    ]);
+    assert.deepEqual(options.slice(6), [
+        ["teaching-opportunities", "Teaching opportunities"],
+        ["partnerships-collaborations", "Partnerships & collaborations"],
+        ["other", "Other enquiry"],
+    ]);
+});
+
+test("Teaching opportunities and Partnerships & collaborations are accepted by the server and named in the email, sent once to the same inbox through the mock", async () => {
+    for (const [value, label] of [["teaching-opportunities", "Teaching opportunities"], ["partnerships-collaborations", "Partnerships & collaborations"]]) {
+        const { deps: d, sent } = deps();
+        assert.equal(validateContact(fields, valid({ subject: value })).errors.subject, undefined, value);
+        const result = await handleContact(d, {
+            body: valid({ subject: value, message: "I teach contemporary and would like to join. Profile: https://example.com/me" }),
+            ip: "203.0.113.40",
+        });
+        assert.equal(result.status, 200, value);
+        assert.equal(sent.length, 1);
+        assert.equal(sent[0].to, "inbox@example.test");
+        assert.ok(sent[0].subject.includes(`${label} from Test Person`), sent[0].subject);
+        assert.ok(sent[0].text.includes(`Subject: ${label}`), sent[0].text);
+        assert.ok(sent[0].text.includes("https://example.com/me"), "the portfolio link reaches the email");
+        assert.equal(sent[0].replyTo, "person@example.com");
+    }
+});
+
+test("an unknown subject is still refused, and the new subjects keep every existing check", async () => {
+    const { deps: d, sent } = deps();
+    const bad = await handleContact(d, { body: valid({ subject: "teaching" }), ip: "203.0.113.41" });
+    assert.equal(bad.status, 400);
+    const fast = await handleContact(deps().deps, { body: valid({ subject: "teaching-opportunities", t: NOW }), ip: "203.0.113.42" });
+    assert.equal(fast.status, 403);
+    const bot = await handleContact(deps().deps, { body: valid({ subject: "partnerships-collaborations", hp: "x" }), ip: "203.0.113.43" });
+    assert.equal(bot.status, 403);
+    const noMessage = validateContact(fields, valid({ subject: "teaching-opportunities", message: "" }));
+    assert.ok(noMessage.errors.message);
+    assert.equal(sent.length, 0);
+});
+
+test("teaching guidance asks for background, classes, availability and a link, and the form takes no attachments", () => {
+    const message = fields.find((field) => field.name === "message")!;
+    const text = message.guidance?.find((item) => item.value === "teaching-opportunities")?.text ?? "";
+    for (const word of [/teaching background/, /classes you would like to teach/, /available/, /link to your portfolio or professional profile/, /cannot take attachments/]) assert.match(text, word);
+    assert.equal(message.guidance?.length, 1);
+    assert.doesNotMatch(text, /[–—]/, "no en or em dashes");
+    const form = readFileSync("src/components/ui/ContactForm.tsx", "utf8");
+    assert.doesNotMatch(form, /type="file"|\.append\(|upload/i, "no attachment handling");
+    assert.match(form, /guidance/);
+    for (const field of fields) assert.notEqual(field.type, "file" as never);
+});
+
+test("links such as /contact?subject=Teaching%20Opportunities preselect the new subject", () => {
+    assert.equal(contactPrefillFromSearchParams({ subject: "Teaching Opportunities" }).defaultSubject, "teaching-opportunities");
+    assert.equal(contactPrefillFromSearchParams({ subject: "partnerships-collaborations" }).defaultSubject, "partnerships-collaborations");
 });

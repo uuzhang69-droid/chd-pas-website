@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { test } from "node:test";
 import schedule from "../public/schedule.json";
 import { siteContent } from "../src/content/site";
@@ -150,4 +150,88 @@ test("no divider line sits between a class introduction and its formats heading;
     assert.ok(!/border-t/.test(categories.slice(0, categories.indexOf("<ul"))), "no line above the formats heading");
     assert.match(categories, /<ul className="[^"]*divide-y divide-taupe\/40 border-y border-taupe\/40">/, "separators between the individual sessions are kept");
     assert.equal(styles.filter((style) => style.formats.length > 1).map((style) => style.slug).sort().join(","), "chinese-dance,tango,yoga");
+});
+
+test("every existing instructor is kept, and Debbie is added to Yoga as a second instructor", () => {
+    const names = Object.fromEntries(styles.map((style) => [style.slug, style.instructor.name]));
+    assert.deepEqual(names, {
+        contemporary: "Christina Lai & Yvonne Wang",
+        "chinese-dance": "RCDance Lisa Lin", // RCDance stays in her displayed name: a requirement of the partner organisation
+        tango: "Rene Hellemons",
+        yoga: "Kasen Zhao",
+        "tai-chi": "Xintian Zhao",
+    });
+    // Existing photographs are untouched, and every biography keeps its own surname and affiliation.
+    assert.deepEqual(Object.fromEntries(styles.map((style) => [style.slug, style.instructor.image.src])), {
+        contemporary: "/images/faculty/Christina-Lai-Yvonne-Wang.jpeg",
+        "chinese-dance": "/images/faculty/RCDance-Lisa.jpeg",
+        tango: "/images/faculty/Rene.jpeg",
+        yoga: "/images/faculty/Kasen.jpeg",
+        "tai-chi": "/images/faculty/coming.svg",
+    });
+    const chinese = styles.find((style) => style.slug === "chinese-dance")!;
+    assert.ok(chinese.instructor.bio.startsWith("Lisa Lin from RCDance is a classically trained dance artist"), "Lisa's biography and her RCDance affiliation are kept");
+    assert.match(chinese.instructor.image.alt, /RCDance/);
+    assert.ok(chinese.instructor.name.startsWith("RCDance "), "RCDance is in the name shown beneath the photograph");
+    const tango = styles.find((style) => style.slug === "tango")!;
+    assert.ok(tango.instructor.moreBio?.join(" ").includes("with his dance partner Hiba Faisal."), "Hiba is named in full");
+    assert.ok(!/Hiba(?! Faisal)/.test(JSON.stringify(styles)), "no bare Hiba is left");
+    assert.equal(styles.flatMap((style) => [style.instructor, ...(style.additionalInstructors ?? [])]).filter((person) => /Hiba/.test(person.name)).length, 0, "Hiba is not added as an instructor card");
+    assert.ok(!JSON.stringify(styles).includes("Lisha"), "the school uses the name Lisa, never Lisha");
+    for (const style of styles) assert.ok(style.instructor.name.trim().split(/\s+/).length >= 2, `${style.slug}: a surname is shown`);
+    const yoga = styles.find((style) => style.slug === "yoga")!;
+    assert.ok(yoga.instructor.bio.startsWith("Kasen Zhao is the founder of Sen Yoga"), "Kasen's biography is untouched");
+    assert.equal(yoga.instructor.image.src, "/images/faculty/Kasen.jpeg");
+    assert.equal(yoga.additionalInstructors?.length, 1);
+    const debbie = yoga.additionalInstructors![0];
+    assert.equal(debbie.name, "Debbie Bhowmik");
+    assert.equal(debbie.role, "Gentle Flow Yoga Instructor");
+    assert.ok(debbie.bio.startsWith("Debbie Bhowmik is a London-based yoga teacher and founder of The Joy of Yoga."));
+    assert.match(debbie.bio, /2005/);
+    assert.match(debbie.bio, /Rishikesh, India, in 2015/);
+    assert.equal(debbie.moreBio?.length, 2);
+    assert.match(debbie.moreBio!.join(" "), /Wednesday evening Gentle Flow Yoga/);
+    assert.doesNotMatch([debbie.bio, ...(debbie.moreBio ?? [])].join(" "), /RYT/, "RYT-500 rests on the poster alone and is not claimed");
+    assert.equal(debbie.image.src, "/images/faculty/debbie-bhowmik-gentle-flow-yoga.jpg");
+    assert.ok(debbie.image.alt.includes("Debbie Bhowmik"));
+    assert.ok(existsSync(`public${debbie.image.src}`), "the photograph is in the public folder");
+    assert.equal(yoga.instructorHeading, "Meet your instructors");
+    for (const style of styles.filter((entry) => entry.slug !== "yoga")) {
+        assert.equal(style.additionalInstructors, undefined, `${style.slug} has one instructor`);
+    }
+    for (const text of [debbie.bio, debbie.role ?? "", ...(debbie.moreBio ?? [])]) assert.doesNotMatch(text, /[–—]/, "no en or em dashes in the copy");
+});
+
+test("Yoga keeps its three formats; only the confirmed assignment names a teacher", () => {
+    const yoga = styles.find((style) => style.slug === "yoga")!;
+    assert.deepEqual(yoga.formats.map((format) => format.name), ["Gentle Flow", "Vinyasa Flow", "Inside Flow"]);
+    assert.deepEqual(yoga.formats.map((format) => format.taughtBy ?? null), ["Wednesday evenings with Debbie Bhowmik", null, null]);
+    for (const style of styles.filter((entry) => entry.slug !== "yoga")) {
+        assert.ok(style.formats.every((format) => !format.taughtBy), `${style.slug}: no invented assignment`);
+    }
+    const page = readFileSync("src/app/classes/[slug]/page.tsx", "utf8");
+    assert.ok(page.indexOf('id="classes"') < page.indexOf('id="instructor"') && page.indexOf('id="instructor"') < page.indexOf('id="next"'), "hero, introduction, class types, instructors, then the timetable call to action");
+});
+
+test("searching for Debbie finds the Yoga page", () => {
+    assert.ok(searchSite("Debbie").results.some((result) => result.doc.url === "/classes/yoga"));
+});
+
+test("instructors are shown by name and biography only; the role data stays in the content; headings follow the number of people", () => {
+    const page = readFileSync("src/app/classes/[slug]/page.tsx", "utf8");
+    assert.doesNotMatch(page, /person\.role|instructor\.role/, "no generic role subtitle under an instructor's name");
+    const roles = Object.fromEntries(styles.map((style) => [style.slug, style.instructor.role]));
+    assert.deepEqual(roles, {
+        contemporary: "Contemporary dance teacher",
+        "chinese-dance": "Chinese dance teacher",
+        tango: "Tango teacher",
+        yoga: "Yoga teacher",
+        "tai-chi": "Tai Chi teacher",
+    });
+    assert.equal(styles.find((style) => style.slug === "yoga")!.additionalInstructors![0].role, "Gentle Flow Yoga Instructor");
+    for (const style of styles) {
+        const people = 1 + (style.additionalInstructors?.length ?? 0) + (style.instructor.name.includes("&") ? 1 : 0);
+        assert.equal(style.instructorHeading, people > 1 ? "Meet your instructors" : "Meet your instructor", style.slug);
+        assert.ok(style.instructor.bio.length > 40 && style.instructor.image.src, `${style.slug}: biography and photograph kept`);
+    }
 });
