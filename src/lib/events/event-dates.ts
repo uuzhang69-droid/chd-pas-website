@@ -58,11 +58,11 @@ function slotFromSession(session: EventSession): Slot | undefined {
     };
 }
 
-/** "15:00–18:00" or "19:30" from a single-date event's `time` text. */
+/** "15:00 to 18:00" (a dash is also accepted) or "19:30" from a single-date event's `time` text. */
 function slotFromEventTime(event: EventCard): Slot | undefined {
     if (!event.dateIso || !DATE_PATTERN.test(event.dateIso)) return undefined;
     const match = event.time?.match(
-        /^(\d{2}:\d{2})(?:\s*[–-]\s*(\d{2}:\d{2}))?$/,
+        /^(\d{2}:\d{2})(?:\s*(?:[–-]|to)\s*(\d{2}:\d{2}))?$/,
     );
     return {
         date: event.dateIso,

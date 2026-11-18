@@ -22,8 +22,8 @@ export function EventProgramme({
       return newestFirst ? -order : order;
     });
   if (!visible.length) return null;
-  return <section className="mt-10 space-y-6" aria-labelledby={id}>
-    <h2 id={id} className="text-h3 text-charcoal">{heading ?? labels.programme}</h2>
+  return <section className="mt-14 space-y-7" aria-labelledby={id}>
+    <h2 id={id} className="text-h2 text-charcoal">{heading ?? labels.programme}</h2>
     {visible.map((session) => {
       const venue = venueName(session.venueId);
       const details = [
@@ -34,17 +34,17 @@ export function EventProgramme({
         [labels.hostedAt, session.relationship === "hosted" ? venue : undefined],
         [labels.promotedBy, session.promotedBy],
       ].filter(([, value]) => Boolean(value));
-      return <article key={session.id} id={`session-${session.id}`} className="scroll-mt-28 rounded-sm border border-taupe/30 p-6">
-        <p className="text-overline text-rose">
+      return <article key={session.id} id={`session-${session.id}`} className="scroll-mt-28 rounded-sm border border-taupe/40 bg-white/50 p-6 md:p-9">
+        <p className="text-overline text-burgundy">
           {session.date && <time dateTime={session.date}>{new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: TIMETABLE_TIME_ZONE }).format(new Date(`${session.date}T12:00:00Z`))}</time>}
-          {session.date ? " · " : ""}{session.start ? `${session.start}${session.end ? `–${session.end}` : ` · ${labels.endPending}`}` : labels.timePending}
+          {session.date ? " · " : ""}{session.allDay ? labels.allDay : session.start ? `${session.start}${session.end ? ` to ${session.end}` : ` · ${labels.endPending}`}` : labels.timePending}
         </p>
-        <h3 className="text-h3 mt-2 text-charcoal">{session.title}</h3>
-        {session.description?.map((paragraph, index) => <p key={index} className="text-body mt-4 text-charcoal/75">{paragraph}</p>)}
-        {session.bookingUrl && <Link className="mt-4 inline-block text-rose underline" href={session.bookingUrl}>{labels.booking}</Link>}
-        <dl className="mt-6 grid gap-4 border-t border-taupe/30 pt-4 sm:grid-cols-2">
+        <h3 className="text-h2 mt-3 text-charcoal">{session.title}</h3>
+        {session.description?.map((paragraph, index) => <p key={index} className="text-body-lg mt-5 text-charcoal/85">{paragraph}</p>)}
+        {session.bookingUrl && <Link className="mt-5 inline-block text-burgundy underline underline-offset-4" href={session.bookingUrl}>{labels.booking}</Link>}
+        <dl className="mt-7 grid gap-5 border-t border-taupe/40 pt-5 sm:grid-cols-2">
           {details.map(([label, value]) => <div key={label}>
-            <dt className="text-overline text-rose">{label}</dt><dd className="text-body mt-1 text-charcoal/75">{value}</dd>
+            <dt className="text-overline text-burgundy">{label}</dt><dd className="text-body mt-1 text-charcoal/85">{value}</dd>
           </div>)}
         </dl>
       </article>;
