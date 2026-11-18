@@ -445,7 +445,7 @@
 
 @media (max-width: 700px) {
   .membership-page {
-    padding: 50px 5%;
+    padding: 50px 0; /* side margins come from the shared Container; a second percentage would double them */
   }
   .membership-page .membership-head {
     display: block;

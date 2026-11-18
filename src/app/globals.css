@@ -113,6 +113,8 @@
    There is no general "reading width" class: text is as wide as its section. */
 :root {
   --page-width: 72rem;
+  /* Data-dense blocks only (timetable calendar, membership cards): about the width they had before the shared container. */
+  --page-width-wide: 84rem;
 }
 
 /* Tighter vertical padding for stacked, divided sections inside one container. */

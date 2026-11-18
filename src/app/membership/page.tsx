@@ -17,7 +17,7 @@ export default function MembershipPage() {
   return (
     <PageShell>
       <main className="membership-page">
-        <Container>
+        <Container wide>
           <h1 className="sr-only">{page.hero.title}</h1>
           <MembershipSection />
         </Container>

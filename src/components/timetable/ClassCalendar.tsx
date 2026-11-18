@@ -376,7 +376,7 @@ export function ClassCalendar({
 
     return (
         <section className="class-calendar-section" ref={sectionRef}>
-            <Container>
+            <Container wide>
             <div className="calendar-panel">
                 <div className="calendar-toolbar">
                     <div>

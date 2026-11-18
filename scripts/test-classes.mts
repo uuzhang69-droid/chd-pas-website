@@ -141,3 +141,12 @@ test("single-format pages retain searchable class data and multi-format pages re
     assert.ok(chinese.formats[0].image?.src.endsWith("chinese-classical-dance-class.jpg"));
     assert.ok(chinese.formats[1].image?.src.endsWith("chinese-dance-soft-training.jpg"));
 });
+
+test("a class with several formats is divided from its introduction by one subtle line; a class with one format has no divider", () => {
+    const page = readFileSync("src/app/classes/[slug]/page.tsx", "utf8");
+    const intro = page.slice(page.indexOf('id="about"'), page.indexOf("style.formats.length > 1"));
+    const categories = page.slice(page.indexOf("style.formats.length > 1"), page.indexOf('id="instructor"'));
+    assert.ok(!/border-t/.test(intro), "no divider inside the introduction, between ordinary paragraphs");
+    assert.match(categories, /<Container>\s*<div className="border-t border-taupe\/40 section-pt">/, "the divider sits in the shared container, in the design system border colour, with space below it");
+    assert.equal(styles.filter((style) => style.formats.length > 1).map((style) => style.slug).sort().join(","), "chinese-dance,tango,yoga");
+});
