@@ -181,7 +181,7 @@ export function ClassCalendar({
                                     {e.allDay
                                         ? "All day"
                                         : e.start
-                                          ? `${e.start}${e.end ? `–${e.end}` : " · End time to be confirmed"}`
+                                          ? `${e.start}${e.end ? `–${e.end}` : e.endUnconfirmed ? "" : " · End time to be confirmed"}`
                                           : "Time to be confirmed"}
                                 </span>
                                 <strong>{e.name}</strong>
@@ -286,7 +286,7 @@ export function ClassCalendar({
                                     {e.allDay
                                         ? "All day"
                                         : e.start
-                                          ? `${e.start}${e.end ? `–${e.end}` : " · End time to be confirmed"}`
+                                          ? `${e.start}${e.end ? `–${e.end}` : e.endUnconfirmed ? "" : " · End time to be confirmed"}`
                                           : "Time to be confirmed"}
                                 </span>
                                 <strong>{officialTitle}</strong>
@@ -353,7 +353,7 @@ export function ClassCalendar({
                                 data-session-date={e.date}
                                 data-session-start={e.start}
                                 data-session-end={e.end}
-                                aria-label={`${e.name}, ${name} ${dayNum} ${month}, ${e.start} to ${e.end}. View upcoming booking options.`}
+                                aria-label={`${e.name}, ${name} ${dayNum} ${month}, ${e.start}${e.end ? ` to ${e.end}` : ""}. View upcoming booking options.`}
                             >
                                 {contents}
                             </button>

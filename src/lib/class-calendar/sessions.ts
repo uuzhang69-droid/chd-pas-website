@@ -74,6 +74,8 @@ export type CalendarSession = {
     occupancyStart?: string;
     occupancyEnd?: string;
     allDay?: boolean;
+    /** Start is confirmed, duration is not: show the start only. */
+    endUnconfirmed?: boolean;
 };
 export type ActivityFilter = "all" | ActivityType | "venue-booking";
 
@@ -115,6 +117,12 @@ export function schoolEventSessions(
             validTime(session.start) &&
             validTime(session.end) &&
             session.end > session.start;
+        /* An explicit opt-in: a confirmed start with no confirmed end is listed by its start time only. */
+        const startOnly =
+            session.endUnconfirmed === true &&
+            validTime(session.start) &&
+            !session.end &&
+            !session.private;
         if (
             !isPublicEvent(session.eventSlug) ||
             session.published !== true ||
@@ -125,7 +133,7 @@ export function schoolEventSessions(
                 (session.private ||
                     session.calendarVisible !== true ||
                     !resolveVenueId(session.venueId))) ||
-            (!completeTime && session.allDay !== true)
+            (!completeTime && !startOnly && session.allDay !== true)
         )
             continue;
         unique.set(session.id, {
@@ -135,6 +143,7 @@ export function schoolEventSessions(
             start: session.start ?? "",
             end: session.end ?? "",
             allDay: session.allDay === true,
+            endUnconfirmed: startOnly || undefined,
             location: venueName(session.venueId) ?? "Venue to be confirmed",
             name: session.private ? "Private booking" : session.title,
             style: session.private ? "" : (session.style ?? ""),

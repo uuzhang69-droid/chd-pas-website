@@ -43,7 +43,7 @@ test("full export keeps independent event objects as module references", () => {
     try {
         execFileSync(process.execPath, [resolve("node_modules/tsx/dist/cli.mjs"), "scripts/extract-copy.mts", "--output-dir", output]);
         const generated = read(join(output, "src/content/site.structure.ts"));
-        for (const name of ["anActorsWorkWithAnObjectEvent", "withinOneRoomEvent", "lunchtimeConcertSeriesEvent"]) {
+        for (const name of ["anActorsWorkWithAnObjectEvent", "withinOneRoomEvent", "maggiesCatsEvent", "lunchtimeConcertSeriesEvent"]) {
             assert.match(generated, new RegExp(`import \\{ ${name} \\}`));
             assert(generated.slice(generated.indexOf("export const")).includes(name));
         }

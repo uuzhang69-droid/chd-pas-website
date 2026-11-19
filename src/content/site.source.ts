@@ -6,6 +6,9 @@ import {
     withinOneRoomEvent,
 } from "./events/within-one-room-stillness-in-motion";
 import {
+    maggiesCatsEvent,
+} from "./events/maggies-cats-christmas-family-show";
+import {
     lunchtimeConcertSeriesEvent,
 } from "./events/lunchtime-concert-series";
 import type {
@@ -997,6 +1000,7 @@ export const siteSource = {
                 empty: "Nothing in this category yet. Check back soon.",
             },
             items: [
+                maggiesCatsEvent,
                 withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
@@ -1054,7 +1058,7 @@ export const siteSource = {
                         "For booking enquiries and further information, please contact info@countyhalldancecentre.com.",
                     ],
                     image: {
-                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
+                        src: "/images/events/2026/halloween/halloween-cover.jpg",
                         alt: "Halloween pumpkins and decorations",
                     },
                     inlineGalleries: [
@@ -1062,11 +1066,11 @@ export const siteSource = {
                             beforeHeading: "Programme",
                             images: [
                                 {
-                                    src: "/images/events/2026-halloween/halloween-poster1.jpeg",
+                                    src: "/images/events/2026/halloween/halloween-poster-1.jpeg",
                                     alt: "Halloween Costume Show and Pumpkin Workshop poster",
                                 },
                                 {
-                                    src: "/images/events/2026-halloween/halloween-poster2.jpeg",
+                                    src: "/images/events/2026/halloween/halloween-poster-2.jpeg",
                                     alt: "Halloween Costume Play and Pumpkin Carving Workshop poster",
                                 },
                             ],
@@ -1137,18 +1141,18 @@ export const siteSource = {
                             beforeHeading: "Saturday, 3 October 2026",
                             images: [
                                 {
-                                    src: "/images/events/memory-of-china-schedule-saturday.png",
+                                    src: "/images/events/2026/memory-of-china/memory-of-china-schedule-saturday.png",
                                     alt: "Memory of China festival schedule for Saturday 3 October 2026",
                                 },
                                 {
-                                    src: "/images/events/memory-of-china-schedule-sunday.png",
+                                    src: "/images/events/2026/memory-of-china/memory-of-china-schedule-sunday.png",
                                     alt: "Memory of China festival schedule for Sunday 4 October 2026",
                                 },
                             ],
                         },
                     ],
                     image: {
-                        src: "/images/events/memory-of-china/gallery-09.jpg",
+                        src: "/images/events/2026/memory-of-china/gallery-09.jpg",
                         alt: "Festival performers and guests with Chinese flags on Members' Terrace, Big Ben behind",
                     },
                     bookNow: {
@@ -1216,52 +1220,52 @@ export const siteSource = {
                         "The Four Seasons Festival is led by County Hall Arts' Music Director Emma Arizza and Resident Artist Yasemin Gava.",
                     ],
                     image: {
-                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                        src: "/images/events/2026/four-seasons-festival/gallery-01.jpg",
                         alt: "Concert in the County Hall atrium during the Four Seasons Festival",
                     },
                     gallery: [
                         {
-                            src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-01.jpg",
                             alt: "Concert in the County Hall atrium during the Four Seasons Festival",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-02.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-02.jpg",
                             alt: "Saxophone and accordion performance beside colourful sculptures at County Hall",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-03.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-03.jpeg",
                             alt: "Musicians and dancers with programme booklets at the Four Seasons Festival",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-04.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-04.jpg",
                             alt: "Guided tour near the South Bank Lion with Big Ben in the background",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-05.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-05.jpg",
                             alt: "Visitors adding paper leaves to a tree mural at the Four Seasons Festival",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-06.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-06.jpeg",
                             alt: "Outdoor dance and flute performance for Under the Same Sun at County Hall",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-07.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-07.jpeg",
                             alt: "Storytelling and craft workshop with author Vivian French at the festival",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-08.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-08.jpg",
                             alt: "Flute and harp performance in the County Hall atrium",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-09.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-09.jpeg",
                             alt: "Homemade cakes and treats served during the Four Seasons Festival",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-10.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-10.jpeg",
                             alt: "Short film screening as part of Seeds of Change at County Hall",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-11.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-11.jpg",
                             alt: "Flute, piano and cello trio performing at the Four Seasons Festival",
                         },
                     ],
@@ -1308,7 +1312,7 @@ export const siteSource = {
                         "Should you have any questions, please contact us at info@countyhalldancecentre.com.",
                     ],
                     image: {
-                        src: "/images/events/dance-meets-arts.jpeg",
+                        src: "/images/events/2026/dance-meets-arts/dance-meets-arts-cover.jpeg",
                         alt: "Dance Meets Arts at County Hall, celebrating dance, music and visual arts",
                     },
                     inlineGalleries: [
@@ -1316,7 +1320,7 @@ export const siteSource = {
                             beforeHeading: "Programme",
                             variant: "autoplay",
                             images: Array.from({ length: 16 }, (_, index) => ({
-                                src: `/images/events/dance-meets-arts/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
+                                src: `/images/events/2026/dance-meets-arts/gallery-${String(index + 1).padStart(2, "0")}.jpg`,
                                 alt: "Dance Meets Arts performance and audience on the County Hall Members' Terrace",
                                 width: 1024,
                                 height: 682,
@@ -1349,28 +1353,28 @@ export const siteSource = {
                         "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
                     ],
                     image: {
-                        src: "/images/events/opening-day.jpg",
+                        src: "/images/events/2026/opening-day/opening-day-cover.jpg",
                         alt: "County Hall Dance Centre Opening Day",
                     },
                     gallery: [
                         {
-                            src: "/images/events/opening-day/ribbon-cutting.jpg",
+                            src: "/images/events/2026/opening-day/ribbon-cutting.jpg",
                             alt: "Ribbon-cutting at County Hall Dance Centre Opening Day",
                         },
                         {
-                            src: "/images/events/opening-day/celebration-table.jpg",
+                            src: "/images/events/2026/opening-day/celebration-table.jpg",
                             alt: "Celebration table at the Opening Day",
                         },
                         {
-                            src: "/images/events/opening-day/dressing-room.jpg",
+                            src: "/images/events/2026/opening-day/dressing-room.jpg",
                             alt: "Dressing area and costume rails at Opening Day",
                         },
                         {
-                            src: "/images/events/opening-day/bouquet.jpg",
+                            src: "/images/events/2026/opening-day/bouquet.jpg",
                             alt: "Flowers marking County Hall Dance Centre Opening Day",
                         },
                         {
-                            src: "/images/events/opening-day/crest.jpg",
+                            src: "/images/events/2026/opening-day/crest.jpg",
                             alt: "County Hall Dance Centre crest on Opening Day",
                         },
                     ],

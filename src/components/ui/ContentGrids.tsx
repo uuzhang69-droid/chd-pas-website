@@ -112,12 +112,12 @@ export function CourseCardGrid({ items }: { items: CourseSummary[] }) {
 
 export function EventListingGrid({ items }: { items: EventCard[] }) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
       {sortEventsByDate(items).map((event) => (
         <EventSummaryCard
           key={event.id}
           event={event}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
           headingLevel="h2"
         />
       ))}
