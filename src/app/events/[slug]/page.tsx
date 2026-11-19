@@ -24,6 +24,7 @@ import { isEventEnded } from "@/lib/events/event-dates";
 import { withImageSizes } from "@/lib/events/image-dimensions";
 import { latestSession, longDate, sessionTimeRange } from "@/lib/events/series";
 import { isPublicEvent } from "@/content/event-visibility";
+import { ChristmasShowPage } from "@/components/events/ChristmasShowPage";
 
 /* Event order and Past Event labels depend on the date, so these pages refresh every 15 minutes. All three use the same value so they never disagree for long. */
 export const revalidate = 900;
@@ -54,8 +55,8 @@ export async function generateMetadata({
     const event = getEventBySlug(slug);
     if (!event) return {};
     return pageMetadata({
-        title: event.title,
-        description: event.excerpt,
+        title: event.seo ? { absolute: event.seo.title } : event.title,
+        description: event.seo?.description ?? event.excerpt,
         path: `/events/${slug}`,
         image: event.image,
     });
@@ -84,6 +85,24 @@ export default async function EventDetailPage({ params }: PageProps) {
 
     const event = getEventBySlug(slug);
     if (!event) notFound();
+
+    if (event.showPage) {
+        return (
+            <PageShell>
+                <JsonLd data={eventJsonLd(event)} />
+                <JsonLd
+                    data={breadcrumbJsonLd([
+                        {
+                            name: siteContent.pages.events.meta.title,
+                            path: "/events",
+                        },
+                        { name: event.title, path: `/events/${slug}` },
+                    ])}
+                />
+                <ChristmasShowPage event={event} show={event.showPage} />
+            </PageShell>
+        );
+    }
 
     const { detailLabels } = siteContent.pages.events;
 

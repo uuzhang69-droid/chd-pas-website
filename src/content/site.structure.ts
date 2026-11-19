@@ -7,6 +7,9 @@ import {
     withinOneRoomEvent,
 } from "./events/within-one-room-stillness-in-motion";
 import {
+    maggiesCatsEvent,
+} from "./events/maggies-cats-christmas-family-show";
+import {
     lunchtimeConcertSeriesEvent,
 } from "./events/lunchtime-concert-series";
 
@@ -1016,6 +1019,7 @@ export const siteStructure = {
                 empty: "Nothing in this category yet — check back soon.",
             },
             items: [
+                maggiesCatsEvent,
                 withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
@@ -1068,7 +1072,7 @@ export const siteStructure = {
                         "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.description.19",
                     ],
                     image: {
-                        src: "/images/events/2026-halloween/pexels-ivan-s-5429022.jpg",
+                        src: "/images/events/2026/halloween/halloween-cover.jpg",
                         alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.image.alt",
                     },
                     inlineGalleries: [
@@ -1076,11 +1080,11 @@ export const siteStructure = {
                             beforeHeading: "Programme",
                             images: [
                                 {
-                                    src: "/images/events/2026-halloween/halloween-poster1.jpeg",
+                                    src: "/images/events/2026/halloween/halloween-poster-1.jpeg",
                                     alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.0.alt",
                                 },
                                 {
-                                    src: "/images/events/2026-halloween/halloween-poster2.jpeg",
+                                    src: "/images/events/2026/halloween/halloween-poster-2.jpeg",
                                     alt: "@@COPY:pages.events.items.halloween_pumpkin_carving_workshop.inlinegalleries.0.images.1.alt",
                                 },
                             ],
@@ -1184,18 +1188,18 @@ export const siteStructure = {
                             beforeHeading: "Saturday, 3 October 2026",
                             images: [
                                 {
-                                    src: "/images/events/memory-of-china-schedule-saturday.png",
+                                    src: "/images/events/2026/memory-of-china/memory-of-china-schedule-saturday.png",
                                     alt: "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.0.alt",
                                 },
                                 {
-                                    src: "/images/events/memory-of-china-schedule-sunday.png",
+                                    src: "/images/events/2026/memory-of-china/memory-of-china-schedule-sunday.png",
                                     alt: "@@COPY:pages.events.items.memory_of_china.inlinegalleries.0.images.1.alt",
                                 },
                             ],
                         },
                     ],
                     image: {
-                        src: "/images/events/memory-of-china/gallery-09.jpg",
+                        src: "/images/events/2026/memory-of-china/gallery-09.jpg",
                         alt: "@@COPY:pages.events.items.memory_of_china.image.alt",
                     },
                     bookNow: {
@@ -1391,52 +1395,52 @@ export const siteStructure = {
                         "@@COPY:pages.events.items.four_seasons_festival.description.14",
                     ],
                     image: {
-                        src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                        src: "/images/events/2026/four-seasons-festival/gallery-01.jpg",
                         alt: "@@COPY:pages.events.items.four_seasons_festival.image.alt",
                     },
                     gallery: [
                         {
-                            src: "/images/events/four-seasons-festival/gallery-01.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-01.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.0.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-02.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-02.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.1.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-03.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-03.jpeg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.2.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-04.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-04.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.3.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-05.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-05.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.4.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-06.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-06.jpeg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.5.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-07.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-07.jpeg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.6.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-08.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-08.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.7.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-09.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-09.jpeg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.8.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-10.jpeg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-10.jpeg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.9.alt",
                         },
                         {
-                            src: "/images/events/four-seasons-festival/gallery-11.jpg",
+                            src: "/images/events/2026/four-seasons-festival/gallery-11.jpg",
                             alt: "@@COPY:pages.events.items.four_seasons_festival.gallery.10.alt",
                         },
                     ],
@@ -1503,7 +1507,7 @@ export const siteStructure = {
                         "@@COPY:pages.events.items.dance_meets_arts.description.9",
                     ],
                     image: {
-                        src: "/images/events/dance-meets-arts.jpeg",
+                        src: "/images/events/2026/dance-meets-arts/dance-meets-arts-cover.jpeg",
                         alt: "@@COPY:pages.events.items.dance_meets_arts.image.alt",
                     },
                     inlineGalleries: [
@@ -1512,97 +1516,97 @@ export const siteStructure = {
                             variant: "autoplay",
                             images: [
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-01.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-01.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.0.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-02.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-02.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.1.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-03.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-03.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.2.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-04.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-04.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.3.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-05.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-05.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.4.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-06.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-06.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.5.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-07.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-07.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.6.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-08.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-08.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.7.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-09.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-09.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.8.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-10.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-10.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.9.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-11.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-11.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.10.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-12.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-12.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.11.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-13.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-13.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.12.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-14.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-14.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.13.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-15.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-15.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.14.alt",
                                     width: 1024,
                                     height: 682,
                                 },
                                 {
-                                    src: "/images/events/dance-meets-arts/gallery-16.jpg",
+                                    src: "/images/events/2026/dance-meets-arts/gallery-16.jpg",
                                     alt: "@@COPY:pages.events.items.dance_meets_arts.inlinegalleries.0.images.15.alt",
                                     width: 1024,
                                     height: 682,
@@ -1651,28 +1655,28 @@ export const siteStructure = {
                         "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.1",
                     ],
                     image: {
-                        src: "/images/events/opening-day.jpg",
+                        src: "/images/events/2026/opening-day/opening-day-cover.jpg",
                         alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.image.alt",
                     },
                     gallery: [
                         {
-                            src: "/images/events/opening-day/ribbon-cutting.jpg",
+                            src: "/images/events/2026/opening-day/ribbon-cutting.jpg",
                             alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt",
                         },
                         {
-                            src: "/images/events/opening-day/celebration-table.jpg",
+                            src: "/images/events/2026/opening-day/celebration-table.jpg",
                             alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt",
                         },
                         {
-                            src: "/images/events/opening-day/dressing-room.jpg",
+                            src: "/images/events/2026/opening-day/dressing-room.jpg",
                             alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.2.alt",
                         },
                         {
-                            src: "/images/events/opening-day/bouquet.jpg",
+                            src: "/images/events/2026/opening-day/bouquet.jpg",
                             alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.3.alt",
                         },
                         {
-                            src: "/images/events/opening-day/crest.jpg",
+                            src: "/images/events/2026/opening-day/crest.jpg",
                             alt: "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.gallery.4.alt",
                         },
                     ],

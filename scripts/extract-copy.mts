@@ -12,6 +12,7 @@ import { join } from "node:path";
 import { siteSource } from "../src/content/site.source";
 import { anActorsWorkWithAnObjectEvent } from "../src/content/events/an-actors-work-with-an-object";
 import { withinOneRoomEvent } from "../src/content/events/within-one-room-stillness-in-motion";
+import { maggiesCatsEvent } from "../src/content/events/maggies-cats-christmas-family-show";
 import { lunchtimeConcertSeriesEvent } from "../src/content/events/lunchtime-concert-series";
 import { replaceClassCopy, replaceClassCsv, replaceContentPath } from "./lib/scoped-content-export.mts";
 
@@ -21,6 +22,7 @@ if (outputArg >= 0 && !process.argv[outputArg + 1]) throw new Error("--output-di
 const eventModules = [
     { value: anActorsWorkWithAnObjectEvent, name: "anActorsWorkWithAnObjectEvent", path: "./events/an-actors-work-with-an-object" },
     { value: withinOneRoomEvent, name: "withinOneRoomEvent", path: "./events/within-one-room-stillness-in-motion" },
+    { value: maggiesCatsEvent, name: "maggiesCatsEvent", path: "./events/maggies-cats-christmas-family-show" },
     { value: lunchtimeConcertSeriesEvent, name: "lunchtimeConcertSeriesEvent", path: "./events/lunchtime-concert-series" },
 ];
 

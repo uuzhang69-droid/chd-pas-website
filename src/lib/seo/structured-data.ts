@@ -131,6 +131,45 @@ export function eventJsonLd(event: EventCard): JsonObject | undefined {
         };
     }
 
+    /* A run of separate performances: one EventSeries, each performance its own Event. Start times only; no end, availability or rating is invented. */
+    if (event.isPerformanceRun) {
+        const offers = event.ticketOffers?.map((ticket) =>
+            compact({
+                "@type": "Offer",
+                name: ticket.name,
+                description: ticket.description,
+                price: ticket.price.toFixed(2),
+                priceCurrency: "GBP",
+                url: event.bookingUrl,
+            }),
+        );
+        const performances = [...sessionsNewestFirst(event.sessions)]
+            .reverse()
+            .map((session) => {
+                const item = sessionEvent(session, pageUrl);
+                if (!item) return undefined;
+                return {
+                    ...item,
+                    name: event.title,
+                    image,
+                    location: place(event.location),
+                    offers,
+                };
+            })
+            .filter((item): item is NonNullable<typeof item> => Boolean(item));
+        return {
+            "@context": SCHEMA,
+            ...compact({
+                "@type": "EventSeries",
+                name: event.title,
+                description: event.excerpt,
+                image,
+                url: pageUrl,
+                subEvent: performances.length > 0 ? performances : undefined,
+            }),
+        };
+    }
+
     const window = eventWindow(event);
     if (!window) return undefined;
     const startDate = window.startTime

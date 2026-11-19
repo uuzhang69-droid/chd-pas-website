@@ -11,6 +11,8 @@ export type ImageAsset = {
     alt: string;
     width?: number;
     height?: number;
+    /** CSS object-position for square crops (listing cards), e.g. "40% 50%". Defaults to the centre. */
+    position?: string;
 };
 
 export type CtaButton = {
@@ -60,6 +62,8 @@ export type EventSession = EventAttribution & {
     end?: string;
     /** Only when explicitly confirmed; unknown times are not all-day events. */
     allDay?: boolean;
+    /** Start is confirmed but the duration is not. The calendar then shows the start only and never an invented end. */
+    endUnconfirmed?: boolean;
     venueId?: string;
     spaceId?: string;
     type: ActivityType;
@@ -75,6 +79,30 @@ export type EventSession = EventAttribution & {
     setupStart?: string;
     teardownEnd?: string;
     description?: string[];
+};
+
+/** Own-layout show page. Copy is written by the organiser; paragraphs are separate strings. */
+export type ShowPageContent = {
+    headline: string;
+    intro: string[];
+    facts: { label: string; value: string }[];
+    about: { heading: string; paragraphs: string[] };
+    cats: {
+        heading: string;
+        intro: string;
+        items: { name: string; role: string; paragraphs: string[] }[];
+    };
+    schedule: { heading: string; intro: string; timesLabel: string; total: string; support: string };
+    tickets: {
+        heading: string;
+        intro: string;
+        familyNote: string;
+        group: { heading: string; paragraphs: string[]; contactLabel: string; contactHref: string };
+        button: string;
+    };
+    venue: { heading: string; paragraphs: string[]; name: string; address: string };
+    visit: { heading: string; intro: string; items: { title: string; paragraphs: string[] }[] };
+    finalCta: { heading: string; paragraphs: string[]; button: string };
 };
 
 export type EventCard = {
@@ -137,6 +165,18 @@ export type EventCard = {
         paragraphs: string[];
         image: ImageAsset;
     };
+    /** Label of the card button on the listing, when it should not say View Details. */
+    cardCtaLabel?: string;
+    /** One short sentence for listing cards. Falls back to excerpt; the detail page keeps using excerpt. */
+    cardExcerpt?: string;
+    /** Search and share text when the page needs its own wording. */
+    seo?: { title: string; description: string };
+    /** A run of separate performances (not a series and not one continuous event). Structured data lists each performance. */
+    isPerformanceRun?: boolean;
+    /** Verified ticket prices, GBP. Used for the page and structured data. */
+    ticketOffers?: { name: string; price: number; description?: string }[];
+    /** Optional show page layout with its own sections. */
+    showPage?: ShowPageContent;
     bookNow: CtaButton;
     tickets?: CtaButton[];
     descriptionCtas?: EventDescriptionCta[];

@@ -63,6 +63,15 @@
   letter-spacing: 0;
 }
 
+/* Title of a listing card: 22px in a narrow card (home grid) growing to 24px in a wider one (/events), sized from the card's own width (cqi) so one rule fits both grids. Must sit inside a container-type:inline-size element. */
+@utility text-card-title {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.25rem, 1.05rem + 2.4cqi, 1.5rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
 @utility text-h4 {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 1.125rem;
