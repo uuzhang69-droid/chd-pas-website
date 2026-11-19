@@ -2,6 +2,7 @@ import { enrichEventsContent } from "./enrich-events-content";
 import { siteStructure } from "./site.structure";
 import { resolveSiteContent } from "./resolve-site-content";
 import type { SiteSource } from "./site.source";
+import type { EventCard } from "./types";
 import { publicEvents } from "../lib/events/event-dates";
 
 /** Resolved site content — all user-facing text comes from copy.ts (via website-copy.csv). */
@@ -10,7 +11,7 @@ const resolved = enrichEventsContent(
 );
 
 /** One public collection: the home grid is a view of the /events list, not a second list. */
-const publicEventItems = publicEvents(resolved.pages.events.items);
+const publicEventItems = publicEvents<EventCard>(resolved.pages.events.items);
 
 export const siteContent = {
     ...resolved,

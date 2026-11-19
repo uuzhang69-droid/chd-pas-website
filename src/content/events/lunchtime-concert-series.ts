@@ -13,7 +13,7 @@ const date = latest?.date
     : "Monthly series";
 
 const image = {
-    src: "/images/events/lunchtime-concert-series.jpg",
+    src: "/images/events/2026/lunchtime-concert-series/lunchtime-concert-series-cover.jpg",
     alt: "County Hall Quartet lunchtime concert with cellist Meera Priyanka Raja",
 };
 

@@ -1,7 +1,36 @@
 import type { EventSession } from "./types";
 
+export const MAGGIES_CATS_SLUG = "maggies-cats-christmas-family-show";
+export const MAGGIES_CATS_DATES = [
+    "2026-12-05",
+    "2026-12-06",
+    "2026-12-12",
+    "2026-12-13",
+    "2026-12-19",
+    "2026-12-20",
+] as const;
+export const MAGGIES_CATS_TIMES = ["11:00", "13:00", "15:00"] as const;
+
+/** Eighteen separate performances. Start times are confirmed; the duration is not, so no end time is stored. */
+const maggiesCatsSessions: EventSession[] = MAGGIES_CATS_DATES.flatMap((date) =>
+    MAGGIES_CATS_TIMES.map((start) => ({
+        id: `maggies-cats-${date}-${start.replace(":", "")}`,
+        eventSlug: MAGGIES_CATS_SLUG,
+        title: "Maggie’s Cats",
+        date,
+        start,
+        endUnconfirmed: true,
+        venueId: "members-terrace",
+        type: "event" as const,
+        subtype: "performance",
+        calendarVisible: true,
+        published: true,
+    })),
+);
+
 /** Shared programme source. Unknown times and rental arrangements are deliberately omitted. */
 export const eventSessions: EventSession[] = [
+    ...maggiesCatsSessions,
     {
         id: "leaves-2026-1",
         eventSlug: "four-seasons-festival",
