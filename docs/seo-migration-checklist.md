@@ -75,7 +75,7 @@ The project is a standard Next.js 16 server project (no `output: "export"`). Con
 - [ ] **Dynamic rendering**: the home page and `/timetable` render per request (they read the server clock). They need a running server.
 - [ ] **Image optimisation**: `next/image` needs the Node server (`sharp`) and write access for its cache. Remote Airtable images are allowed in `next.config.ts`.
 - [ ] **Environment variables** to copy: Airtable keys (tester classes), `NEXT_PUBLIC_SANITY_*`, and `SEO_INDEXING=enabled` on the new host once it is live.
-- [ ] **Build**: `npm run build` downloads Google Fonts (Cormorant Garamond, Montserrat, EB Garamond). The build host needs outbound internet, or the fonts must be self-hosted.
+- [ ] **Build**: `npm run build` downloads Google Fonts (Cormorant Garamond, Montserrat). The build host needs outbound internet, or the fonts must be self-hosted.
 - [ ] **Compression, caching and headers**: confirm gzip/brotli, long cache headers for `/_next/static`, and HTTP → HTTPS redirect.
 - [ ] **Security headers and CSP** do not block the JSON-LD script blocks or the Eventbrite links.
 - [ ] If a candidate host cannot run Node.js, do not move (stay on Vercel or choose a Node-capable host), because ISR, redirects and image optimisation depend on it.
