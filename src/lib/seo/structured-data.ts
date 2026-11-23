@@ -204,13 +204,22 @@ export function eventJsonLd(event: EventCard): JsonObject | undefined {
         "@context": SCHEMA,
         ...compact({
             "@type": "Event",
-            name: event.title,
+            name: event.schemaName ?? event.title,
             description: event.excerpt,
             image,
             startDate,
             endDate,
             ...base,
-            location,
+            location: event.venue
+                ? {
+                      "@type": "Place",
+                      name: event.venue.name,
+                      address: {
+                          "@type": "PostalAddress",
+                          ...event.venue.address,
+                      },
+                  }
+                : location,
             organizer: organiserOf(organiser),
             offers: event.freeAdmission
                 ? compact({

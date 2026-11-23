@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/metadata";
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
 import { notFound } from "next/navigation";
 import {
     getAllEventRouteSlugs,
@@ -24,6 +24,7 @@ import { isEventEnded } from "@/lib/events/event-dates";
 import { withImageSizes } from "@/lib/events/image-dimensions";
 import { latestSession, longDate, sessionTimeRange } from "@/lib/events/series";
 import { isPublicEvent } from "@/content/event-visibility";
+import { SCHOOL_NAME } from "@/lib/events/programme";
 import { ChristmasShowPage } from "@/components/events/ChristmasShowPage";
 
 /* Event order and Past Event labels depend on the date, so these pages refresh every 15 minutes. All three use the same value so they never disagree for long. */
@@ -118,6 +119,10 @@ export default async function EventDetailPage({ params }: PageProps) {
 
     /* One static hero image. Sizes come from the file when the content data omits them. */
     const [heroImage] = withImageSizes([event.image]);
+    /* One rule for every image shape: the picture is centred against the information column, so a short landscape photo sits in
+       the middle of a taller column instead of hanging from the top. Where the two are about the same height this is the same as
+       top alignment. Landscape and square pictures need width, so they sit beside the text only from the large breakpoint (and then get
+       a slightly wider column); below that they stack above it. Portraits keep their narrow poster column from the medium breakpoint. */
     const hasPortraitHero = Boolean(
         heroImage.width &&
         heroImage.height &&
@@ -146,6 +151,32 @@ export default async function EventDetailPage({ params }: PageProps) {
               .filter(Boolean)
               .join(", ")
         : undefined;
+    const venueLines = event.venue ? (
+        <>
+            {event.venue.name}
+            {event.venue.lines.map((line) => (
+                <Fragment key={line}>
+                    <br />
+                    {line}
+                </Fragment>
+            ))}
+        </>
+    ) : undefined;
+    /* Page-level attribution. The school organising its own event is obvious, so it is not stated. */
+    const infoRows = [
+        [
+            detailLabels.organiser,
+            event.organiser && event.organiser !== SCHOOL_NAME
+                ? event.organiser
+                : undefined,
+        ],
+        [detailLabels.partners, event.partners?.join(", ")],
+        [
+            detailLabels.hostedAt,
+            event.relationship === "hosted" ? event.hostedAt : undefined,
+        ],
+        [detailLabels.promotedBy, event.promotedBy],
+    ].filter(([, value]) => Boolean(value)) as [string, string][];
     const facts = (
         event.isSeries
             ? [
@@ -154,12 +185,13 @@ export default async function EventDetailPage({ params }: PageProps) {
               ]
             : [
                   [detailLabels.date, event.time ? heroDate : event.date],
-                  ["Time", event.time],
+                  ["Time", event.timeLabel ?? event.time],
                   ["Teacher", event.teacher],
-                  ["Admission", event.admission],
-                  [detailLabels.location, event.location],
+                  /* Free events say so once, under the subtitle. */
+                  ["Admission", event.freeAdmission ? undefined : event.admission],
+                  [detailLabels.location, venueLines ?? event.location],
               ]
-    ).filter(([, value]) => Boolean(value));
+    ).filter(([, value]) => Boolean(value)) as [string, ReactNode][];
     const overline = [event.category, event.discipline]
         .filter(Boolean)
         .join(" · ");
@@ -194,7 +226,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                         className={`mt-8 grid gap-8 grid-gap-x ${
                             hasPortraitHero
                                 ? "items-center md:grid-cols-[minmax(0,22rem)_1fr] lg:grid-cols-[minmax(0,24rem)_1fr]"
-                                : "items-start md:grid-cols-2"
+                                : "items-center lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]"
                         }`}
                     >
                         <Image
@@ -202,9 +234,13 @@ export default async function EventDetailPage({ params }: PageProps) {
                             alt={heroImage.alt}
                             width={heroImage.width ?? 0}
                             height={heroImage.height ?? 0}
-                            className="h-auto w-full max-w-sm rounded-sm shadow-sm md:max-w-none"
+                            className={`h-auto w-full rounded-sm shadow-sm ${
+                                hasPortraitHero
+                                    ? "max-w-sm md:max-w-none"
+                                    : "md:max-w-2xl lg:max-w-none"
+                            }`}
                             style={{ width: "100%", height: "auto" }}
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
                             priority
                         />
                         <div>
@@ -411,12 +447,12 @@ export default async function EventDetailPage({ params }: PageProps) {
                         </section>
                     )}
                     {!event.isSeries && (
-                        <EventProgramme sessions={event.sessions ?? []} />
+                        <EventProgramme
+                            event={event}
+                            sessions={event.sessions ?? []}
+                        />
                     )}
-                    {(event.organiser ||
-                        event.partners?.length ||
-                        event.hostedAt ||
-                        event.promotedBy) && (
+                    {infoRows.length > 0 && (
                         <section
                             aria-labelledby="event-information"
                             className="mt-12 border-t border-taupe/30 pt-8"
@@ -428,47 +464,16 @@ export default async function EventDetailPage({ params }: PageProps) {
                                 {detailLabels.eventInformation}
                             </h2>
                             <dl className="mt-5 grid gap-6 sm:grid-cols-2">
-                                {event.organiser && (
-                                    <div>
+                                {infoRows.map(([label, value]) => (
+                                    <div key={label}>
                                         <dt className="text-overline text-burgundy">
-                                            {detailLabels.organiser}
+                                            {label}
                                         </dt>
                                         <dd className="text-body mt-1 text-charcoal/75">
-                                            {event.organiser}
+                                            {value}
                                         </dd>
                                     </div>
-                                )}
-                                {!!event.partners?.length && (
-                                    <div>
-                                        <dt className="text-overline text-burgundy">
-                                            {detailLabels.partners}
-                                        </dt>
-                                        <dd className="text-body mt-1 text-charcoal/75">
-                                            {event.partners.join(", ")}
-                                        </dd>
-                                    </div>
-                                )}
-                                {event.relationship === "hosted" &&
-                                    event.hostedAt && (
-                                        <div>
-                                            <dt className="text-overline text-burgundy">
-                                                {detailLabels.hostedAt}
-                                            </dt>
-                                            <dd className="text-body mt-1 text-charcoal/75">
-                                                {event.hostedAt}
-                                            </dd>
-                                        </div>
-                                    )}
-                                {event.promotedBy && (
-                                    <div>
-                                        <dt className="text-overline text-burgundy">
-                                            {detailLabels.promotedBy}
-                                        </dt>
-                                        <dd className="text-body mt-1 text-charcoal/75">
-                                            {event.promotedBy}
-                                        </dd>
-                                    </div>
-                                )}
+                                ))}
                             </dl>
                         </section>
                     )}

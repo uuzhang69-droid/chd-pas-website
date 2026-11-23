@@ -680,12 +680,12 @@ export const copy = {
     "pages.events.detaillabels.timepending": "Time to be confirmed",
     "pages.events.detaillabels.upcomingconcerts": "Upcoming concerts",
     "pages.events.detaillabels.venuepending": "Venue to be confirmed",
-    "pages.events.hero.overline": "What's on",
+    "pages.events.hero.overline": "",
     "pages.events.hero.subtitle":
-        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+        "Discover performances, workshops, dance events and special experiences at County Hall.",
     "pages.events.hero.title": "What's On",
     "pages.events.intro":
-        "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+        "Discover performances, workshops, dance events and special experiences at County Hall.",
     "pages.events.items.ceramics_workshop_with_yasemin.booknow.label":
         "Details",
     "pages.events.items.ceramics_workshop_with_yasemin.date":
@@ -719,8 +719,6 @@ export const copy = {
     "pages.events.items.county_hall_dance_centre_opening_day.date":
         "Thursday 10 September 2026 · All day",
     "pages.events.items.county_hall_dance_centre_opening_day.description.0":
-        "County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.",
-    "pages.events.items.county_hall_dance_centre_opening_day.description.1":
         "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
     "pages.events.items.county_hall_dance_centre_opening_day.excerpt":
         "County Hall Dance Centre opened its doors at County Hall on 10 September 2026.",
