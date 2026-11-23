@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -5,41 +6,37 @@ import type { EventCard, EventSession, ShowPageContent } from "@/content/types";
 import { TIMETABLE_TIME_ZONE } from "@/content/venues";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow, HeroBackLink } from "@/components/ui/HeroParts";
+import { HeroBackLink } from "@/components/ui/HeroParts";
 
 type ChristmasShowPageProps = {
     event: EventCard;
     show: ShowPageContent;
 };
 
-const dayFormat = new Intl.DateTimeFormat("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: TIMETABLE_TIME_ZONE,
-});
+const weekdayFormat = new Intl.DateTimeFormat("en-GB", { weekday: "long", timeZone: TIMETABLE_TIME_ZONE });
+const restFormat = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: TIMETABLE_TIME_ZONE });
 
-/** "13:00" to "1:00 PM". */
-function clockLabel(time: string): string {
-    const [hours, minutes] = time.split(":").map(Number);
-    return `${hours % 12 || 12}:${String(minutes).padStart(2, "0")} ${hours >= 12 ? "PM" : "AM"}`;
+/** "2026-12-05" to "Saturday, 5 December 2026". */
+function dateLabel(iso: string): string {
+    const noon = new Date(`${iso}T12:00:00Z`);
+    return `${weekdayFormat.format(noon)}, ${restFormat.format(noon)}`;
 }
 
-function groupByDate(sessions: readonly EventSession[]) {
-    const days = new Map<string, EventSession[]>();
-    for (const session of sessions) {
-        if (!session.date) continue;
-        days.set(session.date, [...(days.get(session.date) ?? []), session]);
-    }
-    return [...days.entries()]
-        .toSorted(([a], [b]) => a.localeCompare(b))
-        .map(([date, items]) => ({
-            date,
-            items: items.toSorted((a, b) =>
-                (a.start ?? "").localeCompare(b.start ?? ""),
-            ),
-        }));
+/** Plain text with **bold** phrases. The words are the organiser's; only the emphasis is marked. */
+function RichText({ text }: { text: string }) {
+    return (
+        <>
+            {text.split("**").map((part, index) =>
+                index % 2 === 1 ? (
+                    <strong key={index} className="font-semibold text-charcoal">
+                        {part}
+                    </strong>
+                ) : (
+                    part
+                ),
+            )}
+        </>
+    );
 }
 
 function Paragraphs({
@@ -60,7 +57,7 @@ function Paragraphs({
                             : "text-body-lg text-charcoal/85"
                     }
                 >
-                    {text}
+                    <RichText text={text} />
                 </p>
             ))}
         </div>
@@ -97,18 +94,59 @@ function Section({
 const listClasses = "divide-y divide-taupe/40 border-y border-taupe/40";
 
 /**
- * Detail page for the Christmas family show. Every booking button reads the one booking URL in the event data.
- * Plain editorial sections on the site's own colours; a deep red for calls to action and a thin gold rule are the only seasonal touches.
+ * One performer. With an `image` the card shows the headshot at 3:4; without one it shows a neutral
+ * "Photo coming soon" placeholder of the same size, so adding a photo later never changes the layout.
+ */
+function CastCard({ member }: { member: ShowPageContent["cast"]["members"][number] }) {
+    return (
+        <li>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-taupe/15">
+                {member.image ? (
+                    <Image
+                        src={member.image.src}
+                        alt={member.image.alt}
+                        fill
+                        sizes="(max-width: 1024px) 50vw, 25vw"
+                        className="object-cover"
+                    />
+                ) : (
+                    <div className="flex h-full flex-col items-center justify-center gap-2 text-charcoal/45">
+                        <User aria-hidden="true" className="size-12" strokeWidth={1.25} />
+                        <span className="text-small">Photo coming soon</span>
+                    </div>
+                )}
+            </div>
+            <p className="text-h3 mt-3 text-charcoal">{member.name}</p>
+            <p className="text-body text-charcoal/80">{member.role}</p>
+        </li>
+    );
+}
+
+/** Anchors for the calendar: each performance links to #session-<id>. */
+function sessionAnchors(sessions: readonly EventSession[], dates: readonly string[]) {
+    return sessions
+        .filter((session) => session.date && dates.includes(session.date))
+        .map((session) => (
+            <span
+                key={session.id}
+                id={`session-${session.id}`}
+                aria-hidden="true"
+                className="scroll-mt-28"
+            />
+        ));
+}
+
+/**
+ * Detail page for the Christmas family show. Every booking button reads the one booking URL in the event data,
+ * and there are exactly three: hero, after the ticket prices, and the final section.
  */
 export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
-    const days = groupByDate(event.sessions ?? []);
     const book = event.bookNow;
+    const sessions = event.sessions ?? [];
     const offers = event.ticketOffers ?? [];
     const singles = offers.filter((ticket) => !ticket.description);
     const families = offers.filter((ticket) => ticket.description);
-    const dailyTimes = (days[0]?.items ?? []).map((session) =>
-        clockLabel(session.start ?? ""),
-    );
+    const scheduleDates = [...new Set(sessions.flatMap((session) => (session.date ? [session.date] : [])))].toSorted();
 
     return (
         <>
@@ -120,20 +158,15 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
                     <Image
                         src={event.image.src}
                         alt={event.image.alt}
-                        width={event.image.width ?? 1672}
-                        height={event.image.height ?? 941}
+                        width={event.image.width ?? 1774}
+                        height={event.image.height ?? 887}
                         priority
                         sizes="(max-width: 1152px) 100vw, 1152px"
                         className="mt-8 h-auto w-full rounded-sm shadow-sm"
                     />
                     <div className="mt-10">
-                        <Eyebrow tone="light">{event.subtitle}</Eyebrow>
-                        <h1 className="text-h1 mt-4 text-charcoal">
-                            Maggie’s Cats
-                        </h1>
-                        <p className="text-h3 mt-3 text-burgundy">
-                            {show.headline}
-                        </p>
+                        <h1 className="text-h1 text-charcoal">Maggie’s Cats</h1>
+                        <p className="text-h3 mt-3 text-burgundy">{show.headline}</p>
                         <div className="mt-5">
                             <Paragraphs items={show.intro} />
                         </div>
@@ -162,19 +195,16 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
             </Section>
 
             <Section id="meet-the-cats" heading={show.cats.heading} tint>
-                <p className="text-body-lg text-charcoal/85">
-                    {show.cats.intro}
-                </p>
-                <div className={`mt-8 ${listClasses}`}>
+                <p className="text-body-lg text-charcoal/85">{show.cats.intro}</p>
+                <div className="mt-8 grid gap-5 md:grid-cols-3">
                     {show.cats.items.map((cat) => (
-                        <article key={cat.name} className="py-7">
-                            <h3 className="text-h3 text-charcoal">
-                                {cat.name}
-                                <span className="text-overline ml-3 align-middle text-burgundy">
-                                    {cat.role}
-                                </span>
-                            </h3>
-                            <div className="mt-3">
+                        <article
+                            key={cat.name}
+                            className="rounded-sm border border-taupe/40 border-t-4 border-t-[#b8923f] bg-ivory p-6"
+                        >
+                            <h3 className="text-h3 text-charcoal">{cat.name}</h3>
+                            <p className="text-overline mt-1 text-burgundy">{cat.role}</p>
+                            <div className="mt-4">
                                 <Paragraphs items={cat.paragraphs} small />
                             </div>
                         </article>
@@ -183,69 +213,47 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
             </Section>
 
             <Section id="dates-and-times" heading={show.schedule.heading}>
-                <p className="text-body-lg text-charcoal/85">
-                    {show.schedule.intro}
-                </p>
-                <div className="mt-8 space-y-8">
-                    <div>
-                        <h3 className="text-overline text-burgundy">Dates</h3>
-                        <ol className={`mt-3 ${listClasses}`}>
-                            {days.map(({ date, items }) => (
-                                <li key={date} className="py-3">
-                                    <time
-                                        dateTime={date}
-                                        className="text-body text-charcoal"
-                                    >
-                                        {dayFormat.format(
-                                            new Date(`${date}T12:00:00Z`),
-                                        )}
-                                    </time>
-                                    {/* Anchors for each performance: the calendar links to #session-<id>. */}
-                                    {items.map((session) => (
-                                        <span
-                                            key={session.id}
-                                            id={`session-${session.id}`}
-                                            aria-hidden="true"
-                                            className="scroll-mt-28"
-                                        />
-                                    ))}
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
-                    <div>
-                        <h3 className="text-overline text-burgundy">
-                            {show.schedule.timesLabel}
-                        </h3>
-                        <ul className={`mt-3 ${listClasses}`}>
-                            {dailyTimes.map((time) => (
-                                <li
-                                    key={time}
-                                    className="text-body py-3 text-charcoal"
-                                >
-                                    {time}
-                                </li>
-                            ))}
-                        </ul>
-                        <p className="text-body mt-4 text-charcoal/80">
-                            {show.schedule.total}
-                        </p>
-                    </div>
-                </div>
+                <p className="text-body-lg text-charcoal/85">{show.schedule.intro}</p>
+                <h3 className="text-overline mt-8 text-burgundy">
+                    {show.schedule.datesHeading}
+                </h3>
+                <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {scheduleDates.map((date) => (
+                        <li
+                            key={date}
+                            className="rounded-sm border border-taupe/40 bg-ivory px-4 py-3"
+                        >
+                            <time dateTime={date} className="text-body text-charcoal">
+                                {dateLabel(date)}
+                            </time>
+                            {sessionAnchors(sessions, [date])}
+                        </li>
+                    ))}
+                </ul>
+                <h3 className="text-overline mt-8 text-burgundy">
+                    {show.schedule.timesHeading}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-3">
+                    {show.schedule.times.map((time) => (
+                        <li
+                            key={time}
+                            className="text-body rounded-sm border border-burgundy/40 px-4 py-2 font-medium text-burgundy"
+                        >
+                            {time}
+                        </li>
+                    ))}
+                </ul>
                 <p className="text-body mt-6 text-charcoal/80">
-                    {show.schedule.support}
+                    {show.schedule.closing}
                 </p>
-                <Button {...book} className="mt-6 w-full sm:w-auto" />
             </Section>
 
             <Section id="tickets" heading={show.tickets.heading} tint>
-                <p className="text-body-lg text-charcoal/85">
-                    {show.tickets.intro}
-                </p>
-                <div className="mt-8 space-y-8">
+                <p className="text-body-lg text-charcoal/85">{show.tickets.intro}</p>
+                <div className="mt-8 grid gap-8 sm:grid-cols-2">
                     <div>
                         <h3 className="text-overline text-burgundy">
-                            Individual tickets
+                            {show.tickets.individualHeading}
                         </h3>
                         <ul className={`mt-3 ${listClasses}`}>
                             {singles.map((ticket) => (
@@ -253,19 +261,15 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
                                     key={ticket.name}
                                     className="flex items-baseline justify-between gap-4 py-3"
                                 >
-                                    <span className="text-body text-charcoal">
-                                        {ticket.name}
-                                    </span>
-                                    <span className="text-h3 text-charcoal">
-                                        £{ticket.price}
-                                    </span>
+                                    <span className="text-body text-charcoal">{ticket.name}</span>
+                                    <span className="text-h3 text-charcoal">£{ticket.price}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-overline text-burgundy">
-                            Family tickets
+                            {show.tickets.familyHeading}
                         </h3>
                         <ul className={`mt-3 ${listClasses}`}>
                             {families.map((ticket) => (
@@ -273,12 +277,8 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
                                     key={ticket.name}
                                     className="flex items-baseline justify-between gap-4 py-3"
                                 >
-                                    <span className="text-body text-charcoal">
-                                        {ticket.description}
-                                    </span>
-                                    <span className="text-h3 text-charcoal">
-                                        £{ticket.price}
-                                    </span>
+                                    <span className="text-body text-charcoal">{ticket.description}</span>
+                                    <span className="text-h3 text-charcoal">£{ticket.price}</span>
                                 </li>
                             ))}
                         </ul>
@@ -310,30 +310,49 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
                 />
             </Section>
 
-            <Section id="venue" heading={show.venue.heading}>
+            <Section id="meet-the-cast" heading={show.cast.heading}>
+                <p className="text-body-lg text-charcoal/85">{show.cast.intro}</p>
+                <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-4">
+                    {show.cast.members.map((member) => (
+                        <CastCard key={member.name} member={member} />
+                    ))}
+                </ul>
+                <h3 className="text-overline mt-10 text-burgundy">
+                    {show.cast.creativeTeam.heading}
+                </h3>
+                <p className="text-h3 mt-2 text-charcoal">
+                    {show.cast.creativeTeam.name}
+                </p>
+            </Section>
+
+            <Section id="venue" heading={show.venue.heading} tint>
                 <Paragraphs items={show.venue.paragraphs} />
-                <div className="mt-8">
-                    <h3 className="text-overline text-burgundy">Venue details</h3>
-                    <p className="text-body mt-2 text-charcoal">
-                        {show.venue.name}
-                        <br />
-                        {show.venue.address}
-                    </p>
+            </Section>
+
+            <Section id="how-to-find-us" heading={show.directions.heading}>
+                <p className="text-body-lg text-charcoal">
+                    <strong className="font-semibold">{show.directions.name}</strong>
+                    <br />
+                    {show.directions.address}
+                </p>
+                <div className="mt-4">
+                    <Paragraphs items={show.directions.paragraphs} />
                 </div>
             </Section>
 
             <Section id="before-you-visit" heading={show.visit.heading} tint>
-                <p className="text-body-lg text-charcoal/85">
-                    {show.visit.intro}
-                </p>
-                {show.visit.items.map((item) => (
-                    <div key={item.title} className="mt-6">
-                        <h3 className="text-h3 text-charcoal">{item.title}</h3>
-                        <div className="mt-2">
-                            <Paragraphs items={item.paragraphs} small />
+                <div className="space-y-8">
+                    {show.visit.items.map((item) => (
+                        <div key={item.title}>
+                            <h3 className="text-h3 text-charcoal">
+                                {item.title}
+                            </h3>
+                            <div className="mt-2">
+                                <Paragraphs items={item.paragraphs} small />
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </Section>
 
             <Section id="final-cta" heading={show.finalCta.heading}>

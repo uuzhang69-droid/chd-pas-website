@@ -124,10 +124,10 @@ test("copy is spoiler free, has no dashes and no unconfirmed promises", () => {
 });
 
 test("SEO and card text use the supplied wording", () => {
-    assert.equal(event.seo?.title, "Maggie’s Cats | Christmas Family Show in London | County Hall");
+    assert.equal(event.seo?.title, "Maggie's Cats Christmas Family Show 2026 | London");
     assert.equal(
         event.seo?.description,
-        "Join Vivi, Kiki and Mika for Maggie’s Cats, a playful outdoor Christmas family show at County Hall on London’s South Bank. Selected dates in December 2026.",
+        "Join Maggie's Cats for an outdoor Christmas family show at County Hall, London. Performances on 5, 6, 12, 13, 19 and 20 December 2026.",
     );
     assert.equal(event.title, "Maggie’s Cats: A Christmas Family Show");
     assert.match(event.excerpt ?? "", /^Three very different cats get ready for Christmas in a playful outdoor family show.$/);
@@ -157,4 +157,97 @@ test("the promotional image is present at 2:1, is the only image, and the card u
     const card = readFileSync("src/components/events/EventSummaryCard.tsx", "utf8");
     assert.match(card, /aspect-square/);
     assert.doesNotMatch(card, /aspect-video/);
+});
+
+test("exactly three booking buttons: hero, after the ticket prices, and the final section", () => {
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    assert.equal(page.split("{...book}").length - 1, 3);
+    const hero = page.indexOf("{...book}");
+    const tickets = page.indexOf("{...book}", hero + 1);
+    const final = page.indexOf("{...book}", tickets + 1);
+    assert(page.indexOf('id="tickets"') < tickets && tickets < page.indexOf('id="meet-the-cast"'));
+    assert(page.indexOf('id="final-cta"') < final);
+    assert.equal(event.showPage?.tickets.group.contactHref, "/contact?subject=events");
+});
+
+test("sections follow the agreed order and the page has one h1", () => {
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    const ids = ["about-the-show", "meet-the-cats", "dates-and-times", "tickets", "meet-the-cast", "venue", "how-to-find-us", "before-you-visit", "final-cta"];
+    const positions = ids.map((id) => page.indexOf('<Section id="' + id + '"'));
+    assert(positions.every((p) => p > 0));
+    assert.deepEqual([...positions].sort((a, b) => a - b), positions);
+    assert.equal(page.split("<h1").length - 1, 1);
+});
+
+test("cast: four credited performers, no Swing, no contact details, optional headshot", () => {
+    const cast = event.showPage!.cast;
+    assert.deepEqual(
+        cast.members.map((m) => [m.name, m.role]),
+        [
+            ["Hannah Spiteri", "Vivi Cat"],
+            ["Mae Meadows", "Kiki Cat"],
+            ["Ayana Mon", "Mika Cat"],
+            ["Mark Janicello", "Santa Claus"],
+        ],
+    );
+    assert.equal(cast.creativeTeam.name, "Roarrr Theatre");
+    const json = JSON.stringify(cast);
+    assert.doesNotMatch(json, /swing|@|she\/her|he\/him|they\/them/i);
+    for (const member of cast.members) assert.equal(member.image, undefined);
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    assert.match(page, /aspect-\[3\/4\]/);
+    assert.match(page, /Photo coming soon/);
+    assert.match(page, /grid-cols-2[^"]*lg:grid-cols-4/);
+});
+
+test("directions use the supplied wording and make no accessibility claim", () => {
+    const text = event.showPage!.directions.paragraphs.join(" ");
+    assert.match(text, /Queen's Walk/);
+    assert.match(text, /Peacock Restaurant/);
+    assert.match(text, /London Dungeon/);
+    assert.match(text, /Shrek's Adventure/);
+    assert.doesNotMatch(JSON.stringify(event.showPage), /step-free|accessible|wheelchair|lift/i);
+});
+
+test("structured data names the venue address and credited cast, with no end time", () => {
+    const data = eventJsonLd(event) as Record<string, unknown>;
+    const first = (data.subEvent as Record<string, unknown>[])[0];
+    assert.deepEqual(first.location, {
+        "@type": "Place",
+        name: "County Hall Members’ Terrace",
+        address: "County Hall, South Bank, London",
+    });
+    assert.equal((first.performer as unknown[]).length, 4);
+    assert.equal(first.endDate, undefined);
+    assert.equal(first.startDate, "2026-12-05T11:00:00+00:00");
+});
+
+test("no emoji anywhere on the page, and cat name and role are separate elements", () => {
+    const emoji = /\p{Extended_Pictographic}/u;
+    assert.doesNotMatch(JSON.stringify(event), emoji);
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    assert.doesNotMatch(page, emoji);
+    assert.match(page, /<h3 className="text-h3 text-charcoal">\{cat\.name\}<\/h3>\s*<p className="text-overline[^"]*">\{cat\.role\}<\/p>/);
+});
+
+test("all six dates are listed with the daily times, and ticket rows are description left, price right", () => {
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    assert.match(page, /dateLabel\(date\)/);
+    assert.deepEqual(event.showPage?.schedule.times, ["11:00 AM", "1:00 PM", "3:00 PM"]);
+    assert.equal(event.showPage?.schedule.datesHeading, "Dates");
+    assert.equal(page.split("flex items-baseline justify-between").length - 1, 2);
+    assert.match(page, /sm:grid-cols-2 lg:grid-cols-3/);
+    assert.doesNotMatch(page, /<ol/);
+});
+
+test("approved introduction, hero alt text and water wording are used exactly", () => {
+    const about = event.showPage!.about.paragraphs;
+    assert.equal(about.length, 5);
+    assert.equal(about[0], "Christmas preparations are underway, and Vivi, Kiki and Mika are determined to make this year's celebrations something special.");
+    assert.equal(about[1], "Vivi has everything under control. Or at least, that's the plan. Kiki has plenty of ideas, although whether they're particularly helpful is another question entirely. And Mika is just happy to be spending Christmas with her friends.");
+    assert.equal(about[3], "Maggie's Cats is a playful outdoor Christmas family show filled with humour, friendship and moments of tenderness.");
+    assert.equal(event.image.alt, "Illustrated Christmas scene with three cat characters and Santa beside a decorated tree, overlooking the Thames and Big Ben.");
+    const water = event.showPage!.visit.items.find((item) => item.title === "Bring Your Own Water")!;
+    assert.deepEqual(water.paragraphs, ["Please bring your own drinking water. You're also welcome to bring refreshments, subject to venue rules."]);
+    assert.doesNotMatch(JSON.stringify(event), /localhost/);
 });

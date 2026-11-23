@@ -143,6 +143,11 @@ export function eventJsonLd(event: EventCard): JsonObject | undefined {
                 url: event.bookingUrl,
             }),
         );
+        /* Credited cast only: names, no roles, contact details or images. */
+        const performers = event.showPage?.cast.members.map((member) => ({
+            "@type": "Person",
+            name: member.name,
+        }));
         const performances = [...sessionsNewestFirst(event.sessions)]
             .reverse()
             .map((session) => {
@@ -152,7 +157,11 @@ export function eventJsonLd(event: EventCard): JsonObject | undefined {
                     ...item,
                     name: event.title,
                     image,
-                    location: place(event.location),
+                    location: place(
+                        event.location,
+                        event.showPage?.directions.address,
+                    ),
+                    performer: performers,
                     offers,
                 };
             })

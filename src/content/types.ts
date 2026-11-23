@@ -82,6 +82,14 @@ export type EventSession = EventAttribution & {
 };
 
 /** Own-layout show page. Copy is written by the organiser; paragraphs are separate strings. */
+export type CastMember = {
+    name: string;
+    role: string;
+    /** Optional headshot, shown at 3:4. Without it the card shows a "Photo coming soon" placeholder. */
+    image?: ImageAsset;
+};
+
+/** Own-layout show page. Copy is written by the organiser; paragraphs are separate strings. Wrap a phrase in ** for bold. */
 export type ShowPageContent = {
     headline: string;
     intro: string[];
@@ -92,16 +100,35 @@ export type ShowPageContent = {
         intro: string;
         items: { name: string; role: string; paragraphs: string[] }[];
     };
-    schedule: { heading: string; intro: string; timesLabel: string; total: string; support: string };
+    schedule: {
+        heading: string;
+        intro: string;
+        datesHeading: string;
+        timesHeading: string;
+        times: string[];
+        closing: string;
+    };
     tickets: {
         heading: string;
         intro: string;
+        individualHeading: string;
+        familyHeading: string;
         familyNote: string;
         group: { heading: string; paragraphs: string[]; contactLabel: string; contactHref: string };
         button: string;
     };
-    venue: { heading: string; paragraphs: string[]; name: string; address: string };
-    visit: { heading: string; intro: string; items: { title: string; paragraphs: string[] }[] };
+    cast: {
+        heading: string;
+        intro: string;
+        members: CastMember[];
+        creativeTeam: { heading: string; name: string };
+    };
+    venue: { heading: string; paragraphs: string[] };
+    directions: { heading: string; name: string; address: string; paragraphs: string[] };
+    visit: {
+        heading: string;
+        items: { title: string; paragraphs: string[] }[];
+    };
     finalCta: { heading: string; paragraphs: string[]; button: string };
 };
 
