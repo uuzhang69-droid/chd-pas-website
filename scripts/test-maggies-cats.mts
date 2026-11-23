@@ -124,10 +124,10 @@ test("copy is spoiler free, has no dashes and no unconfirmed promises", () => {
 });
 
 test("SEO and card text use the supplied wording", () => {
-    assert.equal(event.seo?.title, "Maggie's Cats Christmas Family Show 2026 | London");
+    assert.equal(event.seo?.title, "Maggie’s Cats Christmas Family Show 2026 | London");
     assert.equal(
         event.seo?.description,
-        "Join Maggie's Cats for an outdoor Christmas family show at County Hall, London. Performances on 5, 6, 12, 13, 19 and 20 December 2026.",
+        "Join Maggie’s Cats for an outdoor Christmas family show at County Hall, London. Performances on 5, 6, 12, 13, 19 and 20 December 2026.",
     );
     assert.equal(event.title, "Maggie’s Cats: A Christmas Family Show");
     assert.match(event.excerpt ?? "", /^Three very different cats get ready for Christmas in a playful outdoor family show.$/);
@@ -202,10 +202,10 @@ test("cast: four credited performers, no Swing, no contact details, optional hea
 
 test("directions use the supplied wording and make no accessibility claim", () => {
     const text = event.showPage!.directions.paragraphs.join(" ");
-    assert.match(text, /Queen's Walk/);
+    assert.match(text, /Queen’s Walk/);
     assert.match(text, /Peacock Restaurant/);
     assert.match(text, /London Dungeon/);
-    assert.match(text, /Shrek's Adventure/);
+    assert.match(text, /Shrek’s Adventure/);
     assert.doesNotMatch(JSON.stringify(event.showPage), /step-free|accessible|wheelchair|lift/i);
 });
 
@@ -243,11 +243,30 @@ test("all six dates are listed with the daily times, and ticket rows are descrip
 test("approved introduction, hero alt text and water wording are used exactly", () => {
     const about = event.showPage!.about.paragraphs;
     assert.equal(about.length, 5);
-    assert.equal(about[0], "Christmas preparations are underway, and Vivi, Kiki and Mika are determined to make this year's celebrations something special.");
-    assert.equal(about[1], "Vivi has everything under control. Or at least, that's the plan. Kiki has plenty of ideas, although whether they're particularly helpful is another question entirely. And Mika is just happy to be spending Christmas with her friends.");
-    assert.equal(about[3], "Maggie's Cats is a playful outdoor Christmas family show filled with humour, friendship and moments of tenderness.");
+    assert.equal(about[0], "Christmas preparations are underway, and Vivi, Kiki and Mika are determined to make this year’s celebrations something special.");
+    assert.equal(about[1], "Vivi has everything under control. Or at least, that’s the plan. Kiki has plenty of ideas, although whether they’re particularly helpful is another question entirely. And Mika is just happy to be spending Christmas with her friends.");
+    assert.equal(about[3], "Maggie’s Cats is a playful outdoor Christmas family show filled with humour, friendship and moments of tenderness.");
     assert.equal(event.image.alt, "Illustrated Christmas scene with three cat characters and Santa beside a decorated tree, overlooking the Thames and Big Ben.");
     const water = event.showPage!.visit.items.find((item) => item.title === "Bring Your Own Water")!;
-    assert.deepEqual(water.paragraphs, ["Please bring your own drinking water. You're also welcome to bring refreshments, subject to venue rules."]);
+    assert.deepEqual(water.paragraphs, ["Please bring your own drinking water. You’re also welcome to bring refreshments, subject to venue rules."]);
     assert.doesNotMatch(JSON.stringify(event), /localhost/);
+});
+
+test("public copy uses curly apostrophes, and the contact sentence links to the info mailbox", () => {
+    const strings: string[] = [];
+    const walk = (value: unknown, key = "") => {
+        if (typeof value === "string") {
+            if (!["src", "href", "id", "slug", "dateIso", "contactHref", "variant", "email"].includes(key)) strings.push(value);
+        } else if (Array.isArray(value)) value.forEach((item) => walk(item, key));
+        else if (value && typeof value === "object")
+            for (const [k, v] of Object.entries(value)) if (k !== "sessions") walk(v, k);
+    };
+    walk({ title: event.seo?.title, description: event.seo?.description, showPage: event.showPage, excerpt: event.excerpt, alt: event.image.alt });
+    for (const text of strings) assert.doesNotMatch(text, /'/, `straight apostrophe in: ${text}`);
+    const contact = event.showPage!.visit.contact!;
+    assert.equal(contact.email, "info@countyhalldancecentre.com");
+    assert.equal(contact.before + contact.email + contact.after, "Have a question about the show? Please email info@countyhalldancecentre.com and we’ll be happy to help.");
+    const page = readFileSync("src/components/events/ChristmasShowPage.tsx", "utf8");
+    assert.match(page, /href=\{`mailto:\$\{show\.visit\.contact\.email\}`\}/);
+    assert.doesNotMatch(JSON.stringify(event.showPage), /refund|cancel|seating|toilet|accessib|duration|age restriction/i);
 });

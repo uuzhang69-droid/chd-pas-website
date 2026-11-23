@@ -353,6 +353,18 @@ export function ChristmasShowPage({ event, show }: ChristmasShowPageProps) {
                         </div>
                     ))}
                 </div>
+                {show.visit.contact && (
+                    <p className="text-body mt-8 text-charcoal/85">
+                        {show.visit.contact.before}
+                        <a
+                            href={`mailto:${show.visit.contact.email}`}
+                            className="font-medium text-burgundy underline underline-offset-4 hover:text-burgundy/80"
+                        >
+                            {show.visit.contact.email}
+                        </a>
+                        {show.visit.contact.after}
+                    </p>
+                )}
             </Section>
 
             <Section id="final-cta" heading={show.finalCta.heading}>

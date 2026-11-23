@@ -128,6 +128,8 @@ export type ShowPageContent = {
     visit: {
         heading: string;
         items: { title: string; paragraphs: string[] }[];
+        /** A short contact sentence at the end of the section; the email becomes a mailto link. */
+        contact?: { before: string; email: string; after: string };
     };
     finalCta: { heading: string; paragraphs: string[]; button: string };
 };
