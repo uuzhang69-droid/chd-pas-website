@@ -34,6 +34,20 @@ type PageProps = {
     params: Promise<{ slug: string }>;
 };
 
+/** Plain text with **bold** phrases. Text without markers renders exactly as before. */
+function withEmphasis(text: string): ReactNode {
+    if (!text.includes("**")) return text;
+    return text.split("**").map((part, index) =>
+        index % 2 === 1 ? (
+            <strong key={index} className="font-semibold text-charcoal">
+                {part}
+            </strong>
+        ) : (
+            part
+        ),
+    );
+}
+
 export async function generateStaticParams() {
     return getAllEventRouteSlugs().map((slug) => ({ slug }));
 }
@@ -353,7 +367,7 @@ export default async function EventDetailPage({ params }: PageProps) {
                                                 </h2>
                                             ) : (
                                                 <p className="text-body-lg text-charcoal/85">
-                                                    {paragraph}
+                                                    {withEmphasis(paragraph)}
                                                 </p>
                                             )}
                                             {!heading &&

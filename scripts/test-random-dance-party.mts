@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { test } from "node:test";
 import { siteContent } from "../src/content/site";
 import {
@@ -101,17 +101,31 @@ test("copy has no dashes in prose, no emoji and no unconfirmed promises; SEO tex
     assert(event.seo!.description.length <= 160);
 });
 
-test("the description welcomes beginners and spectators and promises prizes only to battle winners", () => {
-    const body = (event.description ?? []).join("\n");
-    assert(event.description?.includes("# Love the song? Join the dance."));
-    assert.match(body, /You don’t need to know how to dance/);
-    assert.match(body, /watch/);
-    assert.match(body, /no pressure/i);
-    assert.match(body, /friendly dance battles, with prizes for the winners/);
+test("the description is the approved copy: welcomes non-dancers, prizes only for battle winners, nothing unconfirmed", () => {
+    const lines = event.description ?? [];
+    const body = lines.join("\n");
+    assert.equal(lines[0], "A Sunday afternoon of dancing, music and meeting new people at County Hall.");
+    assert.equal(lines[1], "# Love the song? Join the dance.");
+    assert(lines.includes("**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music, watch the dancing and soak up the atmosphere. There’s no pressure to join in."));
+    assert(lines.includes("Fancy a little friendly competition? Have a go at one of our **dance battles**, with prizes for the winners!"));
+    /* Bold markers come in pairs and wrap only the two approved phrases. */
+    assert.deepEqual(body.match(/\*\*[^*]+\*\*/g), ["**Not a dancer? No problem!**", "**dance battles**"]);
+    assert.equal(body.split("**").length % 2, 1);
+    /* Unconfirmed organiser details stay out of the public copy until they are confirmed. */
+    assert.doesNotMatch(body, /walk-?ins?|in advance|book(ing)? a free ticket|space is limited|bring (some|a) (water|drink)|refreshments|Good to know|drop in|leave whenever|stay for a little/i);
     assert.doesNotMatch(body, /voucher|class(es)? (pass|voucher)|complimentary/i);
-    assert.doesNotMatch(body, /!/);
     assert.doesNotMatch(body, /everyone (gets|receives|wins)|prizes for (all|everyone)/i);
     assert.doesNotMatch(body, /unforgettable|electrifying|something for everyone|dance the day away|lasting memories/i);
+});
+
+test("the cover is the supplied portrait photograph, declared at its real size, and the page renders bold markers", async () => {
+    const { withImageSizes } = await import("../src/lib/events/image-dimensions");
+    const [image] = withImageSizes([{ ...event.image, width: undefined, height: undefined }]);
+    assert.deepEqual([image.width, image.height], [1055, 1491]);
+    assert.deepEqual([event.image.width, event.image.height], [1055, 1491]);
+    assert(statSync(`public${event.image.src}`).size < 400_000);
+    const page = readFileSync("src/app/events/[slug]/page.tsx", "utf8");
+    assert.match(page, /withEmphasis\(paragraph\)/);
 });
 
 test("free admission is stated once: the tag under the subtitle, with no separate admission field", () => {

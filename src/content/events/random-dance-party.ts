@@ -6,14 +6,14 @@ export const RANDOM_DANCE_PARTY_BOOKING_URL =
 
 const IMAGE_DIR = "/images/events/2026/random-dance-party";
 
-/** Supplied photograph (3:2, 2000 x 1333). Shown whole on the event page; cards use a square crop that keeps both dancers. */
+/** Supplied photograph (portrait, 1055 x 1491, about 245 KB). Shown whole on the event page; cards use a square crop that keeps both dancers. */
 const mainImage = {
     src: `${IMAGE_DIR}/random-dance-party-cover.jpg`,
-    alt: "Two dancers moving towards each other along a sunny pavement, one in a black top and checked shirt, the other in a white T-shirt and black joggers, both smiling with their arms out",
-    width: 2000,
-    height: 1333,
-    /* Square card crop: the two dancers sit right of centre, so shift the crop to the right. */
-    position: "62% 50%",
+    alt: "Two dancers face each other on a wooden studio floor while a circle of people watches them",
+    width: 1055,
+    height: 1491,
+    /* Square card crop of a portrait photo: the dancers sit in the lower middle, so the crop slides down to keep both of them. */
+    position: "50% 66%",
 };
 
 const bookNow = {
@@ -57,11 +57,14 @@ export const randomDancePartyEvent: EventCard = {
             "Join a free K-pop, hip-hop, jazz and urban random dance party at County Hall, London, on 29 November 2026. Music, friendly battles and surprise prizes.",
     },
     description: [
-        "A relaxed Sunday afternoon of music, dancing and meeting new people at County Hall.",
+        "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
         "# Love the song? Join the dance.",
-        "If you enjoy K-pop, hip-hop, jazz or urban dance music, come and spend the afternoon with us. When a song you know comes on, you’re welcome to step onto the dance floor and join in.",
-        "You don’t need to know how to dance. If you’d rather watch, that’s absolutely fine too: stay at the side, enjoy the music and cheer on the dancers. There’s no pressure to take part.",
-        "For anyone who fancies a go, there will be some friendly dance battles, with prizes for the winners. Come on your own or bring friends, and you may well meet a few people who love music and dancing as much as you do.",
+        "Love K-pop, hip-hop, jazz or urban dance? Come and spend a Sunday afternoon with us!",
+        "Hear a song you love? Step onto the dance floor and show us your moves. Dance along to your favourite tracks, cheer each other on and enjoy the music with fellow dance lovers.",
+        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music, watch the dancing and soak up the atmosphere. There’s no pressure to join in.",
+        "Fancy a little friendly competition? Have a go at one of our **dance battles**, with prizes for the winners!",
+        /* Held back until the organiser confirms them: walk-ins, advice to book a free ticket in advance, bringing a drink, and coming and going during the three hours. */
+        "Come with friends or on your own. It’s a chance to have fun, meet new people and share a love of music and dance.",
     ],
     image: mainImage,
     /* Free admission is shown once, under the subtitle. */
