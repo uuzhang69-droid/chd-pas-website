@@ -9,6 +9,9 @@ import {
     maggiesCatsEvent,
 } from "./events/maggies-cats-christmas-family-show";
 import {
+    randomDancePartyEvent,
+} from "./events/random-dance-party";
+import {
     lunchtimeConcertSeriesEvent,
 } from "./events/lunchtime-concert-series";
 import type {
@@ -1002,12 +1005,12 @@ export const siteSource = {
                     "Masterclasses, workshops, and performances at County Hall Dance Centre.",
             },
             hero: {
-                overline: "What's on",
+                overline: "",
                 title: "What's On",
                 subtitle:
-                    "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+                    "Discover performances, workshops, dance events and special experiences at County Hall.",
             } satisfies PageHeroContent,
-            intro: "One-off workshops, guest artist intensives, and ticketed performances throughout the year.",
+            intro: "Discover performances, workshops, dance events and special experiences at County Hall.",
             filters: {
                 all: "All",
                 events: "Events",
@@ -1017,6 +1020,7 @@ export const siteSource = {
             },
             items: [
                 maggiesCatsEvent,
+                randomDancePartyEvent,
                 withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
@@ -1365,7 +1369,6 @@ export const siteSource = {
                     excerpt:
                         "County Hall Dance Centre opened its doors at County Hall on 10 September 2026.",
                     description: [
-                        "County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.",
                         "The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank.",
                     ],
                     image: {
