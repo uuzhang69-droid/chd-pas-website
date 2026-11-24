@@ -101,6 +101,19 @@ test("copy has no dashes in prose, no emoji and no unconfirmed promises; SEO tex
     assert(event.seo!.description.length <= 160);
 });
 
+test("the description welcomes beginners and spectators and promises prizes only to battle winners", () => {
+    const body = (event.description ?? []).join("\n");
+    assert(event.description?.includes("# Love the song? Join the dance."));
+    assert.match(body, /You don’t need to know how to dance/);
+    assert.match(body, /watch/);
+    assert.match(body, /no pressure/i);
+    assert.match(body, /friendly dance battles, with prizes for the winners/);
+    assert.doesNotMatch(body, /voucher|class(es)? (pass|voucher)|complimentary/i);
+    assert.doesNotMatch(body, /!/);
+    assert.doesNotMatch(body, /everyone (gets|receives|wins)|prizes for (all|everyone)/i);
+    assert.doesNotMatch(body, /unforgettable|electrifying|something for everyone|dance the day away|lasting memories/i);
+});
+
 test("free admission is stated once: the tag under the subtitle, with no separate admission field", () => {
     assert.equal(event.freeAdmission, true);
     assert.equal(event.admission, undefined);

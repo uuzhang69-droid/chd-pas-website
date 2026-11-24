@@ -57,12 +57,11 @@ export const randomDancePartyEvent: EventCard = {
             "Join a free K-pop, hip-hop, jazz and urban random dance party at County Hall, London, on 29 November 2026. Music, friendly battles and surprise prizes.",
     },
     description: [
-        "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
+        "A relaxed Sunday afternoon of music, dancing and meeting new people at County Hall.",
         "# Love the song? Join the dance.",
-        "If K-pop, hip-hop, jazz or urban dance is your thing, come and spend Sunday afternoon with us.",
-        "When a song you recognise comes on, step in and show us your moves. Join your favourite tracks, cheer on other dancers and have a go at the friendly battles if you fancy it.",
-        "There’ll be surprise gifts to win, plenty of music and a chance to meet new people who love dancing just as much as you do.",
-        "Come with friends or make some new ones. Just bring your energy and enjoy the afternoon!",
+        "If you enjoy K-pop, hip-hop, jazz or urban dance music, come and spend the afternoon with us. When a song you know comes on, you’re welcome to step onto the dance floor and join in.",
+        "You don’t need to know how to dance. If you’d rather watch, that’s absolutely fine too: stay at the side, enjoy the music and cheer on the dancers. There’s no pressure to take part.",
+        "For anyone who fancies a go, there will be some friendly dance battles, with prizes for the winners. Come on your own or bring friends, and you may well meet a few people who love music and dancing as much as you do.",
     ],
     image: mainImage,
     /* Free admission is shown once, under the subtitle. */
