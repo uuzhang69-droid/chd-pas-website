@@ -61,7 +61,7 @@ export const randomDancePartyEvent: EventCard = {
         "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
         "# Love the song? Join the dance.",
         "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
-        "**Hear a song you love?** Step onto the dance floor and show us your moves. Dance along to your favourite tracks, cheer each other on and enjoy the music with fellow dance lovers.",
+        "**Hear a song you love?** Step onto the dance floor and show us your moves. Follow the original choreography, mix things up or make up your own moves. Just find the rhythm and dance your way!",
         "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music and soak up the atmosphere. And if you feel like dancing along without stepping into the spotlight, go for it! There’s no pressure to perform or join a battle.",
         "**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners.",
         "Come with friends or on your own, stay for a little while or spend the whole afternoon with us. Just enjoy the music, have fun and maybe make a few new friends along the way.",
