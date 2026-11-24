@@ -211,8 +211,9 @@ test("Lunchtime Concert Series: latest, previous, and automatic list position", 
     assert.equal(series.dateIso, "2026-11-20");
     assert.match(series.date, /Latest concert: .*20 November 2026/);
     const order = slugs(sortEventsForListing(items));
-    assert.deepEqual(order.slice(0, 5), [
+    assert.deepEqual(order.slice(0, 6), [
         "maggies-cats-christmas-family-show",
+        "random-dance-party",
         "within-one-room-stillness-in-motion",
         "an-actors-work-with-an-object",
         "lunchtime-concert-series",

@@ -134,6 +134,19 @@ export type ShowPageContent = {
     finalCta: { heading: string; paragraphs: string[]; button: string };
 };
 
+/** Venue with a structured postal address, used for the visible lines and for Event structured data. */
+export type EventVenue = {
+    name: string;
+    /** Address lines shown under the venue name, in order. */
+    lines: string[];
+    address: {
+        streetAddress: string;
+        addressLocality: string;
+        postalCode: string;
+        addressCountry: string;
+    };
+};
+
 export type EventCard = {
     id: string;
     slug: string;
@@ -155,6 +168,12 @@ export type EventCard = {
     teacher?: string;
     /** Display time range, e.g. "15:00–18:00". */
     time?: string;
+    /** Optional structured venue. When present the page shows its lines and the JSON-LD gets a PostalAddress. */
+    venue?: EventVenue;
+    /** Event name for structured data when it should differ from `title` (for example the full title behind a short one). */
+    schemaName?: string;
+    /** How the time is written on the event page, when it should differ from `time` (which stays 24 hour for date logic). */
+    timeLabel?: string;
     date: string;
     dateIso?: string;
     location?: string;

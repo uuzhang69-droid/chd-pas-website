@@ -10,6 +10,9 @@ import {
     maggiesCatsEvent,
 } from "./events/maggies-cats-christmas-family-show";
 import {
+    randomDancePartyEvent,
+} from "./events/random-dance-party";
+import {
     lunchtimeConcertSeriesEvent,
 } from "./events/lunchtime-concert-series";
 
@@ -1020,6 +1023,7 @@ export const siteStructure = {
             },
             items: [
                 maggiesCatsEvent,
+                randomDancePartyEvent,
                 withinOneRoomEvent,
                 anActorsWorkWithAnObjectEvent,
                 {
@@ -1652,7 +1656,6 @@ export const siteStructure = {
                         "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.excerpt",
                     description: [
                         "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.0",
-                        "@@COPY:pages.events.items.county_hall_dance_centre_opening_day.description.1",
                     ],
                     image: {
                         src: "/images/events/2026/opening-day/opening-day-cover.jpg",

@@ -105,7 +105,7 @@ test("November-only classes and workshops do not leak into December", () => {
         4,
     );
     assert.equal(november.filter((x) => x.type === "workshop").length, 3);
-    assert.equal(november.length, 41);
+    assert.equal(november.length, 42);
     assert(
         !sessionsForDates(schedule, dates(2026, 12), projected).some(
             (x) =>

@@ -20,7 +20,8 @@ const SKIP_KEYS = new Set([
 function collectText(value: unknown, out: string[], depth = 0): void {
     if (depth > 8 || value === null || value === undefined) return;
     if (typeof value === "string") {
-        const text = value.replace(/\s+/g, " ").trim();
+        /* **bold** markers are emphasis for the page, not words to search or show in a snippet. */
+        const text = value.replaceAll("**", "").replace(/\s+/g, " ").trim();
         if (text) out.push(text);
     } else if (Array.isArray(value)) {
         for (const item of value) collectText(item, out, depth + 1);

@@ -507,10 +507,10 @@ pages.events.detaillabels.room,Events page › detaillabels › room,Space
 pages.events.detaillabels.timepending,Events page › detaillabels › timepending,Time to be confirmed
 pages.events.detaillabels.upcomingconcerts,Events page › detaillabels › upcomingconcerts,Upcoming concerts
 pages.events.detaillabels.venuepending,Events page › detaillabels › venuepending,Venue to be confirmed
-pages.events.hero.overline,Events page › hero › overline,What's on
-pages.events.hero.subtitle,Events page › hero › subtitle,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
+pages.events.hero.overline,Events page › hero › overline,
+pages.events.hero.subtitle,Events page › hero › subtitle,"Discover performances, workshops, dance events and special experiences at County Hall."
 pages.events.hero.title,Events page › hero › title,What's On
-pages.events.intro,Events page › intro,"One-off workshops, guest artist intensives, and ticketed performances throughout the year."
+pages.events.intro,Events page › intro,"Discover performances, workshops, dance events and special experiences at County Hall."
 pages.events.items.ceramics_workshop_with_yasemin.booknow.label,Events page › items › ceramics workshop with yasemin › booknow › label,Details
 pages.events.items.ceramics_workshop_with_yasemin.date,Events page › items › ceramics workshop with yasemin › date,"Saturday 17 October 2026, 16:30 to 18:00"
 pages.events.items.ceramics_workshop_with_yasemin.description.0,Events page › items › ceramics workshop with yasemin › description › 0,"Our first ceramics workshop at County Hall Dance & Performing Arts School, led by Yasemin Gava (@yasemingava.art)."
@@ -527,8 +527,7 @@ pages.events.items.ceramics_workshop_with_yasemin.sessions.ceramics_2026_10_17.t
 pages.events.items.ceramics_workshop_with_yasemin.title,Events page › items › ceramics workshop with yasemin › title,Ceramics Workshop with Yasemin
 pages.events.items.county_hall_dance_centre_opening_day.booknow.label,Events page › items › county hall dance centre opening day › booknow › label,Details
 pages.events.items.county_hall_dance_centre_opening_day.date,Events page › items › county hall dance centre opening day › date,Thursday 10 September 2026 · All day
-pages.events.items.county_hall_dance_centre_opening_day.description.0,Events page › items › county hall dance centre opening day › description › 0,County Hall Dance Centre marked its Opening Day on Thursday 10 September 2026.
-pages.events.items.county_hall_dance_centre_opening_day.description.1,Events page › items › county hall dance centre opening day › description › 1,"The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank."
+pages.events.items.county_hall_dance_centre_opening_day.description.0,Events page › items › county hall dance centre opening day › description › 0,"The new centre is a home for dance, creativity and cultural exchange at County Hall on the South Bank."
 pages.events.items.county_hall_dance_centre_opening_day.excerpt,Events page › items › county hall dance centre opening day › excerpt,County Hall Dance Centre opened its doors at County Hall on 10 September 2026.
 pages.events.items.county_hall_dance_centre_opening_day.gallery.0.alt,Events page › items › county hall dance centre opening day › gallery › 0 › alt,Ribbon-cutting at County Hall Dance Centre Opening Day
 pages.events.items.county_hall_dance_centre_opening_day.gallery.1.alt,Events page › items › county hall dance centre opening day › gallery › 1 › alt,Celebration table at the Opening Day
