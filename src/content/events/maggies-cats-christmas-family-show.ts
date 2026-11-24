@@ -57,11 +57,11 @@ export const MAGGIES_CATS_CAST: CastMember[] = [
 ];
 
 const ABOUT = [
-    "Christmas preparations are underway, and Vivi, Kiki and Mika are determined to make this year's celebrations something special.",
-    "Vivi has everything under control. Or at least, that's the plan. Kiki has plenty of ideas, although whether they're particularly helpful is another question entirely. And Mika is just happy to be spending Christmas with her friends.",
+    "Christmas preparations are underway, and Vivi, Kiki and Mika are determined to make this year’s celebrations something special.",
+    "Vivi has everything under control. Or at least, that’s the plan. Kiki has plenty of ideas, although whether they’re particularly helpful is another question entirely. And Mika is just happy to be spending Christmas with her friends.",
     "With three such different personalities, preparing for Christmas was never going to be completely straightforward. There are decorations to arrange, plans to make and plenty of opportunities for things to go a little off course.",
-    "Maggie's Cats is a playful outdoor Christmas family show filled with humour, friendship and moments of tenderness.",
-    "Whether you're coming with young children or bringing the whole family along, it's a chance to enjoy a little live theatre together in the run-up to Christmas.",
+    "Maggie’s Cats is a playful outdoor Christmas family show filled with humour, friendship and moments of tenderness.",
+    "Whether you’re coming with young children or bringing the whole family along, it’s a chance to enjoy a little live theatre together in the run-up to Christmas.",
 ];
 
 /** Full event page for the December 2026 outdoor family show. */
@@ -80,9 +80,9 @@ export const maggiesCatsEvent: EventCard = {
         "Three very different cats get ready for Christmas in a playful outdoor family show.",
     cardCtaLabel: "Find Out More",
     seo: {
-        title: "Maggie's Cats Christmas Family Show 2026 | London",
+        title: "Maggie’s Cats Christmas Family Show 2026 | London",
         description:
-            "Join Maggie's Cats for an outdoor Christmas family show at County Hall, London. Performances on 5, 6, 12, 13, 19 and 20 December 2026.",
+            "Join Maggie’s Cats for an outdoor Christmas family show at County Hall, London. Performances on 5, 6, 12, 13, 19 and 20 December 2026.",
     },
     description: ["# Christmas Is Coming, and the Cats Have Plans!", ...ABOUT.map((text) => text.replaceAll("**", ""))],
     image: mainImage,
@@ -147,7 +147,7 @@ export const maggiesCatsEvent: EventCard = {
         },
         tickets: {
             heading: "Tickets and Family Offers",
-            intro: "Whether you're visiting with one child or bringing the whole family, there are several ticket options available.",
+            intro: "Whether you’re visiting with one child or bringing the whole family, there are several ticket options available.",
             individualHeading: "Individual Tickets",
             familyHeading: "Family Tickets",
             familyNote: "Each family ticket admits the number of adults and children shown.",
@@ -172,9 +172,9 @@ export const maggiesCatsEvent: EventCard = {
         venue: {
             heading: "Christmas at County Hall",
             paragraphs: [
-                "There's something rather special about watching live theatre with London as your backdrop.",
+                "There’s something rather special about watching live theatre with London as your backdrop.",
                 "Maggie’s Cats takes place outdoors at County Hall Members’ Terrace, overlooking the River Thames, with views towards Big Ben and the Houses of Parliament.",
-                "It's a lovely spot for a family outing in the run-up to Christmas. Just remember to dress for the weather!",
+                "It’s a lovely spot for a family outing in the run-up to Christmas. Just remember to dress for the weather!",
             ],
         },
         directions: {
@@ -182,8 +182,8 @@ export const maggiesCatsEvent: EventCard = {
             name: "County Hall Members’ Terrace",
             address: "County Hall, South Bank, London",
             paragraphs: [
-                "Please enter via **Queen's Walk**, on the riverside of County Hall.",
-                "Look for the gate leading to the staircase signposted for **Peacock Restaurant**. The entrance is between **the London Dungeon** and **Shrek's Adventure**.",
+                "Please enter via **Queen’s Walk**, on the riverside of County Hall.",
+                "Look for the gate leading to the staircase signposted for **Peacock Restaurant**. The entrance is between **the London Dungeon** and **Shrek’s Adventure**.",
                 "Please follow the signs to the terrace.",
             ],
         },
@@ -195,22 +195,27 @@ export const maggiesCatsEvent: EventCard = {
                     title: "Wrap Up Warm",
                     paragraphs: [
                         "Maggie’s Cats is an outdoor performance, and December in London can be very chilly, especially beside the river.",
-                        "We recommend warm coats, scarves, hats and gloves. If you're bringing young children, a few extra layers are a good idea.",
+                        "We recommend warm coats, scarves, hats and gloves. If you’re bringing young children, a few extra layers are a good idea.",
                     ],
                 },
                 {
                     title: "Bring Your Own Water",
                     paragraphs: [
-                        "Please bring your own drinking water. You're also welcome to bring refreshments, subject to venue rules.",
+                        "Please bring your own drinking water. You’re also welcome to bring refreshments, subject to venue rules.",
                     ],
                 },
             ],
+            contact: {
+                before: "Have a question about the show? Please email ",
+                email: "info@countyhalldancecentre.com",
+                after: " and we’ll be happy to help.",
+            },
         },
         finalCta: {
             heading: "Come and Join the Cats!",
             paragraphs: [
-                "Vivi, Kiki and Mika are getting ready for Christmas. All that's missing is you!",
-                "Bring the family, wrap up warm and join us for a little Christmas fun on London's South Bank.",
+                "Vivi, Kiki and Mika are getting ready for Christmas. All that’s missing is you!",
+                "Bring the family, wrap up warm and join us for a little Christmas fun on London’s South Bank.",
             ],
             button: "Book Your Tickets",
         },
