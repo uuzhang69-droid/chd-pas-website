@@ -23,39 +23,6 @@ const bookNow = {
     external: true,
 } as const;
 
-/**
- * Walk-ins, the advice to book a ticket in advance and coming and going during the afternoon still need the organiser's
- * confirmation. Set this to true once they have confirmed them: the approved wording below is ready and nothing else changes.
- */
-export const ATTENDANCE_DETAILS_CONFIRMED = false;
-
-/**
- * Approved public copy. `**` marks bold, `# ` marks a heading. Only the wording the organiser has not yet confirmed depends on `confirmed`.
- * The dash in the approved "stay for the whole afternoon" sentence is written as a full stop, because the site uses no dashes in page copy.
- */
-export function randomDancePartyDescription(confirmed: boolean): string[] {
-    return [
-        "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
-        "# Love the song? Join the dance.",
-        "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
-        "**Hear a song you love?** Step onto the dance floor and show us your moves. Dance along to your favourite tracks, cheer each other on and enjoy the music with fellow dance lovers.",
-        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music, watch the dancing and soak up the atmosphere. There’s no pressure to join in.",
-        "**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners.",
-        confirmed
-            ? "Come with friends or on your own, stay for a little while or enjoy the whole afternoon. It’s a chance to have fun, meet new people and share a love of music and dance."
-            : "Come with friends or on your own. It’s a chance to have fun, meet new people and share a love of music and dance.",
-        "# Good to know",
-        ...(confirmed
-            ? [
-                  "**Walk-ins welcome:** Admission is free, but we’d recommend booking a ticket in advance as space is limited.",
-              ]
-            : []),
-        confirmed
-            ? "**Bring a drink:** It’s a three-hour event, so don’t forget to bring some water or something to drink. You don’t have to stay for the whole afternoon. Just come along whenever suits you."
-            : "**Bring a drink:** It’s a three-hour event, so don’t forget to bring some water or something to drink.",
-    ];
-}
-
 /** Full event page for the free dance afternoon on Sunday 29 November 2026. */
 export const randomDancePartyEvent: EventCard = {
     id: "2026-random-dance-party",
@@ -89,7 +56,20 @@ export const randomDancePartyEvent: EventCard = {
         description:
             "Join a free K-pop, hip-hop, jazz and urban random dance party at County Hall, London, on 29 November 2026. Music, friendly battles and surprise prizes.",
     },
-    description: randomDancePartyDescription(ATTENDANCE_DETAILS_CONFIRMED),
+    /* `**` marks bold and `# ` marks a heading. Free admission and the time are in the facts above; the Good to know items give the practical advice. */
+    description: [
+        "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
+        "# Love the song? Join the dance.",
+        "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
+        "**Hear a song you love?** Step onto the dance floor and show us your moves. Dance along to your favourite tracks, cheer each other on and enjoy the music with fellow dance lovers.",
+        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music and soak up the atmosphere. And if you feel like dancing along without stepping into the spotlight, go for it! There’s no pressure to perform or join a battle.",
+        "**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners.",
+        "Come with friends or on your own, stay for a little while or spend the whole afternoon with us. Just enjoy the music, have fun and maybe make a few new friends along the way.",
+        "# Good to know",
+        "**Walk-ins welcome:** Admission is free! You can just turn up, although we recommend booking a free ticket in advance as space is limited.",
+        "**Bring a drink:** Don’t forget to bring some water or something to drink, especially if you’re planning to dance!",
+        "**Stay as long as you like:** The event runs from 2:00 to 5:00 PM, but there’s no need to stay for the full three hours.",
+    ],
     image: mainImage,
     /* Free admission is shown once, under the subtitle. */
     freeAdmission: true,

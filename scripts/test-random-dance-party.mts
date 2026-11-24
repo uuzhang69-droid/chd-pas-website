@@ -3,9 +3,7 @@ import { existsSync, readFileSync, statSync } from "node:fs";
 import { test } from "node:test";
 import { siteContent } from "../src/content/site";
 import {
-    ATTENDANCE_DETAILS_CONFIRMED,
     RANDOM_DANCE_PARTY_BOOKING_URL,
-    randomDancePartyDescription,
     randomDancePartyEvent,
 } from "../src/content/events/random-dance-party";
 import { calendarSessionsForEvents } from "../src/lib/class-calendar/sessions";
@@ -94,7 +92,7 @@ test("structured data: start and end in London time, free admission, no invented
 test("copy has no dashes in prose, no emoji and no unconfirmed promises; SEO text is set", () => {
     const prose = [event.subtitle, event.excerpt, ...(event.description ?? []), event.seo?.description].join("\n");
     const body = (event.description ?? []).join("\n");
-    assert.doesNotMatch(body, /29 November|2:00|5:00|Belvedere|Free admission|free afternoon/i);
+    assert.doesNotMatch(body, /29 November|Belvedere|Free admission|free afternoon/i);
     assert.doesNotMatch(body, /About the Event/);
     assert.doesNotMatch(prose, /[–—]/);
     assert.doesNotMatch(prose, /\p{Extended_Pictographic}/u);
@@ -103,50 +101,38 @@ test("copy has no dashes in prose, no emoji and no unconfirmed promises; SEO tex
     assert(event.seo!.description.length <= 160);
 });
 
-test("the page uses the approved copy: bold openings, Good to know, prizes only for battle winners", () => {
-    assert.equal(ATTENDANCE_DETAILS_CONFIRMED, false);
-    assert.deepEqual(event.description, randomDancePartyDescription(ATTENDANCE_DETAILS_CONFIRMED));
-    const lines = event.description ?? [];
-    const body = lines.join("\n");
-    assert.equal(lines[0], "A Sunday afternoon of dancing, music and meeting new people at County Hall.");
-    assert.equal(lines[1], "# Love the song? Join the dance.");
-    assert.equal(lines[2], "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!");
-    assert(lines.includes("**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners."));
-    assert(lines.includes("# Good to know"));
-    assert(lines.includes("**Bring a drink:** It’s a three-hour event, so don’t forget to bring some water or something to drink."));
+test("the page uses the final approved copy: bold openings, three Good to know items, prizes only for battle winners", () => {
+    assert.deepEqual(event.description, [
+        "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
+        "# Love the song? Join the dance.",
+        "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
+        "**Hear a song you love?** Step onto the dance floor and show us your moves. Dance along to your favourite tracks, cheer each other on and enjoy the music with fellow dance lovers.",
+        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music and soak up the atmosphere. And if you feel like dancing along without stepping into the spotlight, go for it! There’s no pressure to perform or join a battle.",
+        "**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners.",
+        "Come with friends or on your own, stay for a little while or spend the whole afternoon with us. Just enjoy the music, have fun and maybe make a few new friends along the way.",
+        "# Good to know",
+        "**Walk-ins welcome:** Admission is free! You can just turn up, although we recommend booking a free ticket in advance as space is limited.",
+        "**Bring a drink:** Don’t forget to bring some water or something to drink, especially if you’re planning to dance!",
+        "**Stay as long as you like:** The event runs from 2:00 to 5:00 PM, but there’s no need to stay for the full three hours.",
+    ]);
+    const body = (event.description ?? []).join("\n");
+    /* Bold markers come in pairs and wrap exactly the three question openings and the three Good to know labels. */
     assert.deepEqual(body.match(/\*\*[^*]+\*\*/g), [
         "**Hear a song you love?**",
         "**Not a dancer? No problem!**",
         "**Fancy a friendly dance battle?**",
+        "**Walk-ins welcome:**",
         "**Bring a drink:**",
+        "**Stay as long as you like:**",
     ]);
     assert.equal(body.split("**").length % 2, 1);
-    /* Until the organiser confirms them, walk-ins, advance booking and coming and going stay out of the public copy. */
-    assert.doesNotMatch(body, /walk-?ins?|in advance|space is limited|stay for (a little|the whole)|whenever suits|whole afternoon/i);
-});
-
-test("once the organiser confirms the attendance details, the approved wording is ready and keeps the site's no-dash rule", () => {
-    const lines = randomDancePartyDescription(true);
-    const body = lines.join("\n");
-    assert(lines.includes("**Walk-ins welcome:** Admission is free, but we’d recommend booking a ticket in advance as space is limited."));
-    assert(lines.includes("Come with friends or on your own, stay for a little while or enjoy the whole afternoon. It’s a chance to have fun, meet new people and share a love of music and dance."));
-    assert(lines.includes("**Bring a drink:** It’s a three-hour event, so don’t forget to bring some water or something to drink. You don’t have to stay for the whole afternoon. Just come along whenever suits you."));
-    assert.deepEqual(body.match(/\*\*[^*]+\*\*/g)?.length, 5);
-    assert.doesNotMatch(body, /[–—]/);
-    /* Only the three confirmed-dependent lines differ from the live copy. */
-    const live = randomDancePartyDescription(false);
-    assert.equal(lines.filter((line) => !live.includes(line)).length, 3);
-    assert.equal(lines.length, live.length + 1);
-});
-
-test("no vouchers, blanket prize promises or exaggerated marketing language", () => {
-    for (const confirmed of [false, true]) {
-        const body = randomDancePartyDescription(confirmed).join("\n");
-        assert.doesNotMatch(body, /voucher|class(es)? (pass|voucher)|complimentary/i);
-        assert.doesNotMatch(body, /everyone (gets|receives|wins)|prizes for (all|everyone)/i);
-        assert.doesNotMatch(body, /unforgettable|electrifying|something for everyone|dance the day away|lasting memories/i);
-        assert.equal((body.match(/prizes?/gi) ?? []).length, 1);
-    }
+    assert.doesNotMatch(body, /voucher|class(es)? (pass|voucher)|complimentary/i);
+    assert.doesNotMatch(body, /everyone (gets|receives|wins)|prizes for (all|everyone)/i);
+    assert.doesNotMatch(body, /unforgettable|electrifying|something for everyone|dance the day away|lasting memories/i);
+    assert.equal((body.match(/prizes?/gi) ?? []).length, 1);
+    /* The old confirmation switch is gone. */
+    const source = readFileSync("src/content/events/random-dance-party.ts", "utf8");
+    assert.doesNotMatch(source, /ATTENDANCE_DETAILS_CONFIRMED|randomDancePartyDescription/);
 });
 
 test("the cover is the supplied portrait photograph, declared at its real size, and the page renders bold markers", async () => {
