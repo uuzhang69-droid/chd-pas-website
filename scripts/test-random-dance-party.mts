@@ -101,29 +101,27 @@ test("copy has no dashes in prose, no emoji and no unconfirmed promises; SEO tex
     assert(event.seo!.description.length <= 160);
 });
 
-test("the page uses the final approved copy: bold openings, three Good to know items, prizes only for battle winners", () => {
+test("the page uses the final approved copy: bold openings, two Good to know items, prizes only for battle winners", () => {
     assert.deepEqual(event.description, [
         "A Sunday afternoon of dancing, music and meeting new people at County Hall.",
         "# Love the song? Join the dance.",
-        "Love K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
-        "**Hear a song you love?** Step onto the dance floor and show us your moves. Follow the original choreography, mix things up or make up your own moves. Just find the rhythm and dance your way!",
-        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music and soak up the atmosphere. And if you feel like dancing along without stepping into the spotlight, go for it! There’s no pressure to perform or join a battle.",
-        "**Fancy a friendly dance battle?** Have a go! There’ll be prizes for the winners.",
-        "Come with friends or on your own, stay for a little while or spend the whole afternoon with us. Just enjoy the music, have fun and maybe make a few new friends along the way.",
+        "Into K-pop, hip-hop, jazz or urban dance? Come and spend Sunday afternoon with us!",
+        "**Hear a song you love?** Come and join in! Follow the original choreography, mix up different styles or make up your own moves. It’s all about enjoying the music and dancing your way.",
+        "**Not a dancer? No problem!** You’re just as welcome to come along, enjoy the music and soak up the atmosphere. And if you feel like dancing along without joining the main group, go for it! There’s no pressure to perform or take part in a battle.",
+        "**Fancy a friendly dance battle?** Give it a go! There’ll be prizes for the winners.",
+        "Come with friends or on your own, stay for a little while or spend the whole afternoon with us. Enjoy the music, have fun and maybe make a few new friends along the way.",
         "# Good to know",
-        "**Walk-ins welcome:** Admission is free! You can just turn up, although we recommend booking a free ticket in advance as space is limited.",
+        "**Walk-ins welcome:** You can just turn up, although we’d recommend booking a free ticket in advance as space is limited.",
         "**Bring a drink:** Don’t forget to bring some water or something to drink, especially if you’re planning to dance!",
-        "**Stay as long as you like:** The event runs from 2:00 to 5:00 PM, but there’s no need to stay for the full three hours.",
     ]);
     const body = (event.description ?? []).join("\n");
-    /* Bold markers come in pairs and wrap exactly the three question openings and the three Good to know labels. */
+    /* Bold markers come in pairs and wrap exactly the three question openings and the two Good to know labels. */
     assert.deepEqual(body.match(/\*\*[^*]+\*\*/g), [
         "**Hear a song you love?**",
         "**Not a dancer? No problem!**",
         "**Fancy a friendly dance battle?**",
         "**Walk-ins welcome:**",
         "**Bring a drink:**",
-        "**Stay as long as you like:**",
     ]);
     assert.equal(body.split("**").length % 2, 1);
     assert.doesNotMatch(body, /voucher|class(es)? (pass|voucher)|complimentary/i);
@@ -132,6 +130,11 @@ test("the page uses the final approved copy: bold openings, three Good to know i
     assert.equal((body.match(/prizes?/gi) ?? []).length, 1);
     /* Casual, creative participation only: no illustrative style mixes and no battle rules or judging. */
     assert.doesNotMatch(body, /ballet|contemporary|tango|salsa|rules?\b|judg|criteria|unrestricted|freestyle battle/i);
+    /* Free admission and the times are shown above; the Good to know items do not repeat them, and there is no separate stay-as-long-as-you-like item. */
+    assert.doesNotMatch(body, /Admission is free|2:00 to 5:00|full three hours|Stay as long as you like/i);
+    const lines = event.description ?? [];
+    assert.equal(lines.filter((line) => line === "# Good to know").length, 1);
+    assert.equal(lines.length - lines.indexOf("# Good to know") - 1, 2);
     /* The old confirmation switch is gone. */
     const source = readFileSync("src/content/events/random-dance-party.ts", "utf8");
     assert.doesNotMatch(source, /ATTENDANCE_DETAILS_CONFIRMED|randomDancePartyDescription/);
